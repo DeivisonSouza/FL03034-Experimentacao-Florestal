@@ -87,14 +87,14 @@ layout: true
 
 ## 👋 Olá, sejam bem vindos!
 
-### 1. Sobre o facilitador
+### **Sobre o facilitador**
 .pull-left[
 
-- **Graduação (Titulação: ano 2008)**
+1. .green[Graduação (Titulação: ano 2008)]
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
 
-**Mestrado (Titulação: ano 2011)**
+2. .green[Mestrado (Titulação: ano 2011)]
     - Universidade Federal Rural da Amazônia (UFRA);
     - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
     - Área de Concentração: Manejo de ecossistemas florestais.
@@ -102,12 +102,12 @@ layout: true
 
 .pull-right[
 
-- **Doutorado (Titulação: ano 2020)**
+3. .green[Doutorado (Titulação: ano 2020)]
     - Universidade Federal do Paraná (UFPR);
     - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
     - Área de Concentração: Manejo Florestal.
     
-**Especialização (Defesa: ano 2019)**
+4. .green[Especialização (Defesa: ano 2019)]
     - Universidade Federal do Paraná (UFPR);
     - Área: Big Data e Data Science
 ]
@@ -116,23 +116,22 @@ layout: true
 ## 👋 Olá, sejam bem vindos!
 
 .pull-left[
-### 2. Interesses atuais
-
-**Linguagem de programação**
+### **Interesses atuais**
+1. .green[Linguagem de programação]
     - R
     - Python
-    
-**Modelagem preditiva aplicada à ciência florestal**
+
+2. .green[Modelagem preditiva aplicada à ciência florestal]
     - Aprendizado de máquina
     
-**Visão computacional**
+3. .green[Visão computacional]
     - reconhecimento de imagens
     
-**Criação de Dashboard - Shiny**
+4. .green[Criação de Dashboard - Shiny]
 ]
 
 .pull-right[
-### 3. Websites e contatos
+### **Websites e contatos**
 
 `r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
 
