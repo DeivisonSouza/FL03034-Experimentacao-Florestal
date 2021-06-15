@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Inventário Florestal (FL03039 - IF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="Aula0-Cronograma_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="Aula0-Cronograma_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/sydney.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa.png), url(fig/slide-title/logo-forest.png), url(fig/slide-title/leave.jpg), url(fig/slide-title/cron.jpg)
+background-position: 20% 1%, 30% 3%, left, right
+background-size: 100px, 100px, 600px 1500px, 600px 710px
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 140px;
+height: 140px;
+z-index: 0;
+background-image: url(fig/slide-title/ufpa.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:.8em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+&lt;style type="text/css"&gt;
+.title-slide h1 {
+  padding-top: 90px;
+}
+&lt;/style&gt;
+
+&lt;!-- title-slide --&gt;
+# Inventário Florestal &lt;br&gt; (FL03039 - IF)
+
+## Cronograma da disciplina
+&lt;br&gt;&lt;br&gt;
+### **Prof. Dr. Deivison Venicio Souza**
+### Universidade Federal do Pará (UFPA) 
+### E-mail: deivisonvs@ufpa.br 
+&lt;br&gt;&lt;br&gt;
+#### 18/maio/2021
+#### Altamira, Pará
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Inventário Florestal (FL03039 - IF) - Cronograma da disciplina&lt;/div&gt;
+
+
+---
+
+## 👋 Olá, sejam bem vindos!
+
+### 1. Sobre o facilitador
+
+.pull-left[
+* **Graduação (Titulação: ano 2008)**
+    + Universidade Federal Rural da Amazônia (UFRA); e
+    + Título: Bacharel em Engenharia Florestal.
+
+* **Mestrado (Titulação: ano 2011)**
+    + Universidade Federal Rural da Amazônia (UFRA);
+    + Programa de Pós-graduação em Ciências Florestais (PPGCF); e
+    + Área de Concentração: Manejo de ecossistemas florestais.
+]
+
+.pull-right[
+* **Doutorado (Titulação: ano 2020)**
+    + Universidade Federal do Paraná (UFPR);
+    + Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    + Área de Concentração: Manejo Florestal.
+    
+* **Especialização (Defesa: ano 2019)**
+    + Universidade Federal do Paraná (UFPR);
+    + Área: Big Data e Data Science
+]
+
+---
+## 👋 Olá, sejam bem vindos!
+
+.pull-left[
+### 2. Interesses atuais
+
+* **Linguagem de programação**
+    + R
+    + Python
+    
+* **Modelagem preditiva aplicada à ciência florestal**
+    + Aprendizado de máquina
+    
+* **Visão computacional**
+    + reconhecimento de imagens
+    
+* **Criação de Dashboard - Shiny**
+]
+
+.pull-right[
+### 3. Websites e contatos
+
+&lt;svg role="img" viewBox="0 0 24 24" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"&gt;&lt;/path&gt;&lt;/svg&gt; GitHub: https://github.com/DeivisonSouza
+
+&lt;span class="iconify" data-icon="fa-brands:orcid" data-inline="false"&gt;&lt;/span&gt;
+
+
+&lt;div itemscope itemtype="https://schema.org/Person"&gt;&lt;a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"&gt;&lt;img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon"&gt;https://orcid.org/0000-0002-2975-0927&lt;/a&gt;&lt;/div&gt;
+
+&lt;img src="fig/ORCID.png" width="20%" style="display: block; margin: auto;" /&gt;
+
+Email: deivisonvs@ufpa.br
+]
+
+&lt;!-- Slide 2 --&gt;
+---
+## Cronograma
+
+&lt;img src="Aula0-Cronograma_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" /&gt;
+
+&lt;!-- Slide 3 --&gt;
+---
+## Cronograma
+
+&lt;img src="Aula0-Cronograma_files/figure-html/unnamed-chunk-4-1.png" style="display: block; margin: auto;" /&gt;
+
+&lt;!-- Slide 4 --&gt;
+---
+## Ementa da disciplina (FL03039 - IF)
+
+&lt;br&gt;
+.blockquote[
+1 - Introdução aos inventários florestais: conceitos, tipos e importância; 
+
+2 - Conceitos fundamentais para amostragem; 
+
+3 - Classificação da amostragem; 
+
+4 - Métodos de amostragem; 
+
+5 - Processos de amostragem; 
+
+6 - Amostragem com múltiplos inícios aleatórios;
+
+7 - Amostragem em múltiplas ocasiões; 
+
+8 - Planejamento e custo de inventários florestais; 
+
+9 - Censo florestal (Inventário Florestal 100%); 
+
+10 - Fontes de erros em inventários florestais; e
+
+11 - Modelagem aplicada aos inventários florestais. 
+]
+
+&lt;!-- Slide 5 --&gt;
+---
+## Plano de Ensino
+
+
+&lt;!-- Slide 6 --&gt;
+---
+## Planos de aula
+
+
+&lt;!-- Slide 7 --&gt;
+---
+## Metodologia de avaliação
+
+&lt;!-- Slide 8 --&gt;
+---
+## Ensino Remoto Emergencial - UFPA
+
+- [Resolução  n. 5.294, de 21 de agosto de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf)
+
+&lt;!-- Slide 9 --&gt;
+---
+## Bibliografia básica
+
+&lt;br&gt;&lt;br&gt;
+PÉLLICO NETTO, S.; BRENA, D.A. **Inventário florestal**. Curitiba: editorado pelos autores, 1997. 316p.
+&lt;br&gt;&lt;br&gt;
+SANQUETTA, C. R.; CORTE, A. P. D.; RODRIGUES, A. L.; WATZLAWICK, L. F. **Inventários Florestais: Planejamento e execução**. 2014, 409 p. 3ª Edição. 
+&lt;br&gt;&lt;br&gt;
+SCOLFORO, J. R. S.; MELLO, J. M. **Inventário Florestal**. Lavras: UFLA/FAEPE, 2006. 561p.
+
+&lt;!-- Slide 10 --&gt;
+---
+## Bibliografia complementar
+
+&lt;br&gt;&lt;br&gt;
+AVERY, T. E.; BURKHART, H. E. **Forest Measurements**. McGraw Hill Book Co., Nova York, 1994, 408p.
+&lt;br&gt;&lt;br&gt;
+SOARES, C. P. B.; PAULA NETO, F.; SOUZA, A. L. **Dendrometria e inventário florestal**. 2ª ed. - Viçosa, MG: Ed. UFV, 2011. 272p.
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "googlecode",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

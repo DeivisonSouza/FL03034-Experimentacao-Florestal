@@ -1,0 +1,283 @@
+---
+title: "Inventário Florestal (FL03039 - IF)"
+subtitle: "Cronograma da disciplina"
+author: "Prof. Dr. Deivison Venicio Souza"
+institute: "Universidade Federal do Pará (UFPA)"
+date: 
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    css: 
+      - default 
+      - assets/sydney-fonts.css
+      - assets/sydney.css
+    self_contained: false
+    seal: false
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: googlecode
+      highlightLines: true
+      countIncrementalSlides: false
+      highlightLanguage: ["r", "css", "yaml"]
+      ratio: '16:9'
+      navigation:
+        scroll: false
+---
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa.png), url(fig/slide-title/logo-forest.png), url(fig/slide-title/leave.jpg), url(fig/slide-title/cron.jpg)
+background-position: 20% 1%, 30% 3%, left, right
+background-size: 100px, 100px, 600px 1500px, 600px 710px
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.showtext = TRUE,
+  fig.align = "center", 
+  cache = TRUE,
+  error = FALSE,
+  message = FALSE, 
+  warning = FALSE, 
+  collapse = TRUE ,
+  dpi = 600)
+```
+
+```{r xaringan-logo, echo=FALSE}
+library(xaringanExtra)
+use_logo(
+  image_url = "fig/slide-title/ufpa.png",
+  position = css_position(top = ".8em", right = "1em"),
+  width = "140px",
+  height = "140px"
+)
+```
+
+```{r icon, echo=FALSE}
+#remotes::install_github("mitchelloharawild/icons")
+#library(icons)
+#download_fontawesome()
+#download_simple_icons()
+```
+
+```{css, echo=FALSE}
+.title-slide h1 {
+  padding-top: 90px;
+}
+```
+
+<!-- title-slide -->
+# Inventário Florestal <br> (FL03039 - IF)
+
+## Cronograma da disciplina
+<br><br>
+### **Prof. Dr. Deivison Venicio Souza**
+### Universidade Federal do Pará (UFPA) 
+### E-mail: deivisonvs@ufpa.br 
+<br><br>
+#### `r format(Sys.Date(),"%d/%B/%Y")`
+#### Altamira, Pará
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Inventário Florestal (FL03039 - IF) - Cronograma da disciplina</div>
+
+
+---
+
+## 👋 Olá, sejam bem vindos!
+
+### 1. Sobre o facilitador
+
+.pull-left[
+* **Graduação (Titulação: ano 2008)**
+    + Universidade Federal Rural da Amazônia (UFRA); e
+    + Título: Bacharel em Engenharia Florestal.
+
+* **Mestrado (Titulação: ano 2011)**
+    + Universidade Federal Rural da Amazônia (UFRA);
+    + Programa de Pós-graduação em Ciências Florestais (PPGCF); e
+    + Área de Concentração: Manejo de ecossistemas florestais.
+]
+
+.pull-right[
+* **Doutorado (Titulação: ano 2020)**
+    + Universidade Federal do Paraná (UFPR);
+    + Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    + Área de Concentração: Manejo Florestal.
+    
+* **Especialização (Defesa: ano 2019)**
+    + Universidade Federal do Paraná (UFPR);
+    + Área: Big Data e Data Science
+]
+
+---
+## 👋 Olá, sejam bem vindos!
+
+.pull-left[
+### 2. Interesses atuais
+
+* **Linguagem de programação**
+    + R
+    + Python
+    
+* **Modelagem preditiva aplicada à ciência florestal**
+    + Aprendizado de máquina
+    
+* **Visão computacional**
+    + reconhecimento de imagens
+    
+* **Criação de Dashboard - Shiny**
+]
+
+.pull-right[
+### 3. Websites e contatos
+
+`r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
+
+<span class="iconify" data-icon="fa-brands:orcid" data-inline="false"></span>
+
+
+<div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
+
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/ORCID.png')
+```
+
+Email: deivisonvs@ufpa.br
+]
+
+<!-- Slide 2 -->
+---
+## Cronograma
+
+```{r, echo=FALSE, eval=TRUE, warning=FALSE, dpi=600,     fig.width = 14, fig.height = 7}
+library(ggweekly)
+library(ggplot2)
+
+may_days <- dplyr::tribble(
+          ~day,             ~label,    ~color,
+  "2021-05-10", "- Apresentação \nda disciplina \n- Conceitos básicos", "#bf006c",
+  "2021-05-12",     "Amostragem \nAleatória Simples", "#bf006c",
+  "2021-05-14",     "Amostragem \nAleatória \nEstratificada", "#bf006c",
+  "2021-05-17",     "Amostragem \nSistemática", "#bf006c",
+  "2021-05-19",     "Amostragem \nem Conglomerados", "#bf006c",
+  "2021-05-21", "A definir", "#bf006c",
+  "2021-05-24", "A definir", "#bf006c",
+  "2021-05-26", "A definir", "#bf006c",
+  "2021-05-28", "A definir", "#bf006c",
+  "2021-05-31", "A definir", "#bf006c"
+)
+
+ggweek_planner(
+  start_day = "2021-05-01",
+  end_day = "2021-05-31", 
+  highlight_days = may_days,
+  show_month_start_day = FALSE,
+  highlight_text_size = 4,
+  month_text_size = 4,
+  day_number_text_size = 9,
+  day_number_color = "black"
+) +
+  ggtitle("Maio (Ano 2021)") +
+  theme(plot.title = element_text(size = rel(2), 
+                                  face = "bold"))
+```
+
+<!-- Slide 3 -->
+---
+## Cronograma
+
+```{r, echo=FALSE, eval=TRUE, warning=FALSE, dpi=600,     fig.width = 14, fig.height = 7}
+june_days <- dplyr::tribble(
+          ~day,             ~label,    ~color,
+  "2021-06-02", "A definir", "#bf006c",
+  "2021-06-04", "A definir", "#bf006c",
+  "2021-06-07", "A definir", "#bf006c",
+  "2021-06-09", "A definir", "#bf006c",
+  "2021-06-11", "A definir", "#bf006c"
+)
+
+ggweek_planner(
+  start_day = "2021-06-01",
+  end_day = "2021-06-30",
+  highlight_days = june_days,
+  show_month_start_day = FALSE,
+  highlight_text_size = 4,
+  month_text_size = 4,
+  day_number_text_size = 9,
+  day_number_color = "black",
+) +
+  ggtitle("Junho (Ano 2021)") +
+  theme(plot.title = element_text(size = rel(2),
+                                  face = "bold"))
+```
+
+<!-- Slide 4 -->
+---
+## Ementa da disciplina (FL03039 - IF)
+
+<br>
+.blockquote[
+1 - Introdução aos inventários florestais: conceitos, tipos e importância; 
+
+2 - Conceitos fundamentais para amostragem; 
+
+3 - Classificação da amostragem; 
+
+4 - Métodos de amostragem; 
+
+5 - Processos de amostragem; 
+
+6 - Amostragem com múltiplos inícios aleatórios;
+
+7 - Amostragem em múltiplas ocasiões; 
+
+8 - Planejamento e custo de inventários florestais; 
+
+9 - Censo florestal (Inventário Florestal 100%); 
+
+10 - Fontes de erros em inventários florestais; e
+
+11 - Modelagem aplicada aos inventários florestais. 
+]
+
+<!-- Slide 5 -->
+---
+## Plano de Ensino
+
+
+<!-- Slide 6 -->
+---
+## Planos de aula
+
+
+<!-- Slide 7 -->
+---
+## Metodologia de avaliação
+
+<!-- Slide 8 -->
+---
+## Ensino Remoto Emergencial - UFPA
+
+- [Resolução  n. 5.294, de 21 de agosto de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf)
+
+<!-- Slide 9 -->
+---
+## Bibliografia básica
+
+<br><br>
+PÉLLICO NETTO, S.; BRENA, D.A. **Inventário florestal**. Curitiba: editorado pelos autores, 1997. 316p.
+<br><br>
+SANQUETTA, C. R.; CORTE, A. P. D.; RODRIGUES, A. L.; WATZLAWICK, L. F. **Inventários Florestais: Planejamento e execução**. 2014, 409 p. 3ª Edição. 
+<br><br>
+SCOLFORO, J. R. S.; MELLO, J. M. **Inventário Florestal**. Lavras: UFLA/FAEPE, 2006. 561p.
+
+<!-- Slide 10 -->
+---
+## Bibliografia complementar
+
+<br><br>
+AVERY, T. E.; BURKHART, H. E. **Forest Measurements**. McGraw Hill Book Co., Nova York, 1994, 408p.
+<br><br>
+SOARES, C. P. B.; PAULA NETO, F.; SOUZA, A. L. **Dendrometria e inventário florestal**. 2ª ed. - Viçosa, MG: Ed. UFV, 2011. 272p.
