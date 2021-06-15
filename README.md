@@ -53,11 +53,13 @@ desenvolvidas por meio da plataforma Google Meet.
 
 # Programação da disciplina
 
-A programação, o conteúdo e os slides da disciplina **Experimentação
+A programação, o conteúdo e slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide | Link |
-|:------|:-----|
+| Slide                                | Link                                                                              |
+|:-------------------------------------|:----------------------------------------------------------------------------------|
+| Slides/Aula0-Cronograma.html         | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>         |
+| Slides/Aula1-IF-Conceitos-Tipos.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-IF-Conceitos-Tipos.html> |
 
 # Facilitador :deciduous\_tree:
 
