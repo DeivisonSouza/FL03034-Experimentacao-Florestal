@@ -90,7 +90,7 @@ layout: true
 ### 1. Sobre o facilitador
 .pull-left[
 
-**Graduação (Titulação: ano 2008)**
+- **Graduação (Titulação: ano 2008)**
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
 
