@@ -1,5 +1,5 @@
 ---
-title: "Inventário Florestal (FL03039 - IF)"
+title: "Experimentação Florestal (FL03034 - EF)"
 subtitle: "Cronograma da disciplina"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
@@ -66,7 +66,7 @@ use_logo(
 ```
 
 <!-- title-slide -->
-# Inventário Florestal <br> (FL03039 - IF)
+# Experimentação Florestal <br> (FL03034 - EF)
 
 ## Cronograma da disciplina
 <br><br>
@@ -80,7 +80,7 @@ use_logo(
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Inventário Florestal (FL03039 - IF) - Cronograma da disciplina</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Cronograma da disciplina</div>
 
 
 ---
@@ -88,27 +88,28 @@ layout: true
 ## 👋 Olá, sejam bem vindos!
 
 ### 1. Sobre o facilitador
-
 .pull-left[
-* **Graduação (Titulação: ano 2008)**
-    + Universidade Federal Rural da Amazônia (UFRA); e
-    + Título: Bacharel em Engenharia Florestal.
 
-* **Mestrado (Titulação: ano 2011)**
-    + Universidade Federal Rural da Amazônia (UFRA);
-    + Programa de Pós-graduação em Ciências Florestais (PPGCF); e
-    + Área de Concentração: Manejo de ecossistemas florestais.
+**Graduação (Titulação: ano 2008)**
+    - Universidade Federal Rural da Amazônia (UFRA); e
+    - Título: Bacharel em Engenharia Florestal.
+
+**Mestrado (Titulação: ano 2011)**
+    - Universidade Federal Rural da Amazônia (UFRA);
+    - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
+    - Área de Concentração: Manejo de ecossistemas florestais.
 ]
 
 .pull-right[
-* **Doutorado (Titulação: ano 2020)**
-    + Universidade Federal do Paraná (UFPR);
-    + Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
-    + Área de Concentração: Manejo Florestal.
+
+**Doutorado (Titulação: ano 2020)**
+    - Universidade Federal do Paraná (UFPR);
+    - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    - Área de Concentração: Manejo Florestal.
     
-* **Especialização (Defesa: ano 2019)**
-    + Universidade Federal do Paraná (UFPR);
-    + Área: Big Data e Data Science
+**Especialização (Defesa: ano 2019)**
+    - Universidade Federal do Paraná (UFPR);
+    - Área: Big Data e Data Science
 ]
 
 ---
@@ -117,17 +118,17 @@ layout: true
 .pull-left[
 ### 2. Interesses atuais
 
-* **Linguagem de programação**
-    + R
-    + Python
+**Linguagem de programação**
+    - R
+    - Python
     
-* **Modelagem preditiva aplicada à ciência florestal**
-    + Aprendizado de máquina
+**Modelagem preditiva aplicada à ciência florestal**
+    - Aprendizado de máquina
     
-* **Visão computacional**
-    + reconhecimento de imagens
+**Visão computacional**
+    - reconhecimento de imagens
     
-* **Criação de Dashboard - Shiny**
+**Criação de Dashboard - Shiny**
 ]
 
 .pull-right[
