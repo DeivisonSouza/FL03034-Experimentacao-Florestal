@@ -79,7 +79,7 @@ Este repositório guarda os slides em .html, códigos R, arquivos .Rmd, figuras,
 
 # Programação da disciplina
 
-A programação, o conteúdo e slides da disciplina **Experimentação Florestal** (FL03034-EF) estão detalhados a seguir.
+A programação, o conteúdo e os slides da disciplina **Experimentação Florestal** (FL03034-EF) estão detalhados a seguir.
 
 ```{r, echo = FALSE}
 knitr::kable(
