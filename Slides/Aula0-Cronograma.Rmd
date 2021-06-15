@@ -216,7 +216,7 @@ ggweek_planner(
 
 <!-- Slide 4 -->
 ---
-## Ementa da disciplina (FL03039 - IF)
+## Ementa da disciplina (FL03034 - EF)
 
 <br>
 .blockquote[
