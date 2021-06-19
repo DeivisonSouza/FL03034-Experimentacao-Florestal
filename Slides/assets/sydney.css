@@ -521,7 +521,7 @@ h2, h3, h4 {
   padding-top: 90px;
   padding-left: 10px;
   padding-bottom: 10px;
-  margin-left: 160px;
+  margin-left: 45px;
   margin-top: 0px;
   text-align: left;
   vertical-align: middle;
@@ -530,15 +530,15 @@ h2, h3, h4 {
 
 /* H2 fonts */
 .title-slide h2 {
-  color: white !important; /* first of type is master brand red */
+  color: green !important; /* first of type is master brand red */
   font-size: 50px;
   font-weight: bold;
-  padding-top: -10px;
-  padding-left: 20px;
+  padding-top: 20px;
+  padding-left: 5px;
   padding-bottom: 0px;
   margin-top: 0px;
-  margin-left: 280px;
-  text-align: right;
+  margin-left: 50px;
+  text-align: left;
   vertical-align: middle;
 }
 
@@ -551,22 +551,22 @@ h2, h3, h4 {
   margin: 0px;
   line-height: 1;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 70px;
   vertical-align: middle;
 }
 
 
 /* H4 fonts */
 .title-slide h4 {
-  color: white !important;
-  font-size: 28px;
+  color: black !important;
+  font-size: 20px;
   font-weight: bold;
   padding-top: -10px;
   padding-left: 20px;
   padding-bottom: 0px;
   margin-top: 0px;
-  margin-left: 250px;
-  text-align: right;
+  margin-left: 190px;
+  text-align: left;
   vertical-align: middle;
 }
 
