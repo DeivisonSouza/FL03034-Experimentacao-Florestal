@@ -8,6 +8,15 @@
   padding-right: 50px;
 }
 
+/* Custom color number slide*/
+.remark-slide-number {
+  color: #ffff00;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-bottom: -5px;
+  margin-right: 10px;
+}
+
 /*
 To specify the margin of the first title h1
 */

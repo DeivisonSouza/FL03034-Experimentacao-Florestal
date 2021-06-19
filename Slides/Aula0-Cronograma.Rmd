@@ -242,6 +242,45 @@ ggweek_planner(
 11 - Modelagem aplicada aos inventários florestais. 
 ]
 
+---
+## Cronograma
+
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 16}
+library(calendR)
+
+calendR(year = 2021,
+        month = 7,
+        start = "M",    # ("S": Sunday, "M": Monday)
+        title = "Cronograma-Julho/2021",
+        title.size = 30, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "-Experimentação Florestal-",   
+        subtitle.col = 3,
+        #weeknames = c("S", "M", "T", "W", "T", "F", "S"), 
+        special.days = "weekend",
+        special.col = rgb(0, 0, 1, 0.15), # Color of the special days
+        col = "black",                  # Color of the lines of the calendar
+        lwd = 1,                        # Width of the lines of the calendar
+        lty = 1,                        # Line type of the lines of the calendar
+        font.family = "mono",             # Font family of all the texts        
+        font.style = "bold",        # Font style of the texts except the subtitle
+        weeknames.col = "gray30",   # Color of the names of the days of the week
+        months.col = "gray30",# If month = NULL, is the color of the month names
+        days.col = 4,                     # Color of the number of the days
+        day.size = 10,                   # Size of the number of days
+        bg.img = "",
+        text = c(
+          "- Apresentação;\n- Metodologia de avaliação;\n- Introdução à experimentação;\n- Princípios básicos;\n- Planejamento de experimentos", 
+          "ANOVA - DIC"),
+        text.pos = c(19, 26),       # Days of the month where to put the texts 
+        text.size = 6,               # Font size of the text
+        text.col = 1)                  # Color of the texts)                    
+```
+
+
+
+
 <!-- Slide 5 -->
 ---
 ## Plano de Ensino
