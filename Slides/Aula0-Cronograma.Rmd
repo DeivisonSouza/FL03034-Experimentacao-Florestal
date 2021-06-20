@@ -149,71 +149,179 @@ Email: deivisonvs@ufpa.br
 
 <!-- Slide 2 -->
 ---
-## Cronograma
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
 
-```{r, echo=FALSE, eval=TRUE, warning=FALSE, dpi=600,     fig.width = 14, fig.height = 7}
-library(ggweekly)
-library(ggplot2)
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
+library(calendR)
+dates <- seq(as.Date("2021-07-01"), as.Date("2021-07-31"), by = "1 day")
+events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
+events[c(12)] <- "Dia do Engenheiro Florestal"
 
-may_days <- dplyr::tribble(
-          ~day,             ~label,    ~color,
-  "2021-05-10", "- Apresentação \nda disciplina \n- Conceitos básicos", "#bf006c",
-  "2021-05-12",     "Amostragem \nAleatória Simples", "#bf006c",
-  "2021-05-14",     "Amostragem \nAleatória \nEstratificada", "#bf006c",
-  "2021-05-17",     "Amostragem \nSistemática", "#bf006c",
-  "2021-05-19",     "Amostragem \nem Conglomerados", "#bf006c",
-  "2021-05-21", "A definir", "#bf006c",
-  "2021-05-24", "A definir", "#bf006c",
-  "2021-05-26", "A definir", "#bf006c",
-  "2021-05-28", "A definir", "#bf006c",
-  "2021-05-31", "A definir", "#bf006c"
-)
+p <- calendR::calendR(year = 2021,
+        month = 7,
+        start = "M",
+        title = "Julho (Ano 2021)",
+        title.size = 50, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "",   
+        subtitle.col = 3,
+        weeknames.size = 15,
+        special.days = events,
+        legend.pos = "bottom",
+        special.col = c("lightgreen", rgb(1, 0, 0, 0.1)),
+        col = "black",                  
+        lwd = 1,
+        lty = 1,
+        font.family = "mono",       
+        font.style = "bold",
+        weeknames.col = "gray30",
+        months.col = "gray30",
+        days.col = 4, 
+        day.size = 18,
+        bg.img = "",
+        text = c(
+          "Introdução à\n experimentação", 
+          "Introdução ao R"),
+        text.pos = c(19, 26), 
+        text.size = 12,
+        text.col = 1)
 
-ggweek_planner(
-  start_day = "2021-05-01",
-  end_day = "2021-05-31", 
-  highlight_days = may_days,
-  show_month_start_day = FALSE,
-  highlight_text_size = 4,
-  month_text_size = 4,
-  day_number_text_size = 9,
-  day_number_color = "black"
-) +
-  ggtitle("Maio (Ano 2021)") +
-  theme(plot.title = element_text(size = rel(2), 
-                                  face = "bold"))
+p + theme(legend.key.size = unit(2, 'cm'),
+          legend.text = element_text(size=30))
+
 ```
+
+
 
 <!-- Slide 3 -->
 ---
-## Cronograma
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
 
-```{r, echo=FALSE, eval=TRUE, warning=FALSE, dpi=600,     fig.width = 14, fig.height = 7}
-june_days <- dplyr::tribble(
-          ~day,             ~label,    ~color,
-  "2021-06-02", "A definir", "#bf006c",
-  "2021-06-04", "A definir", "#bf006c",
-  "2021-06-07", "A definir", "#bf006c",
-  "2021-06-09", "A definir", "#bf006c",
-  "2021-06-11", "A definir", "#bf006c"
-)
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
 
-ggweek_planner(
-  start_day = "2021-06-01",
-  end_day = "2021-06-30",
-  highlight_days = june_days,
-  show_month_start_day = FALSE,
-  highlight_text_size = 4,
-  month_text_size = 4,
-  day_number_text_size = 9,
-  day_number_color = "black",
-) +
-  ggtitle("Junho (Ano 2021)") +
-  theme(plot.title = element_text(size = rel(2),
-                                  face = "bold"))
+p <- calendR::calendR(year = 2021,
+        month = 8,
+        start = "M",
+        title = "Agosto (Ano 2021)",
+        title.size = 50, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "",   
+        subtitle.col = 3,
+        weeknames.size = 15,
+        special.days = "weekend",
+        legend.pos = "bottom",
+        special.col = rgb(1, 0, 0, 0.1),
+        col = "black",                  
+        lwd = 1,
+        lty = 1,
+        font.family = "mono",       
+        font.style = "bold",
+        weeknames.col = "gray30",
+        months.col = "gray30",
+        days.col = 4, 
+        day.size = 18,
+        bg.img = "",
+        text = c(
+          "ANOVA - DIC",
+          "ANOVA - DBC", 
+          "Revisão\n (Avaliação 1)",
+          "Avaliação 1",
+          "ANOVA - DQL"),
+        text.pos = c(2, 9, 16, 23, 30), 
+        text.size = 12,
+        text.col = 1)
+
+p + theme(legend.key.size = unit(2, 'cm'),
+          legend.text = element_text(size=30))
+
 ```
 
 <!-- Slide 4 -->
+---
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
+
+p <- calendR::calendR(year = 2021,
+        month = 9,
+        start = "M",
+        title = "Setembro (Ano 2021)",
+        title.size = 50, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "",   
+        subtitle.col = 3,
+        weeknames.size = 15,
+        special.days = "weekend",
+        legend.pos = "bottom",
+        special.col = rgb(1, 0, 0, 0.1),
+        col = "black",                  
+        lwd = 1,
+        lty = 1,
+        font.family = "mono",       
+        font.style = "bold",
+        weeknames.col = "gray30",
+        months.col = "gray30",
+        days.col = 4, 
+        day.size = 18,
+        bg.img = "",
+        text = c(
+          "Testes de\n comparação\n de médias",
+          "Ensaio Fatorial",
+          "Correlação e\n Regressão Linear",
+          "Revisão\n (Avaliação 2)"),
+        text.pos = c(6, 13, 20, 27), 
+        text.size = 12,
+        text.col = 1)
+
+p + theme(legend.key.size = unit(2, 'cm'),
+          legend.text = element_text(size=30))
+
+```
+
+<!-- Slide 5 -->
+---
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+
+```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
+
+p <- calendR::calendR(year = 2021,
+        month = 10,
+        start = "M",
+        title = "Outubro (Ano 2021)",
+        title.size = 50, 
+        subtitle.size = 20, 
+        title.col = 2,  
+        subtitle = "",   
+        subtitle.col = 3,
+        weeknames.size = 15,
+        special.days = "weekend",
+        legend.pos = "bottom",
+        special.col = rgb(1, 0, 0, 0.1),
+        col = "black",                  
+        lwd = 1,
+        lty = 1,
+        font.family = "mono",       
+        font.style = "bold",
+        weeknames.col = "gray30",
+        months.col = "gray30",
+        days.col = 4, 
+        day.size = 18,
+        bg.img = "",
+        text = c(
+          "Avaliação 2"),
+        text.pos = c(4), 
+        text.size = 12,
+        text.col = 1)
+
+p + theme(legend.key.size = unit(2, 'cm'),
+          legend.text = element_text(size=30))
+
+```
+
+<!-- Slide 5 -->
 ---
 ## Ementa da disciplina (FL03034 - EF)
 
@@ -221,65 +329,22 @@ ggweek_planner(
 .blockquote[
 1 - Introdução à experimentação florestal; 
 
-2 - Conceitos fundamentais para amostragem; 
+2 - Princípios básicos da experimentação; 
 
-3 - Classificação da amostragem; 
+3 - Planejamento, instalação, condução e avaliação de experimentos florestais; 
 
-4 - Métodos de amostragem; 
+4 - Delineamento inteiramente casualizado - DIC; 
 
-5 - Processos de amostragem; 
+5 - Delineamento em blocos ao acaso - DBC;
 
-6 - Amostragem com múltiplos inícios aleatórios;
+6 - Delineamento em quadrado latino - DQL;
 
-7 - Amostragem em múltiplas ocasiões; 
+7 - Testes de comparação de médias; 
 
-8 - Planejamento e custo de inventários florestais; 
+8 - Ensaios Fatoriais;
 
-9 - Censo florestal (Inventário Florestal 100%); 
-
-10 - Fontes de erros em inventários florestais; e
-
-11 - Modelagem aplicada aos inventários florestais. 
+9 - Correlação e regressão linear simples.
 ]
-
----
-## Cronograma
-
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 16}
-library(calendR)
-
-calendR(year = 2021,
-        month = 7,
-        start = "M",    # ("S": Sunday, "M": Monday)
-        title = "Cronograma-Julho/2021",
-        title.size = 30, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "-Experimentação Florestal-",   
-        subtitle.col = 3,
-        #weeknames = c("S", "M", "T", "W", "T", "F", "S"), 
-        special.days = "weekend",
-        special.col = rgb(0, 0, 1, 0.15), # Color of the special days
-        col = "black",                  # Color of the lines of the calendar
-        lwd = 1,                        # Width of the lines of the calendar
-        lty = 1,                        # Line type of the lines of the calendar
-        font.family = "mono",             # Font family of all the texts        
-        font.style = "bold",        # Font style of the texts except the subtitle
-        weeknames.col = "gray30",   # Color of the names of the days of the week
-        months.col = "gray30",# If month = NULL, is the color of the month names
-        days.col = 4,                     # Color of the number of the days
-        day.size = 10,                   # Size of the number of days
-        bg.img = "",
-        text = c(
-          "- Apresentação;\n- Metodologia de avaliação;\n- Introdução à experimentação;\n- Princípios básicos;\n- Planejamento de experimentos", 
-          "ANOVA - DIC"),
-        text.pos = c(19, 26),       # Days of the month where to put the texts 
-        text.size = 6,               # Font size of the text
-        text.col = 1)                  # Color of the texts)                    
-```
-
-
-
 
 <!-- Slide 5 -->
 ---
