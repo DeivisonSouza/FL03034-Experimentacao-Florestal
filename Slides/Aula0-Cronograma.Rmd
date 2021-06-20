@@ -343,7 +343,7 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 8 - Ensaios Fatoriais;
 
-9 - Análise da correlação simples;
+9 - Análise de correlação linear simples;
 
 10 - Análise de regressão linear simples e múltipla; e
 
