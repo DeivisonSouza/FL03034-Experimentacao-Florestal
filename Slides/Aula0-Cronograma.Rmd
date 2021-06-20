@@ -382,18 +382,56 @@ Obs.: As atividades remotas síncronas serão realizadas sob supervisão contín
 
 <!-- Slide 7 -->
 ---
-## Estratégias de aprendizagem
-- Formulários de avaliação do Google Form, com perguntas discursivas e objetivas sobre o tema;
-- Atividades extraclasse sobre os assuntos abordados;
-- Debates síncronos com temas da aula;
-- Seminários síncronos com temas pré-estabelecidos em grupo;
-- Pesquisa bibliográfica – pesquisa de artigos científico, vídeos e livros; e
-- Indicação de palestras síncronas relacionadas aos temas abordados na disciplina.
+## Estratégias de avaliação da aprendizagem
+- **Formulários** (*Google Forms*)
+
+Perguntas discursivas e objetivas para assimilação de conceitos.
+
+- **Exercícios práticos**
+
+Exercícios síncronos e assíncronos para prática de cálculos. 
+
+- **Avaliação teórica**
+
+Avaliação síncrona realizada na sala remota.
+
+- **Participação** 
+
+O nível de participação e interação nas aulas síncronas determinará uma pontuação extra nas avaliações teóricas.
 
 <!-- Slide 7 -->
 ---
-## Metodologia de avaliação
+## Média Final e Conceito
 
+$$
+\Large
+MF = \frac{(NA*2)+NPT}{3}
+$$
+
+**MF** = Média Final
+
+**NA** = Nota das Atividade (Soma das atividades será 10 pts.)
+
+**NP** = Nota das Provas Teóricas (Soma das provas será 10 pts.)
+
+<br>
+
+| Conceito     | Intervalo      |
+|--------------|----------------|
+| Excelente    | 9,0 ≤ MF ≤ 10    |
+| Bom          | 7,0 ≤ MF ≤ 8,9   |
+| Regular      | 5,0 ≤ MF ≤ 6,9 |
+| Insuficiente | 0 ≤ MF ≤ 4,9   |
+
+<!-- Slide 8 -->
+---
+## Reprovação
+<br>
+Conforme o Regimento Geral da UFPA, será considerado reprovado o discente que:
+
+- Obtiver o conceito Insuficiente (INS), isto é, nota inferior a 5 (cinco); (.green[**Aplicável**])
+- Sem Avaliação (SA); ou (.green[**Aplicável**])
+- Não obtiver a frequência mínima de 75% na disciplina, isto é, Sem Frequência (SF). (.green[**Não Aplicável**])
 
 <!-- Slide 8 -->
 ---
