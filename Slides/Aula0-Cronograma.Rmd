@@ -192,8 +192,6 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 ```
 
-
-
 <!-- Slide 3 -->
 ---
 ## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
@@ -321,7 +319,7 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 ```
 
-<!-- Slide 5 -->
+<!-- Slide 6 -->
 ---
 ## Ementa da disciplina (FL03034 - EF)
 
@@ -351,27 +349,18 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 ]
 
-<!-- Slide 5 -->
----
-## Plano de Ensino
-
-
-<!-- Slide 6 -->
----
-## Planos de aula
-
 <!-- Slide 7 -->
 ---
 ## Estratégias e Ferramentas de Ensino
 - **Plataforma de videoconferência** (*Google Meeting*)
 
-Aulas remotas síncronas, realização de atividades complementares e avaliações de desempenho. 
+**Sistema de Ensino Remoto**: Aulas teóricas síncronas, realização de atividades complementares e avaliações de desempenho. 
 
-Link de acesso: [Sala Remota](https://meet.google.com/zos-kvfj-rrg)
+Link de acesso: [Endereço da Sala Remota](https://meet.google.com/zos-kvfj-rrg)
 
 - **Sala de aula virtual** (*Google Classroom*)
 
-Comunicação, envio de atividades síncronas e assíncronas, e de conteúdos digitas.
+Comunicação, envio de atividades síncronas e assíncronas e de conteúdos digitas.
 
 - **Repositório GitHub <a href="https://github.com/DeivisonSouza">(@DeivisonSouza)</a>**
 
@@ -380,26 +369,26 @@ Repositório com os slides em .html, arquivos .R e .Rmd, figuras, conjunto de da
 <br>
 Obs.: As atividades remotas síncronas serão realizadas sob supervisão contínua do Professor. A ideia é orientar e sanar dúvidas acerca da atividade proposta.
 
-<!-- Slide 7 -->
+<!-- Slide 8 -->
 ---
 ## Estratégias de avaliação da aprendizagem
 - **Formulários** (*Google Forms*)
 
-Perguntas discursivas e objetivas para assimilação de conceitos.
+Formulários de avaliação do Google Forms, com perguntas discursivas e objetivas sobre o tema.
 
-- **Exercícios práticos**
+- **Atividades práticas**
 
-Exercícios síncronos e assíncronos para prática de cálculos. 
+Atividades síncronas e assíncronas sobre os assuntos abordados. Basicamente, estas atividades consistirão em exercícios com dados reais (quando possível) para aprendizado da matemática subjacente aos delineamentos (quando couber).
 
 - **Avaliação teórica**
 
-Avaliação síncrona realizada na sala remota.
+Avaliações teóricas síncronas em sala remota.
 
 - **Participação** 
 
 O nível de participação e interação nas aulas síncronas determinará uma pontuação extra nas avaliações teóricas.
 
-<!-- Slide 7 -->
+<!-- Slide 9 -->
 ---
 ## Média Final e Conceito
 
@@ -423,7 +412,17 @@ $$
 | Regular      | 5,0 ≤ MF ≤ 6,9 |
 | Insuficiente | 0 ≤ MF ≤ 4,9   |
 
-<!-- Slide 8 -->
+
+<!-- Slide 10 -->
+---
+## Plano de Ensino
+<br><br>
+
+O plano de ensino da disciplina pode ser acessado em:
+
+[Plano de Ensino (FL03034-EF)](https://github.com/DeivisonSouza/FL03034-EF/Slides/PE/EF-PE.pdf)
+
+<!-- Slide 11 -->
 ---
 ## Reprovação
 <br>
@@ -433,13 +432,13 @@ Conforme o Regimento Geral da UFPA, será considerado reprovado o discente que:
 - Sem Avaliação (SA); ou (.green[**Aplicável**])
 - Não obtiver a frequência mínima de 75% na disciplina, isto é, Sem Frequência (SF). (.green[**Não Aplicável**])
 
-<!-- Slide 8 -->
+<!-- Slide 12 -->
 ---
 ## Ensino Remoto Emergencial - UFPA
 
 - [Resolução  n. 5.294, de 21 de agosto de 2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf)
 
-<!-- Slide 9 -->
+<!-- Slide 13 -->
 ---
 ## Bibliografia básica
 
@@ -450,7 +449,7 @@ PIMENTEL-GOMES, F. Curso de estatística experimental. Piracicaba: FEALQ, 2009. 
 <br><br>
 ZIMMERMANN, F. J. P. Estatística aplicada à pesquisa agrícola. Santo Antônio de Goiás: Embrapa Arroz e Feijão, 2004. 402 p.
 
-<!-- Slide 10 -->
+<!-- Slide 14 -->
 ---
 ## Bibliografia complementar
 
