@@ -356,7 +356,8 @@ São os valores assumidos pela variável resposta.
 
 ]
 
-<br><br>
+---
+class: center, middle
 **Vamos sair da abstração...**
 
 ---
