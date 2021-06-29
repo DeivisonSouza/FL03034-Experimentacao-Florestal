@@ -46,7 +46,7 @@ knitr::opts_chunk$set(
 library(xaringanExtra)
 use_logo(
   image_url = "fig/slide-title/ufpa.png",
-  position = css_position(top = ".8em", right = "1em"),
+  position = css_position(top = ".8em", right = "-.5em"),
   width = "140px",
   height = "140px"
 )
@@ -64,7 +64,7 @@ use_logo(
 # Experimentação Florestal <br> (FL03034 - EF)
 
 ## Introdução à experimentação
-### - Conceitos básicos
+### - Terminologias e conceitos básicos 
 ### - Princípios básicos da experimentação
 ### - Planejamento, condução e análise de experimentos 
 ### - Noções de estatística descritiva
@@ -92,11 +92,11 @@ layout: true
 
 <br>
 .blockquote[
-1 - Introdução à experimentação florestal; 
+1 - Introdução à experimentação: terminologias e conceitos básicos; 
 
 2 - Princípios básicos da experimentação; 
 
-3 - Planejamento, instalação, condução e avaliação de experimentos florestais; 
+3 - Planejamento, instalação, condução e avaliação de experimentos; 
 
 4 - Delineamento inteiramente casualizado - DIC; 
 
@@ -122,124 +122,92 @@ layout: true
 <br><br>
 Ao final desta aula espera-se que o discente seja capaz de...
 
-* Compreender os principais conceitos associados à experimentação;
+* Conhecer as terminologias e os principais conceitos associados à experimentação;
 * Compreender os princípios básicos da experimentação;
-* Compreender a importância e os principais aspectos associados ao planejamento, instalação e condução de experimentos; e
+* Compreender a importância e os principais aspectos associados ao planejamento, instalação, condução e análise de experimentos; e
 * Realizar uma análise descritiva de dados experimentais.
 
 ---
 
 ## Conteúdo
 
-.pull-top[
-**Parte 1 - Tipos de inventários florestais**
+.pull-left-4[
+**Parte 1 - Terminologias e conceitos básicos**
 
-[1 - Conceito e importância](#conc)
+[1 - Experimentação e Experimento](#Exp)
 
-[2 - Classificação de inventários florestais](#tipos)
+[2 - Tratamento e Unidade Experimental](#Trat)
 
-&nbsp;&nbsp;[2.1 - Quanto ao objetivo](#TA)
+[3 - Delineamento Experimental](#DE)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.1.1 - Inventário florestal de cunho tático](#RT)
+[4 - Análise de Variância (ANOVA)](#Anova)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[2.1.2 - Inventário florestal de cunho estratégico](#RT)
+[5 - Erro Experimental ou Resíduo](#Res)
+]
 
-&nbsp;&nbsp;[2.2 - Quanto à abrangência das informações](#AAS)
+.pull-right-2[
+.pull-down[
+**Parte 2 - Princípios básicos da experimentação**
 
-&nbsp;&nbsp;[2.3 - Quanto à maneira de obtenção dos dados de campo](#AAS)
+[1 - Repetição: conceito, importância e limitações](#Rep)
 
-&nbsp;&nbsp;[2.4 - Quanto à abordagem da população no tempo](#AAS)
+[2 - Casualização ou aleatorização: conceito e importância](#Cas)
 
-&nbsp;&nbsp;[2.5 - Quanto ao grau de detalhamento dos resultados](#AAS)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.1 - ](#RT)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.2 - ](#bag)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.3 - ](#rf)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.4 - ](#out)
-
-&nbsp;&nbsp;[3.3 - ](#mr)
-
-&nbsp;&nbsp;[3.4 - ](#md)
-
+[3 - Controle local: conceito e importância](#Cas)
+]
 ]
 
 ---
-background-image: url(fig/white.jpg)
-background-size: cover
 ## Conteúdo
 
-.pull-top[
-**Parte 2 - Aspectos técnicos no planejamento de inventários florestais**
+**Parte 3 - Planejamento, instalação, condução e análise de experimentos**
 
-[1 - ](#AR)
+[1 - Definição do problema de pesquisa](#Probl)
 
-[2 - ](#CultME)
+[2 - Conhecimento científico existente?](#Conh)
 
-&nbsp;&nbsp;[2.1 - ](#TA)
+[3 - Enunciação do problema e formulação da hipótese científica](#Enun)
 
-&nbsp;&nbsp;[2.2 - ](#AAS)
+[4 - Definir a unidade experimental (UE)](#UE)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.1 - ](#RT)
+[5 - Definir os tratamentos a serem aplicados](#Trat)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.2 - ](#bag)
+[6 - Definir as variáveis a serem medidas nas UEs](#Var)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.3 - ](#rf)
+[7 - Definir o delineamento experimental](#del)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[3.2.4 - ](#out)
+[8 - Instalar e conduzir o experimento](#Inst)
 
-&nbsp;&nbsp;[3.3 - ](#mr)
+[9 - Analisar e interpretar dados experimentais](#int)
 
-&nbsp;&nbsp;[3.4 - ](#md)
-
-]
+[10 - Realizar conclusões e fazer recomendações](#int)
 
 <!-- Slide XX -->
 ---
 layout: false
 name: conc
-class: inverse, middle, left
-background-image: url(fig/au1/white.jpg)
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
 background-size: cover
 
-.font200[**Conceito e importância**]
+.font200[**Parte 1 <br> Terminologias e conceitos básicos**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
 
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Inventário Florestal (FL03039 - IF) - Introdução aos inventários florestais: conceitos, tipos e importância</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento</div>
 
 ---
 
-## Inventário Florestal
+## Terminologias e conceitos básicos
 <br><br>
 .shadow1[
-## Conceito
-É uma atividade que visa obter informações **qualitativas** e **quantitativas** dos recursos florestais existentes em uma área pré-especificada (PÉLLICO NETTO; BRENA, 1997), com o objetivo de bem administrá-los, seja através da seu uso racional racional, seja por meio de formulação de políticas públicas.
-]
+## O que é experimentação?
 
----
-## Tipos de inventários florestais
-<br>
-Em geral, os IFs podem ser classificados em diversos tipos. 
+A experimentação é uma atividade que consiste no **planejamento**, **instalação** e **condução** de experimentos, bem como da coleta e análise de dados experimentais.
 
-A classificaçao proposta em Péllico Netto; Brena (1997) é bem aceita e classifica os IFs quanto à/ao(s):
-
-```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/au1/IF_Tipos.png')
-```
-
----
-
-## Tipos de inventários florestais
-<br><br>
-.shadow1[
-## 1 - Quanto ao objetivo
-a) Inventário florestal de cunho tático; e
-
-b) Inventário florestal de cunho estratégico.
 ]
 
 ---
