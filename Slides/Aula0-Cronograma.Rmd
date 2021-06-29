@@ -26,7 +26,7 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa.png), url(fig/slide-title/logo-foresta.png), url(fig/slide-title/leaf.jpg), url(fig/slide-title/cron.png)
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/logo-foresta.png), url(fig/slide-title/leaf.jpg), url(fig/slide-title/cron.png)
 background-position: 20% 1%, 40% 3%, left, right
 background-size: 250px, 90px, 100px 750px, 600px 710px
 
