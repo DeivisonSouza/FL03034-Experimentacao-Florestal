@@ -1,23 +1,23 @@
 ---
-title: "Inventário Florestal (FL03039 - IF)"
-subtitle: "Introdução aos inventários florestais: conceitos, tipos e importância"
+title: "Experimentação Florestal (FL03034 - EF)"
+subtitle: "Introdução à Experimentação Florestal"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
 encoding: "UTF-8"
 output:
   xaringan::moon_reader:
-    css: 
-      - default 
+    css:
+      - default
       - assets/sydney-fonts.css
-      - assets/sydney.css
+      - assets/slide-title/sydney-title.css
     self_contained: false
     seal: false
     includes:
       in_header: "assets/mathjax-equation-numbers.html"
     nature:
       beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
-      highlightStyle: googlecode
+      highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
       highlightLanguage: ["r", "css", "yaml"]
@@ -26,9 +26,9 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa.png), url(fig/slide-title/logo-forest.png), url(fig/slide-title/leave.jpg), url(fig/slide-title/au1.jpg)
-background-position: 20% 1%, 30% 3%, left, right
-background-size: 100px, 100px, 600px 1500px, 600px 710px
+background-image: url(fig/slide-title/ufpa.png), url(fig/slide-title/logo-foresta.png), url(fig/slide-title/imgA.jpg)
+background-position: 75% 90%, 95% 90%
+background-size: 400px, 140px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -50,6 +50,14 @@ use_logo(
   width = "140px",
   height = "140px"
 )
+
+library(xaringanthemer)
+style_mono_accent(
+  base_color = "#1c5253",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
 ```
 
 
@@ -61,13 +69,22 @@ use_logo(
 ```
 
 <!-- title-slide -->
-# Inventário Florestal <br> (FL03039 - IF)
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## Aula 1 <br> Introdução aos inventários <br> florestais: conceitos, tipos <br>e importância
+## Introdução à experimentação
+### - Conceitos básicos
+### - Princípios básicos da experimentação
+### - Planejamento, condução e análise de experimentos 
+### - Noções de estatística descritiva
 
-### **Prof. Dr. Deivison Venicio Souza**
-### Universidade Federal do Pará (UFPA) 
-### E-mail: deivisonvs@ufpa.br 
+<br>
+
+#### **Prof. Dr. Deivison Venicio Souza**
+#### Universidade Federal do Pará (UFPA) 
+#### Faculdade de Engenharia Florestal
+#### E-mail: deivisonvs@ufpa.br
+
+<br>
 
 #### `r format(Sys.Date(),"%d/%B/%Y")`
 #### Altamira, Pará
