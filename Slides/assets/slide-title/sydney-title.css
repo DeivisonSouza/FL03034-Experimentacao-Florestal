@@ -523,7 +523,7 @@ h1 {
 h2, h3, h4 {
   padding-top: -15px;
   padding-bottom: 00px;
-  color: #000000;
+  color: #00cc00;
   text-shadow: none;
   font-weight: 400;
   margin-left: 5px;
@@ -563,7 +563,7 @@ h2, h3, h4 {
 .title-slide h3 {
   font-size: 28px;
   font-weight: normal;
-  color: black;
+  color: #00cc00;
   padding-left: 20px;
   margin: 0px;
   line-height: 1;

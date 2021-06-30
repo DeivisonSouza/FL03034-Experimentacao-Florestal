@@ -65,6 +65,7 @@ BibOptions(check.entries = FALSE,
 
 ```{r icon, echo=FALSE}
 #remotes::install_github("mitchelloharawild/icons")
+#remotes::install_github('emitanaka/anicon')
 #library(icons)
 #download_fontawesome()
 #download_simple_icons()
@@ -213,148 +214,146 @@ layout: true
 
 ## Terminologias e conceitos básicos
 
-.shadow2[
-## Experimentação...
+<br>
+### Experimentação
+
+--
 
 A experimentação é uma atividade que consiste no **planejamento**, **instalação** e **condução** de experimentos, bem como da coleta e análise de dados experimentais.
 
-]
+--
 
-<br>
+### Experimento
 
-.shadow2[
-## Experimento...
+--
 
 É uma experiência realizada em condições previamente estabelecidas e que opera com causas controladas `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
 
 Um experimento pode ser definido como um conjunto de procedimentos destinados a coletar evidência contra uma hipótese formulada.
 
-]
-
 ---
 
 ## Terminologias e conceitos básicos
-
-.shadow2[
-## Tratamento...
-
-É a condição imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
-
-]
 
 <br>
+### Tratamento
 
-.shadow2[
-## Parcela ou unidade experimental...
-
-É a menor unidade material de um experimento em que se aplica o tratamento.
-
-]
-
-
----
-
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Delineamento experimental...
-
-É o modo como os tratamentos são designados às parcelas experimentais `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
-
-Os principais delineamentos experimentais utilizados são:
- 
-- Delineamento inteiramente casualizado;
-- Delineamento em blocos casualizados; e 
-- Delineamento em quadrado latino.
-
-]
-
----
-
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Delineamento Inteiramente Casualizado - DIC...
-
-Quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
-
-]
-
----
-
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Delineamento em Blocos Casualizados - DBC...
-
-É um delineamento no qual as unidades experimentais são subdivididas em grupos homogêneos, denominados de blocos. Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
-
-]
-
----
-
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Delineamento em Quadrado Latino - DQL...
-
-O controle local é aplicado pela imposição de **dois fatores de restrição** na casualização, devido à presença de dois gradientes de heterogeneidade, perpendiculares, no ambiente ou material experimental.
-
-]
-
----
-
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Análise de variância - ANOVA...
-
-É uma técnica que permite decompor a variação total observada nos dados experimentais em causas conhecidas e não conhecidas.
-
-]
+--
+É a condição imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
 
 --
 
-<br><br>
-.left[
+### Unidade Experimental (ou Parcela)
 
--> O quanto da variação observada no experimento é devido ao erro experimental (**fatores não-controlados ou variação do acaso**)?
+--
 
--> O quanto é devido às influências dos tratamentos experimentais (**fatores controlados**)?
-]
+É a menor unidade material de um experimento em que se aplica o tratamento.
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+
+### Delineamento experimental
+
+--
+
+É o modo como os tratamentos são designados às unidades experimentais `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+
+--
+<br><br><br>
+Os principais delineamentos experimentais utilizados são:
+ 
+- 1 - Delineamento inteiramente casualizado;
+- 2 - Delineamento em blocos casualizados; e 
+- 3 - Delineamento em quadrado latino.
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+### Delineamento Inteiramente Casualizado - DIC
+
+--
+
+Quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
+
+.red[Adicionar um exemplo...]
 
 
 ---
 
 ## Terminologias e conceitos básicos
 
-.shadow2[
-## Erro experimental (ou resíduo)...
+<br>
+### Delineamento em Blocos Casualizados - DBC
 
-É a variação devida ao efeito dos fatores não-controlados (acaso/aleatório).
+--
 
-]
+É um delineamento no qual as unidades experimentais são subdivididas em grupos homogêneos, denominados de blocos. Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
 
+.red[Adicionar um exemplo...]
 
-.shadow2[
-## Variável resposta...
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+### Delineamento em Quadrado Latino - DQL
+
+--
+
+O controle local é aplicado pela imposição de **dois fatores de restrição** na casualização, devido à presença de dois gradientes de heterogeneidade, perpendiculares, no ambiente ou material experimental.
+
+.red[Adicionar um exemplo...]
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+
+--
+
+É uma técnica estatísticas que permite **decompor a variação total** dos dados experimentais em **causas conhecidas** e **desconhecidas**.
+
+--
+<br><br>
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+### Erro Experimental (ou Resíduo)
+
+--
+
+É a variação devida ao efeito dos fatores não-controlados no experimento (acaso/aleatório).
+
+--
+
+### Variável Resposta (ou Dependente)
+
+--
 
 Característica que é medida e/ou avaliada nas unidades experimentais. 
 
 Comumente essa característica é chamada de variável resposta (ou dependente).
 
-]
+--
 
----
+### Dados experimentais
 
-## Terminologias e conceitos básicos
-
-.shadow2[
-## Dados...
+--
 
 São os valores assumidos pela variável resposta.
-
-]
 
 ---
 class: center, middle
