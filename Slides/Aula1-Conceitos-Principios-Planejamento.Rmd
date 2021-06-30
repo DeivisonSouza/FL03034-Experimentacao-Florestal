@@ -26,9 +26,9 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img.png)
-background-position: 84% 87%, 93% 87%
-background-size: 200px, 80px, cover
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -74,18 +74,15 @@ BibOptions(check.entries = FALSE,
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## Introdução à experimentação `r anicon::faa("pagelines", animate="horizontal", colour="green")`
-### - Terminologias e conceitos básicos 
-### - Princípios básicos da experimentação
-### - Planejamento, condução e análise de experimentos 
-### - Noções de estatística descritiva
+## Introdução à Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
 #### **Prof. Dr. Deivison Venicio Souza**
 #### Universidade Federal do Pará (UFPA) 
 #### Faculdade de Engenharia Florestal
 #### E-mail: deivisonvs@ufpa.br
 <br>
-##### `r format(Sys.Date(),"%d/%B/%Y")` - Altamira, Pará
+##### `r format(Sys.Date(),"%d/%B/%Y")`
+##### Altamira, Pará
 
 ---
 layout: true

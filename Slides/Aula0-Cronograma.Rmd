@@ -10,7 +10,7 @@ output:
     css: 
       - default 
       - assets/sydney-fonts.css
-      - assets/sydney.css
+      - assets/slide-title/sydney-title.css
     self_contained: false
     seal: false
     includes:
@@ -26,9 +26,9 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/logo-foresta.png), url(fig/slide-title/leaf.jpg), url(fig/slide-title/cron.png)
-background-position: 20% 1%, 40% 3%, left, right
-background-size: 250px, 90px, 100px 750px, 600px 710px
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -46,7 +46,7 @@ knitr::opts_chunk$set(
 library(xaringanExtra)
 use_logo(
   image_url = "fig/slide-title/ufpa.png",
-  position = css_position(top = ".8em", right = "1em"),
+  position = css_position(top = ".8em", right = "-.5em"),
   width = "140px",
   height = "140px"
 )
@@ -59,24 +59,18 @@ use_logo(
 #download_simple_icons()
 ```
 
-```{css, echo=FALSE}
-.title-slide h1 {
-  padding-top: 90px;
-}
-```
-
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## Cronograma da disciplina
-<br><br>
-### **Prof. Dr. Deivison Venicio Souza**
-### Universidade Federal do Pará (UFPA)
-### Faculdade de Engenharia Florestal
-### E-mail: deivisonvs@ufpa.br 
+## Cronograma da disciplina `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
-#### `r format(Sys.Date(),"%d/%B/%Y")`
-#### Altamira, Pará
+#### **Prof. Dr. Deivison Venicio Souza**
+#### Universidade Federal do Pará (UFPA) 
+#### Faculdade de Engenharia Florestal
+#### E-mail: deivisonvs@ufpa.br
+<br>
+##### `r format(Sys.Date(),"%d/%B/%Y")`
+##### Altamira, Pará
 
 ---
 layout: true
@@ -113,6 +107,7 @@ layout: true
 ]
 
 ---
+
 ## 👋 Olá, sejam bem vindos!
 
 .pull-left[
@@ -149,6 +144,7 @@ Email: deivisonvs@ufpa.br
 
 <!-- Slide 2 -->
 ---
+
 ## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
 
 ```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
@@ -321,15 +317,16 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 <!-- Slide 6 -->
 ---
+
 ## Ementa da disciplina (FL03034 - EF)
 
+.shadow2[
 <br>
-.blockquote[
-1 - Introdução à experimentação florestal; 
+1 - Introdução à experimentação; 
 
 2 - Princípios básicos da experimentação; 
 
-3 - Planejamento, instalação, condução e avaliação de experimentos florestais; 
+3 - Planejamento, instalação, condução e avaliação de experimentos; 
 
 4 - Delineamento inteiramente casualizado - DIC; 
 
@@ -352,26 +349,35 @@ p + theme(legend.key.size = unit(2, 'cm'),
 <!-- Slide 7 -->
 ---
 ## Estratégias e Ferramentas de Ensino
+<br>
 - **Plataforma de videoconferência** (*Google Meeting*)
 
 **Sistema de Ensino Remoto**: Aulas teóricas síncronas, realização de atividades complementares e avaliações de desempenho. 
 
 Link de acesso: [Endereço da Sala Remota](https://meet.google.com/zos-kvfj-rrg)
 
+--
+<br><br>
 - **Sala de aula virtual** (*Google Classroom*)
 
 Comunicação, envio de atividades síncronas e assíncronas e de conteúdos digitas.
 
+---
+## Estratégias e Ferramentas de Ensino
+<br><br>
 - **Repositório GitHub <a href="https://github.com/DeivisonSouza">(@DeivisonSouza)</a>**
 
 Repositório com os slides em .html, arquivos .R e .Rmd, figuras, conjunto de dados (e outros). O repositório pode ser acessado em: [FL03034-EF](https://github.com/DeivisonSouza/FL03034-EF)
 
-<br>
+--
+<br><br>
+
 Obs.: As atividades remotas síncronas serão realizadas sob supervisão contínua do Professor. A ideia é orientar e sanar dúvidas acerca da atividade proposta.
 
 <!-- Slide 8 -->
 ---
 ## Estratégias de avaliação da aprendizagem
+<br><br>
 - **Formulários** (*Google Forms*)
 
 Formulários de avaliação do Google Forms, com perguntas discursivas e objetivas sobre o tema.
@@ -380,6 +386,10 @@ Formulários de avaliação do Google Forms, com perguntas discursivas e objetiv
 
 Atividades síncronas e assíncronas sobre os assuntos abordados. Basicamente, estas atividades consistirão em exercícios com dados reais (quando possível) para aprendizado da matemática subjacente aos delineamentos (quando couber).
 
+
+---
+## Estratégias de avaliação da aprendizagem
+<br><br>
 - **Avaliação teórica**
 
 Avaliações teóricas síncronas em sala remota.
