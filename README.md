@@ -29,8 +29,8 @@
 **Este repositório está licenciado nos termos da licença MIT.**
 
 <div>
-<img src="Slides/fig/slide-title/ufpa.png" width="100" align="middle" class="center">
-<img src="Slides/fig/slide-title/logo-forest.png" width="100" align="middle" class="center">
+<img src="Slides/fig/slide-title/ufpa2.png" width="270" align="middle" class="center">
+<img src="Slides/fig/slide-title/forest.png" width="100" align="middle" class="center">
 <div>
 
 # Experimentação Florestal (FL03034-EF)
@@ -56,10 +56,10 @@ desenvolvidas por meio da plataforma Google Meet.
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide                                | Link                                                                              |
-|:-------------------------------------|:----------------------------------------------------------------------------------|
-| Slides/Aula0-Cronograma.html         | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>         |
-| Slides/Aula1-IF-Conceitos-Tipos.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-IF-Conceitos-Tipos.html> |
+| Slide                                               | Link                                                                                             |
+|:----------------------------------------------------|:-------------------------------------------------------------------------------------------------|
+| Slides/Aula0-Cronograma.html                        | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>                        |
+| Slides/Aula1-Conceitos-Principios-Planejamento.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-Conceitos-Principios-Planejamento.html> |
 
 # Facilitador :deciduous\_tree:
 
