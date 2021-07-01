@@ -93,7 +93,7 @@ layout: true
 
 ## Ementa da disciplina (FL03034 - EF)
 
-.shadow2[
+.shadow3[
 <br>
 1 - Introdução à experimentação: terminologias e conceitos básicos; 
 
@@ -350,6 +350,159 @@ São os valores assumidos pela variável resposta.
 ---
 class: center, middle
 **Vamos sair da abstração...**
+
+<!-- Slide XX -->
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 2 <br> Princípios básicos da experimentação**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento</div>
+
+---
+## Princípios básicos da experimentação
+<br>
+
+Os delineamentos experimentais clássicos são baseados em três princípios básicos:
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/PBE.png')
+```
+
+---
+## Princípios básicos da experimentação
+<br>
+
+### Repetição
+
+Refere-se ao número de vezes que um determinado tratamento aparece em um experimento `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+
+--
+<br><br>
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **Repetição** = Número de unidades experimentais ou conjunto de unidades experimentais para um determinado tratamento.
+
+--
+<br><br>
+
+**Tratamento 1** (pleno sol) – 4 repetições de 25 sementes
+
+**Tratamento 2** (50% de sombreamento) – 4 repetições de 25 sementes
+
+**Tratamento 3** (80% de sombreamento) – 4 repetições de 25 sementes
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Qual a importância da repetição?
+* Estimar o erro experimental;
+
+
+* Controlar a variância residual (erro experimental);
+
+
+* Aumentar a precisão das estimativas das médias dos tratamentos;
+
+
+* Aumentar o poder dos testes estatísticos; e
+
+
+* Garantir maior confiabilidade nos resultados obtidos.
+
+--
+<br><br>
+.shadow3[
+“à medida que o número de repetições cresce tem-se um aumento da precisão das estimativas do experimento.”
+]
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Limitações
+
+`r anicon::faa("hand-point-right", animate="horizontal")` O uso de um número adequado de repetições, possibilita uma boa estimativa do erro experimental, melhorando as estimativas de interesse. 
+
+`r anicon::faa("hand-point-right", animate="horizontal")` No entanto, o número de repetições pode ser limitado, sobretudo, pelo(a) `r Citep(myBib, "costa2003tecnicas", .opts = list(max.names = 2, longnamesfirst = F))`: 
+
+- Número de tratamentos que serão comparados;
+- Disponibilidade de material experimental; e
+- Disponibilidade de área experimental.
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Casualização ou Aleatorização
+
+--
+
+Consiste em dispor os tratamentos ao acaso no experimento. A ideia básica é que todas as unidades experimentais tenham iguais chances de receber quaisquer dos tratamentos `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+
+--
+<br><br>
+.shadow3[
+É a atribuição dos tratamentos às unidades experimentais de forma aleatória, sem nenhuma interferência por parte do pesquisador.
+]
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Importância
+
+A casualização é recomendada para se evitar fatores sistemáticos que venham a beneficiar algum tratamento em detrimento de outros `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Controle Local
+
+--
+Destina-se a controlar a heterogeneidade ambiental e implica em restringir a casualização `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+
+--
+<br><br>
+.shadow3[
+A formação de blocos no DBC e a disposição de linhas e colunas no DQL, são estratégias de controle local, que possibilitam agrupar parcelas homogêneas e casualizar os tratamentos dentro destas.
+]
+
+---
+
+## Princípios básicos da experimentação
+<br>
+
+### Importância
+
+
+- Diminuir o erro experimental; e
+
+
+- Dividir uma área experimental heterogênea em áreas menores e homogêneas, comumente chamadas de blocos.
+
+--
+<br><br>
+.shadow3[
+É fundamental o reconhecimento da variação ambiental por parte do pesquisador.
+]
 
 ---
 
