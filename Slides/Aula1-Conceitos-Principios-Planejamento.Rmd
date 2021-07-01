@@ -551,8 +551,17 @@ Fonte: [pt.wikipedia.org](https://pt.wikipedia.org/wiki/Experimenta%C3%A7%C3%A3o
 ## Fases de um experimento
 <br>
 
-```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/Fase1.png')
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/F1.png')
+```
+
+---
+
+## Fases de um experimento
+<br>
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/F2.png')
 ```
 
 ---
