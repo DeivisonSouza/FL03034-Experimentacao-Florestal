@@ -667,4 +667,18 @@ knitr::include_graphics('fig/class1/F4.png')
 ```{r ref1, echo=FALSE, results="asis"}
 PrintBibliography(myBib, start = 1, end = 5)
 ```
+
+
+<!--Slide XX -->
 ---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[Obrigado!]
+<br><br><br><br><br><br><br><br>
+
+**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+
+**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
