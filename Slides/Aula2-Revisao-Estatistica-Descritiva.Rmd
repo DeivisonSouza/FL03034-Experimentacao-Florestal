@@ -1,0 +1,224 @@
+---
+title: "Experimentação Florestal (FL03034 - EF)"
+subtitle: "Estatística descritiva: uma breve revisão"
+author: "Prof. Dr. Deivison Venicio Souza"
+institute: "Universidade Federal do Pará (UFPA)"
+date: 
+encoding: "UTF-8"
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - assets/sydney-fonts.css
+      - assets/slide-title/sydney-title.css
+    self_contained: false
+    seal: false
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      highlightLanguage: ["r", "css", "yaml"]
+      ratio: '16:9'
+      navigation:
+        scroll: false
+---
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  fig.showtext = TRUE,
+  fig.align = "center", 
+  cache = TRUE,
+  error = FALSE,
+  message = FALSE, 
+  warning = FALSE, 
+  collapse = TRUE ,
+  dpi = 600)
+```
+
+```{r xaringan-logo, echo=FALSE}
+library(xaringanExtra)
+use_logo(
+  image_url = "fig/slide-title/ufpa.png",
+  position = css_position(top = ".8em", right = "-.5em"),
+  width = "140px",
+  height = "140px"
+)
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "html",
+           hyperlink = FALSE,
+           dashed = FALSE)
+(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
+```
+
+```{r icon, echo=FALSE}
+#remotes::install_github("mitchelloharawild/icons")
+#remotes::install_github('emitanaka/anicon')
+#library(icons)
+#download_fontawesome()
+#download_simple_icons()
+```
+
+<!-- title-slide -->
+# Experimentação Florestal <br> (FL03034 - EF)
+
+## Estatística descritiva: uma breve revisão `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+<br>
+#### **Prof. Dr. Deivison Venicio Souza**
+#### Universidade Federal do Pará (UFPA) 
+#### Faculdade de Engenharia Florestal
+#### E-mail: deivisonvs@ufpa.br
+<br>
+##### `r format(Sys.Date(),"%d/%B/%Y")`
+##### Altamira, Pará
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Estatística descritiva: <br>uma breve revisão</div>
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+<br>
+1 - Introdução à experimentação; 
+
+2 - Princípios básicos da experimentação; 
+
+3 - Fases da pesquisa experimental; 
+
+4 - Delineamento inteiramente casualizado - DIC; 
+
+5 - Delineamento em blocos ao acaso - DBC;
+
+6 - Delineamento em quadrado latino - DQL;
+
+7 - Testes de comparação de médias; 
+
+8 - Ensaios Fatoriais;
+
+9 - Análise de correlação linear simples;
+
+10 - Análise de regressão linear simples e múltipla; e
+
+11 - Introdução à linguagem R para análise de experimentos.
+
+]
+
+---
+
+## Objetivos
+<br><br>
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Conhecer as terminologias e os principais conceitos associados à experimentação;
+* Compreender os princípios básicos da experimentação;
+* Conhecer os principais aspectos relacionados ao planejamento e condução de experimentos; e
+* Realizar uma análise descritiva de dados experimentais.
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 1 - Terminologias e conceitos básicos**
+
+[1 - Experimentação e Experimento](#Exp)
+
+[2 - Tratamento e Unidade Experimental](#Trat)
+
+[3 - Delineamento Experimental](#DE)
+
+[4 - Análise de Variância (ANOVA)](#Anova)
+
+[5 - Erro Experimental ou Resíduo](#Res)
+]
+
+.pull-right-2[
+.pull-down[
+**Parte 2 - Princípios básicos da experimentação**
+
+[1 - Repetição: conceito, importância e limitações](#Rep)
+
+[2 - Casualização ou aleatorização: conceito e importância](#Cas)
+
+[3 - Controle local: conceito e importância](#Cas)
+]
+]
+
+---
+## Conteúdo
+
+**Parte 3 - Fases de um experimento**
+
+[1 - Definição do problema de pesquisa](#Probl)
+
+[2 - Conhecimento científico existente?](#Conh)
+
+[3 - Enunciação do problema e formulação da hipótese científica](#Enun)
+
+[4 - Definir a unidade experimental (UE)](#UE)
+
+[5 - Definir os tratamentos a serem aplicados](#Trat)
+
+[6 - Definir as variáveis a serem medidas nas UEs](#Var)
+
+[7 - Definir o delineamento experimental](#del)
+
+[8 - Instalar e conduzir o experimento](#Inst)
+
+[9 - Analisar e interpretar dados experimentais](#int)
+
+[10 - Realizar conclusões e fazer recomendações](#int)
+
+<!-- Slide XX -->
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 1 <br> Terminologias e conceitos básicos**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento</div>
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+### Experimentação
+
+<!--Slide XX -->
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+Obrigado!
+<br><br><br><br><br><br><br><br>
+
+**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+
+**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
