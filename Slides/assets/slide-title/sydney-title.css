@@ -474,6 +474,10 @@ slides > slide {
   font-size: 80%;
 }
 
+.font30 {
+  font-size: 30%;
+}
+
 
 /*~~~~~~~~~~~~~~~~*/
 /* USYD additions */
@@ -600,7 +604,7 @@ h2 {
 
 /* H5 fonts */
 .title-slide h5 {
-  color: black !important;
+  color: white !important;
   font-size: 15px;
   font-weight: bold;
   padding-top: 0px;
