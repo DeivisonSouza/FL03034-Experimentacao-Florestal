@@ -676,7 +676,7 @@ class: inverse, top, right
 background-image: url(fig/class1/imgC.jpg)
 background-size: cover
 
-.font300[Obrigado!]
+Obrigado!
 <br><br><br><br><br><br><br><br>
 
 **Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
