@@ -60,6 +60,7 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 |:----------------------------------------------------|:-------------------------------------------------------------------------------------------------|
 | Slides/Aula0-Cronograma.html                        | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>                        |
 | Slides/Aula1-Conceitos-Principios-Planejamento.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-Conceitos-Principios-Planejamento.html> |
+| Slides/Aula2-Revisao-Estatistica-Descritiva.html    | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula2-Revisao-Estatistica-Descritiva.html>    |
 
 # Facilitador :deciduous\_tree:
 
