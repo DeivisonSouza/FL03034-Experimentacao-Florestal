@@ -539,13 +539,9 @@ layout: true
 ## Fases da pesquisa experimental
 <br>
 
-1. Formulação
-2. Metodologia
-3. Execução
-4. Conclusão
-
-
-Fonte: [pt.wikipedia.org](https://pt.wikipedia.org/wiki/Experimenta%C3%A7%C3%A3o)
+```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/F0.png')
+```
 
 ---
 
@@ -661,23 +657,14 @@ knitr::include_graphics('fig/class1/F3.png')
 <br>
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F3.png')
-```
-
----
-
-## Fases da pesquisa experimental
-<br>
-
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class1/F4.png')
 ```
 
 ---
 ## Referências
-<br>
+<br><br>
 
-```{r ref, echo=FALSE, results="asis"}
+```{r ref1, echo=FALSE, results="asis"}
 PrintBibliography(myBib, start = 1, end = 5)
 ```
 ---
