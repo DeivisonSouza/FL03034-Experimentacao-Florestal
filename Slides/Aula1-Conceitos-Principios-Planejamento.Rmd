@@ -670,7 +670,7 @@ knitr::include_graphics('fig/class1/F3.png')
 <br>
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F3.png')
+knitr::include_graphics('fig/class1/F4.png')
 ```
 
 ---
