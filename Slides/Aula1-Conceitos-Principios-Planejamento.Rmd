@@ -607,11 +607,51 @@ knitr::include_graphics('fig/class1/F2.png')
 
 
 --
-TTTTTTTTTTTTTTT
+
+.font80[
+**Desenho experimental**
+
+-> DIC, DBC, DQL, Ensaio Fatorial, etc.
+
+]
 
 --
-XXXXXXXXXXXXXx
 
+.font80[
+**Fatores não controlados**
+
+-> Ex.: Temperatura, Umidade relativa do ar
+
+
+]
+
+--
+
+.font80[
+**Repetições**
+
+-> Ex.: 5 repetições de 200 sementes.
+
+]
+
+--
+
+.font80[
+**Custos do experimento**
+
+-> Recurso financeiro é um fator limitante.
+
+]
+
+
+---
+
+## Fases de um experimento
+<br>
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/F3.png')
+```
 
 ---
 ## Referências
