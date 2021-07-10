@@ -400,15 +400,14 @@ plotly::ggplotly(g3)
 .left-column[
 ### População
 
-```{r eval = T, echo = F, width.out = "60%"}
+```{r eval = T, echo = F, fig.width=.8, fig.height=.8}
 
 grid <- expand.grid(
   x = seq(0, 20, length = 15),
   y = seq(0, 3, length = 15)
   )
 
-
-img <- "https://www.vhv.rs/dpng/d/427-4274825_white-pine-png-pinus-png-transparent-png.png"
+img <- "fig/class2/pinus1.png"
 
 grid %>% 
   ggplot(aes(x, y)) + 
@@ -424,11 +423,26 @@ grid %>%
 .right-column[
 ### Amostra
 
+```{r eval = T, echo = F, fig.width=.8, fig.height=.8}
+
+grid <- expand.grid(
+  x = seq(0, 20, length = 15),
+  y = seq(0, 3, length = 15)
+  ) %>%
+  mutate(image = sample(c("fig/class2/pinus1.png",
+                          "fig/class2/pinus2.png"),
+                        size = length(y), replace = TRUE))
+grid %>%
+  ggplot(aes(x, y)) + 
+  geom_image(aes(image=image), size=.1) +
+  theme_bw() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title=element_blank())
+
+```
+
 ]
-
---
-
-
 
 
 ---
