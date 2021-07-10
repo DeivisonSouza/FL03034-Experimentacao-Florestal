@@ -250,8 +250,7 @@ data %>%
    DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
                  class = "display", width = '350px',
                  caption = 'Dados de Cedrela odorata.',
-     options=list(pageLength = 10, dom = 'tip',
-                  autoWidth = T,
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
           paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
