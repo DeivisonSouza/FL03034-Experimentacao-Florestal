@@ -295,7 +295,7 @@ table(data$QF)
 ```{r g1, echo=TRUE, eval=FALSE}
 # Criando um BoxPlot Univariado
 
-data %>% 
+g1 <- data %>% 
   ggplot(aes(x = 1, y = D)) + 
   geom_boxplot() + 
   xlab(NULL) + 
@@ -303,13 +303,15 @@ data %>%
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank())
 
+plotly::ggplotly(g1)
+
 ```
 
 ]
 
 .right-column[
 
-```{r ref.label="g1", echo=FALSE, eval=TRUE, collapse=T, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+```{r ref.label="g1", echo=FALSE, eval=TRUE, collapse=T, fig.width=.8, fig.height=.8, fig.align='center', fig.cap='', dpi=600}
 ```
 
 ]
@@ -328,11 +330,13 @@ data %>%
 ```{r g2, echo=TRUE, eval=FALSE}
 # Criando um Hitograma Univariado
 
-data %>%
+g2 <- data %>%
   ggplot(aes(x = H)) + 
   geom_histogram(bins = 5, fill="#69b3a2", 
                  color="#e9ecef", alpha=0.9) +
   theme_bw()
+
+plotly::ggplotly(g2)
 
 ```
 
@@ -340,7 +344,7 @@ data %>%
 
 .right-column[
 
-```{r ref.label="g2", echo=FALSE, eval=TRUE, collapse=T, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+```{r ref.label="g2", echo=FALSE, eval=TRUE, collapse=T, fig.width=.8, fig.height=.8, fig.align='center', fig.cap='', dpi=600}
 ```
 
 ]
