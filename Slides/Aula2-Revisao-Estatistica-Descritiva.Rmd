@@ -284,7 +284,6 @@ table(data$QF)
 
 .left-column[
 
-.scroll-box-20[
 ```{r , echo=FALSE, eval=TRUE}
 library(dplyr)
 
@@ -306,7 +305,6 @@ data %>%
        ) 
      )
 ```
-]
 ]
 
 .right-column[
