@@ -281,11 +281,52 @@ sd(data$V)
 var(data$H)
 ```
 
-
 ]
 
+---
 
+## Terminologias e conceitos básicos
+<br>
 
+.left-column[
+
+.scroll-box-20[
+```{r , echo=FALSE, eval=TRUE}
+library(dplyr)
+
+data <- data.table::fread("data/Cedrela.csv")
+
+# data %>%
+#   knitr::kable(format= "html")
+
+data %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '350px',
+                 caption = 'Dados de Cedrela odorata.',
+     options=list(pageLength = 10, dom = 'tip',
+                  autoWidth = T,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+]
+]
+
+.right-column[
+
+### Como extrair informações descritivas?
+
+* Usar representações gráficas
+
+```{r}
+# Usando funções da linguagem R
+
+```
+
+]
 
 ---
 ## Referências
