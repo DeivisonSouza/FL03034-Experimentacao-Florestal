@@ -42,6 +42,11 @@ knitr::opts_chunk$set(
   dpi = 600)
 ```
 
+```{r packages, include=FALSE}
+library(ggplot2)
+library(dplyr)
+```
+
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 use_logo(
@@ -283,38 +288,91 @@ table(data$QF)
 
 .left-column[
 
-```{r , echo=FALSE, eval=TRUE}
-library(dplyr)
+### Como extrair informações descritivas?
 
-data <- data.table::fread("data/Cedrela.csv")
+* Usar representações gráficas
 
-# data %>%
-#   knitr::kable(format= "html")
+```{r g1, echo=TRUE, eval=FALSE}
+# Criando um BoxPlot Univariado
 
 data %>% 
-   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '350px',
-                 caption = 'Dados de Cedrela odorata.',
-     options=list(pageLength = 10, dom = 'tip',
-                  autoWidth = T,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
-          "}")
-       ) 
-     )
+  ggplot(aes(x = 1, y = D)) + 
+  geom_boxplot() + 
+  xlab(NULL) + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
+
 ```
+
 ]
 
 .right-column[
+
+```{r ref.label="g1", echo=FALSE, eval=TRUE, collapse=T, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+```
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+.left-column[
 
 ### Como extrair informações descritivas?
 
 * Usar representações gráficas
 
-```{r}
-# Usando funções da linguagem R
+```{r g2, echo=TRUE, eval=FALSE}
+# Criando um Hitograma Univariado
 
+data %>%
+  ggplot(aes(x = H)) + 
+  geom_histogram(bins = 5, fill="#69b3a2", 
+                 color="#e9ecef", alpha=0.9) +
+  theme_bw()
+
+```
+
+]
+
+.right-column[
+
+```{r ref.label="g2", echo=FALSE, eval=TRUE, collapse=T, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+```
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+.left-column[
+
+### Como extrair informações descritivas?
+
+* Usar representações gráficas
+
+```{r g3, echo=TRUE, eval=FALSE}
+# Criando um Scatterplot
+
+g3 <- data %>%
+  ggplot(aes(x=D, y=V, color=QF)) +
+      geom_point(size = 3) +
+      theme(legend.position="none") 
+
+plotly::ggplotly(g3)
+  
+```
+
+]
+
+.right-column[
+
+```{r ref.label="g3", echo=FALSE, eval=TRUE, collapse=T, fig.width=.8, fig.height=.8, fig.align='center', fig.cap='', dpi=600}
 ```
 
 ]
