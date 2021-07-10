@@ -43,8 +43,10 @@ knitr::opts_chunk$set(
 ```
 
 ```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
 library(ggplot2)
 library(dplyr)
+library(ggimage)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -380,6 +382,54 @@ plotly::ggplotly(g3)
 ```
 
 ]
+
+---
+
+## Terminologias e conceitos básicos
+
+<br>
+
+### Estatística Inferencial (ou Indutiva)
+
+É a parte da estatítica que objetiva inferir sobre uma **população** a partir da observação de uma parte dela (**amostra**).
+
+---
+
+## Terminologias e conceitos básicos
+
+.left-column[
+### População
+
+```{r eval = T, echo = F, width.out = "60%"}
+
+grid <- expand.grid(
+  x = seq(0, 20, length = 15),
+  y = seq(0, 3, length = 15)
+  )
+
+
+img <- "https://www.vhv.rs/dpng/d/427-4274825_white-pine-png-pinus-png-transparent-png.png"
+
+grid %>% 
+  ggplot(aes(x, y)) + 
+  geom_image(image=img, size=.1) +
+  theme_bw() +
+  theme(axis.text = element_blank(),
+        axis.ticks = element_blank(),
+        axis.title=element_blank())
+
+```
+]
+
+.right-column[
+### Amostra
+
+]
+
+--
+
+
+
 
 ---
 ## Referências
