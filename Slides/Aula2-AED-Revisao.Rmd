@@ -81,7 +81,7 @@ BibOptions(check.entries = FALSE,
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## Estatística descritiva: <br> uma breve revisão `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## Análise Exploratória de Dados: <br> uma breve revisão `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
 #### **Prof. Dr. Deivison Venicio Souza**
 #### Universidade Federal do Pará (UFPA) 
@@ -94,7 +94,7 @@ BibOptions(check.entries = FALSE,
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Estatística descritiva: uma breve revisão</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão</div>
 
 ---
 
@@ -201,7 +201,7 @@ background-size: cover
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Estatística descritiva: uma breve revisão</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão</div>
 
 ---
 
