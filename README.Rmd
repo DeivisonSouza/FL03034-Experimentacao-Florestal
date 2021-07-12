@@ -2,7 +2,7 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
+<!-- README.md is generated from README.Rmd. Please edit that file..... -->
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -16,7 +16,7 @@ library(magrittr)
 repo <- "FL03034-EF"
 ```
 
-<!-- Emprestei a função list_github_files() da Curso-R (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
+<!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
 
 ```{r, include = FALSE}
 list_github_files <- function(repo, dir = NULL, ext = NULL) {
