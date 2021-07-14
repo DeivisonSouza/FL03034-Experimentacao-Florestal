@@ -596,6 +596,38 @@ df %>%
 
 ]
 
+<!-- Slide XX -->
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 2 <br> Medidas de tendência central (ou posição)**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão</div>
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Conceito
+
+São medidas que objetivam representar o ponto central (ou de equilíbrio) de uma distribuição de dados.
+
+--
+<br><br>
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class2/MTC.png')
+```
 
 
 ---
