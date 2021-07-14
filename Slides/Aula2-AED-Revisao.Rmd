@@ -629,6 +629,160 @@ São medidas que objetivam representar o ponto central (ou de equilíbrio) de um
 knitr::include_graphics('fig/class2/MTC.png')
 ```
 
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo)
+
+É o valor que aparece mais frequentemente em um conjunto de dados.
+
+--
+<br><br>
+
+Qual a moda para a série de dados abaixo?
+
+**{1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+
+--
+<br><br>
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **Como determinar a moda de um conjunto de dados?**
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo)
+
+.left-column[
+Como determinar?
+- Calcular a frequência de cada valor.
+- A moda é o valor mais frequente.
+<br><br>
+
+.center[**{1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**]
+
+]
+
+--
+
+.right-column[
+```{r echo=F, eval=T}
+df <- data.frame(Valor = c(0, 1, 2, 3, 4, 5, 6, 8),
+                 "Frequência" = c(NA)
+)
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo)
+
+- Usando a linguagem R:
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **A linguagem R não possui uma função nativa para calcular a moda.**
+
+```{r echo=T, eval=T}
+# Cria um vetor
+x <- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+
+# Usar a função "table"
+table(x)
+
+```
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo)
+
+.left-column[
+- Usando a linguagem R:
+
+A função `table()`: gera uma tabela de frequência. 
+<br>
+
+Pode-se criar uma função para retornar o valor modal.
+]
+
+.right-column[
+```{r echo=T, eval=T}
+# Cria um vetor
+x <- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+
+# Uma função para obter a moda
+mod <- function(v) {
+   uniq <- unique(v)
+   uniq[which.max(tabulate(match(v, uniq)))]
+}
+
+# Aplicando a função "mod" ao vetor "x"
+mod(x)
+```
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo)
+
+.left-column[
+`r anicon::faa("hand-point-right", animate="horizontal")` Podem existir séries de dados em que nenhum valor aparece mais vezes que outros. Nestes casos, diz-se que o conjunto de dados **não possui moda** ou é **amodal**.
+
+<br>
+
+Qual a moda para a série de dados abaixo?
+
+.center[**{1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1,2}**]
+]
+
+.right-column[
+
+- Usando a linguagem R:
+
+```{r echo=T, eval=T}
+# Cria um vetor
+y <- c(1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1, 2)
+
+# Usar a função "table"
+table(y)
+
+```
+]
+
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+.red[**Importante**]: Ao contrário da média e da mediana, a moda pode ser determinada para variáveis qualitativas.
+
+
+
 
 ---
 ## Referências
