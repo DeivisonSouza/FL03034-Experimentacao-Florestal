@@ -1,6 +1,6 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Estatística descritiva: uma breve revisão"
+subtitle: "Análise Exploratória de Dados: uma breve revisão"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
@@ -443,6 +443,159 @@ grid %>%
 ```
 
 ]
+
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Tipos de Variáveis
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class2/TV.png')
+```
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Variáveis Qualitativas (ou Categóricas)
+
+A variável é qualitativa (ou categórica) quando seus valores são distribuídos em categorias mutuamente exclusivas (Vieira, 2010).
+
+--
+<br><br>
+
+Estas podem ser classificadas em dois tipos: 
+
+`r anicon::faa("hand-point-right", animate="horizontal")` 1 - Variável nominal
+
+`r anicon::faa("hand-point-right", animate="horizontal")` 2 - Variável ordinal
+
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Variáveis Qualitativas (ou Categóricas)
+<br>
+
+#### Variável Nominal
+
+A variável é nominal quando seus valores se distribuem em categorias mutuamente exclusivas, indicadas em qualquer ordem (Vieira, 2010).
+
+--
+<br><br>
+#### Variável Ordinal
+
+A variável é ordinal quando os dados são distribuídos em categorias mutuamente exclusivas que possuem ordem (Vieira, 2010).
+
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Variáveis Quantitativas (ou Numéricas)
+
+Uma variável quantitativa (ou numérica) é expressa por números que têm significado em uma escala numérica (Vieira, 2010).
+
+--
+<br><br>
+Estas podem ser classificadas em dois tipos: 
+
+`r anicon::faa("hand-point-right", animate="horizontal")` 1 - Variável discreta
+
+`r anicon::faa("hand-point-right", animate="horizontal")` 2 - Variável contínua
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Variáveis Quantitativas (ou Contínuas)
+<br>
+
+#### Variável Discreta
+
+A variável é discreta quando só pode assumir alguns valores em um dado intervalo (Vieira, 2010).
+
+--
+<br><br>
+#### Variável Contínua
+
+A variável é contínua quando pode assumir qualquer valor em um dado intervalo (Vieira, 2010).
+
+---
+
+## Terminologias e conceitos básicos
+<br>
+
+### Vamos praticar...
+
+1 - Dada a tabela abaixo preencha a coluna "Tipo":
+
+.left-column[
+
+```{r echo=FALSE, eval=T}
+df <- data.frame(
+  Variável = c("Nº de Rebrotos",
+        "Peso de fruto",
+        "Altura da árvore",
+        "Volume de madeira",
+        "Grau de iluminação de copas",
+        "Forma de copas",
+        "Qualidade de fuste"
+        ), Tipo = c(NA), Subtipo = c(NA))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+]
+
+--
+
+.right-column[
+
+```{r echo=FALSE, eval=T}
+df <- data.frame(
+  Variável = c(
+    "Danos da exploração florestal",
+    "Mês de observação",
+    "Diâmetro do coleto",
+    "Nome botânico",
+    "Tipos de frutos (Qto à deiscência)",
+    "Diâmetro da árvore",
+    "Nº de sementes germinadas"
+        ), Tipo = c(NA), Subtipo = c(NA))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
+]
+
 
 
 ---
