@@ -1351,6 +1351,7 @@ df %>%
           "}")
        ) 
      )
+table(df$QF)
 ```
 
 ]
@@ -1358,9 +1359,47 @@ df %>%
 .right-column[
 **Cálculos manuais - Moda**
 
+- Calcular a ocorrência de cada categoria:
+
+I = **4** (Mais frequente)
+
+II = 3
+
+III = 3
+
 
 ]
 
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Usando a linguagem R
+
+.left-column[
+- **Mediana**
+```{r ed, echo=T, eval=T}
+median(df$D)
+median(df$H)
+median(df$V)
+```
+
+- **Moda**
+```{r echo=T, eval=T}
+table(df$QF)
+```
+
+]
+
+.right-column[
+- **Média Aritmética**
+```{r ed2, echo=T, eval=T}
+mean(df$D)
+mean(df$H)
+mean(df$V)
+```
+]
 
 ---
 ## Referências
