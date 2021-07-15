@@ -623,8 +623,8 @@ layout: true
 São medidas que objetivam representar o ponto central (ou de equilíbrio) de uma distribuição de dados.
 
 --
-<br><br>
-
+<br>
+### Principais medidas de posição
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class2/MTC.png')
 ```
@@ -634,7 +634,7 @@ knitr::include_graphics('fig/class2/MTC.png')
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Moda (Mo)
+### Moda (Mo) - Conceito
 
 É o valor que aparece mais frequentemente em um conjunto de dados.
 
@@ -655,10 +655,9 @@ Qual a moda para a série de dados abaixo?
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Moda (Mo)
+### Moda (Mo) - Como determinar?
 
 .left-column[
-Como determinar?
 - Calcular a frequência de cada valor.
 - A moda é o valor mais frequente.
 <br><br>
@@ -695,11 +694,12 @@ df %>%
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Moda (Mo)
-
-- Usando a linguagem R:
+### Moda (Mo) - Usando a linguagem R
+<br>
 
 `r anicon::faa("hand-point-right", animate="horizontal")` **A linguagem R não possui uma função nativa para calcular a moda.**
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **Mas, pode-se usar a função** `table()` **para gerar uma tabela de frequências absolutas. Assim, a moda pode ser facilmente identificada.**
 
 ```{r echo=T, eval=T}
 # Cria um vetor
@@ -715,15 +715,11 @@ table(x)
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Moda (Mo)
+### Moda (Mo) - Usando a linguagem R
 
 .left-column[
-- Usando a linguagem R:
-
-A função `table()`: gera uma tabela de frequência. 
-<br>
-
-Pode-se criar uma função para retornar o valor modal.
+- A função `table()`: gera uma tabela de frequências simples. 
+- Mas, pode-se criar uma função para retornar o valor modal.
 ]
 
 .right-column[
@@ -747,7 +743,7 @@ mod(x)
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Moda (Mo)
+### Moda (Mo) - Usando a linguagem R
 
 .left-column[
 `r anicon::faa("hand-point-right", animate="horizontal")` Podem existir séries de dados em que nenhum valor aparece mais vezes que outros. Nestes casos, diz-se que o conjunto de dados **não possui moda** ou é **amodal**.
@@ -761,8 +757,6 @@ Qual a moda para a série de dados abaixo?
 
 .right-column[
 
-- Usando a linguagem R:
-
 ```{r echo=T, eval=T}
 # Cria um vetor
 y <- c(1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1, 2)
@@ -773,14 +767,109 @@ table(y)
 ```
 ]
 
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo) - Variáveis qualitativas
+
+.left-column[
+`r anicon::faa("hand-point-right", animate="horizontal")` A moda pode ser determinada para variáveis qualitativas, ao contrário da média e mediana, por exemplo.
+
+Seja o vetor de nomes de espécies de árvores:
+
+**{Marupa, Angelim, Tauari, Marupa, 
+  Angelim, Tauari, Marupa, Angelim,
+  Angelim, Angelim, Cedro, Cedro, 
+  Cedro, Tauari, Tauari, Marupa}**
+
+]
+
+.right-column[
+```{r echo=T, eval=T}
+# Cria um vetor
+esp <- c(
+  "Marupa", "Angelim", "Tauari", "Marupa", 
+  "Angelim", "Tauari", "Marupa", "Angelim",
+  "Angelim", "Angelim", "Cedro", "Cedro", 
+  "Cedro", "Tauari", "Tauari", "Marupa")
+
+# Usar a função "table"
+table(esp)
+```
+
+]
 
 ---
 
 ## Medidas de tendência central (ou posição)
 <br>
 
-.red[**Importante**]: Ao contrário da média e da mediana, a moda pode ser determinada para variáveis qualitativas.
+### Moda (Mo) - Classificação
 
+Um conjunto de dados pode ser classificado em função da ocorrência (ou não) de **Moda**:
+
+<br>
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class2/Mo.png')
+```
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo) - Classificação
+
+- **Amodal**: Conjunto de dados que **não apresenta moda**. Isto é, nenhum dos valores contidos no conjunto predomina sobre os demais.
+
+--
+<br><br>
+- **Unimodal**: Conjunto de dados que **apresenta uma única moda**. Isto é, apenas um dos elementos do conjunto de dados predomina sobre os demais.
+
+--
+<br><br>
+- **Bimodal**: Conjunto de dados que **apresenta duas modas**. Isto é, dois dos valores contidos no conjunto de dados predominam sobre os demais;
+
+--
+<br><br>
+- **Multimodal**: Conjunto de dados que **apresenta mais de duas modas**. Isto é, mais de dois dos elementos do conjunto de dados predominam sobre os demais.
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo) - Vamos praticar...
+
+.left-column[
+Série I: {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 0}
+
+Série II: {1,1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}
+
+Série III: {1, 6, 8, 6, 5, 4, 3, 0, 3, 3, 0, 4, 4, 5, 6, 8, 2, 1, 1}
+
+Série IV: {1, 6, 8, 8, 8, 6, 5, 5, 5, 4, 3, 0, 3, 3, 0, 4}
+
+]
+
+--
+
+.right-column[
+```{r echo=T, eval=T}
+# Criar os vetores
+S1 <- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 0)
+S2 <- c(1,1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+S3 <- c(1,6, 8, 6, 5, 4, 3, 0, 3, 3, 0, 4, 4, 5, 6, 8, 2, 1,1)
+
+table(S1)
+table(S2)
+table(S3)
+```
+
+]
 
 
 
