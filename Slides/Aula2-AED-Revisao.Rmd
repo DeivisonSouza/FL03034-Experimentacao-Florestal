@@ -1053,7 +1053,22 @@ median(S2)
 
 ]
 
+---
 
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Propriedades
+<br>
+- **Estável**: Não sofre influência de valores discrepantes (*outliers*). Devido a isso, quando a distribuição amostral é assimétrica, a utilização da mediana torna-se mais interessante.
+
+--
+<br><br>
+- **Número par de observações**: Nestes casos, a mediana será sempre a média aritmética dos dois elementos centrais dos dados ordenados;
+
+--
+<br><br>
+- **Número ímpar de observações**: Nestes casos, haverá coincidência da mediana com um dos elementos dos dados ordenados.
 
 ---
 ## Referências
