@@ -1022,6 +1022,38 @@ $$
 
 ### Mediana (Md) - Usando a linguagem R
 
+.left-column[
+
+`r anicon::faa("hand-point-right", animate="horizontal")` O R-base possui uma função para calcular a mediana: `median()`.
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Esta função pertence ao pacote "stats".
+<br><br>
+
+Então, sejam as series:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+
+**S2 = {1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0}**
+
+
+
+]
+
+.right-column[
+
+```{r echo=T, eval=T}
+# Criar os vetores
+S1 <- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+S2 <- c(1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0)
+
+# Calcula a mediana
+median(S1)
+median(S2)
+```
+
+]
+
+
 
 ---
 ## Referências
