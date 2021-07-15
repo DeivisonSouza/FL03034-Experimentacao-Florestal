@@ -1159,7 +1159,7 @@ $x$ = Variável quantitativa objeto de estudo.
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Média Aritmética - Vamos praticar...
+### Vamos praticar...
 
 .left-column[
 ```{r echo=F, eval=T}
@@ -1202,8 +1202,165 @@ b) Determinar a moda para a variável qualidade de fuste.
 
 Obs.: Faça os cálculos manuais e usando a linguagem R.
 
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Vamos praticar...
+
+.left-column[
+```{r echo=F, eval=T}
+#df <- read.table("clipboard", sep="\t", header=T)
+
+df <- data.frame(
+  QF = c("I", "II", "III", "III", "I", 
+         "II", "I", "III", "II", "I"), 
+    H = c(17.5, 16.2, 15.2, 18.0, 17.0, 
+        18.4, 13.0, 18.0, 17.0, 17.3),
+  D = c(16.07, 13.24, 17.89, 13.11, 14.36, 
+        11.27, 8.50, 14.87, 14.93, 15.47),
+  V = c(0.2445, 0.1634, 0.2956, 0.1734, 0.1967, 
+        0.1256, 0.0659, 0.2345, 0.2346, 0.2298))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
 
 ]
+
+.right-column[
+**Cálculos manuais - Mediana**
+
+$$
+\small
+\small
+E = \frac{\left [ \frac{10}{2} + \left ( \frac{10}{2} + 1 \right ) \right ]}{2} = \frac{\left (5 + 6 \right )}{2}=5,5
+$$
+
+- Ordenar os vetores
+.font65[
+D = {8.50, 11.27, 13.11, 13.24, .green[14.36, 14.87], 14.93, 15.47, 16.07, 17.89}
+
+H = {13.0, 15.2, 16.2, 17.0, .green[17.0, 17.3], 17.5, 18.0, 18.0, 18.4} 
+
+V = {0.0659, 0.1256, 0.1634, 0.1734, .green[0.1967, 0.2298], 0.2345, 0.2346, 0.2445, 0.2956}
+
+]
+- Mediana?
+
+$Md_D$ = **14.615**; $Md_H$ = **17.15**; $Md_V$ = **0.21325**
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Vamos praticar...
+
+.left-column[
+```{r echo=F, eval=T}
+#df <- read.table("clipboard", sep="\t", header=T)
+
+df <- data.frame(
+  QF = c("I", "II", "III", "III", "I", 
+         "II", "I", "III", "II", "I"), 
+    H = c(17.5, 16.2, 15.2, 18.0, 17.0, 
+        18.4, 13.0, 18.0, 17.0, 17.3),
+  D = c(16.07, 13.24, 17.89, 13.11, 14.36, 
+        11.27, 8.50, 14.87, 14.93, 15.47),
+  V = c(0.2445, 0.1634, 0.2956, 0.1734, 0.1967, 
+        0.1256, 0.0659, 0.2345, 0.2346, 0.2298))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
+]
+
+.right-column[
+**Cálculos manuais - Média Aritmética**
+
+$$
+\normalsize
+\bar{D} = \frac{139,71}{10} = 13,971~cm
+$$
+
+$$
+\normalsize
+\bar{H} = \frac{167,60}{10} = 16,760~m
+$$
+
+$$
+\normalsize
+\bar{V} = \frac{1,964}{10} = 0,1964~m³
+$$
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Vamos praticar...
+
+.left-column[
+```{r echo=F, eval=T}
+#df <- read.table("clipboard", sep="\t", header=T)
+
+df <- data.frame(
+  QF = c("I", "II", "III", "III", "I", 
+         "II", "I", "III", "II", "I"), 
+    H = c(17.5, 16.2, 15.2, 18.0, 17.0, 
+        18.4, 13.0, 18.0, 17.0, 17.3),
+  D = c(16.07, 13.24, 17.89, 13.11, 14.36, 
+        11.27, 8.50, 14.87, 14.93, 15.47),
+  V = c(0.2445, 0.1634, 0.2956, 0.1734, 0.1967, 
+        0.1256, 0.0659, 0.2345, 0.2346, 0.2298))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '450px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
+]
+
+.right-column[
+**Cálculos manuais - Moda**
+
+
+]
+
 
 ---
 ## Referências
