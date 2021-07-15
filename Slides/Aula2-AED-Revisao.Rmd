@@ -1423,7 +1423,120 @@ layout: true
 ## Medidas de dispersão (ou afastamento)
 <br>
 
+### Conceito
 
+---
+
+## Medidas de dispersão (ou afastamento)
+<br>
+
+### Por que medir a variância dos dados?
+
+.pull-left-5[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+
+.pull-right-5[
+Um experimento foi conduzido para avaliar dois tipos de substratos (Solo Arenoso + Matéria Orgânica - SA+MO e Solo Arenoso-SA) no crescimento de uma espécie florestal. Após 30 dias de germinadas as sementes, a altura das plântulas, em cm, foi medida.
+
+- **Pergunta**: Baseado no crescimento em altura, qual o melhor substrato para a produção de mudas da espécie?
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **Importante**: O tipo de substrato indicado será usado para produção de mudas em larga escala.
+
+
+]
+
+---
+
+## Medidas de dispersão (ou afastamento)
+<br>
+
+### Por que medir a variância dos dados?
+
+- Em geral, a média aritmética é a primeira estimativa da amostra calculada:
+
+.pull-left-4[
+```{r echo=T, eval=T}
+df %>%
+  group_by(Tratamento) %>% 
+  summarise(media=mean(Altura))
+```
+
+.font65[
+- Em termos médios, parece não haver efeito significativo dos tratamentos.
+- Avaliar a variância ajuda a "enxergar" o problema melhor.
+- Para qual substrato o crescimento em altura foi mais uniforme?
+]
+]
+
+
+.pull-right-4[
+```{r echo=F, eval=T, collapse=T, out.width="68%", fig.align='center', fig.cap='', dpi=600}
+df %>%
+  ggplot(aes(Tratamento, Altura, fill = Tratamento)) +   
+  geom_bar(position = "dodge", stat = "summary", 
+           fun.y = "mean", alpha = .5) +
+  theme_bw(base_size = 24) +
+    theme(panel.grid = element_blank(),
+          legend.position="none")
+```
+
+]
+
+---
+
+## Medidas de dispersão (ou afastamento)
+<br>
+
+### Por que medir a variância dos dados?
+
+- **Gráfico Dot Plot**: Ajuda a visualizar como a altura das plântulas variou para cada tratamento:
+
+.pull-left-4[
+```{r echo=F, eval=T, collapse=T, out.width="68%", fig.align='center', fig.cap='', dpi=600}
+df %>%
+  ggplot(aes(x=Tratamento, y=Altura, fill=Tratamento)) + 
+    geom_dotplot(binaxis='y', stackdir='center') +
+  stat_summary(fun.y=mean, geom="point", shape=18,
+                 size=8, color="blue") +
+  theme_bw(base_size = 24) +
+  theme(panel.grid = element_blank(),
+        legend.position="none"
+        )
+```
+]
+
+.pull-right-4[
+**Interpretação - Variância**
+- O efeito do tratamento com SA+MO no crescimento foi mais uniforme (< variância)
+- O efeito do tratamento com SA no crescimento foi mais heterogêneo (> variância)
+- Portanto, "olhar" apenas para média pode conduzir à indicação equivocada do
+melhor tratamento.
+]
 
 ---
 ## Referências
