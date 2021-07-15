@@ -694,12 +694,14 @@ ul li::before {
   width: 50%;
   float: right;
   padding-top: 1em;
+  color: black;
 }
 
 .left-column {
   width: 50%;
   float: left;
   padding-top: 1em;
+  color: black;
 }
 
 

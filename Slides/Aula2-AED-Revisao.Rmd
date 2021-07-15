@@ -895,7 +895,54 @@ table(S3)
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Mediana (Md) - Conceito
+### Mediana (Md) - Conceito `r Citep(myBib, "favero2009", .opts = list(max.names = 1, longnamesfirst = F))`
+
+<br>
+
+É o valor que ocupa a posição central de uma série de dados ordenados de forma crescente. Ou seja, em que 50% dos elementos devem estar abaixo da mediana e 50% devem estar acima da mediana.
+
+--
+<br><br>
+
+**É o valor que divide a série de dados ordenados em duas partes iguais.**
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Como determinar?
+<br>
+
+`r anicon::faa("hand-point-right", animate="horizontal")` A determinação da Mediana (Md) requer encontrar o(s) elemento(s) que divide(m) os dados ordenados em duas partes iguais.
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Em geral, existem duas fórmulas para encontrar esse(s) elemento(s). 
+
+`r anicon::faa("hand-point-right", animate="horizontal")` O uso de cada uma é função do número de observações no conjunto de dados.
+
+--
+
+.left-column[
+
+- **Número ímpar de observações**
+
+$$
+\Large
+E = \frac{n + 1}{2}
+$$
+]
+
+.right-column[
+
+- **Número par de observações**
+
+$$
+\Large
+E = \frac{\left [ \frac{n}{2} + \left ( \frac{n}{2} + 1 \right ) \right ]}{2}
+$$
+]
+
+---
 
 
 
