@@ -1401,6 +1401,30 @@ mean(df$V)
 ```
 ]
 
+<!-- Slide XX -->
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 3 <br> Medidas de dispersão (ou afastamento)**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão</div>
+
+---
+
+## Medidas de dispersão (ou afastamento)
+<br>
+
+
+
 ---
 ## Referências
 <br><br>
