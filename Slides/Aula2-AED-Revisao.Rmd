@@ -944,6 +944,83 @@ $$
 
 ---
 
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Número ímpar de observações
+
+.left-column[
+Seja a série de dados S1:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+<br><br>
+
+**Qual a mediana (Md)?**
+
+]
+
+.right-column[
+**Procedimentos:**
+
+**Passo 1**: Ordenar o conjunto de dados:
+
+.green[S1 = {0, 0, 0,1, 1, 1, 2, 2, 2, 2, 3, 4, 5, 6, 8}]
+
+**Passo 2**: Encontrar o elemento central (E):
+
+$$
+\normalsize
+E = \frac{n + 1}{2} = \frac{15 + 1}{2} = 8
+$$
+**Interpretação**: O 8º elemento da série ordenada de dados é a mediana. $Md = 2$
+
+.green[S1 = {0, 0, 0, 1, 1, 1, 2, .red[2], 2, 2, 3, 4, 5, 6, 8}]
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Número par de observações
+
+.left-column[
+Seja a série de dados S2:
+
+**S2 = {1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0}**
+<br><br>
+
+**Qual a mediana (Md)?**
+
+]
+
+.right-column[
+**Procedimentos:**
+
+**Passo 1**: Ordenar o conjunto de dados:
+
+.green[S2 = {0, 0, 0, 1, 1, 1, 2, 3, 4, 5, 6, 8}]
+
+**Passo 2**: Encontrar o elemento central (E):
+
+$$
+\small
+E = \frac{\left [ \frac{n}{2} + \left ( \frac{n}{2} + 1 \right ) \right ]}{2} = \frac{\left [ \frac{12}{2} + \left ( \frac{12}{2} + 1 \right ) \right ]}{2} = \frac{\left (6 + 7 \right )}{2}=6,5
+$$
+**Interpretação**: A mediana é a média aritmética entre o 6º e 7º elementos da série ordenada. $Md = 1,5$
+
+.green[S2 = {0, 0, 0, 1, 1, .red[1, 2], 3, 4, 5, 6, 8}]
+
+]
+
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Usando a linguagem R
 
 
 ---
