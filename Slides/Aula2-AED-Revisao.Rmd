@@ -871,6 +871,32 @@ table(S3)
 
 ]
 
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Moda (Mo) 
+<br>
+
+#### Vantagens
+
+- Fácil de ser calculada;
+- É a única medida de tendência central que pode ser usada para variáveis qualitativas;e
+- Não é influenciada por valores extremos (*outliers*).
+
+#### Limitações
+
+- Pode não ser representativa; e
+- Pode mudar se inserirmos novas observações.
+
+---
+
+## Medidas de tendência central (ou posição)
+<br>
+
+### Mediana (Md) - Conceito
+
 
 
 ---
