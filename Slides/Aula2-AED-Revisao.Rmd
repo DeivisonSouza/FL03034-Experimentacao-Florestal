@@ -1999,6 +1999,12 @@ df %>%
 
 ]
 
+.pull-right-3[
+**Interpretação**
+- O desvio das alturas em SA foi maior (7.85m).
+- A desvio das alturas em SA+MO foi menor (0.67m).
+]
+
 .pull-left-1[
 **Cálculo Manual**
 $$
@@ -2010,6 +2016,13 @@ s_{SA+MO} = \sqrt{s^2} = \sqrt{0.44392} = 0.67m
 $$
 ]
 
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Coeficiente de Variação -
 
 
 ---
