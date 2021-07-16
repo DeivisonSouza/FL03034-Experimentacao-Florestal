@@ -2022,8 +2022,80 @@ $$
 ## Medidas de dispersão (ou variação)
 <br>
 
-### Coeficiente de Variação -
+### Coeficiente de Variação - Conceito
 
+É uma medida calculada pela razão entre o desvio padrão e a média aritmética. Portanto, é uma medida de dispersão relativa, e expressa em porcentagem.
+<br><br>
+
+É útil para comparar a dispersão entre grupos para diferentes unidades de medidas (por exemplo, Altura e Diâmetro).
+
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Coeficiente de Variação - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de coeficiente de variação (amostral e populacional) são:
+<br>
+
+--
+
+.pull-left-4[
+
+- **Coeficiente de variação amostral**
+$$
+\normalsize
+CV(\%) = \left ( \frac{S}{\bar{x}} \right ).100
+$$
+]
+
+--
+
+.pull-right-4[
+
+- **Coeficiente de variação populacional**
+$$
+\normalsize
+CV(\%) = \left ( \frac{\sigma}{\mu} \right ).100
+$$
+]
+
+---
+
+## Resumos das estatísticas
+<br>
+
+### Vamos resumir as estatísticas (Experimento)
+<br>
+
+Resumo das estimativas encontradas para os tratamentos: SA e SA+MO...
+<br>
+
+.pull-left-1[
+**Solo Arenoso**
+
+Média =
+
+Variância = 
+
+Desvio Padrão = 
+
+Coeficiente de Variação =
+]
+
+.pull-left-1[
+**Solo Arenoso + Matéria Orgânica**
+
+Média =
+
+Variância = 
+
+Desvio Padrão = 
+
+Coeficiente de Variação =
+]
 
 ---
 ## Referências
