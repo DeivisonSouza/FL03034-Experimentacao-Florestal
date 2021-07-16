@@ -1647,6 +1647,33 @@ max(S1) - min(S1)
 ]
 
 ---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### A necessidade de novos estimadores de dispersão.
+<br>
+
+A amplitude total é, em geral, um estimador **enviesado** e **ineficiente** da amplitude populacional. Isto porque, é pouco provável que uma amostra contenha os valores mínimos e máximos da população (Ferreira, 2009).
+<br><br>
+
+`r anicon::faa("hand-point-right", animate="horizontal")` As **limitações**, o **viés** e a **ineficiência** do estimador de amplitude total, despertaram para a necessidade de **novos 
+estimadores de dispersão**.
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Assim, surgiram estimadores que estimam a dispersão dos dados tomando por referência uma medida de centralidade da distribuição, comumente a média aritmética.
+
+Os principais são: .green[desvio padrão, variância e coeficiente de variação].
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Uma abordagem sem fórmulas
+
+
+
+---
 ## Referências
 <br><br>
 
