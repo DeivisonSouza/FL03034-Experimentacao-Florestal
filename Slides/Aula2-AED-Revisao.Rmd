@@ -1093,9 +1093,10 @@ median(S2)
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Média Aritmética - Expressão matemática
+### Média Aritmética - Expressão matemática do estimador
 
-A expressão matemática para média aritmética (amostral e populacional) é dada:
+As expressões matemáticas para os estimadores de média aritmética (amostral e populacional) são: 
+
 <br> <br>
 
 .left-column[
@@ -1657,6 +1658,8 @@ max(S1) - min(S1)
 A amplitude total é, em geral, um estimador **enviesado** e **ineficiente** da amplitude populacional. Isto porque, é pouco provável que uma amostra contenha os valores mínimos e máximos da população (Ferreira, 2009).
 <br><br>
 
+--
+
 `r anicon::faa("hand-point-right", animate="horizontal")` As **limitações**, o **viés** e a **ineficiência** do estimador de amplitude total, despertaram para a necessidade de **novos 
 estimadores de dispersão**.
 
@@ -1664,6 +1667,51 @@ estimadores de dispersão**.
 
 Medidas de dipersão em relação à média aritmética: 
 .green[desvio padrão, variância e coeficiente de variação].
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Variância - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de variância (amostral e populacional) são:
+<br>
+
+--
+
+.left-column[
+
+- **Variância amostral**
+$$
+\normalsize
+S^2 = \frac{1}{n-1}\sum_{i=1}^{n}\left (x_i - \bar{x}  \right )^2
+$$
+$$
+\normalsize
+S^2 = \frac{SQR}{n-1}
+$$
+
+`r anicon::faa("hand-point-right", animate="horizontal")` A variância amostral é representada por **s²**. 
+(lê-se: "S-Quadrado")
+
+]
+
+--
+
+.right-column[
+
+- **Variância populacional**
+$$
+\normalsize
+\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}\left (X_i - \mu  \right )^2
+$$
+<br>
+
+`r anicon::faa("hand-point-right", animate="horizontal")` A variância populacional é representada por **σ²**. 
+(lê-se: "Sigma-Quadrado")
+
+]
 
 ---
 
@@ -1710,12 +1758,12 @@ df <- data.frame(
     19.21, 19.83, 20.14, 20.81, 19.25
 )) %>%
   mutate(Media = mean(Altura),
-         di = round(Altura - Media, 4),
-         "di²" = di^2) %>%
+         "xi-media" = round(Altura - Media, 4),
+         "(xi-media)²" = `xi-media`^2) %>%
   tibble::add_row(
-    Tratamento="Total",
-    di = round(sum(.$di), 1),
-    "di²" = round(sum(.$`di²`), 4))
+    Tratamento = "Total",
+    "xi-media" = round(sum(.$`xi-media`), 1),
+    "(xi-media)²" = round(sum(.$`(xi-media)²`), 4))
 
 df %>% 
    DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
@@ -1730,9 +1778,15 @@ df %>%
      )
 
 ```
-
-
 ]
+
+
+Soma de Quadrados de Resíduos (SQR) = **1.7757** (Variação global)
+
+Mas, deseja-se saber o quanto, em média, é essa dispersão:
+
+n - 1: Grau de liberdade: A ideia é penalizar 
+
 
 ---
 
