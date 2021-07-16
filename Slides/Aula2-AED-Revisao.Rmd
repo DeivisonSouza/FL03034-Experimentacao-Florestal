@@ -1131,12 +1131,12 @@ Uma forma simplificada da expressão matemática é:
 - **Média aritmética amostral**
 $$
 \Large
-\bar{x} = \frac{\sum_{i = 1}^{n}x_i}{n}
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i
 $$
 - **Média aritmética populacional**
 $$
 \Large
-\mu = \frac{\sum_{i = 1}^{N}x_i}{N}
+\mu = \frac{1}{N}\sum_{i=1}^{N}X_i
 $$
 ]
 
