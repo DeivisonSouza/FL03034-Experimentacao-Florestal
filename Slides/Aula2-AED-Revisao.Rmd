@@ -1858,9 +1858,157 @@ df %>%
 
 SQR = **246,6085** (Variação total)
 
-S² = SQR/n-1 = 246,6085/(5-1) = **60,6521m²** (Variação média)
+S² = SQR/n-1 = 246,6085/(5-1) = **61,6521m²** (Variação média)
 ]
 
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Variância - Usando a linguagem R
+
+.pull-left-5[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+.pull-right-5[
+```{r echo=T, eval=T}
+df %>%
+  group_by(Tratamento) %>% 
+  summarise(Variancia=var(Altura)) %>%
+  as.data.frame()
+```
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Desvio Padrão - Conceito
+
+Estima a dispersão dos dados em relação à média. Porém, o seu valor é dado na mesma unidade de medida da variável original.
+<br><br>
+
+**Matemática**: É a raiz quadrada da variância (amostral ou populacional).
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Desvio Padrão - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de desvio padrão (amostral e populacional) são:
+<br>
+
+--
+
+.pull-left-4[
+
+- **Desvio padrão amostral**
+$$
+\normalsize
+S = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}\left (x_i - \bar{x}  \right )^2}
+$$
+`r anicon::faa("hand-point-right", animate="horizontal")` O desvio padrão amostral é representado por **s**.
+
+]
+
+--
+
+.pull-right-4[
+
+- **Desvio padrão populacional**
+$$
+\normalsize
+\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left (X_i - \mu  \right )^2}
+$$
+`r anicon::faa("hand-point-right", animate="horizontal")` O desvio padrão populacional é representado por **σ**. 
+(lê-se: "Sigma")
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Desvio Padrão - Manual e usando a linguagem R
+
+.pull-left-1[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+.pull-left-1[
+**Usando Linguagem R**
+```{r echo=T, eval=T}
+df %>%
+  group_by(Tratamento) %>% 
+  summarise(DP=sd(Altura)) %>%
+  as.data.frame()
+```
+
+]
+
+.pull-left-1[
+**Cálculo Manual**
+$$
+s_{SA} = \sqrt{s^2} = \sqrt{61.65212} = 7.85m
+$$
+
+$$
+s_{SA+MO} = \sqrt{s^2} = \sqrt{0.44392} = 0.67m
+$$
+]
 
 
 
