@@ -1670,7 +1670,73 @@ Medidas de dipersão em relação à média aritmética:
 ## Medidas de dispersão (ou variação)
 <br>
 
-### Uma abordagem sem fórmulas
+### Variância - Uma abordagem sem fórmulas
+
+.pull-left-5[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+.pull-right-5[
+
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25
+)) %>%
+  mutate(Media = mean(Altura),
+         di = round(Altura - Media, 4),
+         "di²" = di^2) %>%
+  tibble::add_row(
+    Tratamento="Total",
+    di = round(sum(.$di), 1),
+    "di²" = round(sum(.$`di²`), 4))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+
+
+]
+
+---
+
+
 
 
 
