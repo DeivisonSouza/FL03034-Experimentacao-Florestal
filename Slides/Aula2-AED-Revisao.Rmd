@@ -1409,7 +1409,7 @@ class: inverse, top, right
 background-image: url(fig/class1/imgC.jpg)
 background-size: cover
 
-.font200[**Parte 3 <br> Medidas de dispersão (ou afastamento)**]
+.font200[**Parte 3 <br> Medidas de dispersão (ou variação)**]
 
 .left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
 
@@ -1420,17 +1420,69 @@ layout: true
 
 ---
 
-## Medidas de dispersão (ou afastamento)
+## Medidas de dispersão (ou variação)
 <br>
 
 ### Conceito
 
+É o espalhamento (dispersão) dos dados em torno de uma medida de tendência central.
+
+`r anicon::faa("hand-point-right", animate="horizontal")` A média aritmética é a medida de tendência central comumente usada.
+
+--
+<br>
+### Principais medidas de dispersão
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class2/MD.png')
+```
+
 ---
 
-## Medidas de dispersão (ou afastamento)
+## Medidas de dispersão (ou variação)
 <br>
 
-### Por que medir a variância dos dados?
+### O que é dispersão?
+
+Imagine que foram realizadas duas amostras de cinco árvores. De cada árvore mediu-se a altura comercial, em metros:
+
+.pull-left-5[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  A1 = c(13, 14, 16, 19, 18),
+  A2 = c(16, 16, 16, 16, 16)
+  )
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '200px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
+]
+
+.pull-right-5[
+```{r echo=T, eval=T}
+colMeans(df)
+```
+- A média aritmética das alturas de ambas as amostras é 16m.
+- Na A1 as alturas variaram entre 13 e 19m. (**Existe dispersão**)
+- Na A2 as árvores possuem mesma altura (16m). (**Não existe dispersão**)
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Por que medir a variância (ou dispersão) dos dados?
 
 .pull-left-5[
 ```{r echo=F, eval=T}
@@ -1459,11 +1511,10 @@ df %>%
 ```
 ]
 
-
 .pull-right-5[
-Um experimento foi conduzido para avaliar dois tipos de substratos (Solo Arenoso + Matéria Orgânica - SA+MO e Solo Arenoso-SA) no crescimento de uma espécie florestal. Após 30 dias de germinadas as sementes, a altura das plântulas, em cm, foi medida.
+Um experimento foi conduzido para avaliar o efeito de dois tipos de substratos (Solo Arenoso + Matéria Orgânica - SA+MO e Solo Arenoso-SA) no crescimento em altura de uma espécie florestal. As alturas das plântulas, em cm, foram medidas após 30 dias de germinação.
 
-- **Pergunta**: Baseado no crescimento em altura, qual o melhor substrato para a produção de mudas da espécie?
+- **Pergunta**: Em função do crescimento em altura pergunta-se: Qual o melhor substrato para a produção de mudas da espécie?
 
 `r anicon::faa("hand-point-right", animate="horizontal")` **Importante**: O tipo de substrato indicado será usado para produção de mudas em larga escala.
 
@@ -1472,10 +1523,10 @@ Um experimento foi conduzido para avaliar dois tipos de substratos (Solo Arenoso
 
 ---
 
-## Medidas de dispersão (ou afastamento)
+## Medidas de dispersão (ou variação)
 <br>
 
-### Por que medir a variância dos dados?
+### Por que medir a variância (ou dispersão) dos dados?
 
 - Em geral, a média aritmética é a primeira estimativa da amostra calculada:
 
@@ -1493,7 +1544,6 @@ df %>%
 ]
 ]
 
-
 .pull-right-4[
 ```{r echo=F, eval=T, collapse=T, out.width="68%", fig.align='center', fig.cap='', dpi=600}
 df %>%
@@ -1509,10 +1559,10 @@ df %>%
 
 ---
 
-## Medidas de dispersão (ou afastamento)
+## Medidas de dispersão (ou variação)
 <br>
 
-### Por que medir a variância dos dados?
+### Por que medir a variância (ou dispersão) dos dados?
 
 - **Gráfico Dot Plot**: Ajuda a visualizar como a altura das plântulas variou para cada tratamento:
 
@@ -1532,11 +1582,13 @@ df %>%
 
 .pull-right-4[
 **Interpretação - Variância**
-- O efeito do tratamento com SA+MO no crescimento foi mais uniforme (< variância)
-- O efeito do tratamento com SA no crescimento foi mais heterogêneo (> variância)
-- Portanto, "olhar" apenas para média pode conduzir à indicação equivocada do
-melhor tratamento.
+- O efeito do tratamento com SA+MO no crescimento foi mais uniforme (< variância).
+- O efeito do tratamento com SA no crescimento foi mais heterogêneo (> variância).
+- Portanto, "olhar" apenas para média pode conduzir à indicação equivocada do melhor tratamento.
 ]
+
+---
+
 
 ---
 ## Referências
