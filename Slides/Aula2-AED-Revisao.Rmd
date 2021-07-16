@@ -1711,6 +1711,12 @@ $$
 `r anicon::faa("hand-point-right", animate="horizontal")` A variância populacional é representada por **σ²**. 
 (lê-se: "Sigma-Quadrado")
 
+.font65[
+**n - 1** = Grau de liberdade (penalizar a variância por tratar-se de amostra)
+
+(**É razoável admitir que a variância amostral é maior do que a populacional!**)
+]
+
 ]
 
 ---
@@ -1778,20 +1784,82 @@ df %>%
      )
 
 ```
+
+SQR = **1,7757** (Variação total)
+
+S² = SQR/n-1 = 1,7757/(5-1) = **0,4439m²** (Variação média)
 ]
-
-
-Soma de Quadrados de Resíduos (SQR) = **1.7757** (Variação global)
-
-Mas, deseja-se saber o quanto, em média, é essa dispersão:
-
-n - 1: Grau de liberdade: A ideia é penalizar 
-
 
 ---
 
+## Medidas de dispersão (ou variação)
+<br>
 
+### Variância - Uma abordagem sem fórmulas
 
+.pull-left-5[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+.pull-right-5[
+
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    28.23, 29.67, 15.34, 16.23, 12.89
+)) %>%
+  mutate(Media = mean(Altura),
+         "xi-media" = round(Altura - Media, 4),
+         "(xi-media)²" = `xi-media`^2) %>%
+  tibble::add_row(
+    Tratamento = "Total",
+    "xi-media" = round(sum(.$`xi-media`), 1),
+    "(xi-media)²" = round(sum(.$`(xi-media)²`), 4))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+
+SQR = **246,6085** (Variação total)
+
+S² = SQR/n-1 = 246,6085/(5-1) = **60,6521m²** (Variação média)
+]
 
 
 
