@@ -1589,6 +1589,62 @@ df %>%
 
 ---
 
+## Medidas de dispersão (ou variação)
+<br>
+
+### Amplitude Total (AT)
+<br>
+
+É a medida mais simples de variabilidade.
+
+É determinada pela diferença entre o maior e menor valor do conjunto de dados (Fávero et al., 2009).
+<br><br>
+
+.center[**AT = Valor Máximo - Valor Mínimo**]
+
+--
+
+.pull-left-4[
+Seja a série:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**. 
+
+- Qual a amplitude total dos dados?
+
+**AT = 8 - 0 = 8**
+]
+
+--
+
+.pull-right-4[
+```{r echo=T, eval=T}
+S1 <- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+max(S1) - min(S1)
+```
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+<br>
+
+### Amplitude Total (AT) - Limitações e Vantagens
+<br>
+
+.pull-left-4[
+**Limitações**
+- Apenas indica a existência (ou não) de dispersão;
+- Usa apenas os valores extremos dos dados;
+- É influenciada por valores extremos (*outliers*);
+- É uma medida "pobre", pois não mede a dispersão interna. 
+
+]
+
+.pull-right-4[
+**Vantagens**
+- Matemática: Cálculo simples.
+]
 
 ---
 ## Referências
