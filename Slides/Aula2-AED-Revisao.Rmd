@@ -206,8 +206,6 @@ Dados, códigos R (e outros) podem ser acessados em:
 
 **Link**: <a href="https://www.ime.usp.br/~pam/EstBas.html">Estatística básica</a>
 
-
-
 ]
 
 .pull-right-4[
