@@ -179,8 +179,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [2 - Amplitude Total](#AT)
 
-[3 - Desvio Médio](#DM)
-
 [4 - Variância](#Var)
 
 [5 - Desvio Padrão](#Dp)
