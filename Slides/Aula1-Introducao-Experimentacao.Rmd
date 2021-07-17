@@ -126,9 +126,8 @@ layout: true
 Ao final desta aula espera-se que o discente seja capaz de...
 
 * Conhecer as terminologias e os principais conceitos associados à experimentação;
-* Compreender os princípios básicos da experimentação;
-* Conhecer os principais aspectos relacionados ao planejamento e condução de experimentos; e
-* Realizar uma análise descritiva de dados experimentais.
+* Compreender os princípios básicos da experimentação; e
+* Conhecer os principais aspectos relacionados ao planejamento e condução de experimentos.
 
 ---
 
@@ -676,8 +675,10 @@ class: inverse, top, right
 background-image: url(fig/class1/imgC.jpg)
 background-size: cover
 
+.font300[
 Obrigado!
-<br><br><br><br><br><br><br><br>
+]
+<br><br><br><br><br><br>
 
 **Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
 
