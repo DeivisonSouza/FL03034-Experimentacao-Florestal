@@ -187,6 +187,37 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [6 - Coeficiente de Variação](#CV)
 
+---
+
+## Leitura complementar
+<br>
+
+.pull-left-4[
+**Livro recomendado**
+<br><br>
+
+Morettin, Pedro Alberto; Bussab, Wilton Oliveira. **Estatística básica**. 9 ed., São Paulo: Saraiva, 2017, 554p.
+<br><br>
+
+**Parte 1** - Análise Exploratória de Dados (Capítulos 2 e 3).
+<br><br>
+
+Dados, códigos R (e outros) podem ser acessados em:
+
+**Link**: <a href="https://www.ime.usp.br/~pam/EstBas.html">Estatística básica</a>
+
+
+
+]
+
+.pull-right-4[
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class2/Livro-Bussab.jpeg')
+```
+]
+
+
+
 
 <!-- Slide XX -->
 ---
@@ -2023,6 +2054,7 @@ $$
 <br>
 
 ### Coeficiente de Variação - Conceito
+<br>
 
 É uma medida calculada pela razão entre o desvio padrão e a média aritmética. Portanto, é uma medida de dispersão relativa, e expressa em porcentagem.
 <br><br>
@@ -2064,6 +2096,70 @@ $$
 
 ---
 
+## Medidas de dispersão (ou variação)
+<br>
+
+### Coeficiente de Variação - Manual e usando a linguagem R
+
+.pull-left-1[
+```{r echo=F, eval=T}
+
+df <- data.frame(
+  Tratamento = c(
+    "SA+MO", "SA+MO", "SA+MO", "SA+MO", "SA+MO",
+    "SA", "SA", "SA", "SA", "SA"),
+  Altura = c(
+    19.21, 19.83, 20.14, 20.81, 19.25,
+    28.23, 29.67, 15.34, 16.23, 12.89
+))
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '250px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+
+```
+]
+
+.pull-left-1[
+**Usando Linguagem R**
+```{r echo=T, eval=T}
+df %>%
+  group_by(Tratamento) %>% 
+  summarise(
+    CV=(sd(Altura)/mean(Altura))*100) %>%
+  as.data.frame()
+```
+
+]
+
+.pull-right-3[
+**Interpretação**
+- O CV das alturas em SA foi maior (38,35%).
+- A CV das alturas em SA+MO foi menor (3,36%).
+]
+
+.pull-left-1[
+**Cálculo Manual**
+$$
+CV_{SA} = 7,85/20,5 = 38,35\%
+$$
+
+$$
+CV_{SA+MO} = 0,67/19,8 = 3,36\%
+$$
+]
+
+
+---
+
 ## Resumos das estatísticas
 <br>
 
@@ -2076,26 +2172,59 @@ Resumo das estimativas encontradas para os tratamentos: SA e SA+MO...
 .pull-left-1[
 **Solo Arenoso**
 
-Média =
+Média = 20,5m
 
-Variância = 
+Variância = 61,6521m²
 
-Desvio Padrão = 
+Desvio Padrão = 7,85m
 
-Coeficiente de Variação =
+Coeficiente de Variação = 38,35%
 ]
+
 
 .pull-left-1[
 **Solo Arenoso + Matéria Orgânica**
 
-Média =
+Média = 19,8m
 
-Variância = 
+Variância = 0,4439m²
 
-Desvio Padrão = 
+Desvio Padrão = 0,67m
 
-Coeficiente de Variação =
+Coeficiente de Variação = 3,36%
 ]
+
+---
+
+## Resumo da aula de hoje...
+
+- O que é estatística? 
+- Terminologias e conceitos básicos
+- Medidas de tendência central (ou posição)
+  - Expressões matemáticas
+  - Cálculos manuais e usado linguagem R
+- Medidas de dispersão (ou variação)
+  - Expressões matemáticas
+  - Cálculos manuais e usado linguagem R
+
+<br>
+
+**Recomendação**: Recapitular sobre medidas de assimetria.
+
+---
+
+## Atividade 1
+<br>
+
+Classroom: Realizar uma análise exploratória.
+<br><br>
+1) Faça os cálculos manuais.
+
+2) Faça um código em R.
+<br><br>
+
+Obs.: O conjunto de dados e os detalhes da atividade serão esclarecidos no Classroom.
+
 
 ---
 ## Referências
@@ -2112,8 +2241,10 @@ class: inverse, top, right
 background-image: url(fig/class1/imgC.jpg)
 background-size: cover
 
+.font300[
 Obrigado!
-<br><br><br><br><br><br><br><br>
+]
+<br><br><br><br><br><br>
 
 **Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
 
