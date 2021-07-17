@@ -354,7 +354,7 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 **Sistema de Ensino Remoto**: Aulas teóricas síncronas, realização de atividades complementares e avaliações de desempenho. 
 
-Link de acesso: [Endereço da Sala Remota](https://meet.google.com/zos-kvfj-rrg)
+Link de acesso: [Endereço da Sala Remota](https://meet.google.com/lookup/fq6ynr3fvf)
 
 --
 <br><br>
