@@ -391,6 +391,16 @@ Repetições: 4 repetições (20 sementes)
 Crescimento das plantas (30, 60, 90, 120, 150, 180 e 210 dias )
 ]
 
+---
+
+## Estudos de casos (Silva et al., 2017)
+<br>
+
+### Tamanho da semente e substratos na produção de mudas de açaí.
+<br>
+
+#### Resultados
+
 
 <!-- Slide XX -->
 ---
