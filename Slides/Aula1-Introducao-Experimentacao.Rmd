@@ -348,7 +348,49 @@ São os valores assumidos pela variável resposta.
 
 ---
 class: center, middle
-**Vamos sair da abstração...**
+.font300[
+**Estudos de casos...**
+]
+
+---
+
+## Estudos de casos (Silva et al., 2017)
+<br>
+
+### Tamanho da semente e substratos na produção de mudas de açaí.
+<br>
+#### Informações gerais
+
+.pull-left-4[
+**1. Periódico**
+
+Advances in Forestry Science
+
+Link: [Silva et al., 2017](https://periodicoscientificos.ufmt.br/ojs/index.php/afor/article/view/4590)
+<br><br>
+
+**2. Objetivo**
+
+Estudar o efeito de diferentes **tamanhos de sementes** e **substratos** no
+desenvolvimento de mudas de *Euterpe oleracea* Mart. 
+<br><br>
+]
+
+--
+
+.pull-right-4[
+**3. Delineamento Experimental**
+
+DIC em esquema fatorial 3x2 (tamanho das sementes x substratos).
+
+Repetições: 4 repetições (20 sementes)
+<br><br>
+
+**4. Variáveis de interesse**
+
+Crescimento das plantas (30, 60, 90, 120, 150, 180 e 210 dias )
+]
+
 
 <!-- Slide XX -->
 ---
