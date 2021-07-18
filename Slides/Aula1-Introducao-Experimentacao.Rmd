@@ -270,8 +270,12 @@ knitr::include_graphics('fig/class1/img-PD.png')
 --
 
 Quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
+<br><br>
 
-.red[Adicionar um exemplo...]
+**Exemplos**
+- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
+- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em $H_2SO_4$). (*Bertholletia excelsa*)
+- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
 
 
 ---
@@ -349,17 +353,16 @@ São os valores assumidos pela variável resposta.
 ---
 class: center, middle
 .font300[
-**Estudos de casos...**
+**Alguns experimentos...**
 ]
 
 ---
 
-## Estudos de casos (Silva et al., 2017)
+## Experimentos (Silva et al., 2017)
 <br>
 
-### Tamanho da semente e substratos na produção de mudas de açaí.
+### Tamanho da semente e substratos na produção de mudas de açaí
 <br>
-#### Informações gerais
 
 .pull-left-4[
 **1. Periódico**
@@ -384,22 +387,70 @@ desenvolvimento de mudas de *Euterpe oleracea* Mart.
 DIC em esquema fatorial 3x2 (tamanho das sementes x substratos).
 
 Repetições: 4 repetições (20 sementes)
-<br><br>
 
-**4. Variáveis de interesse**
+Tamanhos das sementes: P, M e G
 
-Crescimento das plantas (30, 60, 90, 120, 150, 180 e 210 dias )
+Tipos de substratos: Composto Orgânico (CO) e Monte Cristo (MC)
+
 ]
 
 ---
 
-## Estudos de casos (Silva et al., 2017)
+## Experimentos (Silva et al., 2017)
 <br>
 
-### Tamanho da semente e substratos na produção de mudas de açaí.
+### Tamanho da semente e substratos na produção de mudas de açaí
 <br>
 
-#### Resultados
+**4. Variáveis de interesse**
+
+.pull-left-4[
+- Altura e diâmetro do colo
+
+Medições: 30, 60, 90, 120, 150, 180 e 210 dias após plantio
+]
+
+--
+
+.pull-right-4[
+- Outras variáveis: (dia 210)
+
+Matéria Seca da Parte Aérea (MSPA)
+
+Matéria Seca do Sistema Radicular (MSSR)
+
+Matéria Seca Total da Planta (MST)
+
+**Método**: Secagem em estufa de circulação forçada por 72 horas a 60ºC até a obtenção da massa constante (em g).
+]
+
+
+---
+
+## Experimentos (Silva et al., 2017)
+<br>
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+<br>
+
+**5. Análises Estatísticas**
+- Análise de variância (ANOVA)
+- Regressão polinomial
+- Teste de Tukey
+
+---
+
+## Experimentos (Silva et al., 2017)
+<br>
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+<br>
+
+**6. Resultados**
+
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/E1-T2.png')
+```
 
 
 <!-- Slide XX -->
