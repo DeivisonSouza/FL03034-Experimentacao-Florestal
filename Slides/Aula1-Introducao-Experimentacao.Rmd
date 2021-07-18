@@ -452,6 +452,22 @@ Matéria Seca Total da Planta (MST)
 knitr::include_graphics('fig/class1/E1-T2.png')
 ```
 
+---
+
+## Experimentos (Silva et al., 2017)
+<br>
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+<br>
+
+**7. Conclusão**
+
+- Os parâmetros biométricos e a qualidade de mudas de *Euterpe oleracea* são influenciados pelo substrato e tamanho da semente.
+- A utilização do **substrato orgânico** proporciona mudas de *Euterpe oleracea* com maior índice de qualidade.
+- Sementes grandes produzem mudas vigorosas de *Euterpe oleracea*.
+<br>
+
+.center[.red[**Faça uma reflexão sobre a conclusão do experimento!**]]
 
 <!-- Slide XX -->
 ---
