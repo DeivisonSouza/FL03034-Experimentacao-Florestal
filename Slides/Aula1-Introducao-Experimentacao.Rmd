@@ -209,9 +209,9 @@ layout: true
 
 .pull-left-4[
 ```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media3.giphy.com/media/xT0xenLh8rnYKD9lYY/giphy-downsized.gif")
+knitr::include_graphics("https://media.giphy.com/media/fUZHXuE94BN2wtSbUS/giphy-downsized-large.gif")
 ```
-<div style='font-size:50%'>(Available at [http://gph.is/2j40zZ4](http://gph.is/2j40zZ4), jul 19, 2021)</div>
+<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
 
 ]
 
@@ -220,7 +220,7 @@ knitr::include_graphics("https://media3.giphy.com/media/xT0xenLh8rnYKD9lYY/giphy
 
 --
 
-A experimentação é uma atividade que consiste no **planejamento**, **instalação** e **condução** de experimentos, bem como da coleta e análise de dados experimentais.
+É a parte da estatística que estuda o **planejamento** e a **execução** de experimentos, bem como a **coleta**, a **análise** e a **interpretação** de dados experimentais.
 
 --
 
@@ -228,7 +228,7 @@ A experimentação é uma atividade que consiste no **planejamento**, **instala�
 
 --
 
-É uma experiência (ou ensaio) realizada em condições previamente estabelecidas e que opera com causas controladas `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+É uma experiência (ou ensaio) realizada em **condições previamente estabelecidas** e que opera com **causas controladas** `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
  
 ---
 
@@ -239,7 +239,7 @@ A experimentação é uma atividade que consiste no **planejamento**, **instala�
 
 --
 
-É a menor unidade material de um experimento em que se aplica o tratamento.
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais.
 <br><br>
 
 **Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
@@ -261,6 +261,7 @@ knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy
 
 
 ---
+
 ## Terminologias e conceitos básicos
 
 <br>
@@ -268,8 +269,29 @@ knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy
 ### Tratamento
 
 --
-É a condição imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
 
+.pull-left-4[
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
+```
+<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
+]
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
 
 
 ---
