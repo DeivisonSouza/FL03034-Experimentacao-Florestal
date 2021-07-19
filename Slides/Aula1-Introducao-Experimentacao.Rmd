@@ -206,7 +206,16 @@ layout: true
 
 ## Terminologias e conceitos básicos
 
-<br>
+
+.pull-left-4[
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media3.giphy.com/media/xT0xenLh8rnYKD9lYY/giphy-downsized.gif")
+```
+<div style='font-size:50%'>(Available at [http://gph.is/2j40zZ4](http://gph.is/2j40zZ4), jul 19, 2021)</div>
+
+]
+
+
 ### Experimentação
 
 --
@@ -220,8 +229,7 @@ A experimentação é uma atividade que consiste no **planejamento**, **instala�
 --
 
 É uma experiência (ou ensaio) realizada em condições previamente estabelecidas e que opera com causas controladas `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
-
-
+ 
 ---
 
 ## Terminologias e conceitos básicos
@@ -252,12 +260,16 @@ knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy
 ]
 
 
---
+---
+## Terminologias e conceitos básicos
+
+<br>
 
 ### Tratamento
 
 --
 É a condição imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
+
 
 
 ---
