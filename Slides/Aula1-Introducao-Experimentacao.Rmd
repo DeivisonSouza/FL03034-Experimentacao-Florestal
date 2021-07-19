@@ -239,7 +239,7 @@ knitr::include_graphics("https://media.giphy.com/media/fUZHXuE94BN2wtSbUS/giphy-
 
 --
 .font90[
-É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais.
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. (.green[Recomendação: 20 UEs])
 <br><br>
 
 **Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
