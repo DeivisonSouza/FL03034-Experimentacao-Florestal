@@ -269,7 +269,11 @@ knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy
 ### Tratamento
 
 --
-É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento.
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+<br>
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
 
 .pull-left-4[
 ```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
