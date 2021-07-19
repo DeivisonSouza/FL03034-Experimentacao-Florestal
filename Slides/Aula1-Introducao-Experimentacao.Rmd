@@ -286,6 +286,8 @@ knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.
 <br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
 ]
 
+--
+
 .pull-right-4[
 .font80[
 **Experimentos de campo**
@@ -312,7 +314,7 @@ knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.
 
 --
 
-É o modo como os tratamentos são designados às unidades experimentais `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
+É o modo como os tratamentos são designados às unidades experimentais (ou parcelas) `r Citep(myBib, "dias2009biometria", .opts = list(max.names = 2, longnamesfirst = F))`.
 
 --
 <br>
@@ -331,14 +333,24 @@ knitr::include_graphics('fig/class1/img-PD.png')
 
 --
 
-Quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
+É quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
+
+--
 <br><br>
 
+**Príncipios básicos**: Repetição e Casualização
+
+**Situação**: Unidades experimentais homogêneas (casas de vegetação e laboratórios)
+
+<br>
+--
+
+.font90[
 **Exemplos**
 - Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
 - Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em $H_2SO_4$). (*Bertholletia excelsa*)
 - Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
-
+]
 
 ---
 
@@ -349,14 +361,30 @@ Quando os tratamentos são designados às unidades experimentais completamente a
 
 --
 
-É um delineamento no qual as unidades experimentais são subdivididas em grupos homogêneos, denominados de blocos. Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
+É quando as unidades experimentais são subdivididas em grupos menores e homogêneos para algum fator. 
+
+--
+
+Estes grupos homogêneos são denominados de blocos.
+
+--
+
+Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
 <br><br>
 
+--
+**Príncipios básicos**: Repetição, Casualização e Controle Local
+
+**Situação**: Existe um fator de variação para controlar (experimentos de campo - Fertilidade do solo)
+
+<br>
+--
+
+.font80[
 **Exemplos**
 <br>
-- Investigar a sobrevivência e os padrões de crescimento de espécies florestais
-nativas de diferentes grupos ecológicos crescendo em área alterada no Amazonas ([Nogueira et al., 2015](https://periodicos.ufra.edu.br/index.php/ajaes/article/view/2101)).
 - Avaliar a dinâmica de uma comunidade florestal semidecídua secundária, sob influência de um gradiente ambiental de umidade, determinado pela proximidade a um córrego em um extremo e um cerrado em outro, nas partes mais altas do relevo ([Venturoli et al., 2008](https://repositorio.unb.br/handle/10482/2650)).
+]
 
 ---
 
