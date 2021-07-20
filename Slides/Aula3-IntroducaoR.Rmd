@@ -49,6 +49,7 @@ knitr::opts_chunk$set(
 library(ggplot2)
 library(dplyr)
 library(ggimage)
+library(kableExtra)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -487,6 +488,58 @@ Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R
 knitr::include_graphics("fig/class3/OpR.png")
 ```
 
+---
+
+## Operadores no R
+<br>
+
+### Tipos de operadores
+
+.font80[
+.pull-left-8[
+.center[**Operadores Aritméticos**]
+
+| Símbolo | Descrição                |
+|---------|--------------------------|
+| +       | Adição                   |
+| -       | Subtração                |
+| *       | Multiplicação            |
+| /       | Divisão                  |
+| ^ ou ** | Potenciação              |
+| %%      | Resto da divisão         |
+| %/%     | Parte inteira da divisão |
+]
+
+
+.pull-left-8[
+.center[**Operadores Lógicos**]
+
+| Símbolo | Descrição                       |
+|---------|---------------------------------|
+| &       | E (and) - versão vetorizada     |
+| &&      | E (and) - versão não-vetorizada |
+| ⎮       | Ou (or) - versão vetorizada     |
+| ⎮⎮      | Ou (or) - versão não-vetorizada |
+| !       | Não...                          |
+| xor     | Ou exclusivo...                 |
+
+]
+
+.pull-left-8[
+.center[**Operadores Relacionais**]
+
+| Símbolo | Descrição                |
+|---------|--------------------------|
+| <       | Menor do que...          |
+| >       | Maior do que...          |
+| <=      | Menor ou igual do que... |
+| >=      | Maior ou igual do que... |
+| ==      | Igual a...               |
+| !=      | Diferente de...          |
+| %in%    | Contém                   |
+
+]
+]
 
 
 
