@@ -545,7 +545,7 @@ knitr::include_graphics("fig/class3/OpR.png")
 
 ## Operadores aritméticos - Expressões básicas
 
-Operadores usuais para realizar operações matemáticas. As operações são realizadas de maneira elementar.
+- Operadores usuais para realizar operações matemáticas.
 
 .pull-left[
 ```{r refname, echo=TRUE, eval=FALSE}
@@ -582,6 +582,111 @@ y/x+2
 
 Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operadores.R)
 
+---
+
+## Operadores aritméticos - Expressões mais complexas
+
+- Regra **PEMDAS** (**P**arênteses, **E**xponenciação, **M**ultiplicação, **D**ivisão, **A**dição e **S**ubtração).
+
+.pull-left[
+```{r refname2, echo=TRUE, eval=FALSE}
+(2+3)*10
+4*3**3
+5+8-4*9/3
+5+(8-4)*9/3
+2^3*4+6/2
+2^3*(4+6)/2
+```
+]
+
+.pull-right[
+```{r ref.label="refname2", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+---
+
+## Operadores relacionais (ou comparação)
+
+- Operadores relacionais são usados para realizar comparações de valores.
+
+.pull-left-9[
+```{r logVar, echo=TRUE, eval=FALSE}
+# vetor com um elemento
+(x <- 20)
+(y <- 10)
+(v <- 1)
+
+# vetor com mais de um elemento
+(z <- c(1:5))
+(w <- c(5:1))
+```
+
+```{r logname, echo=TRUE, eval=FALSE}
+x > y        # x é maior do que y?
+x < y        # x é menor do que y?
+x != y       # x é diferente de y?
+y <= x       # y é menor ou igual a x?
+y >= x       # y é maior ou igual a x?
+z == w       # elementos de z são iguais aos de w?
+z != w       # elementos de z são dif. aos de w?
+x >= w       # x é >= aos elementos de w?
+w %in% v     # w contém v?
+```
+]
+
+.pull-right-9[
+```{r ref.label="logVar", echo=FALSE, eval=TRUE, collapse=T}
+```
+<br>
+
+```{r ref.label="logname", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+
+---
+
+## Operadores relacionais (ou comparação)
+<br>
+
+### Um pouco mais sobre o operador **%in%**
+
+Considere um vetor de nomes de espécies florestais...
+
+.pull-left-9[
+```{r IN, echo=TRUE, eval=FALSE}
+especie <- 
+   c("Vouacapoua-americana", "Cedrela-odorata",
+     "Bertholletia-excelsa", "Dinizia-excelsa Ducke",
+     "Bertholletia-excelsa", "Manilkara-huberi",
+     "Couratari-guianensis")
+
+"Bertholletia-excelsa" %in% especie
+"Swietenia-macrophylla" %in% especie
+```
+]
+
+.pull-right-9[
+.font90[
+Agora, você deseja descobrir se esse vetor contém *Bertholletia excelsa* e *Swietenia macrophylla*?
+<br><br>
+
+Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [Portaria MMA 443, de 17 de dezembro de 2014](http://dados.gov.br/dataset/portaria_443). Portanto, sofrem as restrições estabelecidas no art. 2º, incluindo a proibição de manejo.
+]
+]
+
+.pull-left[
+```{r ref.label="IN", echo=FALSE, eval=TRUE, collapse=T}
+"Bertholletia-excelsa" %in% especie
+"Swietenia-macrophylla" %in% especie
+```
+]
+
+
+
+
+
+---
 <!--Slide XX -->
 ---
 layout: false
