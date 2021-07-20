@@ -117,35 +117,48 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Motivação**
-* [A linguagem R](#linguagemR)
-* [Por que usar a linguagem R?](#porqueR)
+**Parte 1 - Conhecendo o R e Rstudio**
+
+[1- A linguagem R](#R)
+
+[2 - Por que usar a linguagem R?](#pqR)
+
+[3 - RGui - Download, instalação e interface](#RGui)
+
+[4 - IDE RStudio - Download, instalação e interface](#Rstudio)
+
 ]
 
 .pull-right-4[
 .pull-down[
-**Parte 2 - RGui e RStudio**
-* [RGui](#RGui)
-    + [Download e instalação](#RGui)
-    + [Contato inicial](#RguiInicial)
-* [IDE RStudio](#Rstudio)
-    + [Download e instalação](#Rstudio)
-    + [Painéis principais](#IDEPaineis)
-* [Como fazer citações?](#ComoCitar)
-]
-]
+**Parte 2 - Iniciando na linguagem R**
 
+[1 - Operadores no R](#Operadores)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.1 - Aritméticos](#arit)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.2 - Relacionais](#relac)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.3 - Lógicos](#log)
+
+[2 - Funções matemáticas usuais](#FunsMat)
+]
+]
 
 ---
 
-## Conteúdo
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/inv1.jpg)
+background-size: cover
 
-**Parte 3 - Iniciando na linguagem R**
-- [Operadores no R](#Operadores)
-    + [Aritméticos](#arit)
-    + [Relacionais](#relac)
-    + [Lógicos](#log)
-- [Funções matemáticas usuais](#FunsMat)
+.font200[**Parte 1 <br> Conhecendo o R e Rstudio**]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
 
 ---
 
@@ -343,7 +356,7 @@ knitr::include_graphics('fig/class3/RstudioIG.svg')
 
 ---
 
-## IDE RStudio - Painéis principais
+## IDE RStudio - Interface (Painéis)
 <br>
 
 **Editor**: Painel de desenvolvimento dos códigos R.
@@ -362,6 +375,21 @@ knitr::include_graphics('fig/class3/RstudioIG.svg')
 
 **Packages**: Painel que mostra os pacotes instalados. É possível identificar os pacotes carregados na sessão corrente.
 
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/inv1.jpg)
+background-size: cover
+
+.font200[**Parte 2 <br> Iniciando na linguagem R**]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
+
+---
 
 <!--Slide XX -->
 ---
