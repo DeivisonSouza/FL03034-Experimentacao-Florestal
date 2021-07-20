@@ -541,7 +541,10 @@ knitr::include_graphics("fig/class3/OpR.png")
 ]
 ]
 
+---
 
+
+[01-R-Operators](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operators.R)
 
 <!--Slide XX -->
 ---
