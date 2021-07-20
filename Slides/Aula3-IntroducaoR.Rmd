@@ -580,7 +580,6 @@ y/x+2
 ```
 ]
 
-
 Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operadores.R)
 
 <!--Slide XX -->
