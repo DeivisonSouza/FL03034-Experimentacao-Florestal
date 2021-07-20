@@ -543,8 +543,45 @@ knitr::include_graphics("fig/class3/OpR.png")
 
 ---
 
+## Operadores aritméticos - Expressões básicas
 
-[01-R-Operators](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operators.R)
+Operadores usuais para realizar operações matemáticas. As operações são realizadas de maneira elementar.
+
+.pull-left[
+```{r refname, echo=TRUE, eval=FALSE}
+2+3             # adição
+4*9             # multiplicação
+20/5            # divisão
+32-10           # subtração
+5^3             # potenciação (exponenciação)
+10%%3           # resto da divisão
+10%/%3          # Parte inteira da divisão
+```
+
+```{r refname3, echo=TRUE, eval=FALSE}
+(x <- c(2,4,6,8))
+(y <- c(1,5,9,0))
+```
+
+```{r refname4, echo=TRUE, eval=FALSE}
+x + y
+y/x+2
+```
+]
+
+.pull-right[
+```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+
+```{r ref.label="refname3", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+
+```{r ref.label="refname4", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+
+Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operators.R)
 
 <!--Slide XX -->
 ---
