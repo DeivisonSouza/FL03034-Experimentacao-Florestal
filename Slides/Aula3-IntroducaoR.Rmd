@@ -682,8 +682,37 @@ Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [
 ```
 ]
 
+---
 
+## Operadores relacionais (ou comparação)
+<br>
 
+### Um pouco mais sobre o operador `%in%`
+
+.pull-left-9[
+```{r IN2, echo=TRUE, eval=FALSE}
+especie <- 
+   c("Vouacapoua-americana", "Cedrela-odorata",
+     "Bertholletia-excelsa", "Dinizia-excelsa Ducke",
+     "Bertholletia-excelsa", "Manilkara-huberi",
+     "Couratari-guianensis")
+
+ameacadas <- 
+  c("Vouacapoua-americana", "Bertholletia-excelsa",
+    "Cedrela-odorata", "Swietenia-macrophylla")
+
+especie %in% ameacadas
+```
+]
+
+.pull-right-9[
+- O vetor "especie" contém elementos presentes no vetor "ameacadas"?
+]
+
+.pull-down[
+```{r ref.label="IN2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
 
 
 ---
