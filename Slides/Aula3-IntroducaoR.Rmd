@@ -205,11 +205,6 @@ knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo
 ```
 ]
 
-
-
-
-
-
 ---
 
 ## Por que usar a linguagem R?
@@ -217,6 +212,79 @@ knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class3/WhyR.png')
 ```
+
+---
+
+## RGui - Download e instalação
+<br>
+
+**1⁰ Passo**: Acessar a página do projeto R em: https://www.r-project.org/;
+
+**2⁰ Passo**: Do lado esquerdo da página clique sobre o menu .green[CRAN];
+
+**3⁰ Passo**: Será aberta uma página com diversos links de .green[CRAN Mirrors], isto é, espelhos CRAN. 
+<br>
+Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
+<br><br>
+
+.center2[
+```{r echo=FALSE}
+df <- data.frame(Link = 
+                   c("http://cran-r.c3sl.ufpr.br/",
+                     "http://nbcgib.uesc.br/mirrors/cran/", 
+                     "https://cran.fiocruz.br/",
+                     "https://vps.fmvz.usp.br/CRAN/",
+                     "http://brieger.esalq.usp.br/CRAN/"),
+                 Instituição = 
+                   c("Universidade Federal do Paraná - UFPR",
+                     "Center for Comp Biol at Universidade Estadual de Santa Cruz",
+                     "Oswaldo Cruz Foundation, Rio de Janeiro",
+                     "University of São Paulo, São Paulo",
+                     "University of São Paulo, Piracicaba")
+                 )
+
+df %>% 
+   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '750px',
+                 caption = '',
+     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+]
+
+---
+
+## RGui - Download e instalação
+<br>
+
+**4⁰ Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção .green[Download and Install R], clicar em um dos três links, conforme o Sistema Operacional do usuário:
+
+1. Download R for Windows;
+2. Download R for Linux; ou
+3. Download R for MacOS.
+<br>
+
+**5⁰ Passo**: Clicar no link do .green[subdiretório base] ou em o .green[install R for the first time] para instalar o R pela primeira vez;
+<br>
+
+**6⁰ Passo**: Clicar, por exemplo, em .green[Download R-4.1.0. for Windows] (.red[escolha seu SO]). Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
+<br>
+
+**7⁰ Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+
+---
+
+## RGui - Download e instalação
+<br>
+
+
+
+
 
 ---
 

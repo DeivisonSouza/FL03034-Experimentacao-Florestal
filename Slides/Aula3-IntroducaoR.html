@@ -8,6 +8,15 @@
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula3-IntroducaoR_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="Aula3-IntroducaoR_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="Aula3-IntroducaoR_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="Aula3-IntroducaoR_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="Aula3-IntroducaoR_files/datatables-binding-0.17/datatables.js"></script>
+    <link href="Aula3-IntroducaoR_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula3-IntroducaoR_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula3-IntroducaoR_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="Aula3-IntroducaoR_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="Aula3-IntroducaoR_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -186,16 +195,59 @@ Ao final desta aula espera-se que o discente seja capaz de...
 &lt;img src="https://tidyverse.tidyverse.org/articles/tidyverse-logo.png" width="30%" style="display: block; margin: auto;" /&gt;
 ]
 
-
-
-
-
-
 ---
 
 ## Por que usar a linguagem R?
 
 &lt;img src="fig/class3/WhyR.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## RGui - Download e instalação
+&lt;br&gt;
+
+**1⁰ Passo**: Acessar a página do projeto R em: https://www.r-project.org/;
+
+**2⁰ Passo**: Do lado esquerdo da página clique sobre o menu .green[CRAN];
+
+**3⁰ Passo**: Será aberta uma página com diversos links de .green[CRAN Mirrors], isto é, espelhos CRAN. 
+&lt;br&gt;
+Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
+&lt;br&gt;&lt;br&gt;
+
+.center2[
+<div id="htmlwidget-26db84f45cfc9ee28757" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-26db84f45cfc9ee28757">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## RGui - Download e instalação
+&lt;br&gt;
+
+**4⁰ Passo**: Na página http://cran-r.c3sl.ufpr.br/, na seção .green[Download and Install R], clicar em um dos três links, conforme o Sistema Operacional do usuário:
+
+1. Download R for Windows;
+2. Download R for Linux; ou
+3. Download R for MacOS.
+&lt;br&gt;
+
+**5⁰ Passo**: Clicar no link do .green[subdiretório base] ou em o .green[install R for the first time] para instalar o R pela primeira vez;
+&lt;br&gt;
+
+**6⁰ Passo**: Clicar, por exemplo, em .green[Download R-4.1.0. for Windows] (.red[escolha seu SO]). Assim, será iniciado o download do R Development Core Team para o respectivo sistema; e
+&lt;br&gt;
+
+**7⁰ Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+
+---
+
+## RGui - Download e instalação
+&lt;br&gt;
+
+
+
+
 
 ---
 
