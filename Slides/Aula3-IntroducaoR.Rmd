@@ -279,18 +279,88 @@ df %>%
 
 ---
 
-## RGui - Download e instalação
+## RGui - Interface
 <br>
 
+Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
+knitr::include_graphics('fig/class3/Rgui.png')
+```
 
+---
 
+## RGui - Interface
+
+- No contato inicial do usuário com o RGui tem-se a visão do .green[R Console].
+- O sinal .red[>] é o prompt de comando.
+- Execute as funções .green[demo(), help(), help.start(), q()].
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
+knitr::include_graphics('fig/class3/Rgui.png')
+```
 
 ---
 
+## RGui - R editor
 
+O RGui possui um .green[R editor] $\rightarrow$ Abrir script.
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R editor'}
+knitr::include_graphics('fig/class3/Reditor.png')
+```
 
 ---
+
+## IDE RStudio - download e instalação
+<br>
+
+O .green[RStudio] é um ambiente de desenvolvimento integrado (*Integrated Development Environment - IDE*) de códigos em R mais comumente usado por usuários da linguagem.
+
+**1⁰ Passo**: Acessar a página do projeto RStudio: https://www.rstudio.com;
+
+**2⁰ Passo**: Products $\rightarrow$ RStudio;
+
+**3⁰ Passo**: Selecionar a versão do RStudio para Desktop;
+
+**4⁰ Passo**: Na edição Open source $\rightarrow$ Download Rstudio Desktop;
+
+**5⁰ Passo**: Por fim, basta usar o setup baixado para instalar o programa.
+<br><br>
+
+```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/class3/RStudio.png')
+```
+
+---
+
+## IDE RStudio - Interface
+
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/class3/RstudioIG.svg')
+```
+<!-- http://material.curso-r.com/rbase/ -->
+
+---
+
+## IDE RStudio - Painéis principais
+<br>
+
+**Editor**: Painel de desenvolvimento dos códigos R.
+
+**Environment**: Painel onde aparecerão todos os objetos criados no R.
+
+**Console**: Painel para rodar os códigos R e receber outputs.
+
+**Plots**: Painel de saída gráfica.
+
+**History**: Painel que mostra um histórico dos comandos executados na sessão corrente.
+
+**Help**: Painel que mostra a documentação de funções de pacotes, quando solicitada.
+
+**Files**: Painel para identificar arquivos no diretório de trabalho.
+
+**Packages**: Painel que mostra os pacotes instalados. É possível identificar os pacotes carregados na sessão corrente.
 
 
 <!--Slide XX -->
