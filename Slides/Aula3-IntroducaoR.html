@@ -135,15 +135,17 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-down[
 **Parte 2 - Iniciando na linguagem R**
 
-[1 - Operadores no R](#Operadores)
+[1 - Sintaxe da linguagem R](#Sintaxe)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1 - Aritméticos](#arit)
+[2 - Operadores no R](#Operadores)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.2 - Relacionais](#relac)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.1 - Aritméticos](#arit)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.3 - Lógicos](#log)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.2 - Relacionais](#relac)
 
-[2 - Funções matemáticas usuais](#FunsMat)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.3 - Lógicos](#log)
+
+[3 - Funções matemáticas usuais](#FunsMat)
 ]
 ]
 
@@ -229,8 +231,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-1c78386c9c0fdc15b2bc" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1c78386c9c0fdc15b2bc">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-433c525d680d725f25c9" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-433c525d680d725f25c9">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -398,15 +400,43 @@ Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R
 Se uma expressão é um comando, então o R: .blue[avalia], .blue[imprime] (a menos que seja especificado ao contrário) e o resultado é ".blue[perdido]".
 
 Se uma atribuições é um comando, então o R: .blue[avalia], .blue[atribui] o resultado para uma variável e .blue[suprime] a impressão automática do resultado".
-&lt;br&gt;&lt;br&gt;
+
+.pull-left[
+
+```r
+# Atribuição: Avalia, atribui e suprime
+DAP &lt;- c(49, 56, 44, 46, 56, 
+         87, 45, 98, 100, 120)
+
+# Expressão: Avalia, imprime e perde o resultado
+mean(DAP)
+```
+]
+
+.pull-right[
+
+```
+## [1] 70.1
+```
+]
+
+&lt;br&gt;
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
 
+## Sintaxe da linguagem R
+&lt;br&gt;
 
+- **Separação de comandos**: ponto e vírgula (.red[;]) ou por uma nova linha;
+- **Comentários**: precedidos pelo símbolo .red[\#] (tudo após .red[\#] não é executado);
+- **Comando incompleto**: se o comando R não estiver sintaticamente completo (em uma linha de código), o prompt aparecerá com o símbolo: .red[+]. Esse símbolo indica continuação do comando inicial.
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
+Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
+---
 
 &lt;!--Slide XX --&gt;
 ---
