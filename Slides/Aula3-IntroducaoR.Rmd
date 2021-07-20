@@ -172,10 +172,43 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ]
 ]
 
-
+.pull-left-7[
 ```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://petsistemas.ufms.br/wp-content/uploads/2017/02/main-qimg-7012cde5b60209165cdc281d888b33ac.png")
+
 ```
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://blog.efpsa.org/wp-content/uploads/2019/04/pic1.png")
+
+```
+
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
+```
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png")
+```
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
+```
+]
+
+
+
+
+
 
 ---
 

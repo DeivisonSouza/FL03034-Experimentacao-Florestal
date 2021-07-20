@@ -127,6 +127,11 @@ div.my-footer span {
   width: 26%;
 }
 
+.pull-left-7 {
+  float: left;
+  width: 20%;
+}
+
 /* use to position text at the bottom */
 .pull-down {
   position: absolute;
