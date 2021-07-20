@@ -391,6 +391,54 @@ layout: true
 
 ---
 
+## Sintaxe da linguagem R
+<br>
+
+- **Linguagem de expressão**: Tecnicamente, R é uma linguagem de expressão com uma sintaxe muito simples.
+- **Case sensitive**: A linguagem R é *case sensitive*. Isto é, diferencia .green[maiúscula] e .green[minúscula].
+
+.pull-left[
+```{r r1, echo=TRUE, eval=FALSE}
+"a" == "A"
+"mogno" == "Mogno"
+
+# Cria um vetor de nomes
+esp <- c("Cedro", "Ipe", "Ipe", "Ipe", "Cedro",
+         "Ipe", "Ipe", "Cedro", "Ipe", "ipe")
+table(esp) # tabela de frequências
+```
+]
+
+.pull-right[
+```{r ref.label="r1", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+
+<br><br>
+
+Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+
+---
+
+## Sintaxe da linguagem R
+<br>
+
+- **Comandos elementares no R**: consistem em .green[expressões] ou .green[atribuições].
+<br>
+
+Se uma expressão é um comando, então o R: .blue[avalia], .blue[imprime] (a menos que seja especificado ao contrário) e o resultado é ".blue[perdido]".
+
+Se uma atribuições é um comando, então o R: .blue[avalia], .blue[atribui] o resultado para uma variável e .blue[suprime] a impressão automática do resultado".
+<br><br>
+
+Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+
+---
+
+
+
+
+
 <!--Slide XX -->
 ---
 layout: false
