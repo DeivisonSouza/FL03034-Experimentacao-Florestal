@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd. Please edit that file.. -->
+<!-- README.md is generated from README.Rmd. Please edit that file. -->
 <!-- badges: start -->
 <!-- badges: end -->
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
@@ -61,6 +61,7 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/Aula0-Cronograma.html                | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>                |
 | Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-Introducao-Experimentacao.html> |
 | Slides/Aula2-AED-Revisao.html               | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula2-AED-Revisao.html>               |
+| Slides/Aula3-IntroducaoR.html               | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula3-IntroducaoR.html>               |
 
 # Facilitador :deciduous\_tree:
 
