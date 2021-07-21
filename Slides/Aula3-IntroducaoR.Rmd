@@ -482,6 +482,7 @@ Usada para criar vetores diretamente no R Console.
 
 ### Vetores - Função .blue[c()] (concatenate)
 
+.pull-top[
 .pull-left-4[
 **Classe "character"**
 ```{r, echo=T, eval=F}
@@ -510,8 +511,58 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 ```
 
 ]
+]
 
+---
 
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[c()] (concatenate)
+
+.pull-left-10[
+**Classe "factor"**
+.font90[
+- Por padrão, ao concatenar **strings** cria-se um vetor de classe **character**.
+- Se desejável, pode-se codificar um vetor de classe **character** para a classe **factor**.
+- Existem duas funções: .green[factor()] e .green[as.factor()].
+- Motivos: modelos estatísticos e gráficos
+]
+]
+
+.pull-right-10[
+
+```{r, echo=T, eval=T}
+# Cria um vetor - Fitofisionomia
+(GE <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA"))
+class(GE)
+```
+
+```{r, echo=T, eval=T}
+# Codifica para "factor"
+GE <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA")
+(GE <- factor(GE))
+class(GE)
+```
+
+]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[c()] (concatenate)
+
+.pull-left-10[
+**Classe "factor" - declarando hierarquia**
+.font90[
+- Por padrão, os níveis (levels) de um vetor de classe **factor** ficam dispostos em ordem alfabética.
+- Em algumas situações, pode ser desejável estabelecer uma hierarquia entre esses níveis.
+- Por exemplo, imagine a variável mês de coleta. É evidente que existe hierarquia entre os meses.
+]
+
+]
 
 
 
