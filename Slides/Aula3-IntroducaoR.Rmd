@@ -481,7 +481,37 @@ Usada para criar vetores diretamente no R Console.
 <br>
 
 ### Vetores - Função .blue[c()] (concatenate)
-<br>
+
+.pull-left-4[
+**Classe "character"**
+```{r, echo=T, eval=F}
+# Cria um vetor
+c("Acapu", "Araucaria", "Mogno", "Cedro")
+```
+
+```{r, echo=T, eval=F}
+# Cria um vetor e faz atribuição
+especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+#class(especie)
+```
+]
+
+.pull-right-4[
+**Classe "numeric"**
+```{r, echo=T, eval=F}
+# Cria um vetor
+c(23.0, 27.0, 33.6, 42.6, 52.1)
+```
+
+```{r, echo=T, eval=F}
+# Cria um vetor e faz atribuição
+diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+#class(diametro)
+```
+
+]
+
+
 
 
 
