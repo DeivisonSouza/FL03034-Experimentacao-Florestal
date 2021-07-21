@@ -678,6 +678,27 @@ seq(along.with = especie)
 ]
 
 ---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[rep()] (replicate)
+<br>
+
+.blockquote[
+.center[.blue[rep(]**x** = ?, **times** = ?, **each** = ?.blue[)]]
+<br>
+
+.font90[
+**x** = escalar, vetor ou uma lista, entre outros.
+
+**times** = um vetor de inteiro (não negativo) indicando quantas vezes repetir cada elemento.
+
+**each** = cada elemento de x é repetido n vezes.
+]
+]
+
+---
 layout: false
 name: conc
 class: inverse, top, right
