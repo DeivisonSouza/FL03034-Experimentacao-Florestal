@@ -127,7 +127,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Conhecendo o R e Rstudio**
+**Parte 1 - Conhecendo o R e o IDE Rstudio**
 
 [1- A linguagem R](#R)
 
@@ -141,7 +141,26 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .pull-down[
-**Parte 2 - Iniciando na linguagem R**
+**Parte 2 - Estrutura de dados na linguagem R**
+
+[1 - Vetores](#vet)
+
+[2 - Matrizes](#mat)
+
+[3 - Data Frames](#df)
+
+[4 - Listas](#list)
+
+]
+]
+
+---
+
+## Conteúdo
+
+
+.pull-left-4[
+**Parte 3 - Iniciando na linguagem R**
 
 [1 - Sintaxe da linguagem R](#Sintaxe)
 
@@ -154,8 +173,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 &nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Lógicos](#log)
 
 [3 - Funções matemáticas usuais](#FunsMat)
+
 ]
-]
+
 
 ---
 
@@ -165,7 +185,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 1 <br> Conhecendo o R e Rstudio**]
+.font200[**Parte 1 <br> .red[Conhecendo o R e <br> o IDE Rstudio]**]
 
 ---
 layout: true
@@ -394,7 +414,27 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 2 <br> Iniciando na linguagem R**]
+.font200[**Parte 2 <br> .red[Estrutura de dados <br> na linguagem R]**]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
+
+---
+
+## Vetores
+
+
+
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/inv1.jpg)
+background-size: cover
+
+.font200[**Parte 3 <br> Iniciando na linguagem R**]
 
 ---
 layout: true
@@ -772,6 +812,131 @@ data %>%
 ```
 
 ]
+
+---
+
+## Operadores lógicos
+<br>
+
+### Operador `&` - versão vetorizada
+
+Use o operador lógico `&` para responder as questões a seguir:
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores possuem **DAP maior ou igual a 50cm** .red[e] **Qualidade de Fuste (QF) igual a 1**❓
+
+--
+
+```{r operE, echo=TRUE, eval=FALSE}
+data$DAP >= 50 & data$QF == 1
+#data[data$DAP >= 50 & data$QF == 1, ]
+```
+
+--
+
+```{r ref.label="operE", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+--
+<br><br>
+🌳**Legislação florestal!**🌳
+
+.font80[
+A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicada no DOU nº 26, de 06/02/2009, pág. 100) estabelece em seu art. 6º um <bdi style="font-weight:bold">Diâmetro Mínimo de Corte (DMC) de 50 cm</bdi> para todas as espécies, para as quais ainda não se estabeleceu o DMC específico.
+]
+
+---
+
+## Operadores lógicos
+<br>
+
+### Operador `&` - versão vetorizada (cont.)
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
+
+--
+
+```{r operE2, echo=TRUE, eval=FALSE}
+data$Cipo == "Não" & data$QF == 1 & data$DAP >= 50
+#data[data$Cipo == "Não" & data$QF == 1 & data$DAP >= 50,]
+```
+
+--
+
+```{r ref.label="operE2", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+--
+`r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores estão selecionadas para **explorar** .red[e] **QF igual a 1**❓
+
+--
+```{r operE3, echo=TRUE, eval=FALSE}
+data$Selecao == "Explorar" & data$QF == 1
+#data[data$Selecao == "Explorar" & data$QF == 1, ]
+```
+
+--
+```{r ref.label="operE3", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+---
+
+## Funções matemáticas usuais
+<br><br>
+
+A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
+<br><br>
+
+
+| Função                 | Descrição                        |
+|------------------------|----------------------------------|
+| sqrt()                 | Raiz quadrada                    |
+| abs()                  | Valor absoluto                   |
+| sin(); cos(); tan()    | Funções trigonométricas          |
+| asin(); acos(); atan() | Funções trigonométricas inversas |
+| exp()                  | Exponencial                      |
+| log10()                | Logarítmo na base 10             |
+| log()                  | Logarítmo natural                |
+| factorial              | Fatorial                         |
+
+---
+
+## Alguns comandos básicos
+<br>
+
+| **Comando**                             | **Ação**                                      |
+| :-------------------------------------: | :-------------------------------------------: |
+| q()                                     | Fechar o programa                             |
+| rm(nome do objeto)                      | Remover um objeto qualquer                    |
+| ls()                                    | Listar os objetos na janela de trabalho atual |
+| help(nome da função) ou ?nome da função | Solicitar ajuda sobre o uso de uma função     |
+| save.image()                            | Salvar                                        |
+| Ctrl + L                                | Limpar a tela do R console                    |
+| history(max.show, nrow = 3)             | Listar os últimos 3 comandos executados       |
+| getwd()                                 | Mostrar o diretório de trabalho               |
+| setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
+| install.packages("nome do pacote")      | Instalar um pacote específico                 |
+
+---
+
+## Alguns comandos básicos (cont.)
+<br>
+
+| **Comando**               | **Ação**                                       |
+| :-----------------------: | :--------------------------------------------: |
+| library("nome do pacote") | Carregar um pacote específico                  |
+| dir()                     | Lista os arquivos existentes no diretório      |
+| getOption("OutDec")       | Verificar o separador decimal definido         |
+| options("OutDec=")        | Mudar o separador decimal para vírgula         |
+| round(5.9845, digits=2)  | Função para arredondamento de casas decimais   |
+| data()                    | Lista de conjuntos de dados disponíveis no R             |
+| ?nomedodataset            | Obter informações detalhadas sobre um conjunto de dado |
+| class(nome do objeto)     | Verifica a classe de um objeto específico      |
+| search()                  | Lista todos os pacotes carregados              |
+
+---
+
+
+
 
 
 ---

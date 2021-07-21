@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b38760e524d740ddbf94ca1bdbfd194e","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xef630bc5aa541399ec04a81cbcd19f6","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -129,7 +129,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Conhecendo o R e Rstudio**
+**Parte 1 - Conhecendo o R e o IDE Rstudio**
 
 [1- A linguagem R](#R)
 
@@ -143,7 +143,26 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .pull-down[
-**Parte 2 - Iniciando na linguagem R**
+**Parte 2 - Estrutura de dados na linguagem R**
+
+[1 - Vetores](#vet)
+
+[2 - Matrizes](#mat)
+
+[3 - Data Frames](#df)
+
+[4 - Listas](#list)
+
+]
+]
+
+---
+
+## Conteúdo
+
+
+.pull-left-4[
+**Parte 3 - Iniciando na linguagem R**
 
 [1 - Sintaxe da linguagem R](#Sintaxe)
 
@@ -156,8 +175,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.3 - Lógicos](#log)
 
 [3 - Funções matemáticas usuais](#FunsMat)
+
 ]
-]
+
 
 ---
 
@@ -167,7 +187,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 1 &lt;br&gt; Conhecendo o R e Rstudio**]
+.font200[**Parte 1 &lt;br&gt; .red[Conhecendo o R e &lt;br&gt; o IDE Rstudio]**]
 
 ---
 layout: true
@@ -241,8 +261,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-31eabc2d1f31ddc4151d" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-31eabc2d1f31ddc4151d">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-f35e2ba3d8f87795592c" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f35e2ba3d8f87795592c">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -356,7 +376,27 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 2 &lt;br&gt; Iniciando na linguagem R**]
+.font200[**Parte 2 &lt;br&gt; .red[Estrutura de dados &lt;br&gt; na linguagem R]**]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R&lt;/div&gt;
+
+---
+
+## Vetores
+
+
+
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/inv1.jpg)
+background-size: cover
+
+.font200[**Parte 3 &lt;br&gt; Iniciando na linguagem R**]
 
 ---
 layout: true
@@ -759,10 +799,144 @@ especie %in% ameacadas
 ]
 
 .pull-right-5[
-<div id="htmlwidget-ec82bdc04983f6d69c7a" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-ec82bdc04983f6d69c7a">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-828937062c24fa31ee17" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-828937062c24fa31ee17">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
+
+---
+
+## Operadores lógicos
+&lt;br&gt;
+
+### Operador `&amp;` - versão vetorizada
+
+Use o operador lógico `&amp;` para responder as questões a seguir:
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores possuem **DAP maior ou igual a 50cm** .red[e] **Qualidade de Fuste (QF) igual a 1**❓
+
+--
+
+
+```r
+data$DAP &gt;= 50 &amp; data$QF == 1
+#data[data$DAP &gt;= 50 &amp; data$QF == 1, ]
+```
+
+--
+
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
+```
+
+--
+&lt;br&gt;&lt;br&gt;
+🌳**Legislação florestal!**🌳
+
+.font80[
+A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/legiabre.cfm?codlegi=597) (Publicada no DOU nº 26, de 06/02/2009, pág. 100) estabelece em seu art. 6º um &lt;bdi style="font-weight:bold"&gt;Diâmetro Mínimo de Corte (DMC) de 50 cm&lt;/bdi&gt; para todas as espécies, para as quais ainda não se estabeleceu o DMC específico.
+]
+
+---
+
+## Operadores lógicos
+&lt;br&gt;
+
+### Operador `&amp;` - versão vetorizada (cont.)
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
+
+--
+
+
+```r
+data$Cipo == "Não" &amp; data$QF == 1 &amp; data$DAP &gt;= 50
+#data[data$Cipo == "Não" &amp; data$QF == 1 &amp; data$DAP &gt;= 50,]
+```
+
+--
+
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
+```
+
+--
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores estão selecionadas para **explorar** .red[e] **QF igual a 1**❓
+
+--
+
+```r
+data$Selecao == "Explorar" &amp; data$QF == 1
+#data[data$Selecao == "Explorar" &amp; data$QF == 1, ]
+```
+
+--
+
+```
+##  [1] FALSE FALSE FALSE  TRUE FALSE FALSE FALSE FALSE FALSE FALSE
+```
+
+---
+
+## Funções matemáticas usuais
+&lt;br&gt;&lt;br&gt;
+
+A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
+&lt;br&gt;&lt;br&gt;
+
+
+| Função                 | Descrição                        |
+|------------------------|----------------------------------|
+| sqrt()                 | Raiz quadrada                    |
+| abs()                  | Valor absoluto                   |
+| sin(); cos(); tan()    | Funções trigonométricas          |
+| asin(); acos(); atan() | Funções trigonométricas inversas |
+| exp()                  | Exponencial                      |
+| log10()                | Logarítmo na base 10             |
+| log()                  | Logarítmo natural                |
+| factorial              | Fatorial                         |
+
+---
+
+## Alguns comandos básicos
+&lt;br&gt;
+
+| **Comando**                             | **Ação**                                      |
+| :-------------------------------------: | :-------------------------------------------: |
+| q()                                     | Fechar o programa                             |
+| rm(nome do objeto)                      | Remover um objeto qualquer                    |
+| ls()                                    | Listar os objetos na janela de trabalho atual |
+| help(nome da função) ou ?nome da função | Solicitar ajuda sobre o uso de uma função     |
+| save.image()                            | Salvar                                        |
+| Ctrl + L                                | Limpar a tela do R console                    |
+| history(max.show, nrow = 3)             | Listar os últimos 3 comandos executados       |
+| getwd()                                 | Mostrar o diretório de trabalho               |
+| setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
+| install.packages("nome do pacote")      | Instalar um pacote específico                 |
+
+---
+
+## Alguns comandos básicos (cont.)
+&lt;br&gt;
+
+| **Comando**               | **Ação**                                       |
+| :-----------------------: | :--------------------------------------------: |
+| library("nome do pacote") | Carregar um pacote específico                  |
+| dir()                     | Lista os arquivos existentes no diretório      |
+| getOption("OutDec")       | Verificar o separador decimal definido         |
+| options("OutDec=")        | Mudar o separador decimal para vírgula         |
+| round(5.9845, digits=2)  | Função para arredondamento de casas decimais   |
+| data()                    | Lista de conjuntos de dados disponíveis no R             |
+| ?nomedodataset            | Obter informações detalhadas sobre um conjunto de dado |
+| class(nome do objeto)     | Verifica a classe de um objeto específico      |
+| search()                  | Lista todos os pacotes carregados              |
+
+---
+
+
+
 
 
 ---
