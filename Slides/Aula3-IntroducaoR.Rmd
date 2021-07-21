@@ -423,7 +423,31 @@ layout: true
 
 ---
 
-## Vetores
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores
+
+.pull-left-4[
+- É a forma mais simples de armazenar dados no R;
+- São caracterizados por possuírem somente uma dimensão;
+- Todos os seus elementos constituintes devem ter, obrigatoriamente, a mesma natureza (classe).
+]
+
+
+.pull-right-4[
+**Principais classes de vetores:**
+<br>
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class3/Clv.png")
+```
+]
+
+---
+
+
+
 
 
 
