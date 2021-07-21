@@ -582,7 +582,29 @@ class(Fito)
 ]
 ]
 
+---
 
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[seq()] (sequence)
+<br>
+
+.blockquote[
+.center[.blue[seq(]**from** = ?, **to** = ?, **by** = ?, **length.out** = ?, **along.with** = ?.blue[)]]
+<br>
+
+**from** = define um valor inicial (start) para a sequência.
+
+**to** = define um valor máximo para a sequência.
+
+**by** = define um valor incremental para a sequência.
+
+**length.out** = define o comprimento da sequência dentro de um intervalo.
+
+**along.with** = define uma sequência de inteiros do tamanho do argumento repassado.
+
+]
 
 ---
 layout: false
