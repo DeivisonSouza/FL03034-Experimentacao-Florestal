@@ -699,6 +699,50 @@ seq(along.with = especie)
 ]
 
 ---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[rep()] (replicate)
+
+.pull-top[
+.pull-left-4[
+.font90[
+```{r rep1, echo=T, eval=F}
+# Repete a sequência de 1 a 4 (2x).
+rep(x = 1:4, 2)
+
+# Repete a sequência de 1 a 4 (3x).
+rep(x = 1:4, times = 3)
+
+# Repete cada valor em "x" (2x).
+rep(x = 1:4, each = 2)
+
+# Repete cada valor em "x" (2x).
+rep(x = 1:4, c(2,2,2,2))
+
+# Repete cada valor em "x", com base em c().
+rep(1:4, c(2,1,2,1))
+
+# Repete cada valor em "x", até 4 números.
+rep(1:4, each = 2, len = 4)
+
+# Repete cada valor em "x" (2x), por 3x.
+rep(1:2, each = 2, times = 3)
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="rep1", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
+]
+
+
+
+
+---
 layout: false
 name: conc
 class: inverse, top, right
