@@ -509,7 +509,6 @@ c(23.0, 27.0, 33.6, 42.6, 52.1)
 diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 #class(diametro)
 ```
-
 ]
 ]
 
@@ -531,20 +530,18 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 ]
 
 .pull-right-10[
-
 ```{r, echo=T, eval=T}
 # Cria um vetor - Fitofisionomia
-(GE <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA"))
-class(GE)
+(Fito <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA"))
+class(Fito)
 ```
 
 ```{r, echo=T, eval=T}
 # Codifica para "factor"
-GE <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA")
-(GE <- factor(GE))
-class(GE)
+Fito <- c("FOM", "FOA", "FOM", "FOM", "FOM", "FOA")
+(Fito <- factor(Fito))
+class(Fito)
 ```
-
 ]
 
 ---
@@ -561,7 +558,28 @@ class(GE)
 - Em algumas situações, pode ser desejável estabelecer uma hierarquia entre esses níveis.
 - Por exemplo, imagine a variável mês de coleta. É evidente que existe hierarquia entre os meses.
 ]
+]
 
+.pull-right-10[
+.font90[
+**Níveis do mês não ordenados**
+```{r}
+(mes <- factor(
+  c("Janeiro", "Abril", "Julho", "Outubro")
+  ))
+```
+
+**Níveis do mês ordenados**
+
+```{r size=3}
+(mes <- 
+   factor(x = mes,
+          levels = c("Janeiro", "Abril", 
+                     "Julho", "Outubro"),
+               ordered = TRUE))
+```
+
+]
 ]
 
 
