@@ -436,18 +436,52 @@ layout: true
 
 
 .pull-right-4[
-**Principais classes de vetores:**
+.center[**Principais classes de vetores**]
 <br>
 
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("fig/class3/Clv.png")
 ```
 ]
 
 ---
 
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Principais funções para criar vetores...
+<br>
+
+.pull-left-4[
+**1. Função .blue[c()] (concatenate)**
+
+Função genérica que permite concatenar (combinar) argumentos para formar um vetor.
+<br><br>
+
+**2. Função .blue[seq()] (sequence)**
+
+Função genérica usada para gerar sequências de números em intervalos pré-definidos.
+]
 
 
+.pull-right-4[
+**3. Função .blue[rep()] (replicate)**
+
+Função genérica usada para replicar um elemento “x”.
+<br><br>
+
+**4. Função .blue[scan()]**
+
+Usada para criar vetores diretamente no R Console.
+]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[c()] (concatenate)
+<br>
 
 
 

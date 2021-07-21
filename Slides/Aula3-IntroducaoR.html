@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xdc75684395d461290415c31cc07768c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7452baaf4884d6fa788d01dee4f141c","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -261,8 +261,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-508a009253c248f92ee0" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-508a009253c248f92ee0">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-2465e2430d53ad53296d" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2465e2430d53ad53296d">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -398,16 +398,50 @@ layout: true
 
 
 .pull-right-4[
-**Principais classes de vetores:**
+.center[**Principais classes de vetores**]
 &lt;br&gt;
 
-&lt;img src="fig/class3/Clv.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class3/Clv.png" width="75%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
 
+## Estrutura de dados na linguagem R
+&lt;br&gt;
+
+### Vetores - Principais funções para criar vetores...
+&lt;br&gt;
+
+.pull-left-4[
+**1. Função .blue[c()] (concatenate)**
+
+Função genérica que permite concatenar (combinar) argumentos para formar um vetor.
+&lt;br&gt;&lt;br&gt;
+
+**2. Função .blue[seq()] (sequence)**
+
+Função genérica usada para gerar sequências de números em intervalos pré-definidos.
+]
 
 
+.pull-right-4[
+**3. Função .blue[rep()] (replicate)**
+
+Função genérica usada para replicar um elemento “x”.
+&lt;br&gt;&lt;br&gt;
+
+**4. Função .blue[scan()]**
+
+Usada para criar vetores diretamente no R Console.
+]
+
+---
+
+## Estrutura de dados na linguagem R
+&lt;br&gt;
+
+### Vetores - Função .blue[c()] (concatenate)
+&lt;br&gt;
 
 
 
@@ -821,8 +855,8 @@ especie %in% ameacadas
 ]
 
 .pull-right-5[
-<div id="htmlwidget-baf6b81d9434c2e55ba5" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-baf6b81d9434c2e55ba5">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-3500fc97d7569b824eda" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3500fc97d7569b824eda">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
