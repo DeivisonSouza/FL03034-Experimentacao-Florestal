@@ -424,6 +424,18 @@ layout: true
 ---
 
 ## Estrutura de dados na linguagem R
+
+- O R pode armazenar dados em diferentes estruturas.
+
+.pull-left-4[
+```{r echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class3/EstrDados.png")
+```
+]
+
+---
+
+## Estrutura de dados na linguagem R
 <br>
 
 ### Vetores
