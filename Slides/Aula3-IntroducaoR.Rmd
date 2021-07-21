@@ -706,6 +706,7 @@ ameacadas <-
     "Cedrela-odorata", "Swietenia-macrophylla")
 
 especie %in% ameacadas
+#unique(especie[which(especie %in% ameacadas)])
 ```
 ]
 
@@ -721,6 +722,55 @@ especie %in% ameacadas
 .pull-down[
 ```{r ref.label="IN2", echo=FALSE, eval=TRUE, collapse=T}
 ```
+]
+
+---
+
+## Operadores lógicos
+
+.pull-left-5[
+.font90[
+- Em programação, estes operadores são usados para realizar **operações lógicas**, cuja saída é uma **resposta booleana**.
+- Uma resposta booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
+<br><br>
+
+**Mogno brasileiro** = *Swietenia macrophylla*
+
+**Angelim pedra** = *Hymenolobium petraeum*
+]
+]
+
+.pull-right-5[
+```{r , echo=FALSE, eval=TRUE}
+
+data <- data.frame(
+  Especie = c("Swietenia macrophylla", "Swietenia macrophylla", "Swietenia macrophylla", "Hymenolobium petraeum","Hymenolobium petraeum", "Hymenolobium petraeum", "Hymenolobium petraeum","Hymenolobium petraeum", "Swietenia macrophylla", "Swietenia macrophylla"),
+              DAP = c(33.6, 42.6, 52.1, 80.3, 90.8,
+                      49.4, 70.5, 100.5, 60.7, 27.1),
+              H = c(9.1, 13.2, 15.4, 18.6, 19.5,
+                    16.8, 17.9, 22.4, 15.3, 8.7),
+              Cipo = c("Sim", "Não", "Sim", "Não", "Sim",
+                         "Não", "Sim", "Não", "Sim", "Sim"),
+              QF = c(2, 1, 3, 1, 2, 1, 2, 3, 1, 3),
+              Selecao = c("Protegida", "Protegida", "Protegida", "Explorar", "Explorar",
+                          "Remanescente", "Explorar", "Remanescente","Protegida", "Protegida"),
+  stringsAsFactors = T)
+
+data %>% 
+   DT::datatable(editable = 'cell', 
+                 rownames = FALSE, style = "default",
+                 class = "display", width = '800px',
+                 caption = 'Dados fictícios para 10 árvores de duas espécies florestais.',
+     options=list(pageLength = 10, dom = 'tip',
+                  autoWidth = T,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+
 ]
 
 
