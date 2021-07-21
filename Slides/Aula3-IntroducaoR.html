@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x3111b7b6823448db38806998a78001e","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a3a7bff446034008b27d0bb96fc40d6f","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -102,7 +102,7 @@ top:.8em;right:-.5em;
 #### Faculdade de Engenharia Florestal
 #### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 20/julho/2021
+##### 21/julho/2021
 ##### Altamira, Pará
 
 ---
@@ -241,8 +241,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-2950bbbb3034e76afbd2" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-2950bbbb3034e76afbd2">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-70117470c01c068363dd" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-70117470c01c068363dd">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -664,7 +664,11 @@ w %in% v     # w contém v?
 
 ### Um pouco mais sobre o operador **%in%**
 
+.font90[
+É um operador binário que retorna um vetor booleano (TRUE ou FALSE) de tamanho sempre igual ao vetor esquerdo.
+
 Considere um vetor de nomes de espécies florestais...
+]
 
 .pull-left-9[
 
@@ -722,7 +726,12 @@ especie %in% ameacadas
 ]
 
 .pull-right-9[
-- O vetor "especie" contém elementos presentes no vetor "ameacadas"?
+**A pergunta feita é:**
+
+.font90[
+- As espécies do vetor "ameacadas" estão contidas no vetor "especie"?
+- O comando .green[**%in%**] avalia cada elemento do vetor "especie" e retorna uma resposta booleana (TRUE ou FALSE) de comprimento igual ao vetor esquerdo ("especie").
+]
 ]
 
 .pull-down[

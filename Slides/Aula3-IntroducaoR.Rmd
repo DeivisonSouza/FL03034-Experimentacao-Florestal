@@ -651,7 +651,11 @@ w %in% v     # w contém v?
 
 ### Um pouco mais sobre o operador **%in%**
 
+.font90[
+É um operador binário que retorna um vetor booleano (TRUE ou FALSE) de tamanho sempre igual ao vetor esquerdo.
+
 Considere um vetor de nomes de espécies florestais...
+]
 
 .pull-left-9[
 ```{r IN, echo=TRUE, eval=FALSE}
@@ -706,7 +710,12 @@ especie %in% ameacadas
 ]
 
 .pull-right-9[
-- O vetor "especie" contém elementos presentes no vetor "ameacadas"?
+**A pergunta feita é:**
+
+.font90[
+- As espécies do vetor "ameacadas" estão contidas no vetor "especie"?
+- O comando .green[**%in%**] avalia cada elemento do vetor "especie" e retorna uma resposta booleana (TRUE ou FALSE) de comprimento igual ao vetor esquerdo ("especie").
+]
 ]
 
 .pull-down[
