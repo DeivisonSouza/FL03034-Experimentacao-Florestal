@@ -427,11 +427,32 @@ layout: true
 
 - O R pode armazenar dados em diferentes estruturas.
 
-.pull-left-4[
-```{r echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("fig/class3/EstrDados.png")
 ```
-]
+
+
+<!-- .pull-right-4[ -->
+<!-- .font90[ -->
+<!-- **Vetores - Características**  -->
+
+<!-- a) Sequência de elementos; b) possui uma dimensão; c) admitem apenas elementos da mesma natureza. -->
+
+<!-- **Matrizes - Características**  -->
+
+<!-- a) Admite duas dimensões (linhas e colunas); b) formada por elementos de uma única classe. -->
+
+<!-- **Data Frames - Características**  -->
+
+<!-- a) Admite duas dimensões (linhas e colunas); b) Pode reunir vetores de diferentes classes, com a condição de possuírem igual -->
+<!-- comprimento. -->
+
+<!-- **Lista - Características** -->
+
+<!-- a) Admite diferentes estruturas de dados (vetores, matrizes, data frames e inclusive outras listas). -->
+
+<!-- ] -->
+<!-- ] -->
 
 ---
 
