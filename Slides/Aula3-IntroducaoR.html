@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xe6cd31680554b35b39a0d9eeb18e049","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8447524adba45fb8922084245615514","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -261,8 +261,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-7580e4bdf9e5f59945d4" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7580e4bdf9e5f59945d4">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-8657ad63aabdd1a0712f" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8657ad63aabdd1a0712f">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -602,6 +602,7 @@ class(Fito)
 .center[.blue[seq(]**from** = ?, **to** = ?, **by** = ?, **length.out** = ?, **along.with** = ?.blue[)]]
 &lt;br&gt;
 
+.font90[
 **from** = define um valor inicial (start) para a sequência.
 
 **to** = define um valor máximo para a sequência.
@@ -611,7 +612,52 @@ class(Fito)
 **length.out** = define o comprimento da sequência dentro de um intervalo.
 
 **along.with** = define uma sequência de inteiros do tamanho do argumento repassado.
+]
+]
 
+---
+
+## Estrutura de dados na linguagem R
+&lt;br&gt;
+
+### Vetores - Função .blue[seq()] (sequence)
+
+.pull-top[
+.pull-left-4[
+
+```r
+# 1 a 10, com intervalo 1.
+seq(10)
+
+# Sequência de 1 a 10, com intervalo 1.
+seq(1:10)
+
+# Sequência de 1 a 10, com intervalo 1.
+seq(from = 1, to = 10, by = 1)
+
+# Sequência de -2 a 10, com intervalo 2.
+seq(from = -2, to = 10, by = 2)
+
+# Sequência de 11 números entre 0 e 1.
+seq(from=0, to=1, length.out = 5)
+
+# Sequência do tamanho do vetor-espécie.
+especie &lt;- c("Acapu", "Mogno", "Cedro", "Ipe")
+seq(along.with = especie)
+```
+]
+
+.pull-right-4[
+
+```
+##  [1]  1  2  3  4  5  6  7  8  9 10
+##  [1]  1  2  3  4  5  6  7  8  9 10
+##  [1]  1  2  3  4  5  6  7  8  9 10
+## [1] -2  0  2  4  6  8 10
+## [1] 0.00 0.25 0.50 0.75 1.00
+## [1] 1 2 3 4
+```
+]
 ]
 
 ---
@@ -1024,8 +1070,8 @@ especie %in% ameacadas
 ]
 
 .pull-right-5[
-<div id="htmlwidget-9a69325a21af287a58e3" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9a69325a21af287a58e3">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-b70629de9f1456916b7d" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b70629de9f1456916b7d">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 

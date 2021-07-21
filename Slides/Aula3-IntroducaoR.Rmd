@@ -627,6 +627,7 @@ class(Fito)
 .center[.blue[seq(]**from** = ?, **to** = ?, **by** = ?, **length.out** = ?, **along.with** = ?.blue[)]]
 <br>
 
+.font90[
 **from** = define um valor inicial (start) para a sequência.
 
 **to** = define um valor máximo para a sequência.
@@ -636,7 +637,44 @@ class(Fito)
 **length.out** = define o comprimento da sequência dentro de um intervalo.
 
 **along.with** = define uma sequência de inteiros do tamanho do argumento repassado.
+]
+]
 
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Vetores - Função .blue[seq()] (sequence)
+
+.pull-top[
+.pull-left-4[
+```{r seq1, echo=T, eval=F}
+# 1 a 10, com intervalo 1.
+seq(10)
+
+# Sequência de 1 a 10, com intervalo 1.
+seq(1:10)
+
+# Sequência de 1 a 10, com intervalo 1.
+seq(from = 1, to = 10, by = 1)
+
+# Sequência de -2 a 10, com intervalo 2.
+seq(from = -2, to = 10, by = 2)
+
+# Sequência de 11 números entre 0 e 1.
+seq(from=0, to=1, length.out = 5)
+
+# Sequência do tamanho do vetor-espécie.
+especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+seq(along.with = especie)
+```
+]
+
+.pull-right-4[
+```{r ref.label="seq1", echo=FALSE, eval=TRUE, collapse=TRUE}
+```
+]
 ]
 
 ---
