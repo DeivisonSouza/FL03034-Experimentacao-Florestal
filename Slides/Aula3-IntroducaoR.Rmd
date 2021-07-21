@@ -739,8 +739,31 @@ rep(1:2, each = 2, times = 3)
 ]
 ]
 
+---
 
+## Estrutura de dados na linguagem R
+<br>
 
+### Vetores - Função .blue[scan()]
+<br>
+
+**Atividade**: Use a função .blue[scan()] para criar vetores para as variáveis da tabela a seguir diretamente no R console:
+<br>
+
+```{r echo=F, eval=T}
+data.frame(especie = c("Acapu", "Araucaria", 
+                       "Mogno", "Cedro", "Ipe"),
+           diametro = c(23.0, 27.0, 33.6, 42.6, 52.1),
+           altura = c(8.5, 9.2, 10.5, 13.4, 15.8))
+```
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Matrizes
+<br>
 
 ---
 layout: false
