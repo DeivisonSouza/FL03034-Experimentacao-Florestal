@@ -1117,10 +1117,61 @@ layout: true
 ## Indexação no R
 <br>
 
+- Quando o interesse é **extrair**, **excluir** ou **substituir** elementos de objetos é possível fazê-lo por meio de algum mecanismo de indexação.
+- Operadores de indexação: .red[[ ]], .red[[[ ]]] e .red[$].
+- O operador .red[$]: permite extrair componentes nomeados de uma lista ou data frame.
+
+
+---
+
+## Indexação no R
+<br>
+
 ### Indexação de vetores
 
+.font90[
+- Para extrair, excluir ou substituir elementos no objeto-vetor usa-se o comando [ $i$ ].
+- O índice $i$ indica a posição do elemento no objeto, e inicia no valor 1.
+- A função .blue[c()] pode ser usada para concatenar as posições dentro de colchetes.
+]
 
+---
 
+## Indexação no R
+<br>
+
+### Indexação de vetores - Extração
+
+.pull-left-4[
+.font90[
+**Extração de elementos do vetor**
+```{r Vext, echo=T, eval=F}
+# cria os vetores
+especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+diametro <- c(23.0, 27.0, 33.6, 42.6)
+
+# Um elemento.
+especie[2]
+
+# Múltiplos elementos (sequenciais).
+diametro[1:3]
+
+# Múltiplos elementos (alternados).
+especie[c(1,3,4)]
+
+# Múltiplos elementos usando seq().
+diametro[seq(from = 1, to = 4, by = 1)]
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="Vext", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
 
 
 ---
