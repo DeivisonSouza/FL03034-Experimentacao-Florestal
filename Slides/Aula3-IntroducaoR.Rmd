@@ -1239,6 +1239,42 @@ Diametro[Diametro >= 50]
 ```
 ]
 
+---
+
+## Indexação no R
+<br>
+
+### Indexação de vetores - Substituição
+
+.pull-left-4[
+.font90[
+**Extração por indexação lógica**
+```{r Vsub, echo=T, eval=F}
+Especie <- c("Mogno", "Cedro", "Ipe", NA, NA)
+Diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+
+# Substitui os NAs
+Especie[is.na(Especie)] <- "NI"
+print(Especie)
+
+# Altera posição 3, e atribui 33.5.
+Diametro[3] <- 33.5; print(Diametro)
+
+# Altera posições 4 e 5, e atribui 55.3 e 63.4
+Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="Vsub", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+
+
 
 ---
 layout: false
