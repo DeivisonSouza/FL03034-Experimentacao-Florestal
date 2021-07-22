@@ -792,8 +792,6 @@ data.frame(especie = c("Acapu", "Araucaria",
 **dimnames** = Insere os rótulos das linhas e colunas da matriz com a função .green[list()].
 ]
 ]
-
-
 ]
 
 
