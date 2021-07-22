@@ -762,7 +762,7 @@ data.frame(especie = c("Acapu", "Araucaria",
 ## Estrutura de dados na linguagem R
 <br>
 
-### Matrizes
+### Matrizes - Propriedades
 
 .pull-left-4[
 .font90[
@@ -794,7 +794,7 @@ data.frame(especie = c("Acapu", "Araucaria",
 ]
 ]
 
-
+---
 
 
 ---
