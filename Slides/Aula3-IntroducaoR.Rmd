@@ -1288,11 +1288,47 @@ Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
 - Se o argumento for do tipo [ , $j$ ] ter-se-á acesso a todos os elementos da coluna $j$ especificada.
 - Se nem o número da linha e nem o número da coluna é informado [ , ]: a matriz é acessada por completa.
 
+---
+
+## Indexação no R
+<br>
+
+### Indexação de matrizes - Extração
+
+.pull-left-4[
+.font90[
+**Extração por indexação positiva**
+```{r Mext, echo=T, eval=F}
+# Cria uma matriz
+(mat <- 
+  matrix(1:6, nrow=2, ncol=3, byrow = TRUE,
+         dimnames = list(c("L1", "L2"),
+                         c("C1", "C2", "C3"))))
 
 
+# extrai o elemento da linha 2 e coluna 2.
+mat[2, 2]
 
+# extrai todos elementos da linha 2.
+mat[2, ]
 
+# extrai todos elementos da coluna 3.
+mat[, 3]
 
+# extrai os elementos de L1 e L2, C2 e C3.
+mat[c(1, 2), c(2, 3)]
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font90[
+```{r ref.label="Mext", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
 
 ---
 layout: false
