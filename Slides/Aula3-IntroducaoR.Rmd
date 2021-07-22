@@ -760,7 +760,7 @@ rep(1:2, each = 2, times = 3)
 
 .pull-right-4[
 .font90[
-**Atividade**
+**Atividade para** `r anicon::faa("home", animate="horizontal")`
 
 Use a função .blue[scan()] para criar vetores para as variáveis da tabela a seguir diretamente no R console:
 <br>
@@ -907,10 +907,30 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 -  Pode-se reunir vetores de diferentes classes, com a condição de possuírem igual comprimento.
 - O R-base possui a função .green[data.frame()].
 - A edição de um data.frame pode ser feita usando a função .green[edit()].
-- Em geral, dados importados (.csv .txt) são armazenados como data.frame.
+- Em geral, dados importados (.csv e .txt) são armazenados como data.frame.
+]
+]
+
+.pull-right-4[
+**Atividade para** `r anicon::faa("home", animate="horizontal")`
+
+Use o comando x <- edit(data.frame()) e crie a tabela a seguir:
+
+```{r echo=F, eval=T}
+data.frame(especie = c("Acapu", "Araucaria", 
+                       "Mogno", "Cedro", "Ipe"),
+           diametro = c(23.0, 27.0, 33.6, 42.6, 52.1),
+           altura = c(8.5, 9.2, 10.5, 13.4, 15.8))
+```
 
 ]
-]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+
 
 
 
