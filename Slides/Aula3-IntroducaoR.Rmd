@@ -1209,6 +1209,38 @@ especie[-c(1,3,5)]
 ]
 
 ---
+
+## Indexação no R
+<br>
+
+### Indexação de vetores - Extração
+
+.pull-left-4[
+.font90[
+**Extração por indexação lógica**
+```{r VextL, echo=T, eval=F}
+Especie <- c("Mogno", "Cedro", "Ipe", "Tauari")
+Diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
+
+# Extrai árvores que não sejam Tauari
+Especie[Especie != "Tauari"]
+
+# Diâmetros >= 50cm.
+Diametro[Diametro >= 50]
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="VextL", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+
+
+---
 layout: false
 name: conc
 class: inverse, top, right
