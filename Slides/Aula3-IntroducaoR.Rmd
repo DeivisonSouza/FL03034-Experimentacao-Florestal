@@ -1011,11 +1011,90 @@ altura <- c(8.4, 8.7, 9.1, 18.2)
                DAP = diametro, 
                H = altura))
 ```
+**Nomear os componentes da lista facilita a identificação e a indexação.**
+
 ]
 
 --
+
 .pull-right-4[
 ```{r ref.label="list1", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Listas - .black[Função list()]
+
+.pull-left-4[
+.font90[
+**Uma lista com diferentes estruturas de dados**
+```{r list3, echo=T, eval=F}
+diametro <- c(23.0, 27.0, 33.6, 52.6)
+
+mat <- 
+   matrix(data=1:6, nrow=2, 
+          ncol=3, byrow=TRUE,
+          dimnames=list(c("L1", "L2"),
+                        c("C1", "C2", "C3")))
+
+invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Ipe"),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE)
+
+# Criando lista nomeada
+(list3 <- list(Vetor = diametro, 
+               Matriz = mat,
+               DataFrame = invFlor))
+
+```
+]
+]
+
+--
+
+.pull-right-4[
+```{r ref.label="list3", echo=FALSE, eval=TRUE, collapse=F}
+```
+**Explore as funções length() e names()**.
+
+]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Listas - .black[Coagindo lista para data frame]
+
+.pull-left-4[
+.font90[
+- Uma lista pode ser transformada em um data frame usando
+a função .green[as.data.frame()]. 
+- Mas, para isso a lista a ser transformada deve possuir vetores de igual comprimento.
+]
+]
+
+--
+
+.pull-right-4[
+**Lista para Data Frame**
+```{r listDF, echo=T, eval=F}
+# Criando lista nomeada
+list4 <- list(
+  Esp = c("Acapu", "Mogno", "Cedro", "Ipe"),
+  DAP = c(23.0, 27.0, 33.6, 52.6), 
+  H = c(8.4, 8.7, 9.1, 18.2))
+
+as.data.frame(list4)
+```
+
+```{r ref.label="listDF", echo=FALSE, eval=TRUE, collapse=F}
 ```
 ]
 
