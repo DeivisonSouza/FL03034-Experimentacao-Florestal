@@ -1404,7 +1404,10 @@ mat[c(1,5)] <- c(0,0); print(mat)
 
 ---
 
+## Indexação no R
+<br>
 
+### Indexação de data frames
 
 
 ---
