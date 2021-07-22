@@ -160,7 +160,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 
 .pull-left-4[
-**Parte 3 - Iniciando na linguagem R**
+**Parte 3 - Indexação no R**
+
+[1 - Indexação de vetores](#IndV)
+
+[2 - Indexação de matrizes](#IndM)
+
+[3 - Indexação de data frames](#IndDF)
+
+[4 - Indexação de listas](#IndL)
+]
+
+
+.pull-right-4[
+.pull-down[
+**Parte 4 - Iniciando na linguagem R**
 
 [1 - Sintaxe da linguagem R](#Sintaxe)
 
@@ -175,6 +189,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [3 - Funções matemáticas usuais](#FunsMat)
 
 ]
+]
+
+
 
 
 ---
