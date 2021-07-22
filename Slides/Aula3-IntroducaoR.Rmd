@@ -513,7 +513,7 @@ Usada para criar vetores diretamente no R Console.
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[c()] (concatenate)
+### Vetores - .black[Função c() (concatenate)]
 
 .pull-top[
 .pull-left-4[
@@ -550,7 +550,7 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[c()] (concatenate)
+### Vetores - .black[Função c() (concatenate)]
 
 .pull-left-10[
 **Classe "factor"**
@@ -582,7 +582,7 @@ class(Fito)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[c()] (concatenate)
+### Vetores - .black[Função c() (concatenate)]
 
 .pull-left-10[
 **Classe "factor" - declarando hierarquia**
@@ -620,7 +620,7 @@ class(Fito)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[seq()] (sequence)
+### Vetores - .black[Função seq() (sequence)]
 <br>
 
 .blockquote[
@@ -645,7 +645,7 @@ class(Fito)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[seq()] (sequence)
+### Vetores - .black[Função seq() (sequence)]
 
 .pull-top[
 .pull-left-4[
@@ -682,7 +682,7 @@ seq(along.with = especie)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[rep()] (replicate)
+### Vetores - .black[Função rep() (replicate)]
 <br>
 
 .blockquote[
@@ -703,7 +703,7 @@ seq(along.with = especie)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[rep()] (replicate)
+### Vetores - .black[Função rep() (replicate)]
 
 .pull-top[
 .pull-left-4[
@@ -744,7 +744,7 @@ rep(1:2, each = 2, times = 3)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Função .blue[scan()]
+### Vetores - .black[Função scan()]
 
 .pull-left-4[
 .font90[
@@ -783,7 +783,7 @@ y <- scan(what = character())
 ## Estrutura de dados na linguagem R
 <br>
 
-### Matrizes - Propriedades
+### Matrizes - .black[Propriedades]
 
 .pull-left-4[
 .font90[
@@ -820,7 +820,7 @@ y <- scan(what = character())
 ## Estrutura de dados na linguagem R
 <br>
 
-### Matrizes - Função .blue[matrix()]
+### Matrizes - .black[Função matrix()]
 
 .pull-top[
 .pull-left-4[
@@ -858,7 +858,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Matrizes - Função .blue[matrix()]
+### Matrizes - .black[Função matrix()]
 
 - Outra forma de atribuir nomes às linhas e colunas é usar o parâmetro **dimnames** da própria função .blue[matrix()].
 
@@ -884,7 +884,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Matrizes - Situações especiais
+### Matrizes - .black[Situações especiais]
 <br>
 
 - Ao criar-se matrizes atentar-se para duas situações:
@@ -899,7 +899,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 ## Estrutura de dados na linguagem R
 <br>
 
-### Data Frames - Propriedades
+### Data Frames - .black[Propriedades]
 
 .pull-left-4[
 .font90[
@@ -910,6 +910,8 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 - Em geral, dados importados (.csv e .txt) são armazenados como data.frame.
 ]
 ]
+
+--
 
 .pull-right-4[
 **Atividade para** `r anicon::faa("home", animate="horizontal")`
@@ -951,6 +953,8 @@ cortar <- c("Não", "Não", "Não", "Sim")
 ]
 ]
 
+--
+
 .pull-right-4[
 .font90[
 **Cria um data frame com apenas um comando**
@@ -966,10 +970,56 @@ cortar <- c("Não", "Não", "Não", "Sim")
 
 ```{r ref.label="df2", echo=FALSE, eval=TRUE, collapse=F}
 ```
+**Explore as funções dim() e str().**
 ]
 ]
 
+---
 
+## Estrutura de dados na linguagem R
+<br>
+
+### Listas - .black[Propriedades]
+
+
+.font90[
+- Pode reunir diferentes estruturas de dados (vetores, matrizes, data frames e inclusive outras listas).
+- O R-base possui a função .green[list()].
+- Se os objetos já existem pode-se simplesmente adicioná-los à
+função list().
+]
+
+---
+
+## Estrutura de dados na linguagem R
+<br>
+
+### Listas - .black[Função list()]
+
+.pull-left-4[
+**Uma lista a partir de objetos já existentes**
+```{r list1, echo=T, eval=F}
+especie <- c("Acapu", "Mogno", "Cedro", "Ipe")
+diametro <- c(23.0, 27.0, 33.6, 52.6)
+altura <- c(8.4, 8.7, 9.1, 18.2)
+
+# Sem atribuir nomes aos objetos da lista
+(list1 <- list(especie, diametro, altura))
+
+# Atribuindo nomes aos objetos da lista
+(list2 <- list(Esp = especie, 
+               DAP = diametro, 
+               H = altura))
+```
+]
+
+--
+.pull-right-4[
+```{r ref.label="list1", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+
+---
 
 
 ---
@@ -979,7 +1029,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 3 <br> Iniciando na linguagem R**]
+.font200[**Parte 3 <br> .red[Iniciando na <br> linguagem R]**]
 
 ---
 layout: true
