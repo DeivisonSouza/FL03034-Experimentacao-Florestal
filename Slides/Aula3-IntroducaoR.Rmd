@@ -1099,6 +1099,28 @@ as.data.frame(list4)
 ]
 
 ---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/inv1.jpg)
+background-size: cover
+
+.font200[**Parte 3 <br> .red[Indexação no R]**]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
+
+---
+
+## Indexação no R
+<br>
+
+### Indexação de vetores
+
+
+
 
 
 ---
@@ -1108,7 +1130,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 3 <br> .red[Iniciando na <br> linguagem R]**]
+.font200[**Parte 4 <br> .red[Iniciando na <br> linguagem R]**]
 
 ---
 layout: true
