@@ -1275,6 +1275,24 @@ Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
 ]
 
 
+---
+
+## Indexação no R
+<br>
+
+### Indexação de matrizes
+
+- Para **extrair**, **excluir** ou **substituir** elementos de uma matriz usa-se o comando [ $i$, $j$ ]. 
+- O índice $i$ indica as linhas e o índice $j$ indica as colunas da matriz.
+- Se o argumento for do tipo [ $i$, ] ter-se-á acesso a todos os elementos da linha $i$ especificada.
+- Se o argumento for do tipo [ , $j$ ] ter-se-á acesso a todos os elementos da coluna $j$ especificada.
+- Se nem o número da linha e nem o número da coluna é informado [ , ]: a matriz é acessada por completa.
+
+
+
+
+
+
 
 ---
 layout: false
