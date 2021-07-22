@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a8058643991f487193d753f0e0421006","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e79d381de678498ea59ba816abe213b2","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -261,8 +261,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-c961a918384ee591851c" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-c961a918384ee591851c">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-d9a83cbd38d84995c574" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d9a83cbd38d84995c574">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -444,24 +444,24 @@ layout: true
 &lt;br&gt;
 
 .pull-left-4[
-**1. Função .blue[c()] (concatenate)**
+**1. Função .black[c() (concatenate)]**
 
 Função genérica que permite concatenar (combinar) argumentos para formar um vetor.
 &lt;br&gt;&lt;br&gt;
 
-**2. Função .blue[seq()] (sequence)**
+**2. Função .black[seq() (sequence)]**
 
 Função genérica usada para gerar sequências de números em intervalos pré-definidos.
 ]
 
 
 .pull-right-4[
-**3. Função .blue[rep()] (replicate)**
+**3. Função .black[rep() (replicate)]**
 
 Função genérica usada para replicar um elemento “x”.
 &lt;br&gt;&lt;br&gt;
 
-**4. Função .blue[scan()]**
+**4. Função .black[scan()]**
 
 Usada para criar vetores diretamente no R Console.
 ]
@@ -949,7 +949,58 @@ Use o comando x &lt;- edit(data.frame()) e crie a tabela a seguir:
 ## Estrutura de dados na linguagem R
 &lt;br&gt;
 
+### Data Frames - .black[Função data.frame()]
 
+.pull-left-4[
+.font90[
+**Cria um data frame a partir de vetores existentes**
+
+```r
+especie &lt;- c("Acapu", "Araucaria", "Cedro", "Tauari")
+diametro &lt;- c(23.0, 27.0, 33.6, 52.6)
+altura &lt;- c(8.4, 8.7, 9.1, 18.2)
+cortar &lt;- c("Não", "Não", "Não", "Sim")
+
+(invFlor1 &lt;- 
+  data.frame(especie, diametro, altura, cortar,
+             stringsAsFactors = TRUE))
+```
+
+
+```
+##     especie diametro altura cortar
+## 1     Acapu     23.0    8.4    Não
+## 2 Araucaria     27.0    8.7    Não
+## 3     Cedro     33.6    9.1    Não
+## 4    Tauari     52.6   18.2    Sim
+```
+]
+]
+
+.pull-right-4[
+.font90[
+**Cria um data frame com apenas um comando**
+
+```r
+(invFlor2 &lt;- 
+  data.frame(
+    especie=c("Acapu", "Araucaria", "Cedro", "Tauari"),
+    diametro=c(23.0, 27.0, 33.6, 52.6),
+    altura=c(8.4, 8.7, 9.1, 18.2),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+```
+
+
+```
+##     especie diametro altura cortar
+## 1     Acapu     23.0    8.4    Não
+## 2 Araucaria     27.0    8.7    Não
+## 3     Cedro     33.6    9.1    Não
+## 4    Tauari     52.6   18.2    Sim
+```
+]
+]
 
 
 
@@ -1364,8 +1415,8 @@ especie %in% ameacadas
 ]
 
 .pull-right-5[
-<div id="htmlwidget-b78336fe0d59f588a066" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b78336fe0d59f588a066">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-f889f15d205307dafdeb" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f889f15d205307dafdeb">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 

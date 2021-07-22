@@ -486,24 +486,24 @@ knitr::include_graphics("fig/class3/Clv.png")
 <br>
 
 .pull-left-4[
-**1. Função .blue[c()] (concatenate)**
+**1. Função .black[c() (concatenate)]**
 
 Função genérica que permite concatenar (combinar) argumentos para formar um vetor.
 <br><br>
 
-**2. Função .blue[seq()] (sequence)**
+**2. Função .black[seq() (sequence)]**
 
 Função genérica usada para gerar sequências de números em intervalos pré-definidos.
 ]
 
 
 .pull-right-4[
-**3. Função .blue[rep()] (replicate)**
+**3. Função .black[rep() (replicate)]**
 
 Função genérica usada para replicar um elemento “x”.
 <br><br>
 
-**4. Função .blue[scan()]**
+**4. Função .black[scan()]**
 
 Usada para criar vetores diretamente no R Console.
 ]
@@ -930,7 +930,44 @@ data.frame(especie = c("Acapu", "Araucaria",
 ## Estrutura de dados na linguagem R
 <br>
 
+### Data Frames - .black[Função data.frame()]
 
+.pull-left-4[
+.font90[
+**Cria um data frame a partir de vetores existentes**
+```{r df1, echo=T, eval=F}
+especie <- c("Acapu", "Araucaria", "Cedro", "Tauari")
+diametro <- c(23.0, 27.0, 33.6, 52.6)
+altura <- c(8.4, 8.7, 9.1, 18.2)
+cortar <- c("Não", "Não", "Não", "Sim")
+
+(invFlor1 <- 
+  data.frame(especie, diametro, altura, cortar,
+             stringsAsFactors = TRUE))
+```
+
+```{r ref.label="df1", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+.pull-right-4[
+.font90[
+**Cria um data frame com apenas um comando**
+```{r df2, echo=T, eval=F}
+(invFlor2 <- 
+  data.frame(
+    especie=c("Acapu", "Araucaria", "Cedro", "Tauari"),
+    diametro=c(23.0, 27.0, 33.6, 52.6),
+    altura=c(8.4, 8.7, 9.1, 18.2),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+```
+
+```{r ref.label="df2", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
 
 
 
