@@ -482,7 +482,7 @@ knitr::include_graphics("fig/class3/Clv.png")
 ## Estrutura de dados na linguagem R
 <br>
 
-### Vetores - Principais funções para criar vetores...
+### Vetores - Principais funções do R-base para criar vetores...
 <br>
 
 .pull-left-4[
@@ -557,7 +557,7 @@ diametro <- c(23.0, 27.0, 33.6, 42.6, 52.1)
 .font90[
 - Por padrão, ao concatenar **strings** cria-se um vetor de classe **character**.
 - Se desejável, pode-se codificar um vetor de classe **character** para a classe **factor**.
-- Existem duas funções: .green[factor()] e .green[as.factor()].
+- O R-base possui duas funções: .green[factor()] e .green[as.factor()].
 - Motivos: modelos estatísticos e gráficos
 ]
 ]
@@ -763,7 +763,41 @@ data.frame(especie = c("Acapu", "Araucaria",
 <br>
 
 ### Matrizes
+
+.pull-left-4[
+.font90[
+- São caracterizadas por possuírem duas dimensões (linhas e colunas) - bidimensional.
+- Todos os seus elementos possuem a mesma classe (numeric, character ou logical).
+- O R-base possui 3 funções principais: .green[cbind()], .green[rbind()], .green[matrix()].
+- A função .green[matrix()] é considerada mais eficiente.
+]
+]
+
+
+.pull-right-4[
+
+.blockquote[
+.font90[
+.center[.blue[matrix(]**data** = NA, **nrow** = 1, **ncol** = 1, **byrow** = FALSE, **dimnames** = NULL.blue[)]]
 <br>
+
+**data** = um vetor de dados (opcional).
+
+**nrow** = número de linhas da matriz.
+
+**ncol** = número de colunas da matriz.
+
+**byrow** = argumento lógico. Se **FALSE** (padrão), a matriz é preenchida por colunas. Se **TRUE**, a matriz é preenchida por linhas.
+
+**dimnames** = Insere os rótulos das linhas e colunas da matriz com a função .green[list()].
+]
+]
+
+
+]
+
+
+
 
 ---
 layout: false
