@@ -1644,7 +1644,49 @@ invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
 ## Indexação no R
 <br>
 
-### Indexação de data frames - .black[Adicionando linhas e colunas]
+### Indexação de data frames - .black[Adição de linhas e colunas]
+
+.pull-left-4[
+.font80[
+```{r DF6, echo=T, eval=F}
+(invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    diametro=c(39.5, 45.6, 49.5, 70.4),
+    altura=c(10.5, 13.6, 14.5, 17.4),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+
+# Cria um vetor sobre proteção
+protegida <- c("Sim", "Sim", "Sim", "Não")
+
+# Adiciona como nova coluna
+invFlor$protegida <- protegida
+print(invFlor)
+
+# Substitui linha na posição 1
+invFlor[1,] <- c("Acapu", 50.9, 15.6, "Não", "Sim")
+print(invFlor)
+
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+```{r ref.label="DF6", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
+
+## Indexação no R
+<br>
+
+### Indexação de listas
 
 
 
