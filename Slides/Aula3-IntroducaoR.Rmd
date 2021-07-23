@@ -1514,8 +1514,50 @@ invFlor[, c("cortar", "especie")]
 
 ---
 
+## Indexação no R
+<br>
 
+### Indexação de data frames - .black[Comando] .red[$]
 
+.pull-left-4[
+.font90[
+**Extração de elementos do data frame**
+```{r DF3, echo=T, eval=F}
+(invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    diametro=c(39.5, 45.6, 49.5, 70.4),
+    altura=c(10.5, 13.6, 14.5, 17.4),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+
+# extrai a coluna “diâmetro”
+invFlor$diametro
+
+# Acessa a coluna “altura” 
+# e extrai os elementos da posição [4, 5]
+invFlor$altura[c(3,4)]
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+```{r ref.label="DF3", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
+
+## Indexação no R
+<br>
+
+### Indexação de data frames - .red[[ .black[*i*, *j*] ]] .black[+] .red[$] .black[+] .black[Operadores (lógicos e comparação)]
+
+---
 
 
 ---
