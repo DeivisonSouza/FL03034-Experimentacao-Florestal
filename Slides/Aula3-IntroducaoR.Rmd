@@ -1425,12 +1425,54 @@ name: IndDF
 
 ### Indexação de data frames
 
-- A **extração**, **inclusão** ou **substituição** de vetores em um data frame pode ser feita usando os comandos: .red[[ ]] e .red[$].
+- A **extração**, **inclusão** ou **substituição** de vetores em um data frame pode ser feita usando os comandos: .red[[ .black[*i*, *j*] ]] e .red[$].
+- O comando .red[$] é usual para colunas nomeadas.
+- O comando .red[[ .black[*i*, *j*] ]] segue a lógica de matrizes. Em que, *i* = linhas e *j* = colunas.
 - Operadores **lógicos** (.red[&, |, !]) e de **comparação** (.red[<, >, >=, <=, !=, ==, %in%]) podem ser usados para extrair informações específicas do data frame.
+- As funções .blue[attach()] (attachment) e .blue[with()] também podem ser usadas para facilitar o acesso à colunas de data frames.
 
 ---
 
+## Indexação no R
+<br>
 
+### Indexação de data frames - .black[Comando] .red[[ .black[*i*, *j*] ]]
+
+.pull-left-4[
+.font90[
+**Extração de elementos do data frame**
+```{r DF, echo=T, eval=F}
+(invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    diametro=c(39.5, 45.6, 49.5, 70.4),
+    altura=c(10.5, 13.6, 14.5, 17.4),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+
+# Extrai elementos da linha 2 e coluna 1
+invFlor[2, 1]
+
+# Extrai todos os elementos da coluna 2
+invFlor[, 2]
+
+# Extrai todos os elementos da coluna 2
+# Porém, conserve a saída como data frame
+invFlor[, 2, drop=FALSE]
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font90[
+```{r ref.label="DF", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
 
 
 
