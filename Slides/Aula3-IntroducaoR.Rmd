@@ -114,14 +114,14 @@ layout: true
 <br><br>
 Ao final desta aula espera-se que o discente seja capaz de...
 
-* Entender a importância e reconhecer a praticidade de uso da linguagem de programação;
-* Realizar o download e instalação o RGui e Rstudio;
-* Compreender as principais estruturas de dados na linguagem R;
-* Realizar indexação de diferentes estruturas de dados no R;
-* Compreender e desenvolver suas próprias funções no R;
-* Compreender e aprender a usar estruturas de controle no R;
-* Criar gráficos usando funções de pacotes do R-base; e
-* Realizar uma análise exploratória de dados.
+* Entender a importância e reconhecer a praticidade de uso de linguagem de programação;
+* Realizar o download e a instalação do RGui e IDE Rstudio;
+* Compreender as principais estruturas de dados na linguagem R e aprender a criá-las usando as funções do R-base;
+* Realizar indexação de diferentes estruturas de dados no R; e
+* Compreender e desenvolver suas próprias funções no R.
+<!-- * Compreender e aprender a usar estruturas de controle no R; -->
+<!-- * Criar gráficos usando funções de pacotes do R-base; e -->
+<!-- * Realizar uma análise exploratória de dados. -->
 ---
 
 ## Conteúdo
