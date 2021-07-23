@@ -1544,6 +1544,7 @@ invFlor$altura[c(3,4)]
 --
 
 .pull-right-4[
+<br><br>
 .font80[
 ```{r ref.label="DF3", echo=FALSE, eval=TRUE, collapse=F}
 ```
@@ -1555,7 +1556,52 @@ invFlor$altura[c(3,4)]
 ## Indexação no R
 <br>
 
+### Indexação de data frames - .red[$] .black[+] .black[Operadores de comparação]
+
+.pull-left-4[
+.font90[
+**Extração de elementos do data frame**
+```{r DF4, echo=T, eval=F}
+(invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    diametro=c(39.5, 45.6, 49.5, 70.4),
+    altura=c(10.5, 13.6, 14.5, 17.4),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+
+# Quais árvores têm mais de 14 m?
+invFlor$altura > 14
+
+# Quais árvores têm diâmetros >= 50cm?
+invFlor$diametro >= 50
+
+# Quais árvores estão previstas para corte?
+invFlor$cortar == "Sim"
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br>
+.font80[
+```{r ref.label="DF4", echo=FALSE, eval=TRUE, collapse=F}
+```
+
+**Observe que as saídas dos comandos são respostas booleanas (TRUE ou FALSE). No entanto, na maioria das vezes deseja-se extrair os elementos.**
+
+]
+]
+
+---
+
+## Indexação no R
+<br>
+
 ### Indexação de data frames - .red[[ .black[*i*, *j*] ]] .black[+] .red[$] .black[+] .black[Operadores (lógicos e comparação)]
+
 
 ---
 
