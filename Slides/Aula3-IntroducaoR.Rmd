@@ -1682,13 +1682,104 @@ print(invFlor)
 ]
 
 ---
-
+name: IndL
 ## Indexação no R
 <br>
 
 ### Indexação de listas
 
+- A indexação de lista pode ser feita com uso dos comandos .red[ [[ ]] ] e .red[ $ ].
+- Para acessar subíndices dos componentes da lista pode-se fazer: .red[ [[ ]][ ] ].
+- O comando .red[ $ ] poderá ser usado quando a lista tiver seus componentes nomeados.
 
+---
+
+## Indexação no R
+<br>
+
+### Indexação de listas - .black[Níveis superiores não nomeados]
+
+.pull-left-4[
+.font90[
+**Lista com níveis superiores não nomeados**
+```{r IndL, echo=T, eval=F}
+diametro <- c(23.0, 27.0, 33.6, 52.6)
+
+invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE)
+
+# Criando lista não nomeada
+(list <- list(diametro, invFlor))
+
+# extrai o componente 1
+list[[1]]
+
+# extrai a posição 1 do componente 2
+list[[2]][1]
+#list[[2]]["especie"]
+list[[2]]$especie
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br>
+.font70[
+```{r ref.label="IndL", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
+
+## Indexação no R
+<br>
+
+### Indexação de listas - .black[Níveis superiores nomeados]
+
+.pull-left-4[
+.font90[
+**Lista com níveis superiores nomeados**
+```{r IndL1, echo=T, eval=F}
+diametro <- c(23.0, 27.0, 33.6, 52.6)
+
+invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE)
+
+# Criando lista não nomeada
+(list <- list(DAP = diametro, Inventario = invFlor))
+
+# extrai o componente da posição 1
+list$DAP
+
+# extrai a coluna espécie do componente 2
+list$Inventario$especie
+
+# extrai as árvores para corte com DAP > 50
+list$Inventario[diametro > 50 & cortar == "Sim", ]
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br>
+.font70[
+```{r ref.label="IndL1", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
 
 ---
 layout: false
