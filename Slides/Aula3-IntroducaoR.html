@@ -7,7 +7,7 @@
     <script src="Aula3-IntroducaoR_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-IntroducaoR_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-IntroducaoR_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xdb3d3e44bc948a6b15cc050123cf021","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"bb3659f959694da3b1c93b06328d3ba2","expires":1}</script>
     <script src="Aula3-IntroducaoR_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-IntroducaoR_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-IntroducaoR_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -160,7 +160,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 ## Conteúdo
 
-
 .pull-left-4[
 **Parte 3 - Indexação no R**
 
@@ -178,11 +177,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .pull-down[
-**Parte 4 - Iniciando na linguagem R**
+**Parte 4 - Funções no R**
 
-[1 - Sintaxe da linguagem R](#Sintaxe)
+]
+]
 
-[2 - Operadores no R](#Operadores)
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 5 - Um pouco mais sobre o R**
+
+[1 - Sintaxe da linguagem R](#Sint)
+
+[2 - Operadores no R](#Oper)
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.1 - Aritméticos](#arit)
 
@@ -192,7 +201,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [3 - Funções matemáticas usuais](#FunsMat)
 
-]
 ]
 
 ---
@@ -277,8 +285,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-0b0bcfffa09e727201aa" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0b0bcfffa09e727201aa">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-66045d8186dee1c2195e" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-66045d8186dee1c2195e">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -2155,7 +2163,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 4 &lt;br&gt; .red[Iniciando na &lt;br&gt; linguagem R]**]
+.font200[**Parte 5 &lt;br&gt; .red[Um pouco mais &lt;br&gt; sobre o R]**]
 
 ---
 layout: true
@@ -2163,9 +2171,11 @@ layout: true
 &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R&lt;/div&gt;
 
 ---
-
-## Sintaxe da linguagem R
+name: Sint
+## Um pouco mais sobre o R
 &lt;br&gt;
+
+### Sintaxe da linguagem R
 
 - **Linguagem de expressão**: Tecnicamente, R é uma linguagem de expressão com uma sintaxe muito simples.
 - **Case sensitive**: A linguagem R é *case sensitive*. Isto é, diferencia .green[maiúscula] e .green[minúscula].
@@ -2194,14 +2204,16 @@ table(esp) # tabela de frequências
 ```
 ]
 
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
 
-## Sintaxe da linguagem R
+## Um pouco mais sobre o R
 &lt;br&gt;
+
+### Sintaxe da linguagem R
 
 - **Comandos elementares no R**: consistem em .green[expressões] ou .green[atribuições].
 &lt;br&gt;
@@ -2229,28 +2241,30 @@ mean(DAP)
 ```
 ]
 
-&lt;br&gt;
-
+.font70[
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+]
 
 ---
 
-## Sintaxe da linguagem R
+## Um pouco mais sobre o R
 &lt;br&gt;
+
+### Sintaxe da linguagem R
 
 - **Separação de comandos**: ponto e vírgula (.red[;]) ou por uma nova linha;
 - **Comentários**: precedidos pelo símbolo .red[\#] (tudo após .red[\#] não é executado);
 - **Comando incompleto**: se o comando R não estiver sintaticamente completo (em uma linha de código), o prompt aparecerá com o símbolo: .red[+]. Esse símbolo indica continuação do comando inicial.
-&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
-
-## Operadores no R
+name: Oper
+## Um pouco mais sobre o R
 &lt;br&gt;
 
-### Tipos de operadores
+### Operadores no R
 
 - Na linguagem R existe três tipos de operadores
 - Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
@@ -2259,10 +2273,11 @@ Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R
 
 ---
 
-## Operadores no R
+## Um pouco mais sobre o R
 &lt;br&gt;
 
 ### Tipos de operadores
+&lt;br&gt;
 
 .font80[
 .pull-left-8[
@@ -2311,12 +2326,16 @@ Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R
 ]
 
 ---
+name: arit
+## Um pouco mais sobre o R
+&lt;br&gt;
 
-## Operadores aritméticos - Expressões básicas
+### Operadores aritméticos - Expressões básicas
 
 - Operadores usuais para realizar operações matemáticas.
 
 .pull-left[
+.font80[
 
 ```r
 2+3             # adição
@@ -2340,8 +2359,10 @@ x + y
 y/x+2
 ```
 ]
+]
 
 .pull-right[
+.font80[
 
 ```
 ## [1] 5
@@ -2365,12 +2386,16 @@ y/x+2
 ## [1] 2.50 3.25 3.50 2.00
 ```
 ]
+]
 
 Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operadores.R)
 
 ---
 
-## Operadores aritméticos - Expressões mais complexas
+## Um pouco mais sobre o R
+&lt;br&gt;
+
+### Operadores aritméticos - Expressões mais complexas
 
 - Regra **PEMDAS** (**P**arênteses, **E**xponenciação, **M**ultiplicação, **D**ivisão, **A**dição e **S**ubtração).
 
@@ -2399,12 +2424,16 @@ Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Sl
 ]
 
 ---
+name: relac
+## Um pouco mais sobre o R
+&lt;br&gt;
 
-## Operadores relacionais (ou comparação)
+### Operadores relacionais (ou comparação)
 
 - Operadores relacionais são usados para realizar comparações de valores.
 
 .pull-left-9[
+.font80[
 
 ```r
 # vetor com um elemento
@@ -2430,8 +2459,10 @@ x &gt;= w       # x é &gt;= aos elementos de w?
 w %in% v     # w contém v?
 ```
 ]
+]
 
 .pull-right-9[
+.font80[
 
 ```
 ## [1] 20
@@ -2455,21 +2486,23 @@ w %in% v     # w contém v?
 ## [1] FALSE FALSE FALSE FALSE  TRUE
 ```
 ]
+]
 
 ---
 
-## Operadores relacionais (ou comparação)
+## Um pouco mais sobre o R
 &lt;br&gt;
 
-### Um pouco mais sobre o operador **%in%**
+### Operadores relacionais (ou comparação) - .black[operador %in%]
 
-.font90[
+.font80[
 É um operador binário que retorna um vetor booleano (TRUE ou FALSE) de tamanho sempre igual ao vetor esquerdo.
 
 Considere um vetor de nomes de espécies florestais...
 ]
 
 .pull-left-9[
+.font80[
 
 ```r
 especie &lt;- 
@@ -2482,9 +2515,10 @@ especie &lt;-
 "Swietenia-macrophylla" %in% especie
 ```
 ]
+]
 
 .pull-right-9[
-.font90[
+.font80[
 Agora, você deseja descobrir se esse vetor contém *Bertholletia excelsa* e *Swietenia macrophylla*?
 &lt;br&gt;&lt;br&gt;
 
@@ -2493,19 +2527,21 @@ Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [
 ]
 
 .pull-left[
+.font80[
 
 ```
 ## [1] TRUE
 ## [1] FALSE
 ```
 ]
+]
 
 ---
 
-## Operadores relacionais (ou comparação)
+## Um pouco mais sobre o R
 &lt;br&gt;
 
-### Um pouco mais sobre o operador `%in%`
+### Operadores relacionais (ou comparação)
 
 .pull-left-9[
 
@@ -2542,11 +2578,14 @@ especie %in% ameacadas
 ]
 
 ---
+name: log
+## Um pouco mais sobre o R
+&lt;br&gt;
 
-## Operadores lógicos
+### Operadores lógicos
 
 .pull-left-5[
-.font90[
+.font80[
 - Em programação, estes operadores são usados para realizar **operações lógicas**, cuja saída é uma **resposta booleana**.
 - Uma resposta booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 &lt;br&gt;&lt;br&gt;
@@ -2558,17 +2597,19 @@ especie %in% ameacadas
 ]
 
 .pull-right-5[
-<div id="htmlwidget-62b9fed0da983c2a6cdf" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-62b9fed0da983c2a6cdf">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-a72f8440f74282644880" style="width:800px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a72f8440f74282644880">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.7],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
 ---
 
-## Operadores lógicos
+## Um pouco mais sobre o R
 &lt;br&gt;
 
-### Operador `&amp;` - versão vetorizada
+### Operadores lógicos
+
+#### Operador `&amp;` - versão vetorizada
 
 Use o operador lógico `&amp;` para responder as questões a seguir:
 
@@ -2590,7 +2631,7 @@ data$DAP &gt;= 50 &amp; data$QF == 1
 ```
 
 --
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
 🌳**Legislação florestal!**🌳
 
 .font80[
@@ -2599,10 +2640,12 @@ A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/
 
 ---
 
-## Operadores lógicos
+## Um pouco mais sobre o R
 &lt;br&gt;
 
-### Operador `&amp;` - versão vetorizada (cont.)
+### Operadores lógicos
+
+#### Operador `&amp;` - versão vetorizada (cont.)
 
 <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
 
@@ -2638,9 +2681,11 @@ data$Selecao == "Explorar" &amp; data$QF == 1
 ```
 
 ---
+name: FunsMat
+## Um pouco mais sobre o R
+&lt;br&gt;
 
-## Funções matemáticas usuais
-&lt;br&gt;&lt;br&gt;
+### Funções matemáticas usuais
 
 A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
 &lt;br&gt;&lt;br&gt;
@@ -2659,9 +2704,13 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 
 ---
 
-## Alguns comandos básicos
+## Um pouco mais sobre o R
 &lt;br&gt;
 
+### Alguns comandos básicos
+&lt;br&gt;
+
+.font80[
 | **Comando**                             | **Ação**                                      |
 | :-------------------------------------: | :-------------------------------------------: |
 | q()                                     | Fechar o programa                             |
@@ -2674,12 +2723,17 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 | getwd()                                 | Mostrar o diretório de trabalho               |
 | setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
 | install.packages("nome do pacote")      | Instalar um pacote específico                 |
+]
 
 ---
 
-## Alguns comandos básicos (cont.)
+## Um pouco mais sobre o R
 &lt;br&gt;
 
+### Alguns comandos básicos (cont.)
+&lt;br&gt;
+
+.font80[
 | **Comando**               | **Ação**                                       |
 | :-----------------------: | :--------------------------------------------: |
 | library("nome do pacote") | Carregar um pacote específico                  |
@@ -2691,14 +2745,9 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 | ?nomedodataset            | Obter informações detalhadas sobre um conjunto de dado |
 | class(nome do objeto)     | Verifica a classe de um objeto específico      |
 | search()                  | Lista todos os pacotes carregados              |
-
----
-
+]
 
 
-
-
----
 &lt;!--Slide XX --&gt;
 ---
 layout: false

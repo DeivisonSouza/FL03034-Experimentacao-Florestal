@@ -158,7 +158,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 ## Conteúdo
 
-
 .pull-left-4[
 **Parte 3 - Indexação no R**
 
@@ -176,11 +175,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .pull-down[
-**Parte 4 - Iniciando na linguagem R**
+**Parte 4 - Funções no R**
 
-[1 - Sintaxe da linguagem R](#Sintaxe)
+]
+]
 
-[2 - Operadores no R](#Operadores)
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 5 - Um pouco mais sobre o R**
+
+[1 - Sintaxe da linguagem R](#Sint)
+
+[2 - Operadores no R](#Oper)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Aritméticos](#arit)
 
@@ -190,7 +199,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [3 - Funções matemáticas usuais](#FunsMat)
 
-]
 ]
 
 ---
@@ -1788,7 +1796,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 4 <br> .red[Iniciando na <br> linguagem R]**]
+.font200[**Parte 5 <br> .red[Um pouco mais <br> sobre o R]**]
 
 ---
 layout: true
@@ -1796,9 +1804,11 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
 
 ---
-
-## Sintaxe da linguagem R
+name: Sint
+## Um pouco mais sobre o R
 <br>
+
+### Sintaxe da linguagem R
 
 - **Linguagem de expressão**: Tecnicamente, R é uma linguagem de expressão com uma sintaxe muito simples.
 - **Case sensitive**: A linguagem R é *case sensitive*. Isto é, diferencia .green[maiúscula] e .green[minúscula].
@@ -1820,14 +1830,16 @@ table(esp) # tabela de frequências
 ```
 ]
 
-<br><br>
+<br>
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
 
-## Sintaxe da linguagem R
+## Um pouco mais sobre o R
 <br>
+
+### Sintaxe da linguagem R
 
 - **Comandos elementares no R**: consistem em .green[expressões] ou .green[atribuições].
 <br>
@@ -1852,28 +1864,30 @@ mean(DAP)
 ```
 ]
 
-<br>
-
+.font70[
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
+]
 
 ---
 
-## Sintaxe da linguagem R
+## Um pouco mais sobre o R
 <br>
+
+### Sintaxe da linguagem R
 
 - **Separação de comandos**: ponto e vírgula (.red[;]) ou por uma nova linha;
 - **Comentários**: precedidos pelo símbolo .red[\#] (tudo após .red[\#] não é executado);
 - **Comando incompleto**: se o comando R não estiver sintaticamente completo (em uma linha de código), o prompt aparecerá com o símbolo: .red[+]. Esse símbolo indica continuação do comando inicial.
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br>
 
 Fonte: [An Introduction to R](https://cran.r-project.org/doc/manuals/r-release/R-intro.html#:~:text=Contents%5D%5BIndex%5D-,1.8%20R%20commands%2C%20case%20sensitivity%2C%20etc.,would%20refer%20to%20different%20variables.)
 
 ---
-
-## Operadores no R
+name: Oper
+## Um pouco mais sobre o R
 <br>
 
-### Tipos de operadores
+### Operadores no R
 
 - Na linguagem R existe três tipos de operadores
 - Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
@@ -1884,10 +1898,11 @@ knitr::include_graphics("fig/class3/OpR.png")
 
 ---
 
-## Operadores no R
+## Um pouco mais sobre o R
 <br>
 
 ### Tipos de operadores
+<br>
 
 .font80[
 .pull-left-8[
@@ -1936,12 +1951,16 @@ knitr::include_graphics("fig/class3/OpR.png")
 ]
 
 ---
+name: arit
+## Um pouco mais sobre o R
+<br>
 
-## Operadores aritméticos - Expressões básicas
+### Operadores aritméticos - Expressões básicas
 
 - Operadores usuais para realizar operações matemáticas.
 
 .pull-left[
+.font80[
 ```{r refname, echo=TRUE, eval=FALSE}
 2+3             # adição
 4*9             # multiplicação
@@ -1962,8 +1981,10 @@ x + y
 y/x+2
 ```
 ]
+]
 
 .pull-right[
+.font80[
 ```{r ref.label="refname", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
 
@@ -1973,12 +1994,16 @@ y/x+2
 ```{r ref.label="refname4", echo=FALSE, eval=TRUE, collapse=TRUE}
 ```
 ]
+]
 
 Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Slides/R/01-R-Operadores.R)
 
 ---
 
-## Operadores aritméticos - Expressões mais complexas
+## Um pouco mais sobre o R
+<br>
+
+### Operadores aritméticos - Expressões mais complexas
 
 - Regra **PEMDAS** (**P**arênteses, **E**xponenciação, **M**ultiplicação, **D**ivisão, **A**dição e **S**ubtração).
 
@@ -1999,12 +2024,16 @@ Acesse o script: [01-R-Operadores](https://deivisonsouza.github.io/FL03034-EF/Sl
 ]
 
 ---
+name: relac
+## Um pouco mais sobre o R
+<br>
 
-## Operadores relacionais (ou comparação)
+### Operadores relacionais (ou comparação)
 
 - Operadores relacionais são usados para realizar comparações de valores.
 
 .pull-left-9[
+.font80[
 ```{r logVar, echo=TRUE, eval=FALSE}
 # vetor com um elemento
 (x <- 20)
@@ -2028,8 +2057,10 @@ x >= w       # x é >= aos elementos de w?
 w %in% v     # w contém v?
 ```
 ]
+]
 
 .pull-right-9[
+.font80[
 ```{r ref.label="logVar", echo=FALSE, eval=TRUE, collapse=T}
 ```
 <br>
@@ -2037,21 +2068,23 @@ w %in% v     # w contém v?
 ```{r ref.label="logname", echo=FALSE, eval=TRUE, collapse=T}
 ```
 ]
+]
 
 ---
 
-## Operadores relacionais (ou comparação)
+## Um pouco mais sobre o R
 <br>
 
-### Um pouco mais sobre o operador **%in%**
+### Operadores relacionais (ou comparação) - .black[operador %in%]
 
-.font90[
+.font80[
 É um operador binário que retorna um vetor booleano (TRUE ou FALSE) de tamanho sempre igual ao vetor esquerdo.
 
 Considere um vetor de nomes de espécies florestais...
 ]
 
 .pull-left-9[
+.font80[
 ```{r IN, echo=TRUE, eval=FALSE}
 especie <- 
    c("Vouacapoua-americana", "Cedrela-odorata",
@@ -2063,9 +2096,10 @@ especie <-
 "Swietenia-macrophylla" %in% especie
 ```
 ]
+]
 
 .pull-right-9[
-.font90[
+.font80[
 Agora, você deseja descobrir se esse vetor contém *Bertholletia excelsa* e *Swietenia macrophylla*?
 <br><br>
 
@@ -2074,18 +2108,20 @@ Essas espécies estão classificadas na categoria Vulnerável (VU), conforme a [
 ]
 
 .pull-left[
+.font80[
 ```{r ref.label="IN", echo=FALSE, eval=TRUE, collapse=T}
 "Bertholletia-excelsa" %in% especie
 "Swietenia-macrophylla" %in% especie
 ```
 ]
+]
 
 ---
 
-## Operadores relacionais (ou comparação)
+## Um pouco mais sobre o R
 <br>
 
-### Um pouco mais sobre o operador `%in%`
+### Operadores relacionais (ou comparação)
 
 .pull-left-9[
 ```{r IN2, echo=TRUE, eval=FALSE}
@@ -2119,11 +2155,14 @@ especie %in% ameacadas
 ]
 
 ---
+name: log
+## Um pouco mais sobre o R
+<br>
 
-## Operadores lógicos
+### Operadores lógicos
 
 .pull-left-5[
-.font90[
+.font80[
 - Em programação, estes operadores são usados para realizar **operações lógicas**, cuja saída é uma **resposta booleana**.
 - Uma resposta booleana indica se algo é Verdadeiro (`TRUE`) ou Falso (`FALSE`).
 <br><br>
@@ -2169,10 +2208,12 @@ data %>%
 
 ---
 
-## Operadores lógicos
+## Um pouco mais sobre o R
 <br>
 
-### Operador `&` - versão vetorizada
+### Operadores lógicos
+
+#### Operador `&` - versão vetorizada
 
 Use o operador lógico `&` para responder as questões a seguir:
 
@@ -2191,7 +2232,7 @@ data$DAP >= 50 & data$QF == 1
 ```
 
 --
-<br><br>
+<br>
 🌳**Legislação florestal!**🌳
 
 .font80[
@@ -2200,10 +2241,12 @@ A [Resolução CONAMA nº 406 de 02/02/2009](http://www2.mma.gov.br/port/conama/
 
 ---
 
-## Operadores lógicos
+## Um pouco mais sobre o R
 <br>
 
-### Operador `&` - versão vetorizada (cont.)
+### Operadores lógicos
+
+#### Operador `&` - versão vetorizada (cont.)
 
 `r anicon::faa("hand-point-right", animate="horizontal")` Quais árvores possuem **cipós ausentes**, **QF igual a 1** .red[e] **DAP maior ou igual a 50cm**❓
 
@@ -2233,9 +2276,11 @@ data$Selecao == "Explorar" & data$QF == 1
 ```
 
 ---
+name: FunsMat
+## Um pouco mais sobre o R
+<br>
 
-## Funções matemáticas usuais
-<br><br>
+### Funções matemáticas usuais
 
 A linguagem R dispõe de funções matemáticas usualmente encontradas em calculadoras científicas.
 <br><br>
@@ -2254,9 +2299,13 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 
 ---
 
-## Alguns comandos básicos
+## Um pouco mais sobre o R
 <br>
 
+### Alguns comandos básicos
+<br>
+
+.font80[
 | **Comando**                             | **Ação**                                      |
 | :-------------------------------------: | :-------------------------------------------: |
 | q()                                     | Fechar o programa                             |
@@ -2269,12 +2318,17 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 | getwd()                                 | Mostrar o diretório de trabalho               |
 | setwd("diretório desejado")             | Mudar o diretório de trabalho                 |
 | install.packages("nome do pacote")      | Instalar um pacote específico                 |
+]
 
 ---
 
-## Alguns comandos básicos (cont.)
+## Um pouco mais sobre o R
 <br>
 
+### Alguns comandos básicos (cont.)
+<br>
+
+.font80[
 | **Comando**               | **Ação**                                       |
 | :-----------------------: | :--------------------------------------------: |
 | library("nome do pacote") | Carregar um pacote específico                  |
@@ -2286,14 +2340,9 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 | ?nomedodataset            | Obter informações detalhadas sobre um conjunto de dado |
 | class(nome do objeto)     | Verifica a classe de um objeto específico      |
 | search()                  | Lista todos os pacotes carregados              |
-
----
-
+]
 
 
-
-
----
 <!--Slide XX -->
 ---
 layout: false
