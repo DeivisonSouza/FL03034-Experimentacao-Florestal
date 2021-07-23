@@ -1602,8 +1602,50 @@ invFlor$cortar == "Sim"
 
 ### Indexação de data frames - .red[[ .black[*i*, *j*] ]] .black[+] .red[$] .black[+] .black[Operadores (lógicos e comparação)]
 
+.pull-left-4[
+.font80[
+**Extração de elementos do data frame**
+```{r DF5, echo=T, eval=F}
+(invFlor <- 
+  data.frame(
+    especie=c("Acapu", "Mogno", "Cedro", "Tauari"),
+    diametro=c(39.5, 45.6, 49.5, 70.4),
+    altura=c(10.5, 13.6, 14.5, 17.4),
+    cortar=c("Não", "Não", "Não", "Sim"),
+    stringsAsFactors=FALSE))
+
+# Quais árvores têm mais de 14 m?
+invFlor[invFlor$altura > 14, ]
+
+# Quais árvores têm diâmetros >= 50cm?
+invFlor[invFlor$diametro >= 50, ]
+
+# Quais árvores estão previstas para corte?
+invFlor[invFlor$cortar == "Sim", ]
+
+# Quais árvores têm diametro < 50
+# e não estão previstas para corte?
+invFlor[invFlor$diametro < 50 & invFlor$cortar == "Não", ]
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+```{r ref.label="DF5", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
 
 ---
+
+## Indexação no R
+<br>
+
+### Indexação de data frames - .black[Adicionando linhas e colunas]
+
 
 
 ---
