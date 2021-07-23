@@ -162,13 +162,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-left-4[
 **Parte 3 - Indexação no R**
 
-[1 - Indexação de vetores](#IndV)
+[1 - Como fazer indexação no R?](#Ind)
 
-[2 - Indexação de matrizes](#IndM)
+[2 - Indexação de vetores](#IndV)
 
-[3 - Indexação de data frames](#IndDF)
+[3 - Indexação de matrizes](#IndM)
 
-[4 - Indexação de listas](#IndL)
+[4 - Indexação de data frames](#IndDF)
+
+[5 - Indexação de listas](#IndL)
 ]
 
 
@@ -191,9 +193,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ]
 ]
 
-
-
-
 ---
 
 layout: false
@@ -210,7 +209,7 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
 
 ---
-
+name: R
 ## Linguagem R
 
 .pull-left-4[
@@ -268,7 +267,7 @@ knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo
 ]
 
 ---
-
+name: pqR
 ## Por que usar a linguagem R?
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
@@ -276,7 +275,7 @@ knitr::include_graphics('fig/class3/WhyR.png')
 ```
 
 ---
-
+name: RGui
 ## RGui - Download e instalação
 <br>
 
@@ -373,7 +372,7 @@ knitr::include_graphics('fig/class3/Reditor.png')
 ```
 
 ---
-
+name: Rstudio
 ## IDE RStudio - download e instalação
 <br>
 
@@ -472,7 +471,7 @@ knitr::include_graphics("fig/class3/EstrDados.png")
 <!-- ] -->
 
 ---
-
+name: vet
 ## Estrutura de dados na linguagem R
 <br>
 
@@ -796,7 +795,7 @@ y <- scan(what = character())
 ]
 
 ---
-
+name: mat
 ## Estrutura de dados na linguagem R
 <br>
 
@@ -912,7 +911,7 @@ colnames(mat1) <- c("C1","C2","C3"); print(mat1)
 2 - **Regra da Reciclagem**: Quando a quantidade de linhas e colunas (ncol x nrow) for maior do que a quantidade de elementos (n).
 
 ---
-
+name: df
 ## Estrutura de dados na linguagem R
 <br>
 
@@ -992,7 +991,7 @@ cortar <- c("Não", "Não", "Não", "Sim")
 ]
 
 ---
-
+name: list
 ## Estrutura de dados na linguagem R
 <br>
 
@@ -1130,7 +1129,7 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à Linguagem de Programação R</div>
 
 ---
-
+name: Ind
 ## Indexação no R
 <br>
 
@@ -1140,7 +1139,7 @@ layout: true
 
 
 ---
-
+name: IndV
 ## Indexação no R
 <br>
 
@@ -1293,7 +1292,7 @@ Diametro[c(4, 5)] <- c(55.3, 63.4); print(Diametro)
 
 
 ---
-
+name: IndM
 ## Indexação no R
 <br>
 
@@ -1420,7 +1419,7 @@ mat[c(1,5)] <- c(0,0); print(mat)
 ]
 
 ---
-
+name: IndDF
 ## Indexação no R
 <br>
 
