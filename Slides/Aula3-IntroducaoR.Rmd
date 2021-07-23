@@ -1425,6 +1425,14 @@ name: IndDF
 
 ### Indexação de data frames
 
+- A **extração**, **inclusão** ou **substituição** de vetores em um data frame pode ser feita usando os comandos: .red[[ ]] e .red[$].
+- Operadores **lógicos** (.red[&, |, !]) e de **comparação** (.red[<, >, >=, <=, !=, ==, %in%]) podem ser usados para extrair informações específicas do data frame.
+
+---
+
+
+
+
 
 ---
 layout: false
