@@ -134,12 +134,9 @@ knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 
 .pull-left-7[
 ```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/ff4d9/wp-content/uploads/2014/04/dplyr.png")
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ```
 ]
-
-
-
 
 
 ---
@@ -168,10 +165,42 @@ knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a53
 layout: false
 name: conc
 class: inverse, top, right
+background-image: url(fig/class3/inv2.jpg)
+background-size: cover
+
+.font200[**Parte 1 <br> .red[Importação de dados <br> com dplyr]**] 
+
+.pull-left-4[
+```{r echo=FALSE, out.width='50%', fig.align='left', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```
+]
+
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Manipulação de dados com dplyr</div>
+
+
+
+---
+
+## Importação de dados com readr
+
+
+---
+
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 1 <br> .red[Importação de dados <br> com .orange[readr]]**]
+.font200[**Parte 1 <br> .red[Manipulação de dados <br> com .orange[dplyr]]**]
 
 ---
 layout: true
