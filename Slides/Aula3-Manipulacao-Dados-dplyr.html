@@ -7,7 +7,7 @@
     <script src="Aula3-Manipulacao-Dados-dplyr_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-Manipulacao-Dados-dplyr_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f012f018046f4314893ec0648592d1c5","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xc03d9764602404f83dd460a23c78835","expires":1}</script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -175,13 +175,26 @@ layout: true
 
 ## Manipulação de dados com dplyr
 
-.font20[
-<div id="htmlwidget-b611245f5d32aff93c49" style="width:1000px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-b611245f5d32aff93c49">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["4","3","1","5","8","3","6","3","3","4","3","6","7","6","5"],["Acapu","Acapu","Acapu","Angelim vermelho","Angelim vermelho","Angelim vermelho","Cumaru","Cumaru","Cumaru","Maparajuba","Maparajuba","Maparajuba","Tauari","Tauari","Tauari"],["Vouacapoua americana Aubl.","Vouacapoua americana Aubl.","Vouacapoua americana Aubl.","Dinizia excelsa Ducke","Dinizia excelsa Ducke","Dinizia excelsa Ducke","Dipteryx odorata (Aubl.) Willd.","Dipteryx odorata (Aubl.) Willd.","Dipteryx odorata (Aubl.) Willd.","Manilkara bidentata (A.DC.) A.Chev.","Manilkara bidentata (A.DC.) A.Chev.","Manilkara bidentata (A.DC.) A.Chev.","Couratari oblongifolia Ducke &amp; Kunth","Couratari oblongifolia Ducke &amp; Kunth","Couratari oblongifolia Ducke &amp; Kunth"],[186,157,178,540,190,700,140,190,164,180,188,160,260,285,270],[13,10,12,15,14,19,14,16,16,18,18,13,15,19,18],["1","2","1","1","1","3","2","1","1","1","1","1","1","1","1"],["Remanescente","Remanescente","Remanescente","Explorar","Remanescente","Remanescente","Remanescente","Remanescente","Remanescente","Explorar","Explorar","Remanescente","Explorar","Explorar","Explorar"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>UT<\/th>\n      <th>Nome_Comum<\/th>\n      <th>Nome_Cientifico<\/th>\n      <th>CAP<\/th>\n      <th>HC<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[3,4]}],"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+.pull-left-3[
+<div id="htmlwidget-b611245f5d32aff93c49" style="width:750px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b611245f5d32aff93c49">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Acapu","Acapu","Acapu","Angelim vermelho","Angelim vermelho","Angelim vermelho","Cumaru","Cumaru","Cumaru","Maparajuba","Maparajuba","Maparajuba","Tauari","Tauari","Tauari"],["Vouacapoua americana Aubl.","Vouacapoua americana Aubl.","Vouacapoua americana Aubl.","Dinizia excelsa Ducke","Dinizia excelsa Ducke","Dinizia excelsa Ducke","Dipteryx odorata (Aubl.) Willd.","Dipteryx odorata (Aubl.) Willd.","Dipteryx odorata (Aubl.) Willd.","Manilkara bidentata (A.DC.) A.Chev.","Manilkara bidentata (A.DC.) A.Chev.","Manilkara bidentata (A.DC.) A.Chev.","Couratari oblongifolia Ducke &amp; Kunth","Couratari oblongifolia Ducke &amp; Kunth","Couratari oblongifolia Ducke &amp; Kunth"],[186,157,178,540,190,700,140,190,164,180,188,160,260,285,270],[13,10,12,15,14,19,14,16,16,18,18,13,15,19,18],["1","2","1","1","1","3","2","1","1","1","1","1","1","1","1"],["Remanescente","Remanescente","Remanescente","Explorar","Remanescente","Remanescente","Remanescente","Remanescente","Remanescente","Explorar","Explorar","Remanescente","Explorar","Explorar","Explorar"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Nome_Comum<\/th>\n      <th>Nome_Cientifico<\/th>\n      <th>CAP<\/th>\n      <th>HC<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":[2,3]}],"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 
+.pull-right-3[
+&lt;br&gt;&lt;br&gt;
+**Dados**: Amostra de 15 árvores.
 
+**Base completa**:
+
+&lt;!-- Link: [01-wkNN](https://deivisonsouza.github.io/ML-Mensuracao-Florestal/R-scripts/01-wkNN.R) --&gt;
+
+]
+
+&lt;!-- data/UPA07DVS.csv --&gt;
+
+
+---
 
 &lt;!--Slide XX --&gt;
 ---

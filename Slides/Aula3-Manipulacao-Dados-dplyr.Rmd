@@ -174,7 +174,7 @@ layout: true
 
 ## Manipulação de dados com dplyr
 
-.font20[
+.pull-left-3[
 ```{r echo=F, eval=T}
 data <- read_csv("data/UPA07DVS.csv",
                  col_types =
@@ -190,14 +190,14 @@ data %>%
                            "Acapu", "Cumaru", "Tauari")) %>%
   group_by(Nome_Comum) %>% 
   sample_n(3, replace = F) %>% 
-  select(!c("Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
+  select(!c("UT", "Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '1000px',
+                 class = "display", width = '750px',
                  caption = '',
      options=list(pageLength = 20, dom = 'tip', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          paste0("$(this.api().table().container()).css({'font-size': '", "10pt", "'});"),
           "}")
        ) 
      )
@@ -205,7 +205,20 @@ data %>%
 ]
 
 
+.pull-right-3[
+<br><br>
+**Dados**: Amostra de 15 árvores.
 
+**Base completa**:
+
+<!-- Link: [01-wkNN](https://deivisonsouza.github.io/ML-Mensuracao-Florestal/R-scripts/01-wkNN.R) -->
+
+]
+
+<!-- data/UPA07DVS.csv -->
+
+
+---
 
 <!--Slide XX -->
 ---
