@@ -7,7 +7,7 @@
     <script src="Aula3-Manipulacao-Dados-dplyr_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-Manipulacao-Dados-dplyr_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"caab8a25ff984b8eaef88e4533f81713","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xddb084acfbe4f989414750e8cfa2b60","expires":1}</script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -95,7 +95,7 @@ top:.8em;right:-.5em;
 &lt;!-- title-slide --&gt;
 # Experimentação Florestal &lt;br&gt; (FL03034 - EF)
 
-## Manipulação de dados &lt;br&gt; com dplyr <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+## Importação e Manipulação &lt;br&gt; de dados: readr e dplyr <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 
 #### **Prof. Dr. Deivison Venicio Souza**
 #### Universidade Federal do Pará (UFPA) 
@@ -116,42 +116,44 @@ layout: true
 &lt;br&gt;&lt;br&gt;
 Ao final desta aula espera-se que o discente seja capaz de...
 
-* Entender a importância e reconhecer a praticidade de uso de linguagem de programação;
-* Realizar o download e a instalação do RGui e IDE Rstudio;
-* Compreender as principais estruturas de dados na linguagem R e aprender a criá-las usando as funções do R-base;
-* Realizar indexação de diferentes estruturas de dados no R; e
-* Compreender e desenvolver suas próprias funções no R.
-&lt;!-- * Compreender e aprender a usar estruturas de controle no R; --&gt;
-&lt;!-- * Criar gráficos usando funções de pacotes do R-base; e --&gt;
-&lt;!-- * Realizar uma análise exploratória de dados. --&gt;
+
+* Conhecer o tidyverse e os principais pacotes associados.
+* Conhecer e aprender a usar as principais funções do pacote **readr** para importação de dados.
+* Conhecer e aprender a usar as principais funções do pacote **dplyr** para manipulação de dados.
+
+.pull-left-7[
+&lt;img src="https://tidyverse.tidyverse.org/articles/tidyverse-logo.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-left-7[
+&lt;img src="https://readr.tidyverse.org/logo.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-left-7[
+&lt;img src="https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/ff4d9/wp-content/uploads/2014/04/dplyr.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+
 ---
 
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Conhecendo o R e o IDE Rstudio**
+**Parte 1 - Importação de dados com .orange[readr]**
 
-[1- A linguagem R](#R)
+[1- YYYYY](#R)
 
-[2 - Por que usar a linguagem R?](#pqR)
-
-[3 - RGui - Download, instalação e interface](#RGui)
-
-[4 - IDE RStudio - Download, instalação e interface](#Rstudio)
 
 ]
 
 .pull-right-4[
 .pull-down[
-**Parte 2 - Estrutura de dados na linguagem R**
+**Parte 2 - Manipulação de dados com .orange[dplyr]**
 
-[1 - Vetores](#vet)
-
-[2 - Matrizes](#mat)
-
-[3 - Data Frames](#df)
-
-[4 - Listas](#list)
+[1 - XXXXXX](#vet)
 
 ]
 ]
@@ -164,7 +166,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 1 &lt;br&gt; .red[Conhecendo o R e &lt;br&gt; o IDE Rstudio]**]
+.font200[**Parte 1 &lt;br&gt; .red[Importação de dados &lt;br&gt; com .orange[readr]]**]
 
 ---
 layout: true
@@ -190,8 +192,6 @@ layout: true
 Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
 
 ]
-
-
 
 ---
 

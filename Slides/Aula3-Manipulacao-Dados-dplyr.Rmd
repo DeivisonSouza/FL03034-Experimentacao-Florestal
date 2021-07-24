@@ -94,7 +94,7 @@ BibOptions(check.entries = FALSE,
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## Manipulação de dados <br> com dplyr `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## Importação e Manipulação <br> de dados: readr e dplyr `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
 #### **Prof. Dr. Deivison Venicio Souza**
 #### Universidade Federal do Pará (UFPA) 
@@ -115,42 +115,50 @@ layout: true
 <br><br>
 Ao final desta aula espera-se que o discente seja capaz de...
 
-* Entender a importância e reconhecer a praticidade de uso de linguagem de programação;
-* Realizar o download e a instalação do RGui e IDE Rstudio;
-* Compreender as principais estruturas de dados na linguagem R e aprender a criá-las usando as funções do R-base;
-* Realizar indexação de diferentes estruturas de dados no R; e
-* Compreender e desenvolver suas próprias funções no R.
-<!-- * Compreender e aprender a usar estruturas de controle no R; -->
-<!-- * Criar gráficos usando funções de pacotes do R-base; e -->
-<!-- * Realizar uma análise exploratória de dados. -->
+
+* Conhecer o tidyverse e os principais pacotes associados.
+* Conhecer e aprender a usar as principais funções do pacote **readr** para importação de dados.
+* Conhecer e aprender a usar as principais funções do pacote **dplyr** para manipulação de dados.
+
+.pull-left-7[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
+```
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://readr.tidyverse.org/logo.png")
+```
+]
+
+.pull-left-7[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://d33wubrfki0l68.cloudfront.net/071952491ec4a6a532a3f70ecfa2507af4d341f9/ff4d9/wp-content/uploads/2014/04/dplyr.png")
+```
+]
+
+
+
+
+
 ---
 
 ## Conteúdo
 
 .pull-left-4[
-**Parte 1 - Conhecendo o R e o IDE Rstudio**
+**Parte 1 - Importação de dados com .orange[readr]**
 
-[1- A linguagem R](#R)
+[1- YYYYY](#R)
 
-[2 - Por que usar a linguagem R?](#pqR)
-
-[3 - RGui - Download, instalação e interface](#RGui)
-
-[4 - IDE RStudio - Download, instalação e interface](#Rstudio)
 
 ]
 
 .pull-right-4[
 .pull-down[
-**Parte 2 - Estrutura de dados na linguagem R**
+**Parte 2 - Manipulação de dados com .orange[dplyr]**
 
-[1 - Vetores](#vet)
-
-[2 - Matrizes](#mat)
-
-[3 - Data Frames](#df)
-
-[4 - Listas](#list)
+[1 - XXXXXX](#vet)
 
 ]
 ]
@@ -163,7 +171,7 @@ class: inverse, top, right
 background-image: url(fig/class3/inv1.jpg)
 background-size: cover
 
-.font200[**Parte 1 <br> .red[Conhecendo o R e <br> o IDE Rstudio]**]
+.font200[**Parte 1 <br> .red[Importação de dados <br> com .orange[readr]]**]
 
 ---
 layout: true
@@ -214,8 +222,6 @@ data %>%
 Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
 
 ]
-
-
 
 ---
 
