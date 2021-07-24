@@ -211,11 +211,10 @@ data %>%
 
 **Base completa**:
 
-<!-- Link: [01-wkNN](https://deivisonsouza.github.io/ML-Mensuracao-Florestal/R-scripts/01-wkNN.R) -->
+Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
 
 ]
 
-<!-- data/UPA07DVS.csv -->
 
 
 ---
