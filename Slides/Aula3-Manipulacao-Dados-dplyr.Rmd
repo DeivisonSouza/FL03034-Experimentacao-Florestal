@@ -50,6 +50,7 @@ library(ggplot2)
 library(dplyr)
 library(ggimage)
 library(kableExtra)
+library(readr)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -170,6 +171,39 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Manipulação de dados com dplyr</div>
 
 ---
+
+## Manipulação de dados com dplyr
+
+.font20[
+```{r echo=F, eval=T}
+data <- read_csv("data/UPA07DVS.csv",
+                 col_types =
+                   cols(UT = col_factor(levels = c("1", "2", "3", "4", "5", "6", "7", "8")),
+                        Faixa = col_integer(), Arv = col_integer(),
+                        QF = col_factor(levels = c("1", "2",  "3")),
+                        Titica = col_integer(),
+                        Selecao = col_factor(levels = c("Explorar", "Remanescente"))))
+
+set.seed(1000)
+data %>% 
+  filter(Nome_Comum %in% c("Angelim vermelho", "Maparajuba",
+                           "Acapu", "Cumaru", "Tauari")) %>%
+  group_by(Nome_Comum) %>% 
+  sample_n(3, replace = F) %>% 
+  select(!c("Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
+  DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '1000px',
+                 caption = '',
+     options=list(pageLength = 20, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
+          "}")
+       ) 
+     )
+```
+]
+
 
 
 
