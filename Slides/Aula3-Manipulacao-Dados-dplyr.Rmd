@@ -561,9 +561,6 @@ select(data, contains("e")) %>% CustomDT
 ]
 ]
 
-
-
-
 ---
 
 <!--Slide XX -->
