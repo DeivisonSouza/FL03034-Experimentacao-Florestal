@@ -219,19 +219,18 @@ layout: true
 - Um dos principais pacotes do .green[tidyverse].
 - O pacote dplyr é essencialmente um conjunto de funções projetadas para a **manipulação de dados**.
 - Foi projetado para ser simples, intuitivo, amigável e elegante. 
-- O encadeamento de comandos é facilitado com o emprego do operador **%>%** (piper).
+- O encadeamento de comandos é facilitado pelo emprego do operador **%>%** (pipe).
+- Códigos em R que fazem uso dos verbos dplyr são mais elegantes, compeeensíveis e intuitivos.
+- **Cheatsheet do RStudio**: Help $\rightarrow$ Cheatsheets $\rightarrow$ Data Transformation with dplyr
 
 
-```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
+```{r echo=FALSE, out.width='10%', fig.align='left', fig.cap='', dpi=600}
 knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ```
-
-
 
 ---
 
 ## Manipulação de dados com dplyr
-<br>
 
 .pull-left-3[
 ```{r echo=F, eval=T}
@@ -276,7 +275,8 @@ Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.c
 
 ---
 
-
+## Manipulação de dados com dplyr
+<br>
 
 ---
 
