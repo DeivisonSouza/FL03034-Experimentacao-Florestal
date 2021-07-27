@@ -544,14 +544,14 @@ Função usada para selecionar colunas cujos nomes tenham algum texto padrão.
 
 ```{r echo=TRUE, eval=FALSE}
 select(
-  data, contains("ca")
+  data, contains("e")
   )
 ```
 
 ]
 
 ```{r sel5, echo=F, eval=F}
-select(data, contains("ca")) %>% CustomDT
+select(data, contains("e")) %>% CustomDT
 ```
 ]
 
