@@ -444,7 +444,7 @@ data %>% CustomDT
 <br>
 
 .font80[
-Função usada para selecionar colunas cujos nomes iniciam com um texto padrão.
+Função usada para selecionar colunas cujos nomes .green[iniciam] com um texto padrão.
 ]
 
 ```{r echo=TRUE, eval=FALSE}
@@ -462,6 +462,54 @@ select(data, starts_with("N")) %>% CustomDT
 
 .pull-right-11[
 ```{r ref.label="sel3", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Usando funções auxiliares...**]
+<br><br>
+
+**ends_with()**
+<br>
+
+.font80[
+Função usada para selecionar colunas cujos nomes .green[terminam] com um texto padrão.
+]
+
+```{r echo=TRUE, eval=FALSE}
+select(
+  data, ends_with("o")
+  )
+```
+
+]
+
+```{r sel4, echo=F, eval=F}
+select(data, ends_with("o")) %>% CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel4", echo=FALSE, eval=TRUE, collapse=T}
 ```
 ]
 ]
