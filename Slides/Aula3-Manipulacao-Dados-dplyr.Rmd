@@ -563,6 +563,54 @@ select(data, contains("e")) %>% CustomDT
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Usando funções auxiliares...**]
+<br><br>
+
+**matches()**
+<br>
+
+.font80[
+Função usada para selecionar colunas que contenham nomes correspondentes à alguma expressão regular.
+]
+
+```{r echo=TRUE, eval=FALSE}
+select(
+  data, matches('No|cao|F')
+  )
+```
+
+]
+
+```{r sel6, echo=F, eval=F}
+select(data, matches('No|cao|F')) %>% CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel6", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
