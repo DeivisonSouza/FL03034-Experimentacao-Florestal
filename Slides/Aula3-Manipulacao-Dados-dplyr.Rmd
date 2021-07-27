@@ -387,22 +387,29 @@ data %>% CustomDT
 .blue[**Seleção de várias coluna...**]
 <br><br>
 
-**Alternativa 1**: 
+**Alternativa 1** (sem %>%) 
 ```{r echo=TRUE, eval=FALSE}
 select(
-  data, Nome_Comum, HC, QF
+  data, CAP, HC, QF
   )
 ```
 
-**Alternativa 2**
+**Alternativa 2** (com %>%)
 ```{r echo=TRUE, eval=FALSE}
 data %>% 
-  select(Nome_Comum, HC, QF)
+  select(CAP, HC, QF)
 ```
+
+**Alternativa 3** (%>% + :)
+```{r echo=TRUE, eval=FALSE}
+data %>% 
+  select(CAP:QF)
+```
+
 ]
 
 ```{r sel2, echo=F, eval=F}
-select(data, Nome_Comum, HC, QF) %>% CustomDT
+select(data, CAP, HC, QF) %>% CustomDT
 ```
 ]
 
