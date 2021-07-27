@@ -765,6 +765,50 @@ data %>%
 ]
 ]
 
+---
+
+name: arrange
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **arrange()** - .black[Ordenar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-12[
+.font80[
+**Ordem decrescente de uma variável**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  arrange(
+    desc(HC)
+    )
+```
+
+]
+
+```{r arr2, echo=F, eval=F}
+data %>%
+  arrange(desc(HC)) %>% 
+  CustomDT
+```
+]
+
+.pull-right-12[
+```{r ref.label="arr2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
 
 
 ---
