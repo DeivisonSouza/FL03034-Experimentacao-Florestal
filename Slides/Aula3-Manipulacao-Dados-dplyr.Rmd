@@ -683,12 +683,12 @@ data %>% CustomDT
 .pull-right-10[
 .pull-left-11[
 .font80[
-.blue[**Função concatenate e operador lógico**]
+.blue[**Função concatenate**]
 <br><br>
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
-  select(-c(Nome_Especie, Selecao))
+  select(-c(CAP:Selecao))
 ```
 
 
@@ -697,14 +697,14 @@ data %>%
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
-  select(-c(Nome_Especie, Selecao))
+  select(!(CAP:Selecao))
 ```
 
 ]
 
 ```{r sel9, echo=F, eval=F}
 data %>%
-  select(-c(Nome_Especie, Selecao)) %>% 
+  select(-c(CAP:Selecao)) %>% 
   CustomDT
 ```
 ]
