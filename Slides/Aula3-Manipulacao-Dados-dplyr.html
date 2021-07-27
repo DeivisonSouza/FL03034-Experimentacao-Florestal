@@ -7,7 +7,7 @@
     <script src="Aula3-Manipulacao-Dados-dplyr_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-Manipulacao-Dados-dplyr_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb5db776a65b448d92e414c4800225c5","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x17a3d7702214e578d3442fada18453f","expires":1}</script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -579,6 +579,57 @@ select(
 ]
 ]
 
+
+---
+
+## Manipulação de dados com dplyr
+&lt;br&gt;
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+<div id="htmlwidget-afc3c8e59bcb388ab21f" style="width:180px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-afc3c8e59bcb388ab21f">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[[258,256,1329,18,63,1548,2890,1878,494,1248,558,2672],["Acapu","Acapu","Acapu","Angelim vermelho","Angelim vermelho","Angelim vermelho","Maparajuba","Maparajuba","Maparajuba","Tauari","Tauari","Tauari"],[186,157,178,540,190,700,200,162,210,600,161,240],[13,10,12,15,14,19,18,17,14,17,16,18],[1,2,1,1,1,3,1,1,1,2,1,1],["Remanescente","Remanescente","Remanescente","Explorar","Remanescente","Remanescente","Explorar","Remanescente","Explorar","Explorar","Remanescente","Explorar"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>N_Arvore<\/th>\n      <th>Nome_Especie<\/th>\n      <th>CAP<\/th>\n      <th>HC<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,2,3,4]}],"order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Combinando funções auxiliares e operadores lógicos...**]
+&lt;br&gt;&lt;br&gt;
+
+
+```r
+data %&gt;%
+  select(
+    starts_with("N") &amp;
+      !ends_with("Arvore")) 
+```
+
+
+<span>&lt;i class="fas  fa-hand-point-down faa-vertical animated "&gt;&lt;/i&gt;</span> **Experimente o comando**
+&lt;br&gt;
+
+
+```r
+data %&gt;%
+  select(
+    starts_with("N") |
+      ends_with("Arvore"))
+```
+
+]
+
+
+]
+
+.pull-right-11[
+<div id="htmlwidget-c9277e4ea99732fcd211" style="width:180px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c9277e4ea99732fcd211">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Acapu","Acapu","Acapu","Angelim vermelho","Angelim vermelho","Angelim vermelho","Maparajuba","Maparajuba","Maparajuba","Tauari","Tauari","Tauari"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Nome_Especie<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":20,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,20,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+]
 
 ---
 

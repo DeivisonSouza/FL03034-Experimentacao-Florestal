@@ -611,6 +611,62 @@ select(data, matches('No|cao|F')) %>% CustomDT
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Combinando funções auxiliares e operadores lógicos...**]
+<br><br>
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  select(
+    starts_with("N") &
+      !ends_with("Arvore")) 
+```
+
+
+`r anicon::faa("hand-point-down", animate="vertical")` **Experimente o comando**
+<br>
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  select(
+    starts_with("N") |
+      ends_with("Arvore"))
+```
+
+]
+
+```{r sel8, echo=F, eval=F}
+data %>% 
+  select(
+    starts_with("N") &
+      !ends_with("Arvore")) %>% 
+  CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel8", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
