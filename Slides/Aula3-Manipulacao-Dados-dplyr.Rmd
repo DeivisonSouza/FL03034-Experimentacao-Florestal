@@ -366,6 +366,56 @@ select(data, Nome_Comum) %>% CustomDT
 ]
 ]
 
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Seleção de várias coluna...**]
+<br><br>
+
+**Alternativa 1**: 
+```{r echo=TRUE, eval=FALSE}
+select(
+  data, Nome_Comum, HC, QF
+  )
+```
+
+**Alternativa 2**
+```{r echo=TRUE, eval=FALSE}
+data %>% 
+  select(Nome_Comum, HC, QF)
+```
+]
+
+```{r sel2, echo=F, eval=F}
+select(data, Nome_Comum, HC, QF) %>% CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+---
+
+
+
 
 ---
 
