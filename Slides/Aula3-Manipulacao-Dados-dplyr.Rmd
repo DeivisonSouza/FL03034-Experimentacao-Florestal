@@ -170,11 +170,6 @@ background-size: cover
 
 .font200[**.yellow[Parte 1] <br> .white[Importação de dados <br> com readr]**] 
 
-```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
-knitr::include_graphics("https://readr.tidyverse.org/logo.png")
-```
-
-
 .left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
 
 ---
@@ -314,6 +309,13 @@ Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena a
 **A base completa pode ser acessada em**: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
 ]
 ]
+
+---
+
+## Manipulação de dados com dplyr
+
+
+
 
 ---
 
