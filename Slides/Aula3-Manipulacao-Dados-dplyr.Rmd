@@ -1,6 +1,6 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Introdução à Linguagem de Programação R"
+subtitle: "Importação e Manipulação de dados: readr e dplyr"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: 
@@ -107,7 +107,7 @@ BibOptions(check.entries = FALSE,
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Manipulação de dados com dplyr</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
 
 ---
 
@@ -165,22 +165,22 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/class3/inv2.jpg)
+background-image: url(fig/class3/arara.jpg)
 background-size: cover
 
-.font200[**Parte 1 <br> .red[Importação de dados <br> com dplyr]**] 
+.font200[**.yellow[Parte 1] <br> .white[Importação de dados <br> com readr]**] 
 
-.pull-left-4[
-```{r echo=FALSE, out.width='50%', fig.align='left', fig.cap='', dpi=600}
-knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
+knitr::include_graphics("https://readr.tidyverse.org/logo.png")
 ```
-]
 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
 
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Manipulação de dados com dplyr</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
 
 
 
@@ -197,10 +197,16 @@ layout: true
 layout: false
 name: conc
 class: inverse, top, right
-background-image: url(fig/class3/inv1.jpg)
+background-image: url(fig/class3/arara2.jpg)
 background-size: cover
 
-.font200[**Parte 1 <br> .red[Manipulação de dados <br> com .orange[dplyr]]**]
+.font200[**.yellow[Parte 2] <br> .white[Manipulação de dados <br> com dplyr]**] 
+
+```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```
+
+.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
 
 ---
 layout: true
