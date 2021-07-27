@@ -667,6 +667,58 @@ data %>%
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Função concatenate e operador lógico**]
+<br><br>
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  select(-c(Nome_Especie, Selecao))
+```
+
+
+`r anicon::faa("hand-point-down", animate="vertical")` **Experimente o comando**
+<br>
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  select(-c(Nome_Especie, Selecao))
+```
+
+]
+
+```{r sel9, echo=F, eval=F}
+data %>%
+  select(-c(Nome_Especie, Selecao)) %>% 
+  CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel9", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
