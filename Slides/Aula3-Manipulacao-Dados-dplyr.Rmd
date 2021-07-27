@@ -283,12 +283,14 @@ data <- read_csv("data/UPA07DVS.csv",
                         Selecao = col_factor(levels = c("Explorar", "Remanescente"))))
 
 set.seed(1000)
-data %>% 
+data <- data %>% 
   filter(Nome_Comum %in% c("Angelim vermelho", "Maparajuba",
                            "Acapu", "Tauari")) %>%
   group_by(Nome_Comum) %>% 
   sample_n(3, replace = F) %>% 
-  select(!c("UT", "Faixa", "Nome_Cientifico", "Titica", "Lat", "Long")) %>%  
+  select(!c("UT", "Faixa", "Nome_Cientifico", "Titica", "Lat", "Long")) 
+
+data %>%  
   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
                  class = "display", width = '200px',
                  caption = '',
@@ -320,23 +322,9 @@ Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena a
 
 ### .font90[Função **select()** - .black[selecionar colunas]]
 
-.pull-left-1[
+.pull-left-10[
 ```{r echo=F, eval=T}
-data <- read_csv("data/UPA07DVS.csv",
-                 col_types =
-                   cols(UT = col_factor(levels = c("1", "2", "3", "4", "5", "6", "7", "8")),
-                        Faixa = col_integer(), Arv = col_integer(),
-                        QF = col_factor(levels = c("1", "2",  "3")),
-                        Titica = col_integer(),
-                        Selecao = col_factor(levels = c("Explorar", "Remanescente"))))
-
-set.seed(1000)
-data %>% 
-  filter(Nome_Comum %in% c("Angelim vermelho", "Maparajuba",
-                           "Acapu", "Tauari")) %>%
-  group_by(Nome_Comum) %>% 
-  sample_n(3, replace = F) %>% 
-  select(!c("UT", "Faixa", "Nome_Cientifico", "Titica", "Lat", "Long")) %>%  
+data %>%  
   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
                  class = "display", width = '410px',
                  caption = '',
@@ -350,10 +338,7 @@ data %>%
 ```
 ]
 
-
-```{r}
-
-```
+--
 
 
 
