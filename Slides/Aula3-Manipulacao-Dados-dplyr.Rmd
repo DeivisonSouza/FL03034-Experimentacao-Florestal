@@ -421,7 +421,50 @@ select(data, CAP, HC, QF) %>% CustomDT
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
 
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Usando funções auxiliares...**]
+<br><br>
+
+**starts_with()**
+<br>
+
+.font80[
+Função usada para selecionar colunas cujos nomes iniciam com um texto padrão.
+]
+
+```{r echo=TRUE, eval=FALSE}
+select(
+  data, starts_with("N")
+  )
+```
+
+]
+
+```{r sel3, echo=F, eval=F}
+select(data, starts_with("N")) %>% CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel3", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
 
 
 ---
