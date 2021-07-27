@@ -282,10 +282,38 @@ Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.c
 
 ### Verbos **dplyr**
 
-
+.pull-left-4[
 - O **dplyr** possui diversos verbos (funções). A seguir são listadas algumas das mais usuais:
 
+.center[
+mutate()
 
+select()
+
+filter()
+
+arrange()
+
+group_by()
+
+summarise()
+]
+]
+
+.pull-right-4[
+Lista de funções do pacote **dplyr**:
+
+```{r, echo=T, eval=F}
+ls("package:dplyr")
+#length(ls("package:dplyr"))
+#lsf.str("package:dplyr")
+```
+
+Ou simplesmente digite .green[`dplyr::`].
+
+Atualmente são `r length(ls("package:dplyr"))` funções projetadas para manipulação de dados.
+
+]
 
 ---
 
