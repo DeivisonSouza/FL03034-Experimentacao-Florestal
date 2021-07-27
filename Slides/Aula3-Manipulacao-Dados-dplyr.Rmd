@@ -269,7 +269,7 @@ Atualmente são `r length(ls("package:dplyr"))` funções projetadas para manipu
 
 ## Manipulação de dados com dplyr
 
-.pull-left-3[
+.pull-left-1[
 ```{r echo=F, eval=T}
 data <- read_csv("data/UPA07DVS.csv",
                  col_types =
@@ -285,9 +285,9 @@ data %>%
                            "Acapu", "Cumaru", "Tauari")) %>%
   group_by(Nome_Comum) %>% 
   sample_n(3, replace = F) %>% 
-  select(!c("UT", "Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
+  select(!c("UT", "Faixa", "Arv", "Nome_Cientifico", "Titica", "Lat", "Long")) %>%  
   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '750px',
+                 class = "display", width = '410px',
                  caption = '',
      options=list(pageLength = 20, dom = 'tip', autoWidth = F,
        initComplete = htmlwidgets::JS(
@@ -300,7 +300,7 @@ data %>%
 ]
 
 
-.pull-right-3[
+.pull-right-2[
 <br><br>
 .font90[
 Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena amostra de dados de IF100%.
@@ -313,6 +313,10 @@ Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena a
 ---
 
 ## Manipulação de dados com dplyr
+<br>
+
+### Função **select()** - .black[selecionar colunas]
+
 
 
 
