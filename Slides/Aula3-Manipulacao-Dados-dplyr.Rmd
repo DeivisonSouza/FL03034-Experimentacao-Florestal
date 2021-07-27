@@ -202,10 +202,6 @@ background-size: cover
 
 .font200[**.yellow[Parte 2] <br> .white[Manipulação de dados <br> com dplyr]**] 
 
-```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
-knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
-```
-
 .left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
 
 ---
@@ -216,6 +212,26 @@ layout: true
 ---
 
 ## Manipulação de dados com dplyr
+<br>
+
+### Sobre o pacote **dplyr**...
+
+- Um dos principais pacotes do .green[tidyverse].
+- O pacote dplyr é essencialmente um conjunto de funções projetadas para a **manipulação de dados**.
+- Foi projetado para ser simples, intuitivo, amigável e elegante. 
+- O encadeamento de comandos é facilitado com o emprego do operador **%>%** (piper).
+
+
+```{r echo=FALSE, out.width='10%', fig.align='right', fig.cap='', dpi=600}
+knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
+```
+
+
+
+---
+
+## Manipulação de dados com dplyr
+<br>
 
 .pull-left-3[
 ```{r echo=F, eval=T}
@@ -257,6 +273,10 @@ data %>%
 Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
 
 ]
+
+---
+
+
 
 ---
 
