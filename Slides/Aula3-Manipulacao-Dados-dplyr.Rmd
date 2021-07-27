@@ -767,7 +767,6 @@ data %>%
 
 ---
 
-name: arrange
 ## Manipulação de dados com dplyr
 <br>
 
@@ -808,6 +807,47 @@ data %>%
 ]
 ]
 
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **arrange()** - .black[Ordenar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-12[
+.font80[
+**Ordenar em função de duas ou mais variáveis**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  arrange(
+    CAP, HC
+    )
+```
+
+]
+
+```{r arr3, echo=F, eval=F}
+data %>%
+  arrange(CAP, HC) %>% 
+  CustomDT
+```
+]
+
+.pull-right-12[
+```{r ref.label="arr3", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
 
 
 
