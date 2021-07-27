@@ -181,7 +181,9 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.3 - Auxliar contains()](#contains)
 
-&nbsp;&nbsp;&nbsp;&nbsp;[1.3 - Auxliar matches()](#matches)
+&nbsp;&nbsp;&nbsp;&nbsp;[1.4 - Auxliar matches()](#matches)
+
+[2 - Função arrange()](#arrange)
 
 ]
 ]
@@ -719,6 +721,46 @@ data %>%
 
 .pull-right-11[
 ```{r ref.label="sel9", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+---
+name: arrange
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **arrange()** - .black[Ordenar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-12[
+.font80[
+**Ordem crescente de uma variável**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  arrange(HC)
+```
+
+]
+
+```{r arr1, echo=F, eval=F}
+data %>%
+  arrange(HC) %>% 
+  CustomDT
+```
+]
+
+.pull-right-12[
+```{r ref.label="arr1", echo=FALSE, eval=TRUE, collapse=T}
 ```
 ]
 ]
