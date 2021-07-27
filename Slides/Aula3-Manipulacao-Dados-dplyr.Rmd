@@ -298,10 +298,10 @@ data <- read_csv("data/UPA07DVS.csv")
 
 set.seed(1000)
 data <- data %>% 
-  filter(Nome_Comum %in% 
+  filter(Nome_Especie %in% 
            c("Acapu", "Angelim vermelho", 
              "Maparajuba", "Tauari")) %>%
-  group_by(Nome_Comum) %>% 
+  group_by(Nome_Especie) %>% 
   sample_n(3, replace = F) %>% 
   select(!c("UT", "Faixa", "Nome_Cientifico", 
             "Titica", "Lat", "Long"))
@@ -345,18 +345,18 @@ data %>% CustomDT
 
 **Alternativa 1**: 
 ```{r echo=TRUE, eval=FALSE}
-select(data, Nome_Comum)
+select(data, Nome_Especie)
 ```
 
 **Alternativa 2**
 ```{r echo=TRUE, eval=FALSE}
 data %>% 
-  select(Nome_Comum)
+  select(Nome_Especie)
 ```
 
 
 ```{r sel, echo=F, eval=F}
-select(data, Nome_Comum) %>% CustomDT
+select(data, Nome_Especie) %>% CustomDT
 ```
 ]
 
@@ -497,14 +497,14 @@ Função usada para selecionar colunas cujos nomes .green[terminam] com um texto
 
 ```{r echo=TRUE, eval=FALSE}
 select(
-  data, ends_with("o")
+  data, ends_with("e")
   )
 ```
 
 ]
 
 ```{r sel4, echo=F, eval=F}
-select(data, ends_with("o")) %>% CustomDT
+select(data, ends_with("e")) %>% CustomDT
 ```
 ]
 
@@ -513,6 +513,55 @@ select(data, ends_with("o")) %>% CustomDT
 ```
 ]
 ]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-11[
+.font80[
+.blue[**Usando funções auxiliares...**]
+<br><br>
+
+**contains()**
+<br>
+
+.font80[
+Função usada para selecionar colunas cujos nomes tenham algum texto padrão.
+]
+
+```{r echo=TRUE, eval=FALSE}
+select(
+  data, contains("ca")
+  )
+```
+
+]
+
+```{r sel5, echo=F, eval=F}
+select(data, contains("ca")) %>% CustomDT
+```
+]
+
+.pull-right-11[
+```{r ref.label="sel5", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
 
 
 ---
