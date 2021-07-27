@@ -233,51 +233,6 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ---
 
 ## Manipulação de dados com dplyr
-
-.pull-left-3[
-```{r echo=F, eval=T}
-data <- read_csv("data/UPA07DVS.csv",
-                 col_types =
-                   cols(UT = col_factor(levels = c("1", "2", "3", "4", "5", "6", "7", "8")),
-                        Faixa = col_integer(), Arv = col_integer(),
-                        QF = col_factor(levels = c("1", "2",  "3")),
-                        Titica = col_integer(),
-                        Selecao = col_factor(levels = c("Explorar", "Remanescente"))))
-
-set.seed(1000)
-data %>% 
-  filter(Nome_Comum %in% c("Angelim vermelho", "Maparajuba",
-                           "Acapu", "Cumaru", "Tauari")) %>%
-  group_by(Nome_Comum) %>% 
-  sample_n(3, replace = F) %>% 
-  select(!c("UT", "Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
-  DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '750px',
-                 caption = '',
-     options=list(pageLength = 20, dom = 'tip', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "10pt", "'});"),
-          "}")
-       ) 
-     )
-```
-]
-
-
-.pull-right-3[
-<br><br>
-**Dados**: Amostra de 15 árvores.
-
-**Base completa**:
-
-Link: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
-
-]
-
----
-
-## Manipulação de dados com dplyr
 <br>
 
 ### Verbos **dplyr**
@@ -313,6 +268,51 @@ Ou simplesmente digite .green[`dplyr::`].
 
 Atualmente são `r length(ls("package:dplyr"))` funções projetadas para manipulação de dados.
 
+]
+
+---
+
+## Manipulação de dados com dplyr
+
+.pull-left-3[
+```{r echo=F, eval=T}
+data <- read_csv("data/UPA07DVS.csv",
+                 col_types =
+                   cols(UT = col_factor(levels = c("1", "2", "3", "4", "5", "6", "7", "8")),
+                        Faixa = col_integer(), Arv = col_integer(),
+                        QF = col_factor(levels = c("1", "2",  "3")),
+                        Titica = col_integer(),
+                        Selecao = col_factor(levels = c("Explorar", "Remanescente"))))
+
+set.seed(1000)
+data %>% 
+  filter(Nome_Comum %in% c("Angelim vermelho", "Maparajuba",
+                           "Acapu", "Cumaru", "Tauari")) %>%
+  group_by(Nome_Comum) %>% 
+  sample_n(3, replace = F) %>% 
+  select(!c("UT", "Faixa", "Arv", "Titica", "Lat", "Long")) %>%  
+  DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
+                 class = "display", width = '750px',
+                 caption = '',
+     options=list(pageLength = 20, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "10pt", "'});"),
+          "}")
+       ) 
+     )
+```
+]
+
+
+.pull-right-3[
+<br><br>
+.font90[
+Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena amostra de dados de IF100%.
+<br><br>
+
+**A base completa pode ser acessada em**: [IF100%](https://deivisonsouza.github.io/FL03034-EF/Slides/data/UPA07DVS.csv)
+]
 ]
 
 ---
