@@ -908,7 +908,7 @@ data %>% CustomDT
 .pull-right-10[
 .pull-top[
 .font80[
-**Filtrar linhas em função de alguma variável**
+**Filtrar linhas para algum intervalo da variável**
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
@@ -933,6 +933,130 @@ data %>%
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **filter()** - .black[Filtrar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**Filtrar linhas em função de duas ou mais variáveis**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  filter(HC > 10, Selecao == "Explorar")
+```
+
+]
+
+```{r fil3, echo=F, eval=F}
+data %>%
+  filter(HC > 10, Selecao == "Explorar") %>% 
+  CustomDT
+```
+]
+
+.pull-bottom[
+```{r ref.label="fil3", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **filter()** - .black[Filtrar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**Filtrar linhas usando operador .green[%in%]** - Variáveis categóricas
+
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  filter(Nome_Especie %in% c('Acapu', 'Tauari'))
+```
+
+]
+
+```{r fil4, echo=F, eval=F}
+data %>%
+  filter(Nome_Especie %in% c('Acapu', 'Tauari')) %>% 
+  CustomDT
+```
+]
+
+.pull-bottom[
+```{r ref.label="fil4", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **filter()** - .black[Filtrar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**Filtrar linhas com várias condições**
+
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  filter(Nome_Especie %in% c('Acapu', 'Tauari'),
+         HC >= 12, QF == 1)
+```
+
+]
+
+```{r fil5, echo=F, eval=F}
+data %>%
+  filter(Nome_Especie %in% c('Acapu', 'Tauari'),
+         HC >= 12, QF == 1) %>% 
+  CustomDT
+```
+]
+
+.pull-bottom[
+```{r ref.label="fil5", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
 
 ---
 
