@@ -1060,6 +1060,57 @@ data %>%
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
+
+.pull-left-12[
+```{r echo=F, eval=T}
+data %>% 
+  select(-c(N_Arvore, QF, Selecao)) %>% 
+  CustomDT
+```
+]
+
+--
+
+.pull-right-12[
+.pull-left-1[
+.font80[
+**Criar novas variáveis e adicionar à tabela**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(DAP = CAP/pi)
+```
+<br><br>
+
+`r anicon::faa("hand-point-down", animate="vertical")` **Experimente o comando**
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(DAP = round(CAP/pi, 2))
+```
+
+]
+
+```{r mut1, echo=F, eval=F}
+data %>%
+  select(-c(N_Arvore, QF, Selecao)) %>% 
+  mutate(DAP = CAP/pi) %>%
+  CustomDT
+```
+]
+
+.pull-right-2[
+```{r ref.label="mut1", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
