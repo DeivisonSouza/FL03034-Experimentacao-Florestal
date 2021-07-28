@@ -849,6 +849,89 @@ data %>%
 ]
 ]
 
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **filter()** - .black[Filtrar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**Filtrar linhas em função de alguma variável**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  filter(HC > 15)
+```
+
+]
+
+```{r fil1, echo=F, eval=F}
+data %>%
+  filter(HC > 15) %>% 
+  CustomDT
+```
+]
+
+.pull-bottom[
+```{r ref.label="fil1", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **filter()** - .black[Filtrar linhas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**Filtrar linhas em função de alguma variável**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  filter(HC > 10 & HC <= 15)
+```
+
+]
+
+```{r fil2, echo=F, eval=F}
+data %>%
+  filter(HC > 10 & HC <= 15) %>% 
+  CustomDT
+```
+]
+
+.pull-bottom[
+```{r ref.label="fil2", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+
+---
 
 
 ---
