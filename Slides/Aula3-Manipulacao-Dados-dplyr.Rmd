@@ -185,6 +185,8 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.5 - Função everything()](#everything)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[1.6 - Função where()](#where)
+
 [2 - Função arrange()](#arrange)
 
 [3 - Função filter()](#filter)
@@ -677,6 +679,53 @@ data %>%
 ]
 ]
 
+---
+name: where
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **select()** - .black[selecionar colunas]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>% CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-left-10[
+.font80[
+.blue[**Usando funções auxiliares...**]
+<br><br>
+
+.green[**where()**]
+<br>
+
+.font80[
+Aplica uma função à todas as variáveis e seleciona aquelas para as quais a resposta é TRUE.
+]
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  select(where(is.character))
+```
+
+]
+
+```{r sel12, echo=F, eval=F}
+data %>%
+  select(where(is.character)) %>% 
+  CustomDT
+```
+]
+
+.pull-right-10[
+```{r ref.label="sel12", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
 
 ---
 
