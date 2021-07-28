@@ -342,7 +342,26 @@ Para aprender a intuição de algumas funções **dplyr** usaremos uma pequena a
 ]
 
 ---
+
+layout: false
 name: select
+class: inverse, middle, left
+background-image: url(fig/class3/Inv2.png)
+background-size: cover
+
+
+.font200[**.white[Manipulação de dados <br> com dplyr]**] 
+<br><br>
+
+.font150[**.yellow[Função select()]**] 
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
+
+---
+
 ## Manipulação de dados com dplyr
 <br>
 
@@ -877,7 +896,26 @@ data %>%
 ]
 
 ---
+
+layout: false
 name: arrange
+class: inverse, middle, left
+background-image: url(fig/class3/Inv2.png)
+background-size: cover
+
+
+.font200[**.white[Manipulação de dados <br> com dplyr]**] 
+<br><br>
+
+.font150[**.yellow[Função arrange()]**] 
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
+
+---
+
 ## Manipulação de dados com dplyr
 <br>
 
@@ -1001,7 +1039,26 @@ data %>%
 ]
 
 ---
+
+layout: false
 name: filter
+class: inverse, middle, left
+background-image: url(fig/class3/Inv2.png)
+background-size: cover
+
+
+.font200[**.white[Manipulação de dados <br> com dplyr]**] 
+<br><br>
+
+.font150[**.yellow[Função filter()]**] 
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
+
+---
+
 ## Manipulação de dados com dplyr
 <br>
 
@@ -1210,7 +1267,26 @@ data %>%
 ]
 
 ---
+
+layout: false
 name: mutate
+class: inverse, middle, left
+background-image: url(fig/class3/Inv2.png)
+background-size: cover
+
+
+.font200[**.white[Manipulação de dados <br> com dplyr]**] 
+<br><br>
+
+.font150[**.yellow[Função mutate()]**] 
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
+
+---
+
 ## Manipulação de dados com dplyr
 <br>
 
