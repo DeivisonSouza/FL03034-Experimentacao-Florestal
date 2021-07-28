@@ -1078,7 +1078,7 @@ data %>%
 .pull-right-12[
 .pull-left-1[
 .font80[
-**Criar novas variáveis e adicionar à tabela**
+**Criar uma nova variável e adicioná-la à tabela**
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
@@ -1108,6 +1108,112 @@ data %>%
 ]
 ]
 
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
+
+.pull-left-12[
+```{r echo=F, eval=T}
+data %>% 
+  select(-c(N_Arvore, QF, Selecao)) %>% 
+  CustomDT
+```
+]
+
+--
+
+.pull-right-12[
+.pull-left-1[
+.font80[
+**Modificar uma variável na tabela**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(CAP = CAP/100)
+```
+<br><br>
+
+`r anicon::faa("hand-point-down", animate="vertical")` **Experimente o comando**
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(CAP = round(CAP/100, 2))
+```
+
+]
+
+```{r mut2, echo=F, eval=F}
+data %>%
+  select(-c(N_Arvore, QF, Selecao)) %>% 
+  mutate(CAP = CAP/100) %>%
+  CustomDT
+```
+]
+
+.pull-right-2[
+```{r ref.label="mut2", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **mutate()** - .black[Modificar e criar variáveis]]
+
+.pull-left-12[
+```{r echo=F, eval=T}
+data %>% 
+  select(-c(N_Arvore, QF, Selecao)) %>% 
+  CustomDT
+```
+]
+
+--
+
+.pull-right-12[
+.pull-left-1[
+.font80[
+**Modificar/criar múltiplas variáveis no mesmo mutate()**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(DAP = CAP/pi, 
+         CAP = CAP/100,
+         gi = (DAP^2*pi)/40000))
+```
+<br><br>
+
+`r anicon::faa("hand-point-down", animate="vertical")` **Experimente o comando**
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  mutate(DAP = CAP/pi, 
+         CAP = CAP/100,
+         gi = (DAP^2*pi)/40000,
+         vi = gi*HC*0.7)
+```
+
+]
+
+```{r mut3, echo=F, eval=F}
+data %>%
+  select(-c(N_Arvore, QF, Selecao)) %>%
+  mutate(DAP = CAP/pi, 
+         CAP = CAP/100,
+         gi = (DAP^2*pi)/40000) %>%
+  CustomDT
+```
+]
+
+.pull-right-2[
+```{r ref.label="mut3", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
 
 ---
 
