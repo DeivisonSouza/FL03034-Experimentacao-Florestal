@@ -1284,7 +1284,9 @@ background-size: cover
 .font200[**.white[Manipulação de dados <br> com dplyr]**] 
 <br><br>
 
-.font150[**.yellow[Função mutate()]**] 
+.font150[**.yellow[Função mutate()]**]
+
+.white[Criar (ou modificar) variáveis e manter as existentes.]
 
 ---
 layout: true
@@ -1560,6 +1562,27 @@ data %>%
 ```
 ]
 ]
+
+---
+
+layout: false
+name: groupby
+class: inverse, middle, left
+background-image: url(fig/class3/Inv2.png)
+background-size: cover
+
+
+.font200[**.white[Manipulação de dados <br> com dplyr]**] 
+<br><br>
+
+.font150[**.yellow[Função group_by()]**]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Importação e Manipulação de dados: readr e dplyr</div>
+
+---
 
 
 
