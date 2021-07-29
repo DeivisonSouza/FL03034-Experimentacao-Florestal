@@ -98,7 +98,7 @@ CustomDT <- function(data){
                          style = "default",
                          class = "display", width = '180px',
                          caption = '',
-     options=list(pageLength = 20, dom = 'tip', autoWidth = F,
+     options=list(pageLength = 20, dom = 't', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
           paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
@@ -316,19 +316,9 @@ Atualmente são `r length(ls("package:dplyr"))` funções projetadas para manipu
 
 .font90[
 .pull-left-9[
-```{r tibble, echo=T, eval=F}
-library(readr)
-data <- read_csv("data/UPA07DVS.csv")
 
-set.seed(1000)
-data <- data %>% 
-  filter(Nome_Especie %in% 
-           c("Acapu", "Angelim vermelho", 
-             "Maparajuba", "Tauari")) %>%
-  group_by(Nome_Especie) %>% 
-  sample_n(3, replace = F) %>% 
-  select(!c("UT", "Faixa", "Nome_Cientifico", 
-            "Titica", "Lat", "Long"))
+```{r tibble, echo=T, eval=F}
+data <- readr::read_csv("data/data.csv")
 
 data %>% CustomDT # Apenas para customizar a tabela
 ```
@@ -1590,9 +1580,9 @@ name: summarise
 ## Manipulação de dados com dplyr
 <br>
 
-### .font90[Função **summarise()** - .black[Modificar e criar variáveis]]
+### .font90[Função **summarise()** - .black[Sumarizar dados]]
 
-.pull-left-12[
+.pull-left-10[
 ```{r echo=F, eval=T}
 data %>%
   CustomDT
@@ -1601,28 +1591,51 @@ data %>%
 
 --
 
-.pull-right-12[
-.pull-left-2[
+.pull-right-10[
+.pull-top[
 .font80[
-**.blue[Resumindo dados...]**
+**.blue[Estatísticas de resumo dos dados...]**
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
-  summarize(media_HC = mean(HC, na.rm = TRUE))
+  summarise(media_HC = mean(HC, na.rm = TRUE))
 ```
-
-]
 
 ```{r sumr1, echo=F, eval=F}
 data %>%
-  summarize(media_HC = mean(HC, na.rm = TRUE)) %>%
+  summarise(media_HC = mean(HC, na.rm = TRUE)) %>% 
   CustomDT
 ```
-]
 
-.pull-right-1[
 ```{r ref.label="sumr1", echo=FALSE, eval=TRUE, collapse=T}
 ```
+
+]
+]
+
+.pull-bottom[
+.font80[
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  summarise(media_HC = mean(HC, na.rm = TRUE),
+            sd_HC = mean(HC, na.rm = TRUE),
+            min_HC = min(HC, na.rm = TRUE),
+            max_HC = max(HC, na.rm = TRUE))
+```
+
+```{r sumr2, echo=F, eval=F}
+data %>%
+  summarise(media_HC = mean(HC, na.rm = TRUE),
+            sd_HC = mean(HC, na.rm = TRUE),
+            min_HC = min(HC, na.rm = TRUE),
+            max_HC = max(HC, na.rm = TRUE)) %>% 
+  CustomDT
+```
+
+```{r ref.label="sumr2", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
 ]
 ]
 
