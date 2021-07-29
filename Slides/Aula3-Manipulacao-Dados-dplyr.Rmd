@@ -201,6 +201,8 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 
 [5 - Função summarise()](#summarise)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[5.1 - Função across()](#across)
+
 ]
 ]
 ]
@@ -1618,7 +1620,7 @@ data %>%
 
 .pull-bottom[
 .font80[
-**.blue[Variáveis estatísticas na mesma summarise()...]**
+**.blue[Várias estatísticas na mesma summarise()...]**
 ```{r echo=TRUE, eval=FALSE}
 data %>%
   summarise(media_HC = mean(HC, na.rm = TRUE),
@@ -1689,7 +1691,7 @@ CustomDT
 ]
 
 ---
-
+name: across
 ## Manipulação de dados com dplyr
 <br>
 
@@ -1707,20 +1709,35 @@ data %>%
 .pull-right-10[
 .pull-top[
 .font80[
-**.blue[Sumarizando diversas variáveis...]**
+**.blue[Sumarizando diversas variáveis...]** 
 <br><br>
 
 .green[**across()**]
+<br>
+
+Aplicar uma função (ou funções) em várias colunas.
+
+A função .green[across()] substitui a família de verbos **summarise** com sufixos:.green[_if, _at, _all].
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
-  summarise(across(c("HC", "CAP"), ~ mean(.x, na.rm = TRUE)))
+  summarise(across(
+    .cols = c(HC, CAP),
+    .fns = mean, 
+    na.rm = TRUE,
+    .names = "mean_{.col}"
+  ))
 ```
 
 ```{r sumr4, echo=F, eval=F}
 data %>%
-  summarise(across(c("HC", "CAP"), ~ mean(.x, na.rm = TRUE))) %>%
-CustomDT
+  summarise(across(
+    .cols = c(HC, CAP),
+    .fns = mean, 
+    na.rm = TRUE,
+    .names = "mean_{.col}"
+  )) %>%
+  CustomDT
 ```
 
 ```{r ref.label="sumr4", echo=FALSE, eval=TRUE, collapse=T}
