@@ -1594,7 +1594,7 @@ data %>%
 .pull-right-10[
 .pull-top[
 .font80[
-**.blue[Estatísticas de resumo dos dados...]**
+**.blue[Uma única estatística de sumarização...]**
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
@@ -1615,6 +1615,7 @@ data %>%
 
 .pull-bottom[
 .font80[
+**.blue[Variáveis estatísticas na mesma summarise()...]**
 ```{r echo=TRUE, eval=FALSE}
 data %>%
   summarise(media_HC = mean(HC, na.rm = TRUE),
@@ -1638,6 +1639,9 @@ data %>%
 ]
 ]
 ]
+
+---
+
 
 
 
