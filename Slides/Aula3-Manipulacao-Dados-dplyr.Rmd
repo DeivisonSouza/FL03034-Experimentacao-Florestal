@@ -198,6 +198,9 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 &nbsp;&nbsp;&nbsp;&nbsp;[4.1 - Função if_else()](#ifelse)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[4.2 - Função case_when()](#casewhen)
+
+[5 - Função summarise()](#summarise)
+
 ]
 ]
 ]
