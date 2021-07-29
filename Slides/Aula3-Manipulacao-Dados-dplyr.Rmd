@@ -1575,7 +1575,9 @@ background-size: cover
 .font200[**.white[Manipulação de dados <br> com dplyr]**] 
 <br><br>
 
-.font150[**.yellow[Função group_by()]**]
+.font150[**.yellow[Função summarize()]**]
+
+.white[Criar um novo quadro de dados com estatísticas de resumo <br> de variáveis selecionadas]
 
 ---
 layout: true
