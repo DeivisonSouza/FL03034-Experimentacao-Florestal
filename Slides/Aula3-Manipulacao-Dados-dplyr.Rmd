@@ -1575,7 +1575,7 @@ background-size: cover
 .font200[**.white[Manipulação de dados <br> com dplyr]**] 
 <br><br>
 
-.font150[**.yellow[Função summarize()]**]
+.font150[**.yellow[Função summarise()]**]
 
 .white[Criar um novo quadro de dados com estatísticas de resumo <br> de variáveis selecionadas]
 
@@ -1586,7 +1586,45 @@ layout: true
 
 ---
 
+name: summarise
+## Manipulação de dados com dplyr
+<br>
 
+### .font90[Função **summarise()** - .black[Modificar e criar variáveis]]
+
+.pull-left-12[
+```{r echo=F, eval=T}
+data %>%
+  CustomDT
+```
+]
+
+--
+
+.pull-right-12[
+.pull-left-2[
+.font80[
+**.blue[Resumindo dados...]**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  summarize(media_HC = mean(HC, na.rm = TRUE))
+```
+
+]
+
+```{r sumr1, echo=F, eval=F}
+data %>%
+  summarize(media_HC = mean(HC, na.rm = TRUE)) %>%
+  CustomDT
+```
+]
+
+.pull-right-1[
+```{r ref.label="sumr1", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
 
 
 
