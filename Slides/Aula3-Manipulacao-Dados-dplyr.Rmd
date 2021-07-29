@@ -162,15 +162,17 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 ## Conteúdo
 
 .pull-left-4[
+.font80[
 **Parte 1 - Importação de dados com .orange[readr]**
 
 [1- YYYYY](#R)
 
-
+]
 ]
 
 .pull-right-4[
 .pull-down[
+.font80[
 **Parte 2 - Manipulação de dados com .orange[dplyr]**
 
 [1 - Função select() e suas auxiliares](#select)
@@ -191,8 +193,12 @@ knitr::include_graphics("https://dplyr.tidyverse.org/logo.png")
 
 [3 - Função filter()](#filter)
 
-[4 - Função mutate()](#mutate)
+[4 - Função mutate() e suas auxiliares](#mutate)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[4.1 - Função if_else()](#ifelse)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[4.2 - Função case_when()](#casewhen)
+]
 ]
 ]
 
@@ -1443,7 +1449,7 @@ data %>%
 ]
 
 ---
-
+name: ifelse
 ## Manipulação de dados com dplyr
 <br>
 
@@ -1462,11 +1468,15 @@ data %>%
 .pull-right-12[
 .pull-left-11[
 .font80[
-**Criar nova coluna usando .green[ifelse()]**
+**.blue[Usando funções auxiliares...]**
+<br><br>
+
+**.green[if_else()]**
+<br>
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%
-  mutate(Selecao = ifelse(
+  mutate(Selecao = if_else(
     CAP >= 600, "Matriz", "Não Matriz"
     ))
 ```
@@ -1476,7 +1486,7 @@ data %>%
 ```{r mut4, echo=F, eval=F}
 data %>%
   select(-c(N_Arvore, QF, Selecao)) %>%
-  mutate(Selecao = ifelse(
+  mutate(Selecao = if_else(
     CAP >= 600, "Matriz", "Não Matriz")) %>%
   CustomDT
 ```
@@ -1490,7 +1500,7 @@ data %>%
 
 
 ---
-
+name: casewhen
 ## Manipulação de dados com dplyr
 <br>
 
@@ -1509,7 +1519,15 @@ data %>%
 .pull-right-12[
 .pull-left-2[
 .font80[
-**Criar nova coluna por múltiplas condições mutuamente exclusivas usando .green[case_when()]**
+**.blue[Usando funções auxiliares...]**
+<br><br>
+
+**.green[case_when()]**
+<br>
+
+Permite vetorizar várias instruções .green[if_else()]. É um equivalente R da instrução SQL CASE WHEN. 
+
+Criar uma nova coluna por múltiplas condições mutuamente exclusivas.
 
 ```{r echo=TRUE, eval=FALSE}
 data %>%

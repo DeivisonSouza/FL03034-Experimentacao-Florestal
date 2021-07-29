@@ -7,7 +7,7 @@
     <script src="Aula3-Manipulacao-Dados-dplyr_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-Manipulacao-Dados-dplyr_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xdf14b7249c94612b604303d1332a39c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xfbca99d570c460cbe348e40526fe0a0","expires":1}</script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-Manipulacao-Dados-dplyr_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-Manipulacao-Dados-dplyr_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -105,7 +105,7 @@ top:.8em;right:-.5em;
 #### Faculdade de Engenharia Florestal
 #### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 28/julho/2021
+##### 29/julho/2021
 ##### Altamira, Pará
 
 ---
@@ -142,15 +142,17 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ## Conteúdo
 
 .pull-left-4[
+.font80[
 **Parte 1 - Importação de dados com .orange[readr]**
 
 [1- YYYYY](#R)
 
-
+]
 ]
 
 .pull-right-4[
 .pull-down[
+.font80[
 **Parte 2 - Manipulação de dados com .orange[dplyr]**
 
 [1 - Função select() e suas auxiliares](#select)
@@ -171,8 +173,12 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [3 - Função filter()](#filter)
 
-[4 - Função mutate()](#mutate)
+[4 - Função mutate() e suas auxiliares](#mutate)
 
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[4.1 - Função if_else()](#ifelse)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[4.2 - Função case_when()](#casewhen)
+]
 ]
 ]
 
@@ -1339,7 +1345,7 @@ data %&gt;%
 ]
 
 ---
-
+name: ifelse
 ## Manipulação de dados com dplyr
 &lt;br&gt;
 
@@ -1355,12 +1361,16 @@ data %&gt;%
 .pull-right-12[
 .pull-left-11[
 .font80[
-**Criar nova coluna usando .green[ifelse()]**
+**.blue[Usando funções auxiliares...]**
+&lt;br&gt;&lt;br&gt;
+
+**.green[if_else()]**
+&lt;br&gt;
 
 
 ```r
 data %&gt;%
-  mutate(Selecao = ifelse(
+  mutate(Selecao = if_else(
     CAP &gt;= 600, "Matriz", "Não Matriz"
     ))
 ```
@@ -1378,7 +1388,7 @@ data %&gt;%
 
 
 ---
-
+name: casewhen
 ## Manipulação de dados com dplyr
 &lt;br&gt;
 
@@ -1394,7 +1404,15 @@ data %&gt;%
 .pull-right-12[
 .pull-left-2[
 .font80[
-**Criar nova coluna por múltiplas condições mutuamente exclusivas usando .green[case_when()]**
+**.blue[Usando funções auxiliares...]**
+&lt;br&gt;&lt;br&gt;
+
+**.green[case_when()]**
+&lt;br&gt;
+
+Permite vetorizar várias instruções .green[if_else()]. É um equivalente R da instrução SQL CASE WHEN. 
+
+Criar uma nova coluna por múltiplas condições mutuamente exclusivas.
 
 
 ```r
