@@ -1645,7 +1645,90 @@ data %>%
 
 ---
 
+## Manipulação de dados com dplyr
+<br>
 
+### .font90[Função **summarise()** - .black[Sumarizar dados]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>%
+  CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**.blue[Sumarizando diversas variáveis...]**
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  summarise(media_HC = mean(HC, na.rm = TRUE),
+            sd_HC = sd(HC, na.rm = TRUE),
+            media_CAP = mean(CAP, na.rm = TRUE),
+            sd_CAP = sd(CAP, na.rm = TRUE))
+```
+
+```{r sumr3, echo=F, eval=F}
+data %>%
+  summarise(media_HC = mean(HC, na.rm = TRUE),
+          sd_HC = sd(HC, na.rm = TRUE),
+          media_CAP = mean(CAP, na.rm = TRUE),
+          sd_CAP = sd(CAP, na.rm = TRUE)) %>%
+CustomDT
+```
+
+```{r ref.label="sumr3", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+]
+
+---
+
+## Manipulação de dados com dplyr
+<br>
+
+### .font90[Função **summarise()** - .black[Sumarizar dados]]
+
+.pull-left-10[
+```{r echo=F, eval=T}
+data %>%
+  CustomDT
+```
+]
+
+--
+
+.pull-right-10[
+.pull-top[
+.font80[
+**.blue[Sumarizando diversas variáveis...]**
+<br><br>
+
+.green[**across()**]
+
+```{r echo=TRUE, eval=FALSE}
+data %>%
+  summarise(across(c("HC", "CAP"), ~ mean(.x, na.rm = TRUE)))
+```
+
+```{r sumr4, echo=F, eval=F}
+data %>%
+  summarise(across(c("HC", "CAP"), ~ mean(.x, na.rm = TRUE))) %>%
+CustomDT
+```
+
+```{r ref.label="sumr4", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+]
+]
+]
 
 
 ---
