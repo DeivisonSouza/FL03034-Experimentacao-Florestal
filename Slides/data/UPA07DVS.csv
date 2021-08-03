@@ -62,7 +62,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,2,61,Acapu,Vouacapoua americana Aubl.,224,12,2,"2° 57' 52,288"" S","51° 17' 32,513"" W",0,Remanescente
 1,2,62,Seringueira,Hevea brasiliensis (Willd. ex A.Juss.) Müll.Arg.,219,25,2,"2° 57' 51,638"" S","51° 17' 32,290"" W",0,Remanescente
 1,2,63,Acapu,Vouacapoua americana Aubl.,158,17,1,"2° 57' 50,982"" S","51° 17' 32,488"" W",0,Remanescente
-1,2,64,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,198,17,1,"2° 57' 51,464"" S","51° 17' 32,800"" W",0,Remanescente
+1,2,64,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,198,17,1,"2° 57' 51,464"" S","51° 17' 32,800"" W",0,Remanescente
 1,2,65,Casca seca,Licania canescens Benoist,163,12,2,"2° 57' 51,368"" S","51° 17' 32,777"" W",0,Remanescente
 1,2,66,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,198,8,2,"2° 57' 50,689"" S","51° 17' 32,840"" W",0,Explorar
 1,2,67,Casca seca,Licania canescens Benoist,178,20,3,"2° 57' 50,871"" S","51° 17' 32,916"" W",0,Remanescente
@@ -612,7 +612,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,9,611,Melancieiro,Alexa grandiflora Duck,225,12,2,"2° 57' 43,440"" S","51° 17' 22,971"" W",0,Explorar
 1,9,612,Sapucaia,Lecythis pisonis Cambess.,600,20,2,"2° 57' 42,808"" S","51° 17' 21,581"" W",0,Remanescente
 1,9,613,Melancieiro,Alexa grandiflora Duck,250,10,1,"2° 57' 42,489"" S","51° 17' 21,503"" W",0,Explorar
-1,9,614,Fava bolacha,Vatairea paraensis Ducke,220,26,2,"2° 57' 42,583"" S","51° 17' 21,429"" W",0,Remanescente
+1,9,614,Angelim amargoso,Vatairea paraensis Ducke,220,26,2,"2° 57' 42,583"" S","51° 17' 21,429"" W",0,Remanescente
 1,9,615,Acapu,Vouacapoua americana Aubl.,147,14,1,"2° 57' 42,952"" S","51° 17' 21,160"" W",0,Remanescente
 1,9,616,Sucupira babona,Ormosia flava (Ducke) Rudd,228,17,1,"2° 57' 42,885"" S","51° 17' 20,949"" W",0,Remanescente
 1,9,617,Melancieiro,Alexa grandiflora Duck,392,16,3,"2° 57' 43,193"" S","51° 17' 20,959"" W",0,Remanescente
@@ -733,7 +733,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,11,732,Barrote,Tetragastris panamensis (Engl.) Kuntze,260,12,1,"2° 57' 34,992"" S","51° 17' 33,538"" W",0,Explorar
 1,11,733,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,150,16,1,"2° 57' 35,526"" S","51° 17' 32,887"" W",2,Remanescente
 1,11,734,Ananí,Symphonia globulifera L. f.,135,15,1,"2° 57' 36,200"" S","51° 17' 33,344"" W",0,Remanescente
-1,11,735,Mututí,Ormosia coutinhoi Duck,170,18,1,"2° 57' 36,555"" S","51° 17' 32,910"" W",1,Remanescente
+1,11,735,Mututí,Pterocarpus rohrii Vahl.,170,18,1,"2° 57' 36,555"" S","51° 17' 32,910"" W",1,Remanescente
 1,11,736,Matamatá,Eschweilera ovata (Cambess.) Miers,130,12,2,"2° 57' 36,795"" S","51° 17' 32,512"" W",0,Remanescente
 1,11,737,Virola,Virola michelii Heckel,134,15,1,"2° 57' 36,671"" S","51° 17' 31,962"" W",0,Remanescente
 1,11,738,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,215,12,2,"2° 57' 36,151"" S","51° 17' 31,965"" W",0,Remanescente
@@ -780,7 +780,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,11,779,Abiu,Pouteria ramiflora (Mart.) Radlk.,140,14,1,"2° 57' 38,464"" S","51° 17' 26,607"" W",0,Remanescente
 1,11,780,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),180,10,1,"2° 57' 36,804"" S","51° 17' 32,385"" W",0,Remanescente
 1,11,781,Casca seca,Licania canescens Benoist,163,22,3,"2° 57' 39,150"" S","51° 17' 25,408"" W",0,Remanescente
-1,11,782,Fava bolacha,Vatairea paraensis Ducke,180,20,2,"2° 57' 38,998"" S","51° 17' 25,045"" W",0,Remanescente
+1,11,782,Angelim amargoso,Vatairea paraensis Ducke,180,20,2,"2° 57' 38,998"" S","51° 17' 25,045"" W",0,Remanescente
 1,11,783,Cajuaçu,Anacardium giganteum W.Hancock ex Engl.,234,20,1,"2° 57' 39,249"" S","51° 17' 24,814"" W",0,Remanescente
 1,11,784,Ananí,Symphonia globulifera L. f.,174,20,1,"2° 57' 39,409"" S","51° 17' 24,852"" W",0,Remanescente
 1,11,785,Barrote,Tetragastris panamensis (Engl.) Kuntze,217,8,2,"2° 57' 38,072"" S","51° 17' 24,819"" W",0,Explorar
@@ -799,11 +799,11 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,11,798,Fava bolota,Parkia pendula (Willd.) Benth. ex Walp.,266,15,1,"2° 57' 39,053"" S","51° 17' 22,553"" W",0,Remanescente
 1,11,799,Copaíba,Copaifera spp.,180,18,3,"2° 57' 39,932"" S","51° 17' 22,409"" W",0,Remanescente
 1,11,800,Seringarana,Ecclinusa guianensis Eyma,137,14,2,"2° 57' 38,882"" S","51° 17' 22,446"" W",0,Remanescente
-1,11,801,Fava bolacha,Vatairea paraensis Ducke,190,18,2,"2° 57' 40,141"" S","51° 17' 22,200"" W",0,Remanescente
+1,11,801,Angelim amargoso,Vatairea paraensis Ducke,190,18,2,"2° 57' 40,141"" S","51° 17' 22,200"" W",0,Remanescente
 1,11,802,Andiroba,Carapa guianensis Aubl.,180,22,2,"2° 57' 40,063"" S","51° 17' 21,823"" W",0,Remanescente
 1,11,803,Louro preto,Ocotea nigrescens Vicent.,155,13,2,"2° 57' 39,763"" S","51° 17' 21,587"" W",0,Remanescente
 1,11,804,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,220,10,2,"2° 57' 39,015"" S","51° 17' 21,145"" W",0,Explorar
-1,11,805,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,167,14,2,"2° 57' 39,672"" S","51° 17' 21,142"" W",0,Remanescente
+1,11,805,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,167,14,2,"2° 57' 39,672"" S","51° 17' 21,142"" W",0,Remanescente
 1,11,806,Acapu,Vouacapoua americana Aubl.,177,8,2,"2° 57' 39,831"" S","51° 17' 21,083"" W",0,Remanescente
 1,11,807,Acapu,Vouacapoua americana Aubl.,146,11,2,"2° 57' 39,341"" S","51° 17' 20,899"" W",0,Remanescente
 1,11,808,Acariquara,Minquartia guianensis Aubl.,122,10,1,"2° 57' 40,342"" S","51° 17' 21,208"" W",0,Remanescente
@@ -819,7 +819,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,11,818,Andiroba,Carapa guianensis Aubl.,165,16,2,"2° 57' 39,822"" S","51° 17' 19,487"" W",0,Remanescente
 1,11,819,Pau jacaré,Laetia procera (Poepp.) Eichler,140,2,3,"2° 57' 40,013"" S","51° 17' 19,436"" W",0,Remanescente
 1,11,820,Muiracatiara,Astronium graveolens Jacq.,258,23,1,"2° 57' 40,310"" S","51° 17' 19,476"" W",0,Explorar
-1,11,821,Fava bolacha,Vatairea paraensis Ducke,207,12,2,"2° 57' 40,031"" S","51° 17' 22,726"" W",0,Remanescente
+1,11,821,Angelim amargoso,Vatairea paraensis Ducke,207,12,2,"2° 57' 40,031"" S","51° 17' 22,726"" W",0,Remanescente
 1,11,822,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,150,8,1,"2° 57' 40,291"" S","51° 17' 18,723"" W",0,Remanescente
 1,11,823,Jatobá,Hymenaea courbaril L.,228,21,1,"2° 57' 40,333"" S","51° 17' 18,700"" W",0,Remanescente
 1,11,824,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,237,10,1,"2° 57' 39,918"" S","51° 17' 18,599"" W",0,Explorar
@@ -999,7 +999,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,13,998,Acapu,Vouacapoua americana Aubl.,166,12,2,"2° 57' 35,211"" S","51° 17' 27,018"" W",0,Remanescente
 1,13,999,Angelim vermelho,Dinizia excelsa Ducke,700,13,1,"2° 57' 34,871"" S","51° 17' 26,903"" W",0,Remanescente
 1,13,1000,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,190,15,2,"2° 57' 34,807"" S","51° 17' 26,887"" W",0,Remanescente
-1,13,1001,Guajará,Pouteria sp.,225,12,1,"2° 57' 33,976"" S","51° 17' 25,774"" W",0,Remanescente
+1,13,1001,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),225,12,1,"2° 57' 33,976"" S","51° 17' 25,774"" W",0,Remanescente
 1,13,1002,Acapu,Vouacapoua americana Aubl.,188,10,1,"2° 57' 34,338"" S","51° 17' 25,829"" W",0,Remanescente
 1,13,1003,Envira preta,Guatteria poeppigiana Mart.,136,11,2,"2° 57' 34,143"" S","51° 17' 25,489"" W",0,Remanescente
 1,13,1004,Acapu,Vouacapoua americana Aubl.,158,8,2,"2° 57' 34,383"" S","51° 17' 25,190"" W",0,Remanescente
@@ -1013,7 +1013,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,13,1012,Casca seca,Licania canescens Benoist,142,12,2,"2° 57' 35,158"" S","51° 17' 25,248"" W",4,Remanescente
 1,13,1013,Tauari,Couratari oblongifolia Ducke & Kunth,250,22,3,"2° 57' 35,633"" S","51° 17' 24,974"" W",0,Remanescente
 1,13,1014,Acapu,Vouacapoua americana Aubl.,186,12,2,"2° 57' 35,204"" S","51° 17' 24,609"" W",0,Remanescente
-1,13,1015,Guajará,Pouteria sp.,223,18,1,"2° 57' 34,450"" S","51° 17' 24,588"" W",0,Remanescente
+1,13,1015,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),223,18,1,"2° 57' 34,450"" S","51° 17' 24,588"" W",0,Remanescente
 1,13,1016,Escorrega macaco,Albizia pedicellaris (DC.) L.Rico,220,20,2,"2° 57' 34,971"" S","51° 17' 23,771"" W",0,Remanescente
 1,13,1017,Barrote,Tetragastris panamensis (Engl.) Kuntze,244,8,3,"2° 57' 35,343"" S","51° 17' 23,797"" W",1,Remanescente
 1,13,1018,Acapu,Vouacapoua americana Aubl.,200,10,2,"2° 57' 35,343"" S","51° 17' 23,797"" W",0,Remanescente
@@ -1037,7 +1037,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,13,1036,Andiroba,Carapa guianensis Aubl.,172,8,2,"2° 57' 36,584"" S","51° 17' 21,984"" W",0,Remanescente
 1,13,1037,Acapu,Vouacapoua americana Aubl.,137,10,1,"2° 57' 35,786"" S","51° 17' 21,790"" W",5,Remanescente
 1,13,1038,Casca seca,Licania canescens Benoist,140,11,1,"2° 57' 35,902"" S","51° 17' 21,753"" W",0,Remanescente
-1,13,1039,Fava bolacha,Vatairea paraensis Ducke,200,15,2,"2° 57' 35,516"" S","51° 17' 21,464"" W",0,Remanescente
+1,13,1039,Angelim amargoso,Vatairea paraensis Ducke,200,15,2,"2° 57' 35,516"" S","51° 17' 21,464"" W",0,Remanescente
 1,13,1040,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,215,10,1,"2° 57' 35,884"" S","51° 17' 21,098"" W",0,Remanescente
 1,13,1041,Virola,Virola michelii Heckel,237,20,1,"2° 57' 36,974"" S","51° 17' 21,754"" W",0,Remanescente
 1,13,1042,Abiu,Pouteria ramiflora (Mart.) Radlk.,129,15,1,"2° 57' 37,065"" S","51° 17' 21,385"" W",0,Remanescente
@@ -1090,7 +1090,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,14,1089,Jatobá,Hymenaea courbaril L.,173,22,1,"2° 57' 34,938"" S","51° 17' 22,754"" W",0,Remanescente
 1,14,1090,Cupiúba,Goupia glabra Aubl.,222,15,2,"2° 57' 34,067"" S","51° 17' 21,859"" W",0,Remanescente
 1,14,1091,Acapu,Vouacapoua americana Aubl.,196,13,1,"2° 57' 33,891"" S","51° 17' 22,174"" W",0,Remanescente
-1,14,1092,Guajará,Pouteria sp.,200,8,2,"2° 57' 34,153"" S","51° 17' 22,824"" W",6,Remanescente
+1,14,1092,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),200,8,2,"2° 57' 34,153"" S","51° 17' 22,824"" W",6,Remanescente
 1,14,1093,Guajará bolacha,Syzygiopsis appositifolia Ducke,230,8,1,"2° 57' 34,380"" S","51° 17' 23,172"" W",0,Explorar
 1,14,1094,Melancieiro,Alexa grandiflora Duck,230,8,3,"2° 57' 34,343"" S","51° 17' 23,586"" W",0,Remanescente
 1,14,1095,Pau jacaré,Laetia procera (Poepp.) Eichler,145,10,2,"2° 57' 34,023"" S","51° 17' 23,508"" W",0,Remanescente
@@ -1590,7 +1590,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,19,1589,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,145,16,1,"2° 57' 22,278"" S","51° 17' 29,854"" W",0,Remanescente
 1,19,1590,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,180,8,1,"2° 57' 22,753"" S","51° 17' 29,677"" W",7,Remanescente
 1,19,1591,Louro,Ocotea spp.,180,13,1,"2° 57' 22,530"" S","51° 17' 29,622"" W",0,Remanescente
-1,19,1592,Fava bolacha,Vatairea paraensis Ducke,280,20,2,"2° 57' 22,347"" S","51° 17' 29,448"" W",0,Remanescente
+1,19,1592,Angelim amargoso,Vatairea paraensis Ducke,280,20,2,"2° 57' 22,347"" S","51° 17' 29,448"" W",0,Remanescente
 1,19,1593,Louro amarelo,Licaria rigida Kosterm.,146,15,2,"2° 57' 22,696"" S","51° 17' 29,338"" W",0,Remanescente
 1,19,1594,Uxi ,Endopleura uchi (Huber) Cuatrec.,175,13,1,"2° 57' 23,025"" S","51° 17' 29,287"" W",0,Remanescente
 1,19,1595,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,286,15,2,"2° 57' 23,716"" S","51° 17' 30,302"" W",0,Remanescente
@@ -1628,7 +1628,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 1,19,1627,Acapu,Vouacapoua americana Aubl.,152,16,1,"2° 57' 23,578"" S","51° 17' 25,843"" W",0,Remanescente
 1,19,1628,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,250,15,2,"2° 57' 24,018"" S","51° 17' 25,365"" W",4,Explorar
 1,19,1629,Inharé,Helicostylis podogyne Ducke,159,10,2,"2° 57' 24,165"" S","51° 17' 25,238"" W",0,Remanescente
-1,19,1630,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,185,18,2,"2° 57' 23,992"" S","51° 17' 25,033"" W",0,Remanescente
+1,19,1630,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,185,18,2,"2° 57' 23,992"" S","51° 17' 25,033"" W",0,Remanescente
 1,19,1631,Melancieiro,Alexa grandiflora Duck,277,19,1,"2° 57' 23,875"" S","51° 17' 24,972"" W",6,Explorar
 1,19,1632,Casca seca,Licania canescens Benoist,141,13,2,"2° 57' 24,549"" S","51° 17' 25,429"" W",0,Remanescente
 1,19,1633,Casca seca,Licania canescens Benoist,129,11,2,"2° 57' 24,601"" S","51° 17' 25,377"" W",0,Remanescente
@@ -2059,7 +2059,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,3,174,Muiracatiara,Astronium graveolens Jacq.,163,20,1,"2° 57' 16,145"" S","51° 17' 29,198"" W",0,Remanescente
 2,3,175,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,280,7,2,"2° 57' 15,480"" S","51° 17' 28,937"" W",10,Remanescente
 2,3,176,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,163,10,3,"2° 57' 15,913"" S","51° 17' 28,929"" W",0,Remanescente
-2,3,177,Oiticica,Clarisia racemosa Ruiz & Pav.,150,17,2,"2° 57' 16,032"" S","51° 17' 28,896"" W",0,Remanescente
+2,3,177,Guariuba,Clarisia racemosa Ruiz & Pav.,150,17,2,"2° 57' 16,032"" S","51° 17' 28,896"" W",0,Remanescente
 2,3,178,Melancieiro,Alexa grandiflora Duck,247,13,1,"2° 57' 16,331"" S","51° 17' 29,387"" W",0,Explorar
 2,3,179,Sapucaia,Lecythis pisonis Cambess.,177,15,1,"2° 57' 16,429"" S","51° 17' 29,416"" W",0,Remanescente
 2,3,180,Acapu,Vouacapoua americana Aubl.,154,10,2,"2° 57' 16,318"" S","51° 17' 29,215"" W",0,Remanescente
@@ -2076,7 +2076,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,3,191,Mamorana,Eriotheca longipedicellata (Ducke) A.Robyns,249,20,1,"2° 57' 17,466"" S","51° 17' 26,588"" W",0,Remanescente
 2,3,192,Acapu,Vouacapoua americana Aubl.,140,10,1,"2° 57' 17,760"" S","51° 17' 26,674"" W",0,Remanescente
 2,3,193,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,220,15,2,"2° 57' 17,781"" S","51° 17' 26,613"" W",0,Explorar
-2,3,194,Fava bolacha,Vatairea paraensis Ducke,220,18,1,"2° 57' 17,572"" S","51° 17' 26,384"" W",0,Remanescente
+2,3,194,Angelim amargoso,Vatairea paraensis Ducke,220,18,1,"2° 57' 17,572"" S","51° 17' 26,384"" W",0,Remanescente
 2,3,195,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,180,20,1,"2° 57' 17,298"" S","51° 17' 26,135"" W",0,Remanescente
 2,3,196,Barrote,Tetragastris panamensis (Engl.) Kuntze,130,12,1,"2° 57' 16,651"" S","51° 17' 25,611"" W",0,Remanescente
 2,3,197,Abiu,Pouteria ramiflora (Mart.) Radlk.,127,18,1,"2° 57' 16,553"" S","51° 17' 25,582"" W",0,Remanescente
@@ -2221,7 +2221,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,4,336,Casca seca,Licania canescens Benoist,163,12,2,"2° 57' 18,544"" S","51° 17' 16,067"" W",0,Remanescente
 2,4,337,Casca seca,Licania canescens Benoist,184,10,2,"2° 57' 19,217"" S","51° 17' 16,095"" W",0,Remanescente
 2,4,338,Casca seca,Licania canescens Benoist,186,8,1,"2° 57' 19,426"" S","51° 17' 16,324"" W",0,Remanescente
-2,4,339,Fava bolacha,Vatairea paraensis Ducke,220,13,2,"2° 57' 18,677"" S","51° 17' 16,308"" W",0,Remanescente
+2,4,339,Angelim amargoso,Vatairea paraensis Ducke,220,13,2,"2° 57' 18,677"" S","51° 17' 16,308"" W",0,Remanescente
 2,4,340,Melancieiro,Alexa grandiflora Duck,203,15,2,"2° 57' 18,667"" S","51° 17' 16,339"" W",0,Explorar
 2,4,341,Acapu,Vouacapoua americana Aubl.,175,13,1,"2° 57' 19,021"" S","51° 17' 16,879"" W",0,Remanescente
 2,4,342,Fava branca,Parkia paraensis Ducke,137,20,1,"2° 57' 18,838"" S","51° 17' 16,994"" W",0,Remanescente
@@ -2310,7 +2310,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,4,425,Macucu,Licania heteromorpha Benth.,170,12,2,"2° 57' 14,094"" S","51° 17' 29,947"" W",0,Remanescente
 2,4,426,Cupiúba,Goupia glabra Aubl.,136,6,2,"2° 57' 14,474"" S","51° 17' 29,990"" W",0,Remanescente
 2,4,427,Pau jacaré,Laetia procera (Poepp.) Eichler,133,11,2,"2° 57' 14,398"" S","51° 17' 30,002"" W",5,Remanescente
-2,4,428,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,144,13,2,"2° 57' 14,816"" S","51° 17' 30,460"" W",0,Remanescente
+2,4,428,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,144,13,2,"2° 57' 14,816"" S","51° 17' 30,460"" W",0,Remanescente
 2,4,429,Casca seca,Licania canescens Benoist,143,10,2,"2° 57' 14,699"" S","51° 17' 30,594"" W",0,Remanescente
 2,4,430,Acapu,Vouacapoua americana Aubl.,228,15,2,"2° 57' 13,462"" S","51° 17' 30,536"" W",0,Remanescente
 2,5,431,Tauari,Couratari oblongifolia Ducke & Kunth,200,18,1,"2° 57' 12,656"" S","51° 17' 30,268"" W",0,Explorar
@@ -2340,7 +2340,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,5,455,Acapu,Vouacapoua americana Aubl.,133,8,2,"2° 57' 14,228"" S","51° 17' 26,924"" W",0,Remanescente
 2,5,456,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,270,20,2,"2° 57' 13,060"" S","51° 17' 26,348"" W",0,Remanescente
 2,5,457,Acapu,Vouacapoua americana Aubl.,159,15,1,"2° 57' 12,994"" S","51° 17' 26,228"" W",0,Remanescente
-2,5,458,Guajará,Pouteria sp.,180,12,2,"2° 57' 13,483"" S","51° 17' 26,370"" W",0,Remanescente
+2,5,458,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),180,12,2,"2° 57' 13,483"" S","51° 17' 26,370"" W",0,Remanescente
 2,5,459,Melancieiro,Alexa grandiflora Duck,237,15,1,"2° 57' 14,122"" S","51° 17' 26,287"" W",16,Explorar
 2,5,460,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,350,14,1,"2° 57' 14,489"" S","51° 17' 26,159"" W",4,Explorar
 2,5,461,Uxirana,Vantanea parviflora Lam.,128,12,2,"2° 57' 14,540"" S","51° 17' 25,904"" W",0,Remanescente
@@ -2348,7 +2348,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,5,463,Acapu,Vouacapoua americana Aubl.,162,15,1,"2° 57' 14,404"" S","51° 17' 25,461"" W",0,Remanescente
 2,5,464,Acapu,Vouacapoua americana Aubl.,125,11,1,"2° 57' 14,520"" S","51° 17' 25,225"" W",8,Remanescente
 2,5,465,Fava branca,Parkia paraensis Ducke,187,20,1,"2° 57' 20,339"" S","51° 17' 6,495"" W",0,Remanescente
-2,5,466,Louro pra tudo,Ocotea spp.,134,10,2,"2° 57' 13,513"" S","51° 17' 24,495"" W",0,Remanescente
 2,5,467,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,175,10,2,"2° 57' 13,683"" S","51° 17' 24,208"" W",0,Remanescente
 2,5,468,Acapu,Vouacapoua americana Aubl.,166,10,2,"2° 57' 13,875"" S","51° 17' 26,484"" W",0,Remanescente
 2,5,469,Parapará,Jacaranda copaia (Aubl) D.Don,144,18,2,"2° 57' 14,639"" S","51° 17' 24,352"" W",0,Remanescente
@@ -2366,7 +2365,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,5,481,Cumaru,Dipteryx odorata (Aubl.) Willd.,335,15,1,"2° 57' 14,190"" S","51° 17' 23,144"" W",0,Remanescente
 2,5,482,Acapu,Vouacapoua americana Aubl.,125,12,3,"2° 57' 14,276"" S","51° 17' 23,102"" W",0,Remanescente
 2,5,483,Acapu,Vouacapoua americana Aubl.,195,10,2,"2° 57' 14,252"" S","51° 17' 22,960"" W",0,Remanescente
-2,5,484,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,220,14,2,"2° 57' 14,184"" S","51° 17' 22,739"" W",0,Remanescente
+2,5,484,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,220,14,2,"2° 57' 14,184"" S","51° 17' 22,739"" W",0,Remanescente
 2,5,485,Pau santo,Zollernia paraensis Huber,180,9,2,"2° 57' 14,299"" S","51° 17' 22,402"" W",0,Remanescente
 2,5,486,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,185,12,2,"2° 57' 14,274"" S","51° 17' 22,159"" W",0,Remanescente
 2,5,487,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,167,14,1,"2° 57' 14,886"" S","51° 17' 23,313"" W",0,Remanescente
@@ -2428,7 +2427,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,5,543,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,215,10,3,"2° 57' 17,590"" S","51° 17' 13,602"" W",0,Remanescente
 2,5,544,Acapu,Vouacapoua americana Aubl.,228,12,2,"2° 57' 17,964"" S","51° 17' 13,980"" W",0,Remanescente
 2,5,545,Cupiúba,Goupia glabra Aubl.,250,8,3,"2° 57' 18,374"" S","51° 17' 13,830"" W",0,Remanescente
-2,5,546,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,180,10,1,"2° 57' 17,884"" S","51° 17' 13,688"" W",0,Remanescente
+2,5,546,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,180,10,1,"2° 57' 17,884"" S","51° 17' 13,688"" W",0,Remanescente
 2,5,547,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,230,13,1,"2° 57' 17,894"" S","51° 17' 13,657"" W",0,Explorar
 2,5,548,Acapu,Vouacapoua americana Aubl.,130,13,1,"2° 57' 18,426"" S","51° 17' 13,677"" W",0,Remanescente
 2,5,549,Melancieiro,Alexa grandiflora Duck,157,18,2,"2° 57' 17,630"" S","51° 17' 13,378"" W",0,Remanescente
@@ -2629,7 +2628,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,7,744,Goiabão ,Pouteria pachycarpa Pires,153,13,1,"2° 57' 11,120"" S","51° 17' 22,250"" W",0,Remanescente
 2,7,745,Acapu,Vouacapoua americana Aubl.,164,8,3,"2° 57' 12,058"" S","51° 17' 22,657"" W",0,Remanescente
 2,7,746,Louro abacate,Ocotea opifera Mart.,179,12,2,"2° 57' 11,621"" S","51° 17' 22,463"" W",0,Remanescente
-2,7,747,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,150,12,2,"2° 57' 10,702"" S","51° 17' 21,791"" W",0,Remanescente
+2,7,747,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,150,12,2,"2° 57' 10,702"" S","51° 17' 21,791"" W",0,Remanescente
 2,7,748,Macucu,Licania heteromorpha Benth.,126,15,1,"2° 57' 11,126"" S","51° 17' 21,915"" W",0,Remanescente
 2,7,749,Barrote,Tetragastris panamensis (Engl.) Kuntze,205,10,2,"2° 57' 11,210"" S","51° 17' 21,670"" W",0,Explorar
 2,7,750,Sapucaia,Lecythis pisonis Cambess.,278,12,2,"2° 57' 11,021"" S","51° 17' 22,961"" W",0,Explorar
@@ -2663,7 +2662,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,7,778,Ananí,Symphonia globulifera L. f.,340,20,1,"2° 57' 12,431"" S","51° 17' 17,147"" W",0,Remanescente
 2,7,779,Casca seca,Licania canescens Benoist,212,15,1,"2° 57' 13,003"" S","51° 17' 16,943"" W",0,Remanescente
 2,7,780,Melancieiro,Alexa grandiflora Duck,207,16,1,"2° 57' 13,024"" S","51° 17' 16,882"" W",0,Explorar
-2,7,781,Acariquarana,,126,13,1,"2° 57' 13,116"" S","51° 17' 16,505"" W",0,Remanescente
+2,7,781,Acariquara,Minquartia guianensis Aubl.,126,13,1,"2° 57' 13,116"" S","51° 17' 16,505"" W",0,Remanescente
 2,7,782,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),206,15,2,"2° 57' 13,201"" S","51° 17' 16,362"" W",0,Explorar
 2,7,783,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,132,20,1,"2° 57' 12,696"" S","51° 17' 15,844"" W",0,Remanescente
 2,7,784,Abiu,Pouteria ramiflora (Mart.) Radlk.,159,15,2,"2° 57' 13,751"" S","51° 17' 16,118"" W",0,Remanescente
@@ -2680,7 +2679,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,7,795,Melancieiro,Alexa grandiflora Duck,162,15,2,"2° 57' 14,827"" S","51° 17' 14,648"" W",0,Remanescente
 2,7,796,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,298,19,1,"2° 57' 14,488"" S","51° 17' 14,381"" W",5,Explorar
 2,7,797,Casca seca,Licania canescens Benoist,196,13,1,"2° 57' 13,590"" S","51° 17' 13,749"" W",0,Remanescente
-2,7,798,Oiticica,Clarisia racemosa Ruiz & Pav.,146,15,2,"2° 57' 13,815"" S","51° 17' 13,512"" W",0,Remanescente
+2,7,798,Guariuba,Clarisia racemosa Ruiz & Pav.,146,15,2,"2° 57' 13,815"" S","51° 17' 13,512"" W",0,Remanescente
 2,7,799,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,200,15,1,"2° 57' 13,606"" S","51° 17' 13,283"" W",20,Explorar
 2,7,800,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,170,14,2,"2° 57' 14,533"" S","51° 17' 13,721"" W",0,Remanescente
 2,7,801,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,132,12,2,"2° 57' 14,609"" S","51° 17' 13,710"" W",0,Remanescente
@@ -2784,7 +2783,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,8,899,Breu vermelho,Protium apiculatum  Swart,133,11,2,"2° 57' 11,710"" S","51° 17' 18,417"" W",0,Remanescente
 2,8,900,Abiu,Pouteria ramiflora (Mart.) Radlk.,138,10,2,"2° 57' 11,366"" S","51° 17' 19,529"" W",0,Remanescente
 2,8,901,Macucu,Licania heteromorpha Benth.,144,10,1,"2° 57' 11,007"" S","51° 17' 19,424"" W",0,Remanescente
-2,8,902,Oiticica,Clarisia racemosa Ruiz & Pav.,186,15,1,"2° 57' 10,909"" S","51° 17' 19,395"" W",0,Remanescente
+2,8,902,Guariuba,Clarisia racemosa Ruiz & Pav.,186,15,1,"2° 57' 10,909"" S","51° 17' 19,395"" W",0,Remanescente
 2,8,903,Angelim amargoso,Vatairea paraensis Ducke,192,18,1,"2° 57' 10,243"" S","51° 17' 19,033"" W",0,Remanescente
 2,8,904,Melancieiro,Alexa grandiflora Duck,155,12,2,"2° 57' 10,137"" S","51° 17' 19,238"" W",10,Remanescente
 2,8,905,Pau jacaré,Laetia procera (Poepp.) Eichler,132,8,1,"2° 57' 10,391"" S","51° 17' 19,547"" W",0,Remanescente
@@ -3045,7 +3044,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,10,1160,Seringarana,Ecclinusa guianensis Eyma,133,10,1,"2° 57' 7,012"" S","51° 17' 21,558"" W",0,Remanescente
 2,10,1161,Acapu,Vouacapoua americana Aubl.,201,15,2,"2° 57' 6,827"" S","51° 17' 21,571"" W",0,Remanescente
 2,10,1162,Fava arara tucupi,Parkia multijuga Benth.,220,12,1,"2° 57' 6,168"" S","51° 17' 23,398"" W",0,Remanescente
-2,10,1163,Guajará,Pouteria sp.,173,10,1,"2° 57' 5,790"" S","51° 17' 22,716"" W",0,Remanescente
+2,10,1163,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),173,10,1,"2° 57' 5,790"" S","51° 17' 22,716"" W",0,Remanescente
 2,10,1164,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,175,10,2,"2° 57' 5,314"" S","51° 17' 22,746"" W",10,Remanescente
 2,10,1165,Ingá vermelho,Inga alba (Sw) Willd,151,10,2,"2° 57' 5,050"" S","51° 17' 23,308"" W",0,Remanescente
 2,10,1166,Pau jacaré,Laetia procera (Poepp.) Eichler,154,16,2,"2° 57' 4,846"" S","51° 17' 23,484"" W",0,Remanescente
@@ -3179,7 +3178,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 2,12,1294,Acapu,Vouacapoua americana Aubl.,165,10,2,"2° 57' 3,739"" S","51° 17' 16,735"" W",0,Remanescente
 2,12,1295,Louro pimenta,Licaria reitzkleiniana Vattimo,160,18,1,"2° 57' 4,653"" S","51° 17' 17,001"" W",0,Remanescente
 2,12,1296,Virola,Virola michelii Heckel,150,18,1,"2° 57' 4,666"" S","51° 17' 17,173"" W",6,Remanescente
-2,12,1297,Guajará,Pouteria sp.,205,18,1,"2° 57' 4,495"" S","51° 17' 17,359"" W",0,Remanescente
+2,12,1297,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),205,18,1,"2° 57' 4,495"" S","51° 17' 17,359"" W",0,Remanescente
 2,12,1298,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,290,20,2,"2° 57' 4,508"" S","51° 17' 17,531"" W",0,Remanescente
 2,12,1299,Fava branca,Parkia paraensis Ducke,152,14,2,"2° 57' 3,214"" S","51° 17' 17,221"" W",0,Remanescente
 2,12,1300,Acapu,Vouacapoua americana Aubl.,223,13,1,"2° 57' 3,946"" S","51° 17' 17,704"" W",0,Remanescente
@@ -3680,7 +3679,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,3,371,Sapucaia,Lecythis pisonis Cambess.,210,18,1,"2° 57' 11,992"" S","51° 17' 45,919"" W",0,Explorar
 3,3,372,Louro abacate,Ocotea opifera Mart.,164,10,2,"2° 57' 12,127"" S","51° 17' 45,557"" W",0,Remanescente
 3,3,373,Acapu,Vouacapoua americana Aubl.,160,14,2,"2° 57' 12,437"" S","51° 17' 45,647"" W",0,Remanescente
-3,3,374,Abiu Rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,160,13,2,"2° 57' 12,356"" S","51° 17' 44,621"" W",0,Remanescente
+3,3,374,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,160,13,2,"2° 57' 12,356"" S","51° 17' 44,621"" W",0,Remanescente
 3,3,375,Virola,Virola michelii Heckel,152,12,1,"2° 57' 11,432"" S","51° 17' 44,688"" W",0,Remanescente
 3,3,376,Muiracatiara,Astronium graveolens Jacq.,180,18,1,"2° 57' 11,277"" S","51° 17' 44,643"" W",0,Explorar
 3,3,377,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,240,18,2,"2° 57' 11,742"" S","51° 17' 44,777"" W",0,Remanescente
@@ -3906,7 +3905,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,5,597,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,230,13,1,"2° 57' 6,108"" S","51° 17' 52,897"" W",0,Explorar
 3,5,598,Virola,Virola michelii Heckel,154,18,1,"2° 57' 6,872"" S","51° 17' 53,520"" W",0,Remanescente
 3,5,599,Marupá,Simarouba amara Aubl.,180,18,2,"2° 57' 6,745"" S","51° 17' 53,016"" W",0,Remanescente
-3,5,600,Abiu Rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,160,17,2,"2° 57' 5,850"" S","51° 17' 52,622"" W",0,Remanescente
+3,5,600,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,160,17,2,"2° 57' 5,850"" S","51° 17' 52,622"" W",0,Remanescente
 3,5,601,Inharé,Helicostylis podogyne Ducke,184,17,2,"2° 57' 5,570"" S","51° 17' 52,541"" W",0,Remanescente
 3,5,602,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,186,13,1,"2° 57' 6,757"" S","51° 17' 52,017"" W",0,Explorar
 3,5,603,Inharé,Helicostylis podogyne Ducke,213,19,1,"2° 57' 6,944"" S","51° 17' 52,071"" W",0,Remanescente
@@ -4100,7 +4099,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,5,791,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,184,17,1,"2° 57' 3,941"" S","51° 17' 58,582"" W",0,Remanescente
 3,5,792,Matamatá,Eschweilera ovata (Cambess.) Miers,180,18,1,"2° 57' 5,030"" S","51° 17' 57,929"" W",0,Remanescente
 3,5,793,Acapu,Vouacapoua americana Aubl.,210,13,1,"2° 57' 5,270"" S","51° 17' 58,266"" W",0,Remanescente
-3,5,794,Abiu branco ,Pouteria caimito (Ruiz & Pav.) Radlk.,180,18,1,"2° 57' 5,097"" S","51° 17' 58,884"" W",0,Remanescente
+3,5,794,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,180,18,1,"2° 57' 5,097"" S","51° 17' 58,884"" W",0,Remanescente
 3,5,795,Tauari,Couratari oblongifolia Ducke & Kunth,170,18,1,"2° 57' 5,307"" S","51° 17' 59,212"" W",0,Remanescente
 3,5,796,Coração de negro,Chamaecrista scleroxylon (Ducke) H.S.Irwin & Barneby,174,17,2,"2° 57' 5,134"" S","51° 17' 59,229"" W",0,Remanescente
 3,5,797,Acapu,Vouacapoua americana Aubl.,210,13,1,"2° 57' 4,364"" S","51° 17' 59,106"" W",0,Remanescente
@@ -4120,7 +4119,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,6,811,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,230,19,1,"2° 57' 2,810"" S","51° 18' 0,459"" W",0,Remanescente
 3,6,812,Inharé,Helicostylis podogyne Ducke,210,19,1,"2° 57' 3,261"" S","51° 18' 0,523"" W",0,Remanescente
 3,6,813,Orelha de macaco,Enterolobium schomburgkii (Benth.) Benth.,162,15,3,"2° 57' 3,162"" S","51° 18' 0,160"" W",0,Remanescente
-3,6,814,Cambará,"Erisma uncinatum Warm,",250,18,2,"2° 57' 2,957"" S","51° 17' 59,934"" W",0,Remanescente
+3,6,814,Cambará,Erisma uncinatum Warm,250,18,2,"2° 57' 2,957"" S","51° 17' 59,934"" W",0,Remanescente
 3,6,815,Acapu,Vouacapoua americana Aubl.,150,10,1,"2° 57' 1,651"" S","51° 18' 0,524"" W",0,Remanescente
 3,6,816,Acapu,Vouacapoua americana Aubl.,210,12,1,"2° 57' 2,220"" S","51° 17' 59,453"" W",0,Remanescente
 3,6,817,Tauari,Couratari oblongifolia Ducke & Kunth,250,19,1,"2° 57' 2,424"" S","51° 17' 59,445"" W",0,Remanescente
@@ -4375,7 +4374,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,8,1067,Sapucaia,Lecythis pisonis Cambess.,370,19,3,"2° 57' 0,569"" S","51° 17' 55,901"" W",0,Remanescente
 3,8,1068,Fava branca,Parkia paraensis Ducke,180,17,1,"2° 57' 1,127"" S","51° 17' 56,063"" W",0,Remanescente
 3,8,1069,Casca seca,Licania canescens Benoist,156,18,2,"2° 57' 0,772"" S","51° 17' 55,893"" W",0,Remanescente
-3,8,1070,Cambará,"Erisma uncinatum Warm,",150,14,1,"2° 57' 0,637"" S","51° 17' 55,420"" W",0,Remanescente
+3,8,1070,Cambará,Erisma uncinatum Warm,150,14,1,"2° 57' 0,637"" S","51° 17' 55,420"" W",0,Remanescente
 3,8,1071,Goiabão ,Pouteria pachycarpa Pires,154,18,1,"2° 57' 0,866"" S","51° 17' 55,319"" W",0,Remanescente
 3,8,1072,Matamatá,Eschweilera ovata (Cambess.) Miers,180,18,1,"2° 57' 1,182"" S","51° 17' 54,910"" W",0,Remanescente
 3,8,1073,Melancieiro,Alexa grandiflora Duck,147,17,1,"2° 57' 0,599"" S","51° 17' 55,075"" W",0,Remanescente
@@ -4460,7 +4459,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,8,1152,Guajará bolacha,Syzygiopsis appositifolia Ducke,180,17,1,"2° 57' 4,707"" S","51° 17' 38,061"" W",0,Remanescente
 3,8,1153,Acapu,Vouacapoua americana Aubl.,147,11,1,"2° 57' 4,874"" S","51° 17' 37,709"" W",0,Remanescente
 3,8,1154,Muiracatiara,Astronium graveolens Jacq.,182,19,1,"2° 57' 4,781"" S","51° 17' 37,682"" W",0,Remanescente
-3,8,1155,Cambará,"Erisma uncinatum Warm,",160,16,2,"2° 57' 5,987"" S","51° 17' 37,564"" W",0,Remanescente
+3,8,1155,Cambará,Erisma uncinatum Warm,160,16,2,"2° 57' 5,987"" S","51° 17' 37,564"" W",0,Remanescente
 3,8,1156,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,215,19,1,"2° 57' 6,027"" S","51° 17' 37,542"" W",0,Explorar
 3,8,1157,Matamatá,Eschweilera ovata (Cambess.) Miers,200,18,1,"2° 57' 6,190"" S","51° 17' 37,322"" W",0,Explorar
 3,8,1158,Casca seca,Licania canescens Benoist,164,16,1,"2° 57' 6,545"" S","51° 17' 36,891"" W",0,Remanescente
@@ -4504,7 +4503,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,8,1196,Guajará bolacha,Syzygiopsis appositifolia Ducke,360,19,1,"2° 57' 7,466"" S","51° 17' 30,510"" W",0,Explorar
 3,8,1197,Pau jacaré,Laetia procera (Poepp.) Eichler,170,16,1,"2° 57' 7,708"" S","51° 17' 31,916"" W",0,Remanescente
 3,8,1198,Tauari,Couratari oblongifolia Ducke & Kunth,320,18,1,"2° 57' 7,944"" S","51° 17' 30,716"" W",0,Explorar
-3,8,1199,Cambará,"Erisma uncinatum Warm,",150,14,1,"2° 57' 8,055"" S","51° 17' 30,681"" W",0,Remanescente
+3,8,1199,Cambará,Erisma uncinatum Warm,150,14,1,"2° 57' 8,055"" S","51° 17' 30,681"" W",0,Remanescente
 3,8,1200,Barrote,Tetragastris panamensis (Engl.) Kuntze,180,13,1,"2° 57' 7,683"" S","51° 17' 30,573"" W",0,Explorar
 3,8,1201,Pau de leite,Sapium glandulosum (L.) Morong,117,10,2,"2° 57' 7,091"" S","51° 17' 29,934"" W",0,Remanescente
 3,8,1202,Goiabão ,Pouteria pachycarpa Pires,140,10,1,"2° 57' 7,055"" S","51° 17' 29,823"" W",0,Remanescente
@@ -4594,7 +4593,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,9,1286,Angelim amargoso,Vatairea paraensis Ducke,160,19,1,"2° 57' 2,965"" S","51° 17' 43,669"" W",0,Remanescente
 3,9,1287,Fava bolota,Parkia pendula (Willd.) Benth. ex Walp.,150,10,2,"2° 57' 2,619"" S","51° 17' 44,303"" W",0,Remanescente
 3,9,1288,Andiroba,Carapa guianensis Aubl.,180,18,1,"2° 57' 2,048"" S","51° 17' 44,305"" W",0,Remanescente
-3,9,1289,Cambará,"Erisma uncinatum Warm,",154,9,1,"2° 57' 1,326"" S","51° 17' 44,964"" W",0,Remanescente
+3,9,1289,Cambará,Erisma uncinatum Warm,154,9,1,"2° 57' 1,326"" S","51° 17' 44,964"" W",0,Remanescente
 3,9,1290,Ingá vermelho,Inga alba (Sw) Willd,190,16,1,"2° 57' 1,292"" S","51° 17' 45,923"" W",0,Remanescente
 3,9,1291,Parapará,Jacaranda copaia (Aubl) D.Don,180,14,1,"2° 57' 0,778"" S","51° 17' 45,841"" W",0,Remanescente
 3,9,1292,Melancieiro,Alexa grandiflora Duck,210,11,1,"2° 57' 1,602"" S","51° 17' 46,848"" W",0,Explorar
@@ -4712,7 +4711,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,10,1404,Casca seca,Licania canescens Benoist,158,13,2,"2° 56' 59,785"" S","51° 17' 46,989"" W",0,Remanescente
 3,10,1405,Casca seca,Licania canescens Benoist,210,19,1,"2° 57' 0,014"" S","51° 17' 46,888"" W",0,Remanescente
 3,10,1406,Barrote,Tetragastris panamensis (Engl.) Kuntze,230,16,1,"2° 57' 0,337"" S","51° 17' 45,980"" W",0,Explorar
-3,10,1407,Oiticica,Clarisia racemosa Ruiz & Pav.,226,20,1,"2° 57' 0,190"" S","51° 17' 45,904"" W",0,Remanescente
+3,10,1407,Guariuba,Clarisia racemosa Ruiz & Pav.,226,20,1,"2° 57' 0,190"" S","51° 17' 45,904"" W",0,Remanescente
 3,10,1408,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,158,18,1,"2° 57' 0,380"" S","51° 17' 45,825"" W",0,Remanescente
 3,10,1409,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,210,18,2,"2° 57' 0,088"" S","51° 17' 45,073"" W",0,Remanescente
 3,10,1410,Louro,Ocotea spp.,150,13,2,"2° 57' 0,132"" S","51° 17' 44,918"" W",0,Remanescente
@@ -4752,7 +4751,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,10,1444,Casca seca,Licania canescens Benoist,206,16,1,"2° 57' 1,172"" S","51° 17' 38,706"" W",0,Remanescente
 3,10,1445,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,150,13,2,"2° 57' 1,264"" S","51° 17' 38,499"" W",0,Remanescente
 3,10,1446,Parapará,Jacaranda copaia (Aubl) D.Don,210,17,2,"2° 57' 1,539"" S","51° 17' 37,877"" W",0,Remanescente
-3,10,1447,Abiu branco ,Pouteria caimito (Ruiz & Pav.) Radlk.,153,10,2,"2° 57' 1,842"" S","51° 17' 37,397"" W",0,Remanescente
+3,10,1447,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,153,10,2,"2° 57' 1,842"" S","51° 17' 37,397"" W",0,Remanescente
 3,10,1448,Angelim amargoso,Vatairea paraensis Ducke,210,10,2,"2° 57' 2,530"" S","51° 17' 37,931"" W",0,Explorar
 3,10,1449,Pau santo,Zollernia paraensis Huber,160,18,1,"2° 57' 2,518"" S","51° 17' 37,259"" W",0,Remanescente
 3,10,1450,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,160,16,2,"2° 57' 2,629"" S","51° 17' 36,624"" W",0,Remanescente
@@ -4962,7 +4961,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,12,1654,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,310,18,2,"2° 56' 52,519"" S","51° 17' 57,575"" W",0,Explorar
 3,12,1655,Coco pau,Sterculia alata Roxb.,158,18,1,"2° 56' 52,868"" S","51° 17' 57,643"" W",0,Remanescente
 3,12,1656,Acapu,Vouacapoua americana Aubl.,164,14,1,"2° 56' 52,465"" S","51° 17' 57,526"" W",0,Remanescente
-3,12,1657,Cambará,"Erisma uncinatum Warm,",180,10,1,"2° 56' 52,600"" S","51° 17' 57,165"" W",0,Remanescente
+3,12,1657,Cambará,Erisma uncinatum Warm,180,10,1,"2° 56' 52,600"" S","51° 17' 57,165"" W",0,Remanescente
 3,12,1658,Acapu,Vouacapoua americana Aubl.,174,13,2,"2° 56' 52,613"" S","51° 17' 57,001"" W",0,Remanescente
 3,12,1659,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,184,10,2,"2° 56' 52,959"" S","51° 17' 56,367"" W",0,Explorar
 3,12,1660,Acapu,Vouacapoua americana Aubl.,168,18,2,"2° 56' 53,128"" S","51° 17' 55,882"" W",0,Remanescente
@@ -5201,7 +5200,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,13,1893,Cumaru,Dipteryx odorata (Aubl.) Willd.,217,16,1,"2° 56' 52,713"" S","51° 17' 51,987"" W",0,Remanescente
 3,13,1894,Goiabão ,Pouteria pachycarpa Pires,148,17,2,"2° 56' 52,383"" S","51° 17' 52,325"" W",0,Remanescente
 3,13,1895,Casca seca,Licania canescens Benoist,210,17,1,"2° 56' 52,789"" S","51° 17' 52,910"" W",0,Remanescente
-3,13,1896,Oiticica,Clarisia racemosa Ruiz & Pav.,180,18,1,"2° 56' 53,177"" S","51° 17' 52,722"" W",0,Remanescente
+3,13,1896,Guariuba,Clarisia racemosa Ruiz & Pav.,180,18,1,"2° 56' 53,177"" S","51° 17' 52,722"" W",0,Remanescente
 3,13,1897,Casca seca,Licania canescens Benoist,192,18,1,"2° 56' 53,112"" S","51° 17' 52,837"" W",0,Remanescente
 3,13,1898,Orelha de macaco,Enterolobium schomburgkii (Benth.) Benth.,270,19,1,"2° 56' 52,206"" S","51° 17' 53,075"" W",0,Explorar
 3,13,1899,Sapucaia,Lecythis pisonis Cambess.,190,17,1,"2° 56' 52,555"" S","51° 17' 53,744"" W",0,Remanescente
@@ -5341,7 +5340,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,14,2033,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,210,17,1,"2° 56' 56,310"" S","51° 17' 32,854"" W",5,Explorar
 3,14,2034,Casca seca,Licania canescens Benoist,231,17,1,"2° 56' 57,493"" S","51° 17' 33,297"" W",0,Remanescente
 3,14,2035,Acapu,Vouacapoua americana Aubl.,170,16,1,"2° 56' 57,591"" S","51° 17' 32,591"" W",0,Remanescente
-3,14,2036,Oiticica,Clarisia racemosa Ruiz & Pav.,180,17,1,"2° 56' 57,216"" S","51° 17' 32,014"" W",0,Remanescente
+3,14,2036,Guariuba,Clarisia racemosa Ruiz & Pav.,180,17,1,"2° 56' 57,216"" S","51° 17' 32,014"" W",0,Remanescente
 3,14,2037,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,180,15,3,"2° 56' 56,476"" S","51° 17' 32,501"" W",0,Remanescente
 3,14,2038,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,180,18,1,"2° 56' 56,426"" S","51° 17' 32,320"" W",0,Remanescente
 3,14,2039,Acapu,Vouacapoua americana Aubl.,186,14,1,"2° 56' 56,811"" S","51° 17' 32,264"" W",0,Remanescente
@@ -5369,7 +5368,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,15,2061,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),288,17,2,"2° 56' 56,741"" S","51° 17' 26,900"" W",0,Explorar
 3,15,2062,Uxirana,Vantanea parviflora Lam.,159,13,1,"2° 56' 56,133"" S","51° 17' 26,556"" W",0,Remanescente
 3,15,2063,Angelim rajado,Zygia racemosa  (Ducke) Barneby & J.W.Grimes,154,17,1,"2° 56' 55,966"" S","51° 17' 27,510"" W",0,Remanescente
-3,15,2064,Cambará,"Erisma uncinatum Warm,",160,13,2,"2° 56' 56,137"" S","51° 17' 28,094"" W",0,Remanescente
+3,15,2064,Cambará,Erisma uncinatum Warm,160,13,2,"2° 56' 56,137"" S","51° 17' 28,094"" W",0,Remanescente
 3,15,2065,Casca seca,Licania canescens Benoist,210,18,1,"2° 56' 56,134"" S","51° 17' 28,227"" W",0,Remanescente
 3,15,2066,Casca seca,Licania canescens Benoist,212,18,1,"2° 56' 55,835"" S","51° 17' 28,574"" W",0,Remanescente
 3,15,2067,Melancieiro,Alexa grandiflora Duck,152,17,1,"2° 56' 55,707"" S","51° 17' 28,671"" W",0,Remanescente
@@ -5464,7 +5463,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,15,2156,Guajará bolacha,Syzygiopsis appositifolia Ducke,217,18,1,"2° 56' 49,809"" S","51° 17' 53,850"" W",0,Explorar
 3,15,2157,Abiu arripiado,Pouteria decorticans T.D.Penn.,160,17,1,"2° 56' 49,800"" S","51° 17' 53,881"" W",0,Remanescente
 3,15,2158,Acapu,Vouacapoua americana Aubl.,194,18,1,"2° 56' 49,125"" S","51° 17' 54,253"" W",0,Remanescente
-3,15,2159,Cambará,"Erisma uncinatum Warm,",216,17,1,"2° 56' 49,504"" S","51° 17' 54,697"" W",0,Remanescente
+3,15,2159,Cambará,Erisma uncinatum Warm,216,17,1,"2° 56' 49,504"" S","51° 17' 54,697"" W",0,Remanescente
 3,15,2160,Acapu,Vouacapoua americana Aubl.,180,14,1,"2° 56' 49,163"" S","51° 17' 54,598"" W",0,Remanescente
 3,15,2161,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,208,18,1,"2° 56' 48,747"" S","51° 17' 53,809"" W",0,Explorar
 3,15,2162,Casca seca,Licania canescens Benoist,154,17,1,"2° 56' 48,381"" S","51° 17' 54,037"" W",0,Remanescente
@@ -5506,7 +5505,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,16,2198,Ipê amarelo,Handroanthus serratifolius (Vahl) S.Grose,222,17,1,"2° 56' 47,721"" S","51° 17' 52,209"" W",0,Remanescente
 3,16,2199,Casca seca,Licania canescens Benoist,232,17,1,"2° 56' 48,453"" S","51° 17' 52,588"" W",0,Remanescente
 3,16,2200,Acapu,Vouacapoua americana Aubl.,154,16,1,"2° 56' 48,380"" S","51° 17' 51,532"" W",0,Remanescente
-3,16,2201,Cambará,"Erisma uncinatum Warm,",200,17,1,"2° 56' 47,789"" S","51° 17' 51,728"" W",0,Remanescente
+3,16,2201,Cambará,Erisma uncinatum Warm,200,17,1,"2° 56' 47,789"" S","51° 17' 51,728"" W",0,Remanescente
 3,16,2202,Barrote,Tetragastris panamensis (Engl.) Kuntze,210,17,1,"2° 56' 47,510"" S","51° 17' 51,647"" W",0,Explorar
 3,16,2203,Coração de negro,Chamaecrista scleroxylon (Ducke) H.S.Irwin & Barneby,212,16,2,"2° 56' 48,176"" S","51° 17' 51,306"" W",0,Remanescente
 3,16,2204,Melancieiro,Alexa grandiflora Duck,165,17,3,"2° 56' 48,885"" S","51° 17' 51,645"" W",0,Remanescente
@@ -5522,7 +5521,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,16,2214,Acapu,Vouacapoua americana Aubl.,153,13,2,"2° 56' 49,329"" S","51° 17' 49,469"" W",0,Remanescente
 3,16,2215,Pequiá,Caryocar villosum (Aubl.) Pers.,270,17,2,"2° 56' 49,586"" S","51° 17' 49,510"" W",0,Remanescente
 3,16,2216,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),280,18,3,"2° 56' 49,676"" S","51° 17' 49,068"" W",0,Remanescente
-3,16,2217,Oiticica,Clarisia racemosa Ruiz & Pav.,240,16,2,"2° 56' 48,668"" S","51° 17' 49,077"" W",0,Remanescente
+3,16,2217,Guariuba,Clarisia racemosa Ruiz & Pav.,240,16,2,"2° 56' 48,668"" S","51° 17' 49,077"" W",0,Remanescente
 3,16,2218,Acapu,Vouacapoua americana Aubl.,148,13,1,"2° 56' 49,143"" S","51° 17' 48,580"" W",0,Remanescente
 3,16,2219,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,225,17,1,"2° 56' 49,771"" S","51° 17' 48,729"" W",0,Remanescente
 3,16,2220,Tanibuca,Buchenavia capitata (Vahl) Eichler,400,18,2,"2° 56' 48,265"" S","51° 17' 48,359"" W",10,Explorar
@@ -5752,7 +5751,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,18,2444,Muiracatiara,Astronium graveolens Jacq.,152,17,1,"2° 56' 49,853"" S","51° 17' 36,259"" W",0,Remanescente
 3,18,2445,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,200,17,1,"2° 56' 48,802"" S","51° 17' 34,986"" W",0,Explorar
 3,18,2446,Casca seca,Licania canescens Benoist,164,18,1,"2° 56' 50,061"" S","51° 17' 35,518"" W",0,Remanescente
-3,18,2447,Cambará,"Erisma uncinatum Warm,",180,17,3,"2° 56' 49,908"" S","51° 17' 35,106"" W",0,Remanescente
+3,18,2447,Cambará,Erisma uncinatum Warm,180,17,3,"2° 56' 49,908"" S","51° 17' 35,106"" W",0,Remanescente
 3,18,2448,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,150,13,2,"2° 56' 50,032"" S","51° 17' 34,307"" W",0,Remanescente
 3,18,2449,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,162,16,1,"2° 56' 49,567"" S","51° 17' 34,172"" W",0,Remanescente
 3,19,2450,Cajuí ,Anacardium spruceanum Benth. ex Engl.,200,13,1,"2° 56' 47,471"" S","51° 17' 34,233"" W",0,Remanescente
@@ -5773,7 +5772,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,19,2465,Amarelão,Apuleia leiocarpa (Vogel) J.F.Macbr.,148,18,2,"2° 56' 47,607"" S","51° 17' 38,047"" W",0,Remanescente
 3,19,2466,Cumaru,Dipteryx odorata (Aubl.) Willd.,230,18,1,"2° 56' 46,629"" S","51° 17' 38,064"" W",0,Explorar
 3,19,2467,NI,NI,222,18,1,"2° 56' 46,293"" S","51° 17' 38,066"" W",0,Remanescente
-3,19,2468,Abiu branco ,Pouteria caimito (Ruiz & Pav.) Radlk.,223,19,1,"2° 56' 46,234"" S","51° 17' 38,517"" W",0,Remanescente
+3,19,2468,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,223,19,1,"2° 56' 46,234"" S","51° 17' 38,517"" W",0,Remanescente
 3,19,2469,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,360,18,3,"2° 56' 46,380"" S","51° 17' 38,593"" W",0,Remanescente
 3,19,2470,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,182,13,1,"2° 56' 47,267"" S","51° 17' 38,182"" W",0,Remanescente
 3,19,2471,Casca seca,Licania canescens Benoist,200,14,1,"2° 56' 47,580"" S","51° 17' 38,740"" W",0,Remanescente
@@ -5807,7 +5806,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,19,2499,Melancieiro,Alexa grandiflora Duck,182,17,2,"2° 56' 44,600"" S","51° 17' 43,855"" W",0,Remanescente
 3,19,2500,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,200,17,1,"2° 56' 46,009"" S","51° 17' 44,331"" W",0,Explorar
 3,19,2501,Acapu,Vouacapoua americana Aubl.,170,18,1,"2° 56' 45,957"" S","51° 17' 44,516"" W",0,Remanescente
-3,19,2502,Cambará,"Erisma uncinatum Warm,",162,17,1,"2° 56' 44,779"" S","51° 17' 44,174"" W",0,Remanescente
+3,19,2502,Cambará,Erisma uncinatum Warm,162,17,1,"2° 56' 44,779"" S","51° 17' 44,174"" W",0,Remanescente
 3,19,2503,Acapu,Vouacapoua americana Aubl.,170,15,2,"2° 56' 45,444"" S","51° 17' 44,434"" W",0,Remanescente
 3,19,2504,Acapu,Vouacapoua americana Aubl.,145,15,2,"2° 56' 45,135"" S","51° 17' 44,578"" W",0,Remanescente
 3,19,2505,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,190,13,2,"2° 56' 45,047"" S","51° 17' 44,653"" W",0,Explorar
@@ -5832,7 +5831,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,19,2524,Acapu,Vouacapoua americana Aubl.,200,12,3,"2° 56' 44,698"" S","51° 17' 48,761"" W",0,Remanescente
 3,19,2525,Matamatá,Eschweilera ovata (Cambess.) Miers,230,19,1,"2° 56' 43,972"" S","51° 17' 48,717"" W",0,Explorar
 3,19,2526,Cajuí ,Anacardium spruceanum Benth. ex Engl.,220,18,1,"2° 56' 43,964"" S","51° 17' 48,748"" W",0,Remanescente
-3,19,2527,Cambará,"Erisma uncinatum Warm,",160,13,1,"2° 56' 43,884"" S","51° 17' 48,792"" W",0,Remanescente
+3,19,2527,Cambará,Erisma uncinatum Warm,160,13,1,"2° 56' 43,884"" S","51° 17' 48,792"" W",0,Remanescente
 3,19,2528,Tauari,Couratari oblongifolia Ducke & Kunth,210,18,1,"2° 56' 43,411"" S","51° 17' 48,688"" W",0,Explorar
 3,19,2529,Tamburi,Enterolobium maximum Ducke,360,20,1,"2° 56' 43,867"" S","51° 17' 48,854"" W",0,Remanescente
 3,19,2530,Acapu,Vouacapoua americana Aubl.,150,15,1,"2° 56' 44,332"" S","51° 17' 48,989"" W",0,Remanescente
@@ -5850,7 +5849,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 3,19,2542,Casca seca,Licania canescens Benoist,150,17,1,"2° 56' 43,133"" S","51° 17' 53,618"" W",0,Remanescente
 3,19,2543,Casca seca,Licania canescens Benoist,200,17,1,"2° 56' 43,010"" S","51° 17' 53,816"" W",0,Remanescente
 3,19,2544,Acapu,Vouacapoua americana Aubl.,158,14,1,"2° 56' 43,047"" S","51° 17' 54,161"" W",0,Remanescente
-3,19,2545,Cambará,"Erisma uncinatum Warm,",182,15,1,"2° 56' 42,654"" S","51° 17' 54,247"" W",0,Remanescente
+3,19,2545,Cambará,Erisma uncinatum Warm,182,15,1,"2° 56' 42,654"" S","51° 17' 54,247"" W",0,Remanescente
 3,19,2546,Pau jacaré,Laetia procera (Poepp.) Eichler,188,18,1,"2° 56' 42,588"" S","51° 17' 54,362"" W",0,Remanescente
 3,19,2547,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,235,18,3,"2° 56' 41,695"" S","51° 17' 54,437"" W",0,Remanescente
 4,1,1,Tanibuca,Buchenavia capitata (Vahl) Eichler,250,15,2,"2° 57' 42,361"" S","51° 18' 10,942"" W",0,Remanescente
@@ -5935,7 +5934,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,1,80,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,440,16,3,"2° 57' 45,669"" S","51° 17' 55,421"" W",0,Remanescente
 4,1,81,Casca seca,Licania canescens Benoist,170,15,1,"2° 57' 45,597"" S","51° 17' 55,436"" W",2,Remanescente
 4,1,82,Casca seca,Licania canescens Benoist,260,17,1,"2° 57' 45,366"" S","51° 17' 55,413"" W",3,Remanescente
-4,1,83,Guajará,Pouteria sp.,238,15,1,"2° 57' 46,548"" S","51° 17' 56,132"" W",0,Remanescente
+4,1,83,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),238,15,1,"2° 57' 46,548"" S","51° 17' 56,132"" W",0,Remanescente
 4,1,84,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,388,9,1,"2° 57' 46,511"" S","51° 17' 55,792"" W",0,Explorar
 4,1,85,Casca seca,Licania canescens Benoist,134,13,1,"2° 57' 46,456"" S","51° 17' 55,514"" W",6,Remanescente
 4,1,86,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,177,17,1,"2° 57' 46,645"" S","51° 17' 55,329"" W",2,Remanescente
@@ -5993,7 +5992,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,1,138,Virola,Virola michelii Heckel,149,18,1,"2° 57' 48,649"" S","51° 17' 48,878"" W",0,Remanescente
 4,1,139,Acapu,Vouacapoua americana Aubl.,140,6,1,"2° 57' 48,835"" S","51° 17' 47,766"" W",0,Remanescente
 4,1,140,Janitá,Brosimum guianense(Aubl.) Huber,128,15,1,"2° 57' 48,749"" S","51° 17' 47,712"" W",0,Remanescente
-4,1,141,Leguminosa,,128,12,1,"2° 57' 47,556"" S","51° 17' 47,618"" W",0,Remanescente
 4,1,142,Casca seca,Licania canescens Benoist,148,13,2,"2° 57' 47,870"" S","51° 17' 47,001"" W",0,Remanescente
 4,1,143,Andiroba,Carapa guianensis Aubl.,165,10,2,"2° 57' 48,355"" S","51° 17' 47,318"" W",0,Remanescente
 4,1,144,Escorrega macaco,Albizia pedicellaris (DC.) L.Rico,127,17,2,"2° 57' 48,996"" S","51° 17' 46,979"" W",0,Remanescente
@@ -6147,7 +6145,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,2,292,Andirobarana,Touroulia guianensis Aubl.,300,15,1,"2° 57' 42,862"" S","51° 17' 58,204"" W",0,Remanescente
 4,2,293,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,150,13,1,"2° 57' 42,899"" S","51° 17' 58,544"" W",0,Remanescente
 4,2,294,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,139,10,2,"2° 57' 43,469"" S","51° 17' 58,684"" W",0,Remanescente
-4,2,295,Leguminosa,,130,16,1,"2° 57' 43,715"" S","51° 17' 59,240"" W",0,Remanescente
 4,2,296,Acapu,Vouacapoua americana Aubl.,155,15,1,"2° 57' 43,626"" S","51° 17' 59,548"" W",0,Remanescente
 4,2,297,Cupiúba,Goupia glabra Aubl.,320,13,3,"2° 57' 43,803"" S","51° 17' 59,757"" W",0,Remanescente
 4,2,298,Fava de paca,Stryphnodendron pulcherrimum (Willd.) Hochr.,148,13,1,"2° 57' 43,654"" S","51° 17' 59,919"" W",0,Remanescente
@@ -6258,7 +6255,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,3,403,Abiu,Pouteria ramiflora (Mart.) Radlk.,141,16,1,"2° 57' 40,918"" S","51° 18' 3,513"" W",0,Remanescente
 4,3,404,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,132,17,1,"2° 57' 40,830"" S","51° 18' 2,996"" W",0,Remanescente
 4,3,405,Andiroba,Carapa guianensis Aubl.,137,13,1,"2° 57' 40,748"" S","51° 18' 2,810"" W",0,Remanescente
-4,3,406,Oiticica,Clarisia racemosa Ruiz & Pav.,140,18,1,"2° 57' 40,172"" S","51° 18' 3,628"" W",0,Remanescente
+4,3,406,Guariuba,Clarisia racemosa Ruiz & Pav.,140,18,1,"2° 57' 40,172"" S","51° 18' 3,628"" W",0,Remanescente
 4,3,407,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,212,19,1,"2° 57' 40,458"" S","51° 18' 2,640"" W",0,Remanescente
 4,3,408,Casca seca,Licania canescens Benoist,132,10,2,"2° 57' 40,159"" S","51° 18' 2,501"" W",0,Remanescente
 4,3,409,Barrote,Tetragastris panamensis (Engl.) Kuntze,220,10,2,"2° 57' 40,204"" S","51° 18' 2,346"" W",0,Remanescente
@@ -6379,7 +6376,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,3,524,Breu vermelho,Protium apiculatum  Swart,188,13,2,"2° 57' 44,327"" S","51° 17' 47,058"" W",0,Remanescente
 4,3,525,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,130,12,1,"2° 57' 44,714"" S","51° 17' 46,425"" W",0,Remanescente
 4,3,526,Acapu,Vouacapoua americana Aubl.,175,15,2,"2° 57' 45,099"" S","51° 17' 46,850"" W",0,Remanescente
-4,3,527,Janitá,,132,13,1,"2° 57' 45,149"" S","51° 17' 47,028"" W",0,Remanescente
+4,3,527,Janitá,Brosimum guianense(Aubl.) Huber,132,13,1,"2° 57' 45,149"" S","51° 17' 47,028"" W",0,Remanescente
 4,3,528,Casca seca,Licania canescens Benoist,158,15,1,"2° 57' 45,239"" S","51° 17' 46,719"" W",0,Remanescente
 4,3,529,Angelim amargoso,Vatairea paraensis Ducke,200,18,2,"2° 57' 44,917"" S","51° 17' 46,310"" W",0,Explorar
 4,3,530,Ananí,Symphonia globulifera L. f.,178,17,1,"2° 57' 44,785"" S","51° 17' 46,178"" W",0,Remanescente
@@ -6518,14 +6515,14 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,4,663,Acapu,Vouacapoua americana Aubl.,214,17,3,"2° 57' 41,171"" S","51° 17' 52,334"" W",0,Remanescente
 4,4,664,Acapu,Vouacapoua americana Aubl.,189,14,1,"2° 57' 41,292"" S","51° 17' 53,323"" W",0,Remanescente
 4,4,665,Abiu,Pouteria ramiflora (Mart.) Radlk.,126,17,1,"2° 57' 40,786"" S","51° 17' 53,430"" W",15,Remanescente
-4,4,666,Cambará,"Erisma uncinatum Warm,",260,17,1,"2° 57' 40,804"" S","51° 17' 53,600"" W",5,Remanescente
+4,4,666,Cambará,Erisma uncinatum Warm,260,17,1,"2° 57' 40,804"" S","51° 17' 53,600"" W",5,Remanescente
 4,4,667,Melancieiro,Alexa grandiflora Duck,385,19,2,"2° 57' 40,634"" S","51° 17' 54,187"" W",0,Explorar
 4,4,668,Casca seca,Licania canescens Benoist,190,19,1,"2° 57' 41,376"" S","51° 17' 54,203"" W",0,Remanescente
 4,4,669,Barrote,Tetragastris panamensis (Engl.) Kuntze,193,13,2,"2° 57' 41,878"" S","51° 17' 54,458"" W",0,Remanescente
 4,4,670,Casca seca,Licania canescens Benoist,143,16,1,"2° 57' 41,584"" S","51° 17' 55,709"" W",0,Remanescente
 4,4,671,Acariquara,Minquartia guianensis Aubl.,121,9,1,"2° 57' 41,653"" S","51° 17' 56,056"" W",0,Remanescente
 4,4,672,Tauari,Couratari oblongifolia Ducke & Kunth,230,22,1,"2° 57' 40,322"" S","51° 17' 55,267"" W",0,Explorar
-4,4,673,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,192,17,1,"2° 57' 41,159"" S","51° 17' 52,728"" W",0,Remanescente
+4,4,673,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,192,17,1,"2° 57' 41,159"" S","51° 17' 52,728"" W",0,Remanescente
 4,4,674,Angelim amargoso,Vatairea paraensis Ducke,400,22,1,"2° 57' 40,187"" S","51° 17' 55,730"" W",0,Explorar
 4,4,675,Cupiúba,Goupia glabra Aubl.,280,17,3,"2° 57' 40,178"" S","51° 17' 55,761"" W",0,Remanescente
 4,4,676,Orelha de macaco,Enterolobium schomburgkii (Benth.) Benth.,217,17,1,"2° 57' 38,442"" S","51° 18' 2,576"" W",7,Remanescente
@@ -6606,7 +6603,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,4,751,Acapu,Vouacapoua americana Aubl.,170,17,3,"2° 57' 36,819"" S","51° 18' 9,352"" W",0,Remanescente
 4,4,752,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),167,23,1,"2° 57' 36,932"" S","51° 18' 9,314"" W",0,Remanescente
 4,4,753,Andiroba,Carapa guianensis Aubl.,144,17,1,"2° 57' 37,565"" S","51° 18' 9,469"" W",0,Remanescente
-4,5,754,Guajará,Pouteria sp.,174,17,2,"2° 57' 35,878"" S","51° 18' 9,320"" W",3,Remanescente
+4,5,754,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),174,17,2,"2° 57' 35,878"" S","51° 18' 9,320"" W",3,Remanescente
 4,5,755,Casca seca,Licania canescens Benoist,126,19,1,"2° 57' 36,041"" S","51° 18' 9,228"" W",4,Remanescente
 4,5,756,Abiu,Pouteria ramiflora (Mart.) Radlk.,144,15,1,"2° 57' 36,154"" S","51° 18' 9,189"" W",0,Remanescente
 4,5,757,Angelim amargoso,Vatairea paraensis Ducke,130,23,1,"2° 57' 36,036"" S","51° 18' 9,127"" W",0,Remanescente
@@ -6635,7 +6632,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,5,780,Cupiúba,Goupia glabra Aubl.,210,19,3,"2° 57' 36,128"" S","51° 18' 6,703"" W",0,Remanescente
 4,5,781,Marupá,Simarouba amara Aubl.,204,21,1,"2° 57' 35,906"" S","51° 18' 6,649"" W",0,Remanescente
 4,5,782,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,145,18,1,"2° 57' 35,842"" S","51° 18' 6,402"" W",0,Remanescente
-4,5,783,Janitá,,172,12,1,"2° 57' 35,322"" S","51° 18' 6,440"" W",5,Remanescente
+4,5,783,Janitá,Brosimum guianense(Aubl.) Huber,172,12,1,"2° 57' 35,322"" S","51° 18' 6,440"" W",5,Remanescente
 4,5,784,Virola da varzea,Virola surinamensis (Rol. ex Rottb.) Warb.,180,14,1,"2° 57' 35,837"" S","51° 18' 6,301"" W",0,Remanescente
 4,5,785,Fava arara tucupi,Parkia multijuga Benth.,137,25,2,"2° 57' 35,686"" S","51° 18' 5,768"" W",0,Remanescente
 4,5,786,Envira preta,Guatteria poeppigiana Mart.,133,21,1,"2° 57' 36,034"" S","51° 18' 5,622"" W",0,Remanescente
@@ -6700,7 +6697,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,5,846,Seringarana,Ecclinusa guianensis Eyma,248,23,1,"2° 57' 39,744"" S","51° 17' 56,911"" W",0,Remanescente
 4,5,847,Acapu,Vouacapoua americana Aubl.,200,14,1,"2° 57' 39,689"" S","51° 17' 56,633"" W",0,Remanescente
 4,5,848,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,180,20,1,"2° 57' 39,556"" S","51° 17' 56,038"" W",0,Remanescente
-4,5,849,Abiu branco ,Pouteria caimito (Ruiz & Pav.) Radlk.,165,13,2,"2° 57' 39,619"" S","51° 17' 56,054"" W",0,Remanescente
+4,5,849,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,165,13,2,"2° 57' 39,619"" S","51° 17' 56,054"" W",0,Remanescente
 4,5,850,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,127,17,1,"2° 57' 39,161"" S","51° 17' 55,644"" W",0,Remanescente
 4,5,851,Urucurana,Huberodendron swietenioides (Gleason) Ducke,140,16,2,"2° 57' 39,979"" S","51° 17' 55,514"" W",0,Remanescente
 4,5,852,Melancieiro,Alexa grandiflora Duck,162,20,1,"2° 57' 39,683"" S","51° 17' 54,780"" W",0,Remanescente
@@ -6765,7 +6762,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,5,911,Casca seca,Licania canescens Benoist,215,13,2,"2° 57' 41,465"" S","51° 17' 45,464"" W",0,Remanescente
 4,5,912,Casca seca,Licania canescens Benoist,180,13,1,"2° 57' 40,853"" S","51° 17' 48,983"" W",0,Remanescente
 4,5,913,Sapucaia,Lecythis pisonis Cambess.,250,17,1,"2° 57' 41,787"" S","51° 17' 45,873"" W",0,Remanescente
-4,5,914,Cambará,"Erisma uncinatum Warm,",250,19,1,"2° 57' 42,120"" S","51° 17' 45,194"" W",0,Remanescente
+4,5,914,Cambará,Erisma uncinatum Warm,250,19,1,"2° 57' 42,120"" S","51° 17' 45,194"" W",0,Remanescente
 4,5,915,Casca seca,Licania canescens Benoist,150,18,1,"2° 57' 41,935"" S","51° 17' 45,248"" W",0,Remanescente
 4,5,916,Envira branca,Xylopia polyantha R.E.Fr.,180,15,1,"2° 57' 41,321"" S","51° 17' 45,726"" W",0,Remanescente
 4,5,917,Casca seca,Licania canescens Benoist,162,14,1,"2° 57' 41,568"" S","51° 17' 44,993"" W",0,Remanescente
@@ -7159,7 +7156,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1309,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,190,13,1,"2° 57' 40,027"" S","51° 17' 38,135"" W",0,Remanescente
 4,8,1310,Casca seca,Licania canescens Benoist,160,13,1,"2° 57' 39,087"" S","51° 17' 38,103"" W",0,Remanescente
 4,8,1311,Acapu,Vouacapoua americana Aubl.,180,16,2,"2° 57' 39,337"" S","51° 17' 37,239"" W",0,Remanescente
-4,8,1312,Cambará,"Erisma uncinatum Warm,",180,19,1,"2° 57' 39,093"" S","51° 17' 37,146"" W",0,Remanescente
+4,8,1312,Cambará,Erisma uncinatum Warm,180,19,1,"2° 57' 39,093"" S","51° 17' 37,146"" W",0,Remanescente
 4,8,1313,Acapu,Vouacapoua americana Aubl.,220,18,1,"2° 57' 38,973"" S","51° 17' 37,910"" W",0,Remanescente
 4,8,1314,Tauari,Couratari oblongifolia Ducke & Kunth,170,18,1,"2° 57' 38,794"" S","51° 17' 38,527"" W",0,Remanescente
 4,8,1315,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,170,16,1,"2° 57' 38,975"" S","51° 17' 38,605"" W",0,Remanescente
@@ -7210,7 +7207,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1360,Louro,Ocotea spp.,200,12,3,"2° 57' 36,474"" S","51° 17' 47,711"" W",0,Remanescente
 4,8,1361,Acapu,Vouacapoua americana Aubl.,130,10,1,"2° 57' 37,031"" S","51° 17' 48,245"" W",0,Remanescente
 4,8,1362,Louro pimenta,Licaria reitzkleiniana Vattimo,240,17,1,"2° 57' 35,828"" S","51° 17' 47,950"" W",0,Explorar
-4,8,1363,Cambará,"Erisma uncinatum Warm,",150,17,2,"2° 57' 35,775"" S","51° 17' 48,367"" W",0,Remanescente
+4,8,1363,Cambará,Erisma uncinatum Warm,150,17,2,"2° 57' 35,775"" S","51° 17' 48,367"" W",0,Remanescente
 4,8,1364,Andiroba,Carapa guianensis Aubl.,180,16,1,"2° 57' 36,796"" S","51° 17' 48,121"" W",0,Explorar
 4,8,1365,Ananí,Symphonia globulifera L. f.,140,15,1,"2° 57' 36,814"" S","51° 17' 48,291"" W",0,Remanescente
 4,8,1366,Orelha de macaco,Enterolobium schomburgkii (Benth.) Benth.,240,16,1,"2° 57' 37,169"" S","51° 17' 47,651"" W",0,Remanescente
@@ -7219,7 +7216,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1369,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,160,10,1,"2° 57' 36,666"" S","51° 17' 48,684"" W",0,Remanescente
 4,8,1370,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,130,17,2,"2° 57' 35,958"" S","51° 17' 48,907"" W",0,Remanescente
 4,8,1371,Acapu,Vouacapoua americana Aubl.,130,13,1,"2° 57' 35,620"" S","51° 17' 49,486"" W",0,Remanescente
-4,8,1372,Tuturuba de cancão,Pouteria sp ,167,16,1,"2° 57' 35,634"" S","51° 17' 49,556"" W",0,Remanescente
 4,8,1373,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,170,14,1,"2° 57' 36,536"" S","51° 17' 49,016"" W",0,Remanescente
 4,8,1374,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,170,7,2,"2° 57' 36,618"" S","51° 17' 48,970"" W",0,Remanescente
 4,8,1375,Ingá vermelho,Inga alba (Sw) Willd,132,12,1,"2° 57' 36,849"" S","51° 17' 49,225"" W",0,Remanescente
@@ -7244,7 +7240,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1394,Ucuuba da folha peluda,Virola multinervia Ducke,160,13,3,"2° 57' 34,985"" S","51° 17' 52,735"" W",0,Remanescente
 4,8,1395,Acapu,Vouacapoua americana Aubl.,160,13,2,"2° 57' 35,265"" S","51° 17' 52,705"" W",0,Remanescente
 4,8,1396,Virola,Virola michelii Heckel,160,16,1,"2° 57' 35,494"" S","51° 17' 52,265"" W",0,Remanescente
-4,8,1397,Cambará,"Erisma uncinatum Warm,",300,16,3,"2° 57' 35,554"" S","51° 17' 52,875"" W",0,Remanescente
+4,8,1397,Cambará,Erisma uncinatum Warm,300,16,3,"2° 57' 35,554"" S","51° 17' 52,875"" W",0,Remanescente
 4,8,1398,Pau de remo,Chimarrhis turbinata DC,160,10,2,"2° 57' 35,340"" S","51° 17' 53,616"" W",0,Remanescente
 4,8,1399,Abiu,Pouteria ramiflora (Mart.) Radlk.,135,10,1,"2° 57' 34,910"" S","51° 17' 53,577"" W",0,Remanescente
 4,8,1401,Casca seca,Licania canescens Benoist,270,17,2,"2° 57' 35,107"" S","51° 17' 54,187"" W",3,Remanescente
@@ -7262,7 +7258,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1413,Fava bolota,Parkia pendula (Willd.) Benth. ex Walp.,400,18,1,"2° 57' 33,984"" S","51° 17' 55,135"" W",0,Remanescente
 4,8,1414,Tauari,Couratari oblongifolia Ducke & Kunth,150,18,1,"2° 57' 33,898"" S","51° 17' 55,081"" W",0,Remanescente
 4,8,1415,Acapu,Vouacapoua americana Aubl.,164,18,1,"2° 57' 33,871"" S","51° 17' 55,174"" W",0,Remanescente
-4,8,1416,Cambará,"Erisma uncinatum Warm,",190,16,1,"2° 57' 33,763"" S","51° 17' 55,312"" W",0,Remanescente
+4,8,1416,Cambará,Erisma uncinatum Warm,190,16,1,"2° 57' 33,763"" S","51° 17' 55,312"" W",0,Remanescente
 4,8,1417,Andiroba,Carapa guianensis Aubl.,165,18,1,"2° 57' 34,062"" S","51° 17' 55,452"" W",0,Remanescente
 4,8,1418,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,180,18,1,"2° 57' 33,806"" S","51° 17' 55,753"" W",0,Remanescente
 4,8,1419,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,130,14,2,"2° 57' 33,842"" S","51° 17' 55,861"" W",0,Remanescente
@@ -7319,7 +7315,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,8,1472,Acapu,Vouacapoua americana Aubl.,178,18,2,"2° 57' 32,229"" S","51° 18' 3,069"" W",0,Remanescente
 4,8,1473,Acapu,Vouacapoua americana Aubl.,190,14,1,"2° 57' 31,669"" S","51° 18' 3,130"" W",0,Remanescente
 4,8,1474,Casca seca,Licania canescens Benoist,160,13,3,"2° 57' 31,597"" S","51° 18' 3,377"" W",6,Remanescente
-4,8,1475,NI,,150,13,1,"2° 57' 31,466"" S","51° 18' 3,246"" W",0,Remanescente
+4,8,1475,NI,NI,150,13,1,"2° 57' 31,466"" S","51° 18' 3,246"" W",0,Remanescente
 4,8,1476,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,180,13,1,"2° 57' 31,539"" S","51° 18' 3,694"" W",0,Remanescente
 4,8,1477,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,260,19,1,"2° 57' 31,921"" S","51° 18' 4,250"" W",0,Explorar
 4,8,1478,Angelim amargoso,Vatairea paraensis Ducke,250,17,1,"2° 57' 32,148"" S","51° 18' 4,637"" W",0,Explorar
@@ -7416,7 +7412,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,9,1569,Virola,Virola michelii Heckel,150,19,1,"2° 57' 32,727"" S","51° 17' 57,604"" W",0,Remanescente
 4,9,1570,Matamatá,Eschweilera ovata (Cambess.) Miers,210,13,1,"2° 57' 32,494"" S","51° 17' 56,886"" W",0,Explorar
 4,9,1571,Acapu,Vouacapoua americana Aubl.,128,13,1,"2° 57' 32,840"" S","51° 17' 56,276"" W",0,Remanescente
-4,9,1572,Guajará,Pouteria sp.,160,12,1,"2° 57' 30,975"" S","51° 18' 2,597"" W",0,Remanescente
+4,9,1572,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),160,12,1,"2° 57' 30,975"" S","51° 18' 2,597"" W",0,Remanescente
 4,9,1573,Virola,Virola michelii Heckel,147,13,1,"2° 57' 32,935"" S","51° 17' 56,300"" W",5,Remanescente
 4,9,1574,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,280,18,1,"2° 57' 31,530"" S","51° 17' 56,583"" W",0,Explorar
 4,9,1575,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,200,10,1,"2° 57' 31,538"" S","51° 17' 56,089"" W",0,Remanescente
@@ -7460,7 +7456,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,9,1613,Acapu,Vouacapoua americana Aubl.,170,18,1,"2° 57' 33,841"" S","51° 17' 49,777"" W",0,Remanescente
 4,9,1614,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,140,15,3,"2° 57' 34,466"" S","51° 17' 50,426"" W",0,Remanescente
 4,9,1615,Matamatá,Eschweilera ovata (Cambess.) Miers,200,18,1,"2° 57' 34,899"" S","51° 17' 49,871"" W",0,Remanescente
-4,9,1616,Guajará,Pouteria sp.,240,18,1,"2° 57' 35,065"" S","51° 17' 49,647"" W",0,Remanescente
+4,9,1616,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),240,18,1,"2° 57' 35,065"" S","51° 17' 49,647"" W",0,Remanescente
 4,9,1617,Fava branca,Parkia paraensis Ducke,128,13,1,"2° 57' 34,979"" S","51° 17' 49,593"" W",0,Remanescente
 4,9,1618,Tanibuca,Buchenavia capitata (Vahl) Eichler,300,18,2,"2° 57' 34,427"" S","51° 17' 49,392"" W",0,Remanescente
 4,9,1619,Breu vermelho,Protium apiculatum  Swart,160,16,1,"2° 57' 34,499"" S","51° 17' 49,376"" W",0,Remanescente
@@ -7495,7 +7491,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,9,1648,Casca seca,Licania canescens Benoist,160,17,1,"2° 57' 35,753"" S","51° 17' 41,650"" W",0,Remanescente
 4,9,1649,Fava de paca,Stryphnodendron pulcherrimum (Willd.) Hochr.,150,16,2,"2° 57' 36,051"" S","51° 17' 41,558"" W",0,Remanescente
 4,9,1650,Breu branco,Protium decandrum (Aubl.) Marchand,180,13,1,"2° 57' 36,807"" S","51° 17' 41,644"" W",0,Remanescente
-4,9,1651,Matamatá,Eschweilera spp.,230,12,2,"2° 57' 37,218"" S","51° 17' 41,745"" W",0,Remanescente
+4,9,1651,Matamatá,Eschweilera ovata (Cambess.) Miers,230,12,2,"2° 57' 37,218"" S","51° 17' 41,745"" W",0,Remanescente
 4,9,1652,Andiroba,Carapa guianensis Aubl.,155,15,1,"2° 57' 37,299"" S","51° 17' 41,467"" W",10,Remanescente
 4,9,1653,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,220,13,1,"2° 57' 36,923"" S","51° 17' 41,242"" W",0,Remanescente
 4,9,1654,Melancieiro,Alexa grandiflora Duck,180,12,1,"2° 57' 36,837"" S","51° 17' 41,188"" W",0,Remanescente
@@ -7519,7 +7515,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,9,1672,Casca seca,Licania canescens Benoist,153,17,1,"2° 57' 38,083"" S","51° 17' 38,055"" W",0,Remanescente
 4,9,1673,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,180,12,1,"2° 57' 38,120"" S","51° 17' 38,164"" W",0,Remanescente
 4,9,1674,Acapu,Vouacapoua americana Aubl.,135,12,2,"2° 57' 38,052"" S","51° 17' 38,048"" W",0,Remanescente
-4,9,1675,Guajará,Pouteria sp.,180,16,1,"2° 57' 36,732"" S","51° 17' 38,154"" W",4,Remanescente
+4,9,1675,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),180,16,1,"2° 57' 36,732"" S","51° 17' 38,154"" W",4,Remanescente
 4,9,1676,Acapu,Vouacapoua americana Aubl.,220,16,1,"2° 57' 36,844"" S","51° 17' 37,884"" W",0,Remanescente
 4,9,1677,Breu vermelho,Protium apiculatum  Swart,165,13,1,"2° 57' 37,150"" S","51° 17' 37,298"" W",0,Remanescente
 4,9,1678,Melancieiro,Alexa grandiflora Duck,350,16,3,"2° 57' 37,194"" S","51° 17' 37,143"" W",0,Remanescente
@@ -7540,7 +7536,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,10,1693,Matamatá,Eschweilera ovata (Cambess.) Miers,180,17,1,"2° 57' 35,566"" S","51° 17' 36,910"" W",0,Remanescente
 4,10,1694,Goiabão ,Pouteria pachycarpa Pires,170,18,1,"2° 57' 35,896"" S","51° 17' 36,825"" W",0,Remanescente
 4,10,1695,Andiroba,Carapa guianensis Aubl.,160,13,1,"2° 57' 36,090"" S","51° 17' 38,030"" W",4,Remanescente
-4,10,1696,Guajará,Pouteria sp.,200,15,2,"2° 57' 36,452"" S","51° 17' 38,185"" W",0,Remanescente
+4,10,1696,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),200,15,2,"2° 57' 36,452"" S","51° 17' 38,185"" W",0,Remanescente
 4,10,1697,Cajuaçu,Anacardium giganteum W.Hancock ex Engl.,180,16,1,"2° 57' 36,272"" S","51° 17' 38,339"" W",0,Remanescente
 4,10,1698,Sucupira vaselina,Ampelocera edentula Kuhlm.,180,12,2,"2° 57' 35,715"" S","51° 17' 38,269"" W",0,Remanescente
 4,10,1699,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,170,15,3,"2° 57' 35,607"" S","51° 17' 38,407"" W",0,Remanescente
@@ -7605,7 +7601,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,10,1758,Acapu,Vouacapoua americana Aubl.,156,12,1,"2° 57' 32,564"" S","51° 17' 47,745"" W",0,Remanescente
 4,10,1759,Andiroba,Carapa guianensis Aubl.,153,15,2,"2° 57' 32,438"" S","51° 17' 47,946"" W",0,Remanescente
 4,10,1760,Melancieiro,Alexa grandiflora Duck,252,15,1,"2° 57' 32,101"" S","51° 17' 48,524"" W",7,Remanescente
-4,10,1761,Janitá,,155,14,2,"2° 57' 32,287"" S","51° 17' 48,702"" W",0,Remanescente
+4,10,1761,Janitá,Brosimum guianense(Aubl.) Huber,155,14,2,"2° 57' 32,287"" S","51° 17' 48,702"" W",0,Remanescente
 4,10,1762,Açoita cavalo,Lueheopsis sp.,159,15,2,"2° 57' 33,394"" S","51° 17' 48,510"" W",0,Remanescente
 4,10,1763,Abiu,Pouteria ramiflora (Mart.) Radlk.,230,16,1,"2° 57' 33,413"" S","51° 17' 48,912"" W",0,Remanescente
 4,10,1764,Casca seca,Licania canescens Benoist,132,12,1,"2° 57' 33,277"" S","51° 17' 48,912"" W",0,Remanescente
@@ -7794,7 +7790,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,11,1947,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,186,17,1,"2° 57' 29,140"" S","51° 17' 58,279"" W",0,Remanescente
 4,11,1948,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,190,12,2,"2° 57' 28,904"" S","51° 17' 57,923"" W",0,Remanescente
 4,11,1949,Barrote,Tetragastris panamensis (Engl.) Kuntze,192,9,2,"2° 57' 28,578"" S","51° 17' 57,877"" W",0,Remanescente
-4,11,1950,Louro amargoso,Ocotea spp.,135,11,2,"2° 57' 27,683"" S","51° 17' 57,690"" W",4,Remanescente
 4,11,1951,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,210,15,3,"2° 57' 27,067"" S","51° 18' 0,283"" W",7,Remanescente
 4,11,1952,Fava branca,Parkia paraensis Ducke,246,14,1,"2° 57' 28,138"" S","51° 17' 57,173"" W",0,Explorar
 4,11,1953,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,142,14,2,"2° 57' 28,433"" S","51° 17' 56,155"" W",0,Remanescente
@@ -7816,7 +7811,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,11,1969,Tauari,Couratari oblongifolia Ducke & Kunth,140,18,1,"2° 57' 29,435"" S","51° 17' 54,450"" W",0,Remanescente
 4,11,1970,Acapu,Vouacapoua americana Aubl.,182,13,2,"2° 57' 29,973"" S","51° 17' 54,350"" W",0,Remanescente
 4,11,1971,Acapu,Vouacapoua americana Aubl.,180,16,1,"2° 57' 30,347"" S","51° 17' 54,111"" W",8,Remanescente
-4,11,1972,Cambará,"Erisma uncinatum Warm,",137,19,2,"2° 57' 30,401"" S","51° 17' 53,926"" W",0,Remanescente
+4,11,1972,Cambará,Erisma uncinatum Warm,137,19,2,"2° 57' 30,401"" S","51° 17' 53,926"" W",0,Remanescente
 4,11,1973,Acapu,Vouacapoua americana Aubl.,180,15,1,"2° 57' 30,521"" S","51° 17' 53,394"" W",0,Remanescente
 4,11,1974,Casca seca,Licania canescens Benoist,140,16,1,"2° 57' 29,838"" S","51° 17' 53,061"" W",0,Remanescente
 4,11,1975,Casca seca,Licania canescens Benoist,210,18,1,"2° 57' 29,846"" S","51° 17' 53,030"" W",0,Remanescente
@@ -8023,7 +8018,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,12,2176,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,270,18,1,"2° 57' 28,952"" S","51° 17' 51,786"" W",0,Remanescente
 4,12,2177,Acapu,Vouacapoua americana Aubl.,210,15,2,"2° 57' 28,418"" S","51° 17' 51,523"" W",0,Remanescente
 4,12,2178,Virola,Virola michelii Heckel,122,17,1,"2° 57' 28,373"" S","51° 17' 51,677"" W",0,Remanescente
-4,12,2179,Cambará,"Erisma uncinatum Warm,",142,15,2,"2° 57' 28,170"" S","51° 17' 51,792"" W",0,Remanescente
+4,12,2179,Cambará,Erisma uncinatum Warm,142,15,2,"2° 57' 28,170"" S","51° 17' 51,792"" W",0,Remanescente
 4,12,2180,Maçarandubinha,Manilkara paraensis (Huber) Standl.,180,10,2,"2° 57' 27,845"" S","51° 17' 51,746"" W",0,Remanescente
 4,12,2181,Acapu,Vouacapoua americana Aubl.,180,17,1,"2° 57' 27,905"" S","51° 17' 52,124"" W",0,Remanescente
 4,12,2182,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,150,14,2,"2° 57' 28,023"" S","51° 17' 52,418"" W",0,Remanescente
@@ -8206,7 +8201,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,13,2358,Acapu,Vouacapoua americana Aubl.,140,10,2,"2° 57' 26,499"" S","51° 17' 53,466"" W",0,Remanescente
 4,13,2359,Acapu,Vouacapoua americana Aubl.,170,13,2,"2° 57' 26,788"" S","51° 17' 53,404"" W",0,Remanescente
 4,13,2360,Tauari,Couratari oblongifolia Ducke & Kunth,240,17,1,"2° 57' 27,172"" S","51° 17' 53,366"" W",0,Remanescente
-4,13,2362,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,210,18,2,"2° 57' 26,611"" S","51° 17' 53,195"" W",0,Remanescente
+4,13,2362,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,210,18,2,"2° 57' 26,611"" S","51° 17' 53,195"" W",0,Remanescente
 4,13,2363,Acapu,Vouacapoua americana Aubl.,170,17,1,"2° 57' 25,676"" S","51° 17' 53,495"" W",0,Remanescente
 4,13,2364,Angelim rajado,Zygia racemosa  (Ducke) Barneby & J.W.Grimes,170,16,2,"2° 57' 26,095"" S","51° 17' 53,102"" W",0,Remanescente
 4,13,2365,Louro abacate,Ocotea opifera Mart.,170,16,2,"2° 57' 26,408"" S","51° 17' 52,022"" W",0,Remanescente
@@ -8453,7 +8448,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,14,2606,Casca seca,Licania canescens Benoist,150,16,1,"2° 57' 22,305"" S","51° 18' 2,091"" W",0,Remanescente
 4,14,2607,Acapu,Vouacapoua americana Aubl.,183,12,2,"2° 57' 22,147"" S","51° 18' 2,053"" W",0,Remanescente
 4,14,2608,Matamatá,Eschweilera ovata (Cambess.) Miers,218,19,1,"2° 57' 21,800"" S","51° 18' 1,141"" W",3,Remanescente
-4,14,2609,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,130,14,1,"2° 57' 21,582"" S","51° 18' 2,245"" W",0,Remanescente
+4,14,2609,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,130,14,1,"2° 57' 21,582"" S","51° 18' 2,245"" W",0,Remanescente
 4,14,2610,Casca seca,Licania canescens Benoist,186,15,1,"2° 57' 21,998"" S","51° 18' 3,504"" W",0,Remanescente
 4,14,2611,Pau santo,Zollernia paraensis Huber,170,14,1,"2° 57' 22,170"" S","51° 18' 3,612"" W",0,Remanescente
 4,14,2612,Casca seca,Licania canescens Benoist,153,15,2,"2° 57' 22,383"" S","51° 18' 3,929"" W",2,Remanescente
@@ -8640,7 +8635,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,16,2793,Matamatá,Eschweilera ovata (Cambess.) Miers,154,18,1,"2° 57' 24,853"" S","51° 17' 39,243"" W",0,Remanescente
 4,16,2794,Envira preta,Guatteria poeppigiana Mart.,150,17,1,"2° 57' 24,631"" S","51° 17' 39,188"" W",0,Remanescente
 4,16,2795,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,164,15,2,"2° 57' 24,725"" S","51° 17' 40,269"" W",0,Remanescente
-4,16,2796,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,210,13,2,"2° 57' 25,039"" S","51° 17' 40,941"" W",0,Remanescente
+4,16,2796,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,210,13,2,"2° 57' 25,039"" S","51° 17' 40,941"" W",0,Remanescente
 4,16,2797,Louro pimenta,Licaria reitzkleiniana Vattimo,165,15,3,"2° 57' 25,058"" S","51° 17' 41,111"" W",0,Remanescente
 4,16,2798,Tauari,Couratari oblongifolia Ducke & Kunth,210,18,1,"2° 57' 25,203"" S","51° 17' 41,312"" W",0,Explorar
 4,16,2799,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,250,18,1,"2° 57' 25,412"" S","51° 17' 41,529"" W",0,Remanescente
@@ -8776,7 +8771,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,17,2929,Ingá vermelho,Inga alba (Sw) Willd,138,12,1,"2° 57' 16,869"" S","51° 18' 3,999"" W",0,Remanescente
 4,17,2930,Acapu,Vouacapoua americana Aubl.,270,16,2,"2° 57' 15,966"" S","51° 18' 4,307"" W",0,Remanescente
 4,17,2931,Casca seca,Licania canescens Benoist,129,15,1,"2° 57' 15,780"" S","51° 18' 4,129"" W",0,Remanescente
-4,17,2932,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,180,17,1,"2° 57' 16,091"" S","51° 18' 3,874"" W",0,Remanescente
+4,17,2932,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,180,17,1,"2° 57' 16,091"" S","51° 18' 3,874"" W",0,Remanescente
 4,17,2933,Melancieiro,Alexa grandiflora Duck,190,17,1,"2° 57' 16,935"" S","51° 18' 3,420"" W",0,Remanescente
 4,17,2934,Abiu,Pouteria ramiflora (Mart.) Radlk.,170,13,1,"2° 57' 17,254"" S","51° 18' 2,903"" W",0,Remanescente
 4,17,2935,Pau santo,Zollernia paraensis Huber,200,18,1,"2° 57' 17,241"" S","51° 18' 2,834"" W",0,Remanescente
@@ -8814,7 +8809,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,17,2967,Acapu,Vouacapoua americana Aubl.,174,16,1,"2° 57' 18,992"" S","51° 17' 58,072"" W",0,Remanescente
 4,17,2968,Tanibuca,Buchenavia capitata (Vahl) Eichler,350,17,3,"2° 57' 19,136"" S","51° 17' 57,810"" W",0,Remanescente
 4,17,2969,Acapu,Vouacapoua americana Aubl.,190,18,2,"2° 57' 18,805"" S","51° 17' 57,431"" W",0,Remanescente
-4,17,2970,Pau de gema,,170,15,2,"2° 57' 18,539"" S","51° 17' 57,531"" W",0,Remanescente
 4,17,2971,Acapu,Vouacapoua americana Aubl.,178,16,2,"2° 57' 17,685"" S","51° 17' 57,554"" W",0,Remanescente
 4,17,2972,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,200,16,2,"2° 57' 17,742"" S","51° 17' 57,005"" W",0,Explorar
 4,17,2973,Sucupira babona,Ormosia flava (Ducke) Rudd,184,19,1,"2° 57' 18,180"" S","51° 17' 57,014"" W",0,Remanescente
@@ -9408,7 +9402,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,20,3461,Abiu,Pouteria ramiflora (Mart.) Radlk.,170,18,1,"2° 57' 17,382"" S","51° 17' 45,015"" W",0,Remanescente
 4,20,3462,Seringueira,Hevea brasiliensis (Willd. ex A.Juss.) Müll.Arg.,160,17,1,"2° 57' 17,248"" S","51° 17' 45,478"" W",0,Remanescente
 4,20,3463,Fava arara tucupi,Parkia multijuga Benth.,146,13,1,"2° 57' 17,307"" S","51° 17' 45,625"" W",0,Remanescente
-4,20,3464,Matamatá,Eschweilera spp.,310,19,1,"2° 57' 17,127"" S","51° 17' 45,779"" W",0,Remanescente
+4,20,3464,Matamatá,Eschweilera ovata (Cambess.) Miers,310,19,1,"2° 57' 17,127"" S","51° 17' 45,779"" W",0,Remanescente
 4,20,3465,Acapu,Vouacapoua americana Aubl.,128,12,1,"2° 57' 15,916"" S","51° 17' 47,268"" W",0,Remanescente
 4,20,3466,Acapu,Vouacapoua americana Aubl.,210,17,1,"2° 57' 16,009"" S","51° 17' 45,307"" W",0,Remanescente
 4,20,3467,Tauari,Couratari oblongifolia Ducke & Kunth,360,20,1,"2° 57' 15,982"" S","51° 17' 45,400"" W",0,Explorar
@@ -9473,7 +9467,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 4,20,3526,Acapu,Vouacapoua americana Aubl.,300,16,1,"2° 57' 12,402"" S","51° 17' 59,399"" W",0,Remanescente
 4,20,3527,Sapucaia,Lecythis pisonis Cambess.,330,18,1,"2° 57' 12,425"" S","51° 17' 59,438"" W",0,Explorar
 4,20,3528,Acapu,Vouacapoua americana Aubl.,150,16,1,"2° 57' 12,625"" S","51° 17' 59,685"" W",0,Remanescente
-4,20,3529,Cauricun,,126,12,1,"2° 57' 12,544"" S","51° 17' 59,732"" W",0,Remanescente
 4,20,3530,Breu vermelho,Protium apiculatum  Swart,210,18,1,"2° 57' 12,152"" S","51° 18' 0,264"" W",0,Remanescente
 4,20,3531,Acapu,Vouacapoua americana Aubl.,170,10,2,"2° 57' 12,230"" S","51° 18' 0,580"" W",0,Remanescente
 4,20,3532,Abiu,Pouteria ramiflora (Mart.) Radlk.,148,13,2,"2° 57' 11,805"" S","51° 18' 0,642"" W",0,Remanescente
@@ -9574,7 +9567,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 5,3,77,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,140,14,1,"2° 58' 11,628"" S","51° 18' 10,670"" W",0,Remanescente
 5,3,78,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,223,17,2,"2° 58' 12,703"" S","51° 18' 10,967"" W",0,Remanescente
 5,3,79,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,310,11,1,"2° 58' 13,081"" S","51° 18' 10,961"" W",0,Explorar
-5,3,80,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,243,10,1,"2° 58' 13,016"" S","51° 18' 9,246"" W",0,Remanescente
+5,3,80,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,243,10,1,"2° 58' 13,016"" S","51° 18' 9,246"" W",0,Remanescente
 5,3,81,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,206,15,1,"2° 58' 12,169"" S","51° 18' 9,671"" W",0,Remanescente
 5,3,82,Acapu,Vouacapoua americana Aubl.,252,11,1,"2° 58' 11,925"" S","51° 18' 9,344"" W",0,Remanescente
 5,3,83,Cupiúba,Goupia glabra Aubl.,270,14,2,"2° 58' 13,036"" S","51° 18' 8,386"" W",0,Explorar
@@ -9664,7 +9657,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 5,5,167,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,140,15,1,"2° 58' 8,804"" S","51° 18' 11,174"" W",0,Remanescente
 5,5,168,Acapu,Vouacapoua americana Aubl.,198,12,2,"2° 58' 8,494"" S","51° 18' 10,499"" W",0,Remanescente
 5,5,169,Breu vermelho,Protium apiculatum  Swart,170,13,1,"2° 58' 8,679"" S","51° 18' 10,111"" W",0,Remanescente
-5,5,170,Guajará,Pouteria sp.,240,12,1,"2° 58' 9,287"" S","51° 18' 11,959"" W",0,Remanescente
+5,5,170,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),240,12,1,"2° 58' 9,287"" S","51° 18' 11,959"" W",0,Remanescente
 5,5,171,Angelim amargoso,Vatairea paraensis Ducke,230,18,1,"2° 58' 9,505"" S","51° 18' 10,781"" W",0,Explorar
 5,5,172,Fava bolota,Parkia pendula (Willd.) Benth. ex Walp.,210,16,1,"2° 58' 9,233"" S","51° 18' 10,547"" W",0,Remanescente
 5,5,173,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,390,17,1,"2° 58' 8,811"" S","51° 18' 8,879"" W",0,Remanescente
@@ -9831,10 +9824,10 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 5,7,334,Casca seca,Licania canescens Benoist,156,14,1,"2° 58' 8,991"" S","51° 18' 0,898"" W",0,Remanescente
 5,7,335,Acapu,Vouacapoua americana Aubl.,158,12,1,"2° 58' 8,983"" S","51° 18' 0,697"" W",0,Remanescente
 5,7,336,Louro preto,Ocotea nigrescens Vicent.,216,17,1,"2° 58' 8,472"" S","51° 17' 59,439"" W",0,Remanescente
-5,7,337,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,230,14,1,"2° 58' 8,130"" S","51° 17' 59,322"" W",0,Remanescente
+5,7,337,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,230,14,1,"2° 58' 8,130"" S","51° 17' 59,322"" W",0,Remanescente
 5,7,338,Melancieiro,Alexa grandiflora Duck,160,12,2,"2° 58' 8,490"" S","51° 17' 59,377"" W",0,Remanescente
 5,7,339,Casca seca,Licania canescens Benoist,174,18,1,"2° 58' 9,198"" S","51° 17' 59,984"" W",0,Remanescente
-5,7,340,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,290,16,1,"2° 58' 9,450"" S","51° 17' 59,147"" W",0,Remanescente
+5,7,340,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,290,16,1,"2° 58' 9,450"" S","51° 17' 59,147"" W",0,Remanescente
 5,7,341,Casca seca,Licania canescens Benoist,180,12,1,"2° 58' 9,501"" S","51° 17' 59,093"" W",0,Remanescente
 5,7,342,Andiroba,Carapa guianensis Aubl.,234,17,1,"2° 58' 8,705"" S","51° 17' 58,098"" W",0,Explorar
 5,7,343,Tauari,Couratari oblongifolia Ducke & Kunth,240,22,1,"2° 58' 9,378"" S","51° 17' 57,797"" W",0,Explorar
@@ -9866,12 +9859,12 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 5,8,369,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,160,14,1,"2° 58' 5,898"" S","51° 18' 2,635"" W",0,Remanescente
 5,8,370,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,280,17,3,"2° 58' 6,613"" S","51° 18' 2,877"" W",0,Remanescente
 5,8,371,Casca seca,Licania canescens Benoist,200,16,2,"2° 58' 6,808"" S","51° 18' 3,025"" W",0,Remanescente
-5,8,372,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,220,20,1,"2° 58' 6,606"" S","51° 18' 3,242"" W",0,Remanescente
+5,8,372,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,220,20,1,"2° 58' 6,606"" S","51° 18' 3,242"" W",0,Remanescente
 5,8,373,Acapu,Vouacapoua americana Aubl.,210,11,1,"2° 58' 6,468"" S","51° 18' 4,607"" W",0,Remanescente
 5,8,374,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,280,12,3,"2° 58' 6,309"" S","51° 18' 4,567"" W",0,Remanescente
 5,8,375,Uxirana,Vantanea parviflora Lam.,180,13,2,"2° 58' 6,054"" S","51° 18' 4,505"" W",0,Remanescente
 5,8,376,Breu sucuruba,Trattinnickia rhoifolia Willd.,135,14,1,"2° 58' 5,626"" S","51° 18' 2,968"" W",0,Remanescente
-5,8,377,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,183,15,2,"2° 58' 5,608"" S","51° 18' 3,030"" W",0,Remanescente
+5,8,377,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,183,15,2,"2° 58' 5,608"" S","51° 18' 3,030"" W",0,Remanescente
 5,8,378,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,168,23,1,"2° 58' 6,483"" S","51° 18' 4,444"" W",0,Remanescente
 5,8,379,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,168,12,1,"2° 58' 6,209"" S","51° 18' 4,443"" W",0,Remanescente
 5,8,380,Acapu,Vouacapoua americana Aubl.,200,9,2,"2° 58' 5,867"" S","51° 18' 5,125"" W",0,Remanescente
@@ -10869,7 +10862,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,1,10,Fava arara tucupi,Parkia multijuga Benth.,310,19,2,"2 57' 9,933"" S","51 18' 4,414"" W",0,Explorar
 6,1,11,Jatobá,Hymenaea courbaril L.,270,17,1,"2 57' 9,696"" S","51 18' 4,611"" W",0,Explorar
 6,1,12,Tauari,Couratari oblongifolia Ducke & Kunth,170,20,1,"2 57' 9,399"" S","51 18' 4,171"" W",0,Remanescente
-6,1,13,Matamatá,Eschweilera spp.,210,16,3,"2 57' 9,410"" S","51 18' 4,239"" W",0,Remanescente
+6,1,13,Matamatá,Eschweilera ovata (Cambess.) Miers,210,16,3,"2 57' 9,410"" S","51 18' 4,239"" W",0,Remanescente
 6,1,14,Louro pimenta,Licaria reitzkleiniana Vattimo,135,12,2,"2 57' 9,349"" S","51 18' 4,320"" W",0,Remanescente
 6,1,15,Acapu,Vouacapoua americana Aubl.,150,11,2,"2 57' 8,994"" S","51 18' 4,256"" W",0,Remanescente
 6,1,16,Acapu,Vouacapoua americana Aubl.,172,17,2,"2 57' 9,150"" S","51 18' 4,299"" W",0,Remanescente
@@ -11029,7 +11022,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,2,170,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,317,16,1,"2 57' 0,580"" S","51 18' 26,185"" W",0,Remanescente
 6,2,171,Acapu,Vouacapoua americana Aubl.,159,12,1,"2 57' 0,723"" S","51 18' 25,963"" W",0,Remanescente
 6,2,172,Acapu,Vouacapoua americana Aubl.,198,13,2,"2 57' 1,191"" S","51 18' 25,895"" W",0,Remanescente
-6,2,173,Guajará,Pouteria sp.,290,21,1,"2 57' 1,430"" S","51 18' 25,895"" W",0,Remanescente
+6,2,173,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),290,21,1,"2 57' 1,430"" S","51 18' 25,895"" W",0,Remanescente
 6,2,174,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,266,16,1,"2 57' 1,459"" S","51 18' 25,708"" W",0,Explorar
 6,2,175,Melancieiro,Alexa grandiflora Duck,320,18,2,"2 57' 1,300"" S","51 18' 25,469"" W",0,Explorar
 6,2,176,Acapu,Vouacapoua americana Aubl.,177,17,2,"2 57' 1,614"" S","51 18' 25,652"" W",0,Remanescente
@@ -11628,7 +11621,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,6,769,Acapu,Vouacapoua americana Aubl.,142,10,2,"2 57' 0,290"" S","51 18' 6,122"" W",0,Remanescente
 6,6,770,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,226,17,1,"2 57' 0,608"" S","51 18' 4,970"" W",0,Explorar
 6,6,771,Casca seca,Licania canescens Benoist,200,16,2,"2 57' 0,615"" S","51 18' 4,744"" W",0,Remanescente
-6,6,772,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,235,17,2,"2 57' 1,571"" S","51 18' 4,548"" W",0,Remanescente
+6,6,772,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,235,17,2,"2 57' 1,571"" S","51 18' 4,548"" W",0,Remanescente
 6,6,773,Tauari,Couratari oblongifolia Ducke & Kunth,280,21,1,"2 57' 0,767"" S","51 18' 4,394"" W",0,Explorar
 6,6,774,Matamatá,Eschweilera ovata (Cambess.) Miers,210,16,2,"2 57' 0,714"" S","51 18' 4,347"" W",0,Explorar
 6,6,775,Pau santo,Zollernia paraensis Huber,137,12,2,"2 57' 0,887"" S","51 18' 4,035"" W",0,Remanescente
@@ -11859,7 +11852,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,8,1000,Acapu,Vouacapoua americana Aubl.,168,12,2,"2 56' 55,141"" S","51 18' 9,739"" W",0,Remanescente
 6,8,1001,Melancieiro,Alexa grandiflora Duck,186,15,2,"2 56' 55,708"" S","51 18' 10,090"" W",0,Remanescente
 6,8,1002,Acapu,Vouacapoua americana Aubl.,175,14,2,"2 56' 56,273"" S","51 18' 10,243"" W",0,Remanescente
-6,8,1003,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,164,10,1,"2 56' 56,687"" S","51 18' 10,030"" W",0,Remanescente
+6,8,1003,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,164,10,1,"2 56' 56,687"" S","51 18' 10,030"" W",0,Remanescente
 6,8,1004,Angelim vermelho,Dinizia excelsa Ducke,546,19,2,"2 56' 56,620"" S","51 18' 9,719"" W",0,Explorar
 6,8,1005,Acapu,Vouacapoua americana Aubl.,290,15,2,"2 56' 56,629"" S","51 18' 9,591"" W",0,Remanescente
 6,8,1006,Melancieiro,Alexa grandiflora Duck,219,16,2,"2 56' 56,480"" S","51 18' 9,420"" W",0,Remanescente
@@ -12009,7 +12002,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,9,1150,Guajará bolacha,Syzygiopsis appositifolia Ducke,273,13,1,"2 56' 50,091"" S","51 18' 21,534"" W",0,Explorar
 6,9,1151,Casca seca,Licania canescens Benoist,252,15,1,"2 56' 50,913"" S","51 18' 22,247"" W",0,Remanescente
 6,9,1152,Casca seca,Licania canescens Benoist,230,16,1,"2 56' 50,570"" S","51 18' 22,251"" W",0,Remanescente
-6,9,1153,Guajará,Pouteria sp.,243,19,1,"2 56' 50,713"" S","51 18' 22,844"" W",0,Remanescente
+6,9,1153,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),243,19,1,"2 56' 50,713"" S","51 18' 22,844"" W",0,Remanescente
 6,9,1154,Acapu,Vouacapoua americana Aubl.,157,9,2,"2 56' 50,148"" S","51 18' 23,407"" W",0,Remanescente
 6,9,1155,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,300,18,1,"2 56' 50,066"" S","51 18' 23,548"" W",0,Remanescente
 6,9,1156,Melancieiro,Alexa grandiflora Duck,178,15,1,"2 56' 49,264"" S","51 18' 23,492"" W",0,Remanescente
@@ -12054,7 +12047,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,10,1195,Casca seca,Licania canescens Benoist,232,13,1,"2 56' 48,894"" S","51 18' 22,348"" W",0,Remanescente
 6,10,1196,Casca seca,Licania canescens Benoist,300,15,1,"2 56' 49,092"" S","51 18' 22,370"" W",0,Remanescente
 6,10,1197,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,220,15,1,"2 56' 48,913"" S","51 18' 22,190"" W",0,Remanescente
-6,10,1198,Guajará,Pouteria sp.,170,16,1,"2 56' 47,740"" S","51 18' 21,708"" W",0,Remanescente
+6,10,1198,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),170,16,1,"2 56' 47,740"" S","51 18' 21,708"" W",0,Remanescente
 6,10,1199,Inharé,Helicostylis podogyne Ducke,168,18,2,"2 56' 47,790"" S","51 18' 21,558"" W",0,Remanescente
 6,10,1200,Acapu,Vouacapoua americana Aubl.,172,11,2,"2 56' 48,052"" S","51 18' 21,695"" W",0,Remanescente
 6,10,1201,Casca seca,Licania canescens Benoist,204,18,2,"2 56' 48,190"" S","51 18' 21,081"" W",0,Remanescente
@@ -12283,7 +12276,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,12,1424,Acariquara,Minquartia guianensis Aubl.,130,12,1,"2 56' 43,476"" S","51 18' 24,523"" W",0,Remanescente
 6,12,1425,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,192,14,2,"2 56' 44,029"" S","51 18' 24,608"" W",0,Remanescente
 6,12,1426,Tauari,Couratari oblongifolia Ducke & Kunth,170,20,1,"2 56' 44,503"" S","51 18' 25,031"" W",0,Remanescente
-6,12,1427,Guajará,Pouteria sp.,200,18,1,"2 56' 44,522"" S","51 18' 24,873"" W",0,Remanescente
+6,12,1427,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),200,18,1,"2 56' 44,522"" S","51 18' 24,873"" W",0,Remanescente
 6,12,1428,Angelim vermelho,Dinizia excelsa Ducke,420,18,1,"2 56' 43,511"" S","51 18' 24,011"" W",0,Remanescente
 6,12,1429,Casca seca,Licania canescens Benoist,212,16,2,"2 56' 43,856"" S","51 18' 24,105"" W",0,Remanescente
 6,12,1430,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,152,11,2,"2 56' 43,830"" S","51 18' 23,772"" W",0,Remanescente
@@ -12348,7 +12341,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,12,1489,Casca seca,Licania canescens Benoist,162,17,1,"2 56' 49,661"" S","51 18' 8,116"" W",0,Remanescente
 6,12,1490,Acapu,Vouacapoua americana Aubl.,235,14,1,"2 56' 49,261"" S","51 18' 7,778"" W",0,Remanescente
 6,12,1491,Acapu,Vouacapoua americana Aubl.,190,10,2,"2 56' 49,487"" S","51 18' 7,514"" W",0,Remanescente
-6,12,1492,Guajará,Pouteria sp.,184,19,1,"2 56' 49,879"" S","51 18' 6,447"" W",0,Remanescente
+6,12,1492,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),184,19,1,"2 56' 49,879"" S","51 18' 6,447"" W",0,Remanescente
 6,12,1493,Parapitaca,Candolleodendron brachystachyum (DC.) R.S.Cowan,310,20,1,"2 56' 49,621"" S","51 18' 5,888"" W",0,Remanescente
 6,12,1494,Sucupira babona,Ormosia flava (Ducke) Rudd,260,20,1,"2 56' 49,651"" S","51 18' 5,798"" W",0,Remanescente
 6,12,1495,Louro preto,Ocotea nigrescens Vicent.,250,16,1,"2 56' 49,965"" S","51 18' 5,884"" W",0,Remanescente
@@ -12456,7 +12449,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,13,1597,Acapu,Vouacapoua americana Aubl.,150,9,2,"2 56' 46,759"" S","51 18' 10,748"" W",0,Remanescente
 6,13,1598,Cupiúba,Goupia glabra Aubl.,220,13,1,"2 56' 46,052"" S","51 18' 12,348"" W",0,Explorar
 6,13,1599,Acapu,Vouacapoua americana Aubl.,225,10,2,"2 56' 47,325"" S","51 18' 12,532"" W",0,Remanescente
-6,13,1600,Guajará,Pouteria sp.,240,15,1,"2 56' 47,173"" S","51 18' 12,882"" W",0,Remanescente
+6,13,1600,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),240,15,1,"2 56' 47,173"" S","51 18' 12,882"" W",0,Remanescente
 6,13,1601,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,145,14,1,"2 56' 46,925"" S","51 18' 13,010"" W",0,Remanescente
 6,13,1602,Acapu,Vouacapoua americana Aubl.,190,13,2,"2 56' 46,791"" S","51 18' 13,103"" W",0,Remanescente
 6,13,1603,Tauari,Couratari oblongifolia Ducke & Kunth,250,18,1,"2 56' 46,405"" S","51 18' 13,031"" W",0,Explorar
@@ -12774,7 +12767,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,16,1915,Acapu,Vouacapoua americana Aubl.,160,12,1,"2 56' 39,749"" S","51 18' 16,139"" W",0,Remanescente
 6,16,1916,Abiurana rosada,Pouteria anomala (Pires) T.D.Penn.,202,17,2,"2 56' 44,867"" S","51 18' 0,876"" W",0,Remanescente
 6,16,1917,Acapu,Vouacapoua americana Aubl.,200,9,2,"2 56' 39,889"" S","51 18' 15,721"" W",0,Remanescente
-6,16,1918,Guajará,Pouteria sp.,225,17,1,"2 56' 40,849"" S","51 18' 15,820"" W",0,Remanescente
+6,16,1918,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),225,17,1,"2 56' 40,849"" S","51 18' 15,820"" W",0,Remanescente
 6,16,1919,Angelim vermelho,Dinizia excelsa Ducke,480,15,2,"2 56' 40,715"" S","51 18' 15,914"" W",0,Explorar
 6,16,1920,Casca seca,Licania canescens Benoist,623,12,2,"2 56' 41,036"" S","51 18' 15,056"" W",0,Remanescente
 6,16,1921,Guajará bolacha,Syzygiopsis appositifolia Ducke,177,16,2,"2 56' 41,256"" S","51 18' 15,116"" W",0,Remanescente
@@ -12846,7 +12839,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,16,1987,Acapu,Vouacapoua americana Aubl.,140,13,2,"2 56' 45,524"" S","51 18' 0,142"" W",0,Remanescente
 6,16,1988,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,274,14,2,"2 56' 46,077"" S","51 18' 0,227"" W",0,Explorar
 6,16,1989,Acapu,Vouacapoua americana Aubl.,200,13,2,"2 56' 45,793"" S","51 18' 0,052"" W",0,Remanescente
-6,16,1990,Oiticica,Clarisia racemosa Ruiz & Pav.,192,18,1,"2 56' 45,297"" S","51 17' 59,591"" W",0,Remanescente
+6,16,1990,Guariuba,Clarisia racemosa Ruiz & Pav.,192,18,1,"2 56' 45,297"" S","51 17' 59,591"" W",0,Remanescente
 6,16,1991,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),170,14,1,"2 56' 45,212"" S","51 17' 59,437"" W",0,Remanescente
 6,16,1992,NI,NI,166,14,2,"2 56' 45,321"" S","51 17' 59,011"" W",0,Remanescente
 6,16,1993,Pequiarana,Caryocar glabrum (Aubl) Pers.,340,14,3,"2 56' 45,973"" S","51 17' 58,699"" W",0,Remanescente
@@ -13025,7 +13018,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,18,2166,Acapu,Vouacapoua americana Aubl.,135,14,1,"2 56' 37,256"" S","51 18' 16,634"" W",0,Remanescente
 6,18,2167,Melancieiro,Alexa grandiflora Duck,260,17,1,"2 56' 37,399"" S","51 18' 16,412"" W",0,Remanescente
 6,18,2168,Acapu,Vouacapoua americana Aubl.,160,10,2,"2 56' 37,430"" S","51 18' 16,420"" W",0,Remanescente
-6,18,2169,Abiu rosadinho,Micropholis venulosa (Mart. & Eichler) Pierre,280,14,1,"2 56' 36,314"" S","51 18' 15,562"" W",0,Remanescente
+6,18,2169,Currupixá,Micropholis venulosa (Mart. & Eichler) Pierre,280,14,1,"2 56' 36,314"" S","51 18' 15,562"" W",0,Remanescente
 6,18,2170,Acapu,Vouacapoua americana Aubl.,145,13,1,"2 56' 36,519"" S","51 18' 15,259"" W",0,Remanescente
 6,18,2171,Melancieiro,Alexa grandiflora Duck,260,20,2,"2 56' 37,722"" S","51 18' 15,652"" W",0,Remanescente
 6,18,2172,Louro preto,Ocotea nigrescens Vicent.,280,16,1,"2 56' 37,532"" S","51 18' 15,503"" W",0,Remanescente
@@ -13165,7 +13158,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 6,19,2306,Angelim amargoso,Vatairea paraensis Ducke,163,12,2,"2 56' 38,173"" S","51 18' 8,896"" W",0,Remanescente
 6,19,2307,Louro preto,Ocotea nigrescens Vicent.,200,10,1,"2 56' 38,124"" S","51 18' 9,144"" W",0,Remanescente
 6,19,2308,Acapu,Vouacapoua americana Aubl.,187,14,1,"2 56' 37,857"" S","51 18' 9,430"" W",0,Remanescente
-6,19,2309,Guajará,Pouteria sp.,244,16,1,"2 56' 37,765"" S","51 18' 10,317"" W",0,Remanescente
+6,19,2309,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),244,16,1,"2 56' 37,765"" S","51 18' 10,317"" W",0,Remanescente
 6,19,2310,Louro preto,Ocotea nigrescens Vicent.,300,14,1,"2 56' 36,681"" S","51 18' 10,283"" W",0,Remanescente
 6,19,2311,Acapu,Vouacapoua americana Aubl.,215,9,1,"2 56' 36,167"" S","51 18' 10,795"" W",0,Remanescente
 6,19,2312,Acapu,Vouacapoua americana Aubl.,140,9,2,"2 56' 37,566"" S","51 18' 11,013"" W",0,Remanescente
@@ -13226,7 +13219,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,1,22,Melancieiro,Alexa grandiflora Duck,200,18,1,"2° 56' 26,372"" S","51° 18' 21,903"" W",0,Explorar
 7,1,23,Acapu,Vouacapoua americana Aubl.,152,17,1,"2° 56' 26,176"" S","51° 18' 21,950"" W",0,Remanescente
 7,1,24,Acapu,Vouacapoua americana Aubl.,160,14,1,"2° 56' 25,928"" S","51° 18' 21,842"" W",0,Remanescente
-7,1,25,Cambará,"Erisma uncinatum Warm,",210,17,2,"2° 56' 25,741"" S","51° 18' 22,173"" W",0,Remanescente
+7,1,25,Cambará,Erisma uncinatum Warm,210,17,2,"2° 56' 25,741"" S","51° 18' 22,173"" W",0,Remanescente
 7,1,26,Amapá doce,Brosimum parinarioides Ducke,370,19,1,"2° 56' 25,852"" S","51° 18' 21,855"" W",0,Remanescente
 7,1,27,Orelha de macaco,Enterolobium schomburgkii (Benth.) Benth.,311,17,2,"2° 56' 25,255"" S","51° 18' 22,030"" W",0,Remanescente
 7,1,28,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,150,17,1,"2° 56' 25,702"" S","51° 18' 23,213"" W",0,Remanescente
@@ -13347,7 +13340,6 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,2,143,Acapu,Vouacapoua americana Aubl.,160,13,2,"2° 56' 30,350"" S","51° 18' 21,773"" W",0,Remanescente
 7,2,144,Acapu,Vouacapoua americana Aubl.,145,13,1,"2° 56' 30,350"" S","51° 18' 21,773"" W",0,Remanescente
 7,2,145,Acapu,Vouacapoua americana Aubl.,182,16,1,"2° 56' 30,394"" S","51° 18' 21,646"" W",0,Remanescente
-7,2,146,Tuturuba de cancão,Pouteria sp ,180,18,1,"2° 56' 30,785"" S","51° 18' 21,551"" W",0,Remanescente
 7,2,147,Acapu,Vouacapoua americana Aubl.,154,16,2,"2° 56' 30,763"" S","51° 18' 21,614"" W",0,Remanescente
 7,2,148,Acapu,Vouacapoua americana Aubl.,158,16,1,"2° 56' 30,039"" S","51° 18' 22,874"" W",0,Remanescente
 7,2,149,Acapu,Vouacapoua americana Aubl.,155,17,1,"2° 56' 30,149"" S","51° 18' 22,660"" W",0,Remanescente
@@ -13489,7 +13481,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,4,285,Abiu,Pouteria ramiflora (Mart.) Radlk.,154,17,2,"2° 56' 32,700"" S","51° 18' 18,609"" W",0,Remanescente
 7,5,286,Barrote,Tetragastris panamensis (Engl.) Kuntze,180,16,1,"2° 56' 33,055"" S","51° 18' 17,486"" W",0,Remanescente
 7,5,287,Acapu,Vouacapoua americana Aubl.,145,13,2,"2° 56' 32,947"" S","51° 18' 17,384"" W",0,Remanescente
-7,5,288,Cambará,"Erisma uncinatum Warm,",164,17,2,"2° 56' 32,685"" S","51° 18' 17,623"" W",0,Remanescente
+7,5,288,Cambará,Erisma uncinatum Warm,164,17,2,"2° 56' 32,685"" S","51° 18' 17,623"" W",0,Remanescente
 7,5,289,Uxirana,Vantanea parviflora Lam.,174,13,2,"2° 56' 32,617"" S","51° 18' 18,129"" W",0,Remanescente
 7,5,290,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,200,17,2,"2° 56' 31,871"" S","51° 18' 17,910"" W",0,Remanescente
 7,5,291,Uxirana,Vantanea parviflora Lam.,180,16,1,"2° 56' 31,850"" S","51° 18' 17,763"" W",0,Remanescente
@@ -13611,8 +13603,8 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,6,407,Tauari,Couratari oblongifolia Ducke & Kunth,180,18,1,"2° 56' 28,016"" S","51° 18' 14,185"" W",0,Explorar
 7,6,408,Jarana,Lecythis lurida (Miers) More,200,16,1,"2° 56' 27,976"" S","51° 18' 15,225"" W",0,Remanescente
 7,6,409,Abiu,Pouteria ramiflora (Mart.) Radlk.,182,13,2,"2° 56' 28,714"" S","51° 18' 15,161"" W",0,Remanescente
-7,6,410,Cambará,"Erisma uncinatum Warm,",218,17,1,"2° 56' 28,846"" S","51° 18' 14,780"" W",0,Remanescente
-7,6,411,Cambará,"Erisma uncinatum Warm,",155,18,1,"2° 56' 28,986"" S","51° 18' 14,891"" W",0,Remanescente
+7,6,410,Cambará,Erisma uncinatum Warm,218,17,1,"2° 56' 28,846"" S","51° 18' 14,780"" W",0,Remanescente
+7,6,411,Cambará,Erisma uncinatum Warm,155,18,1,"2° 56' 28,986"" S","51° 18' 14,891"" W",0,Remanescente
 7,6,412,Amarelão,Apuleia leiocarpa (Vogel) J.F.Macbr.,246,18,1,"2° 56' 28,754"" S","51° 18' 13,912"" W",0,Remanescente
 7,6,413,Sapucaia,Lecythis pisonis Cambess.,290,17,1,"2° 56' 29,049"" S","51° 18' 15,225"" W",0,Explorar
 7,6,414,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,242,13,1,"2° 56' 29,255"" S","51° 18' 15,145"" W",0,Explorar
@@ -13648,11 +13640,11 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,7,444,Marupá,Simarouba amara Aubl.,154,18,2,"2° 56' 30,711"" S","51° 18' 13,014"" W",0,Remanescente
 7,7,445,Marupá,Simarouba amara Aubl.,158,19,2,"2° 56' 30,613"" S","51° 18' 13,090"" W",0,Remanescente
 7,7,446,Coração de negro,Chamaecrista scleroxylon (Ducke) H.S.Irwin & Barneby,230,17,1,"2° 56' 29,383"" S","51° 18' 12,204"" W",0,Remanescente
-7,7,447,Cambará,"Erisma uncinatum Warm,",210,18,1,"2° 56' 29,145"" S","51° 18' 12,169"" W",0,Remanescente
+7,7,447,Cambará,Erisma uncinatum Warm,210,18,1,"2° 56' 29,145"" S","51° 18' 12,169"" W",0,Remanescente
 7,7,448,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,210,18,1,"2° 56' 28,691"" S","51° 18' 13,683"" W",0,Remanescente
 7,7,449,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,240,19,1,"2° 56' 28,615"" S","51° 18' 13,696"" W",0,Explorar
 7,7,450,Acapu,Vouacapoua americana Aubl.,150,10,1,"2° 56' 28,540"" S","51° 18' 13,603"" W",0,Remanescente
-7,7,451,Cambará,"Erisma uncinatum Warm,",230,17,1,"2° 56' 28,034"" S","51° 18' 13,000"" W",0,Remanescente
+7,7,451,Cambará,Erisma uncinatum Warm,230,17,1,"2° 56' 28,034"" S","51° 18' 13,000"" W",0,Remanescente
 7,7,452,Acapu,Vouacapoua americana Aubl.,200,18,2,"2° 56' 28,056"" S","51° 18' 12,936"" W",0,Remanescente
 7,7,453,Acapu,Vouacapoua americana Aubl.,198,17,2,"2° 56' 28,471"" S","51° 18' 12,462"" W",0,Remanescente
 7,7,454,Amapá doce,Brosimum parinarioides Ducke,148,13,2,"2° 56' 28,137"" S","51° 18' 12,189"" W",0,Remanescente
@@ -13752,13 +13744,13 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,8,548,Barrote,Tetragastris panamensis (Engl.) Kuntze,150,13,2,"2° 56' 34,353"" S","51° 18' 12,821"" W",0,Remanescente
 7,8,549,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,152,8,2,"2° 56' 34,509"" S","51° 18' 12,166"" W",0,Remanescente
 7,8,550,Acapu,Vouacapoua americana Aubl.,174,15,1,"2° 56' 34,585"" S","51° 18' 12,154"" W",0,Remanescente
-7,8,551,Cambará,"Erisma uncinatum Warm,",200,13,1,"2° 56' 34,694"" S","51° 18' 12,045"" W",0,Remanescente
+7,8,551,Cambará,Erisma uncinatum Warm,200,13,1,"2° 56' 34,694"" S","51° 18' 12,045"" W",0,Remanescente
 7,8,552,Melancieiro,Alexa grandiflora Duck,190,17,1,"2° 56' 34,812"" S","51° 18' 12,220"" W",0,Explorar
 7,8,553,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,210,17,2,"2° 56' 35,168"" S","51° 18' 12,535"" W",0,Explorar
 7,8,554,Acapu,Vouacapoua americana Aubl.,150,13,1,"2° 56' 34,958"" S","51° 18' 13,139"" W",0,Remanescente
 7,8,555,Acapu,Vouacapoua americana Aubl.,154,12,2,"2° 56' 35,044"" S","51° 18' 13,304"" W",0,Remanescente
 7,9,556,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,170,10,3,"2° 56' 35,662"" S","51° 18' 11,523"" W",0,Remanescente
-7,9,557,Cambará,"Erisma uncinatum Warm,",230,17,1,"2° 56' 35,455"" S","51° 18' 11,708"" W",0,Remanescente
+7,9,557,Cambará,Erisma uncinatum Warm,230,17,1,"2° 56' 35,455"" S","51° 18' 11,708"" W",0,Remanescente
 7,9,558,Acapu,Vouacapoua americana Aubl.,158,14,2,"2° 56' 34,915"" S","51° 18' 11,514"" W",0,Remanescente
 7,9,559,Parapará,Jacaranda copaia (Aubl) D.Don,280,18,1,"2° 56' 35,949"" S","51° 18' 10,697"" W",0,Remanescente
 7,9,560,Uxirana,Vantanea parviflora Lam.,156,17,1,"2° 56' 34,841"" S","51° 18' 11,107"" W",0,Remanescente
@@ -13791,7 +13783,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,9,587,Fava arara tucupi,Parkia multijuga Benth.,240,19,1,"2° 56' 30,827"" S","51° 18' 10,210"" W",0,Explorar
 7,9,588,Louro preto,Ocotea nigrescens Vicent.,160,17,2,"2° 56' 30,628"" S","51° 18' 10,782"" W",0,Remanescente
 7,9,589,Acapu,Vouacapoua americana Aubl.,150,14,1,"2° 56' 29,043"" S","51° 18' 9,581"" W",0,Remanescente
-7,9,590,Cambará,"Erisma uncinatum Warm,",180,16,3,"2° 56' 29,347"" S","51° 18' 9,425"" W",0,Remanescente
+7,9,590,Cambará,Erisma uncinatum Warm,180,16,3,"2° 56' 29,347"" S","51° 18' 9,425"" W",0,Remanescente
 7,9,591,Casca seca,Licania canescens Benoist,200,16,3,"2° 56' 29,503"" S","51° 18' 8,770"" W",0,Remanescente
 7,9,592,Breu vermelho,Protium apiculatum  Swart,180,17,1,"2° 56' 29,092"" S","51° 18' 8,720"" W",0,Remanescente
 7,9,593,Envira quiabo,Sterculia pruriens (Aubl.) K.Schum,150,18,1,"2° 56' 28,829"" S","51° 18' 9,168"" W",0,Remanescente
@@ -13859,7 +13851,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,10,655,Acapu,Vouacapoua americana Aubl.,170,17,2,"2° 56' 21,866"" S","51° 18' 5,128"" W",0,Remanescente
 7,10,656,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,158,18,1,"2° 56' 21,875"" S","51° 18' 5,306"" W",0,Remanescente
 7,10,657,Acapu,Vouacapoua americana Aubl.,147,14,1,"2° 56' 22,457"" S","51° 18' 5,897"" W",0,Remanescente
-7,10,658,Cambará,"Erisma uncinatum Warm,",200,16,1,"2° 56' 22,575"" S","51° 18' 6,072"" W",0,Remanescente
+7,10,658,Cambará,Erisma uncinatum Warm,200,16,1,"2° 56' 22,575"" S","51° 18' 6,072"" W",0,Remanescente
 7,10,659,Casca seca,Licania canescens Benoist,147,13,2,"2° 56' 22,617"" S","51° 18' 6,154"" W",0,Remanescente
 7,10,660,Muiracatiara,Astronium graveolens Jacq.,200,15,1,"2° 56' 22,682"" S","51° 18' 6,173"" W",0,Explorar
 7,10,661,Coco pau,Sterculia alata Roxb.,206,18,1,"2° 56' 22,725"" S","51° 18' 6,256"" W",0,Remanescente
@@ -13875,8 +13867,8 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,10,671,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,148,17,1,"2° 56' 27,032"" S","51° 18' 7,134"" W",0,Remanescente
 7,10,672,Breu sucuruba,Trattinnickia rhoifolia Willd.,380,15,3,"2° 56' 26,449"" S","51° 18' 6,858"" W",0,Remanescente
 7,10,673,Casca seca,Licania canescens Benoist,160,10,1,"2° 56' 27,157"" S","51° 18' 8,012"" W",0,Remanescente
-7,10,674,Cambará,"Erisma uncinatum Warm,",142,16,1,"2° 56' 27,254"" S","51° 18' 8,040"" W",0,Remanescente
-7,10,675,Cambará,"Erisma uncinatum Warm,",210,17,3,"2° 56' 27,545"" S","51° 18' 6,689"" W",0,Remanescente
+7,10,674,Cambará,Erisma uncinatum Warm,142,16,1,"2° 56' 27,254"" S","51° 18' 8,040"" W",0,Remanescente
+7,10,675,Cambará,Erisma uncinatum Warm,210,17,3,"2° 56' 27,545"" S","51° 18' 6,689"" W",0,Remanescente
 7,10,676,Coco pau,Sterculia alata Roxb.,160,17,1,"2° 56' 27,663"" S","51° 18' 6,864"" W",0,Remanescente
 7,10,677,Acapu,Vouacapoua americana Aubl.,148,14,1,"2° 56' 27,782"" S","51° 18' 6,829"" W",0,Remanescente
 7,10,678,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,153,13,2,"2° 56' 28,270"" S","51° 18' 6,762"" W",0,Remanescente
@@ -13892,7 +13884,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,10,688,Acapu,Vouacapoua americana Aubl.,158,16,1,"2° 56' 30,951"" S","51° 18' 7,793"" W",0,Remanescente
 7,10,689,Coco pau,Sterculia alata Roxb.,210,18,1,"2° 56' 31,126"" S","51° 18' 7,599"" W",2,Remanescente
 7,10,690,Casca seca,Licania canescens Benoist,150,14,2,"2° 56' 31,340"" S","51° 18' 8,013"" W",0,Remanescente
-7,10,691,Cambará,"Erisma uncinatum Warm,",170,15,3,"2° 56' 31,373"" S","51° 18' 7,917"" W",3,Remanescente
+7,10,691,Cambará,Erisma uncinatum Warm,170,15,3,"2° 56' 31,373"" S","51° 18' 7,917"" W",3,Remanescente
 7,10,692,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,220,19,1,"2° 56' 32,616"" S","51° 18' 8,352"" W",0,Explorar
 7,10,693,Barrote,Tetragastris panamensis (Engl.) Kuntze,200,16,1,"2° 56' 32,642"" S","51° 18' 9,411"" W",0,Remanescente
 7,10,694,Acapu,Vouacapoua americana Aubl.,150,13,1,"2° 56' 32,904"" S","51° 18' 9,067"" W",0,Remanescente
@@ -13917,8 +13909,8 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,11,713,Cupiúba,Goupia glabra Aubl.,226,18,1,"2° 56' 34,816"" S","51° 18' 8,402"" W",0,Explorar
 7,11,714,Acapu,Vouacapoua americana Aubl.,146,12,1,"2° 56' 34,904"" S","51° 18' 8,147"" W",0,Remanescente
 7,11,715,Inharé,Helicostylis podogyne Ducke,240,19,1,"2° 56' 34,026"" S","51° 18' 8,205"" W",0,Remanescente
-7,11,716,Cambará,"Erisma uncinatum Warm,",172,18,1,"2° 56' 35,430"" S","51° 18' 7,355"" W",0,Remanescente
-7,11,717,Cambará,"Erisma uncinatum Warm,",170,12,1,"2° 56' 34,933"" S","51° 18' 7,035"" W",0,Remanescente
+7,11,716,Cambará,Erisma uncinatum Warm,172,18,1,"2° 56' 35,430"" S","51° 18' 7,355"" W",0,Remanescente
+7,11,717,Cambará,Erisma uncinatum Warm,170,12,1,"2° 56' 34,933"" S","51° 18' 7,035"" W",0,Remanescente
 7,11,718,Acapu,Vouacapoua americana Aubl.,180,15,1,"2° 56' 34,988"" S","51° 18' 6,876"" W",0,Remanescente
 7,11,719,Cupiúba,Goupia glabra Aubl.,320,18,2,"2° 56' 34,588"" S","51° 18' 6,793"" W",0,Explorar
 7,11,720,Acapu,Vouacapoua americana Aubl.,150,14,1,"2° 56' 34,522"" S","51° 18' 6,879"" W",0,Remanescente
@@ -13930,14 +13922,14 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,11,726,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,152,13,2,"2° 56' 33,194"" S","51° 18' 7,821"" W",0,Remanescente
 7,11,727,Casca seca,Licania canescens Benoist,180,17,1,"2° 56' 33,184"" S","51° 18' 7,643"" W",0,Remanescente
 7,11,728,Acapu,Vouacapoua americana Aubl.,178,17,2,"2° 56' 32,457"" S","51° 18' 7,780"" W",0,Remanescente
-7,11,729,Cambará,"Erisma uncinatum Warm,",146,15,1,"2° 56' 31,679"" S","51° 18' 7,551"" W",0,Remanescente
-7,11,730,Cambará,"Erisma uncinatum Warm,",200,16,1,"2° 56' 31,582"" S","51° 18' 7,418"" W",0,Remanescente
+7,11,729,Cambará,Erisma uncinatum Warm,146,15,1,"2° 56' 31,679"" S","51° 18' 7,551"" W",0,Remanescente
+7,11,730,Cambará,Erisma uncinatum Warm,200,16,1,"2° 56' 31,582"" S","51° 18' 7,418"" W",0,Remanescente
 7,11,731,Acapu,Vouacapoua americana Aubl.,178,15,2,"2° 56' 31,387"" S","51° 18' 7,466"" W",0,Remanescente
 7,11,732,Acapu,Vouacapoua americana Aubl.,148,11,2,"2° 56' 31,585"" S","51° 18' 6,893"" W",0,Remanescente
 7,11,733,Guajará bolacha,Syzygiopsis appositifolia Ducke,230,18,1,"2° 56' 32,835"" S","51° 18' 6,384"" W",0,Remanescente
 7,11,734,Cumaru,Dipteryx odorata (Aubl.) Willd.,250,17,3,"2° 56' 32,607"" S","51° 18' 6,422"" W",0,Remanescente
 7,11,735,Acapu,Vouacapoua americana Aubl.,190,17,1,"2° 56' 32,585"" S","51° 18' 6,486"" W",0,Remanescente
-7,11,736,Cambará,"Erisma uncinatum Warm,",184,16,1,"2° 56' 31,343"" S","51° 18' 5,841"" W",0,Remanescente
+7,11,736,Cambará,Erisma uncinatum Warm,184,16,1,"2° 56' 31,343"" S","51° 18' 5,841"" W",0,Remanescente
 7,11,737,Uxirana,Vantanea parviflora Lam.,210,18,1,"2° 56' 30,671"" S","51° 18' 5,924"" W",0,Remanescente
 7,11,738,Acapu,Vouacapoua americana Aubl.,148,11,1,"2° 56' 30,564"" S","51° 18' 7,260"" W",0,Remanescente
 7,11,739,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,160,12,1,"2° 56' 29,535"" S","51° 18' 5,591"" W",0,Remanescente
@@ -13956,7 +13948,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,11,752,Casca seca,Licania canescens Benoist,210,18,2,"2° 56' 24,755"" S","51° 18' 4,118"" W",0,Remanescente
 7,11,753,NI,NI,182,17,2,"2° 56' 24,168"" S","51° 18' 4,367"" W",0,Remanescente
 7,11,754,Casca seca,Licania canescens Benoist,180,19,1,"2° 56' 23,794"" S","51° 18' 3,591"" W",0,Remanescente
-7,11,755,Cambará,"Erisma uncinatum Warm,",150,18,1,"2° 56' 23,458"" S","51° 18' 3,528"" W",0,Remanescente
+7,11,755,Cambará,Erisma uncinatum Warm,150,18,1,"2° 56' 23,458"" S","51° 18' 3,528"" W",0,Remanescente
 7,11,756,Casca seca,Licania canescens Benoist,158,17,1,"2° 56' 23,231"" S","51° 18' 3,461"" W",0,Remanescente
 7,11,757,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,160,17,1,"2° 56' 22,721"" S","51° 18' 3,592"" W",0,Remanescente
 7,11,758,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,190,12,1,"2° 56' 22,439"" S","51° 18' 3,579"" W",0,Remanescente
@@ -13964,7 +13956,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,11,760,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,300,19,1,"2° 56' 21,736"" S","51° 18' 3,338"" W",0,Remanescente
 7,11,761,Acapu,Vouacapoua americana Aubl.,145,12,1,"2° 56' 21,770"" S","51° 18' 3,137"" W",0,Remanescente
 7,11,762,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,152,12,3,"2° 56' 21,685"" S","51° 18' 2,972"" W",0,Remanescente
-7,11,763,Cambará,"Erisma uncinatum Warm,",230,19,2,"2° 56' 21,144"" S","51° 18' 2,779"" W",0,Remanescente
+7,11,763,Cambará,Erisma uncinatum Warm,230,19,2,"2° 56' 21,144"" S","51° 18' 2,779"" W",0,Remanescente
 7,11,764,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,210,15,1,"2° 56' 21,415"" S","51° 18' 4,470"" W",0,Remanescente
 7,11,765,Fava arara tucupi,Parkia multijuga Benth.,178,16,1,"2° 56' 21,420"" S","51° 18' 3,735"" W",0,Remanescente
 7,11,766,Copaíba,Copaifera spp.,210,19,1,"2° 56' 20,553"" S","51° 18' 3,656"" W",0,Remanescente
@@ -14004,14 +13996,14 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,12,800,Cupiúba,Goupia glabra Aubl.,180,17,1,"2° 56' 20,342"" S","51° 18' 1,177"" W",0,Remanescente
 7,12,801,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,180,17,1,"2° 56' 20,110"" S","51° 18' 1,844"" W",0,Explorar
 7,12,802,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,200,20,2,"2° 56' 20,327"" S","51° 18' 1,838"" W",0,Explorar
-7,12,803,Oiticica,Clarisia racemosa Ruiz & Pav.,170,10,2,"2° 56' 20,885"" S","51° 18' 0,951"" W",0,Remanescente
+7,12,803,Guariuba,Clarisia racemosa Ruiz & Pav.,170,10,2,"2° 56' 20,885"" S","51° 18' 0,951"" W",0,Remanescente
 7,12,804,Muiratinga,Perebea mollis (Poepp. & Endl.) Huber,160,18,1,"2° 56' 23,552"" S","51° 18' 2,434"" W",0,Remanescente
 7,12,805,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,170,17,1,"2° 56' 23,605"" S","51° 18' 2,590"" W",0,Remanescente
 7,12,806,Acapu,Vouacapoua americana Aubl.,160,10,1,"2° 56' 23,638"" S","51° 18' 2,599"" W",0,Remanescente
 7,12,807,Muiracatiara,Astronium graveolens Jacq.,158,19,1,"2° 56' 21,945"" S","51° 18' 2,943"" W",0,Remanescente
 7,12,808,Casca seca,Licania canescens Benoist,182,18,1,"2° 56' 23,484"" S","51° 18' 2,939"" W",0,Remanescente
 7,12,809,Guariuba,Clarisia racemosa Ruiz & Pav.,310,19,1,"2° 56' 23,900"" S","51° 18' 2,256"" W",0,Remanescente
-7,12,810,Cambará,"Erisma uncinatum Warm,",180,15,1,"2° 56' 23,844"" S","51° 18' 2,520"" W",0,Remanescente
+7,12,810,Cambará,Erisma uncinatum Warm,180,15,1,"2° 56' 23,844"" S","51° 18' 2,520"" W",0,Remanescente
 7,12,811,Roxinho,Peltogyne venosa (Vahl) Benth.,200,12,1,"2° 56' 24,321"" S","51° 18' 2,589"" W",0,Remanescente
 7,12,812,Coco pau,Sterculia alata Roxb.,158,13,1,"2° 56' 24,755"" S","51° 18' 2,366"" W",0,Remanescente
 7,12,813,Goiabão ,Pouteria pachycarpa Pires,148,17,1,"2° 56' 24,601"" S","51° 18' 2,812"" W",0,Remanescente
@@ -14111,10 +14103,10 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,13,907,Fava xixica ,Inga heterophylla Willd.,180,16,2,"2° 56' 28,095"" S","51° 18' 2,120"" W",0,Remanescente
 7,13,908,Coco pau,Sterculia alata Roxb.,146,15,1,"2° 56' 27,889"" S","51° 18' 2,095"" W",0,Remanescente
 7,13,909,Maçaranduba,Manilkara elata (Allemão ex Miq.) Monach.,148,14,1,"2° 56' 27,727"" S","51° 18' 2,047"" W",5,Remanescente
-7,13,910,Cambará,"Erisma uncinatum Warm,",186,15,3,"2° 56' 27,664"" S","51° 18' 1,713"" W",0,Remanescente
+7,13,910,Cambará,Erisma uncinatum Warm,186,15,3,"2° 56' 27,664"" S","51° 18' 1,713"" W",0,Remanescente
 7,13,911,Melancieiro,Alexa grandiflora Duck,300,17,2,"2° 56' 26,846"" S","51° 18' 2,524"" W",0,Explorar
 7,13,912,Muiracatiara,Astronium graveolens Jacq.,360,20,2,"2° 56' 26,760"" S","51° 18' 2,464"" W",0,Explorar
-7,13,913,Cambará,"Erisma uncinatum Warm,",190,17,2,"2° 56' 26,904"" S","51° 18' 1,946"" W",0,Remanescente
+7,13,913,Cambará,Erisma uncinatum Warm,190,17,2,"2° 56' 26,904"" S","51° 18' 1,946"" W",0,Remanescente
 7,13,914,Coco pau,Sterculia alata Roxb.,160,16,1,"2° 56' 26,525"" S","51° 18' 1,905"" W",0,Remanescente
 7,13,915,Muiracatiara,Astronium graveolens Jacq.,210,22,1,"2° 56' 26,418"" S","51° 18' 1,698"" W",0,Explorar
 7,13,916,Acapu,Vouacapoua americana Aubl.,150,14,1,"2° 56' 26,287"" S","51° 18' 1,765"" W",0,Remanescente
@@ -14160,7 +14152,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,13,956,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,182,18,1,"2° 56' 22,389"" S","51° 17' 59,710"" W",0,Explorar
 7,13,957,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,182,18,1,"2° 56' 22,395"" S","51° 18' 0,412"" W",0,Remanescente
 7,13,958,Cupiúba,Goupia glabra Aubl.,220,18,3,"2° 56' 23,003"" S","51° 18' 0,205"" W",0,Remanescente
-7,13,959,Cambará,"Erisma uncinatum Warm,",160,17,2,"2° 56' 23,501"" S","51° 18' 0,316"" W",0,Remanescente
+7,13,959,Cambará,Erisma uncinatum Warm,160,17,2,"2° 56' 23,501"" S","51° 18' 0,316"" W",0,Remanescente
 7,13,960,Tauari,Couratari oblongifolia Ducke & Kunth,210,19,1,"2° 56' 23,531"" S","51° 18' 0,746"" W",0,Explorar
 7,13,961,Melancieiro,Alexa grandiflora Duck,370,20,1,"2° 56' 24,004"" S","51° 18' 1,235"" W",0,Explorar
 7,13,962,Casca seca,Licania canescens Benoist,150,15,2,"2° 56' 23,817"" S","51° 18' 1,776"" W",0,Remanescente
@@ -14173,8 +14165,8 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,13,969,Casca seca,Licania canescens Benoist,180,17,1,"2° 56' 26,116"" S","51° 18' 1,539"" W",0,Remanescente
 7,13,970,Muiracatiara,Astronium graveolens Jacq.,200,19,1,"2° 56' 26,591"" S","51° 18' 1,714"" W",0,Explorar
 7,13,971,Coco pau,Sterculia alata Roxb.,160,18,2,"2° 56' 26,916"" S","51° 18' 1,809"" W",0,Remanescente
-7,13,972,Cambará,"Erisma uncinatum Warm,",160,10,2,"2° 56' 27,078"" S","51° 18' 1,857"" W",0,Remanescente
-7,13,973,Abiu branco ,Pouteria caimito (Ruiz & Pav.) Radlk.,230,18,1,"2° 56' 26,283"" S","51° 18' 2,499"" W",0,Remanescente
+7,13,972,Cambará,Erisma uncinatum Warm,160,10,2,"2° 56' 27,078"" S","51° 18' 1,857"" W",0,Remanescente
+7,13,973,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,230,18,1,"2° 56' 26,283"" S","51° 18' 2,499"" W",0,Remanescente
 7,13,974,Casca seca,Licania canescens Benoist,226,16,1,"2° 56' 27,775"" S","51° 18' 1,395"" W",0,Remanescente
 7,13,975,Fava branca,Parkia paraensis Ducke,190,18,1,"2° 56' 27,628"" S","51° 18' 2,228"" W",0,Remanescente
 7,13,976,Tauari,Couratari oblongifolia Ducke & Kunth,210,19,1,"2° 56' 28,947"" S","51° 18' 2,650"" W",0,Explorar
@@ -14219,7 +14211,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,13,1015,Acapu,Vouacapoua americana Aubl.,158,13,2,"2° 56' 36,300"" S","51° 18' 5,158"" W",0,Remanescente
 7,13,1016,Inharé,Helicostylis podogyne Ducke,180,17,1,"2° 56' 36,311"" S","51° 18' 5,126"" W",0,Remanescente
 7,13,1017,Casca seca,Licania canescens Benoist,230,18,1,"2° 56' 36,326"" S","51° 18' 4,570"" W",0,Remanescente
-7,13,1018,Cambará,"Erisma uncinatum Warm,",220,18,3,"2° 56' 36,402"" S","51° 18' 4,557"" W",0,Remanescente
+7,13,1018,Cambará,Erisma uncinatum Warm,220,18,3,"2° 56' 36,402"" S","51° 18' 4,557"" W",0,Remanescente
 7,13,1019,Melancieiro,Alexa grandiflora Duck,300,19,1,"2° 56' 37,983"" S","51° 18' 4,741"" W",0,Explorar
 7,14,1020,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,200,18,1,"2° 56' 38,248"" S","51° 18' 3,873"" W",0,Remanescente
 7,14,1021,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,180,16,2,"2° 56' 38,449"" S","51° 18' 2,985"" W",0,Remanescente
@@ -14243,7 +14235,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,14,1039,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,154,18,1,"2° 56' 34,178"" S","51° 18' 1,487"" W",0,Remanescente
 7,14,1040,Acapu,Vouacapoua americana Aubl.,146,13,2,"2° 56' 33,722"" S","51° 18' 1,669"" W",0,Remanescente
 7,14,1041,Coco pau,Sterculia alata Roxb.,230,18,1,"2° 56' 33,657"" S","51° 18' 1,650"" W",0,Remanescente
-7,14,1042,Cambará,"Erisma uncinatum Warm,",170,13,1,"2° 56' 33,588"" S","51° 18' 2,365"" W",0,Remanescente
+7,14,1042,Cambará,Erisma uncinatum Warm,170,13,1,"2° 56' 33,588"" S","51° 18' 2,365"" W",0,Remanescente
 7,14,1043,Melancieiro,Alexa grandiflora Duck,306,19,1,"2° 56' 33,457"" S","51° 18' 2,432"" W",0,Explorar
 7,14,1044,Acapu,Vouacapoua americana Aubl.,250,11,2,"2° 56' 33,320"" S","51° 18' 1,901"" W",0,Remanescente
 7,14,1045,Casca seca,Licania canescens Benoist,240,18,1,"2° 56' 32,778"" S","51° 18' 1,917"" W",0,Remanescente
@@ -14273,7 +14265,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,14,1069,Casca seca,Licania canescens Benoist,155,15,2,"2° 56' 29,072"" S","51° 18' 0,234"" W",0,Remanescente
 7,14,1070,Coco pau,Sterculia alata Roxb.,170,18,1,"2° 56' 28,943"" S","51° 18' 0,091"" W",0,Remanescente
 7,14,1071,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,200,17,2,"2° 56' 28,680"" S","51° 18' 0,435"" W",0,Explorar
-7,14,1072,Cambará,"Erisma uncinatum Warm,",160,17,1,"2° 56' 28,615"" S","51° 18' 0,415"" W",0,Remanescente
+7,14,1072,Cambará,Erisma uncinatum Warm,160,17,1,"2° 56' 28,615"" S","51° 18' 0,415"" W",0,Remanescente
 7,14,1073,Louro canela,Ocotea cernua (Nees) Mez ,188,16,1,"2° 56' 28,465"" S","51° 18' 0,231"" W",0,Remanescente
 7,14,1074,Matamatá,Eschweilera ovata (Cambess.) Miers,148,17,2,"2° 56' 28,209"" S","51° 17' 59,630"" W",0,Remanescente
 7,14,1075,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,195,18,1,"2° 56' 28,036"" S","51° 18' 1,157"" W",0,Remanescente
@@ -14296,7 +14288,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,14,1092,Acapu,Vouacapoua americana Aubl.,146,13,1,"2° 56' 24,458"" S","51° 17' 59,826"" W",0,Remanescente
 7,14,1093,Casca seca,Licania canescens Benoist,160,18,2,"2° 56' 24,537"" S","51° 17' 59,394"" W",0,Remanescente
 7,14,1094,Casca seca,Licania canescens Benoist,182,17,1,"2° 56' 25,808"" S","51° 17' 58,926"" W",0,Remanescente
-7,14,1095,Oiticica,Clarisia racemosa Ruiz & Pav.,200,18,1,"2° 56' 24,710"" S","51° 17' 59,410"" W",0,Remanescente
+7,14,1095,Guariuba,Clarisia racemosa Ruiz & Pav.,200,18,1,"2° 56' 24,710"" S","51° 17' 59,410"" W",0,Remanescente
 7,14,1096,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,190,18,1,"2° 56' 24,378"" S","51° 17' 58,822"" W",0,Explorar
 7,14,1097,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,260,19,1,"2° 56' 24,042"" S","51° 17' 58,758"" W",0,Explorar
 7,14,1098,Acapu,Vouacapoua americana Aubl.,150,13,1,"2° 56' 23,984"" S","51° 17' 59,442"" W",0,Remanescente
@@ -14350,7 +14342,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,15,1146,Casca seca,Licania canescens Benoist,232,18,3,"2° 56' 26,414"" S","51° 17' 58,929"" W",0,Remanescente
 7,15,1147,Casca seca,Licania canescens Benoist,182,18,1,"2° 56' 27,482"" S","51° 17' 58,121"" W",0,Remanescente
 7,15,1148,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,152,16,1,"2° 56' 27,841"" S","51° 17' 57,806"" W",0,Remanescente
-7,15,1149,Oiticica,Clarisia racemosa Ruiz & Pav.,220,17,1,"2° 56' 28,284"" S","51° 17' 58,076"" W",0,Remanescente
+7,15,1149,Guariuba,Clarisia racemosa Ruiz & Pav.,220,17,1,"2° 56' 28,284"" S","51° 17' 58,076"" W",0,Remanescente
 7,15,1150,Louro preto,Ocotea nigrescens Vicent.,150,18,1,"2° 56' 28,599"" S","51° 17' 57,993"" W",0,Remanescente
 7,15,1151,Guajará,Pouteria cuspidata subsp. robusta (Mart. & Eichler),300,18,1,"2° 56' 28,104"" S","51° 17' 59,004"" W",0,Remanescente
 7,15,1152,Acapu,Vouacapoua americana Aubl.,150,17,1,"2° 56' 28,190"" S","51° 17' 59,169"" W",0,Remanescente
@@ -14417,7 +14409,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,16,1213,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,200,10,3,"2° 56' 37,659"" S","51° 17' 59,495"" W",0,Remanescente
 7,16,1214,Louro pimenta,Licaria reitzkleiniana Vattimo,185,18,1,"2° 56' 37,057"" S","51° 18' 0,405"" W",0,Remanescente
 7,16,1215,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,230,19,1,"2° 56' 37,160"" S","51° 17' 59,594"" W",0,Remanescente
-7,16,1216,Cambará,"Erisma uncinatum Warm,",200,17,1,"2° 56' 37,263"" S","51° 17' 58,783"" W",0,Remanescente
+7,16,1216,Cambará,Erisma uncinatum Warm,200,17,1,"2° 56' 37,263"" S","51° 17' 58,783"" W",0,Remanescente
 7,16,1217,Acapu,Vouacapoua americana Aubl.,152,17,1,"2° 56' 36,881"" S","51° 17' 59,162"" W",0,Remanescente
 7,16,1218,Pau jacaré,Laetia procera (Poepp.) Eichler,170,16,2,"2° 56' 36,312"" S","51° 17' 59,976"" W",0,Remanescente
 7,16,1219,Louro preto,Ocotea nigrescens Vicent.,156,16,2,"2° 56' 35,998"" S","51° 17' 59,954"" W",0,Remanescente
@@ -14429,9 +14421,9 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,16,1225,Goiabão ,Pouteria pachycarpa Pires,160,18,1,"2° 56' 35,336"" S","51° 17' 58,463"" W",0,Remanescente
 7,16,1226,Matamatá,Eschweilera ovata (Cambess.) Miers,216,19,1,"2° 56' 34,957"" S","51° 17' 58,422"" W",0,Remanescente
 7,16,1227,Tauari,Couratari oblongifolia Ducke & Kunth,260,15,1,"2° 56' 34,992"" S","51° 17' 58,117"" W",0,Explorar
-7,16,1228,Cambará,"Erisma uncinatum Warm,",190,18,2,"2° 56' 34,589"" S","51° 17' 58,349"" W",0,Remanescente
-7,16,1229,Cambará,"Erisma uncinatum Warm,",168,16,2,"2° 56' 34,578"" S","51° 17' 58,381"" W",0,Remanescente
-7,16,1230,Cambará,"Erisma uncinatum Warm,",190,10,1,"2° 56' 34,808"" S","51° 17' 59,675"" W",0,Remanescente
+7,16,1228,Cambará,Erisma uncinatum Warm,190,18,2,"2° 56' 34,589"" S","51° 17' 58,349"" W",0,Remanescente
+7,16,1229,Cambará,Erisma uncinatum Warm,168,16,2,"2° 56' 34,578"" S","51° 17' 58,381"" W",0,Remanescente
+7,16,1230,Cambará,Erisma uncinatum Warm,190,10,1,"2° 56' 34,808"" S","51° 17' 59,675"" W",0,Remanescente
 7,16,1231,Taxirana,Stryphndendron polystachyum (Miq.) Kleinh.,159,16,2,"2° 56' 34,638"" S","51° 17' 59,239"" W",0,Remanescente
 7,16,1232,Coco pau,Sterculia alata Roxb.,150,16,1,"2° 56' 34,248"" S","51° 17' 59,230"" W",0,Remanescente
 7,16,1233,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,191,16,1,"2° 56' 34,107"" S","51° 17' 59,119"" W",0,Explorar
@@ -14543,7 +14535,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,17,1339,Acapu,Vouacapoua americana Aubl.,150,15,1,"2° 56' 31,694"" S","51° 17' 56,904"" W",0,Remanescente
 7,17,1340,Ingá vermelho,Inga alba (Sw) Willd,160,14,1,"2° 56' 32,149"" S","51° 17' 57,037"" W",0,Remanescente
 7,17,1341,Acapu,Vouacapoua americana Aubl.,180,16,1,"2° 56' 32,950"" S","51° 17' 57,097"" W",0,Remanescente
-7,17,1342,Cambará,"Erisma uncinatum Warm,",150,16,1,"2° 56' 32,905"" S","51° 17' 57,434"" W",0,Remanescente
+7,17,1342,Cambará,Erisma uncinatum Warm,150,16,1,"2° 56' 32,905"" S","51° 17' 57,434"" W",0,Remanescente
 7,17,1343,Itauba,Mezilaurus itauba (Meisn.) Taub. ex Mez,158,12,1,"2° 56' 33,779"" S","51° 17' 56,254"" W",0,Remanescente
 7,17,1344,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,182,17,1,"2° 56' 33,995"" S","51° 17' 56,458"" W",0,Explorar
 7,17,1345,Taxi preto,Tachigali melinonii (Harms) Zarucchi & Herend.,220,15,1,"2° 56' 33,738"" S","51° 17' 57,609"" W",0,Remanescente
@@ -14564,13 +14556,13 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,17,1360,Casca seca,Licania canescens Benoist,230,18,1,"2° 56' 39,467"" S","51° 17' 58,098"" W",0,Remanescente
 7,17,1361,Casca seca,Licania canescens Benoist,200,13,2,"2° 56' 39,931"" S","51° 17' 58,410"" W",0,Remanescente
 7,17,1362,Mamorana,Eriotheca longipedicellata (Ducke) A.Robyns,158,17,1,"2° 56' 39,689"" S","51° 17' 59,004"" W",0,Remanescente
-7,18,1363,Cambará,"Erisma uncinatum Warm,",280,10,3,"2° 56' 39,581"" S","51° 17' 57,256"" W",0,Remanescente
+7,18,1363,Cambará,Erisma uncinatum Warm,280,10,3,"2° 56' 39,581"" S","51° 17' 57,256"" W",0,Remanescente
 7,18,1364,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,210,19,1,"2° 56' 38,984"" S","51° 17' 57,431"" W",0,Explorar
 7,18,1365,Goiabão ,Pouteria pachycarpa Pires,172,17,3,"2° 56' 39,771"" S","51° 17' 56,505"" W",0,Remanescente
 7,18,1366,Tauari,Couratari oblongifolia Ducke & Kunth,180,19,1,"2° 56' 39,035"" S","51° 17' 56,254"" W",0,Remanescente
 7,18,1367,Tauari,Couratari oblongifolia Ducke & Kunth,390,18,1,"2° 56' 39,082"" S","51° 17' 55,813"" W",0,Explorar
 7,18,1368,Guajará bolacha,Syzygiopsis appositifolia Ducke,300,19,2,"2° 56' 38,582"" S","51° 17' 56,016"" W",0,Explorar
-7,18,1369,Cambará,"Erisma uncinatum Warm,",154,13,1,"2° 56' 38,408"" S","51° 17' 56,000"" W",0,Remanescente
+7,18,1369,Cambará,Erisma uncinatum Warm,154,13,1,"2° 56' 38,408"" S","51° 17' 56,000"" W",0,Remanescente
 7,18,1370,Casca seca,Licania canescens Benoist,162,17,1,"2° 56' 38,419"" S","51° 17' 55,969"" W",0,Remanescente
 7,18,1371,Melancieiro,Alexa grandiflora Duck,330,19,1,"2° 56' 38,265"" S","51° 17' 56,414"" W",0,Explorar
 7,18,1372,Acapu,Vouacapoua americana Aubl.,147,13,1,"2° 56' 37,933"" S","51° 17' 55,826"" W",0,Remanescente
@@ -14584,12 +14576,12 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,18,1380,Acapu,Vouacapoua americana Aubl.,150,10,2,"2° 56' 34,930"" S","51° 17' 56,031"" W",0,Remanescente
 7,18,1381,Casca seca,Licania canescens Benoist,155,16,1,"2° 56' 34,876"" S","51° 17' 55,875"" W",0,Remanescente
 7,18,1382,Casca seca,Licania canescens Benoist,149,15,2,"2° 56' 34,955"" S","51° 17' 55,443"" W",0,Remanescente
-7,18,1383,Oiticica,Clarisia racemosa Ruiz & Pav.,158,18,1,"2° 56' 34,858"" S","51° 17' 55,414"" W",0,Remanescente
-7,18,1384,Cambará,"Erisma uncinatum Warm,",220,18,2,"2° 56' 35,610"" S","51° 17' 54,794"" W",0,Remanescente
+7,18,1383,Guariuba,Clarisia racemosa Ruiz & Pav.,158,18,1,"2° 56' 34,858"" S","51° 17' 55,414"" W",0,Remanescente
+7,18,1384,Cambará,Erisma uncinatum Warm,220,18,2,"2° 56' 35,610"" S","51° 17' 54,794"" W",0,Remanescente
 7,18,1385,Timborana,Pseudopiptadenia suaveolens (Miq.) J.W.Grimes,300,19,3,"2° 56' 35,285"" S","51° 17' 54,699"" W",0,Remanescente
 7,18,1386,Acapu,Vouacapoua americana Aubl.,148,15,1,"2° 56' 35,198"" S","51° 17' 54,743"" W",0,Remanescente
 7,18,1387,Andiroba,Carapa guianensis Aubl.,160,15,1,"2° 56' 34,207"" S","51° 17' 55,539"" W",0,Remanescente
-7,18,1388,Cambará,"Erisma uncinatum Warm,",180,16,3,"2° 56' 33,969"" S","51° 17' 55,504"" W",0,Remanescente
+7,18,1388,Cambará,Erisma uncinatum Warm,180,16,3,"2° 56' 33,969"" S","51° 17' 55,504"" W",0,Remanescente
 7,18,1389,Acapu,Vouacapoua americana Aubl.,165,17,1,"2° 56' 33,527"" S","51° 17' 55,129"" W",0,Remanescente
 7,18,1390,Tauari,Couratari oblongifolia Ducke & Kunth,230,19,1,"2° 56' 33,519"" S","51° 17' 54,636"" W",0,Explorar
 7,18,1391,Coração de negro,Chamaecrista scleroxylon (Ducke) H.S.Irwin & Barneby,164,18,1,"2° 56' 33,154"" S","51° 17' 54,143"" W",0,Remanescente
@@ -14599,7 +14591,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,18,1395,Guajará bolacha,Syzygiopsis appositifolia Ducke,250,18,1,"2° 56' 32,487"" S","51° 17' 55,034"" W",0,Explorar
 7,18,1396,Acapu,Vouacapoua americana Aubl.,145,10,1,"2° 56' 32,301"" S","51° 17' 55,260"" W",0,Remanescente
 7,18,1397,Casca seca,Licania canescens Benoist,180,18,1,"2° 56' 31,060"" S","51° 17' 54,510"" W",0,Remanescente
-7,18,1398,Cambará,"Erisma uncinatum Warm,",240,19,1,"2° 56' 30,863"" S","51° 17' 54,873"" W",0,Remanescente
+7,18,1398,Cambará,Erisma uncinatum Warm,240,19,1,"2° 56' 30,863"" S","51° 17' 54,873"" W",0,Remanescente
 7,18,1399,Cajuí ,Anacardium spruceanum Benth. ex Engl.,160,12,1,"2° 56' 32,721"" S","51° 17' 54,051"" W",0,Remanescente
 7,18,1400,Casca seca,Licania canescens Benoist,175,17,1,"2° 56' 31,694"" S","51° 17' 53,715"" W",6,Remanescente
 7,18,1401,Casca seca,Licania canescens Benoist,154,17,1,"2° 56' 31,311"" S","51° 17' 54,303"" W",0,Remanescente
@@ -14609,7 +14601,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,18,1405,Acapu,Vouacapoua americana Aubl.,150,13,1,"2° 56' 30,175"" S","51° 17' 53,970"" W",0,Remanescente
 7,18,1406,Casca seca,Licania canescens Benoist,154,17,2,"2° 56' 30,853"" S","51° 17' 54,695"" W",5,Remanescente
 7,18,1407,Sapucaia,Lecythis pisonis Cambess.,230,18,1,"2° 56' 27,588"" S","51° 17' 53,491"" W",0,Explorar
-7,18,1408,Cambará,"Erisma uncinatum Warm,",200,17,2,"2° 56' 27,940"" S","51° 17' 52,684"" W",0,Remanescente
+7,18,1408,Cambará,Erisma uncinatum Warm,200,17,2,"2° 56' 27,940"" S","51° 17' 52,684"" W",0,Remanescente
 7,18,1409,Melancieiro,Alexa grandiflora Duck,178,15,2,"2° 56' 27,108"" S","51° 17' 52,299"" W",0,Remanescente
 7,18,1410,Angelim vermelho,Dinizia excelsa Ducke,240,19,1,"2° 56' 26,606"" S","51° 17' 52,923"" W",0,Explorar
 7,18,1411,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,230,18,1,"2° 56' 26,691"" S","51° 17' 53,193"" W",0,Explorar
@@ -14655,7 +14647,7 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 7,19,1451,Casca seca,Licania canescens Benoist,167,7,1,"2° 56' 32,318"" S","51° 17' 52,742"" W",0,Remanescente
 7,19,1452,Casca seca,Licania canescens Benoist,171,16,2,"2° 56' 32,622"" S","51° 17' 52,586"" W",0,Remanescente
 7,19,1453,Acapu,Vouacapoua americana Aubl.,160,15,2,"2° 56' 32,622"" S","51° 17' 52,586"" W",0,Remanescente
-7,19,1454,Cambará,"Erisma uncinatum Warm,",175,18,1,"2° 56' 33,057"" S","51° 17' 52,363"" W",0,Remanescente
+7,19,1454,Cambará,Erisma uncinatum Warm,175,18,1,"2° 56' 33,057"" S","51° 17' 52,363"" W",0,Remanescente
 7,19,1455,Coração de negro,Chamaecrista scleroxylon (Ducke) H.S.Irwin & Barneby,190,18,2,"2° 56' 32,818"" S","51° 17' 52,538"" W",0,Remanescente
 7,19,1456,Melancieiro,Alexa grandiflora Duck,180,17,1,"2° 56' 33,382"" S","51° 17' 52,458"" W",0,Remanescente
 7,19,1457,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,190,15,3,"2° 56' 32,940"" S","51° 17' 53,730"" W",0,Remanescente
@@ -14756,14 +14748,14 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 8,2,69,Acapu,Vouacapoua americana Aubl.,145,10,2,"2° 56' 32,432"" S","51° 17' 50,014"" W",0,Remanescente
 8,2,70,Fava bolota,Parkia pendula (Willd.) Benth. ex Walp.,190,12,1,"2° 56' 32,555"" S","51° 17' 50,147"" W",0,Remanescente
 8,2,71,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,184,17,1,"2° 56' 33,213"" S","51° 17' 49,822"" W",0,Remanescente
-8,2,72,Abiu branco ,,160,16,2,"2° 56' 33,488"" S","51° 17' 49,862"" W",0,Remanescente
+8,2,72,Abiu vermelho,Pouteria caimito (Ruiz & Pav.) Radlk.,160,16,2,"2° 56' 33,488"" S","51° 17' 49,862"" W",0,Remanescente
 8,2,73,Jutaí pororoca,Dialium guianense (Aubl.) Sandwith,150,7,1,"2° 56' 33,592"" S","51° 17' 49,590"" W",0,Remanescente
 8,2,74,Acapu,Vouacapoua americana Aubl.,145,16,1,"2° 56' 34,048"" S","51° 17' 49,312"" W",0,Remanescente
 8,2,75,Acapu,Vouacapoua americana Aubl.,160,14,1,"2° 56' 35,562"" S","51° 17' 50,047"" W",0,Remanescente
 8,2,76,Mamorana,Eriotheca longipedicellata (Ducke) A.Robyns,160,14,2,"2° 56' 35,659"" S","51° 17' 49,807"" W",0,Remanescente
 8,2,77,Tauari,Couratari oblongifolia Ducke & Kunth,230,18,1,"2° 56' 35,718"" S","51° 17' 49,822"" W",0,Remanescente
 8,2,78,Amapá amargoso,Parahancornia fasciculata (Poir.) Benoist,148,13,2,"2° 56' 35,367"" S","51° 17' 50,894"" W",0,Remanescente
-8,2,79,Matamatá,Eschweilera spp.,200,16,1,"2° 56' 35,606"" S","51° 17' 50,592"" W",0,Remanescente
+8,2,79,Matamatá,Eschweilera ovata (Cambess.) Miers,200,16,1,"2° 56' 35,606"" S","51° 17' 50,592"" W",0,Remanescente
 8,2,80,Taxi branco,Tachigali vulgaris L.G.Silva & H.C.Lima,160,18,1,"2° 56' 35,552"" S","51° 17' 50,911"" W",0,Remanescente
 8,2,81,Maparajuba,Manilkara bidentata (A.DC.) A.Chev.,210,18,2,"2° 56' 36,284"" S","51° 17' 49,840"" W",0,Remanescente
 8,2,82,Acapu,Vouacapoua americana Aubl.,190,12,1,"2° 56' 36,781"" S","51° 17' 50,705"" W",0,Remanescente
@@ -14780,12 +14772,12 @@ UT,Faixa,N_Arvore,Nome_Especie,Nome_Cientifico,CAP,HC,QF,Lat,Long,Titica,Selecao
 8,2,93,Acapu,Vouacapoua americana Aubl.,200,17,2,"2° 56' 38,144"" S","51° 17' 51,533"" W",0,Remanescente
 8,2,94,Pau santo,Zollernia paraensis Huber,150,16,2,"2° 56' 39,733"" S","51° 17' 51,756"" W",0,Remanescente
 8,2,95,Acapu,Vouacapoua americana Aubl.,210,17,1,"2° 56' 39,858"" S","51° 17' 51,290"" W",0,Remanescente
-8,2,96,Cambará,"Erisma uncinatum Warm,",200,15,1,"2° 56' 39,800"" S","51° 17' 51,507"" W",0,Remanescente
+8,2,96,Cambará,Erisma uncinatum Warm,200,15,1,"2° 56' 39,800"" S","51° 17' 51,507"" W",0,Remanescente
 8,2,97,Ucuubão,Osteophloeum platyspermum (Spruce ex A.DC.) Warb.,180,17,2,"2° 56' 40,068"" S","51° 17' 50,746"" W",0,Remanescente
 8,2,98,Melancieiro,Alexa grandiflora Duck,210,18,1,"2° 56' 40,255"" S","51° 17' 50,996"" W",0,Explorar
 8,2,99,Acapu,Vouacapoua americana Aubl.,150,12,1,"2° 56' 39,442"" S","51° 17' 52,012"" W",0,Remanescente
 8,3,100,Goiabão ,Pouteria pachycarpa Pires,145,16,2,"2° 56' 40,128"" S","51° 17' 49,696"" W",0,Remanescente
-8,3,101,Matamatá,Eschweilera spp.,185,18,1,"2° 56' 40,077"" S","51° 17' 49,650"" W",0,Remanescente
+8,3,101,Matamatá,Eschweilera ovata (Cambess.) Miers,185,18,1,"2° 56' 40,077"" S","51° 17' 49,650"" W",0,Remanescente
 8,3,102,Fava arara tucupi,Parkia multijuga Benth.,170,18,1,"2° 56' 39,832"" S","51° 17' 49,618"" W",0,Remanescente
 8,3,103,Casca seca,Licania canescens Benoist,170,17,1,"2° 56' 40,007"" S","51° 17' 48,965"" W",0,Remanescente
 8,3,104,Casca seca,Licania canescens Benoist,230,18,1,"2° 56' 39,834"" S","51° 17' 49,019"" W",0,Remanescente
