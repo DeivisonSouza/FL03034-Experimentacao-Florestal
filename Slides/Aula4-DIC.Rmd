@@ -252,9 +252,21 @@ layout: true
 Os principais delineamentos experimentais utilizados são:
 <br><br>
 
-```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+.pull-left-3[
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class1/img-PD.png')
 ```
+]
+
+--
+
+.pull-right-3[
+
+.font90[
+A homogeneidade (ou não) das condições experimentais (ambientais ou biológicas) direciona para a escolha do delinemento experimental mais adequado.
+
+]
+]
 
 ---
 
@@ -415,7 +427,19 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 
 ### Fontes de Variação em DIC
 
+- Em um DIC têm-se duas fontes de variação: 
+**Fonte 1**: Efeitos dos tratamentos
+o fator em estudo (tratamentos) e o erro aleatório.
 
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Análise de Variância (ANOVA)
+
+É uma técnica estatística que permite decompor a .orange[variação total] existente no experimento em variação devido à diferença entre efeitos dos tratamentos e na variação devido ao acaso (erro experimental ou resíduo).
 
 
 
