@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x6b4c4714b7c495b8c5aa1155f8a2cce","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7b51ea53f9d4d6ba0a2d503435c7cfc","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -452,7 +452,7 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
    &lt;td style="text-align:left;"&gt; SQT &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; QMT = SQT/I-1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; QMT/QME &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; F~[(I-1); I(J-1)];α~ &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; F[(I-1); I(J-1)];α &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Erro Experimental &lt;/td&gt;
@@ -501,39 +501,13 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 
 ---
 
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
 
-```r
-library(kableExtra)
-library(dplyr)
+### Análise de variância - DIC
+&lt;br&gt;
 
-mtcars %&gt;% 
-  filter(mpg==21.0) %&gt;%
-  select(c(1:2)) %&gt;%  
-  kable("html", col.names=c("m~pg~","c~yl~")) %&gt;%
-  kable_styling()
-```
-
-&lt;table class="table" style="margin-left: auto; margin-right: auto;"&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt;   &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; m~pg~ &lt;/th&gt;
-   &lt;th style="text-align:right;"&gt; c~yl~ &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Mazda RX4 Wag &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 21 &lt;/td&gt;
-   &lt;td style="text-align:right;"&gt; 6 &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
+&lt;img src="fig/class4/DIC-Table.png" width="60%" style="display: block; margin: auto;" /&gt;
 
 ---
 
