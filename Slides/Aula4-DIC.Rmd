@@ -191,8 +191,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [6 - DIC - Análise de Variância](#dicanova)
 
-[7 - DIC - Modelo Estatístico](#dicme)
-
 ]
 ]
 
@@ -201,9 +199,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 2 - Estudo de caso de experimentos DIC**
 
-[1 - XXXXXXXXX](#select)
-
-&nbsp;&nbsp;&nbsp;&nbsp;[1.1 - YYYYYYYYY](#startwith)
+[1 - Pacote ExpDes.pt](#expdes)
 
 ]
 ]
