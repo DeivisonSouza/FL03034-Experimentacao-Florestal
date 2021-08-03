@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f91f8f89af244e1681477a2cc6a990de","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x98481ae8dcf481fbf458b4feebc2fe4","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -18,6 +18,8 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula4-DIC_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula4-DIC_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="Aula4-DIC_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Aula4-DIC_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -269,7 +271,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 
 --
 .font90[
-É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. (.green[Recomendação: 20 UEs])
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
 &lt;br&gt;&lt;br&gt;
 
 **Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
@@ -388,19 +390,116 @@ Por exemplo, deve haver condições homogêneas para:
 
 ### Fontes de Variação em DIC
 
-- Em um DIC têm-se duas fontes de variação: 
-**Fonte 1**: Efeitos dos tratamentos
-o fator em estudo (tratamentos) e o erro aleatório.
+- Em um DIC existem duas fontes de variação: 
+&lt;br&gt;&lt;br&gt;
 
+**Fonte 1**: Variação devido aos efeitos de tratamentos (fatores controlados)
+
+**Fonte 2**: Variação devido ao erro aleatório (fatores não controlados)
 
 ---
 
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Análise de Variância (ANOVA)
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+&lt;br&gt;
 
-É uma técnica estatística que permite decompor a .orange[variação total] existente no experimento em variação devido à diferença entre efeitos dos tratamentos e na variação devido ao acaso (erro experimental ou resíduo).
+É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+&lt;br&gt;&lt;br&gt;
+
+Causas conhecidas = Fatores controlados = Tratamentos
+
+Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo)
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação no experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação no experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de variância - DIC
+&lt;br&gt;
+
+.font80[
+&lt;table class=" lightable-classic table table-striped table-hover" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;"&gt;
+&lt;caption&gt;Quadro de ANOVA de experimentos em DIC&lt;/caption&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;"&gt; Fonte de variação &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Graus de Liberdade &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Soma de Quadrados (SQ) &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Quadrado Médio (QM) &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Fcalculado &lt;/th&gt;
+   &lt;th style="text-align:left;"&gt; Ftabelar &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Entre Tratamento &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I-1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQT &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QMT = SQT/I-1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QMT/QME &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; F[(I-1); I(J-1)];α &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Erro Experimental &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; I(J-1) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQE &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QME = SQE/I(J-1) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; IJ-1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQTot &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;br&gt;
+
+.pull-left-4[
+**SQT** = Soma de Quadrados de Tratamentos
+
+**SQE** = Soma de Quadrados de Erros
+
+**SQTot.** = Soma de Quadrados de Totais
+
+**QMT** = Quadrado Médio de Tratamentos
+
+**QME** = Quadrado Médio de Erros
+]
+
+.pull-right-4[
+**I** = número de tratamentos
+
+**J** = número de repetições
+&lt;br&gt;&lt;br&gt;
+
+.orange[**Quadrado Médio = Variância**]
+
+]
+
+
+]
+
+---
 
 
 

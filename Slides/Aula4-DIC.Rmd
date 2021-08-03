@@ -294,7 +294,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 
 --
 .font90[
-É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. (.green[Recomendação: 20 UEs])
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
 <br><br>
 
 **Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
@@ -423,19 +423,107 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 
 ### Fontes de Variação em DIC
 
-- Em um DIC têm-se duas fontes de variação: 
-**Fonte 1**: Efeitos dos tratamentos
-o fator em estudo (tratamentos) e o erro aleatório.
+- Em um DIC existem duas fontes de variação: 
+<br><br>
 
+**Fonte 1**: Variação devido aos efeitos de tratamentos (fatores controlados)
+
+**Fonte 2**: Variação devido ao erro aleatório (fatores não controlados)
 
 ---
 
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Análise de Variância (ANOVA)
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+<br>
 
-É uma técnica estatística que permite decompor a .orange[variação total] existente no experimento em variação devido à diferença entre efeitos dos tratamentos e na variação devido ao acaso (erro experimental ou resíduo).
+É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+<br><br>
+
+Causas conhecidas = Fatores controlados = Tratamentos
+
+Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo)
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+
+<br><br>
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Análise de variância - DIC
+<br>
+
+.font80[
+```{r echo=F, eval=T}
+#anova <- readr::read_csv("data/ANOVA-DIC.csv")
+
+anova <- tibble("Fonte de variação" = c("Entre Tratamento", 
+                                        "Erro Experimental", 
+                                        "Total"),
+                "Graus de Liberdade" = c("I-1", 
+                                        "I(J-1)", 
+                                        "IJ-1"),
+                "Soma de Quadrados (SQ)" = c("SQT", 
+                                        "SQE", 
+                                        "SQTot"),
+                "Quadrado Médio (QM)" = c("QMT = SQT/I-1", 
+                                        "QME = SQE/I(J-1)", 
+                                        "-"),
+                "Fcalculado" = c("QMT/QME", 
+                                        "-", 
+                                        "-"),
+                "Ftabelar" = c("F[(I-1); I(J-1)];α", 
+                                        "-", 
+                                        "-")
+                
+                )
+
+anova %>%
+  kbl(caption = "Quadro de ANOVA de experimentos em DIC") %>%
+  kable_classic(full_width = F, html_font = "Cambria") %>%
+  kable_styling(bootstrap_options = c("striped", "hover"))
+
+```
+<br>
+
+.pull-left-4[
+**SQT** = Soma de Quadrados de Tratamentos
+
+**SQE** = Soma de Quadrados de Erros
+
+**SQTot.** = Soma de Quadrados de Totais
+
+**QMT** = Quadrado Médio de Tratamentos
+
+**QME** = Quadrado Médio de Erros
+]
+
+.pull-right-4[
+**I** = número de tratamentos
+
+**J** = número de repetições
+<br><br>
+
+.orange[**Quadrado Médio = Variância**]
+
+]
+
+
+]
+
+---
 
 
 
