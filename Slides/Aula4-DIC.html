@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x6bd48963efa4b1c944b2ef8fc27a03c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xebc248749a441d4be7933280a2e1d81","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -106,6 +106,36 @@ layout: true
 
 ---
 
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+2 - Princípios básicos da experimentação; 
+
+3 - Fases da pesquisa experimental; 
+
+.orange[4 - Delineamento inteiramente casualizado - DIC]; 
+
+5 - Delineamento em blocos ao acaso - DBC;
+
+6 - Delineamento em quadrado latino - DQL;
+
+7 - Testes de comparação de médias; 
+
+8 - Ensaios Fatoriais;
+
+9 - Análise de correlação linear simples;
+
+10 - Análise de regressão linear simples e múltipla; e
+
+11 - Introdução à linguagem R para análise de experimentos.
+
+]
+
+---
+
 ## Objetivos
 &lt;br&gt;&lt;br&gt;
 Ao final desta aula espera-se que o discente seja capaz de...
@@ -126,7 +156,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 1 - Delineamento Inteiramente Casualizado**
 
-[1- YYYYY](#R)
+[1- Delineamento experimental - Conceito](#de)
+
+[2- Principais delineamentos experimentais](#pde)
+
+[3- DIC - Conceito](#pde)
+
+[4- DIC - Principais características](#dicpc)
+
+[5- DIC - Vantagens e Desvantagens](#dicvl)
 
 ]
 ]
@@ -165,12 +203,14 @@ layout: true
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento Experimental
+
+--
 
 &lt;br&gt;&lt;br&gt;
 .shadow1[
 &lt;br&gt;
-.center[**Delineamento Experimental**]
+.center[**Conceito**]
 
 É o modo como os tratamentos são designados às unidade (ou parcelas) experimentais (DIAS; BARROS, 2009).
 
@@ -179,13 +219,101 @@ layout: true
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento Experimental
 &lt;br&gt;
 
 Os principais delineamentos experimentais utilizados são:
 &lt;br&gt;&lt;br&gt;
 
 &lt;img src="fig/class1/img-PD.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+&lt;br&gt;&lt;br&gt;
+.shadow1[
+&lt;br&gt;
+.center[**Conceito**]
+É quando os .orange[tratamentos] são designados às .orange[unidades experimentais] (ou parcelas) completamente ao acaso (por sorteio).
+]
+
+--
+&lt;br&gt;
+
+.font90[
+**Exemplos**
+- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
+- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em `\(H_2SO_4\)`). (*Bertholletia excelsa*)
+- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+&lt;br&gt;
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. (.green[Recomendação: 20 UEs])
+&lt;br&gt;&lt;br&gt;
+
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+&lt;img src="https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+&lt;img src="https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+&lt;br&gt;
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+&lt;br&gt;
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+&lt;img src="https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;&lt;div style='font-size:50%'&gt;(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)&lt;/div&gt;
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
 
 ---
 
@@ -222,10 +350,10 @@ Por exemplo, deve haver condições homogêneas para:
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Vantagens e Limitações
+### Vantagens e Desvantagens
 
 .pull-left-2[
-&lt;img src="fig/class4/DIC-V.png" width="110%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class4/DIC-V.png" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 
 --

@@ -129,6 +129,36 @@ layout: true
 
 ---
 
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+<br>
+1 - Introdução à experimentação; 
+
+2 - Princípios básicos da experimentação; 
+
+3 - Fases da pesquisa experimental; 
+
+.orange[4 - Delineamento inteiramente casualizado - DIC]; 
+
+5 - Delineamento em blocos ao acaso - DBC;
+
+6 - Delineamento em quadrado latino - DQL;
+
+7 - Testes de comparação de médias; 
+
+8 - Ensaios Fatoriais;
+
+9 - Análise de correlação linear simples;
+
+10 - Análise de regressão linear simples e múltipla; e
+
+11 - Introdução à linguagem R para análise de experimentos.
+
+]
+
+---
+
 ## Objetivos
 <br><br>
 Ao final desta aula espera-se que o discente seja capaz de...
@@ -149,7 +179,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 1 - Delineamento Inteiramente Casualizado**
 
-[1- YYYYY](#R)
+[1- Delineamento experimental - Conceito](#de)
+
+[2- Principais delineamentos experimentais](#pde)
+
+[3- DIC - Conceito](#pde)
+
+[4- DIC - Principais características](#dicpc)
+
+[5- DIC - Vantagens e Desvantagens](#dicvl)
 
 ]
 ]
@@ -188,12 +226,14 @@ layout: true
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento Experimental
+
+--
 
 <br><br>
 .shadow1[
 <br>
-.center[**Delineamento Experimental**]
+.center[**Conceito**]
 
 É o modo como os tratamentos são designados às unidade (ou parcelas) experimentais (DIAS; BARROS, 2009).
 
@@ -202,7 +242,7 @@ layout: true
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento Experimental
 <br>
 
 Os principais delineamentos experimentais utilizados são:
@@ -211,6 +251,100 @@ Os principais delineamentos experimentais utilizados são:
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class1/img-PD.png')
 ```
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+<br><br>
+.shadow1[
+<br>
+.center[**Conceito**]
+É quando os .orange[tratamentos] são designados às .orange[unidades experimentais] (ou parcelas) completamente ao acaso (por sorteio).
+]
+
+--
+<br>
+
+.font90[
+**Exemplos**
+- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
+- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em $H_2SO_4$). (*Bertholletia excelsa*)
+- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+<br>
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. (.green[Recomendação: 20 UEs])
+<br><br>
+
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif")
+```
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif")
+```
+]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+<br>
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+<br>
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
+```
+<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
 
 ---
 
@@ -249,10 +383,10 @@ Por exemplo, deve haver condições homogêneas para:
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Vantagens e Limitações
+### Vantagens e Desvantagens
 
 .pull-left-2[
-```{r, echo=FALSE, out.width='110%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/DIC-V.png')
 ```
 ]
