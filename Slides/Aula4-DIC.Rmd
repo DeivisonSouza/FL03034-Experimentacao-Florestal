@@ -179,15 +179,19 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 1 - Delineamento Inteiramente Casualizado**
 
-[1- Delineamento experimental - Conceito](#de)
+[1 - Delineamento experimental - Conceito](#de)
 
-[2- Principais delineamentos experimentais](#pde)
+[2 - Principais delineamentos experimentais](#pde)
 
-[3- DIC - Conceito](#pde)
+[3 - DIC - Conceito](#pde)
 
-[4- DIC - Principais características](#dicpc)
+[4 - DIC - Principais características](#dicpc)
 
-[5- DIC - Vantagens e Desvantagens](#dicvl)
+[5 - DIC - Vantagens e Desvantagens](#dicvl)
+
+[6 - DIC - Análise de Variância](#dicanova)
+
+[7 - DIC - Modelo Estatístico](#dicme)
 
 ]
 ]
