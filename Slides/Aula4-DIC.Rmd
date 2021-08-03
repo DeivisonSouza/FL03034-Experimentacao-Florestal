@@ -484,7 +484,7 @@ anova <- tibble("Fonte de variação" = c("Entre Tratamento",
                 "Fcalculado" = c("QMT/QME", 
                                         "-", 
                                         "-"),
-                "Ftabelar" = c("F[(I-1); I(J-1)];α", 
+                "Ftabelar" = c("F~[(I-1); I(J-1)];α~", 
                                         "-", 
                                         "-")
                 
@@ -525,7 +525,16 @@ anova %>%
 
 ---
 
+```{r}
+library(kableExtra)
+library(dplyr)
 
+mtcars %>% 
+  filter(mpg==21.0) %>%
+  select(c(1:2)) %>%  
+  kable("html", col.names=c("m~pg~","c~yl~")) %>%
+  kable_styling()
+```
 
 ---
 
