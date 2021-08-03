@@ -390,7 +390,7 @@ Por exemplo, deve haver condições homogêneas para:
 ### Vantagens e Desvantagens
 
 .pull-left-2[
-```{r, echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/DIC-V.png')
 ```
 ]
@@ -407,6 +407,15 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 
 ]
 ]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Fontes de Variação em DIC
+
+
 
 
 
