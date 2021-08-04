@@ -716,11 +716,44 @@ knitr::include_graphics('fig/class4/SQTrat-fator.png')
 ]
 ]
 
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Fórmulas
+
+- **Soma de Quadrados de Resíduos (SQR)** - (Ou erro experimental)
+
+.pull-left-10[
+.font90[
+Sabe-se que:
+<br><br>
+
+$\large SQ_{Tot.} = SQ_{Trat.} + SQR$
+<br><br>
+
+Então,
+<br><br>
+
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+]
+]
+
 --
 
-.pull-right-9[
+.pull-right-10[
+.font90[
+
+$SQ_{Tot.}$ = Soma de Quadrados Totais
+
+$SQ_{Trat.}$ = Soma de Quadrados de Tratamentos
+
+$SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 
 ]
+]
+
 
 ---
 
