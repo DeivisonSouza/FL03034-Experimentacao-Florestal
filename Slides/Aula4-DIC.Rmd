@@ -764,6 +764,15 @@ $SQ_{Trat.}$ = Soma de Quadrados de Tratamentos
 
 $SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 
+<br><br>
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A SQR representa a variabilidade entre as repetições dentro de tratamentos. Isto é, mede a variabilidade dentro dos tratamentos.
+]
+
+
 ]
 ]
 
