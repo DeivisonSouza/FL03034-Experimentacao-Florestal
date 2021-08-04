@@ -525,12 +525,6 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 
 ---
 
-
-
-
-
----
-
 ## Delineamento Inteiramente Casualizado
 <br>
 
@@ -603,16 +597,18 @@ $$
 
 $Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ésima repetição.
 ]
-<br><br>
+<br>
 
 $$
-\Large
-SQ_{Total} = SQT + SQR
+\large
+SQ_{Total} = SQ_{Trat.} + SQR
 $$
 <br>
 
-.font90[
-A SQ<sub>Total</sub> fornece a variação total dos dados da variável resposta no experimento.
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A $SQ_{Total}$ fornece a variação total dos dados da variável resposta no experimento.
 ]
 ]
 
