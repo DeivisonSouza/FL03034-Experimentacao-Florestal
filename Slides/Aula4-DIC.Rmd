@@ -610,12 +610,24 @@ $$
 ]
 
 .pull-right-9[
-
+.font90[
 *I* = número de tratamentos
 
 *J* = número de repetições
 
 $Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ésima repetição.
+]
+<br><br>
+
+$$
+\Large
+SQ_{Total} = SQT + SQR
+$$
+<br>
+
+.font90[
+A SQ<sub>Total</sub> fornece a variação total dos dados da variável resposta no experimento.
+]
 
 ]
 
@@ -652,6 +664,21 @@ $$
 $Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ésima repetição.
 
 ]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Fórmulas
+
+.pull-left-9[
+- **Fator em comum **
+<br><br>
+
+]
+
+
 
 ---
 
