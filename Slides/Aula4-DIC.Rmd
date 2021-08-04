@@ -421,6 +421,38 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 ## Delineamento Inteiramente Casualizado
 <br>
 
+### Representação genérica de valores
+
+.pull-left-9[
+.font90[
+Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
+]
+<br><br>
+
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/DIC-Table.png')
+```
+]
+
+.pull-right-9[
+.font90[
+$T_1$, $T_2$, $T_3$,..., $T_I$ = Soma dos valores da variável y<sub>ij</sub> dentro do *i*-ésimo tratamento.
+<br>
+
+$y_1$, $y_2$, $y_3$,..., $y_I$ = Média aritmética dos valores da variável y<sub>ij</sub> dentro do *i*-ésimo tratamento.
+<br><br>
+
+*I* = Número de tratamentos
+
+*J* = Número de repetições
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
 ### Análise de Variância (ANOVA) - Conceito
 <br>
 
@@ -439,19 +471,20 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+### Análise de variância - Perguntas
 
 <br><br>
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+<br><br>
 
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação no experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
 
 ---
 
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Análise de variância - DIC
+### Análise de variância - Quadro de experimentos em DIC
 <br>
 
 .font80[
@@ -508,37 +541,6 @@ anova %>%
 .orange[**Quadrado Médio = Variância**]
 
 ]
-
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### Análise de variância - DIC
-
-.pull-left-9[
-Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
-<br><br>
-
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-Table.png')
-```
-]
-
-.pull-right-9[
-$T_1$, $T_2$, $T_3$,..., $T_I$ = Soma dos valores da variável y<sub>ij</sub> dentro do *i*-ésimo tratamento.
-<br>
-
-$y_1$, $y_2$, $y_3$,..., $y_I$ = Média aritmética dos valores da variável y<sub>ij</sub> dentro do *i*-ésimo tratamento.
-<br><br>
-
-*I* = Número de tratamentos
-
-*J* = Número de repetições
-
 ]
 
 ---
@@ -578,20 +580,44 @@ $e_{ij}$ = É a contribuição da variação não controlada referente à observ
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Quadro de Anova
-<br>
+### Quadro de Anova - Fórmulas
 
-Passos para o preenchimento do quadro de ANOVA - DIC.
+.pull-left-9[
+- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
 <br><br>
 
-**1° PASSO**: Calcular os graus de liberdade (tratamento, erro experimental e total).
+```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot.png')
+```
+<br>
 
-**2° PASSO**: Calcular as somas de quadrado (tratamento, erro experimental e total).
+```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot2.png')
+```
+<!--
+$$
+\Large
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
+$$
+-->
 
-**3° PASSO**: Calcular os quadrados médios (tratamento, erro experimental).
+<!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2
+$$
+-->
 
-**4° PASSO**: Calcular o valor da estatística *F-Snedecor*.
+]
 
+.pull-right-9[
+
+*I* = número de tratamentos
+
+*J* = número de repetições
+
+$Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ésima repetição.
+
+]
 
 ---
 
@@ -600,24 +626,25 @@ Passos para o preenchimento do quadro de ANOVA - DIC.
 
 ### Quadro de Anova - Fórmulas
 
-.left-column[
-- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
-<br>
+.pull-left-9[
+- **Soma de Quadrados de Tratamentos (SQ<sub>Trat.</sub>)**
+<br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot.png')
+knitr::include_graphics('fig/class4/SQTrat.png')
 ```
 
-<!--
-$$
-\Large
-SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
-$$
--->
 ]
 
+.pull-right-9[
 
+*I* = número de tratamentos
 
+*J* = número de repetições
+
+$Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ésima repetição.
+
+]
 
 ---
 
