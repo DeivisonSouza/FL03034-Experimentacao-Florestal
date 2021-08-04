@@ -554,6 +554,58 @@ $y_1$, $y_2$, $y_3$,..., $y_I$ = Média aritmética dos valores da variável y<s
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Modelo Estatístico - DIC
+
+Toda análise de variância pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​
+<br><br>
+
+.pull-left-9[
+$\Large Y_{ij} = m + t{_i} + e_{ij}$
+<br><br>
+.font90[
+O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 partes: uma **constante**, o **efeito do tratamento** e a **variação não controlada** (STORCK et al., 2011).
+]
+]
+
+
+.pull-right-9[
+.font90[
+
+$Y_{ij}$ = Valor observado da variável $y$ na unidade experimental que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) na *j*-ésima repetição (*j* = 1, 2, ..., J).
+
+$m$ = média geral, comum a todas as observações.
+
+$t_{i}$ = É o efeito do tratamento *i*; e​
+
+$e_{ij}$ = É a contribuição da variação não controlada referente à observação $Y_{ij}$.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova
+<br>
+
+Passos para o preenchimento do quadro de ANOVA - DIC.
+<br><br>
+
+**1° PASSO**: Calcular os graus de liberdade (tratamento, erro experimental e total).
+
+**2° PASSO**: Calcular as somas de quadrado (tratamento, erro experimental e total).
+
+**3° PASSO**: Calcular os quadrados médios (tratamento, erro experimental).
+
+**4° PASSO**: Calcular o valor da estatística *F-Snedecor*.
+
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
