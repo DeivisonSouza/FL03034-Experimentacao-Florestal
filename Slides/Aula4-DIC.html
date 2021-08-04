@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e4ccdc1de7324540a9447770ba6368a3","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xf2f9163f861477e94efacbd2d5ec668","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -388,24 +388,13 @@ Por exemplo, deve haver condições homogêneas para:
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Fontes de Variação em DIC
-
-- Em um DIC existem duas fontes de variação: 
-&lt;br&gt;&lt;br&gt;
-
-**Fonte 1**: Variação devido aos efeitos de tratamentos (fatores controlados)
-
-**Fonte 2**: Variação devido ao erro aleatório (fatores não controlados)
-
----
-
-## Delineamento Inteiramente Casualizado
-&lt;br&gt;
-
-### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+### Análise de Variância (ANOVA) - Conceito
 &lt;br&gt;
 
 É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+&lt;br&gt;&lt;br&gt;
+
+**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ&lt;sub&gt;Tot.&lt;/sub&gt;) (NOGUEIRA, 2007).
 &lt;br&gt;&lt;br&gt;
 
 Causas conhecidas = Fatores controlados = Tratamentos
@@ -507,7 +496,7 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 ### Análise de variância - DIC
 
 .pull-left-9[
-Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica:
+Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
 &lt;br&gt;&lt;br&gt;
 
 &lt;img src="fig/class4/DIC-Table.png" width="80%" style="display: block; margin: auto;" /&gt;
@@ -576,6 +565,30 @@ Passos para o preenchimento do quadro de ANOVA - DIC.
 **3° PASSO**: Calcular os quadrados médios (tratamento, erro experimental).
 
 **4° PASSO**: Calcular o valor da estatística *F-Snedecor*.
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Fórmulas
+
+.left-column[
+- **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)**
+&lt;br&gt;
+
+&lt;img src="fig/class4/SQTot.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;!--
+$$
+\Large
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
+$$
+--&gt;
+]
+
+
 
 
 ---

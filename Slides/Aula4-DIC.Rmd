@@ -421,24 +421,13 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Fontes de Variação em DIC
-
-- Em um DIC existem duas fontes de variação: 
-<br><br>
-
-**Fonte 1**: Variação devido aos efeitos de tratamentos (fatores controlados)
-
-**Fonte 2**: Variação devido ao erro aleatório (fatores não controlados)
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+### Análise de Variância (ANOVA) - Conceito
 <br>
 
 É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+<br><br>
+
+**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ<sub>Tot.</sub>) (NOGUEIRA, 2007).
 <br><br>
 
 Causas conhecidas = Fatores controlados = Tratamentos
@@ -531,7 +520,7 @@ anova %>%
 ### Análise de variância - DIC
 
 .pull-left-9[
-Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica:
+Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
 <br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
@@ -602,6 +591,32 @@ Passos para o preenchimento do quadro de ANOVA - DIC.
 **3° PASSO**: Calcular os quadrados médios (tratamento, erro experimental).
 
 **4° PASSO**: Calcular o valor da estatística *F-Snedecor*.
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Fórmulas
+
+.left-column[
+- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
+<br>
+
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot.png')
+```
+
+<!--
+$$
+\Large
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
+$$
+-->
+]
+
+
 
 
 ---
