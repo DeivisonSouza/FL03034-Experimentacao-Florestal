@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9f07c8357934443a253ae5e59282beb","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x14e50ff050540e4be53271fdf3538b0","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -652,15 +652,27 @@ $$
 
 .pull-down[
 .pull-left-10[
-&lt;img src="fig/class4/SQTot.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class4/SQTot-cor.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="fig/class4/SQTot-fator.png" width="45%" style="display: block; margin: auto;" /&gt;
+&lt;!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - {\color{Orange} \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+--&gt;
+
+&lt;img src="fig/class4/SQTot-fator.png" width="35%" style="display: block; margin: auto;" /&gt;
 ]
 
 .pull-right-10[
-&lt;img src="fig/class4/SQTrat.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class4/SQTrat-cor.png" width="70%" style="display: block; margin: auto;" /&gt;
 
-&lt;img src="fig/class4/SQTrat-fator.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;!--
+$$
+SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+--&gt;
+
+&lt;img src="fig/class4/SQTrat-fator.png" width="40%" style="display: block; margin: auto;" /&gt;
 ]
 ]
 

@@ -684,21 +684,33 @@ $Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ési
 
 .pull-down[
 .pull-left-10[
-```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot.png')
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
 ```
 
-```{r, echo=FALSE, out.width='45%', fig.align='center', fig.cap='', dpi=600}
+<!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - {\color{Orange} \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+-->
+
+```{r, echo=FALSE, out.width='35%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/SQTot-fator.png')
 ```
 ]
 
 .pull-right-10[
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat.png')
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
 ```
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+<!--
+$$
+SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+-->
+
+```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/SQTrat-fator.png')
 ```
 ]
