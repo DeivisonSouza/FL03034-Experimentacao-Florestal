@@ -490,63 +490,40 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
 <br><br>
 
-.font80[
-```{r echo=F, eval=T}
-#anova <- readr::read_csv("data/ANOVA-DIC.csv")
-
-anova <- tibble("Fonte de variação" = c("Entre Tratamento", 
-                                        "Resíduo Experimental", 
-                                        "Total"),
-                "Graus de Liberdade" = c("I-1", 
-                                        "I(J-1)", 
-                                        "IJ-1"),
-                "Soma de Quadrados (SQ)" = c("SQTrat.", 
-                                        "SQR", 
-                                        "SQTot."),
-                "Quadrado Médio (QM)" = c("QMT = SQTrat./I-1", 
-                                        "QMR = SQR/I(J-1)", 
-                                        "-"),
-                "Fcalculado" = c("QMT/QMR", 
-                                        "-", 
-                                        "-"),
-                "Ftabelar" = c("F[(I-1); I(J-1)];α", 
-                                        "-", 
-                                        "-")
-                
-                )
-
-anova %>%
-  kbl(caption = "") %>%
-  kable_classic(full_width = F, html_font = "Cambria") %>%
-  kable_styling(bootstrap_options = c("striped", "hover"))
-
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 ```
-<br>
 
 .pull-left-4[
-.font80[
+.font70[
 **SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
 
 **SQR** = Soma de Quadrados de Resíduos
 
 **SQ<sub>Tot.</sub>** = Soma de Quadrados de Totais
-
-**QMT** = Quadrado Médio de Tratamentos
-
-**QMR** = Quadrado Médio de Resíduos
 ]
 ]
 
 .pull-right-4[
+.font70[
+**QMT** = Quadrado Médio de Tratamentos
+
+**QMR** = Quadrado Médio de Resíduos
+
 *I* = número de tratamentos
 
 *J* = número de repetições
 <br><br>
 
 .orange[**Quadrado Médio = Variância**]
+]
+]
 
-]
-]
+---
+
+
+
+
 
 ---
 

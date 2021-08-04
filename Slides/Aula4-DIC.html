@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xae1a93858b04a8a970116048acf79ec","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f3c84ee1603d4a97b4ee7e2532266c33","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -18,8 +18,6 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula4-DIC_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula4-DIC_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
-    <script src="Aula4-DIC_files/kePrint-0.0.1/kePrint.js"></script>
-    <link href="Aula4-DIC_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -455,72 +453,38 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
 &lt;br&gt;&lt;br&gt;
 
-.font80[
-&lt;table class=" lightable-classic table table-striped table-hover" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;"&gt;
-&lt;caption&gt;&lt;/caption&gt;
- &lt;thead&gt;
-  &lt;tr&gt;
-   &lt;th style="text-align:left;"&gt; Fonte de variação &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Graus de Liberdade &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Soma de Quadrados (SQ) &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Quadrado Médio (QM) &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Fcalculado &lt;/th&gt;
-   &lt;th style="text-align:left;"&gt; Ftabelar &lt;/th&gt;
-  &lt;/tr&gt;
- &lt;/thead&gt;
-&lt;tbody&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Entre Tratamento &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; I-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQTrat. &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QMT = SQTrat./I-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QMT/QMR &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; F[(I-1); I(J-1)];α &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Resíduo Experimental &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; I(J-1) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQR &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QMR = SQR/I(J-1) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; IJ-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQTot. &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
-  &lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;br&gt;
+&lt;img src="fig/class4/DIC-ANOVA.png" width="70%" style="display: block; margin: auto;" /&gt;
 
 .pull-left-4[
-.font80[
+.font70[
 **SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
 
 **SQR** = Soma de Quadrados de Resíduos
 
 **SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
-
-**QMT** = Quadrado Médio de Tratamentos
-
-**QMR** = Quadrado Médio de Resíduos
 ]
 ]
 
 .pull-right-4[
+.font70[
+**QMT** = Quadrado Médio de Tratamentos
+
+**QMR** = Quadrado Médio de Resíduos
+
 *I* = número de tratamentos
 
 *J* = número de repetições
 &lt;br&gt;&lt;br&gt;
 
 .orange[**Quadrado Médio = Variância**]
+]
+]
 
-]
-]
+---
+
+
+
+
 
 ---
 
