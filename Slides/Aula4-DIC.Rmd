@@ -490,11 +490,11 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
 <br><br>
 
-```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 ```
 
-.pull-left-4[
+.pull-left-8[
 .font70[
 **SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
 
@@ -504,16 +504,20 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 ]
 ]
 
-.pull-right-4[
+.pull-left-8[
 .font70[
 **QMT** = Quadrado Médio de Tratamentos
 
 **QMR** = Quadrado Médio de Resíduos
+]
+]
 
+.pull-left-8[
+.font70[
 *I* = número de tratamentos
 
 *J* = número de repetições
-<br><br>
+<br>
 
 .orange[**Quadrado Médio = Variância**]
 ]
