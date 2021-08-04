@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d5d9b60f7e444835b6d40ca5f1c029ca","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9f07c8357934443a253ae5e59282beb","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -471,14 +471,14 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
    &lt;td style="text-align:left;"&gt; I-1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; SQT &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; QMT = SQT/I-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QMT/QME &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QMT/QMR &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; F[(I-1); I(J-1)];α &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
-   &lt;td style="text-align:left;"&gt; Erro Experimental &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; Resíduo Experimental &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; I(J-1) &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQE &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QME = SQE/I(J-1) &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQR &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QMR = SQR/I(J-1) &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
   &lt;/tr&gt;
@@ -495,15 +495,15 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 &lt;br&gt;
 
 .pull-left-4[
-**SQT** = Soma de Quadrados de Tratamentos
+**SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
 
-**SQE** = Soma de Quadrados de Erros
+**SQR** = Soma de Quadrados de Resíduos
 
-**SQTot.** = Soma de Quadrados de Totais
+**SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
 
 **QMT** = Quadrado Médio de Tratamentos
 
-**QME** = Quadrado Médio de Erros
+**QMR** = Quadrado Médio de Resíduos
 ]
 
 .pull-right-4[
@@ -567,7 +567,7 @@ O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 
 &lt;!--
 $$
 \Large
-SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2
 $$
 --&gt;
 
@@ -598,7 +598,6 @@ $$
 .font90[
 A SQ&lt;sub&gt;Total&lt;/sub&gt; fornece a variação total dos dados da variável resposta no experimento.
 ]
-
 ]
 
 ---
@@ -639,14 +638,37 @@ $$
 &lt;br&gt;
 
 ### Quadro de Anova - Fórmulas
-
-.pull-left-9[
-- **Fator em comum **
-&lt;br&gt;&lt;br&gt;
-
+&lt;br&gt;
+.pull-top[
+**Fator em comum (C)**
+&lt;br&gt;
+.font90[
+- As equações para o cálculo da `\(SQ_{Tot.}\)` e `\(SQ_{Trat.}\)` possuem uma expressão matemática em comum.
+- Essa expressão é denominada **Fator em Comum**.
+- Assim, as equações para cálculo da `\(SQ_{Tot.}\)` e `\(SQ_{Trat.}\)` podem ser expressas de forma simplificada.
+- A letra "C" simboliza a expressão em comum.
+]
 ]
 
+.pull-down[
+.pull-left-10[
+&lt;img src="fig/class4/SQTot.png" width="75%" style="display: block; margin: auto;" /&gt;
 
+&lt;img src="fig/class4/SQTot-fator.png" width="45%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-10[
+&lt;img src="fig/class4/SQTrat.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+&lt;img src="fig/class4/SQTrat-fator.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+--
+
+.pull-right-9[
+
+]
 
 ---
 

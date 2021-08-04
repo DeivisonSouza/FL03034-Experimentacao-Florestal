@@ -492,18 +492,18 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 #anova <- readr::read_csv("data/ANOVA-DIC.csv")
 
 anova <- tibble("Fonte de variação" = c("Entre Tratamento", 
-                                        "Erro Experimental", 
+                                        "Resíduo Experimental", 
                                         "Total"),
                 "Graus de Liberdade" = c("I-1", 
                                         "I(J-1)", 
                                         "IJ-1"),
                 "Soma de Quadrados (SQ)" = c("SQT", 
-                                        "SQE", 
+                                        "SQR", 
                                         "SQTot"),
                 "Quadrado Médio (QM)" = c("QMT = SQT/I-1", 
-                                        "QME = SQE/I(J-1)", 
+                                        "QMR = SQR/I(J-1)", 
                                         "-"),
-                "Fcalculado" = c("QMT/QME", 
+                "Fcalculado" = c("QMT/QMR", 
                                         "-", 
                                         "-"),
                 "Ftabelar" = c("F[(I-1); I(J-1)];α", 
@@ -521,15 +521,15 @@ anova %>%
 <br>
 
 .pull-left-4[
-**SQT** = Soma de Quadrados de Tratamentos
+**SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
 
-**SQE** = Soma de Quadrados de Erros
+**SQR** = Soma de Quadrados de Resíduos
 
-**SQTot.** = Soma de Quadrados de Totais
+**SQ<sub>Tot.</sub>** = Soma de Quadrados de Totais
 
 **QMT** = Quadrado Médio de Tratamentos
 
-**QME** = Quadrado Médio de Erros
+**QMR** = Quadrado Médio de Resíduos
 ]
 
 .pull-right-4[
@@ -597,7 +597,7 @@ knitr::include_graphics('fig/class4/SQTot2.png')
 <!--
 $$
 \Large
-SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}(\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij})^2
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2
 $$
 -->
 
@@ -628,7 +628,6 @@ $$
 .font90[
 A SQ<sub>Total</sub> fornece a variação total dos dados da variável resposta no experimento.
 ]
-
 ]
 
 ---
@@ -671,14 +670,45 @@ $Y_{ij}$ = valor observado da variável $Y$ no *i*-ésimo tratamento da *j*-ési
 <br>
 
 ### Quadro de Anova - Fórmulas
-
-.pull-left-9[
-- **Fator em comum **
-<br><br>
-
+<br>
+.pull-top[
+**Fator em comum (C)**
+<br>
+.font90[
+- As equações para o cálculo da $SQ_{Tot.}$ e $SQ_{Trat.}$ possuem uma expressão matemática em comum.
+- Essa expressão é denominada **Fator em Comum**.
+- Assim, as equações para cálculo da $SQ_{Tot.}$ e $SQ_{Trat.}$ podem ser expressas de forma simplificada.
+- A letra "C" simboliza a expressão em comum.
+]
 ]
 
+.pull-down[
+.pull-left-10[
+```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot.png')
+```
 
+```{r, echo=FALSE, out.width='45%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-fator.png')
+```
+]
+
+.pull-right-10[
+```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat.png')
+```
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-fator.png')
+```
+]
+]
+
+--
+
+.pull-right-9[
+
+]
 
 ---
 
