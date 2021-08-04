@@ -484,8 +484,11 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Análise de variância - Quadro de experimentos em DIC
+### Análise de Variância - Quadro de experimentos em DIC
 <br>
+
+O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
+<br><br>
 
 .font80[
 ```{r echo=F, eval=T}
@@ -497,10 +500,10 @@ anova <- tibble("Fonte de variação" = c("Entre Tratamento",
                 "Graus de Liberdade" = c("I-1", 
                                         "I(J-1)", 
                                         "IJ-1"),
-                "Soma de Quadrados (SQ)" = c("SQT", 
+                "Soma de Quadrados (SQ)" = c("SQTrat.", 
                                         "SQR", 
-                                        "SQTot"),
-                "Quadrado Médio (QM)" = c("QMT = SQT/I-1", 
+                                        "SQTot."),
+                "Quadrado Médio (QM)" = c("QMT = SQTrat./I-1", 
                                         "QMR = SQR/I(J-1)", 
                                         "-"),
                 "Fcalculado" = c("QMT/QMR", 
@@ -513,7 +516,7 @@ anova <- tibble("Fonte de variação" = c("Entre Tratamento",
                 )
 
 anova %>%
-  kbl(caption = "Quadro de ANOVA de experimentos em DIC") %>%
+  kbl(caption = "") %>%
   kable_classic(full_width = F, html_font = "Cambria") %>%
   kable_styling(bootstrap_options = c("striped", "hover"))
 
@@ -521,6 +524,7 @@ anova %>%
 <br>
 
 .pull-left-4[
+.font80[
 **SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
 
 **SQR** = Soma de Quadrados de Resíduos
@@ -531,11 +535,12 @@ anova %>%
 
 **QMR** = Quadrado Médio de Resíduos
 ]
+]
 
 .pull-right-4[
-**I** = número de tratamentos
+*I* = número de tratamentos
 
-**J** = número de repetições
+*J* = número de repetições
 <br><br>
 
 .orange[**Quadrado Médio = Variância**]
@@ -644,6 +649,14 @@ A SQ<sub>Total</sub> fornece a variação total dos dados da variável resposta 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/SQTrat.png')
 ```
+<br>
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A SQ<sub>Trat.</sub> representa a variação entre tratamentos. Isto é, mede a variabilidade entre as médias dos tratamentos.
+- Quanto menor a diferença entre as médias dos tratamentos menor será a SQ<sub>Trat.</sub>.
+]
 
 <!--
 $$
@@ -753,6 +766,16 @@ $SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 
 ]
 ]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Estatística F-Snedecor
+
+Hipóteses estatísticas para o Teste “F de Snedecor “da ANOVA de um DIC.
 
 
 ---

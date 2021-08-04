@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7aba2df2f394db2a130ab90d57eb04d","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x6e8e78fe1ee4805999630dea9866866","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -449,12 +449,15 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Análise de variância - Quadro de experimentos em DIC
+### Análise de Variância - Quadro de experimentos em DIC
 &lt;br&gt;
+
+O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
+&lt;br&gt;&lt;br&gt;
 
 .font80[
 &lt;table class=" lightable-classic table table-striped table-hover" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;"&gt;
-&lt;caption&gt;Quadro de ANOVA de experimentos em DIC&lt;/caption&gt;
+&lt;caption&gt;&lt;/caption&gt;
  &lt;thead&gt;
   &lt;tr&gt;
    &lt;th style="text-align:left;"&gt; Fonte de variação &lt;/th&gt;
@@ -469,8 +472,8 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Entre Tratamento &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; I-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQT &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; QMT = SQT/I-1 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQTrat. &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; QMT = SQTrat./I-1 &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; QMT/QMR &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; F[(I-1); I(J-1)];α &lt;/td&gt;
   &lt;/tr&gt;
@@ -485,7 +488,7 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
   &lt;tr&gt;
    &lt;td style="text-align:left;"&gt; Total &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; IJ-1 &lt;/td&gt;
-   &lt;td style="text-align:left;"&gt; SQTot &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; SQTot. &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
    &lt;td style="text-align:left;"&gt; - &lt;/td&gt;
@@ -495,6 +498,7 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 &lt;br&gt;
 
 .pull-left-4[
+.font80[
 **SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
 
 **SQR** = Soma de Quadrados de Resíduos
@@ -505,11 +509,12 @@ Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo
 
 **QMR** = Quadrado Médio de Resíduos
 ]
+]
 
 .pull-right-4[
-**I** = número de tratamentos
+*I* = número de tratamentos
 
-**J** = número de repetições
+*J* = número de repetições
 &lt;br&gt;&lt;br&gt;
 
 .orange[**Quadrado Médio = Variância**]
@@ -612,6 +617,14 @@ A SQ&lt;sub&gt;Total&lt;/sub&gt; fornece a variação total dos dados da variáv
 &lt;br&gt;&lt;br&gt;
 
 &lt;img src="fig/class4/SQTrat.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A SQ&lt;sub&gt;Trat.&lt;/sub&gt; representa a variação entre tratamentos. Isto é, mede a variabilidade entre as médias dos tratamentos.
+- Quanto menor a diferença entre as médias dos tratamentos menor será a SQ&lt;sub&gt;Trat.&lt;/sub&gt;.
+]
 
 &lt;!--
 $$
@@ -713,6 +726,16 @@ Então,
 
 ]
 ]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Estatística F-Snedecor
+
+Hipóteses estatísticas para o Teste “F de Snedecor “da ANOVA de um DIC.
 
 
 ---
