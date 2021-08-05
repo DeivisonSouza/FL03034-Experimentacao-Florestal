@@ -847,7 +847,7 @@ Se o valor de “F calculado” for maior do que o valor do “F tabelado” (Fc
 .font90[
 **Não rejeição da hipótese de nulidade (H<sub>1</sub>)**
 
-- Se o valor da estatística F-calculada for menor ou igual do que o valor do F-tabelado (Fcal ≤ Ftab), não existe evidências para rejeitar hipótese de nulidade.
+- Se o valor da estatística F-calculada for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância estabelecido.
 <br><br>
 
