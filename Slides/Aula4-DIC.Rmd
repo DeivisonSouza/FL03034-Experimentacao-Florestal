@@ -864,6 +864,27 @@ $Não~~rejeita-se~~H_0$
 ]
 ]
 
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Rejeição da hipótese H<sub>0</sub> da estatística F
+<br>
+
+.font90[
+- Se o valor da Estatística F for maior do que o valor crítico da distribuição F têm-se a indicação de rejeição da hipótese de nulidade (H<sub>0</sub>).
+- Isto é, é razoável admitir que existem evidências de que as médias dos tratamentos **não são todas estatísticamente iguais entre si**.
+- Apesar disso, a estatística F não possibilita identificar quais tratamentos diferem significativamente entre si.
+- Portanto, fica a pergunta: .blue[Quais tratamentos diferem, estatisticamente, em termos de suas médias?]
+<br><br>
+
+**A reposta para essa pergunta são oferecidas por pós-testes de comparações de médias.**
+
+**Por exemplo, Teste de Tukey, Teste de Duncan, entre outros.**
+
+]
+
 
 ---
 <!--Slide XX -->
