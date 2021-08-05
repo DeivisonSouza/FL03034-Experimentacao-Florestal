@@ -784,6 +784,50 @@ $SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Hipóteses estatísticas do teste F
+<br>
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H<sub>0</sub>):**
+<br>
+
+- Todos os possíveis contrastes, entre médias, são estatisticamente nulos.
+- As médias dos tratamentos são estatisticamente todas iguais entre si.
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H<sub>1</sub>):**
+<br>
+
+- Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero.
+- Pelo menos dois tratamentos são estatisticamente diferentes entre si.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Teste das hipóteses da estatística F
+<br>
+
+**1° Passo**: Elaborar as hipóteses de nulidade (H<sub>0</sub>) e alternativa (H<sub>1</sub>);
+
+**2° Passo**: Calcular o valor da estatística F, usando os valores de Quadrados Médios da ANOVA;
+
+**3° Passo**: Fixar o nível de significância ( $\alpha$ ) e obter o valor de F por meio de tabela ( $F_{[(I-1); I (J-1)]}$; $\alpha$); e
+
+**4° Passo**: Comparar o valor da estatística F-calculada com o valor F- tabelado. Em seguida, concluir quanto à rejeição ou não da hipótese de nulidade (H<sub>0</sub>).
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
