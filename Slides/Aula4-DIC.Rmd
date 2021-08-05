@@ -885,6 +885,16 @@ $Não~~rejeita-se~~H_0$
 
 ]
 
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### Quadro de Anova - Pressuposições da ANOVA
+<br>
+
+
+
 
 ---
 <!--Slide XX -->
