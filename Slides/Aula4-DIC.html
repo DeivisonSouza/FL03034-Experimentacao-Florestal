@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x5e2a11f49e34385b9b751f4feae7eae","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xf9de0792c444eadbf7c29a3bf379d2a","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -96,7 +96,7 @@ top:.8em;right:-.5em;
 #### Faculdade de Engenharia Florestal
 #### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 04/agosto/2021
+##### 05/agosto/2021
 ##### Altamira, Pará
 
 ---
@@ -418,16 +418,18 @@ Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** rep
 
 ### Análise de Variância (ANOVA) - Conceito
 &lt;br&gt;
-
+.font90[
 É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
 &lt;br&gt;&lt;br&gt;
 
-**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ&lt;sub&gt;Tot.&lt;/sub&gt;) (NOGUEIRA, 2007).
+**Objetivo principal**: 
+- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
+- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
 &lt;br&gt;&lt;br&gt;
 
-Causas conhecidas = Fatores controlados = Tratamentos
-
-Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo)
+**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ&lt;sub&gt;Tot.&lt;/sub&gt;) (NOGUEIRA, 2007).
+]
 
 ---
 
@@ -706,10 +708,26 @@ Então,
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Quadro de Anova - Estatística F-Snedecor
+### Quadro de Anova - Estatística F na ANOVA DIC
 
-Hipóteses estatísticas para o Teste “F de Snedecor “da ANOVA de um DIC.
+.font80[
+- A **estatística F** é uma .blue[razão entre duas variâncias].
+- A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios].
+- Quadrado médio é simplesmente uma estimativa da variância populacional.
+- Na ANOVA de um fator em DIC a **estatística F** é a razão entre: `\(F = \dfrac{QM_{trat.}}{QMR}\)`
+- A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos).
 
+]
+
+&lt;br&gt;
+
+.pull-right-5[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre-se:**
+.font80[
+- Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média.
+- Maiores valores indicam maior dispersão dos dados em relação à sua média.
+]
+]
 
 ---
 

@@ -455,16 +455,18 @@ $y_1$, $y_2$, $y_3$,..., $y_I$ = Média aritmética dos valores da variável y<s
 
 ### Análise de Variância (ANOVA) - Conceito
 <br>
-
+.font90[
 É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
 <br><br>
 
-**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ<sub>Tot.</sub>) (NOGUEIRA, 2007).
+**Objetivo principal**: 
+- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
+- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
 <br><br>
 
-Causas conhecidas = Fatores controlados = Tratamentos
-
-Causas desconhecidas = Fatores não-controlados = Erro experimental (ou Resíduo)
+**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ<sub>Tot.</sub>) (NOGUEIRA, 2007).
+]
 
 ---
 
@@ -759,10 +761,26 @@ $SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Quadro de Anova - Estatística F-Snedecor
+### Quadro de Anova - Estatística F na ANOVA DIC
 
-Hipóteses estatísticas para o Teste “F de Snedecor “da ANOVA de um DIC.
+.font80[
+- A **estatística F** é uma .blue[razão entre duas variâncias].
+- A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios].
+- Quadrado médio é simplesmente uma estimativa da variância populacional.
+- Na ANOVA de um fator em DIC a **estatística F** é a razão entre: $F = \dfrac{QM_{trat.}}{QMR}$
+- A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos).
 
+]
+
+<br>
+
+.pull-right-5[
+`r anicon::faa("hand-point-right", animate="horizontal")` **Lembre-se:**
+.font80[
+- Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média.
+- Maiores valores indicam maior dispersão dos dados em relação à sua média.
+]
+]
 
 ---
 
