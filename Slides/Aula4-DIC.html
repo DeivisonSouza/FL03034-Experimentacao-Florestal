@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xfd06c15cd194fec802f6f02e7ca561f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"aa29c2d341694c58b58c59f250547aa1","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -786,7 +786,13 @@ Então,
 .font90[
 **Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
 
-Se o valor de “F calculado” for maior do que o valor do “F tabelado” (Fcal &gt; Ftab), então rejeita-se a hipótese de nulidade (H0), o que permite concluir que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância em que foi realizado o teste; [(𝛼=0,05;0,01)]
+- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F], existem evidências para rejeitar hipótese de nulidade.
+- Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância estabelecido.
+
+`\(F-calculado &gt; F-Crítico\)`
+
+`\(Rejeita-se~~H_0\)`
+
 ]
 ]
 
@@ -794,11 +800,13 @@ Se o valor de “F calculado” for maior do que o valor do “F tabelado” (Fc
 .font90[
 **Não rejeição da hipótese de nulidade (H&lt;sub&gt;1&lt;/sub&gt;)**
 
-- Se o valor da estatística F-calculada for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
+- Se o valor da estatística F for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância estabelecido.
 &lt;br&gt;&lt;br&gt;
 
-`\(F-calculado \leq F-tabelado ~~ \rightarrow ~~ Não~~rejeita-se~~H_0\)`
+`\(F-calculado \leq F-tabelado\)`
+
+`\(Não~~rejeita-se~~H_0\)`
 
 ]
 ]

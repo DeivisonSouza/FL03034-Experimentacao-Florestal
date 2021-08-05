@@ -839,7 +839,13 @@ $SQR$ = Soma de Quadrados de Resíduos (ou Erro)
 .font90[
 **Rejeição da hipótese de nulidade (H<sub>0</sub>)**
 
-Se o valor de “F calculado” for maior do que o valor do “F tabelado” (Fcal > Ftab), então rejeita-se a hipótese de nulidade (H0), o que permite concluir que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância em que foi realizado o teste; [(𝛼=0,05;0,01)]
+- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F], existem evidências para rejeitar hipótese de nulidade.
+- Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância estabelecido.
+
+$F-calculado > F-Crítico$
+
+$Rejeita-se~~H_0$
+
 ]
 ]
 
@@ -847,11 +853,13 @@ Se o valor de “F calculado” for maior do que o valor do “F tabelado” (Fc
 .font90[
 **Não rejeição da hipótese de nulidade (H<sub>1</sub>)**
 
-- Se o valor da estatística F-calculada for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
+- Se o valor da estatística F for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância estabelecido.
 <br><br>
 
-$F-calculado \leq F-tabelado ~~ \rightarrow ~~ Não~~rejeita-se~~H_0$
+$F-calculado \leq F-tabelado$
+
+$Não~~rejeita-se~~H_0$
 
 ]
 ]
