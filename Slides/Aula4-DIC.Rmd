@@ -893,8 +893,33 @@ $Não~~rejeita-se~~H_0$
 ### Quadro de Anova - Pressuposições da ANOVA
 <br>
 
+.pull-left-10[
+.font90[
+**1. Efeitos aditivos**
 
+Os efeitos do modelo devem ser aditivos.
 
+**2. Normalidade dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem ser normalmente distribuídos.
+]
+]
+
+.pull-left-10[
+.font90[
+**3. Independência dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem ser todos independentes.
+
+Esta suposição é, em geral, garantida por sorteio/casualização.
+
+**4. Homocedasticidade de variâncias dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância.
+
+A importância reside na validação do teste F e testes de comparações de médias.
+]
+]
 
 ---
 <!--Slide XX -->
