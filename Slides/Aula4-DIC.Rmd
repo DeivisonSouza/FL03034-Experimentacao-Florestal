@@ -1056,11 +1056,81 @@ df2 %>%
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+.font90[
+- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+- A resposta para esta pergunta será dada pela estatística F da ANOVA-DIC.
+<br>
+
+**Então, vamos construir o quadro da ANOVA.**
+]
+<br>
+
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/DIC-ANOVA.png')
+```
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
+<br><br>
+
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-GL.png')
+```
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**1º Passo**: Determinar as Somas de Quadrados.
+<br><br>
+
+.pull-left-10[
+- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
+<br><br>
+
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
+```
+
+]
+
+.pull-right-10[
+- **Soma de Quadrados de Tratamentos (SQ<sub>Trat.</sub>)**
+<br><br>
+
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```
+
+- **Soma de Quadrados de Resíduos (SQR)**
+
+.pull-right-5[
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+]
+
+]
+
+---
 
 
-
-
-
+---
 
 <!--Slide XX -->
 ---
