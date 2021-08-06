@@ -1098,7 +1098,7 @@ knitr::include_graphics('fig/class4/ANOVA-GL.png')
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**1º Passo**: Determinar as Somas de Quadrados.
+**2º Passo**: Determinar as Somas de Quadrados.
 <br><br>
 
 .pull-left-10[
@@ -1108,6 +1108,11 @@ knitr::include_graphics('fig/class4/ANOVA-GL.png')
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/SQTot-cor.png')
 ```
+<br>
+
+.font80[
+As equações de SQ<sub>Tot.</sub> e SQ<sub>Trat.</sub> possuem uma parte em comum denominada **Fator em Comum** (C). Inicialmente, é razoável calcular este fator.
+]
 
 ]
 
@@ -1129,6 +1134,41 @@ $\large SQR = SQ_{Tot.} - SQ_{Trat.}$
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
+<br><br>
+
+.pull-left-9[
+```{r tb2, echo=F, eval=T}
+df1 <- data %>% 
+  bind_rows(data %>%
+            summarise_if(is.numeric, funs(sum))) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`))
+
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
+]
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/Fator.png')
+```
+<br>
+
+$$
+\dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
+$$
+
+
+]
 
 ---
 
