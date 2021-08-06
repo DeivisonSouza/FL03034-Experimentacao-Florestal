@@ -93,18 +93,15 @@ BibOptions(check.entries = FALSE,
 ```
 
 ```{r customDT, echo=F}
-CustomDT <- function(data){
-  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
-                         style = "default",
-                         class = "display", width = '180px',
-                         caption = '',
-     options=list(pageLength = 20, dom = 't', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
-          "}")
-       ) 
-     )
+Customkbl <- function(data){
+  data %>%
+    kbl() %>%
+    kable_classic(full_width = F, html_font = "Cambria") %>% 
+  kable_paper(bootstrap_options = "striped", full_width = F) %>% 
+  kable_styling(bootstrap_options = "striped", font_size = 18, position = "center") %>% 
+  row_spec(1:4, color = 'black', background = 'white') %>% 
+  row_spec(0, color = 'white', background = 'black') %>% 
+  column_spec(1, color = 'white', background = 'black')
 }
 ```
 
@@ -962,20 +959,9 @@ b) Realizar a ANOVA do experimento em DIC.
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-```{r tibble, echo=F, eval=F}
+```{r tibble, echo=F, eval=T}
 data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
-
-data %>%   
-  kbl() %>%
-  kable_classic(full_width = F, html_font = "Cambria") %>% 
-  kable_paper(bootstrap_options = "striped", full_width = F) %>% 
-  kable_styling(bootstrap_options = "striped", font_size = 24, position = "center") %>% 
-  row_spec(1:4, color = 'black', background = 'white') %>% 
-  row_spec(0, color = 'white', background = 'black') %>% 
-  column_spec(1, color = 'white', background = 'black')
-```
-
-```{r ref.label="tibble", echo=FALSE, eval=TRUE, collapse=T}
+data %>% Customkbl
 ```
 
 ---
@@ -1007,8 +993,75 @@ data %>%
 ]
 ]
 
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+.font90[
+**Retornemos ao quadro de dados do experimento!**
+
+**Vamos inspecionar os valores observados de DAP para as diferentes progênies!**
+
+Pode-se constatar que os valores observados para DAP não são idênticos entre progênies e dentro de progênies.
+]
+<br>
+
+.pull-left-2[
+```{r t, echo=F, eval=T}
+data %>% Customkbl
+```
+]
+
+.pull-right-1[
+.font90[
+- Quais são as possíveis causas que explicam as variações nos valores observados?
+- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+]
+]
 
 ---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+
+Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias aritméticas] dos diâmetros para cada progênie.
+]
+
+```{r tb1, echo=F, eval=T}
+library(dplyr)
+data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+df1 <- data %>% 
+  bind_rows(data %>%
+            summarise_if(is.numeric, funs(sum))) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`))
+
+df2 <- df1 %>% 
+  bind_rows(df1[-5,]%>%
+            summarise_if(is.numeric, funs(mean))) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Média", `Rep./Prog.`))
+
+df2 %>% 
+  Customkbl %>% 
+  row_spec(5:6, color = 'white', background = 'orange')
+```
+
+---
+
+
+
+
+
+
+
 <!--Slide XX -->
 ---
 layout: false
