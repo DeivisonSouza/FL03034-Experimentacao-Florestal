@@ -1164,9 +1164,44 @@ knitr::include_graphics('fig/class4/Fator.png')
 <br>
 
 $$
-\dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
+C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
 $$
 
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb3, echo=F, eval=T}
+data %>% 
+  Customkbl
+```
+<br>
+
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
+\end{equation*}
+$$
+]
+
+.pull-right-9[
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
+```
+
+$$
+SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
+$$
 
 ]
 
