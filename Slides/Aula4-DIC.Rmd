@@ -101,7 +101,7 @@ CustomDT <- function(data){
      options=list(pageLength = 20, dom = 't', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
           "}")
        ) 
      )
@@ -221,8 +221,6 @@ background-size: cover
 layout: true
 <div class="my-header"></div>
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Delineamento Inteiramente Casualizado</div>
-
-
 
 ---
 
@@ -920,6 +918,95 @@ Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância.
 A importância reside na validação do teste F e testes de comparações de médias.
 ]
 ]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 2] <br> .white[Estudo de caso de <br> experimentos DIC]**] 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Delineamento Inteiramente Casualizado</div>
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+.font90[
+Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. Assim, pede-se:
+<br><br>
+
+a) Elaborar as hipóteses da estatística F da ANOVA.
+
+b) Realizar a ANOVA do experimento em DIC.
+]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+```{r tibble, echo=F, eval=F}
+data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+data %>%   
+  kbl() %>%
+  kable_classic(full_width = F, html_font = "Cambria") %>% 
+  kable_paper(bootstrap_options = "striped", full_width = F) %>% 
+  kable_styling(bootstrap_options = "striped", font_size = 24, position = "center") %>% 
+  row_spec(1:4, color = 'black', background = 'white') %>% 
+  row_spec(0, color = 'white', background = 'black') %>% 
+  column_spec(1, color = 'white', background = 'black')
+```
+
+```{r ref.label="tibble", echo=FALSE, eval=TRUE, collapse=T}
+```
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**Hipóteses da estatística F da ANOVA**
+<br>
+
+.pull-left-11[
+.font90[
+- Hipótese de nulidade (H<sub>0</sub>)
+<br>
+
+**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
+.pull-right-11[
+.font90[
+- Hipótese de alternativa (H<sub>1</sub>)
+<br>
+
+**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
 
 ---
 <!--Slide XX -->
