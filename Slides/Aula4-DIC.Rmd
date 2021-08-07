@@ -7,6 +7,7 @@ date:
 encoding: "UTF-8"
 header-includes: 
    - \usepackage{xcolor}
+   - \usepackage{amsmath}
 output:
   xaringan::moon_reader:
     css:
@@ -1041,13 +1042,15 @@ data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
 
 df1 <- data %>% 
   bind_rows(data %>%
-            summarise_if(is.numeric, funs(sum))) %>% 
-  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`))
+            summarise_if(is.numeric, sum)) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`)) %>% 
+  mutate_if(is.numeric, round, 1)
 
 df2 <- df1 %>% 
   bind_rows(df1[-5,]%>%
-            summarise_if(is.numeric, funs(mean))) %>% 
-  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Média", `Rep./Prog.`))
+            summarise_if(is.numeric, mean)) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Média", `Rep./Prog.`)) %>% 
+  mutate_if(is.numeric, round, 1)
 
 df2 %>% 
   Customkbl %>% 
@@ -1086,7 +1089,7 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 **1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
 <br><br>
 
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/ANOVA-GL.png')
 ```
 
@@ -1145,20 +1148,22 @@ $\large SQR = SQ_{Tot.} - SQ_{Trat.}$
 
 .pull-left-9[
 ```{r tb2, echo=F, eval=T}
-df1 <- data %>% 
-  bind_rows(data %>%
-            summarise_if(is.numeric, funs(sum))) %>% 
-  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`))
-
 df1 %>% 
   Customkbl %>% 
   row_spec(5, color = 'white', background = 'orange')
 ```
+
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
+\end{equation*}
+$$
+
 ]
 
 .pull-right-9[
 
-```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/Fator.png')
 ```
 <br>
@@ -1185,7 +1190,6 @@ $$
 data %>% 
   Customkbl
 ```
-<br>
 
 $$
 \begin{equation*}
@@ -1195,7 +1199,7 @@ $$
 ]
 
 .pull-right-9[
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/SQTot-cor.png')
 ```
 
@@ -1204,6 +1208,46 @@ SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
 $$
 
 ]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb4, echo=F, eval=T}
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
+
+$$
+\begin{equation*}
+\small
+\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
+\end{equation*}
+$$
+]
+
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```
+
+$$
+SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,9825
+$$
+
+]
+
 
 ---
 
