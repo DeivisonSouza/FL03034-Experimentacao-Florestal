@@ -1322,12 +1322,35 @@ $\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
 
 ## Delineamento Inteiramente Casualizado
 <br>
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
+<br><br>
+
+- O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas.
+- Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância $\alpha$.
+- Os níveis de significância ( $\alpha$ ) mais usuais são: 0,01 (1%) e 0,05 (5%).
+- Neste exemplo, admitir-se-á $\alpha = 0,01$ (ou 1%), conforme Pimentel-Gomes e Garcia (2002).
+- Encontre o F-crítico no site: [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**5º Passo**: Valor crítico da distribuição F para o nível de significância $\alpha$
+.font90[
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
 <br><br>
+
+.blue[**Vamos aprender a usar a tabela de distribuição F!**]
+]
 
 
 ---
