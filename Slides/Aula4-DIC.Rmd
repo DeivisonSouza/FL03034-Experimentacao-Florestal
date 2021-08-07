@@ -1268,6 +1268,24 @@ $\large SQR = 77,56$
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA]
+<br><br>
+
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-GL.png')
+```
+
+
+
+
+---
+
 <!--Slide XX -->
 ---
 layout: false
