@@ -1243,11 +1243,28 @@ knitr::include_graphics('fig/class4/SQTrat-cor.png')
 ```
 
 $$
-SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,9825
+SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
 $$
 
 ]
 
+---
+
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+<br><br>
+
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+
+$\large SQR = 238,54 - 160,98$
+
+$\large SQR = 77,56$
 
 ---
 
