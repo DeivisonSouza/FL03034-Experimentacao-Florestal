@@ -1278,7 +1278,7 @@ $\large SQR = 77,56$
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/ANOVA-GL.png')
+knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 ```
 
 
