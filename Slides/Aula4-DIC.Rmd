@@ -1289,7 +1289,7 @@ knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo]
+**3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo]
 <br><br>
 
 .pull-left-9[
@@ -1303,6 +1303,23 @@ $\normalsize QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{160,98}{10-1} = 17,89
 <br><br>
 $\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59$
 ]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**4º Passo**: Determinar a estatística F
+<br><br>
+
+
+$\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
+
+
+---
 
 
 ---
