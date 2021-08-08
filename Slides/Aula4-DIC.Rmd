@@ -94,6 +94,22 @@ BibOptions(check.entries = FALSE,
 ```
 
 ```{r customDT, echo=F}
+CustomDT <- function(data){
+  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
+                         style = "default",
+                         class = "display", width = '250px',
+                         caption = '',
+     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          "}")
+       ) 
+     )
+}
+```
+
+```{r customkbl, echo=F}
 Customkbl <- function(data){
   data %>%
     kbl() %>%
@@ -1505,19 +1521,116 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
 <br>
 
+.pull-left-9[
 **ANOVA fator único usando a linguagem R**
 <br><br>
 
-```{r echo=T, eval=T}
+.blue[**1- Ordenar dados no formato longo**]
+<br>
+
+```{r echo=T, eval=F}
 data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
 
+data_pivot <- data %>%
+  tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %>% 
+  rename(Repeticao = `Rep./Prog.`) %>% 
+  arrange(Progenie, Repeticao)
 ```
+
+
+```{r dt, echo=F, eval=F}
+data %>%
+    tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %>% 
+  rename(Repeticao = `Rep./Prog.`) %>% 
+  arrange(Progenie, Repeticao) %>% 
+  CustomDT
+```
+
+]
+
+.pull-right-9[
+```{r ref.label="dt", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+
 ]
 
 ---
 
-## Referências
+## Delineamento Inteiramente Casualizado
+<br>
 
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+.pull-left-9[
+**ANOVA fator único usando a linguagem R**
+<br><br>
+
+.blue[**2 - Realizar a ANOVA - Função aov()**]
+<br>
+
+```{r, echo=F,eval=TRUE}
+data_pivot <- data %>%
+  tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %>% 
+  rename(Repeticao = `Rep./Prog.`) %>% 
+  arrange(Progenie, Repeticao)
+```
+
+```{r aov2, echo=T, eval=T}
+# Realizar a análise de variância
+res.aov <- aov(Valor ~ Progenie, data = data_pivot)
+```
+
+```{r echo=T, eval=T}
+# Resumo da análise de variância
+summary(res.aov)
+```
+]
+]
+
+--
+
+.pull-right-9[
+.font80[
+.center[**Interpretação**]
+- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,05, existem
+evidências de diferenças significativas entre as médias de DAP das progênies.
+- Rejeita-se a hipótese de nulidade para $\alpha$ < 0,001 (altamente significativo).
+- Deve-se realizar pós-testes de comparações de médias.
+]
+]
+
+
+
+---
+
+## Referências
+<br><br>
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+<br><br>
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+<br><br>
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
 
 <!--Slide XX -->
 ---

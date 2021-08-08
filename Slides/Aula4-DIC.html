@@ -7,7 +7,7 @@
     <script src="Aula4-DIC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula4-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula4-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f24f0f8bd8b249aebfc70f919d962fdf","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xeeca5740d724e8692cf7095aacc0163","expires":1}</script>
     <script src="Aula4-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula4-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula4-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -20,6 +20,15 @@
     <script src="Aula4-DIC_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
     <script src="Aula4-DIC_files/kePrint-0.0.1/kePrint.js"></script>
     <link href="Aula4-DIC_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="Aula4-DIC_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="Aula4-DIC_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="Aula4-DIC_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="Aula4-DIC_files/datatables-binding-0.17/datatables.js"></script>
+    <link href="Aula4-DIC_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula4-DIC_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula4-DIC_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <link href="Aula4-DIC_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="Aula4-DIC_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -80,6 +89,8 @@ top:.8em;right:-.5em;
   document.addEventListener('DOMContentLoaded', addLogo)
 })()</script>
 </div>
+
+
 
 
 
@@ -1875,19 +1886,101 @@ qf(0.01, 9, 30, lower.tail=FALSE)
 ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
 &lt;br&gt;
 
+.pull-left-9[
 **ANOVA fator único usando a linguagem R**
 &lt;br&gt;&lt;br&gt;
+
+.blue[**1- Ordenar dados no formato longo**]
+&lt;br&gt;
 
 
 ```r
 data &lt;- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+data_pivot &lt;- data %&gt;%
+  tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %&gt;% 
+  rename(Repeticao = `Rep./Prog.`) %&gt;% 
+  arrange(Progenie, Repeticao)
 ```
+
+
+
+
+]
+
+.pull-right-9[
+<div id="htmlwidget-2481b2bc139efb8c7b06" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2481b2bc139efb8c7b06">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.2,8.4,9.3,9.2,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
 ]
 
 ---
 
-## Referências
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
 
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+.pull-left-9[
+**ANOVA fator único usando a linguagem R**
+&lt;br&gt;&lt;br&gt;
+
+.blue[**2 - Realizar a ANOVA - Função aov()**]
+&lt;br&gt;
+
+
+
+
+```r
+# Realizar a análise de variância
+res.aov &lt;- aov(Valor ~ Progenie, data = data_pivot)
+```
+
+
+```r
+# Resumo da análise de variância
+summary(res.aov)
+##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## Progenie     9 160.99  17.887   6.919 2.46e-05 ***
+## Residuals   30  77.56   2.585                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+]
+]
+
+--
+
+.pull-right-9[
+.font80[
+.center[**Interpretação**]
+- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(&gt;F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,05, existem
+evidências de diferenças significativas entre as médias de DAP das progênies.
+- Rejeita-se a hipótese de nulidade para `\(\alpha\)` &lt; 0,001 (altamente significativo).
+- Deve-se realizar pós-testes de comparações de médias.
+]
+]
+
+
+
+---
+
+## Referências
+&lt;br&gt;&lt;br&gt;
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+&lt;br&gt;&lt;br&gt;
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+&lt;br&gt;&lt;br&gt;
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
 
 &lt;!--Slide XX --&gt;
 ---
