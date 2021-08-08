@@ -74,7 +74,7 @@ div.my-footer span {
   Custom classes
 **************************/
 
-C {
+.pull-left-2 {
   float: left;
   width: 60%;
 }
