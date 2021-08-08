@@ -1351,14 +1351,26 @@ $\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
 .blue[**Vamos aprender a usar a tabela de distribuição F!**]
 - Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html)
 - O F-crítico para o experimento é: $F_{[9,~30;~0,01]} = 3,07$
+<br><br>
+
+**No R use a função qf() para encontrar o F-crítico**
+```{r, echo=T, eval=T}
+qf(0.01, 9, 30, lower.tail=FALSE)
+```
+
 ]
 
 .pull-right-9[
 .blue[**Bônus: Explore mais aplicativos...**]
-- Encontre o F-crítico no site: [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
-- Experimente esse site: [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
+- [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
+- [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
+- [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html)
 ]
 ]
+
+---
+
+
 
 
 ---
