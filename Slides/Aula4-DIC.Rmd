@@ -181,7 +181,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 * Conhecer e entender os princípios básicos de experimentos em DIC.
 * Compreender o modelo estatístico de experimentos em DIC.
 * Aprender a realizar a Análise de Variância (ANOVA) de experimentos em DIC, e entender seus pressupostos.
-* Aprender a construir o quadro de Análise de Variância de experimentos em DIC.
 * Realizar análise de experimentos em DIC usando a linguagem de programação R.
 ]
 
