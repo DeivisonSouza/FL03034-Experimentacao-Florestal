@@ -210,7 +210,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-right-4[
 .pull-down[
 .font80[
-**Parte 2 - Estudo de caso de experimentos DIC**
+**Parte 2 - Estudo de caso de experimentos em DIC**
 
 [1 - Competição de progênies (Pimentel-Gomes; Garcia, 2002)](#prog)
 
