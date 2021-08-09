@@ -1,0 +1,2162 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="Aula5-DBC_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="Aula5-DBC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="Aula5-DBC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x61db0ca71b149f2ac0c62dc8d166a31","expires":1}</script>
+    <script src="Aula5-DBC_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="Aula5-DBC_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="Aula5-DBC_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/editable-0.2.6/editable.js"></script>
+    <script src="Aula5-DBC_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Aula5-DBC_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="Aula5-DBC_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="Aula5-DBC_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Aula5-DBC_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="Aula5-DBC_files/plotly-binding-4.9.3/plotly.js"></script>
+    <script src="Aula5-DBC_files/typedarray-0.1/typedarray.min.js"></script>
+    <script src="Aula5-DBC_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="Aula5-DBC_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <link href="Aula5-DBC_files/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/plotly-main-1.57.1/plotly-latest.min.js"></script>
+    <link href="Aula5-DBC_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/datatables-binding-0.17/datatables.js"></script>
+    <link href="Aula5-DBC_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula5-DBC_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula5-DBC_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 140px;
+height: 140px;
+z-index: 0;
+background-image: url(fig/slide-title/ufpa.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:.8em;right:-.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+&lt;!-- title-slide --&gt;
+# Experimentação Florestal &lt;br&gt; (FL03034 - EF)
+
+## Delineamento em Blocos &lt;br&gt; Casualizados <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+
+#### **Prof. Dr. Deivison Venicio Souza**
+#### Universidade Federal do Pará (UFPA) 
+#### Faculdade de Engenharia Florestal
+#### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 09/agosto/2021
+##### Altamira, Pará
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Blocos Casualizados &lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+2 - Princípios básicos da experimentação; 
+
+3 - Fases da pesquisa experimental; 
+
+4 - Delineamento inteiramente casualizado - DIC; 
+
+.orange[5 - Delineamento em Blocos Casualizados - DBC];
+
+6 - Delineamento em quadrado latino - DQL;
+
+7 - Testes de comparação de médias; 
+
+8 - Ensaios Fatoriais;
+
+9 - Análise de correlação linear simples;
+
+10 - Análise de regressão linear simples e múltipla; e
+
+11 - Introdução à linguagem R para análise de experimentos.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+.font90[
+* Conhecer e entender os princípios básicos de experimentos em DBC.
+* Compreender o modelo estatístico de experimentos em DBC.
+* Aprender a realizar a Análise de Variância (ANOVA) de experimentos em DBC, e entender seus pressupostos.
+* Realizar análise de experimentos em DBC usando a linguagem de programação R.
+]
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font80[
+**Parte 1 - Delineamento em Blocos Casualizados**
+
+[1 - Delineamento experimental - Conceito](#de)
+
+[2 - Principais delineamentos experimentais](#pde)
+
+[3 - DBC - Conceito](#pde)
+
+[4 - DBC - Principais características](#dicpc)
+
+[5 - DBC - Vantagens e Desvantagens](#dicvl)
+
+[6 - DBC - Análise de Variância](#dicanova)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font80[
+**Parte 2 - Estudo de caso de experimentos em DBC**
+
+[1 - Competição de progênies (Pimentel-Gomes; Garcia, 2002)](#prog)
+
+&amp;nbsp;&amp;nbsp;[1.1 - ANOVA experimento em DIC - Fator único](#anvdic)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.1 - Graus de liberdade](#gl)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.2 - Somas de Quadrados](#sq)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.3 - Quadradados Médios](#qm)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.4 - Estatística F](#estF)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
+
+[2 - Anova no R](#anvR)
+
+
+&lt;!-- [3 - Pacote ExpDes.pt](#expdes) --&gt;
+
+]
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 1] &lt;br&gt; .white[Delineamento em Blocos &lt;br&gt; Casualizados]**] 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Blocos Casualizados&lt;/div&gt;
+
+---
+
+## Delineamento Experimental
+
+--
+
+&lt;br&gt;&lt;br&gt;
+.shadow1[
+&lt;br&gt;
+.center[**Conceito**]
+
+É o modo como os tratamentos são designados às unidade (ou parcelas) experimentais (DIAS; BARROS, 2009).
+
+(...) o modo de dispor as parcelas no ensaio (PIMENTEL-GOMES; GARCIA, 2009).
+]
+
+---
+
+## Delineamento Experimental
+&lt;br&gt;
+
+Os principais delineamentos experimentais utilizados são:
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-3[
+&lt;img src="fig/class1/img-PD.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right-3[
+
+.font90[
+A homogeneidade (ou não) das condições experimentais (ambientais ou biológicas) direciona para a escolha do delinemento experimental mais adequado.
+
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+
+&lt;br&gt;&lt;br&gt;
+.shadow1[
+&lt;br&gt;
+.center[**Conceito**]
+É quando os .orange[tratamentos] são designados às .orange[unidades experimentais] (ou parcelas) completamente ao acaso (por sorteio).
+]
+
+--
+&lt;br&gt;
+
+.font90[
+**Exemplos**
+- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
+- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em `\(H_2SO_4\)`). (*Bertholletia excelsa*)
+- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+
+&lt;br&gt;
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
+&lt;br&gt;&lt;br&gt;
+
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+&lt;img src="https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+&lt;img src="https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+## Delineamento em Blocos Casualizados
+
+&lt;br&gt;
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+&lt;br&gt;
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+&lt;img src="https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;&lt;div style='font-size:50%'&gt;(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)&lt;/div&gt;
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Principais características
+
+.pull-left-2[
+&lt;img src="fig/class4/DIC-C.png" width="110%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right-1[
+.font80[
+O DIC é recomendado quando pode ser dada **condições homogêneas (ou uniformes)** para todas as unidades experimentais.
+&lt;br&gt;&lt;br&gt;
+
+**Quais condições?**
+&lt;br&gt;
+Por exemplo, deve haver condições homogêneas para:
+
+- Material experimental
+- Condições ambientais
+- Tratos culturais
+- Qualquer operação realizada no experimento
+
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Vantagens e Desvantagens
+
+.pull-left-2[
+&lt;img src="fig/class4/DIC-V.png" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right-1[
+.font80[
+.blue[**Sobre as repetições...**]
+&lt;br&gt;&lt;br&gt;
+
+- O número de repetições pode variar de um tratamento para outro, seja intencionalmente (pela falta de UEs ou de material) ou por acidente/causa natural (ex.: morte da planta).
+- É desejável, sempre que possível, ter o mesmo número de repetições por tratamento.
+
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Representação genérica de valores
+
+.pull-left-9[
+.font90[
+Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
+]
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/DIC-Table.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-9[
+.font90[
+`\(T_1\)`, `\(T_2\)`, `\(T_3\)`,..., `\(T_I\)` = Soma dos valores da variável y&lt;sub&gt;ij&lt;/sub&gt; dentro do *i*-ésimo tratamento.
+&lt;br&gt;
+
+`\(y_1\)`, `\(y_2\)`, `\(y_3\)`,..., `\(y_I\)` = Média aritmética dos valores da variável y&lt;sub&gt;ij&lt;/sub&gt; dentro do *i*-ésimo tratamento.
+&lt;br&gt;&lt;br&gt;
+
+*I* = Número de tratamentos
+
+*J* = Número de repetições
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Análise de Variância (ANOVA) - Conceito
+&lt;br&gt;
+.font90[
+É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+&lt;br&gt;&lt;br&gt;
+
+**Objetivo principal**: 
+- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
+- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
+&lt;br&gt;&lt;br&gt;
+
+**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ&lt;sub&gt;Tot.&lt;/sub&gt;) (NOGUEIRA, 2007).
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Análise de variância - Perguntas
+
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+&lt;br&gt;&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de Variância - Quadro de experimentos em DIC
+&lt;br&gt;
+
+O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/DIC-ANOVA.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+.pull-left-8[
+.font70[
+**SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
+
+**SQR** = Soma de Quadrados de Resíduos
+
+**SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
+]
+]
+
+.pull-left-8[
+.font70[
+**QMT** = Quadrado Médio de Tratamentos
+
+**QMR** = Quadrado Médio de Resíduos
+]
+]
+
+.pull-left-8[
+.font70[
+*I* = número de tratamentos
+
+*J* = número de repetições
+&lt;br&gt;
+
+.orange[**Quadrado Médio = Variância**]
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Modelo Estatístico - DIC
+
+Toda análise de variância pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+`\(\Large Y_{ij} = m + t{_i} + e_{ij}\)`
+&lt;br&gt;&lt;br&gt;
+.font90[
+O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 partes: uma **constante**, o **efeito do tratamento** e a **variação não controlada** (STORCK et al., 2011).
+]
+]
+
+
+.pull-right-9[
+.font90[
+
+`\(Y_{ij}\)` = Valor observado da variável `\(y\)` na unidade experimental que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) na *j*-ésima repetição (*j* = 1, 2, ..., J).
+
+`\(m\)` = média geral, comum a todas as observações.
+
+`\(t_{i}\)` = É o efeito do tratamento *i*; e​
+
+`\(e_{ij}\)` = É a contribuição da variação não controlada referente à observação `\(Y_{ij}\)`.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Fórmulas
+
+.pull-left-9[
+- **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)**
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/SQTot.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+&lt;img src="fig/class4/SQTot2.png" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;!--
+$$
+\Large
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2
+$$
+--&gt;
+
+&lt;!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2
+$$
+--&gt;
+
+]
+
+.pull-right-9[
+.font90[
+*I* = número de tratamentos
+
+*J* = número de repetições
+
+`\(Y_{ij}\)` = valor observado da variável `\(Y\)` no *i*-ésimo tratamento da *j*-ésima repetição.
+]
+&lt;br&gt;
+
+$$
+\large
+SQ_{Total} = SQ_{Trat.} + SQR
+$$
+&lt;br&gt;
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A `\(SQ_{Total}\)` fornece a variação total dos dados da variável resposta no experimento.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Fórmulas
+
+.pull-left-9[
+- **Soma de Quadrados de Tratamentos (SQ&lt;sub&gt;Trat.&lt;/sub&gt;)**
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/SQTrat.png" width="80%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A SQ&lt;sub&gt;Trat.&lt;/sub&gt; representa a variação entre tratamentos. Isto é, mede a variabilidade entre as médias dos tratamentos.
+- Quanto menor a diferença entre as médias dos tratamentos menor será a SQ&lt;sub&gt;Trat.&lt;/sub&gt;.
+]
+
+&lt;!--
+$$
+SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2
+$$
+--&gt;
+
+
+]
+
+.pull-right-9[
+
+*I* = número de tratamentos
+
+*J* = número de repetições
+
+`\(Y_{ij}\)` = valor observado da variável `\(Y\)` no *i*-ésimo tratamento da *j*-ésima repetição.
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Fórmulas
+&lt;br&gt;
+.pull-top[
+**Fator em comum (C)**
+&lt;br&gt;
+.font90[
+- As equações para o cálculo da `\(SQ_{Tot.}\)` e `\(SQ_{Trat.}\)` possuem uma expressão matemática em comum.
+- Essa expressão é denominada **Fator em Comum**.
+- Assim, as equações para cálculo da `\(SQ_{Tot.}\)` e `\(SQ_{Trat.}\)` podem ser expressas de forma simplificada.
+- A letra "C" simboliza a expressão em comum.
+]
+]
+
+.pull-down[
+.pull-left-10[
+&lt;img src="fig/class4/SQTot-cor.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+&lt;!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - {\color{Orange} \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+--&gt;
+
+&lt;img src="fig/class4/SQTot-fator.png" width="35%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-10[
+&lt;img src="fig/class4/SQTrat-cor.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+&lt;!--
+$$
+SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2}
+$$
+--&gt;
+
+&lt;img src="fig/class4/SQTrat-fator.png" width="40%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Fórmulas
+
+- **Soma de Quadrados de Resíduos (SQR)** - (Ou erro experimental)
+
+.pull-left-10[
+.font90[
+Sabe-se que:
+&lt;br&gt;&lt;br&gt;
+
+`\(\large SQ_{Tot.} = SQ_{Trat.} + SQR\)`
+&lt;br&gt;&lt;br&gt;
+
+Então,
+&lt;br&gt;&lt;br&gt;
+
+`\(\large SQR = SQ_{Tot.} - SQ_{Trat.}\)`
+]
+]
+
+--
+
+.pull-right-10[
+.font90[
+
+`\(SQ_{Tot.}\)` = Soma de Quadrados Totais
+
+`\(SQ_{Trat.}\)` = Soma de Quadrados de Tratamentos
+
+`\(SQR\)` = Soma de Quadrados de Resíduos (ou Erro)
+
+&lt;br&gt;&lt;br&gt;
+
+.font80[
+**O que significa?** (Nogueira, 2007)
+
+- A SQR representa a variabilidade entre as repetições dentro de tratamentos. Isto é, mede a variabilidade dentro dos tratamentos.
+]
+
+
+]
+]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Estatística F na ANOVA DIC
+
+.font80[
+- A **estatística F** é uma .blue[razão entre duas variâncias].
+- A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios].
+- Quadrado médio é simplesmente uma estimativa da variância populacional.
+- Na ANOVA de um fator em DIC a **estatística F** é a razão entre: `\(F = \dfrac{QM_{trat.}}{QMR}\)`
+- A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos).
+
+]
+
+&lt;br&gt;
+
+.pull-right-5[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre-se:**
+.font80[
+- Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média.
+- Maiores valores indicam maior dispersão dos dados em relação à sua média.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Hipóteses estatísticas do teste F
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Todos os possíveis contrastes, entre médias, são estatisticamente nulos.
+- As médias dos tratamentos são estatisticamente todas iguais entre si.
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero.
+- Pelo menos dois tratamentos são estatisticamente diferentes entre si.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Teste das hipóteses da estatística F
+&lt;br&gt;
+
+**1° Passo**: Elaborar as hipóteses de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) e alternativa (H&lt;sub&gt;1&lt;/sub&gt;);
+
+**2° Passo**: Calcular o valor da estatística F, usando os valores de Quadrados Médios da ANOVA;
+
+**3° Passo**: Obter o valor crítico na tabela da distribuição F ( `\(F_{[(I-1); I (J-1)]}\)`; `\(\alpha\)`) para o nível de significância ( `\(\alpha\)` ) fixado; e
+
+**4° Passo**: Comparar o valor da estatística F-calculada com o valor F- tabelado. Em seguida, concluir quanto à rejeição ou não da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Regras de decisão da estatística F
+&lt;br&gt;
+
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
+
+- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F], existem evidências para rejeitar hipótese de nulidade.
+- Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância estabelecido.
+
+`\(F-calculado &gt; F-Crítico\)`
+
+`\(Rejeita-se~~H_0\)`
+
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade (H&lt;sub&gt;1&lt;/sub&gt;)**
+
+- Se o valor da estatística F for menor ou igual do que o valor do F-tabelado, não existe evidências para rejeitar hipótese de nulidade.
+- Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância estabelecido.
+&lt;br&gt;&lt;br&gt;
+
+`\(F-calculado \leq F-tabelado\)`
+
+`\(Não~~rejeita-se~~H_0\)`
+
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; da estatística F
+&lt;br&gt;
+
+.font90[
+- Se o valor da Estatística F for maior do que o valor crítico da distribuição F têm-se a indicação de rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
+- Isto é, é razoável admitir que existem evidências de que as médias dos tratamentos **não são todas estatísticamente iguais entre si**.
+- Apesar disso, a estatística F não possibilita identificar quais tratamentos diferem significativamente entre si.
+- Portanto, fica a pergunta: .blue[Quais tratamentos diferem, estatisticamente, em termos de suas médias?]
+&lt;br&gt;&lt;br&gt;
+
+**A reposta para essa pergunta são oferecidas por pós-testes de comparações de médias.**
+
+**Por exemplo, Teste de Tukey, Teste de Duncan, entre outros.**
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Quadro de Anova - Pressuposições da ANOVA
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**1. Efeitos aditivos**
+
+Os efeitos do modelo devem ser aditivos.
+
+**2. Normalidade dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem ser normalmente distribuídos.
+]
+]
+
+.pull-left-10[
+.font90[
+**3. Independência dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem ser todos independentes.
+
+Esta suposição é, em geral, garantida por sorteio/casualização.
+
+**4. Homocedasticidade de variâncias dos erros experimentais**
+
+Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância.
+
+A importância reside na validação do teste F e testes de comparações de médias.
+]
+]
+
+---
+
+layout: false
+name: prog
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 2] &lt;br&gt; .white[Estudo de caso de &lt;br&gt; experimentos DIC]**] 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento Inteiramente Casualizado&lt;/div&gt;
+
+---
+name: anvdic
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+.font90[
+Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. Assim, pede-se:
+&lt;br&gt;&lt;br&gt;
+
+a) Elaborar as hipóteses da estatística F da ANOVA.
+
+b) Realizar a ANOVA do experimento em DIC.
+]
+
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font80[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+]
+
+.font80[
+- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Progenie.
+]
+
+&lt;img src="Aula5-DBC_files/figure-html/unnamed-chunk-16-1.png" width="35%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font80[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+
+- **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
+]
+
+<div id="htmlwidget-6c665df24e518e2f0459" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6c665df24e518e2f0459">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.4,14.1,11.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.3,14.6,14.5,13.8],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(216,144,0,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.7,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.7,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(57,182,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,196,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.3,14.3,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.2,10.3,13.2,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(149,144,255,1)","width":1.88976377952756},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.6,9.5,8.5,9.4],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.2,8.4,9.3,9.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(255,98,188,1)","width":1.88976377952756},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.55,14.3,14.225,14.125,13,12.425,12.05,11.675,9,8.775],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":71.1996679119967},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.79,16.81],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"669645d187af":{"x":{},"y":{},"colour":{},"type":"box"},"6696591619e9":{"x":{},"y":{},"colour":{}}},"cur_data":"669645d187af","visdat":{"669645d187af":["function (y) ","x"],"6696591619e9":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**Hipóteses da estatística F da ANOVA**
+&lt;br&gt;
+
+.pull-left-11[
+.font90[
+- Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)
+&lt;br&gt;
+
+**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
+.pull-right-11[
+.font90[
+- Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;)
+&lt;br&gt;
+
+**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+.font90[
+**Retornemos ao quadro de dados do experimento!**
+
+**Vamos inspecionar os valores observados de DAP para as diferentes progênies!**
+
+Pode-se constatar que os valores observados para DAP não são idênticos entre progênies e dentro de progênies.
+]
+&lt;br&gt;
+
+.pull-left-2[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+.pull-right-1[
+.font90[
+- Quais são as possíveis causas que explicam as variações nos valores observados?
+- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+
+Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias aritméticas] dos diâmetros para cada progênie.
+]
+
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 58.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 57.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 52.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 49.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 48.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 46.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 36.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 35.1 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Média &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 12.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 12.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 9.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 8.8 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+.font90[
+- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+- A resposta para esta pergunta será dada pela estatística F da ANOVA-DIC.
+&lt;br&gt;
+
+**Então, vamos construir o quadro da ANOVA.**
+]
+&lt;br&gt;
+
+&lt;img src="fig/class4/DIC-ANOVA.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+name: gl
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/ANOVA-GL.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+name: sq
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados.
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-10[
+- **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)**
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/SQTot-cor.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+.font80[
+As equações de SQ&lt;sub&gt;Tot.&lt;/sub&gt; e SQ&lt;sub&gt;Trat.&lt;/sub&gt; possuem uma parte em comum denominada **Fator em Comum** (C). Inicialmente, é razoável calcular este fator.
+]
+
+]
+
+.pull-right-10[
+- **Soma de Quadrados de Tratamentos (SQ&lt;sub&gt;Trat.&lt;/sub&gt;)**
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/SQTrat-cor.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+- **Soma de Quadrados de Resíduos (SQR)**
+
+.pull-right-5[
+`\(\large SQR = SQ_{Tot.} - SQ_{Trat.}\)`
+]
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 58.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 57.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 52.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 49.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 48.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 46.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 36.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 35.1 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$
+`\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
+\end{equation*}`
+$$
+
+]
+
+.pull-right-9[
+
+&lt;img src="fig/class4/Fator.png" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
+
+$$
+C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ&lt;sub&gt;Tot.&lt;/sub&gt;]
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$
+`\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
+\end{equation*}`
+$$
+]
+
+.pull-right-9[
+&lt;img src="fig/class4/SQTot-cor.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+$$
+SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ&lt;sub&gt;Trat.&lt;/sub&gt;]
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 58.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 57.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 56.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 52.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 49.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 48.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 46.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 36.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 35.1 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$
+`\begin{equation*}
+\small
+\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
+\end{equation*}`
+$$
+]
+
+
+.pull-right-9[
+
+&lt;img src="fig/class4/SQTrat-cor.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+$$
+SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
+$$
+
+]
+
+---
+
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+&lt;br&gt;&lt;br&gt;
+
+`\(\large SQR = SQ_{Tot.} - SQ_{Trat.}\)`
+
+`\(\large SQR = 238,54 - 160,98\)`
+
+`\(\large SQR = 77,56\)`
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA]
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/ANOVA-SQ.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+name: qm
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo]
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+**Quadrado Médio de Tratamentos (Progênies) - Variância entre tratamentos**
+&lt;br&gt;&lt;br&gt;
+`\(\normalsize QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{160,98}{10-1} = 17,89\)`
+]
+
+.pull-right-9[
+**Quadrado Médio de Resíduos - Variância dentro de tratamentos**
+&lt;br&gt;&lt;br&gt;
+`\(\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59\)`
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA]
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/ANOVA-QM.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+---
+name: estF
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**4º Passo**: Determinar a estatística F
+&lt;br&gt;&lt;br&gt;
+
+
+`\(\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91\)`
+
+---
+name: fcrit
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância `\(\alpha\)`
+&lt;br&gt;&lt;br&gt;
+
+- O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas.
+- Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância `\(\alpha\)`.
+- Os níveis de significância ( `\(\alpha\)` ) mais usuais são: 0,01 (1%) e 0,05 (5%).
+- Neste exemplo, admitir-se-á `\(\alpha = 0,01\)` (ou 1%), conforme Pimentel-Gomes e Garcia (2002).
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância `\(\alpha\)`
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-9[
+.blue[**Vamos aprender a usar a tabela de distribuição F!**]
+- Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html)
+- O F-crítico para o experimento é: `\(F_{[9,~30;~0,01]} = 3,07\)`
+&lt;br&gt;&lt;br&gt;
+
+**No R use a função qf() para encontrar o F-crítico**
+
+```r
+qf(0.01, 9, 30, lower.tail=FALSE)
+## [1] 3.066516
+```
+
+]
+
+.pull-right-9[
+.blue[**Bônus: Explore mais aplicativos...**]
+- [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
+- [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
+- [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html)
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+**Finalmente, têm-se o quadro final da ANOVA de experimentos em DIC!**
+&lt;br&gt;&lt;br&gt;
+
+&lt;img src="fig/class4/ANOVA-Final.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+**Teste de Hipótese da ANOVA DIC - Conclusão**
+&lt;br&gt;
+]
+
+--
+
+.pull-top[
+.pull-left-11[
+.font80[
+- Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)
+&lt;br&gt;
+
+**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
+.pull-right-11[
+.font80[
+- Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;)
+&lt;br&gt;
+
+**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+]
+
+--
+
+.pull-down[
+.pull-left-10[
+&lt;br&gt;&lt;br&gt;
+`\(\large F_{Calculado}~&gt;~F_{Crítico}~=~6,91~&gt;~3,07\)`
+
+**Conclusão**: .blue[**Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;**]
+]
+
+.pull-right-10[
+
+.shadow3[
+.center[**Interpretação**]
+
+.font80[
+- Como `\(\large F_{Calculado}~&gt;~F_{Crítico}~(~6,91~&gt;~3,07)\)` rejeita-se a hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Progênies) diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+**O que fazer quando rejeita-se a hipótese de nulidade?**
+&lt;br&gt;
+
+- Deve-se realizar pós-testes de comparações múltiplas de médias.
+- Os testes paramétricos mais famosos são: Tukey, Duncan, Dunnett, etc.
+- Esses testes realizam comparações par-a-par entre as médias dos tratamentos.
+]
+&lt;br&gt;&lt;br&gt;
+
+
+.center[.blue[**Mas, isso é tema para as próximas aulas!**]]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+.pull-left-9[
+**ANOVA fator único usando a linguagem R**
+&lt;br&gt;&lt;br&gt;
+
+.blue[**1- Ordenar dados no formato longo**]
+&lt;br&gt;
+
+
+```r
+data &lt;- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+data_pivot &lt;- data %&gt;%
+  tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %&gt;% 
+  rename(Repeticao = `Rep./Prog.`) %&gt;% 
+  arrange(Progenie, Repeticao)
+```
+
+
+
+
+]
+
+.pull-right-9[
+<div id="htmlwidget-20537cd10cebeee5a613" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-20537cd10cebeee5a613">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.2,8.4,9.3,9.2,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+&lt;br&gt;
+
+.pull-left-9[
+**ANOVA fator único usando a linguagem R**
+&lt;br&gt;&lt;br&gt;
+
+.blue[**2 - Realizar a ANOVA - Função aov()**]
+&lt;br&gt;
+
+
+
+
+```r
+# Realizar a análise de variância
+res.aov &lt;- aov(Valor ~ Progenie, data = data_pivot)
+```
+
+
+```r
+# Resumo da análise de variância
+summary(res.aov)
+##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## Progenie     9 160.99  17.887   6.919 2.46e-05 ***
+## Residuals   30  77.56   2.585                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+]
+]
+
+--
+
+.pull-right-9[
+.shadow3[
+.font80[
+.center[**Interpretação**]
+- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(&gt;F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,05, existem
+evidências de diferenças significativas entre as médias de DAP das progênies.
+- Rejeita-se a hipótese de nulidade para `\(\alpha\)` &lt; 0,001 (altamente significativo).
+- Deve-se realizar pós-testes de comparações de médias.
+]
+]
+]
+
+---
+
+## Referências
+&lt;br&gt;&lt;br&gt;
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+&lt;br&gt;&lt;br&gt;
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+&lt;br&gt;&lt;br&gt;
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+
+&lt;!--Slide XX --&gt;
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+**Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt;
+
+**Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
