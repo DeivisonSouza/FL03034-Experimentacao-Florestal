@@ -1003,6 +1003,73 @@ data %>% Customkbl
 ## Delineamento Inteiramente Casualizado
 <br>
 
+.font80[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+]
+
+.font80[
+- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Progenie.
+]
+
+```{r echo=F, eval=T, collapse=T, out.width="35%", fig.align='center', fig.cap='', dpi=600}
+
+df <- data %>%
+  tidyr::pivot_longer(
+        cols = starts_with("P"),
+        names_to = "Progenie",
+        values_to = "Valor",
+        names_transform = list(Progenie = as.factor),
+        values_drop_na = TRUE
+    ) %>%
+  rename(Repeticao = `Rep./Prog.`) %>% 
+  mutate(Progenie = forcats::fct_reorder(
+    Progenie, 
+    desc(Valor), 
+    .fun='mean')
+    )
+
+df %>%
+  ggplot(aes(x=Progenie, y=Valor, fill=Progenie)) + 
+  geom_dotplot(binaxis='y', stackdir='center') +
+  stat_summary(fun.y=mean, geom="point", shape=18,
+                 size=6, color="red") +
+  theme_bw(base_size = 18) +
+  theme(panel.grid = element_blank(),
+        legend.position="none"
+        )
+```
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+.font80[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+
+- **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
+]
+
+```{r echo=F, eval=T, collapse=T, fig.align='center', fig.cap='', dpi=600, fig.width=1, fig.height=.6}
+
+bp <- df %>%
+  ggplot(aes(x=Progenie, y=Valor, color=Progenie)) +
+  geom_boxplot() +
+  stat_summary(fun.y=mean, geom="point", shape=4,
+                 size=2, color="red") +
+  theme_bw(base_size = 16) +
+  theme(panel.grid = element_blank(),
+        legend.position="none"
+        )
+
+plotly::ggplotly(bp)
+```
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
@@ -1611,6 +1678,7 @@ summary(res.aov)
 --
 
 .pull-right-9[
+.shadow3[
 .font80[
 .center[**Interpretação**]
 - A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,05, existem
@@ -1619,8 +1687,7 @@ evidências de diferenças significativas entre as médias de DAP das progênies
 - Deve-se realizar pós-testes de comparações de médias.
 ]
 ]
-
-
+]
 
 ---
 
