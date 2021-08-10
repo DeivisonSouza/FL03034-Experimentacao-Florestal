@@ -214,7 +214,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [1 - Competição de progênies (Pimentel-Gomes; Garcia, 2002)](#prog)
 
-&nbsp;&nbsp;[1.1 - ANOVA experimento em DIC - Fator único](#anvdic)
+&nbsp;&nbsp;[1.1 - ANOVA para experimento em DBC - Fator único](#anvdic)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.1 - Graus de liberdade](#gl)
 
@@ -295,26 +295,87 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 ---
 
 ## Delineamento em Blocos Casualizados
-
-<br><br>
-.shadow1[
 <br>
-.center[**Conceito**]
-- É usado quando existe **uma fonte de variação** (ex.: Fertilidade do Solo) que deseja-se controlar.
-- Assim, as unidades experimentais são subdivididas em grupos menores e homogêneos para o fator de controle. 
+
+### Conceito
+
+.font80[
+- É o tipo de delineamento experimental indicado quando existe uma .blue[**causa (ou fonte de variação)**] que deseja-se .blue[**controlar**] no no experimento.
+- Essas fontes de variações, em experimentos de campo, podem ser: .blue[**Fertilidade do solo, gradiente de umidade**], etc.
 ]
+<br>
 
 --
-<br>
 
-.font90[
-**Exemplos**
-- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
-- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em $H_2SO_4$). (*Bertholletia excelsa*)
-- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
+.font80[
+**Mas, porque é importante controlar essa fonte de variação adicional?**
+
+- A ideia principal é .blue[**evidenciar os efeitos dos tratamentos**] na variável resposta.
+- Não controlar essa fonte de variação (adicional e reconhecida) pode .blue[**mascarar os resultados**] e conduzir à interpretações equivocadas. 
+- Por exemplo, em um experimento de competição de progênies implantado em região com gradiente de fertilidade de solo, a maior média de crescimento em DAP para determinada progênie pode estar relacionada ao fato de seus indivíduos estarem estabelecidos na região de maior fertilidade do solo.
+
 ]
 
 ---
+
+## Delineamento em Blocos Casualizados
+
+.pull-left-5[
+.font80[
+### Croqui de experimento em DBC - Rossetti et al. (2017)
+<br><br>
+
+Croqui de um experimento em blocos casualizados, com 5 blocos
+retangulares, 4 tratamentos e 4 plantas úteis por parcela quadrada, sem
+bordadura entre parcelas e nem no contorno do experimento (pg. 40)
+
+]
+]
+
+.pull-right-5[
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class5/croqui1.png")
+```
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+
+.pull-left-5[
+.font80[
+### Croqui de experimento em DBC - Rossetti et al. (2017)
+<br><br>
+
+Croqui de um experimento em blocos casualizados com bordadura
+de contorno, 5 blocos, 4 tratamentos, parcela quadrada de 4 plantas úteis, sem
+bordadura entre elas, instalado em áreas antes utilizadas com adubação, com
+herbicida, em pousio e recém-desmatada (pg. 53).
+
+]
+]
+
+.pull-right-5[
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class5/croqui2.png")
+```
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+<br>
+
+### Controle Local
+<br>
+.blue[**diminuir a heterogeneidade**] da área experimental.
+- Assim, as unidades experimentais são **subdivididas em grupos menores** e homogêneos para o fator de controle. 
+- Estes grupos homogêneos são denominados de **blocos**.
+- Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
+
+---
+
+
 
 ## Delineamento em Blocos Casualizados
 
@@ -1698,6 +1759,8 @@ DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 
 NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
 <br><br>
 PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+<br><br>
+ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... & BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p.
 
 <!--Slide XX -->
 ---
