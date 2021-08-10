@@ -468,57 +468,11 @@ knitr::include_graphics("fig/class5/croqui2.png")
 <br>
 
 ### Principais características
-
-.pull-left-2[
-```{r, echo=FALSE, out.width='110%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-C.png')
-```
-]
-
---
-
-.pull-right-1[
-.font80[
-O DIC é recomendado quando pode ser dada **condições homogêneas (ou uniformes)** para todas as unidades experimentais.
-<br><br>
-
-**Quais condições?**
-<br>
-Por exemplo, deve haver condições homogêneas para:
-
-- Material experimental
-- Condições ambientais
-- Tratos culturais
-- Qualquer operação realizada no experimento
-
-]
-]
-
----
-
-## Delineamento em Blocos Casualizados
 <br>
 
-### Vantagens e Desvantagens
-
-.pull-left-2[
-```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-V.png')
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class5/DBC-C.png')
 ```
-]
-
---
-
-.pull-right-1[
-.font80[
-.blue[**Sobre as repetições...**]
-<br><br>
-
-- O número de repetições pode variar de um tratamento para outro, seja intencionalmente (pela falta de UEs ou de material) ou por acidente/causa natural (ex.: morte da planta).
-- É desejável, sempre que possível, ter o mesmo número de repetições por tratamento.
-
-]
-]
 
 ---
 
