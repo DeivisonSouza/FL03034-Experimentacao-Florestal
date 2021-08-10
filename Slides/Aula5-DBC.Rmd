@@ -300,7 +300,8 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 .shadow1[
 <br>
 .center[**Conceito**]
-É quando os .orange[tratamentos] são designados às .orange[unidades experimentais] (ou parcelas) completamente ao acaso (por sorteio).
+- É usado quando existe **uma fonte de variação** (ex.: Fertilidade do Solo) que deseja-se controlar.
+- Assim, as unidades experimentais são subdivididas em grupos menores e homogêneos para o fator de controle. 
 ]
 
 --
