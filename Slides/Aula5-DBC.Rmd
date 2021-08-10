@@ -270,6 +270,78 @@ layout: true
 
 ---
 
+## Delineamento em Blocos Casualizados
+
+<br>
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
+<br><br>
+
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif")
+```
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif")
+```
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+
+<br>
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+<br>
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
+```
+<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
+
+---
+
 ## Delineamento Experimental
 <br>
 
@@ -311,10 +383,39 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 **Mas, porque é importante controlar essa fonte de variação adicional?**
 
 - A ideia principal é .blue[**evidenciar os efeitos dos tratamentos**] na variável resposta.
-- Não controlar essa fonte de variação (adicional e reconhecida) pode .blue[**mascarar os resultados**] e conduzir à interpretações equivocadas. 
+- Não controlar essa fonte de variação (adicional e reconhecida) pode .blue[**mascarar as diferenças entre os tratamentos**] e conduzir à interpretações equivocadas. 
 - Por exemplo, em um experimento de competição de progênies implantado em região com gradiente de fertilidade de solo, a maior média de crescimento em DAP para determinada progênie pode estar relacionada ao fato de seus indivíduos estarem estabelecidos na região de maior fertilidade do solo.
 
 ]
+
+---
+
+## Delineamento em Blocos Casualizados
+<br>
+
+### Controle Local (CL)
+<br>
+
+.font90[
+- É um princípio básico da experimentação.
+- O CL é uma estratégia para .blue[**diminuir o efeito da heterogeneidade**] da área experimental sobre os tratamentos.
+- Na prática, o CL consite na .blue[**formação de grupos de parcelas o mais homogêneos possível**] para o fator de controle.
+- Estes grupos homogêneos são denominados de .blue[**blocos**].
+- Os .blue[**tratamentos são sorteados**] às unidades experimentais (ou parcelas) .blue[**dentro de cada bloco**].
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+<br>
+
+### Princípios básicos
+
+O DBC utiliza-se dos 3 princípios básicos da experimentação:
+
+```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/PBE.png')
+```
 
 ---
 
@@ -359,93 +460,6 @@ herbicida, em pousio e recém-desmatada (pg. 53).
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("fig/class5/croqui2.png")
 ```
-]
-
----
-
-## Delineamento em Blocos Casualizados
-<br>
-
-### Controle Local
-<br>
-.blue[**diminuir a heterogeneidade**] da área experimental.
-- Assim, as unidades experimentais são **subdivididas em grupos menores** e homogêneos para o fator de controle. 
-- Estes grupos homogêneos são denominados de **blocos**.
-- Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
-
----
-
-
-
-## Delineamento em Blocos Casualizados
-
-<br>
-### Unidade Experimental (ou Parcela)
-
---
-.font90[
-É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
-<br><br>
-
-**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
-Tamanhos: 200 e 250m² são bastante comuns.
-
-**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
-
-**Laboratório**: parcela pode ser: placa de petri.
-]
-
-
-.pull-left-4[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif")
-```
-]
-
-.pull-right-4[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif")
-```
-]
-
-
----
-
-## Delineamento em Blocos Casualizados
-
-<br>
-
-### Tratamento
-
---
-.font80[
-É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
-<br>
-Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
-]
-
-.pull-left-4[
-```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
-```
-<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
-]
-
---
-
-.pull-right-4[
-.font80[
-**Experimentos de campo**
-
-- Formas de preparo do solo
-- Diferentes doses de adubação
-- Diferentes espaçamentos
-
-**Casa de vegetação**
-- Diferentes tipos de substratos
-- Diferentes níveis de sobreamento
-- Diferentes tipos de recipientes
-]
 ]
 
 ---
