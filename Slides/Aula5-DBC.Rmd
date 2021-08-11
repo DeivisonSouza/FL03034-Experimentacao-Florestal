@@ -491,6 +491,31 @@ knitr::include_graphics("fig/class5/croqui2.png")
 ```
 ]
 
+
+---
+
+## Delineamento em Blocos Casualizados
+
+.pull-left-5[
+.font80[
+### Uma aplicação -  Marty et al. (2019)
+<br><br>
+
+**Periódico**: Plos One
+
+**Título**: Lowbush blueberry fruit yield and growth response to inorganic and organic N- fertilization when competing with two common weed species.
+
+**Fonte**: [Marty et al. (2019)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0226619)
+]
+]
+<br><br>
+
+.pull-right-5[
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class5/block-ex.png")
+```
+]
+
 ---
 
 ## Delineamento em Blocos Casualizados
@@ -573,16 +598,30 @@ y<sub>ij</sub> = representa cada dado da variável resposta y do *i*-ésimo trat
 ## Delineamento em Blocos Casualizados
 <br>
 
+### Fontes de Variação no DBC
+<br><br>
+
+$$
+\normalsize
+Variação~Total = \color{green}{Efeito~de~Tratamentos} + \color{blue}{Efeitos~de~Blocos} + \color{red}{Erro~Experimental}
+$$
+
+---
+
+## Delineamento em Blocos Casualizados
+<br>
+
 ### Análise de Variância - Perguntas
 <br>
 
 .pull-left-2[
 .font90[
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
 
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
 
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)? 
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre blocos**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)?
+
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
 ]
 ]
 
@@ -594,16 +633,6 @@ Por exemplo, o quanto da variação na variável resposta y é devido aos efeito
 ]
 ]
 ]
-
----
-
-## Delineamento em Blocos Casualizados
-<br>
-
-### Fontes de Variação no DBC
-
-
-
 
 ---
 
