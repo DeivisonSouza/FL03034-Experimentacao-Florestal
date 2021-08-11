@@ -77,9 +77,9 @@ BibOptions(check.entries = FALSE,
 ## Introdução à Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 <br>
 #### **Prof. Dr. Deivison Venicio Souza**
-#### Universidade Federal do Pará (UFPA) 
-#### Faculdade de Engenharia Florestal
-#### E-mail: deivisonvs@ufpa.br
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
 <br>
 ##### `r format(Sys.Date(),"%d/%B/%Y")`
 ##### Altamira, Pará
