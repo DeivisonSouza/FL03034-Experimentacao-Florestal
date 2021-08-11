@@ -202,7 +202,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [5 - Princípios básicos](#pb)
 
-[6 - Croqui de experimento em DBC](#croqui)
+[6 - Croqui de experimento em DBC - Exemplo](#croqui)
 
 [7 - Principais características](#carac)
 
@@ -211,6 +211,8 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [9 - Análise de Variância - ANOVA](#dbcanova)
 
 [10 - Modelo Estatístico](#dbcmodelo)
+
+[11 - Somas de Quadrados - Fórmulas](#sq)
 
 ]
 ]
@@ -726,7 +728,7 @@ $e_{ij}$ = É erro aleatório atribuído ao dado y<sub>ij</sub> da variável res
 ]
 
 ---
-
+name: sq
 ## Delineamento Inteiramente Casualizado
 <br>
 
