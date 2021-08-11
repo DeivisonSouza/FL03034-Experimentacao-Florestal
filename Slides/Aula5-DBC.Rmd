@@ -636,22 +636,21 @@ Por exemplo, o quanto da variação na variável resposta y é devido aos efeito
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### Análise de Variância - Quadro de experimentos em DBC
 <br>
 
-O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DBC.
-<br><br>
-
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-ANOVA.png')
+knitr::include_graphics('fig/class5/DBC-ANOVA.png')
 ```
 
 .pull-left-8[
 .font70[
 **SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
+
+**SQB** = Soma de Quadrados de Blocos
 
 **SQR** = Soma de Quadrados de Resíduos
 
@@ -669,44 +668,52 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 
 .pull-left-8[
 .font70[
-*I* = número de tratamentos
+$I$ = número de tratamentos
 
-*J* = número de repetições
+$J$ = número de repetições
 <br>
 
-.orange[**Quadrado Médio = Variância**]
+$\alpha$ = nível de significância (0,01 ou 0,05).
 ]
 ]
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-### Modelo Estatístico - DIC
+### Modelo Estatístico - DBC
 
-Toda análise de variância pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​
+Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DBC é:
 <br><br>
 
 .pull-left-9[
-$\Large Y_{ij} = m + t{_i} + e_{ij}$
-<br><br>
+.shadow3C[
+y<sub>ij</sub> $= m + t{_i} + b{_j} + e_{ij}$
+]
+
+<br>
 .font90[
-O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 partes: uma **constante**, o **efeito do tratamento** e a **variação não controlada** (STORCK et al., 2011).
+Com i = 1, 2, ..., I e j = 1, 2, ..., J
+]
+
+<br><br>
+.font80[
+y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J).
 ]
 ]
 
 
 .pull-right-9[
-.font90[
+.font80[
 
-$Y_{ij}$ = Valor observado da variável $y$ na unidade experimental que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) na *j*-ésima repetição (*j* = 1, 2, ..., J).
+$m$ = Uma constante. Representa a média geral.
 
-$m$ = média geral, comum a todas as observações.
+$t_{i}$ = É o efeito do *i*-ésimo tratamento no valor y<sub>ij</sub> da variável resposta;
 
-$t_{i}$ = É o efeito do tratamento *i*; e​
+$b_{i}$ = É o efeito do *j*-ésimo bloco no valor y<sub>ij</sub> da variável resposta; e
 
-$e_{ij}$ = É a contribuição da variação não controlada referente à observação $Y_{ij}$.
+$e_{ij}$ = É erro aleatório atribuído ao dado y<sub>ij</sub> da variável resposta.
 ]
 ]
 
