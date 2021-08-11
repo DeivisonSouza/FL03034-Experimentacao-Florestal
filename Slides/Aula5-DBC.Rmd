@@ -639,10 +639,10 @@ Por exemplo, o quanto da variação na variável resposta y é devido aos efeito
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Análise de Variância - Quadro de experimentos em DIC
+### Análise de Variância - Quadro de experimentos em DBC
 <br>
 
-O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
+O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DBC.
 <br><br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
