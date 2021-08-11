@@ -196,13 +196,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [2 - Principais delineamentos experimentais](#pde)
 
-[3 - DBC - Conceito](#pde)
+[3 - Fonte de variação adicional](#fv)
 
-[4 - DBC - Principais características](#dicpc)
+[4 - Controle Local](#cl)
 
-[5 - DBC - Vantagens e Desvantagens](#dicvl)
+[5 - Princípios básicos](#pb)
 
-[6 - DBC - Análise de Variância](#dicanova)
+[6 - Croqui de experimento em DBC](#croqui)
+
+[7 - Principais características](#carac)
+
+[8 - Representação genérica de tabela de dados](#tb)
+
+[9 - Análise de Variância - ANOVA](#dbcanova)
+
+[10 - Modelo Estatístico](#dbcmodelo)
 
 ]
 ]
@@ -253,7 +261,7 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Blocos Casualizados</div>
 
 ---
-
+name: de
 ## Delineamento Experimental
 
 --
@@ -341,7 +349,7 @@ knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.
 ]
 
 ---
-
+name: pde
 ## Delineamento Experimental
 <br>
 
@@ -381,7 +389,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 
 
 ---
-
+name: fv
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -412,7 +420,7 @@ Um experimento de competição de progênies foi implantado em região com gradi
 ]
 
 ---
-
+name: cl
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -432,7 +440,7 @@ Um experimento de competição de progênies foi implantado em região com gradi
 ]
 
 ---
-
+name: pb
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -447,7 +455,7 @@ knitr::include_graphics('fig/class1/PBE.png')
 ```
 
 ---
-
+name: croqui
 ## Delineamento em Blocos Casualizados
 
 .pull-left-5[
@@ -517,7 +525,7 @@ knitr::include_graphics("fig/class5/block-ex.png")
 ]
 
 ---
-
+name: carac
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -529,11 +537,11 @@ knitr::include_graphics('fig/class5/DBC-C.png')
 ```
 
 ---
-
+name: tb
 ## Delineamento em Blocos Casualizados
 <br>
 
-### Representação genérica de valores
+### Representação genérica de tabela de dados
 
 .pull-left-9[
 .font90[
@@ -571,7 +579,7 @@ y<sub>ij</sub> = representa cada dado da variável resposta y do *i*-ésimo trat
 ]
 
 ---
-
+name: dbcanova
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -678,7 +686,7 @@ $\alpha$ = nível de significância (0,01 ou 0,05).
 ]
 
 ---
-
+name: dbcmodelo
 ## Delineamento em Blocos Casualizados
 <br>
 
