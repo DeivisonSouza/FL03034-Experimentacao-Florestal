@@ -7,7 +7,7 @@
     <script src="Aula5-DBC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula5-DBC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula5-DBC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xc7e1640859046f69ebf26b4ae7e0946","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b4aecabe82cc42bab43f45f91a981a70","expires":1}</script>
     <script src="Aula5-DBC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula5-DBC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula5-DBC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -341,23 +341,46 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
-### Conceito
+### Considerações gerais
 
-.font80[
-- É o tipo de delineamento experimental indicado quando existe uma .blue[**causa (ou fonte de variação)**] que deseja-se .blue[**controlar**] no no experimento.
-- Essas fontes de variações, em experimentos de campo, podem ser: .blue[**Fertilidade do solo, gradiente de umidade**], etc.
+.pull-left-3[
+.font90[
+- É o tipo de delineamento experimental indicado quando existe uma .blue[causa (ou fonte de variação)] que deseja-se .blue[controlar] no experimento.
+- Essas fontes de variações, em experimentos de campo, podem ser: .blue[Fertilidade do solo, gradiente de umidade], etc.
+- É o delineamento mais usado nas ciências agrárias, especialmente em experimentos de campo.
 ]
+]
+
+
+---
+
+## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
---
+### Controle da fonte de variação adicional
+&lt;br&gt;
 
+.pull-left-9[
 .font80[
 **Mas, porque é importante controlar essa fonte de variação adicional?**
 
-- A ideia principal é .blue[**evidenciar os efeitos dos tratamentos**] na variável resposta.
-- Não controlar essa fonte de variação (adicional e reconhecida) pode .blue[**mascarar as diferenças entre os tratamentos**] e conduzir à interpretações equivocadas. 
-- Por exemplo, em um experimento de competição de progênies implantado em região com gradiente de fertilidade de solo, a maior média de crescimento em DAP para determinada progênie pode estar relacionada ao fato de seus indivíduos estarem estabelecidos na região de maior fertilidade do solo.
+- A ideia principal é .blue[evidenciar os efeitos dos tratamentos] nos dados da variável resposta.
+- Não controlar essa fonte de variação (adicional e reconhecida) pode .blue[mascarar as diferenças entre os tratamentos] e conduzir o pesquisador à conclusões equivocadas.
+- Fazendo-se isso também o erro experimental diminui e a precisão do experimento aumenta.
+]
+]
 
+--
+
+.pull-down[
+.pull-right-9[
+.shadow3[
+.font70[
+.center[**Imagine a situação...**]
+Um experimento de competição de progênies foi implantado em região com gradiente de fertilidade de solo com 6 tratamentos (progênies) e 4 blocos. Considere, por exemplo, que as parcelas experimentais que receberam a progênie P3 estejam todas situadas (ou sua maior parte) na região de maior fertilidade do solo. No final do experimento, obteve-se a média de DAP para as diferentes progênies e encontrou-se melhor resposta para progênie P3. Nessas condições, você estaria seguro para afirma que a progênie P3 é aquela com melhor desenvolvimento? Ou o melhor desenvolvimento da P3 poderia estar associado ao fato de que suas parcelas estavam na região de maior fertilidade do solo?
+]
+]
+]
 ]
 
 ---
@@ -368,12 +391,16 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 ### Controle Local (CL)
 &lt;br&gt;
 
-.font90[
+.pull-left-3[
+.font80[
 - É um princípio básico da experimentação.
-- O CL é uma estratégia para .blue[**diminuir o efeito da heterogeneidade**] da área experimental sobre os tratamentos.
-- Na prática, o CL consite na .blue[**formação de grupos de parcelas o mais homogêneos possível**] para o fator de controle.
-- Estes grupos homogêneos são denominados de .blue[**blocos**].
-- Os .blue[**tratamentos são sorteados**] às unidades experimentais (ou parcelas) .blue[**dentro de cada bloco**].
+- O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta.
+- Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para o fator de controle.
+- Estes grupos homogêneos são denominados de .blue[blocos].
+- Os .blue[tratamentos são sorteados] às unidades experimentais (ou parcelas) .blue[dentro de cada bloco].
+- Portanto, em DBC .blue[cada bloco] constitui uma .blue[repetição].
+- Em campo, os blocos são alocados perpendiculares ao gradiente de heterogeneidade.
+]
 ]
 
 ---
@@ -383,7 +410,9 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 
 ### Princípios básicos
 
-O DBC utiliza-se dos 3 princípios básicos da experimentação:
+.font90[
+O DBC utiliza-se dos 3 princípios básicos da experimentação.
+]
 
 &lt;img src="fig/class1/PBE.png" width="55%" style="display: block; margin: auto;" /&gt;
 
@@ -447,24 +476,34 @@ herbicida, em pousio e recém-desmatada (pg. 53).
 
 .pull-left-9[
 .font90[
-Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** repetições (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados obtidos:
+Para um experimento em DBC com **I** tratamentos (i = 1, 2, 3..., I) e **J** Blocos (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta:
 ]
-&lt;br&gt;&lt;br&gt;
-
-&lt;img src="fig/class4/DIC-Table.png" width="80%" style="display: block; margin: auto;" /&gt;
-]
-
-.pull-right-9[
-.font90[
-`\(T_1\)`, `\(T_2\)`, `\(T_3\)`,..., `\(T_I\)` = Soma dos valores da variável y&lt;sub&gt;ij&lt;/sub&gt; dentro do *i*-ésimo tratamento.
 &lt;br&gt;
 
-`\(y_1\)`, `\(y_2\)`, `\(y_3\)`,..., `\(y_I\)` = Média aritmética dos valores da variável y&lt;sub&gt;ij&lt;/sub&gt; dentro do *i*-ésimo tratamento.
+&lt;img src="fig/class5/DBC-Table.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right-9[
+.font80[
+y&lt;sub&gt;1.&lt;/sub&gt;, y&lt;sub&gt;2.&lt;/sub&gt;, y&lt;sub&gt;3.&lt;/sub&gt;,..., y&lt;sub&gt;I.&lt;/sub&gt; = Soma dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento.
+&lt;br&gt;
+
+`\(\bar{y}_{1.}\)`, `\(\bar{y}_{2.}\)`, `\(\bar{y}_{3.}\)`,..., `\(\bar{y}_{I.}\)` = Média aritmética dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento.
+&lt;br&gt;&lt;br&gt;
+
+`\(\bar{y}_{..}\)` = Média geral
+
+y&lt;sub&gt;..&lt;/sub&gt; = Total geral
 &lt;br&gt;&lt;br&gt;
 
 *I* = Número de tratamentos
 
-*J* = Número de repetições
+*J* = Número de blocos
+&lt;br&gt;&lt;br&gt;
+
+y&lt;sub&gt;ij&lt;/sub&gt; = representa cada dado da variável resposta y do *i*-ésimo tratamento no *j*-ésimo bloco (com i=1, ..., I e j = 1, ..., J.)
 ]
 ]
 
@@ -477,15 +516,18 @@ Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** rep
 &lt;br&gt;
 .font90[
 É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+]
 &lt;br&gt;&lt;br&gt;
 
-**Objetivo principal**: 
-- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
-- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
-- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
-&lt;br&gt;&lt;br&gt;
+--
 
-**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ&lt;sub&gt;Tot.&lt;/sub&gt;) (NOGUEIRA, 2007).
+.pull-right-5[
+**Objetivo principal**:
+.font80[
+- Inferir se as médias da variável resposta y de três (ou mais) tratamentos são diferentes estatísticamente.
+- No caso do DBC, existem .blue[3 causas de variação]: 1) Entre tratamentos; 2) Entre blocos; e 3) Erro experimental.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de tratamentos.
+]
 ]
 
 ---
@@ -493,13 +535,37 @@ Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** rep
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
-### Análise de variância - Perguntas
+### Análise de Variância - Perguntas
+&lt;br&gt;
 
-&lt;br&gt;&lt;br&gt;
-<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
-&lt;br&gt;&lt;br&gt;
+.pull-left-2[
+.font90[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
 
-<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)? 
+]
+]
+
+.pull-right-1[
+.shadow3[
+.font90[
+.center[**Efeito de blocos**]
+Por exemplo, o quanto da variação na variável resposta y é devido aos efeitos dos distintos níveis de fertilidade nos diferentes blocos?
+]
+]
+]
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### Fontes de Variação no DBC
+
+
+
 
 ---
 
@@ -1066,8 +1132,8 @@ b) Realizar a ANOVA do experimento em DIC.
 - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
 ]
 
-<div id="htmlwidget-5f930e831333f5955d2f" style="width:600px;height:360px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5f930e831333f5955d2f">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.4,14.1,11.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.3,14.6,14.5,13.8],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(216,144,0,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.7,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.7,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(57,182,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,196,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.3,14.3,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.2,10.3,13.2,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(149,144,255,1)","width":1.88976377952756},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.6,9.5,8.5,9.4],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.2,8.4,9.3,9.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(255,98,188,1)","width":1.88976377952756},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.55,14.3,14.225,14.125,13,12.425,12.05,11.675,9,8.775],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":71.1996679119967},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.79,16.81],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"c363ad41f3c":{"x":{},"y":{},"colour":{},"type":"box"},"c3672093af2":{"x":{},"y":{},"colour":{}}},"cur_data":"c363ad41f3c","visdat":{"c363ad41f3c":["function (y) ","x"],"c3672093af2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-6fb5a890a9bc3da4fc24" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6fb5a890a9bc3da4fc24">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.4,14.1,11.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.3,14.6,14.5,13.8],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(216,144,0,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.7,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.7,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(57,182,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,196,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.3,14.3,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.2,10.3,13.2,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(149,144,255,1)","width":1.88976377952756},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.6,9.5,8.5,9.4],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.2,8.4,9.3,9.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(255,98,188,1)","width":1.88976377952756},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.55,14.3,14.225,14.125,13,12.425,12.05,11.675,9,8.775],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":71.1996679119967},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.79,16.81],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"67e560bf67ff":{"x":{},"y":{},"colour":{},"type":"box"},"67e5eae7eff":{"x":{},"y":{},"colour":{}}},"cur_data":"67e560bf67ff","visdat":{"67e560bf67ff":["function (y) ","x"],"67e5eae7eff":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -1973,8 +2039,8 @@ data_pivot &lt;- data %&gt;%
 ]
 
 .pull-right-9[
-<div id="htmlwidget-db651966d7476f9217da" style="width:250px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-db651966d7476f9217da">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.2,8.4,9.3,9.2,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-682c07325cdf9ac18f5a" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-682c07325cdf9ac18f5a">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.2,8.4,9.3,9.2,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ]
