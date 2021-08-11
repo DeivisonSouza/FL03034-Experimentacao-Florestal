@@ -228,9 +228,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 2 - Estudo de caso de experimentos em DBC**
 
-[1 - Competição de progênies (Pimentel-Gomes; Garcia, 2002)](#prog)
+[1 - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)](#proc)
 
-&nbsp;&nbsp;[1.1 - ANOVA para experimento em DBC - Fator único](#anvdic)
+&nbsp;&nbsp;[1.1 - ANOVA para experimento em DBC - Fator único](#anovadbc)
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.1 - Graus de liberdade](#gl)
 
@@ -242,7 +242,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
 
-[2 - Anova no R](#anvR)
+[2 - Anova DBC no R](#anvR)
 
 
 <!-- [3 - Pacote ExpDes.pt](#expdes) -->
@@ -1125,7 +1125,7 @@ A importância reside na validação do teste F e testes de comparações de mé
 ---
 
 layout: false
-name: prog
+name: proc
 class: inverse, top, right
 background-image: url(fig/class3/arara.jpg)
 background-size: cover
@@ -1140,47 +1140,45 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Blocos Casualizados</div>
 
 ---
-name: anvdic
+
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 .font90[
-Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. Assim, pede-se:
+Um experimento de competição de 7 procedências florestais de *Eucalyptus grandis* foi conduzido sob o Delineamento em Blocos Casualizados (DBC), com 4 blocos. Os dados apresentados na tabela a seguir correspodem à produção de madeira, em m³/ha, nas parcelas experimentais. Assim, pede-se:
 <br><br>
 
 a) Elaborar as hipóteses da estatística F da ANOVA.
 
-b) Realizar a ANOVA do experimento em DIC.
+b) Realizar a ANOVA do experimento.
 ]
 
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 ```{r tibble, echo=F, eval=T}
-data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
 data %>% Customkbl
 ```
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-.font80[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
-]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 
 .font80[
-- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Progenie.
+- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Procedência.
 ]
 
 ```{r echo=F, eval=T, collapse=T, out.width="35%", fig.align='center', fig.cap='', dpi=600}
@@ -1188,20 +1186,20 @@ data %>% Customkbl
 df <- data %>%
   tidyr::pivot_longer(
         cols = starts_with("P"),
-        names_to = "Progenie",
+        names_to = "Procedencia",
         values_to = "Valor",
-        names_transform = list(Progenie = as.factor),
+        names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>%
-  rename(Repeticao = `Rep./Prog.`) %>% 
-  mutate(Progenie = forcats::fct_reorder(
-    Progenie, 
+  rename(Bloco = `Bloco/Procedencia`) %>% 
+  mutate(Procedencia = forcats::fct_reorder(
+    Procedencia, 
     desc(Valor), 
     .fun='mean')
     )
 
 df %>%
-  ggplot(aes(x=Progenie, y=Valor, fill=Progenie)) + 
+  ggplot(aes(x=Procedencia, y=Valor, fill=Procedencia)) + 
   geom_dotplot(binaxis='y', stackdir='center') +
   stat_summary(fun.y=mean, geom="point", shape=18,
                  size=6, color="red") +
@@ -1213,19 +1211,19 @@ df %>%
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-.font80[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 
+.font80[
 - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
 ]
 
 ```{r echo=F, eval=T, collapse=T, fig.align='center', fig.cap='', dpi=600, fig.width=1, fig.height=.6}
 
 bp <- df %>%
-  ggplot(aes(x=Progenie, y=Valor, color=Progenie)) +
+  ggplot(aes(x=Procedencia, y=Valor, color=Procedencia)) +
   geom_boxplot() +
   stat_summary(fun.y=mean, geom="point", shape=4,
                  size=2, color="red") +
@@ -1239,10 +1237,10 @@ plotly::ggplotly(bp)
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **Hipóteses da estatística F da ANOVA**
@@ -1253,7 +1251,7 @@ plotly::ggplotly(bp)
 - Hipótese de nulidade (H<sub>0</sub>)
 <br>
 
-**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+**Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*.
 ]
 ]
 
@@ -1262,24 +1260,24 @@ plotly::ggplotly(bp)
 - Hipótese de alternativa (H<sub>1</sub>)
 <br>
 
-**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+**Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*.
 ]
 ]
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 .font90[
 **Retornemos ao quadro de dados do experimento!**
 
-**Vamos inspecionar os valores observados de DAP para as diferentes progênies!**
+**Vamos inspecionar os valores observados de Volume de madeira para as diferentes procedências!**
 
-Pode-se constatar que os valores observados para DAP não são idênticos entre progênies e dentro de progênies.
+Pode-se constatar que os valores observados para Volume não são idênticos entre procedências e dentro de procedências.
 ]
 <br>
 
@@ -1292,36 +1290,35 @@ data %>% Customkbl
 .pull-right-1[
 .font90[
 - Quais são as possíveis causas que explicam as variações nos valores observados?
-- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+- Existe alguma procedências que apresentou maior produção volumétrica?
 ]
 ]
 
 ---
-
-## Delineamento Inteiramente Casualizado
+name: anovadbc
+## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-
-Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias aritméticas] dos diâmetros para cada progênie.
+Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias aritméticas] dos volumes de madeira para cada procedência e a soma para cada bloco.
 ]
 
 ```{r tb1, echo=F, eval=T}
 library(dplyr)
-data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
 
 df1 <- data %>% 
   bind_rows(data %>%
             summarise_if(is.numeric, sum)) %>% 
-  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Total", `Rep./Prog.`)) %>% 
+  mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Total", `Bloco/Procedencia`)) %>% 
   mutate_if(is.numeric, round, 1)
 
 df2 <- df1 %>% 
   bind_rows(df1[-5,]%>%
             summarise_if(is.numeric, mean)) %>% 
-  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Média", `Rep./Prog.`)) %>% 
+  mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Média", `Bloco/Procedencia`)) %>% 
   mutate_if(is.numeric, round, 1)
 
 df2 %>% 
@@ -1331,7 +1328,7 @@ df2 %>%
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1352,7 +1349,7 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 
 ---
 name: gl
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1367,7 +1364,7 @@ knitr::include_graphics('fig/class4/ANOVA-GL.png')
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1409,7 +1406,7 @@ $\large SQR = SQ_{Tot.} - SQ_{Trat.}$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1448,7 +1445,7 @@ $$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1483,7 +1480,7 @@ $$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1523,7 +1520,7 @@ $$
 ---
 
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1540,7 +1537,7 @@ $\large SQR = 77,56$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1555,7 +1552,7 @@ knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 
 ---
 name: qm
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1578,7 +1575,7 @@ $\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1593,7 +1590,7 @@ knitr::include_graphics('fig/class4/ANOVA-QM.png')
 
 ---
 name: estF
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
@@ -1607,7 +1604,7 @@ $\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
 
 ---
 name: fcrit
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 .font90[
 ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
@@ -1624,7 +1621,7 @@ name: fcrit
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1657,7 +1654,7 @@ qf(0.01, 9, 30, lower.tail=FALSE)
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1675,7 +1672,7 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1732,7 +1729,7 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1753,7 +1750,7 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1773,13 +1770,13 @@ data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
 data_pivot <- data %>%
   tidyr::pivot_longer(
         cols = starts_with("P"),
-        names_to = "Progenie",
+        names_to = "Procedencia",
         values_to = "Valor",
-        names_transform = list(Progenie = as.factor),
+        names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Rep./Prog.`) %>% 
-  arrange(Progenie, Repeticao)
+  rename(Repeticao = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Repeticao)
 ```
 
 
@@ -1787,13 +1784,13 @@ data_pivot <- data %>%
 data %>%
     tidyr::pivot_longer(
         cols = starts_with("P"),
-        names_to = "Progenie",
+        names_to = "Procedencia",
         values_to = "Valor",
-        names_transform = list(Progenie = as.factor),
+        names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Rep./Prog.`) %>% 
-  arrange(Progenie, Repeticao) %>% 
+  rename(Repeticao = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Repeticao) %>% 
   CustomDT
 ```
 
@@ -1808,7 +1805,7 @@ data %>%
 
 ---
 
-## Delineamento Inteiramente Casualizado
+## Delineamento em Blocos Casualizados
 <br>
 
 .font90[
@@ -1826,18 +1823,18 @@ data %>%
 data_pivot <- data %>%
   tidyr::pivot_longer(
         cols = starts_with("P"),
-        names_to = "Progenie",
+        names_to = "Procedencia",
         values_to = "Valor",
-        names_transform = list(Progenie = as.factor),
+        names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Rep./Prog.`) %>% 
-  arrange(Progenie, Repeticao)
+  rename(Repeticao = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Repeticao)
 ```
 
 ```{r aov2, echo=T, eval=T}
 # Realizar a análise de variância
-res.aov <- aov(Valor ~ Progenie, data = data_pivot)
+res.aov <- aov(Valor ~ Procedencia, data = data_pivot)
 ```
 
 ```{r echo=T, eval=T}
