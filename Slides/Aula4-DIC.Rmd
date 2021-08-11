@@ -521,7 +521,7 @@ O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
 <br><br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-ANOVA.png')
+knitr::include_graphics('fig/class4/DIC-ANOVA1.png')
 ```
 
 .pull-left-8[
