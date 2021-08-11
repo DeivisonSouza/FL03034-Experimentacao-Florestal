@@ -96,9 +96,9 @@ BibOptions(check.entries = FALSE,
 ## Introdução à Linguagem <br> de Programação R `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
 #### **Prof. Dr. Deivison Venicio Souza**
-#### Universidade Federal do Pará (UFPA) 
-#### Faculdade de Engenharia Florestal
-#### E-mail: deivisonvs@ufpa.br
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
 <br>
 ##### `r format(Sys.Date(),"%d/%B/%Y")`
 ##### Altamira, Pará
