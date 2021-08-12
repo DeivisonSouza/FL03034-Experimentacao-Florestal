@@ -242,7 +242,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
 
-[2 - Anova DBC no R](#anvR)
+[2 - Anova DBC no R](#anovaR)
 
 
 <!-- [3 - Pacote ExpDes.pt](#expdes) -->
@@ -1859,7 +1859,7 @@ $\normalsize F_{Calculado}~>~F_{Crítico}~=~40,05~>~2,661$
 .center[.blue[**Mas, isso é tema para as próximas aulas!**]]
 
 ---
-
+name: anovaR
 ## Delineamento em Blocos Casualizados
 <br>
 
@@ -1867,14 +1867,15 @@ $\normalsize F_{Calculado}~>~F_{Crítico}~=~40,05~>~2,661$
 <br>
 
 .pull-left-9[
+.font80[
 **ANOVA fator único usando a linguagem R**
-<br><br>
+<br>
 
 .blue[**1- Ordenar dados no formato longo**]
 <br>
 
 ```{r echo=T, eval=F}
-data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
 
 data_pivot <- data %>%
   tidyr::pivot_longer(
@@ -1884,8 +1885,8 @@ data_pivot <- data %>%
         names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Bloco/Procedencia`) %>% 
-  arrange(Procedencia, Repeticao)
+  rename(Bloco = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Bloco)
 ```
 
 
@@ -1898,18 +1899,17 @@ data %>%
         names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Bloco/Procedencia`) %>% 
-  arrange(Procedencia, Repeticao) %>% 
+  rename(Bloco = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Bloco) %>% 
   CustomDT
 ```
-
+]
 ]
 
 .pull-right-9[
 ```{r ref.label="dt", echo=FALSE, eval=TRUE, collapse=T}
 ```
 ]
-
 
 ---
 
@@ -1920,8 +1920,9 @@ data %>%
 <br>
 
 .pull-left-9[
+.font80[
 **ANOVA fator único usando a linguagem R**
-<br><br>
+<br>
 
 .blue[**2 - Realizar a ANOVA - Função aov()**]
 <br>
@@ -1935,19 +1936,20 @@ data_pivot <- data %>%
         names_transform = list(Procedencia = as.factor),
         values_drop_na = TRUE
     ) %>% 
-  rename(Repeticao = `Bloco/Procedencia`) %>% 
-  arrange(Procedencia, Repeticao)
+  rename(Bloco = `Bloco/Procedencia`) %>% 
+  arrange(Procedencia, Bloco)
 ```
 
 ```{r aov2, echo=T, eval=T}
 # Realizar a análise de variância
-res.aov <- aov(Valor ~ Procedencia, data = data_pivot)
+res.aov <- aov(Valor ~ Procedencia + Bloco, data = data_pivot)
 ```
 
 ```{r echo=T, eval=T}
 # Resumo da análise de variância
 summary(res.aov)
 ```
+]
 ]
 
 --
@@ -1956,9 +1958,9 @@ summary(res.aov)
 .shadow3[
 .font80[
 .center[**Interpretação**]
-- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,05, existem
-evidências de diferenças significativas entre as médias de DAP das progênies.
-- Rejeita-se a hipótese de nulidade para $\alpha$ < 0,001 (altamente significativo).
+- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, existem
+evidências de diferenças significativas entre as médias de produção volumétrica das procedências.
+- A hipótese H<sub>0</sub> é rejeitada para $\alpha$ < 0,001 (altamente significativo).
 - Deve-se realizar pós-testes de comparações de médias.
 ]
 ]
