@@ -1708,30 +1708,32 @@ name: estF
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **4º Passo**: Determinar a estatística F
 <br><br>
 
 
-$\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
+$\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{8.956,309}{223,643} = 40,05$
 
 ---
 name: fcrit
 ## Delineamento em Blocos Casualizados
 <br>
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
+
 
 **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
 <br><br>
 
+.font80[
 - O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas.
 - Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância $\alpha$.
 - Os níveis de significância ( $\alpha$ ) mais usuais são: 0,01 (1%) e 0,05 (5%).
-- Neste exemplo, admitir-se-á $\alpha = 0,01$ (ou 1%), conforme Pimentel-Gomes e Garcia (2002).
+- Neste exemplo, admitir-se-á $\alpha = 0,05$ (ou 5%), conforme Pimentel-Gomes e Garcia (2002).
 ]
 
 ---
@@ -1739,8 +1741,7 @@ name: fcrit
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
@@ -1749,17 +1750,18 @@ name: fcrit
 .pull-left-9[
 .blue[**Vamos aprender a usar a tabela de distribuição F!**]
 - Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html)
-- O F-crítico para o experimento é: $F_{[9,~30;~0,01]} = 3,07$
-<br><br>
+- O F-crítico para o experimento é: $F_{[6,~18;~0,05]} = 2,661$
+<br>
 
-**No R use a função qf() para encontrar o F-crítico**
+.font80[**No R use a função qf() para encontrar o F-crítico**]
 ```{r, echo=T, eval=T}
-qf(0.01, 9, 30, lower.tail=FALSE)
+qf(0.05, 6, 18, lower.tail=FALSE)
 ```
 
 ]
 
 .pull-right-9[
+.font80[
 .blue[**Bônus: Explore mais aplicativos...**]
 - [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
 - [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
@@ -1772,15 +1774,15 @@ qf(0.01, 9, 30, lower.tail=FALSE)
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**Finalmente, têm-se o quadro final da ANOVA de experimentos em DIC!**
+.font80[
+**Finalmente, têm-se o quadro final da ANOVA de experimentos em DBC (Fator único)!**
 <br><br>
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/ANOVA-Final.png')
+knitr::include_graphics('fig/class5/ANOVA-DBC-Final.png')
 ```
 
 ]
@@ -1790,33 +1792,27 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**Teste de Hipótese da ANOVA DIC - Conclusão**
+**Hipóteses da estatística F da ANOVA - Conclusão**
 <br>
-]
 
---
-
-.pull-top[
 .pull-left-11[
 .font80[
 - Hipótese de nulidade (H<sub>0</sub>)
 <br>
 
-**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+**Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*.
 ]
 ]
 
 .pull-right-11[
 .font80[
-- Hipótese de alternativa (H<sub>1</sub>)
+- Hipótese alternativa (H<sub>1</sub>)
 <br>
 
-**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
-]
+**Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*.
 ]
 ]
 
@@ -1825,7 +1821,7 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 .pull-down[
 .pull-left-10[
 <br><br>
-$\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
+$\normalsize F_{Calculado}~>~F_{Crítico}~=~40,05~>~2,661$
 
 **Conclusão**: .blue[**Rejeita-se H<sub>0</sub>**]
 ]
@@ -1836,7 +1832,7 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 .center[**Interpretação**]
 
 .font80[
-- Como $\large F_{Calculado}~>~F_{Crítico}~(~6,91~>~3,07)$ rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Progênies) diferem estatísticamente, ao nível de 5% de probabilidade.
+- Como $\normalsize F_{Calculado}~>~F_{Crítico}~(~40,05~>~2,661)$ rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Procedências) diferem estatísticamente, ao nível de 5% de probabilidade.
 ]
 ]
 ]
@@ -1847,8 +1843,7 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **O que fazer quando rejeita-se a hipótese de nulidade?**
@@ -1868,8 +1863,7 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 .pull-left-9[
@@ -1916,15 +1910,13 @@ data %>%
 ```
 ]
 
-]
 
 ---
 
 ## Delineamento em Blocos Casualizados
 <br>
 
-.font90[
-### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 .pull-left-9[
@@ -1956,7 +1948,6 @@ res.aov <- aov(Valor ~ Procedencia, data = data_pivot)
 # Resumo da análise de variância
 summary(res.aov)
 ```
-]
 ]
 
 --
