@@ -7,7 +7,7 @@
     <script src="Aula5-DBC_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula5-DBC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula5-DBC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xe36ee6744de498287a871f1a7c6d06e","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f9986a7f7ff34c5489c08b43ab970437","expires":1}</script>
     <script src="Aula5-DBC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula5-DBC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula5-DBC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -214,7 +214,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.1 - Graus de liberdade](#gl)
 
-&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.2 - Somas de Quadrados](#sq)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.2 - Somas de Quadrados](#sqex)
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.3 - Quadradados Médios](#qm)
 
@@ -1188,8 +1188,8 @@ b) Realizar a ANOVA do experimento.
 - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
 ]
 
-<div id="htmlwidget-f5cdfe3d14ee20d04199" style="width:600px;height:360px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-f5cdfe3d14ee20d04199">{"x":{"data":[{"x":[1,1,1,1],"y":[358,360,353,380],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[327,312,318,319],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(196,154,0,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[252,266,242,284],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(83,180,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[249,284,242,259],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,192,148,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[258,231,242,263],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,182,235,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[236,222,273,226],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(165,138,255,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[217,249,220,267],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(251,97,215,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7],"y":[362.75,319,261,258.5,248.5,239.25,238.25],"text":["Procedencia: P1<br />Valor: 362.75<br />Procedencia: red","Procedencia: P7<br />Valor: 319.00<br />Procedencia: red","Procedencia: P4<br />Valor: 261.00<br />Procedencia: red","Procedencia: P2<br />Valor: 258.50<br />Procedencia: red","Procedencia: P5<br />Valor: 248.50<br />Procedencia: red","Procedencia: P3<br />Valor: 239.25<br />Procedencia: red","Procedencia: P6<br />Valor: 238.25<br />Procedencia: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["P1","P7","P4","P2","P5","P3","P6"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["P1","P7","P4","P2","P5","P3","P6"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Procedencia","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[208.85,388.15],"tickmode":"array","ticktext":["250","300","350"],"tickvals":[250,300,350],"categoryorder":"array","categoryarray":["250","300","350"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"483c3b81f42b":{"x":{},"y":{},"colour":{},"type":"box"},"483c1467adc7":{"x":{},"y":{},"colour":{}}},"cur_data":"483c3b81f42b","visdat":{"483c3b81f42b":["function (y) ","x"],"483c1467adc7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-9a2199256817db69380b" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9a2199256817db69380b">{"x":{"data":[{"x":[1,1,1,1],"y":[358,360,353,380],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[327,312,318,319],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(196,154,0,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[252,266,242,284],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(83,180,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[249,284,242,259],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,192,148,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[258,231,242,263],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,182,235,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[236,222,273,226],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(165,138,255,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[217,249,220,267],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(251,97,215,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7],"y":[362.75,319,261,258.5,248.5,239.25,238.25],"text":["Procedencia: P1<br />Valor: 362.75<br />Procedencia: red","Procedencia: P7<br />Valor: 319.00<br />Procedencia: red","Procedencia: P4<br />Valor: 261.00<br />Procedencia: red","Procedencia: P2<br />Valor: 258.50<br />Procedencia: red","Procedencia: P5<br />Valor: 248.50<br />Procedencia: red","Procedencia: P3<br />Valor: 239.25<br />Procedencia: red","Procedencia: P6<br />Valor: 238.25<br />Procedencia: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,7.6],"tickmode":"array","ticktext":["P1","P7","P4","P2","P5","P3","P6"],"tickvals":[1,2,3,4,5,6,7],"categoryorder":"array","categoryarray":["P1","P7","P4","P2","P5","P3","P6"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Procedencia","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[208.85,388.15],"tickmode":"array","ticktext":["250","300","350"],"tickvals":[250,300,350],"categoryorder":"array","categoryarray":["250","300","350"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"5aff4a27c792":{"x":{},"y":{},"colour":{},"type":"box"},"5affa798ec2":{"x":{},"y":{},"colour":{}}},"cur_data":"5aff4a27c792","visdat":{"5aff4a27c792":["function (y) ","x"],"5affa798ec2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -1434,7 +1434,7 @@ name: gl
 &lt;img src="fig/class5/ANOVA-DBC-GL.png" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
-
+name: sqex
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
@@ -1695,7 +1695,6 @@ SQ_{Tot.} = 2.182.735 - 2.122.452,892\\
 SQ_{Tot.} = 60.282,108
 \end{equation*}`
 $$
-
 ]
 
 ---
@@ -1703,11 +1702,11 @@ $$
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
 
 **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ&lt;sub&gt;Trat.&lt;/sub&gt;]
-&lt;br&gt;&lt;br&gt;
+&lt;br&gt;
 
 .pull-left-9[
 &lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
@@ -1727,58 +1726,69 @@ $$
 &lt;tbody&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B1 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 358 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 358.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 273.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 273 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 258 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 258.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 318 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 2024 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 2024 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B2 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 380 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 222 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 380.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 222.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 263 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 217 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 263.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 217.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 312 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 1885 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1885 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B3 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 353 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 259 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 236 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 353.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 259.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 236.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 266 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 267 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 267.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 327 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 1950 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1950 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B4 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 360 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 226 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 360.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 226.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 252 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 231 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 220 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 231.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 220.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 319 &lt;/td&gt;
-   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 1850 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1850 &lt;/td&gt;
   &lt;/tr&gt;
   &lt;tr&gt;
    &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1451 &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1034 &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 957 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1451.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1034.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 957.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1044 &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 994 &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 953 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 994.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 953.0 &lt;/td&gt;
    &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1276 &lt;/td&gt;
-   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 7709 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;color: white !important;background-color: red !important;"&gt; 7709 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: blue !important;"&gt; Média &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 362.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 258.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 239.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 261 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 248.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 238.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 319 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;color: white !important;background-color: white !important;"&gt; NA &lt;/td&gt;
   &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
@@ -1786,7 +1796,7 @@ $$
 $$
 `\begin{equation*}
 \small
-\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
+\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 1.451^2 + 1.034^2 + ... + 1.276^2 = 8.704.763
 \end{equation*}`
 $$
 ]
@@ -1795,11 +1805,14 @@ $$
 .pull-right-9[
 
 &lt;img src="fig/class4/SQTrat-cor.png" width="95%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;
 
 $$
-SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
+`\begin{equation*}
+SQ_{trat.} = \dfrac{8.704.763}{4} - 2.122.452,892\\\\
+SQ_{trat.} = 53.737,858
+\end{equation*}`
 $$
-
 ]
 
 ---
@@ -1807,24 +1820,142 @@ $$
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Blocos - SQB]
+&lt;br&gt;
+
+.pull-left-9[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Bloco/Procedencia &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 358.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 273.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 258.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 318 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 2024 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 380.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 222.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 263.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 217.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 312 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1885 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 353.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 259.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 236.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 266 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 267.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 327 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1950 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 360.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 226.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 252 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 231.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 220.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 319 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 1850 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1451.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1034.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 957.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1044 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 994.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 953.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 1276 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;color: white !important;background-color: red !important;"&gt; 7709 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: blue !important;"&gt; Média &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 362.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 258.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 239.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 261 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 248.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 238.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;"&gt; 319 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: blue !important;color: white !important;background-color: white !important;"&gt; NA &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+$$
+`\begin{equation*}
+\small
+\sum_{j=1}^{J}\left ( \sum_{i=1}^{I}Y_{ij} \right )^2 = 2.024^2 + 1.885^2 + 1.950^2 + 1.850^2 = 14.874.801
+\end{equation*}`
+$$
+]
+
+
+.pull-right-9[
+
+&lt;img src="fig/class5/SQB-cor.png" width="95%" style="display: block; margin: auto;" /&gt;
 &lt;br&gt;&lt;br&gt;
 
-`\(\large SQR = SQ_{Tot.} - SQ_{Trat.}\)`
-
-`\(\large SQR = 238,54 - 160,98\)`
-
-`\(\large SQR = 77,56\)`
+$$
+`\begin{equation*}
+SQB = \dfrac{14.874.801}{7} - 2.122.452,892\\\\
+SQB = 2.518,679
+\end{equation*}`
+$$
+]
 
 ---
 
 ## Delineamento em Blocos Casualizados
 &lt;br&gt;
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+&lt;br&gt;&lt;br&gt;
+
+`\(\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQB)\)`
+
+`\(\large SQR = 60.282,108 - (53.737,858 + 2.518,679)\)`
+
+`\(\large SQR = 4.025,571\)`
+
+---
+
+## Delineamento em Blocos Casualizados
+&lt;br&gt;
+
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
 
 **2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA]
@@ -2066,8 +2197,8 @@ data_pivot &lt;- data %&gt;%
 ]
 
 .pull-right-9[
-<div id="htmlwidget-6a6f1a27bab39d661196" style="width:250px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6a6f1a27bab39d661196">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4"],["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7"],[358,380,353,360,284,249,259,242,273,222,236,226,284,242,266,252,258,263,242,231,249,217,267,220,318,312,327,319]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Procedencia<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-80e9b1a74daa9967d489" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-80e9b1a74daa9967d489">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4","B1","B2","B3","B4"],["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7"],[358,380,353,360,284,249,259,242,273,222,236,226,284,242,266,252,258,263,242,231,249,217,267,220,318,312,327,319]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Procedencia<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ]
