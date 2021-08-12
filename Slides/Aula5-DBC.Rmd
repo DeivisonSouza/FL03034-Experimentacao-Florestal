@@ -1969,6 +1969,7 @@ evidências de diferenças significativas entre as médias de produção volumé
 ---
 
 ## Referências
+.font90[
 <br><br>
 DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
 <br><br>
@@ -1977,6 +1978,7 @@ NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e an�
 PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
 <br><br>
 ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... & BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p.
+]
 
 <!--Slide XX -->
 ---
