@@ -1290,7 +1290,7 @@ data %>% Customkbl
 .pull-right-1[
 .font90[
 - Quais são as possíveis causas que explicam as variações nos valores observados?
-- Existe alguma procedências que apresentou maior produção volumétrica?
+- Existe alguma procedência que apresentou maior produção volumétrica?
 ]
 ]
 
@@ -1341,20 +1341,20 @@ df2 %>%
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 
 .font90[
-- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
-- A resposta para esta pergunta será dada pela estatística F da ANOVA-DIC.
-<br>
+- Existe alguma procedência que apresentou maior produção volumétrica?
+- A resposta para esta pergunta será dada pela estatística F da ANOVA-DBC.
+]
+
+--
 
 **Então, vamos construir o quadro da ANOVA.**
-]
-<br>
+<br><br>
 
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/DIC-ANOVA.png')
+```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class5/DBC-ANOVA.png')
 ```
 
 ---
@@ -1362,7 +1362,7 @@ name: gl
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
