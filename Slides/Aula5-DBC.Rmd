@@ -1300,30 +1300,40 @@ name: anovadbc
 <br>
 
 ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
-<br>
-.font90[
-Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias aritméticas] dos volumes de madeira para cada procedência e a soma para cada bloco.
+
+.font80[
+Inicialmente, vamos calcular as .blue[somas de tratamentos e blocos], e também a .blue[média aritmética de tratamentos] da variável resposta (volume de madeira por unidade de área).
 ]
+<br>
+
+--
 
 ```{r tb1, echo=F, eval=T}
 library(dplyr)
 data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
 
-df1 <- data %>% 
-  bind_rows(data %>%
+df0 <- data %>% janitor::adorn_totals(where = "col")
+
+df1 <- df0 %>% 
+  bind_rows(df0 %>%
             summarise_if(is.numeric, sum)) %>% 
   mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Total", `Bloco/Procedencia`)) %>% 
   mutate_if(is.numeric, round, 1)
 
 df2 <- df1 %>% 
-  bind_rows(df1[-5,]%>%
+  bind_rows(df1[-5,-9]%>%
             summarise_if(is.numeric, mean)) %>% 
-  mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Média", `Bloco/Procedencia`)) %>% 
+  mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Média", `Bloco/Procedencia`)) %>%
   mutate_if(is.numeric, round, 1)
 
 df2 %>% 
   Customkbl %>% 
-  row_spec(5:6, color = 'white', background = 'orange')
+  row_spec(5, color = 'white', background = 'orange') %>% 
+  row_spec(6, color = 'white', background = 'blue') %>% 
+  column_spec(9, color = 'white', background = 
+                case_when(is.na(df2$Total) ~ "white",
+                             df2$Total > 7000 ~ "red",
+                             df2$Total < 7000 ~ "green"))
 ```
 
 ---
