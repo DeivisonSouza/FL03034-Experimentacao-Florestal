@@ -228,7 +228,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 2 - Estudo de caso de experimentos em DBC**
 
-[1 - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)](#proc)
+[1 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002)](#proc)
 
 &nbsp;&nbsp;[1.1 - ANOVA para experimento em DBC - Fator único](#anovadbc)
 
@@ -1496,7 +1496,7 @@ knitr::include_graphics('fig/class4/SQTot-cor.png')
 
 $$
 \begin{equation*}
-SQ_{Tot.} = 2.182.735 - 2.122.452,892\\
+SQ_{Tot.} = 2.182.735 - 2.122.452,892\\~\\
 SQ_{Tot.} = 60.282,108
 \end{equation*}
 $$
@@ -1543,7 +1543,7 @@ knitr::include_graphics('fig/class4/SQTrat-cor.png')
 
 $$
 \begin{equation*}
-SQ_{trat.} = \dfrac{8.704.763}{4} - 2.122.452,892\\\\
+SQ_{trat.} = \dfrac{8.704.763}{4} - 2.122.452,892\\~\\
 SQ_{trat.} = 53.737,858
 \end{equation*}
 $$
@@ -1590,7 +1590,7 @@ knitr::include_graphics('fig/class5/SQB-cor.png')
 
 $$
 \begin{equation*}
-SQB = \dfrac{14.874.801}{7} - 2.122.452,892\\\\
+SQB = \dfrac{14.874.801}{7} - 2.122.452,892\\~\\
 SQB = 2.518,679
 \end{equation*}
 $$
@@ -1625,7 +1625,7 @@ $\large SQR = 4.025,571$
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/ANOVA-SQ.png')
+knitr::include_graphics('fig/class5/ANOVA-DBC-SQ.png')
 ```
 
 ---
@@ -1633,22 +1633,59 @@ name: qm
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo]
 <br><br>
 
-.pull-left-9[
-**Quadrado Médio de Tratamentos (Progênies) - Variância entre tratamentos**
-<br><br>
-$\normalsize QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{160,98}{10-1} = 17,89$
+.pull-left-14[
+.font80[
+**Quadrado Médio de Tratamentos (Procedências) - Variância entre tratamentos**
+]
+<br>
+
+$$
+\begin{equation*}
+\small{
+QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{53.737,858}{7-1}\\~\\
+QM_{Trat.} = 8.956,309
+}
+\end{equation*}
+$$
 ]
 
-.pull-right-9[
+.pull-left-14[
+.font80[
 **Quadrado Médio de Resíduos - Variância dentro de tratamentos**
-<br><br>
-$\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59$
+]
+<br>
+
+$$
+\begin{equation*}
+\small{
+QMR = \dfrac{SQR}{(I-1)(J-1)} = \dfrac{4.025,571}{(7-1)(4-1)}\\~\\
+QMR = 223,643
+}
+\end{equation*}
+$$
+]
+
+
+.pull-right-14[
+.font80[
+**Quadrado Médio de Blocos - Variância entre blocos**
+]
+<br>
+
+$$
+\begin{equation*}
+\small{
+QMB = \dfrac{SQB}{(J-1)} = \dfrac{2.518,679}{(4-1)}\\~\\
+QMB = 839,559
+}
+\end{equation*}
+$$
 ]
 
 ---
@@ -1656,14 +1693,14 @@ $\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59$
 ## Delineamento em Blocos Casualizados
 <br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
 **3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA]
 <br><br>
 
-```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/ANOVA-QM.png')
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class5/ANOVA-DBC-QM.png')
 ```
 
 ---
