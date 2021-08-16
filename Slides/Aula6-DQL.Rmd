@@ -423,26 +423,36 @@ name: fv
 ]
 
 ---
-<!-- name: cl -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+name: cl
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Controle Local (CL) -->
-<!-- <br> -->
+### Controle Local (CL)
+<br>
 
-<!-- .pull-left-3[ -->
-<!-- .font80[ -->
-<!-- - É um princípio básico da experimentação. -->
-<!-- - O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta. -->
-<!-- - Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para o fator de controle. -->
-<!-- - Estes grupos homogêneos são denominados de .blue[blocos]. -->
-<!-- - Os .blue[tratamentos são sorteados] às unidades experimentais (ou parcelas) .blue[dentro de cada bloco]. -->
-<!-- - Portanto, em DBC .blue[cada bloco] constitui uma .blue[repetição]. -->
-<!-- - Em campo, os blocos são alocados perpendiculares ao gradiente de heterogeneidade. -->
-<!-- ] -->
-<!-- ] -->
+.pull-left-9[
+.font80[
+- É um princípio básico da experimentação.
+- O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta.
+- Em DQL, o CL é aplicado pela imposição de .blue[dois fatores de restrição] (ou controle) na casualização dos tratamentos, devido à presença de .blue[dois gradientes de heterogeneidade perpendiculares].
+- Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para os dois fatores de controle.
+]
+]
 
-<!-- --- -->
+--
+
+.pull-right-9[
+.font80[
+Portanto, a restrição na casualização dos tratamentos pode ser organizada por blocos da seguinte madeira:
+<br><br>
+
+**1) Blocos organizados no sentido horizontal (linhas)**; e 
+
+**2) Blocos organizados nos sentido vertical (colunas)**.
+]
+]
+
+---
 <!-- name: pb -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->

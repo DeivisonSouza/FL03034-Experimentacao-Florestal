@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xef75c0dd8984f43b30ab79bea7a15fa","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"b2f2cc080f954598be91b3696e0fc924","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -379,29 +379,37 @@ name: fv
 ]
 ]
 
+---
+name: cl
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
+### Controle Local (CL)
+&lt;br&gt;
+
+.pull-left-9[
+.font80[
+- É um princípio básico da experimentação.
+- O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta.
+- Em DQL, o CL é aplicado pela imposição de .blue[dois fatores de restrição] (ou controle) na casualização dos tratamentos, devido à presença de .blue[dois gradientes de heterogeneidade perpendiculares].
+- Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para os dois fatores de controle.
+]
+]
+
+--
+
+.pull-right-9[
+.font80[
+Portanto, a restrição na casualização dos tratamentos pode ser organizada por blocos da seguinte madeira:
+&lt;br&gt;&lt;br&gt;
+
+**1) Blocos organizados no sentido horizontal (linhas)**; e 
+
+**2) Blocos organizados nos sentido vertical (colunas)**.
+]
+]
 
 ---
-&lt;!-- name: cl --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Controle Local (CL) --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .pull-left-3[ --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- - É um princípio básico da experimentação. --&gt;
-&lt;!-- - O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta. --&gt;
-&lt;!-- - Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para o fator de controle. --&gt;
-&lt;!-- - Estes grupos homogêneos são denominados de .blue[blocos]. --&gt;
-&lt;!-- - Os .blue[tratamentos são sorteados] às unidades experimentais (ou parcelas) .blue[dentro de cada bloco]. --&gt;
-&lt;!-- - Portanto, em DBC .blue[cada bloco] constitui uma .blue[repetição]. --&gt;
-&lt;!-- - Em campo, os blocos são alocados perpendiculares ao gradiente de heterogeneidade. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
 &lt;!-- name: pb --&gt;
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
