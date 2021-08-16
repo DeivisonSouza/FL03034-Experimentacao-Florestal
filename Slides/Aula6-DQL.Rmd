@@ -468,28 +468,26 @@ knitr::include_graphics('fig/class1/PBE.png')
 ```
 
 ---
-<!-- name: croqui -->
-<!-- ## Delineamento em Quadrado Latino -->
+name: croqui
+## Delineamento em Quadrado Latino
 
-<!-- .pull-left-5[ -->
-<!-- .font80[ -->
-<!-- ### Croqui de experimento em DBC - Rossetti et al. (2017) -->
-<!-- <br><br> -->
+.pull-left-5[
+.font80[
+### Croqui de experimento em DQL - Rossetti et al. (2017)
+<br><br>
 
-<!-- Croqui de um experimento em blocos casualizados, com 5 blocos -->
-<!-- retangulares, 4 tratamentos e 4 plantas úteis por parcela quadrada, sem -->
-<!-- bordadura entre parcelas e nem no contorno do experimento (pg. 40) -->
+Croqui de um experimento em delineamento de quadrado latino 5x5 com bordadura de contorno e parcelas quadradas de 4 plantas úteis, sem bordadura entre elas. (pg. 62)
 
-<!-- ] -->
-<!-- ] -->
+]
+]
 
-<!-- .pull-right-5[ -->
-<!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics("fig/class5/croqui1.png") -->
-<!-- ``` -->
-<!-- ] -->
+.pull-right-5[
+```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class6/croqui1.png")
+```
+]
 
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 
