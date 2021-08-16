@@ -392,7 +392,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 .pull-left-3[
 .font90[
 - É o tipo de delineamento experimental indicado quando existe duas .blue[causas (ou fontes de variações)] que deseja-se .blue[controlar] no experimento.
-- Essas fontes de variações, em experimentos de campo, podem ser: .blue[Fertilidade do solo, gradiente de umidade], etc.
+- Essas fontes de variações, em experimentos de campo, podem ser: .blue[Fertilidade do solo, gradiente de umidade, gradiente de irrigação], etc.
 - Em experimentos de campo, o DQL é recomendado quando existe a necessidade de .blue[controlar a heterogeneidade em duas direções perpendiculares] (NOGUEIRA, 2007).
 ]
 ]
@@ -489,26 +489,31 @@ knitr::include_graphics("fig/class6/croqui1.png")
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
+## Delineamento em Quadrado Latino
 
-<!-- .pull-left-5[ -->
-<!-- .font80[ -->
-<!-- ### Croqui de experimento em DBC - Rossetti et al. (2017) -->
-<!-- <br><br> -->
+```{r echo=F, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+da <- labestData::PimentelEg6.2
+ggplot(da, aes(coluna, linha, fill = "white")) +
+  geom_tile(aes(color = "black")) +
+  scale_fill_identity() +
+  labs(x = "Gradiente de Irrigação -->",
+       y = "Gradiente de Fertilidade -->") +
+  geom_text(mapping = aes(label = sprintf("%s", varied))) +
+  #theme_bw() +
+  theme(axis.title = element_text(size = 20),
+        axis.text = element_text(size = 12, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        legend.position = "none") +
+  scale_x_discrete(labels = paste("C", 1:5)) +
+  scale_y_discrete(labels = paste("L", 1:5)) +
+  coord_fixed()
+```
 
-<!-- Croqui de um experimento em blocos casualizados com bordadura -->
-<!-- de contorno, 5 blocos, 4 tratamentos, parcela quadrada de 4 plantas úteis, sem -->
-<!-- bordadura entre elas, instalado em áreas antes utilizadas com adubação, com -->
-<!-- herbicida, em pousio e recém-desmatada (pg. 53). -->
 
-<!-- ] -->
-<!-- ] -->
 
-<!-- .pull-right-5[ -->
-<!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics("fig/class5/croqui2.png") -->
-<!-- ``` -->
-<!-- ] -->
+
+---
+
 
 
 <!-- --- -->
