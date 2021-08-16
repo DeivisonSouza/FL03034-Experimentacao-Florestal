@@ -153,11 +153,11 @@ layout: true
 
 3 - Fases da pesquisa experimental; 
 
-4 - Delineamento inteiramente casualizado - DIC; 
+4 - Delineamento Inteiramente Casualizado - DIC; 
 
 .orange[5 - Delineamento em Blocos Casualizados - DBC];
 
-6 - Delineamento em quadrado latino - DQL;
+6 - Delineamento em Quadrado Latino - DQL;
 
 7 - Testes de comparação de médias; 
 
