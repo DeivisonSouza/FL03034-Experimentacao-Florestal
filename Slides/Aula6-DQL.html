@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
+    <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xef75c0dd8984f43b30ab79bea7a15fa","expires":1}</script>
+    <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="Aula6-DQL_files/editable-0.2.6/editable.js"></script>
+    <script src="Aula6-DQL_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Aula6-DQL_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="Aula6-DQL_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="Aula6-DQL_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="Aula6-DQL_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 140px;
+height: 140px;
+z-index: 0;
+background-image: url(fig/slide-title/ufpa.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:.8em;right:-.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+
+
+
+
+
+
+
+
+
+&lt;!-- title-slide --&gt;
+# Experimentação Florestal &lt;br&gt; (FL03034 - EF)
+
+## Delineamento em &lt;br&gt; Quadrado Latino <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+
+#### **Prof. Dr. Deivison Venicio Souza**
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 16/agosto/2021
+##### Altamira, Pará
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Delineamento em Quadrado Latino&lt;/div2&gt; &lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+2 - Princípios básicos da experimentação; 
+
+3 - Fases da pesquisa experimental; 
+
+4 - Delineamento Inteiramente Casualizado - DIC; 
+
+5 - Delineamento em Blocos Casualizados - DBC;
+
+.orange[6 - Delineamento em Quadrado Latino - DQL];
+
+7 - Testes de comparação de médias; 
+
+8 - Ensaios Fatoriais;
+
+9 - Análise de correlação linear simples;
+
+10 - Análise de regressão linear simples e múltipla; e
+
+11 - Introdução à linguagem R para análise de experimentos.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+.font90[
+* Conhecer e entender os princípios básicos de experimentos em DQL.
+* Compreender o modelo estatístico de experimentos em DQL.
+* Aprender a realizar a Análise de Variância (ANOVA) de experimentos em DQL, e entender seus pressupostos.
+* Realizar análise de experimentos em DQL usando a linguagem de programação R.
+]
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font80[
+**Parte 1 - Delineamento em Quadrado Latino**
+
+[1 - Delineamento experimental - Conceito](#de)
+
+[2 - Principais delineamentos experimentais](#pde)
+
+[3 - Fontes de variações adicionais](#fv)
+
+[4 - Controle Local](#cl)
+
+[5 - Princípios básicos](#pb)
+
+[6 - Croqui de experimento em DQL - Exemplo](#croqui)
+
+[7 - Principais características](#carac)
+
+[8 - Representação genérica de tabela de dados](#tb)
+
+[9 - Análise de Variância - ANOVA](#dbcanova)
+
+[10 - Modelo Estatístico](#dbcmodelo)
+
+[11 - Somas de Quadrados - Fórmulas](#sq)
+
+[12 - Estatística F - Razão de variâncias](#testeF)
+
+[13 - Hipóteses estatísticas do teste F](#hip)
+
+[14 - Pressuposições da ANOVA](#press)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font80[
+**Parte 2 - Estudo de caso de experimentos em DQL**
+
+[1 - Competição de procedências florestais &lt;br&gt; (Pimentel-Gomes; Garcia, 2002)](#proc)
+
+&amp;nbsp;&amp;nbsp;[1.1 - ANOVA para experimento em DQL - Fator único](#anovadbc)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.1 - Graus de liberdade](#gl)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.2 - Somas de Quadrados](#sqex)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.3 - Quadradados Médios](#qm)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.4 - Estatística F](#estF)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
+
+[2 - Anova DBC no R](#anovaR)
+
+
+&lt;!-- [3 - Pacote ExpDes.pt](#expdes) --&gt;
+
+]
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 1] &lt;br&gt; .white[Delineamento em &lt;br&gt; Quadrado Latino]**] 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Delineamento em Quadrado Latino&lt;/div2&gt; &lt;/div&gt;
+
+---
+name: de
+## Delineamento Experimental
+
+--
+
+&lt;br&gt;&lt;br&gt;
+.shadow1[
+&lt;br&gt;
+.center[**Conceito**]
+
+É o modo como os tratamentos são designados às unidade (ou parcelas) experimentais (DIAS; BARROS, 2009).
+
+(...) o modo de dispor as parcelas no ensaio (PIMENTEL-GOMES; GARCIA, 2009).
+]
+
+---
+
+## Terminologias
+
+&lt;br&gt;
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
+&lt;br&gt;&lt;br&gt;
+
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+&lt;img src="https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+&lt;img src="https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Terminologias
+
+&lt;br&gt;
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+&lt;br&gt;
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+&lt;img src="https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;&lt;div style='font-size:50%'&gt;(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)&lt;/div&gt;
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
+
+---
+name: pde
+## Delineamento Experimental
+&lt;br&gt;
+
+Os principais delineamentos experimentais utilizados são:
+&lt;br&gt;&lt;br&gt;
+
+.pull-left-3[
+&lt;img src="fig/class1/img-PD.png" width="80%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-right-3[
+
+.font90[
+A homogeneidade (ou não) das condições experimentais (ambientais ou biológicas) direciona para a escolha do delinemento experimental mais adequado.
+
+]
+]
+
+---
+
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### Considerações gerais
+
+.pull-left-3[
+.font90[
+- É o tipo de delineamento experimental indicado quando existe duas .blue[causas (ou fontes de variações)] que deseja-se .blue[controlar] no experimento.
+- Essas fontes de variações, em experimentos de campo, podem ser: .blue[Fertilidade do solo, gradiente de umidade], etc.
+- Em experimentos de campo, o DQL é recomendado quando existe a necessidade de .blue[controlar a heterogeneidade em duas direções perpendiculares] (NOGUEIRA, 2007).
+]
+]
+
+---
+name: fv
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### Controle das fontes de variações adicionais
+&lt;br&gt;
+
+**Mas, porque é importante controlar as fontes de variações adicionais?**
+
+.pull-right-9[
+![dog+question](https://media1.giphy.com/media/xUNda8J2UVvxtN3bQA/giphy.gif) 
+]
+
+--
+
+.pull-left-9[
+.font80[
+- Fontes de variações adicionais (ou causas externas) têm efeito na variável resposta do experimento. 
+- Portanto, não controlar as causas externas pode .blue[mascarar as diferenças entre os tratamentos] e conduzir o pesquisador à conclusões equivocadas.
+- Assim, a ideia principal é .blue[evidenciar os efeitos dos tratamentos] nos dados da variável resposta.
+- Fazendo-se isso, estima-se a variância de 2 causas externas ao ensaio e, por conseguinte, elimina-se essa variância do erro experimental.
+]
+]
+
+
+
+---
+&lt;!-- name: cl --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Controle Local (CL) --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-3[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - É um princípio básico da experimentação. --&gt;
+&lt;!-- - O CL é uma estratégia para .blue[diminuir o efeito da heterogeneidade] (da área ou material experimental) sobre os dados da variável resposta. --&gt;
+&lt;!-- - Na prática, o CL consite na .blue[formação de grupos de parcelas o mais homogêneos possível] para o fator de controle. --&gt;
+&lt;!-- - Estes grupos homogêneos são denominados de .blue[blocos]. --&gt;
+&lt;!-- - Os .blue[tratamentos são sorteados] às unidades experimentais (ou parcelas) .blue[dentro de cada bloco]. --&gt;
+&lt;!-- - Portanto, em DBC .blue[cada bloco] constitui uma .blue[repetição]. --&gt;
+&lt;!-- - Em campo, os blocos são alocados perpendiculares ao gradiente de heterogeneidade. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: pb --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Princípios básicos --&gt;
+
+&lt;!-- .font90[ --&gt;
+&lt;!-- O DBC utiliza-se dos 3 princípios básicos da experimentação. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class1/PBE.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: croqui --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+
+&lt;!-- .pull-left-5[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- ### Croqui de experimento em DBC - Rossetti et al. (2017) --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- Croqui de um experimento em blocos casualizados, com 5 blocos --&gt;
+&lt;!-- retangulares, 4 tratamentos e 4 plantas úteis por parcela quadrada, sem --&gt;
+&lt;!-- bordadura entre parcelas e nem no contorno do experimento (pg. 40) --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-5[ --&gt;
+&lt;!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics("fig/class5/croqui1.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+
+&lt;!-- .pull-left-5[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- ### Croqui de experimento em DBC - Rossetti et al. (2017) --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- Croqui de um experimento em blocos casualizados com bordadura --&gt;
+&lt;!-- de contorno, 5 blocos, 4 tratamentos, parcela quadrada de 4 plantas úteis, sem --&gt;
+&lt;!-- bordadura entre elas, instalado em áreas antes utilizadas com adubação, com --&gt;
+&lt;!-- herbicida, em pousio e recém-desmatada (pg. 53). --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-5[ --&gt;
+&lt;!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics("fig/class5/croqui2.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+
+&lt;!-- .pull-left-5[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- ### Uma aplicação -  Marty et al. (2019) --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- **Periódico**: Plos One --&gt;
+
+&lt;!-- **Título**: Lowbush blueberry fruit yield and growth response to inorganic and organic N- fertilization when competing with two common weed species. --&gt;
+
+&lt;!-- **Fonte**: [Marty et al. (2019)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0226619) --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- .pull-right-5[ --&gt;
+&lt;!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics("fig/class5/block-ex.png") --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: carac --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Principais características --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/DBC-C.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: tb --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Representação genérica de tabela de dados --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- Para um experimento em DBC com **I** tratamentos (i = 1, 2, 3..., I) e **J** Blocos (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta: --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/DBC-Table.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- y&lt;sub&gt;1.&lt;/sub&gt;, y&lt;sub&gt;2.&lt;/sub&gt;, y&lt;sub&gt;3.&lt;/sub&gt;,..., y&lt;sub&gt;I.&lt;/sub&gt; = Soma dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- `\(\bar{y}_{1.}\)`, `\(\bar{y}_{2.}\)`, `\(\bar{y}_{3.}\)`,..., `\(\bar{y}_{I.}\)` = Média aritmética dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(\bar{y}_{..}\)` = Média geral --&gt;
+
+&lt;!-- y&lt;sub&gt;..&lt;/sub&gt; = Total geral --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- *I* = Número de tratamentos --&gt;
+
+&lt;!-- *J* = Número de blocos --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = representa cada dado da variável resposta y do *i*-ésimo tratamento no *j*-ésimo bloco (com i=1, ..., I e j = 1, ..., J.) --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: dbcanova --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Análise de Variância (ANOVA) - Conceito --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-right-5[ --&gt;
+&lt;!-- **Objetivo principal**: --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - Inferir se as médias da variável resposta y de três (ou mais) tratamentos são diferentes estatísticamente. --&gt;
+&lt;!-- - No caso do DBC, existem .blue[3 causas de variação]: 1) Entre tratamentos; 2) Entre blocos; e 3) Erro experimental. --&gt;
+&lt;!-- - A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de tratamentos. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Fontes de Variação no DBC --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \normalsize --&gt;
+&lt;!-- Variação~Total = \color{green}{Efeito~de~Tratamentos} + \color{blue}{Efeitos~de~Blocos} + \color{red}{Erro~Experimental} --&gt;
+&lt;!-- $$ --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Análise de Variância - Perguntas --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-2[ --&gt;
+&lt;!-- .font90[ --&gt;
+
+&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)? --&gt;
+
+&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre blocos**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)? --&gt;
+
+&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental? --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-1[ --&gt;
+&lt;!-- .shadow3[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- .center[**Efeito de blocos**] --&gt;
+&lt;!-- Por exemplo, o quanto da variação na variável resposta y é devido aos efeitos dos distintos níveis de fertilidade nos diferentes blocos? --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Análise de Variância - Quadro de experimentos em DBC --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/DBC-ANOVA.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- .pull-left-8[ --&gt;
+&lt;!-- .font70[ --&gt;
+&lt;!-- **SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos --&gt;
+
+&lt;!-- **SQB** = Soma de Quadrados de Blocos --&gt;
+
+&lt;!-- **SQR** = Soma de Quadrados de Resíduos --&gt;
+
+&lt;!-- **SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-8[ --&gt;
+&lt;!-- .font70[ --&gt;
+&lt;!-- **QMT** = Quadrado Médio de Tratamentos --&gt;
+
+&lt;!-- **QMR** = Quadrado Médio de Resíduos --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-8[ --&gt;
+&lt;!-- .font70[ --&gt;
+&lt;!-- `\(I\)` = número de tratamentos --&gt;
+
+&lt;!-- `\(J\)` = número de repetições --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- `\(\alpha\)` = nível de significância (0,01 ou 0,05). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: dbcmodelo --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Modelo Estatístico - DBC --&gt;
+
+&lt;!-- Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DBC é: --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- .shadow3C[ --&gt;
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; `\(= m + t{_i} + b{_j} + e_{ij}\)` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- Com i = 1, 2, ..., I e j = 1, 2, ..., J --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+
+&lt;!-- `\(m\)` = Uma constante. Representa a média geral. --&gt;
+
+&lt;!-- `\(t_{i}\)` = É o efeito do *i*-ésimo tratamento no valor y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta; --&gt;
+
+&lt;!-- `\(b_{i}\)` = É o efeito do *j*-ésimo bloco no valor y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta; e --&gt;
+
+&lt;!-- `\(e_{ij}\)` = É erro aleatório atribuído ao dado y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: sq --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- - **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)** --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTot.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTot2.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- \Large --&gt;
+&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2 --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2 --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- `\(I\)` = número de tratamentos --&gt;
+
+&lt;!-- `\(J\)` = número de blocos --&gt;
+
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- **O que significa?** (Nogueira, 2007) --&gt;
+
+&lt;!-- - A `\(SQ_{Total}\)` fornece a variação total dos dados da variável resposta no experimento. --&gt;
+&lt;!-- - Em outras palavras, mede o desvio de uma observação y&lt;sub&gt;ij&lt;/sub&gt; em relação à média amostral geral, sem se importar com qual tratamento ou bloco essa observação pertence. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- - **Soma de Quadrados de Tratamentos (SQ&lt;sub&gt;Trat.&lt;/sub&gt;)** --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTrat.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- **O que significa?** (Nogueira, 2007) --&gt;
+
+&lt;!-- - A SQ&lt;sub&gt;Trat.&lt;/sub&gt; representa a variação entre tratamentos. Isto é, mede a variabilidade entre as médias dos tratamentos. --&gt;
+&lt;!-- - Quanto menor a diferença entre as médias dos tratamentos menor será a SQ&lt;sub&gt;Trat.&lt;/sub&gt;. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2 --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- `\(I\)` = número de tratamentos --&gt;
+
+&lt;!-- `\(J\)` = número de blocos --&gt;
+
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- - **Soma de Quadrados de Blocos (SQB)** --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/SQB.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQB = \frac{1}{I}\sum_{j=1}^{J}\left ( \sum_{i=1}^{I}y_{ij} \right )^2 - \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}y_{ij} \right )^2 --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- `\(I\)` = número de tratamentos --&gt;
+
+&lt;!-- `\(J\)` = número de blocos --&gt;
+
+&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;!-- .pull-top[ --&gt;
+&lt;!-- .pull-left-4[ --&gt;
+&lt;!-- **Fator em comum (C)** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- - As equações `\(SQ_{Tot.}\)`, `\(SQ_{Trat.}\)` e `\(SQB\)` possuem uma expressão matemática em comum, denominada **Fator em Comum**. --&gt;
+&lt;!-- - A existência desse fator facilita os cálculos matemáticos das SQs. --&gt;
+&lt;!-- - É comum essas equações serem simplificadas pela letra "C" na parte em comum. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTot-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - {\color{Orange} \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTrat-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/SQB-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- &lt;!-- --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- SQB = \frac{1}{I}\sum_{j=1}^{J}\left ( \sum_{i=1}^{I}y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}y_{ij} \right )^2} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- --&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/FC.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+
+&lt;!-- - **Soma de Quadrados de Resíduos (SQR)** - (Ou erro experimental) --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- Sabe-se que: --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(\large SQ_{Tot.} = SQ_{Trat.} + SQB + SQR\)` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- Então, --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQB)\)` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-right-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+
+&lt;!-- `\(SQ_{Tot.}\)` = Soma de Quadrados Totais --&gt;
+
+&lt;!-- `\(SQ_{Trat.}\)` = Soma de Quadrados de Tratamentos --&gt;
+
+&lt;!-- `\(SQB\)` = Soma de Quadrados de Blocos --&gt;
+
+&lt;!-- `\(SQR\)` = Soma de Quadrados de Resíduos (ou Erro) --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: testeF --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Estatística F na ANOVA de DBC --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- - A **estatística F** é uma .blue[razão entre duas variâncias]. --&gt;
+&lt;!-- - A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios]. --&gt;
+&lt;!-- - Quadrado médio é simplesmente uma estimativa da variância populacional. --&gt;
+&lt;!-- - Na ANOVA de um fator em DBC a **estatística F** é a razão entre: `\(F = \dfrac{QM_{trat.}}{QMR}\)` --&gt;
+&lt;!-- - A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos). --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-right-5[ --&gt;
+&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre-se:** --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média. --&gt;
+&lt;!-- - Maiores valores indicam maior dispersão dos dados em relação à sua média. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: hip --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Hipóteses estatísticas do teste F --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- - Todos os possíveis contrastes, entre médias, são estatisticamente nulos. --&gt;
+&lt;!-- - As médias dos tratamentos são estatisticamente todas iguais entre si. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- - Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero. --&gt;
+&lt;!-- - Pelo menos dois tratamentos são estatisticamente diferentes entre si. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Teste da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) da estatística F --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **1° Passo**: Elaborar as hipóteses de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) e alternativa (H&lt;sub&gt;1&lt;/sub&gt;); --&gt;
+
+&lt;!-- **2° Passo**: Calcular o valor da estatística F, usando os valores de Quadrados Médios (QM&lt;sub&gt;trat.&lt;/sub&gt; e QMR) da ANOVA; --&gt;
+
+&lt;!-- **3° Passo**: Obter o valor crítico na tabela da distribuição F-Snedecor ( `\(F_{[\alpha;~(I-1);~(I-1)(J-1)]}\)`) para o nível de significância ( `\(\alpha\)` ) fixado; e --&gt;
+
+&lt;!-- **4° Passo**: Comparar o valor da estatística F com o valor F-Crítico. Em seguida, concluir quanto à rejeição ou não da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Regras de decisão da estatística F --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)** --&gt;
+
+&lt;!-- - Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;. --&gt;
+&lt;!-- - Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado. --&gt;
+
+&lt;!-- `\(F-calculado &gt; F-Crítico\)` --&gt;
+
+&lt;!-- `\(Rejeita-se~~H_0\)` --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Não rejeição da hipótese de nulidade** --&gt;
+
+&lt;!-- - Se o valor da .blue[estatística F] for **menor ou igual** do que o valor do F-Crítico, não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;. --&gt;
+&lt;!-- - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(F-calculado \leq F-Crítico\)` --&gt;
+
+&lt;!-- `\(Não~~rejeita-se~~H_0\)` --&gt;
+
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; da estatística F --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font90[ --&gt;
+&lt;!-- - Se o valor da Estatística F for maior do que o valor crítico da distribuição F-Snedecor têm-se a indicação de rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). --&gt;
+&lt;!-- - Isto é, é razoável admitir que existem evidências de que as médias dos tratamentos **não são todas estatísticamente iguais entre si**. --&gt;
+&lt;!-- - Apesar disso, a estatística F não possibilita identificar quais tratamentos diferem significativamente entre si. --&gt;
+&lt;!-- - Portanto, fica a pergunta: .blue[Quais tratamentos diferem, estatisticamente, em termos de suas médias?] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- **A reposta para essa pergunta são oferecidas por pós-testes de comparações de médias.** --&gt;
+
+&lt;!-- **Por exemplo, Teste de Tukey, Teste de Duncan, entre outros.** --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: press --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Pressuposições da ANOVA --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **1. Efeitos aditivos** --&gt;
+
+&lt;!-- Os efeitos do modelo devem ser aditivos. --&gt;
+
+&lt;!-- **2. Normalidade dos erros experimentais** --&gt;
+
+&lt;!-- Os erros experimentais (ou resíduos) devem ser normalmente distribuídos. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- **3. Independência dos erros experimentais** --&gt;
+
+&lt;!-- Os erros experimentais (ou resíduos) devem ser todos independentes. --&gt;
+
+&lt;!-- Esta suposição é, em geral, garantida por sorteio/casualização. --&gt;
+
+&lt;!-- **4. Homocedasticidade de variâncias dos erros experimentais** --&gt;
+
+&lt;!-- Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância. --&gt;
+
+&lt;!-- A importância reside na validação do teste F e testes de comparações de médias. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- layout: false --&gt;
+&lt;!-- name: proc --&gt;
+&lt;!-- class: inverse, top, right --&gt;
+&lt;!-- background-image: url(fig/class3/arara.jpg) --&gt;
+&lt;!-- background-size: cover --&gt;
+
+&lt;!-- .font200[**.yellow[Parte 2] &lt;br&gt; .white[Estudo de caso de &lt;br&gt; experimentos em DBC]**]  --&gt;
+
+&lt;!-- .left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- layout: true --&gt;
+&lt;!-- &lt;div class="my-header"&gt;&lt;/div&gt; --&gt;
+&lt;!-- &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Quadrado Latino&lt;/div&gt; --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font90[ --&gt;
+&lt;!-- Um experimento de competição de 7 procedências florestais de *Eucalyptus grandis* foi conduzido sob o Delineamento em Quadrado Latino (DBC), com 4 blocos. Os dados apresentados na tabela a seguir correspodem à produção de madeira, em m³/ha, nas parcelas experimentais. Assim, pede-se: --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- a) Elaborar as hipóteses da estatística F da ANOVA. --&gt;
+
+&lt;!-- b) Realizar a ANOVA do experimento. --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r tibble, echo=F, eval=T} --&gt;
+&lt;!-- data &lt;- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") --&gt;
+&lt;!-- data %&gt;% Customkbl --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- - **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Procedência. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- ```{r echo=F, eval=T, collapse=T, out.width="35%", fig.align='center', fig.cap='', dpi=600} --&gt;
+
+&lt;!-- df &lt;- data %&gt;% --&gt;
+&lt;!--   tidyr::pivot_longer( --&gt;
+&lt;!--         cols = starts_with("P"), --&gt;
+&lt;!--         names_to = "Procedencia", --&gt;
+&lt;!--         values_to = "Valor", --&gt;
+&lt;!--         names_transform = list(Procedencia = as.factor), --&gt;
+&lt;!--         values_drop_na = TRUE --&gt;
+&lt;!--     ) %&gt;% --&gt;
+&lt;!--   rename(Bloco = `Bloco/Procedencia`) %&gt;%  --&gt;
+&lt;!--   mutate(Procedencia = forcats::fct_reorder( --&gt;
+&lt;!--     Procedencia,  --&gt;
+&lt;!--     desc(Valor),  --&gt;
+&lt;!--     .fun='mean') --&gt;
+&lt;!--     ) --&gt;
+
+&lt;!-- df %&gt;% --&gt;
+&lt;!--   ggplot(aes(x=Procedencia, y=Valor, fill=Procedencia)) +  --&gt;
+&lt;!--   geom_dotplot(binaxis='y', stackdir='center') + --&gt;
+&lt;!--   stat_summary(fun.y=mean, geom="point", shape=18, --&gt;
+&lt;!--                  size=6, color="red") + --&gt;
+&lt;!--   theme_bw(base_size = 18) + --&gt;
+&lt;!--   theme(panel.grid = element_blank(), --&gt;
+&lt;!--         legend.position="none" --&gt;
+&lt;!--         ) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- ```{r echo=F, eval=T, collapse=T, fig.align='center', fig.cap='', dpi=600, fig.width=1, fig.height=.6} --&gt;
+
+&lt;!-- bp &lt;- df %&gt;% --&gt;
+&lt;!--   ggplot(aes(x=Procedencia, y=Valor, color=Procedencia)) + --&gt;
+&lt;!--   geom_boxplot() + --&gt;
+&lt;!--   stat_summary(fun.y=mean, geom="point", shape=4, --&gt;
+&lt;!--                  size=2, color="red") + --&gt;
+&lt;!--   theme_bw(base_size = 16) + --&gt;
+&lt;!--   theme(panel.grid = element_blank(), --&gt;
+&lt;!--         legend.position="none" --&gt;
+&lt;!--         ) --&gt;
+
+&lt;!-- plotly::ggplotly(bp) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Hipóteses da estatística F da ANOVA** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-11[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- - Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-11[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- - Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;) --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font90[ --&gt;
+&lt;!-- **Retornemos ao quadro de dados do experimento!** --&gt;
+
+&lt;!-- **Vamos inspecionar os valores observados de Volume de madeira para as diferentes procedências!** --&gt;
+
+&lt;!-- Pode-se constatar que os valores observados para Volume não são idênticos entre procedências e dentro de procedências. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-2[ --&gt;
+&lt;!-- ```{r t, echo=F, eval=T} --&gt;
+&lt;!-- data %&gt;% Customkbl --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-1[ --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- - Quais são as possíveis causas que explicam as variações nos valores observados? --&gt;
+&lt;!-- - Existe alguma procedência que apresentou maior produção volumétrica? --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: anovadbc --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- Inicialmente, vamos calcular as .blue[somas de tratamentos e blocos], e também a .blue[média aritmética de tratamentos] da variável resposta (volume de madeira por unidade de área). --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- ```{r tb1, echo=F, eval=T} --&gt;
+&lt;!-- library(dplyr) --&gt;
+&lt;!-- data &lt;- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") --&gt;
+
+&lt;!-- df0 &lt;- data %&gt;% janitor::adorn_totals(where = "col") --&gt;
+
+&lt;!-- df1 &lt;- df0 %&gt;%  --&gt;
+&lt;!--   bind_rows(df0 %&gt;% --&gt;
+&lt;!--             summarise_if(is.numeric, sum)) %&gt;%  --&gt;
+&lt;!--   mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Total", `Bloco/Procedencia`)) %&gt;%  --&gt;
+&lt;!--   mutate_if(is.numeric, round, 1) --&gt;
+
+&lt;!-- df2 &lt;- df1 %&gt;%  --&gt;
+&lt;!--   bind_rows(df1[-5,-9]%&gt;% --&gt;
+&lt;!--             summarise_if(is.numeric, mean)) %&gt;%  --&gt;
+&lt;!--   mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Média", `Bloco/Procedencia`)) %&gt;% --&gt;
+&lt;!--   mutate_if(is.numeric, round, 1) --&gt;
+
+&lt;!-- df2 %&gt;%  --&gt;
+&lt;!--   Customkbl %&gt;%  --&gt;
+&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
+&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
+&lt;!--   column_spec(9, color = 'white', background =  --&gt;
+&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
+&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
+&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+
+&lt;!-- .font90[ --&gt;
+&lt;!-- - Existe alguma procedência que apresentou maior produção volumétrica? --&gt;
+&lt;!-- - A resposta para esta pergunta será dada pela estatística F da ANOVA-DBC. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- **Então, vamos construir o quadro da ANOVA.** --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/DBC-ANOVA.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: gl --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/ANOVA-DBC-GL.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: sqex --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados. --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-top[ --&gt;
+&lt;!-- .pull-left-4[ --&gt;
+&lt;!-- **Fator em comum (C)** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - As equações `\(SQ_{Tot.}\)`, `\(SQ_{Trat.}\)` e `\(SQB\)` possuem uma expressão matemática em comum, denominada **Fator em Comum**. --&gt;
+&lt;!-- - A existência desse fator facilita os cálculos matemáticos das SQs. --&gt;
+&lt;!-- - É comum essas equações serem simplificadas pela letra "C" na parte em comum. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTot-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTrat-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/SQB-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/SQR.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- ```{r tb2, echo=F, eval=T} --&gt;
+&lt;!-- df2 %&gt;%  --&gt;
+&lt;!--   Customkbl %&gt;%  --&gt;
+&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
+&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
+&lt;!--   column_spec(9, color = 'white', background =  --&gt;
+&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
+&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
+&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 1.451 + 1.034 + ... + 1.276 = 7.709 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/Fator.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- C = \dfrac{\left( 7.709\right)^2}{7*4} = \dfrac{59.428.681}{28} = 2.122.452,892 --&gt;
+&lt;!-- $$ --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ&lt;sub&gt;Tot.&lt;/sub&gt;] --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- ```{r tb3, echo=F, eval=T} --&gt;
+&lt;!-- df2 %&gt;%  --&gt;
+&lt;!--   Customkbl %&gt;%  --&gt;
+&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
+&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
+&lt;!--   column_spec(9, color = 'white', background =  --&gt;
+&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
+&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
+&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 358^2 + 380^2 + 353^2 + ... + 319^2 = 2.182.735 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTot-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- SQ_{Tot.} = 2.182.735 - 2.122.452,892\\~\\ --&gt;
+&lt;!-- SQ_{Tot.} = 60.282,108 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ&lt;sub&gt;Trat.&lt;/sub&gt;] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- ```{r tb4, echo=F, eval=T} --&gt;
+&lt;!-- df2 %&gt;%  --&gt;
+&lt;!--   Customkbl %&gt;%  --&gt;
+&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
+&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
+&lt;!--   column_spec(9, color = 'white', background =  --&gt;
+&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
+&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
+&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \small --&gt;
+&lt;!-- \sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 1.451^2 + 1.034^2 + ... + 1.276^2 = 8.704.763 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- .pull-right-9[ --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class4/SQTrat-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- SQ_{trat.} = \dfrac{8.704.763}{4} - 2.122.452,892\\~\\ --&gt;
+&lt;!-- SQ_{trat.} = 53.737,858 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Blocos - SQB] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- ```{r tbx, echo=F, eval=T} --&gt;
+&lt;!-- df2 %&gt;%  --&gt;
+&lt;!--   Customkbl %&gt;%  --&gt;
+&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
+&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
+&lt;!--   column_spec(9, color = 'white', background =  --&gt;
+&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
+&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
+&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \small --&gt;
+&lt;!-- \sum_{j=1}^{J}\left ( \sum_{i=1}^{I}Y_{ij} \right )^2 = 2.024^2 + 1.885^2 + 1.950^2 + 1.850^2 = 14.874.801 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- .pull-right-9[ --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/SQB-cor.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- SQB = \dfrac{14.874.801}{7} - 2.122.452,892\\~\\ --&gt;
+&lt;!-- SQB = 2.518,679 --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQB)\)` --&gt;
+
+&lt;!-- `\(\large SQR = 60.282,108 - (53.737,858 + 2.518,679)\)` --&gt;
+
+&lt;!-- `\(\large SQR = 4.025,571\)` --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/ANOVA-DBC-SQ.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: qm --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-14[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- **Quadrado Médio de Tratamentos (Procedências) - Variância entre tratamentos** --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \small{ --&gt;
+&lt;!-- QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{53.737,858}{7-1}\\~\\ --&gt;
+&lt;!-- QM_{Trat.} = 8.956,309 --&gt;
+&lt;!-- } --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-left-14[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- **Quadrado Médio de Resíduos - Variância dentro de tratamentos** --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \small{ --&gt;
+&lt;!-- QMR = \dfrac{SQR}{(I-1)(J-1)} = \dfrac{4.025,571}{(7-1)(4-1)}\\~\\ --&gt;
+&lt;!-- QMR = 223,643 --&gt;
+&lt;!-- } --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+
+&lt;!-- .pull-right-14[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- **Quadrado Médio de Blocos - Variância entre blocos** --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- $$ --&gt;
+&lt;!-- \begin{equation*} --&gt;
+&lt;!-- \small{ --&gt;
+&lt;!-- QMB = \dfrac{SQB}{(J-1)} = \dfrac{2.518,679}{(4-1)}\\~\\ --&gt;
+&lt;!-- QMB = 839,559 --&gt;
+&lt;!-- } --&gt;
+&lt;!-- \end{equation*} --&gt;
+&lt;!-- $$ --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/ANOVA-DBC-QM.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: estF --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **4º Passo**: Determinar a estatística F --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+
+&lt;!-- `\(\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{8.956,309}{223,643} = 40,05\)` --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: fcrit --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+
+&lt;!-- **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância `\(\alpha\)` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- - O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas. --&gt;
+&lt;!-- - Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância `\(\alpha\)`. --&gt;
+&lt;!-- - Os níveis de significância ( `\(\alpha\)` ) mais usuais são: 0,01 (1%) e 0,05 (5%). --&gt;
+&lt;!-- - Neste exemplo, admitir-se-á `\(\alpha = 0,05\)` (ou 5%), conforme Pimentel-Gomes e Garcia (2002). --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância `\(\alpha\)` --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- .blue[**Vamos aprender a usar a tabela de distribuição F!**] --&gt;
+&lt;!-- - Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html) --&gt;
+&lt;!-- - O F-crítico para o experimento é: `\(F_{[6,~18;~0,05]} = 2,661\)` --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font80[**No R use a função qf() para encontrar o F-crítico**] --&gt;
+&lt;!-- ```{r, echo=T, eval=T} --&gt;
+&lt;!-- qf(0.05, 6, 18, lower.tail=FALSE) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- .blue[**Bônus: Explore mais aplicativos...**] --&gt;
+&lt;!-- - [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html) --&gt;
+&lt;!-- - [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html) --&gt;
+&lt;!-- - [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html) --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- **Finalmente, têm-se o quadro final da ANOVA de experimentos em DBC (Fator único)!** --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/ANOVA-DBC-Final.png') --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Hipóteses da estatística F da ANOVA - Conclusão** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-11[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-11[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- - Hipótese alternativa (H&lt;sub&gt;1&lt;/sub&gt;) --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-down[ --&gt;
+&lt;!-- .pull-left-10[ --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- `\(\normalsize F_{Calculado}~&gt;~F_{Crítico}~=~40,05~&gt;~2,661\)` --&gt;
+
+&lt;!-- **Conclusão**: .blue[**Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;**] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-10[ --&gt;
+
+&lt;!-- .shadow3[ --&gt;
+&lt;!-- .center[**Interpretação**] --&gt;
+
+&lt;!-- .font80[ --&gt;
+&lt;!-- - Como `\(\normalsize F_{Calculado}~&gt;~F_{Crítico}~(~40,05~&gt;~2,661)\)` rejeita-se a hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Procedências) diferem estatísticamente, ao nível de 5% de probabilidade. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- **O que fazer quando rejeita-se a hipótese de nulidade?** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- - Deve-se realizar pós-testes de comparações múltiplas de médias. --&gt;
+&lt;!-- - Os testes paramétricos mais famosos são: Tukey, Duncan, Dunnett, etc. --&gt;
+&lt;!-- - Esses testes realizam comparações par-a-par entre as médias dos tratamentos. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+
+&lt;!-- .center[.blue[**Mas, isso é tema para as próximas aulas!**]] --&gt;
+
+&lt;!-- --- --&gt;
+&lt;!-- name: anovaR --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- **ANOVA fator único usando a linguagem R** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .blue[**1- Ordenar dados no formato longo**] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r echo=T, eval=F} --&gt;
+&lt;!-- data &lt;- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") --&gt;
+
+&lt;!-- data_pivot &lt;- data %&gt;% --&gt;
+&lt;!--   tidyr::pivot_longer( --&gt;
+&lt;!--         cols = starts_with("P"), --&gt;
+&lt;!--         names_to = "Procedencia", --&gt;
+&lt;!--         values_to = "Valor", --&gt;
+&lt;!--         names_transform = list(Procedencia = as.factor), --&gt;
+&lt;!--         values_drop_na = TRUE --&gt;
+&lt;!--     ) %&gt;%  --&gt;
+&lt;!--   rename(Bloco = `Bloco/Procedencia`) %&gt;%  --&gt;
+&lt;!--   arrange(Procedencia, Bloco) --&gt;
+&lt;!-- ``` --&gt;
+
+
+&lt;!-- ```{r dt, echo=F, eval=F} --&gt;
+&lt;!-- data %&gt;% --&gt;
+&lt;!--     tidyr::pivot_longer( --&gt;
+&lt;!--         cols = starts_with("P"), --&gt;
+&lt;!--         names_to = "Procedencia", --&gt;
+&lt;!--         values_to = "Valor", --&gt;
+&lt;!--         names_transform = list(Procedencia = as.factor), --&gt;
+&lt;!--         values_drop_na = TRUE --&gt;
+&lt;!--     ) %&gt;%  --&gt;
+&lt;!--   rename(Bloco = `Bloco/Procedencia`) %&gt;%  --&gt;
+&lt;!--   arrange(Procedencia, Bloco) %&gt;%  --&gt;
+&lt;!--   CustomDT --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- ```{r ref.label="dt", echo=FALSE, eval=TRUE, collapse=T} --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .pull-left-9[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- **ANOVA fator único usando a linguagem R** --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- .blue[**2 - Realizar a ANOVA - Função aov()**] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=F,eval=TRUE} --&gt;
+&lt;!-- data_pivot &lt;- data %&gt;% --&gt;
+&lt;!--   tidyr::pivot_longer( --&gt;
+&lt;!--         cols = starts_with("P"), --&gt;
+&lt;!--         names_to = "Procedencia", --&gt;
+&lt;!--         values_to = "Valor", --&gt;
+&lt;!--         names_transform = list(Procedencia = as.factor), --&gt;
+&lt;!--         values_drop_na = TRUE --&gt;
+&lt;!--     ) %&gt;%  --&gt;
+&lt;!--   rename(Bloco = `Bloco/Procedencia`) %&gt;%  --&gt;
+&lt;!--   arrange(Procedencia, Bloco) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ```{r aov2, echo=T, eval=T} --&gt;
+&lt;!-- # Realizar a análise de variância --&gt;
+&lt;!-- res.aov &lt;- aov(Valor ~ Procedencia + Bloco, data = data_pivot) --&gt;
+&lt;!-- ``` --&gt;
+
+&lt;!-- ```{r echo=T, eval=T} --&gt;
+&lt;!-- # Resumo da análise de variância --&gt;
+&lt;!-- summary(res.aov) --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-right-9[ --&gt;
+&lt;!-- .shadow3[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- .center[**Interpretação**] --&gt;
+&lt;!-- - A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(&gt;F) é o p-valor da estatística F. Portanto, existem --&gt;
+&lt;!-- evidências de diferenças significativas entre as médias de produção volumétrica das procedências. --&gt;
+&lt;!-- - A hipótese H&lt;sub&gt;0&lt;/sub&gt; é rejeitada para `\(\alpha\)` &lt; 0,001 (altamente significativo). --&gt;
+&lt;!-- - Deve-se realizar pós-testes de comparações de médias. --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- --- --&gt;
+
+&lt;!-- ## Referências --&gt;
+&lt;!-- .font90[ --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+&lt;!-- ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... &amp; BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p. --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- &lt;!--Slide XX --&gt; --&gt;
+&lt;!-- --- --&gt;
+&lt;!-- layout: false --&gt;
+&lt;!-- class: inverse, top, right --&gt;
+&lt;!-- background-image: url(fig/class1/imgC.jpg) --&gt;
+&lt;!-- background-size: cover --&gt;
+
+&lt;!-- .font300[ --&gt;
+&lt;!-- Obrigado! --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- **Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt; --&gt;
+
+&lt;!-- **Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt; --&gt;
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

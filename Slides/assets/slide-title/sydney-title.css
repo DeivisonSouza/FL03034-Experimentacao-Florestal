@@ -22,7 +22,7 @@ To specify the margin of the first title h1
 */
 .remark-slide-content > h1:first-of-type {
   margin-top: 5px;
-  margin-bottom: 10px;
+  margin-bottom: -40px;
 }
 .remark-slide-content > h2:first-of-type {
   color: #e64626;
@@ -68,6 +68,14 @@ div.my-footer span {
     position: absolute;
     left: 15px;
     bottom: 5px;
+}
+
+div2 {
+  color: yellow;
+}
+
+div3 {
+  color: #99ffd6;
 }
 
 /*************************
@@ -565,6 +573,10 @@ slides > slide {
 /* Font size */
 .font100 {
   font-size: 100%;
+}
+
+.font120 {
+  font-size: 120%;
 }
 
 .font80 {
