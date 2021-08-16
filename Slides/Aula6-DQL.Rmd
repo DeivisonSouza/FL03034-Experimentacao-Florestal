@@ -453,21 +453,21 @@ Portanto, a restrição na casualização dos tratamentos pode ser organizada po
 ]
 
 ---
-<!-- name: pb -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+name: pb
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Princípios básicos -->
+### Princípios básicos
 
-<!-- .font90[ -->
-<!-- O DBC utiliza-se dos 3 princípios básicos da experimentação. -->
-<!-- ] -->
+.font90[
+O DQL utiliza dos 3 princípios básicos da experimentação.
+]
 
-<!-- ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class1/PBE.png') -->
-<!-- ``` -->
+```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class1/PBE.png')
+```
 
-<!-- --- -->
+---
 <!-- name: croqui -->
 <!-- ## Delineamento em Quadrado Latino -->
 
