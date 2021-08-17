@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x43d8979c9bd435ebb80d97feef30b25","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"da934c1571a544a4acb2acb0d6d6326d","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -174,7 +174,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [8 - Representação genérica de tabela de dados](#tb)
 
-[9 - Análise de Variância - ANOVA](#dbcanova)
+[9 - Análise de Variância - ANOVA](#dqlanova)
 
 [10 - Modelo Estatístico](#dbcmodelo)
 
@@ -683,9 +683,7 @@ E → 5
 ]
 ]
 
-
 ---
-
 name: carac
 ## Delineamento em Quadrado Latino
 &lt;br&gt;
@@ -693,87 +691,55 @@ name: carac
 ### Principais características
 &lt;br&gt;
 
-&lt;img src="fig/class5/DBC-C.png" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class6/DQL-C.png" width="50%" style="display: block; margin: auto;" /&gt;
 
-&lt;!-- --- --&gt;
-&lt;!-- name: tb --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+---
+name: dqlanova
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Representação genérica de tabela de dados --&gt;
+### Análise de Variância (ANOVA) - Conceito
+&lt;br&gt;
+.font90[
+É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+]
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- .pull-left-9[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- Para um experimento em DBC com **I** tratamentos (i = 1, 2, 3..., I) e **J** Blocos (j = 1, 2, 3..., J), tem-se a seguinte representação genérica para os dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta: --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+--
 
-&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class5/DBC-Table.png') --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- ] --&gt;
+.pull-right-5[
+**Objetivo principal**:
+.font80[
+- Inferir se as médias da variável resposta y de três (ou mais) tratamentos são diferentes estatísticamente.
+- No caso do DQL, existem .blue[4 causas de variação]: 1) Entre tratamentos; 2) Entre blocos-linhas; 3) Entre blocos-colunas; e 4) Erro experimental.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de tratamentos.
+]
+]
 
-&lt;!-- -- --&gt;
+---
 
-&lt;!-- .pull-right-9[ --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- y&lt;sub&gt;1.&lt;/sub&gt;, y&lt;sub&gt;2.&lt;/sub&gt;, y&lt;sub&gt;3.&lt;/sub&gt;,..., y&lt;sub&gt;I.&lt;/sub&gt; = Soma dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- `\(\bar{y}_{1.}\)`, `\(\bar{y}_{2.}\)`, `\(\bar{y}_{3.}\)`,..., `\(\bar{y}_{I.}\)` = Média aritmética dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+### Fontes de Variação no DQL
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- `\(\bar{y}_{..}\)` = Média geral --&gt;
+$$
+`\begin{equation*}
+Variação~Total \left\{\begin{matrix}
+\color{green}{Efeito~de~Tratamentos} \\
++\\
+\color{blue}{Efeitos~de~Blocos-Linhas} \\ 
++\\
+\color{orange}{Efeitos~de~Blocos-Colunas}\\
++\\
+\color{red}{Erro~Experimental}
+\end{matrix}\right.
+\end{equation*}`
+$$
 
-&lt;!-- y&lt;sub&gt;..&lt;/sub&gt; = Total geral --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
 
-&lt;!-- *I* = Número de tratamentos --&gt;
-
-&lt;!-- *J* = Número de blocos --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = representa cada dado da variável resposta y do *i*-ésimo tratamento no *j*-ésimo bloco (com i=1, ..., I e j = 1, ..., J.) --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- name: dbcanova --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Análise de Variância (ANOVA) - Conceito --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-
-&lt;!-- -- --&gt;
-
-&lt;!-- .pull-right-5[ --&gt;
-&lt;!-- **Objetivo principal**: --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- - Inferir se as médias da variável resposta y de três (ou mais) tratamentos são diferentes estatísticamente. --&gt;
-&lt;!-- - No caso do DBC, existem .blue[3 causas de variação]: 1) Entre tratamentos; 2) Entre blocos; e 3) Erro experimental. --&gt;
-&lt;!-- - A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de tratamentos. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Fontes de Variação no DBC --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-
-&lt;!-- $$ --&gt;
-&lt;!-- \normalsize --&gt;
-&lt;!-- Variação~Total = \color{green}{Efeito~de~Tratamentos} + \color{blue}{Efeitos~de~Blocos} + \color{red}{Erro~Experimental} --&gt;
-&lt;!-- $$ --&gt;
-
-&lt;!-- --- --&gt;
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
@@ -2147,6 +2113,47 @@ name: carac
 
 &lt;!-- **Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt; --&gt;
 
+
+&lt;!-- --- --&gt;
+&lt;!-- name: tb --&gt;
+&lt;!-- ## Delineamento em Quadrado Latino --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ### Representação genérica de tabela de dados --&gt;
+
+&lt;!-- .pull-left-2[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- Seja y&lt;sub&gt;ijk&lt;/sub&gt; a notação para representar o valor observado da variável resposta y do *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna, sendo *i*=*j*=*k*=1, 2,3 ..., *p*.  --&gt;
+
+&lt;!-- Uma representação genérica da tabela de dados é dada por: --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
+&lt;!-- knitr::include_graphics('fig/class5/DBC-Table.png') --&gt;
+&lt;!-- ``` --&gt;
+&lt;!-- ] --&gt;
+
+&lt;!-- -- --&gt;
+
+&lt;!-- .pull-right-1[ --&gt;
+&lt;!-- .font80[ --&gt;
+&lt;!-- y&lt;sub&gt;1.&lt;/sub&gt;, y&lt;sub&gt;2.&lt;/sub&gt;, y&lt;sub&gt;3.&lt;/sub&gt;,..., y&lt;sub&gt;I.&lt;/sub&gt; = Soma dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
+&lt;!-- &lt;br&gt; --&gt;
+
+&lt;!-- `\(\bar{y}_{1.}\)`, `\(\bar{y}_{2.}\)`, `\(\bar{y}_{3.}\)`,..., `\(\bar{y}_{I.}\)` = Média aritmética dos dados y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta y dentro do *i*-ésimo tratamento. --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- `\(\bar{y}_{..}\)` = Média geral --&gt;
+
+&lt;!-- y&lt;sub&gt;..&lt;/sub&gt; = Total geral --&gt;
+&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+
+&lt;!-- *I* = Número de tratamentos --&gt;
+
+&lt;!-- *J* = Número de blocos --&gt;
+&lt;!-- ] --&gt;
+&lt;!-- ] --&gt;
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
