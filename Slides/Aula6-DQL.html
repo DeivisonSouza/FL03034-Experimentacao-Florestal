@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x2667802a05f4ab7b22613a710b7c566","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"eb67c8abd11d4c6692ba090a44b6386c","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -98,7 +98,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 16/agosto/2021
+##### 17/agosto/2021
 ##### Altamira, Pará
 
 ---
@@ -425,6 +425,37 @@ O DQL utiliza dos 3 princípios básicos da experimentação.
 ---
 name: croqui
 ## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### Esquema de um experimento em DQL com 5 tratamentos
+
+
+.pull-left-4[
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-6-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-right-4[
+&lt;br&gt;
+.font90[
+A, B, C, D, E → Tratamentos
+
+C1, C2, C3, C4, C5  → Blocos-colunas
+
+L1, L2, L3, L4, L5 → Blocos-linhas
+&lt;br&gt;&lt;br&gt;
+
+- Cada tratamento deve aparecer apenas uma vez na linha e na coluna.
+- Tem-se 25 parcelas experimentais (N=I²), geradas pelo cruzamento de 5 linhas e 5 colunas.
+- Cada parcela experimental pode ser constituída por um grupo de indivíduos (plantas).
+]
+]
+
+---
+
+## Delineamento em Quadrado Latino
 
 .pull-left-5[
 .font80[
@@ -443,8 +474,19 @@ Croqui de um experimento em delineamento de quadrado latino 5x5 com bordadura de
 ---
 
 ## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-7-1.png" width="50%" style="display: block; margin: auto;" /&gt;
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+&lt;br&gt;
+
+Uma forma de realizar a casualização de tratamentos em DQL é apresentada por Nogueira (2007).
+&lt;br&gt;&lt;br&gt;
+
+Então, seja um experimento em DQL com cinco tratamentos (A, B, C, D e E), ter-se-ia:
+
+- 5 linhas (5 blocos no sentido horizontal), cada bloco com 5 parcelas experimentais;
+- 5 colunas (5 blocos no sentido vertical), cada bloco com 5 parcelas experimentais.
+
 
 
 

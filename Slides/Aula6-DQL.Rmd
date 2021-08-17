@@ -470,6 +470,69 @@ knitr::include_graphics('fig/class1/PBE.png')
 ---
 name: croqui
 ## Delineamento em Quadrado Latino
+<br>
+
+### Esquema de um experimento em DQL com 5 tratamentos
+
+
+.pull-left-4[
+```{r echo=F, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+lin <- rep(paste0("L", 1:5), times = 5)
+col <- rep(paste0("C", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "A", "E", "B", "D", "C",
+          "B", "A", "C", "E", "D",
+          "C", "B", "D", "A", "E",
+          "E", "D", "A", "C", "B")
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+# ggplot(da, aes(coluna, linha, fill = "white")) +
+#   geom_tile(aes(color = "black")) +
+#   scale_fill_identity() +
+
+df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "A", "red", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+```
+
+]
+
+--
+
+.pull-right-4[
+<br>
+.font90[
+A, B, C, D, E → Tratamentos
+
+C1, C2, C3, C4, C5  → Blocos-colunas
+
+L1, L2, L3, L4, L5 → Blocos-linhas
+<br><br>
+
+- Cada tratamento deve aparecer apenas uma vez na linha e na coluna.
+- Tem-se 25 parcelas experimentais (N=I²), geradas pelo cruzamento de 5 linhas e 5 colunas.
+- Cada parcela experimental pode ser constituída por um grupo de indivíduos (plantas).
+]
+]
+
+---
+
+## Delineamento em Quadrado Latino
 
 .pull-left-5[
 .font80[
@@ -490,24 +553,19 @@ knitr::include_graphics("fig/class6/croqui1.png")
 ---
 
 ## Delineamento em Quadrado Latino
+<br>
 
-```{r echo=F, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-da <- labestData::PimentelEg6.2
-ggplot(da, aes(coluna, linha, fill = "white")) +
-  geom_tile(aes(color = "black")) +
-  scale_fill_identity() +
-  labs(x = "Gradiente de Irrigação -->",
-       y = "Gradiente de Fertilidade -->") +
-  geom_text(mapping = aes(label = sprintf("%s", varied))) +
-  #theme_bw() +
-  theme(axis.title = element_text(size = 20),
-        axis.text = element_text(size = 12, color = "black"),
-  	    axis.title.y = element_text(angle = 90),
-        legend.position = "none") +
-  scale_x_discrete(labels = paste("C", 1:5)) +
-  scale_y_discrete(labels = paste("L", 1:5)) +
-  coord_fixed()
-```
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+Uma forma de realizar a casualização de tratamentos em DQL é apresentada por Nogueira (2007).
+<br><br>
+
+Então, seja um experimento em DQL com cinco tratamentos (A, B, C, D e E), ter-se-ia:
+
+- 5 linhas (5 blocos no sentido horizontal), cada bloco com 5 parcelas experimentais;
+- 5 colunas (5 blocos no sentido vertical), cada bloco com 5 parcelas experimentais.
+
 
 
 
