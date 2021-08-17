@@ -614,12 +614,19 @@ name: dbcanova
 ## Delineamento em Blocos Casualizados
 <br>
 
-### Fontes de Variação no DBC
+### Fontes de Variações no DBC
 <br><br>
 
 $$
-\normalsize
-Variação~Total = \color{green}{Efeito~de~Tratamentos} + \color{blue}{Efeitos~de~Blocos} + \color{red}{Erro~Experimental}
+\begin{equation*}
+Variação~Total \left\{\begin{matrix}
+\color{green}{Efeitos~de~Tratamentos} \\
++\\
+\color{blue}{Efeitos~de~Blocos} \\ 
++\\
+\color{red}{Erro~Experimental}
+\end{matrix}\right.
+\end{equation*}
 $$
 
 ---
