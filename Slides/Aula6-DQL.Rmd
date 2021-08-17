@@ -195,15 +195,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [1 - Delineamento experimental - Conceito](#de)
 
-[2 - Principais delineamentos experimentais](#pde)
+[2 - Fontes de variações adicionais](#fv)
 
-[3 - Fontes de variações adicionais](#fv)
+[3 - Controle Local](#cl)
 
-[4 - Controle Local](#cl)
+[4 - Princípios básicos](#pb)
 
-[5 - Princípios básicos](#pb)
+[5 - Croqui de experimento em DQL](#croqui)
 
-[6 - Croqui de experimento em DQL - Exemplo](#croqui)
+[6 - Casualização de tratamentos em DQL](#cas)
 
 [7 - Principais características](#carac)
 
@@ -477,21 +477,17 @@ name: croqui
 
 .pull-left-4[
 ```{r echo=F, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-lin <- rep(paste0("L", 1:5), times = 5)
-col <- rep(paste0("C", 1:5), each = 5)
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
 trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
           "A", "E", "B", "D", "C",
           "B", "A", "C", "E", "D",
-          "C", "B", "D", "A", "E",
-          "E", "D", "A", "C", "B")
+          "C", "B", "D", "A", "E")
 #val <- seq(1:25)
 df <- data.frame(lin, col, trat)
 
-# ggplot(da, aes(coluna, linha, fill = "white")) +
-#   geom_tile(aes(color = "black")) +
-#   scale_fill_identity() +
-
-df %>% ggplot(aes(col, lin, fill = "white")) +
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
   geom_tile(aes(color = "black"), size = 1, colour = "black") +
   scale_fill_identity() +
   labs(x = "\nGradiente de Umidade ---->",
@@ -508,6 +504,7 @@ df %>% ggplot(aes(col, lin, fill = "white")) +
         legend.position = "none",
         plot.background = element_blank()) +
   coord_fixed()
+)
 ```
 
 ]
@@ -551,7 +548,7 @@ knitr::include_graphics("fig/class6/croqui1.png")
 ]
 
 ---
-
+name: cas
 ## Delineamento em Quadrado Latino
 <br>
 
@@ -566,15 +563,38 @@ Então, seja um experimento em DQL com cinco tratamentos (A, B, C, D e E), ter-s
 - 5 linhas (5 blocos no sentido horizontal), cada bloco com 5 parcelas experimentais;
 - 5 colunas (5 blocos no sentido vertical), cada bloco com 5 parcelas experimentais.
 
+---
 
+## Delineamento em Quadrado Latino
+<br>
 
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
 
+**Vamos retornar ao croqui do experimento em DQL (5x5) apresentado anteriormente!**
+
+.pull-left-4[
+```{r echo=F, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+g1
+```
+]
+
+--
+
+.pull-right-4[
+.font80[
+- A aletorização dos tratamentos às parcelas experimentais foi realizada conforme estratégia apresentada por Nogueira, 2007.
+<br><br>
+
+.center[**Pergunta**]
+- Como os tratamentos (A, B, C, D e E) foram aleatorizados às parcelas experimentais? 
+- **Lembre-se**: Cada tratamento deve aparecer uma única vez na linha e na coluna.
+]
+]
 
 ---
 
 
-
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 
