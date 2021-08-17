@@ -912,6 +912,67 @@ df <- data.frame(lin, col, trat)
 
 ---
 
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+
+.pull-left-9[
+```{r echo=F, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
+          "A", "E", "B", "D", "C",
+          "B", "A", "C", "E", "D",
+          "C", "B", "D", "A", "E")
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = case_when(
+              trat == "A" ~ "red",
+              trat == "B" ~ "green",
+              trat == "C" ~ "blue",
+              trat == "D" ~ "black",
+              trat == "E" ~ "orange")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
+]
+
+
+.pull-right-9[
+
+.center[**Note**]
+
+- Cada tratamento apareceu uma única vez em cada linha e em cada coluna.
+- Nº de tratamentos = Nº de repetições = Nº de linhas = Nº de colunas
+
+
+
+]
+
+
+---
+
 <!-- ## Delineamento em Quadrado Latino -->
 
 <!-- .pull-left-5[ -->
