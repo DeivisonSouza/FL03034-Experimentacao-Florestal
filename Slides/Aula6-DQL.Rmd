@@ -965,7 +965,7 @@ df <- data.frame(lin, col, trat)
 
 .font80[
 - Cada tratamento apareceu uma única vez em cada linha e em cada coluna.
-- Nº de tratamentos = Nº de repetições = Nº de linhas = Nº de colunas.
+- N.º de tratamentos = N.º de repetições = N.º de linhas = N.º de colunas.
 - Número de parcelas experimentais é igual a número de tratamento ao quadrado (N=I²).
 - Todos os tratamentos foram dispostos à parcelas experimentais com diferentes níveis de fertilidade e umidade do solo.
 ]
@@ -1051,48 +1051,49 @@ $$
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Análise de Variância - Quadro de experimentos em DBC -->
-<!-- <br> -->
+### Quadro de Análise de Variância com aplicação do teste F
+<br>
 
-<!-- ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/DBC-ANOVA.png') -->
-<!-- ``` -->
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/DQL-ANOVA.png')
+```
 
-<!-- .pull-left-8[ -->
-<!-- .font70[ -->
-<!-- **SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos -->
+.pull-left-8[
+.font70[
+**SQ<sub>Trat.</sub>** = Soma de Quadrados de Tratamentos
 
-<!-- **SQB** = Soma de Quadrados de Blocos -->
+**SQL** = Soma de Quadrados de Blocos-Linhas
 
-<!-- **SQR** = Soma de Quadrados de Resíduos -->
+**SQC** = Soma de Quadrados de Blocos-Colunas
 
-<!-- **SQ<sub>Tot.</sub>** = Soma de Quadrados de Totais -->
-<!-- ] -->
-<!-- ] -->
+**SQR** = Soma de Quadrados de Resíduos
+]
+]
 
-<!-- .pull-left-8[ -->
-<!-- .font70[ -->
-<!-- **QMT** = Quadrado Médio de Tratamentos -->
+.pull-left-8[
+.font70[
 
-<!-- **QMR** = Quadrado Médio de Resíduos -->
-<!-- ] -->
-<!-- ] -->
+**SQ<sub>Tot.</sub>** = Soma de Quadrados de Totais
 
-<!-- .pull-left-8[ -->
-<!-- .font70[ -->
-<!-- $I$ = número de tratamentos -->
+**QMT** = Quadrado Médio de Tratamentos
 
-<!-- $J$ = número de repetições -->
-<!-- <br> -->
+**QMR** = Quadrado Médio de Resíduos
+]
+]
 
-<!-- $\alpha$ = nível de significância (0,01 ou 0,05). -->
-<!-- ] -->
-<!-- ] -->
+.pull-left-8[
+.font70[
+$p$ = n.º tratamentos = n.º linhas = n.º colunas
+<br>
 
-<!-- --- -->
+$\alpha$ = nível de significância (0,01 ou 0,05).
+]
+]
+
+---
 <!-- name: dbcmodelo -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->

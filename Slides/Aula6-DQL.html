@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f85b603bc1c44431a10548480b9173f7","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d10a4d565d9744a190aaf783ce5f7f15","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -677,7 +677,7 @@ E → 5
 
 .font80[
 - Cada tratamento apareceu uma única vez em cada linha e em cada coluna.
-- Nº de tratamentos = Nº de repetições = Nº de linhas = Nº de colunas.
+- N.º de tratamentos = N.º de repetições = N.º de linhas = N.º de colunas.
 - Número de parcelas experimentais é igual a número de tratamento ao quadrado (N=I²).
 - Todos os tratamentos foram dispostos à parcelas experimentais com diferentes níveis de fertilidade e umidade do solo.
 ]
@@ -761,48 +761,47 @@ $$
 
 ---
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Análise de Variância - Quadro de experimentos em DBC --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+### Quadro de Análise de Variância com aplicação do teste F
+&lt;br&gt;
 
-&lt;!-- ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class5/DBC-ANOVA.png') --&gt;
-&lt;!-- ``` --&gt;
+&lt;img src="fig/class6/DQL-ANOVA.png" width="65%" style="display: block; margin: auto;" /&gt;
 
-&lt;!-- .pull-left-8[ --&gt;
-&lt;!-- .font70[ --&gt;
-&lt;!-- **SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos --&gt;
+.pull-left-8[
+.font70[
+**SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
 
-&lt;!-- **SQB** = Soma de Quadrados de Blocos --&gt;
+**SQL** = Soma de Quadrados de Blocos-Linhas
 
-&lt;!-- **SQR** = Soma de Quadrados de Resíduos --&gt;
+**SQC** = Soma de Quadrados de Blocos-Colunas
 
-&lt;!-- **SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+**SQR** = Soma de Quadrados de Resíduos
+]
+]
 
-&lt;!-- .pull-left-8[ --&gt;
-&lt;!-- .font70[ --&gt;
-&lt;!-- **QMT** = Quadrado Médio de Tratamentos --&gt;
+.pull-left-8[
+.font70[
 
-&lt;!-- **QMR** = Quadrado Médio de Resíduos --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+**SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
 
-&lt;!-- .pull-left-8[ --&gt;
-&lt;!-- .font70[ --&gt;
-&lt;!-- `\(I\)` = número de tratamentos --&gt;
+**QMT** = Quadrado Médio de Tratamentos
 
-&lt;!-- `\(J\)` = número de repetições --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+**QMR** = Quadrado Médio de Resíduos
+]
+]
 
-&lt;!-- `\(\alpha\)` = nível de significância (0,01 ou 0,05). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+.pull-left-8[
+.font70[
+`\(p\)` = n.º tratamentos = n.º linhas = n.º colunas
+&lt;br&gt;
 
-&lt;!-- --- --&gt;
+`\(\alpha\)` = nível de significância (0,01 ou 0,05).
+]
+]
+
+---
 &lt;!-- name: dbcmodelo --&gt;
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
