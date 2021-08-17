@@ -624,7 +624,7 @@ Variação~Total \left\{\begin{matrix}
 +\\
 \color{blue}{Efeitos~de~Blocos} \\ 
 +\\
-\color{red}{Erro~Experimental}
+\color{red}{Erro~Experimental~(ou~Resíduo)}
 \end{matrix}\right.
 \end{equation*}
 $$
