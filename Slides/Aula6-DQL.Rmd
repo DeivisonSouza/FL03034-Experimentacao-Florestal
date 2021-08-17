@@ -211,7 +211,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [9 - Análise de Variância - ANOVA](#dqlanova)
 
-[10 - Modelo Estatístico](#dbcmodelo)
+[10 - Modelo Estatístico](#dqlmodelo)
 
 [11 - Somas de Quadrados - Fórmulas](#sq)
 
@@ -1094,46 +1094,48 @@ $\alpha$ = nível de significância (0,01 ou 0,05).
 ]
 
 ---
-<!-- name: dbcmodelo -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+name: dqlmodelo
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Modelo Estatístico - DBC -->
+### Modelo Estatístico - DQL
 
-<!-- Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DBC é: -->
-<!-- <br><br> -->
+Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DQL é:
+<br><br>
 
-<!-- .pull-left-9[ -->
-<!-- .shadow3C[ -->
-<!-- y<sub>ij</sub> $= m + t{_i} + b{_j} + e_{ij}$ -->
-<!-- ] -->
+.pull-left-9[
+.shadow3C[
+y<sub>ijk</sub> $= m + t{_k} + l{_i} + c{_j} + e_{ijk}$
+]
 
-<!-- <br> -->
-<!-- .font90[ -->
-<!-- Com i = 1, 2, ..., I e j = 1, 2, ..., J -->
-<!-- ] -->
+<br>
+.font90[
+Com i = j = k = 1, 2, ..., p
+]
 
-<!-- <br><br> -->
-<!-- .font80[ -->
-<!-- y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). -->
-<!-- ] -->
-<!-- ] -->
+<br><br>
+.font80[
+y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna.
+]
+]
 
 
-<!-- .pull-right-9[ -->
-<!-- .font80[ -->
+.pull-right-9[
+.font80[
 
-<!-- $m$ = Uma constante. Representa a média geral. -->
+$m$ = Uma constante. Representa a média geral.
 
-<!-- $t_{i}$ = É o efeito do *i*-ésimo tratamento no valor y<sub>ij</sub> da variável resposta; -->
+$t_{k}$ = É o efeito do *k*-ésimo tratamento no valor y<sub>ijk</sub> da variável resposta;
 
-<!-- $b_{i}$ = É o efeito do *j*-ésimo bloco no valor y<sub>ij</sub> da variável resposta; e -->
+$l_{i}$ = É o efeito do *i*-ésima linha (bloco-linha) no valor y<sub>ijk</sub> da variável resposta;
 
-<!-- $e_{ij}$ = É erro aleatório atribuído ao dado y<sub>ij</sub> da variável resposta. -->
-<!-- ] -->
-<!-- ] -->
+$c_{j}$ = É o efeito do *j*-ésima coluna (bloco-coluna) no valor y<sub>ijk</sub> da variável resposta; e
 
-<!-- --- -->
+$e_{ijk}$ = É erro aleatório atribuído ao dado y<sub>ijk</sub> da variável resposta.
+]
+]
+
+---
 <!-- name: sq -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->

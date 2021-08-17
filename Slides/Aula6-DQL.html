@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d10a4d565d9744a190aaf783ce5f7f15","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7ad874733ad44b8a798a6d8b736e1a8","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -176,7 +176,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [9 - Análise de Variância - ANOVA](#dqlanova)
 
-[10 - Modelo Estatístico](#dbcmodelo)
+[10 - Modelo Estatístico](#dqlmodelo)
 
 [11 - Somas de Quadrados - Fórmulas](#sq)
 
@@ -802,46 +802,48 @@ $$
 ]
 
 ---
-&lt;!-- name: dbcmodelo --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+name: dqlmodelo
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Modelo Estatístico - DBC --&gt;
+### Modelo Estatístico - DQL
 
-&lt;!-- Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DBC é: --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DQL é:
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- .pull-left-9[ --&gt;
-&lt;!-- .shadow3C[ --&gt;
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; `\(= m + t{_i} + b{_j} + e_{ij}\)` --&gt;
-&lt;!-- ] --&gt;
+.pull-left-9[
+.shadow3C[
+y&lt;sub&gt;ijk&lt;/sub&gt; `\(= m + t{_k} + l{_i} + c{_j} + e_{ijk}\)`
+]
 
-&lt;!-- &lt;br&gt; --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- Com i = 1, 2, ..., I e j = 1, 2, ..., J --&gt;
-&lt;!-- ] --&gt;
+&lt;br&gt;
+.font90[
+Com i = j = k = 1, 2, ..., p
+]
 
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+&lt;br&gt;&lt;br&gt;
+.font80[
+y&lt;sub&gt;ijk&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna.
+]
+]
 
 
-&lt;!-- .pull-right-9[ --&gt;
-&lt;!-- .font80[ --&gt;
+.pull-right-9[
+.font80[
 
-&lt;!-- `\(m\)` = Uma constante. Representa a média geral. --&gt;
+`\(m\)` = Uma constante. Representa a média geral.
 
-&lt;!-- `\(t_{i}\)` = É o efeito do *i*-ésimo tratamento no valor y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta; --&gt;
+`\(t_{k}\)` = É o efeito do *k*-ésimo tratamento no valor y&lt;sub&gt;ijk&lt;/sub&gt; da variável resposta;
 
-&lt;!-- `\(b_{i}\)` = É o efeito do *j*-ésimo bloco no valor y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta; e --&gt;
+`\(l_{i}\)` = É o efeito do *i*-ésima linha (bloco-linha) no valor y&lt;sub&gt;ijk&lt;/sub&gt; da variável resposta;
 
-&lt;!-- `\(e_{ij}\)` = É erro aleatório atribuído ao dado y&lt;sub&gt;ij&lt;/sub&gt; da variável resposta. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+`\(c_{j}\)` = É o efeito do *j*-ésima coluna (bloco-coluna) no valor y&lt;sub&gt;ijk&lt;/sub&gt; da variável resposta; e
 
-&lt;!-- --- --&gt;
+`\(e_{ijk}\)` = É erro aleatório atribuído ao dado y&lt;sub&gt;ijk&lt;/sub&gt; da variável resposta.
+]
+]
+
+---
 &lt;!-- name: sq --&gt;
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
