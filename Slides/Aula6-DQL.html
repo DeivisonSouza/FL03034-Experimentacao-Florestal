@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"da934c1571a544a4acb2acb0d6d6326d","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f85b603bc1c44431a10548480b9173f7","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -721,53 +721,45 @@ name: dqlanova
 ## Delineamento em Quadrado Latino
 &lt;br&gt;
 
-### Fontes de Variação no DQL
+### Fontes de Variações no DQL
 &lt;br&gt;&lt;br&gt;
 
 $$
 `\begin{equation*}
 Variação~Total \left\{\begin{matrix}
-\color{green}{Efeito~de~Tratamentos} \\
+\color{green}{Efeitos~de~Tratamentos} \\
 +\\
 \color{blue}{Efeitos~de~Blocos-Linhas} \\ 
 +\\
 \color{orange}{Efeitos~de~Blocos-Colunas}\\
 +\\
-\color{red}{Erro~Experimental}
+\color{red}{Erro~Experimental~(ou~Resíduo)}
 \end{matrix}\right.
 \end{equation*}`
 $$
 
-
 ---
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Análise de Variância - Perguntas --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+### Análise de Variância - Perguntas
+&lt;br&gt;
 
-&lt;!-- .pull-left-2[ --&gt;
-&lt;!-- .font90[ --&gt;
+.pull-left-2[
+.font80[
 
-&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)? --&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
 
-&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre blocos**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)? --&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre blocos-linhas**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos-linhas (**fator de controle ou de restrição para as linhas**)?
 
-&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental? --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Entre blocos-colunas**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos-colunas (**fator de controle ou de restrição para as colunas**)?
 
-&lt;!-- .pull-right-1[ --&gt;
-&lt;!-- .shadow3[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- .center[**Efeito de blocos**] --&gt;
-&lt;!-- Por exemplo, o quanto da variação na variável resposta y é devido aos efeitos dos distintos níveis de fertilidade nos diferentes blocos? --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+]
+]
 
-&lt;!-- --- --&gt;
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;

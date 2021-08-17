@@ -1017,47 +1017,39 @@ name: dqlanova
 $$
 \begin{equation*}
 Variação~Total \left\{\begin{matrix}
-\color{green}{Efeito~de~Tratamentos} \\
+\color{green}{Efeitos~de~Tratamentos} \\
 +\\
 \color{blue}{Efeitos~de~Blocos-Linhas} \\ 
 +\\
 \color{orange}{Efeitos~de~Blocos-Colunas}\\
 +\\
-\color{red}{Erro~Experimental}
+\color{red}{Erro~Experimental~(ou~Resíduo)}
 \end{matrix}\right.
 \end{equation*}
 $$
 
-
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Análise de Variância - Perguntas -->
-<!-- <br> -->
+### Análise de Variância - Perguntas
+<br>
 
-<!-- .pull-left-2[ -->
-<!-- .font90[ -->
+.pull-left-2[
+.font80[
 
-<!-- `r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)? -->
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre tratamentos**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
 
-<!-- `r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre blocos**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos (**fator de controle ou de restrição**)? -->
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre blocos-linhas**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos-linhas (**fator de controle ou de restrição para as linhas**)?
 
-<!-- `r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental? -->
-<!-- ] -->
-<!-- ] -->
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Entre blocos-colunas**]: O quanto da variação na variável resposta y (ou dependente) do experimento é devido aos efeitos dos blocos-colunas (**fator de controle ou de restrição para as colunas**)?
 
-<!-- .pull-right-1[ -->
-<!-- .shadow3[ -->
-<!-- .font90[ -->
-<!-- .center[**Efeito de blocos**] -->
-<!-- Por exemplo, o quanto da variação na variável resposta y é devido aos efeitos dos distintos níveis de fertilidade nos diferentes blocos? -->
-<!-- ] -->
-<!-- ] -->
-<!-- ] -->
+`r anicon::faa("hand-point-right", animate="horizontal")` .blue[**Erro experimental**]: O quanto da variação na variável resposta y (ou dependente) é devido aos efeitos dos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+]
+]
 
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
