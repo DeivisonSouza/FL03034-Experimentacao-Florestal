@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xaa833a4bce84aa1bc275009092d1487","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8342be009d944aaa2a31edd306fc3ab","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -526,9 +526,7 @@ Então, seja um experimento em DQL com cinco tratamentos (A, B, C, D e E), ter-s
 
 **2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna); e
 
-**3º Passo**: Para as demais linhas (ou colunas) o procedimento é o seguinte:
-
--  Para a 2ª linha os tratamentos serão distribuídos às parcelas, de modo que, o tratamento que será aplicado, na primeira coluna, seja aquele que recebeu um incremento igual a 1 (um) sobre o tratamento que foi aplicado na 1ª coluna da 1ª linha.
+**3º Passo**: Para as demasi linhas (ou colunas), incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci".
 ]
 
 ---
@@ -566,6 +564,97 @@ D → 4
 
 E → 5
 ]
+]
+
+---
+
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+&lt;br&gt;
+
+.pull-left-4[
+.font90[
+**2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna)
+
+- Neste 2º passo, suponha que os tratamentos foram sorteados às parcelas experimentais da .blue[1ª linha (L1)] - (Bloco-Linha L1). 
+- Realizado o sorteio, os tratamentos ficaram dispostos como no croqui ao lado.
+
+]
+]
+
+--
+
+.pull-right-4[
+
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-9-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+
+]
+
+
+---
+
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+&lt;br&gt;
+
+.pull-left-4[
+.font80[
+**3º Passo**: Incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci". (Usar os níveis estabelecidos no 1º passo)
+
+- Por exemplo, a parcela experimental da .blue[Linha L1] (Bloco-Linha 1) e .blue[Coluna C1] (Bloco-Coluna 1) recebeu aleatoriamnete o .blue[tratamento D].
+- Então, a parcela experimental da .blue[Linha L2] e .blue[Coluna C1] receberá o .blue[tratamento E]. 
+- Procedimento: (**D + 1 = 4 + 1 = 5**) → **Nível 5 = Tratamento E**
+
+
+
+]
+]
+
+--
+
+.pull-right-4[
+
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-10-1.png" width="75%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+&lt;br&gt;
+
+.pull-left-5[
+
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-11-1.png" width="95%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-left-5[
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-12-1.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-left-5[
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-13-1.png" width="95%" style="display: block; margin: auto;" /&gt;
+
+]
+
+--
+
+.pull-left-5[
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-14-1.png" width="95%" style="display: block; margin: auto;" /&gt;
+
 ]
 
 

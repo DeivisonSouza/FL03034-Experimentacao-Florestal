@@ -604,9 +604,7 @@ g1
 
 **2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna); e
 
-**3º Passo**: Para as demais linhas (ou colunas) o procedimento é o seguinte:
-
--  Para a 2ª linha os tratamentos serão distribuídos às parcelas, de modo que, o tratamento que será aplicado, na primeira coluna, seja aquele que recebeu um incremento igual a 1 (um) sobre o tratamento que foi aplicado na 1ª coluna da 1ª linha.
+**3º Passo**: Para as demasi linhas (ou colunas), incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci".
 ]
 
 ---
@@ -644,6 +642,271 @@ D → 4
 
 E → 5
 ]
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+.pull-left-4[
+.font90[
+**2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna)
+
+- Neste 2º passo, suponha que os tratamentos foram sorteados às parcelas experimentais da .blue[1ª linha (L1)] - (Bloco-Linha L1). 
+- Realizado o sorteio, os tratamentos ficaram dispostos como no croqui ao lado.
+
+]
+]
+
+--
+
+.pull-right-4[
+
+```{r echo=F, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA)
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
+
+]
+
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+.pull-left-4[
+.font80[
+**3º Passo**: Incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci". (Usar os níveis estabelecidos no 1º passo)
+
+- Por exemplo, a parcela experimental da .blue[Linha L1] (Bloco-Linha 1) e .blue[Coluna C1] (Bloco-Coluna 1) recebeu aleatoriamnete o .blue[tratamento D].
+- Então, a parcela experimental da .blue[Linha L2] e .blue[Coluna C1] receberá o .blue[tratamento E]. 
+- Procedimento: (**D + 1 = 4 + 1 = 5**) → **Nível 5 = Tratamento E**
+
+
+
+]
+]
+
+--
+
+.pull-right-4[
+
+```{r echo=F, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", NA, NA, NA, NA,
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA)
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+.pull-left-5[
+
+```{r echo=F, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA)
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+]
+
+--
+
+.pull-left-5[
+```{r echo=F, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
+          "A", "E", "B", "D", "C",
+          NA, NA, NA, NA, NA,
+          NA, NA, NA, NA, NA)
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
+]
+
+--
+
+.pull-left-5[
+```{r echo=F, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
+          "A", "E", "B", "D", "C",
+          "B", "A", "C", "E", "D",
+          NA, NA, NA, NA, NA)
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
+]
+
+--
+
+.pull-left-5[
+```{r echo=F, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+col <- rep(paste0("C", 1:5), times = 5)
+lin <- rep(paste0("L", 1:5), each = 5)
+trat <- c("D", "C", "E", "B", "A",
+          "E", "D", "A", "C", "B",
+          "A", "E", "B", "D", "C",
+          "B", "A", "C", "E", "D",
+          "C", "B", "D", "A", "E")
+#val <- seq(1:25)
+df <- data.frame(lin, col, trat)
+
+(g1 <- df %>% ggplot(aes(col, lin, fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "\nGradiente de Umidade ---->",
+       y = "Gradiente de Fertilidade ---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s", trat)), 
+            size = 8, fontface = "bold", colour = ifelse(trat == "NA", "white", "black")) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+  coord_fixed()
+)
+```
+
 ]
 
 
