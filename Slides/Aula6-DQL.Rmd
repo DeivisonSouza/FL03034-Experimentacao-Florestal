@@ -1136,58 +1136,59 @@ $e_{ijk}$ = É erro aleatório atribuído ao dado y<sub>ijk</sub> da variável r
 ]
 
 ---
-<!-- name: sq -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+name: sq
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### Soma de Quadrados - Fórmulas -->
+### Soma de Quadrados - Fórmulas
 
-<!-- .pull-left-9[ -->
-<!-- - **Soma de Quadrados Total (SQ<sub>Tot.</sub>)** -->
-<!-- <br><br> -->
+.pull-left-9[
+- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
+<br><br>
 
-<!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class4/SQTot.png') -->
-<!-- ``` -->
-<!-- <br> -->
+```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot.png')
+```
+<br>
 
-<!-- ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class4/SQTot2.png') -->
-<!-- ``` -->
-<!-- <!-- -->
-<!-- $$ -->
-<!-- \Large -->
-<!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2 -->
-<!-- $$ -->
-<!-- --> -->
+```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot2.png')
+```
 
-<!-- <!-- -->
-<!-- $$ -->
-<!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2 -->
-<!-- $$ -->
-<!-- --> -->
 
-<!-- ] -->
+$$
+\begin{equation}
+\Large
+SQ_{Tot.} = \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk}^2 - \frac{1}{p^2}\left ( \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk} \right )^2
+\end{equation}
+$$
 
-<!-- .pull-right-9[ -->
-<!-- .font80[ -->
-<!-- $I$ = número de tratamentos -->
 
-<!-- $J$ = número de blocos -->
+<!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2
+$$
+-->
 
-<!-- y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). -->
-<!-- ] -->
-<!-- <br> -->
+]
 
-<!-- .font80[ -->
-<!-- **O que significa?** (Nogueira, 2007) -->
+.pull-right-9[
+.font80[
+$p$ = n.º tratamentos = n.º linhas = n.º colunas
 
-<!-- - A $SQ_{Total}$ fornece a variação total dos dados da variável resposta no experimento. -->
-<!-- - Em outras palavras, mede o desvio de uma observação y<sub>ij</sub> em relação à média amostral geral, sem se importar com qual tratamento ou bloco essa observação pertence. -->
-<!-- ] -->
-<!-- ] -->
+y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna.
+]
+<br>
 
-<!-- --- -->
+.font80[
+**O que significa?**
+
+- A $SQ_{Total}$ fornece a variação total dos dados da variável resposta no experimento.
+- Em outras palavras, mede o desvio de uma observação y<sub>ijk</sub> em relação à média amostral geral, sem se importar com qual tratamento ou bloco (linha ou coluna) essa observação pertence.
+]
+]
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->

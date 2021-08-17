@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7ad874733ad44b8a798a6d8b736e1a8","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"daead52936944f028961c8e0f93679ec","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -844,58 +844,55 @@ y&lt;sub&gt;ijk&lt;/sub&gt; = Valor observado da variável resposta y na unidade
 ]
 
 ---
-&lt;!-- name: sq --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+name: sq
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+### Soma de Quadrados - Fórmulas
 
-&lt;!-- .pull-left-9[ --&gt;
-&lt;!-- - **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)** --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+.pull-left-9[
+- **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)**
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class4/SQTot.png') --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+&lt;img src="fig/class4/SQTot.png" width="75%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;
 
-&lt;!-- ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class4/SQTot2.png') --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- \Large --&gt;
-&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2 --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+&lt;img src="fig/class4/SQTot2.png" width="55%" style="display: block; margin: auto;" /&gt;
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2 --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
 
-&lt;!-- ] --&gt;
+$$
+`\begin{equation}
+\Large
+SQ_{Tot.} = \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk}^2 - \frac{1}{p^2}\left ( \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk} \right )^2
+\end{equation}`
+$$
 
-&lt;!-- .pull-right-9[ --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- `\(I\)` = número de tratamentos --&gt;
 
-&lt;!-- `\(J\)` = número de blocos --&gt;
+&lt;!--
+$$
+SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2
+$$
+--&gt;
 
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+]
 
-&lt;!-- .font80[ --&gt;
-&lt;!-- **O que significa?** (Nogueira, 2007) --&gt;
+.pull-right-9[
+.font80[
+`\(p\)` = n.º tratamentos = n.º linhas = n.º colunas
 
-&lt;!-- - A `\(SQ_{Total}\)` fornece a variação total dos dados da variável resposta no experimento. --&gt;
-&lt;!-- - Em outras palavras, mede o desvio de uma observação y&lt;sub&gt;ij&lt;/sub&gt; em relação à média amostral geral, sem se importar com qual tratamento ou bloco essa observação pertence. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+y&lt;sub&gt;ijk&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna.
+]
+&lt;br&gt;
 
-&lt;!-- --- --&gt;
+.font80[
+**O que significa?**
+
+- A `\(SQ_{Total}\)` fornece a variação total dos dados da variável resposta no experimento.
+- Em outras palavras, mede o desvio de uma observação y&lt;sub&gt;ijk&lt;/sub&gt; em relação à média amostral geral, sem se importar com qual tratamento ou bloco (linha ou coluna) essa observação pertence.
+]
+]
+
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
