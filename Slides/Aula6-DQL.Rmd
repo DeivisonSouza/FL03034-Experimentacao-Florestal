@@ -593,6 +593,59 @@ g1
 
 ---
 
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+.font90[
+**1º Passo**: Os tratamentos identificados pelas letras passam a ser identificados por níveis;
+
+**2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna); e
+
+**3º Passo**: Para as demais linhas (ou colunas) o procedimento é o seguinte:
+
+-  Para a 2ª linha os tratamentos serão distribuídos às parcelas, de modo que, o tratamento que será aplicado, na primeira coluna, seja aquele que recebeu um incremento igual a 1 (um) sobre o tratamento que foi aplicado na 1ª coluna da 1ª linha.
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Casualização dos tratamentos às unidades experimentais (Nogueira, 2007)]
+<br>
+
+.pull-left-4[
+.font90[
+**1º Passo**: Os tratamentos identificados pelas letras passam a ser identificados por níveis;
+
+- No exemplo, tem-se 5 tratamentos simbolizados por: .blue[A, B, C, D e E].
+- Estes tratamentos serão identificados pelos níveis: .blue[1, 2, 3, 4, 5].
+]
+]
+
+--
+
+.pull-right-4[
+.center[
+
+**Tratamento simbolizados por níveis**
+<br>
+
+A → 1
+
+B → 2
+
+C → 3
+
+D → 4
+
+E → 5
+]
+]
+
 
 ---
 
