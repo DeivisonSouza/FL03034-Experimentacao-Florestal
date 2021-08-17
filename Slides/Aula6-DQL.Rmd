@@ -963,49 +963,27 @@ df <- data.frame(lin, col, trat)
 
 .center[**Note**]
 
+.font80[
 - Cada tratamento apareceu uma única vez em cada linha e em cada coluna.
-- Nº de tratamentos = Nº de repetições = Nº de linhas = Nº de colunas
-
-
-
+- Nº de tratamentos = Nº de repetições = Nº de linhas = Nº de colunas.
+- Número de parcelas experimentais é igual a número de tratamento ao quadrado (N=I²).
+- Todos os tratamentos foram dispostos à parcelas experimentais com diferentes níveis de fertilidade e umidade do solo.
+]
 ]
 
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
+name: carac
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- .pull-left-5[ -->
-<!-- .font80[ -->
-<!-- ### Uma aplicação -  Marty et al. (2019) -->
-<!-- <br><br> -->
+### Principais características
+<br>
 
-<!-- **Periódico**: Plos One -->
-
-<!-- **Título**: Lowbush blueberry fruit yield and growth response to inorganic and organic N- fertilization when competing with two common weed species. -->
-
-<!-- **Fonte**: [Marty et al. (2019)](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0226619) -->
-<!-- ] -->
-<!-- ] -->
-<!-- <br><br> -->
-
-<!-- .pull-right-5[ -->
-<!-- ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics("fig/class5/block-ex.png") -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- --- -->
-<!-- name: carac -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
-
-<!-- ### Principais características -->
-<!-- <br> -->
-
-<!-- ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/DBC-C.png') -->
-<!-- ``` -->
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class5/DBC-C.png')
+```
 
 <!-- --- -->
 <!-- name: tb -->
