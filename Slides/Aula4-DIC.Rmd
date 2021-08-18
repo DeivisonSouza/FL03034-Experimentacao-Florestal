@@ -1530,7 +1530,8 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 - Hipótese de alternativa (H<sub>1</sub>)
 <br>
 
-**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo (DAP) para pelo menos duas progênies de *Eucalyptus saligna*.
+
 ]
 ]
 ]
