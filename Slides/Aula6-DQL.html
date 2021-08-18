@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x406776a6a4e4213b7cba5cc2843f6cd","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"e22a5aff57af4bb0a0f751e55df0cad0","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -206,7 +206,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [1 - Competição de procedências florestais &lt;br&gt; (Pimentel-Gomes; Garcia, 2002)](#proc)
 
-&amp;nbsp;&amp;nbsp;[1.1 - ANOVA para experimento em DQL - Fator único](#anovadbc)
+&amp;nbsp;&amp;nbsp;[1.1 - ANOVA para experimento em DQL - Fator único](#anovadql)
 
 &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.1.1 - Graus de liberdade](#gl)
 
@@ -1243,8 +1243,8 @@ plotly::ggplotly(bp)
 ]
 
 .pull-right-2[
-<div id="htmlwidget-1e935960a07a5264e291" style="width:600px;height:360px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1e935960a07a5264e291">{"x":{"data":[{"x":[1,1,1,1,1],"y":[83.86,64.93,78.59,70.61,99.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[103.51,59.63,52.64,77.7,43.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5,5],"y":[64.96,52.54,60.98,62.44,41.26],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"3","legendgroup":"3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[79.498,67.512,67.336,63.156,56.436],"text":["cult: 5<br />prod: 79.498<br />cult: red","cult: 1<br />prod: 67.512<br />cult: red","cult: 2<br />prod: 67.336<br />cult: red","cult: 4<br />prod: 63.156<br />cult: red","cult: 3<br />prod: 56.436<br />cult: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,5.6],"tickmode":"array","ticktext":["5","1","2","4","3"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["5","1","2","4","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Cultivar","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[25.3325,112.3975],"tickmode":"array","ticktext":["30","50","70","90","110"],"tickvals":[30,50,70,90,110],"categoryorder":"array","categoryarray":["30","50","70","90","110"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Produção","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"3c97b86b429":{"x":{},"y":{},"colour":{},"type":"box"},"3c973f77ad13":{"x":{},"y":{},"colour":{}}},"cur_data":"3c97b86b429","visdat":{"3c97b86b429":["function (y) ","x"],"3c973f77ad13":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-7c17c60573e170ad41ce" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7c17c60573e170ad41ce">{"x":{"data":[{"x":[1,1,1,1,1],"y":[83.86,64.93,78.59,70.61,99.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[103.51,59.63,52.64,77.7,43.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5,5],"y":[64.96,52.54,60.98,62.44,41.26],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"3","legendgroup":"3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[79.498,67.512,67.336,63.156,56.436],"text":["cult: 5<br />prod: 79.498<br />cult: red","cult: 1<br />prod: 67.512<br />cult: red","cult: 2<br />prod: 67.336<br />cult: red","cult: 4<br />prod: 63.156<br />cult: red","cult: 3<br />prod: 56.436<br />cult: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,5.6],"tickmode":"array","ticktext":["5","1","2","4","3"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["5","1","2","4","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Cultivar","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[25.3325,112.3975],"tickmode":"array","ticktext":["30","50","70","90","110"],"tickvals":[30,50,70,90,110],"categoryorder":"array","categoryarray":["30","50","70","90","110"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Produção","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"1a346d3e9ad5":{"x":{},"y":{},"colour":{},"type":"box"},"1a343b1e7dde":{"x":{},"y":{},"colour":{}}},"cur_data":"1a346d3e9ad5","visdat":{"1a346d3e9ad5":["function (y) ","x"],"1a343b1e7dde":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -1354,48 +1354,175 @@ plotly::ggplotly(bp)
 ]
 
 ---
-&lt;!-- name: anovadbc --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+name: anovadql
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
-&lt;!-- .font80[ --&gt;
-&lt;!-- Inicialmente, vamos calcular as .blue[somas de tratamentos e blocos], e também a .blue[média aritmética de tratamentos] da variável resposta (volume de madeira por unidade de área). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+.pull-left-1[
+.font80[
+Para os cálculos de somas de quadrados da ANOVA precisa-se:
+- .blue[Das somas de blocos-linhas]; 
+- .blue[Das somas de blocos-colunas]; e
+- Das somas de tratamentos (cultivar);
+]
+]
+&lt;br&gt;
 
-&lt;!-- -- --&gt;
+--
 
-&lt;!-- ```{r tb1, echo=F, eval=T} --&gt;
-&lt;!-- library(dplyr) --&gt;
-&lt;!-- data &lt;- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") --&gt;
+.pull-right-2[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; linha/coluna &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; C1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; C2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; C3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; C4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; C5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; Total &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; 1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 108.44 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 72.71 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 64.96 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 103.51 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 99.50 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 449.12 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; 2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 60.98 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 83.86 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 62.21 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 88.78 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 77.70 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 373.53 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; 3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 78.59 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 52.64 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 59.36 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 62.81 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 52.54 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 305.94 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; 4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 43.20 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 51.69 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 64.93 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 62.44 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 48.80 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;color: white !important;background-color: green !important;"&gt; 271.06 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;"&gt; 5 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 69.25 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 41.26 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 59.63 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 70.61 &lt;/td&gt;
+   &lt;td style="text-align:right;"&gt; 29.29 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: green !important;"&gt; 270.04 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Total &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 360.46 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 302.16 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 311.09 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 388.15 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 307.83 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;color: white !important;background-color: red !important;"&gt; 1669.69 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
 
-&lt;!-- df0 &lt;- data %&gt;% janitor::adorn_totals(where = "col") --&gt;
+---
 
-&lt;!-- df1 &lt;- df0 %&gt;%  --&gt;
-&lt;!--   bind_rows(df0 %&gt;% --&gt;
-&lt;!--             summarise_if(is.numeric, sum)) %&gt;%  --&gt;
-&lt;!--   mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Total", `Bloco/Procedencia`)) %&gt;%  --&gt;
-&lt;!--   mutate_if(is.numeric, round, 1) --&gt;
+name: anovadql
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- df2 &lt;- df1 %&gt;%  --&gt;
-&lt;!--   bind_rows(df1[-5,-9]%&gt;% --&gt;
-&lt;!--             summarise_if(is.numeric, mean)) %&gt;%  --&gt;
-&lt;!--   mutate(`Bloco/Procedencia` = ifelse(is.na(`Bloco/Procedencia`), "Média", `Bloco/Procedencia`)) %&gt;% --&gt;
-&lt;!--   mutate_if(is.numeric, round, 1) --&gt;
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
-&lt;!-- df2 %&gt;%  --&gt;
-&lt;!--   Customkbl %&gt;%  --&gt;
-&lt;!--   row_spec(5, color = 'white', background = 'orange') %&gt;%  --&gt;
-&lt;!--   row_spec(6, color = 'white', background = 'blue') %&gt;%  --&gt;
-&lt;!--   column_spec(9, color = 'white', background =  --&gt;
-&lt;!--                 case_when(is.na(df2$Total) ~ "white", --&gt;
-&lt;!--                              df2$Total &gt; 7000 ~ "red", --&gt;
-&lt;!--                              df2$Total &lt; 7000 ~ "green")) --&gt;
-&lt;!-- ``` --&gt;
+.pull-left-1[
+.font80[
+Para os cálculos de somas de quadrados da ANOVA precisa-se:
+- Das somas de blocos-linhas; 
+- Das somas de blocos-colunas; e
+- .blue[Das somas de tratamentos (cultivar)];
+]
+]
+&lt;br&gt;
 
-&lt;!-- --- --&gt;
+--
+
+.pull-right-2[
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; linha/coluna &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C1 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C2 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C3 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C4 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C5 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L1 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;108.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;72.71&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;64.96&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;103.51&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;99.5&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L2 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;60.98&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;83.86&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;62.21&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;88.78&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;77.7&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L3 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;78.59&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;52.64&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;62.81&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;52.54&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L4 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;43.2&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;51.69&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;64.93&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;62.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;48.8&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;"&gt; L5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;"&gt;69.25&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;"&gt;41.26&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;"&gt;59.63&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;"&gt;70.61&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: red !important;"&gt;29.29&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+]
+
+
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
