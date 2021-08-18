@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f37f9106685e411e8fa8c23ae0d83e7c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7a447dec8004ffbad97459f7a44356f","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -871,409 +871,188 @@ y&lt;sub&gt;ijk&lt;/sub&gt; = Valor observado da variável resposta y na unidade
 ]
 
 ---
-name: sq
+name: testeF
 ## Delineamento em Quadrado Latino
 &lt;br&gt;
 
-### Soma de Quadrados - Fórmulas
+### Estatística F da ANOVA em DQL
 
-.pull-left-9[
-- **Soma de Quadrados Total (SQ&lt;sub&gt;Tot.&lt;/sub&gt;)**
-&lt;br&gt;&lt;br&gt;
-
-&lt;img src="fig/class4/SQTot.png" width="75%" style="display: block; margin: auto;" /&gt;
-&lt;br&gt;
-
-&lt;img src="fig/class4/SQTot2.png" width="55%" style="display: block; margin: auto;" /&gt;
-
-
-$$
-`\begin{equation}
-\Large
-SQ_{Tot.} = \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk}^2 - \frac{1}{p^2}\left ( \sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk} \right )^2
-\end{equation}`
-$$
-
-
-&lt;!--
-$$
-SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}\left (y_{ij} - \bar{y}  \right )^2
-$$
---&gt;
+.font80[
+- A **estatística F** é uma .blue[razão entre duas variâncias].
+- A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios].
+- Quadrado médio é simplesmente uma estimativa da variância populacional.
+- Na ANOVA de um fator em DQL a **estatística F** é a razão entre: `\(F = \dfrac{QM_{trat.}}{QMR}\)`
+- A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos).
 
 ]
 
-.pull-right-9[
-.font80[
-`\(p\)` = n.º tratamentos = n.º linhas = n.º colunas
-
-y&lt;sub&gt;ijk&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna.
-]
 &lt;br&gt;
 
+.pull-right-5[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre-se:**
 .font80[
-**O que significa?**
+- Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média.
+- Maiores valores indicam maior dispersão dos dados em relação à sua média.
+]
+]
 
-- A `\(SQ_{Total}\)` fornece a variação total dos dados da variável resposta no experimento.
-- Em outras palavras, mede o desvio de uma observação y&lt;sub&gt;ijk&lt;/sub&gt; em relação à média amostral geral, sem se importar com qual tratamento ou bloco (linha ou coluna) essa observação pertence.
+---
+name: hip
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### Hipóteses estatísticas do teste F
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Todos os possíveis contrastes, entre médias, são estatisticamente nulos.
+- As médias dos tratamentos são estatisticamente todas iguais entre si.
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero.
+- Pelo menos dois tratamentos são estatisticamente diferentes entre si.
 ]
 ]
 
 ---
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+### Teste da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) da estatística F
+&lt;br&gt;
 
-&lt;!-- .pull-left-9[ --&gt;
-&lt;!-- - **Soma de Quadrados de Tratamentos (SQ&lt;sub&gt;Trat.&lt;/sub&gt;)** --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+**1° Passo**: Elaborar as hipóteses de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) e alternativa (H&lt;sub&gt;1&lt;/sub&gt;);
 
-&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class4/SQTrat.png') --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+**2° Passo**: Calcular o valor da estatística F, usando os valores de Quadrados Médios (QM&lt;sub&gt;trat.&lt;/sub&gt; e QMR) da ANOVA;
 
-&lt;!-- .font80[ --&gt;
-&lt;!-- **O que significa?** (Nogueira, 2007) --&gt;
+**3° Passo**: Obter o valor crítico na tabela da distribuição F-Snedecor ( `\(F_{[\alpha;~(p-1);~(p-1)(p-2)]}\)`) para o nível de significância ( `\(\alpha\)` ) fixado; e
 
-&lt;!-- - A SQ&lt;sub&gt;Trat.&lt;/sub&gt; representa a variação entre tratamentos. Isto é, mede a variabilidade entre as médias dos tratamentos. --&gt;
-&lt;!-- - Quanto menor a diferença entre as médias dos tratamentos menor será a SQ&lt;sub&gt;Trat.&lt;/sub&gt;. --&gt;
-&lt;!-- ] --&gt;
+**4° Passo**: Comparar o valor da estatística F com o valor F-Crítico. Em seguida, concluir quanto à rejeição ou não da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2 --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+---
 
-&lt;!-- ] --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- .pull-right-9[ --&gt;
+### Regras de decisão da estatística F
+&lt;br&gt;
 
-&lt;!-- .font80[ --&gt;
-&lt;!-- `\(I\)` = número de tratamentos --&gt;
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
 
-&lt;!-- `\(J\)` = número de blocos --&gt;
+- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado.
 
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+`\(F-calculado &gt; F-Crítico\)`
 
-&lt;!-- --- --&gt;
+`\(Rejeita-se~~H_0\)`
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+]
+]
 
-&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
 
-&lt;!-- .pull-left-9[ --&gt;
-&lt;!-- - **Soma de Quadrados de Blocos (SQB)** --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+- Se o valor da .blue[estatística F] for **menor ou igual** do que o valor do F-Crítico, não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado.
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class5/SQB.png') --&gt;
-&lt;!-- ``` --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+`\(F-calculado \leq F-Crítico\)`
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQB = \frac{1}{I}\sum_{j=1}^{J}\left ( \sum_{i=1}^{I}y_{ij} \right )^2 - \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}y_{ij} \right )^2 --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+`\(Não~~rejeita-se~~H_0\)`
 
-&lt;!-- ] --&gt;
+]
+]
 
-&lt;!-- .pull-right-9[ --&gt;
+---
 
-&lt;!-- .font80[ --&gt;
-&lt;!-- `\(I\)` = número de tratamentos --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- `\(J\)` = número de blocos --&gt;
+### Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; da estatística F
+&lt;br&gt;
 
-&lt;!-- y&lt;sub&gt;ij&lt;/sub&gt; = Valor observado da variável resposta y na unidade experimental (ou parcela) que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) no *j*-ésimo bloco (*j* = 1, 2, ..., J). --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+.font90[
+- Se o valor da Estatística F for maior do que o valor crítico da distribuição F-Snedecor têm-se a indicação de rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
+- Isto é, é razoável admitir que existem evidências de que as médias dos tratamentos **não são todas estatísticamente iguais entre si**.
+- Apesar disso, a estatística F não possibilita identificar quais tratamentos diferem significativamente entre si.
+- Portanto, fica a pergunta: .blue[Quais tratamentos diferem, estatisticamente, em termos de suas médias?]
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- --- --&gt;
+**A reposta para essa pergunta são oferecidas por pós-testes de comparações de médias.**
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+**Por exemplo, Teste de Tukey, Teste de Duncan, entre outros.**
 
-&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-&lt;!-- .pull-top[ --&gt;
-&lt;!-- .pull-left-4[ --&gt;
-&lt;!-- **Fator em comum (C)** --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- - As equações `\(SQ_{Tot.}\)`, `\(SQ_{Trat.}\)` e `\(SQB\)` possuem uma expressão matemática em comum, denominada **Fator em Comum**. --&gt;
-&lt;!-- - A existência desse fator facilita os cálculos matemáticos das SQs. --&gt;
-&lt;!-- - É comum essas equações serem simplificadas pela letra "C" na parte em comum. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+]
 
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class4/SQTot-cor.png') --&gt;
-&lt;!-- ``` --&gt;
+---
+name: press
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQ_{Tot.} = \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 - {\color{Orange} \frac{1}{I.J}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2} --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+### Pressuposições da ANOVA
+&lt;br&gt;
 
-&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class4/SQTrat-cor.png') --&gt;
-&lt;!-- ``` --&gt;
+.pull-left-10[
+.font90[
+**1. Efeitos aditivos**
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQ_{Trat.} = \frac{1}{J}\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} \right )^2} --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+Os efeitos do modelo devem ser aditivos.
 
-&lt;!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class5/SQB-cor.png') --&gt;
-&lt;!-- ``` --&gt;
+**2. Normalidade dos erros experimentais**
 
-&lt;!-- &lt;!-- --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- SQB = \frac{1}{I}\sum_{j=1}^{J}\left ( \sum_{i=1}^{I}y_{ij} \right )^2 - {\color{Orange} \frac{1}{IJ}\left ( \sum_{i=1}^{I}\sum_{j=1}^{J}y_{ij} \right )^2} --&gt;
-&lt;!-- $$ --&gt;
-&lt;!-- --&gt; --&gt;
+Os erros experimentais (ou resíduos) devem ser normalmente distribuídos.
+]
+]
 
-&lt;!-- ```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600} --&gt;
-&lt;!-- knitr::include_graphics('fig/class5/FC.png') --&gt;
-&lt;!-- ``` --&gt;
+.pull-left-10[
+.font90[
+**3. Independência dos erros experimentais**
 
-&lt;!-- ] --&gt;
+Os erros experimentais (ou resíduos) devem ser todos independentes.
 
-&lt;!-- --- --&gt;
+Esta suposição é, em geral, garantida por sorteio/casualização.
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+**4. Homocedasticidade de variâncias dos erros experimentais**
 
-&lt;!-- ### Soma de Quadrados - Fórmulas --&gt;
+Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância.
 
-&lt;!-- - **Soma de Quadrados de Resíduos (SQR)** - (Ou erro experimental) --&gt;
+A importância reside na validação do teste F e testes de comparações de médias.
+]
+]
 
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- Sabe-se que: --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+---
 
-&lt;!-- `\(\large SQ_{Tot.} = SQ_{Trat.} + SQB + SQR\)` --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+layout: false
+name: proc
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
 
-&lt;!-- Então, --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+.font200[**.yellow[Parte 2] &lt;br&gt; .white[Estudo de caso de &lt;br&gt; experimentos em DQL]**]
 
-&lt;!-- `\(\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQB)\)` --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
 
-&lt;!-- -- --&gt;
+---
 
-&lt;!-- .pull-right-10[ --&gt;
-&lt;!-- .font90[ --&gt;
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Delineamento em Quadrado Latino&lt;/div2&gt; &lt;/div&gt;
 
-&lt;!-- `\(SQ_{Tot.}\)` = Soma de Quadrados Totais --&gt;
-
-&lt;!-- `\(SQ_{Trat.}\)` = Soma de Quadrados de Tratamentos --&gt;
-
-&lt;!-- `\(SQB\)` = Soma de Quadrados de Blocos --&gt;
-
-&lt;!-- `\(SQR\)` = Soma de Quadrados de Resíduos (ou Erro) --&gt;
-
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- name: testeF --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Estatística F na ANOVA de DBC --&gt;
-
-&lt;!-- .font80[ --&gt;
-&lt;!-- - A **estatística F** é uma .blue[razão entre duas variâncias]. --&gt;
-&lt;!-- - A **estatística F** na ANOVA é baseada na razão entre .blue[Quadrados Médios]. --&gt;
-&lt;!-- - Quadrado médio é simplesmente uma estimativa da variância populacional. --&gt;
-&lt;!-- - Na ANOVA de um fator em DBC a **estatística F** é a razão entre: `\(F = \dfrac{QM_{trat.}}{QMR}\)` --&gt;
-&lt;!-- - A **estatística F** na ANOVA é usada para avaliar se a variância entre grupos (entre tratamentos) é maior do que a variância dos dados dentro dos grupos (dentro dos tratamentos). --&gt;
-
-&lt;!-- ] --&gt;
-
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .pull-right-5[ --&gt;
-&lt;!-- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre-se:** --&gt;
-&lt;!-- .font80[ --&gt;
-&lt;!-- - Variância é uma medida (estimada ou verdadeira) da dispersão dos dados de uma variável em relação à sua média. --&gt;
-&lt;!-- - Maiores valores indicam maior dispersão dos dados em relação à sua média. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- name: hip --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Hipóteses estatísticas do teste F --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):** --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- - Todos os possíveis contrastes, entre médias, são estatisticamente nulos. --&gt;
-&lt;!-- - As médias dos tratamentos são estatisticamente todas iguais entre si. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):** --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- - Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero. --&gt;
-&lt;!-- - Pelo menos dois tratamentos são estatisticamente diferentes entre si. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Teste da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) da estatística F --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- **1° Passo**: Elaborar as hipóteses de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) e alternativa (H&lt;sub&gt;1&lt;/sub&gt;); --&gt;
-
-&lt;!-- **2° Passo**: Calcular o valor da estatística F, usando os valores de Quadrados Médios (QM&lt;sub&gt;trat.&lt;/sub&gt; e QMR) da ANOVA; --&gt;
-
-&lt;!-- **3° Passo**: Obter o valor crítico na tabela da distribuição F-Snedecor ( `\(F_{[\alpha;~(I-1);~(I-1)(J-1)]}\)`) para o nível de significância ( `\(\alpha\)` ) fixado; e --&gt;
-
-&lt;!-- **4° Passo**: Comparar o valor da estatística F com o valor F-Crítico. Em seguida, concluir quanto à rejeição ou não da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Regras de decisão da estatística F --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)** --&gt;
-
-&lt;!-- - Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;. --&gt;
-&lt;!-- - Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado. --&gt;
-
-&lt;!-- `\(F-calculado &gt; F-Crítico\)` --&gt;
-
-&lt;!-- `\(Rejeita-se~~H_0\)` --&gt;
-
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-right-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **Não rejeição da hipótese de nulidade** --&gt;
-
-&lt;!-- - Se o valor da .blue[estatística F] for **menor ou igual** do que o valor do F-Crítico, não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;. --&gt;
-&lt;!-- - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado. --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-
-&lt;!-- `\(F-calculado \leq F-Crítico\)` --&gt;
-
-&lt;!-- `\(Não~~rejeita-se~~H_0\)` --&gt;
-
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; da estatística F --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .font90[ --&gt;
-&lt;!-- - Se o valor da Estatística F for maior do que o valor crítico da distribuição F-Snedecor têm-se a indicação de rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). --&gt;
-&lt;!-- - Isto é, é razoável admitir que existem evidências de que as médias dos tratamentos **não são todas estatísticamente iguais entre si**. --&gt;
-&lt;!-- - Apesar disso, a estatística F não possibilita identificar quais tratamentos diferem significativamente entre si. --&gt;
-&lt;!-- - Portanto, fica a pergunta: .blue[Quais tratamentos diferem, estatisticamente, em termos de suas médias?] --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
-
-&lt;!-- **A reposta para essa pergunta são oferecidas por pós-testes de comparações de médias.** --&gt;
-
-&lt;!-- **Por exemplo, Teste de Tukey, Teste de Duncan, entre outros.** --&gt;
-
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- name: press --&gt;
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- ### Pressuposições da ANOVA --&gt;
-&lt;!-- &lt;br&gt; --&gt;
-
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **1. Efeitos aditivos** --&gt;
-
-&lt;!-- Os efeitos do modelo devem ser aditivos. --&gt;
-
-&lt;!-- **2. Normalidade dos erros experimentais** --&gt;
-
-&lt;!-- Os erros experimentais (ou resíduos) devem ser normalmente distribuídos. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- .pull-left-10[ --&gt;
-&lt;!-- .font90[ --&gt;
-&lt;!-- **3. Independência dos erros experimentais** --&gt;
-
-&lt;!-- Os erros experimentais (ou resíduos) devem ser todos independentes. --&gt;
-
-&lt;!-- Esta suposição é, em geral, garantida por sorteio/casualização. --&gt;
-
-&lt;!-- **4. Homocedasticidade de variâncias dos erros experimentais** --&gt;
-
-&lt;!-- Os erros experimentais (ou resíduos) devem possuir homogeneidade de variância. --&gt;
-
-&lt;!-- A importância reside na validação do teste F e testes de comparações de médias. --&gt;
-&lt;!-- ] --&gt;
-&lt;!-- ] --&gt;
-
-&lt;!-- --- --&gt;
-
-&lt;!-- layout: false --&gt;
-&lt;!-- name: proc --&gt;
-&lt;!-- class: inverse, top, right --&gt;
-&lt;!-- background-image: url(fig/class3/arara.jpg) --&gt;
-&lt;!-- background-size: cover --&gt;
-
-&lt;!-- .font200[**.yellow[Parte 2] &lt;br&gt; .white[Estudo de caso de &lt;br&gt; experimentos em DBC]**]  --&gt;
-
-&lt;!-- .left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]] --&gt;
-
-&lt;!-- --- --&gt;
-&lt;!-- layout: true --&gt;
-&lt;!-- &lt;div class="my-header"&gt;&lt;/div&gt; --&gt;
-&lt;!-- &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento em Quadrado Latino&lt;/div&gt; --&gt;
-
-&lt;!-- --- --&gt;
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
