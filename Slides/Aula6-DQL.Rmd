@@ -1563,35 +1563,30 @@ plotly::ggplotly(bp)
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- .font90[ -->
-<!-- **Retornemos ao quadro de dados do experimento!** -->
+.font90[
+**Vamos inspecionar os valores observados de produção de cacau para as diferentes cultivares!**
+]
+<br>
 
-<!-- **Vamos inspecionar os valores observados de Volume de madeira para as diferentes procedências!** -->
+.pull-left-2[
+```{r echo=F, eval=T}
+df2 %>% Customkbl
+```
+]
 
-<!-- Pode-se constatar que os valores observados para Volume não são idênticos entre procedências e dentro de procedências. -->
-<!-- ] -->
-<!-- <br> -->
+.pull-right-1[
+.font90[
+- Existe alguma cultivar que apresentou maior produção de cacau por unidade de área?
+]
+]
 
-<!-- .pull-left-2[ -->
-<!-- ```{r t, echo=F, eval=T} -->
-<!-- data %>% Customkbl -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- .pull-right-1[ -->
-<!-- .font90[ -->
-<!-- - Quais são as possíveis causas que explicam as variações nos valores observados? -->
-<!-- - Existe alguma procedência que apresentou maior produção volumétrica? -->
-<!-- ] -->
-<!-- ] -->
-
-<!-- --- -->
+---
 <!-- name: anovadbc -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
