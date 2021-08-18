@@ -1427,8 +1427,15 @@ df <- labestData::DiasEg9.4
 <br>
 
 ```{r tibble, echo=F, eval=T}
-data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
-data %>% Customkbl
+df <- labestData::DiasEg9.4
+
+df %>% 
+  select(-cult) %>% 
+    tidyr::pivot_wider(names_from = colun,
+                       values_from = prod) %>% 
+  Customkbl
+
+#reshape2::dcast(df, linha ~ colun, value.var = "prod")
 ```
 
 ---
