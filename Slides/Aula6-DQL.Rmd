@@ -1533,34 +1533,35 @@ plotly::ggplotly(bp)
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **Hipóteses da estatística F da ANOVA** -->
-<!-- <br> -->
+**Hipóteses da estatística F da ANOVA**
+<br>
 
-<!-- .pull-left-11[ -->
-<!-- .font90[ -->
-<!-- - Hipótese de nulidade (H<sub>0</sub>) -->
-<!-- <br> -->
+.pull-left-11[
+.font90[
+- Hipótese de nulidade (H<sub>0</sub>)
+<br>
 
-<!-- **Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. -->
-<!-- ] -->
-<!-- ] -->
+**Não existe diferença** significativa entre as **médias** de produção, em kg/parcela, das 5 cutivares de *Theobroma cacao*.
+]
+]
 
-<!-- .pull-right-11[ -->
-<!-- .font90[ -->
-<!-- - Hipótese de alternativa (H<sub>1</sub>) -->
-<!-- <br> -->
+.pull-right-11[
+.font90[
+- Hipótese de alternativa (H<sub>1</sub>)
+<br>
 
-<!-- **Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. -->
-<!-- ] -->
-<!-- ] -->
+**Existe diferença** significativa entre as **médias** de produção, em kg/parcela, para pelo menos duas cutivares de *Theobroma cacao*.
 
-<!-- --- -->
+]
+]
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
