@@ -1669,9 +1669,21 @@ df2 %>%
                                    if_else(C2 == 52.64, "green",
                                            if_else(C2 == 41.26, "blue",
                                                    if_else(C2 == 72.71, "orange", "black"))))),
-    C3 = cell_spec(C3, "html", color = if_else(C3 == 59.36, "red", "black")),
-    C4 = cell_spec(C4, "html", color = if_else(C4 == 88.78, "red", "black")),
-    C5 = cell_spec(C5, "html", color = if_else(C5 == 29.29, "red", "black"))
+    C3 = cell_spec(C3, "html", 
+                   color = if_else(C3 == 59.36, "red",
+                                   if_else(C3 == 59.63, "green",
+                                           if_else(C3 == 64.96, "blue",
+                                                   if_else(C3 == 62.21, "orange", "black"))))),
+    C4 = cell_spec(C4, "html", 
+                   color = if_else(C4 == 88.78, "red",
+                                   if_else(C4 == 103.51, "green",
+                                           if_else(C4 == 62.44, "blue",
+                                                   if_else(C4 == 62.81, "orange", "black"))))),
+    C5 = cell_spec(C5, "html", 
+                   color = if_else(C5 == 29.29, "red",
+                                   if_else(C5 == 77.70, "green",
+                                           if_else(C5 == 52.54, "blue",
+                                                   if_else(C5 == 48.80, "orange", "black")))))
   ) %>%
   kable("html", escape = F) %>%
   kable_styling("striped", full_width = F) %>% 
