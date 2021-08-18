@@ -205,7 +205,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [6 - Casualização de tratamentos em DQL](#cas)
 
-[7 - Principais características](#carac)
+[7 - Principais características e desvantagens](#carac)
 
 [8 - Representação genérica de tabela de dados](#tb)
 
@@ -975,13 +975,42 @@ df <- data.frame(lin, col, trat)
 name: carac
 ## Delineamento em Quadrado Latino
 <br>
-
+.pull-left-5[
 ### Principais características
-<br>
+]
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+.pull-right-5[
+```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class6/DQL-C.png')
 ```
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+.pull-left-2[
+### Principais desvantagens
+<br>
+
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/DQL-D.png')
+```
+
+]
+
+--
+
+.pull-right-1[
+<br><br>
+**Recomendações gerais... (Rossetti et al., 2017)**
+.font80[
+- Os quadrados latinos mais usados são os de 5x5 a 8x8 (Repetições x Tratamentos).
+- Quadrados latinos de 2 x 2 a 4 x 4 só podem ser usados se o experimento considerar a formação de dois (ou mais) quadrados latinos.
+- Quadrados latinos de 9 x 9 exigem 81 parcelas experimentais. Portanto, são inviáveis.
+]
+]
 
 ---
 name: dqlanova
