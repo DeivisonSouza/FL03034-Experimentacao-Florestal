@@ -1348,36 +1348,90 @@ layout: true
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- .font90[ -->
-<!-- Um experimento de competição de 7 procedências florestais de *Eucalyptus grandis* foi conduzido sob o Delineamento em Quadrado Latino (DBC), com 4 blocos. Os dados apresentados na tabela a seguir correspodem à produção de madeira, em m³/ha, nas parcelas experimentais. Assim, pede-se: -->
-<!-- <br><br> -->
+.font90[
+Um experimento de competição de frutos de cacau (*Theobroma cacao*) foi conduzido com 4 cultivares sob o Delineamento em Quadrado Latino (DBC). Os dados apresentados na tabela a seguir correspodem à produção de cacau nas parcelas experimentais.
+<br><br>
 
-<!-- a) Elaborar as hipóteses da estatística F da ANOVA. -->
+**Obs.: No livro, não está claro a unidade de medida da variável resposta. Portanto, para fins didáticos vamos admitir simplesmente que seja kg/parcela.**
+<br><br>
 
-<!-- b) Realizar a ANOVA do experimento. -->
-<!-- ] -->
+Assim, pede-se:
+<br><br>
+
+a) Elaborar as hipóteses da estatística F da ANOVA.
+
+b) Realizar a ANOVA do experimento.
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
 
-<!-- --- -->
+.pull-left-3[
+```{r echo=F, out.width='55%', fig.align='center', fig.cap='', dpi=600}
+df <- labestData::DiasEg9.4
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+(g1 <- df %>% ggplot(aes(colun, forcats::fct_rev(linha), fill = "white")) +
+  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  scale_fill_identity() +
+  labs(x = "<---- Gradiente de Heterogeneidade 2\n",
+       y = "Gradiente de Heterogeneidade 1---->\n") +
+  #scale_fill_gradient(low = "white", high = "red") + 
+  geom_text(mapping = aes(label = sprintf("%s\n%g", as.factor(cult), prod), 
+            size = 20, fontface = "bold", colour = case_when(
+              cult == "1" ~ "red",
+              cult == "2" ~ "green",
+              cult == "3" ~ "blue",
+              cult == "4" ~ "black",
+              cult == "5" ~ "orange"))) +
+  ggthemes::theme_tufte()+
+  #theme_minimal() +
+  theme(axis.title = element_text(size = 24),
+        axis.text = element_text(size = 18, color = "black"),
+  	    axis.title.y = element_text(angle = 90),
+        axis.ticks = element_blank(),
+        legend.position = "none",
+        plot.background = element_blank()) +
+    scale_x_discrete(position = "top", label=paste0("C", unique(df$colun))) +
+    scale_y_discrete(label=paste0("L", unique(sort(df$linha, decreasing = T)))) +
+  coord_fixed()
+)
+```
+]
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+.font80[
+<br><br>
 
-<!-- ```{r tibble, echo=F, eval=T} -->
-<!-- data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") -->
-<!-- data %>% Customkbl -->
-<!-- ``` -->
+- Os dados estão disponíveis no pacote .blue[labestData].
+- Acesse fazendo: .blue[labestData::DiasEg9.4].
+- Os números inteiros (1, 2, 3, 4, e 5) indicam o tipo de cultivar (tratamento).
+- Os dados contínuos referem-se a produção de cacau em cada unidade experimental.
+]
 
-<!-- --- -->
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
+
+```{r tibble, echo=F, eval=T}
+data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv")
+data %>% Customkbl
+```
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->

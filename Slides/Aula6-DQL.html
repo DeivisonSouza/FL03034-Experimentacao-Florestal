@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x7a447dec8004ffbad97459f7a44356f","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x659ab26a82445de87abe9a324f6cc16","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -18,6 +18,8 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula6-DQL_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula6-DQL_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="Aula6-DQL_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Aula6-DQL_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -1054,36 +1056,114 @@ layout: true
 
 ---
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
 
-&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+&lt;br&gt;
 
-&lt;!-- .font90[ --&gt;
-&lt;!-- Um experimento de competição de 7 procedências florestais de *Eucalyptus grandis* foi conduzido sob o Delineamento em Quadrado Latino (DBC), com 4 blocos. Os dados apresentados na tabela a seguir correspodem à produção de madeira, em m³/ha, nas parcelas experimentais. Assim, pede-se: --&gt;
-&lt;!-- &lt;br&gt;&lt;br&gt; --&gt;
+.font90[
+Um experimento de competição de frutos de cacau (*Theobroma cacao*) foi conduzido com 4 cultivares sob o Delineamento em Quadrado Latino (DBC). Os dados apresentados na tabela a seguir correspodem à produção de cacau nas parcelas experimentais.
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- a) Elaborar as hipóteses da estatística F da ANOVA. --&gt;
+**Obs.: No livro, não está claro a unidade de medida da variável resposta. Portanto, para fins didáticos vamos admitir simplesmente que seja kg/parcela.**
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- b) Realizar a ANOVA do experimento. --&gt;
-&lt;!-- ] --&gt;
+Assim, pede-se:
+&lt;br&gt;&lt;br&gt;
+
+a) Elaborar as hipóteses da estatística F da ANOVA.
+
+b) Realizar a ANOVA do experimento.
+]
+
+---
+
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
 
-&lt;!-- --- --&gt;
+.pull-left-3[
+&lt;img src="Aula6-DQL_files/figure-html/unnamed-chunk-19-1.png" width="55%" style="display: block; margin: auto;" /&gt;
+]
 
-&lt;!-- ## Delineamento em Quadrado Latino --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+.font80[
+&lt;br&gt;&lt;br&gt;
 
-&lt;!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] --&gt;
-&lt;!-- &lt;br&gt; --&gt;
+- Os dados estão disponíveis no pacote .blue[labestData].
+- Acesse fazendo: .blue[labestData::DiasEg9.4].
+- Os números inteiros (1, 2, 3, 4, e 5) indicam o tipo de cultivar (tratamento).
+- Os dados contínuos referem-se a produção de cacau em cada unidade experimental.
+]
 
-&lt;!-- ```{r tibble, echo=F, eval=T} --&gt;
-&lt;!-- data &lt;- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") --&gt;
-&lt;!-- data %&gt;% Customkbl --&gt;
-&lt;!-- ``` --&gt;
+---
 
-&lt;!-- --- --&gt;
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+&lt;br&gt;
+
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Bloco/Procedencia &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 358 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 273 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 284 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 258 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 318 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 380 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 249 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 222 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 263 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 217 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 312 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 353 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 259 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 236 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 266 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 267 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 327 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; B4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 360 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 242 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 226 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 252 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 231 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 220 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 319 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+---
 
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
