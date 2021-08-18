@@ -1382,7 +1382,7 @@ b) Realizar a ANOVA do experimento.
 df <- labestData::DiasEg9.4
 
 (g1 <- df %>% ggplot(aes(colun, forcats::fct_rev(linha), fill = "white")) +
-  geom_tile(aes(color = "black"), size = 1, colour = "black") +
+  geom_tile(size = 1, colour="black") +
   scale_fill_identity() +
   labs(x = "<---- Gradiente de Heterogeneidade 2\n",
        y = "Gradiente de Heterogeneidade 1---->\n") +
@@ -1395,6 +1395,7 @@ df <- labestData::DiasEg9.4
               cult == "4" ~ "black",
               cult == "5" ~ "orange"))) +
   ggthemes::theme_tufte()+
+  #scale_fill_distiller(palette = "Greens", direction = 1) +
   #theme_minimal() +
   theme(axis.title = element_text(size = 24),
         axis.text = element_text(size = 18, color = "black"),
@@ -1429,81 +1430,108 @@ df <- labestData::DiasEg9.4
 ```{r tibble, echo=F, eval=T}
 df <- labestData::DiasEg9.4
 
-df %>% 
+df2 <- df %>% 
   select(-cult) %>% 
     tidyr::pivot_wider(names_from = colun,
                        values_from = prod) %>% 
-  Customkbl
+  rename_with(~stringr::str_c("C", .), !contains("l")) %>% 
+  mutate(linha = recode(linha, `1`='L1', `2`='L2', 
+                        `3`='L3',`4`='L4',`5`='L5',)) %>% 
+    rename(`linha/coluna` = linha) 
+
+df2 %>%
+  mutate(
+    C1 = cell_spec(C1, "html", color = ifelse(C1 == 108.44, "red", "black")),
+    C2 = cell_spec(C2, "html", color = ifelse(C2 == 51.69, "red", "black")),
+    C3 = cell_spec(C3, "html", color = ifelse(C3 == 59.36, "red", "black")),
+    C4 = cell_spec(C4, "html", color = ifelse(C4 == 88.78, "red", "black")),
+    C5 = cell_spec(C5, "html", color = ifelse(C5 == 29.29, "red", "black"))
+  ) %>%
+  kable("html", escape = F) %>%
+  kable_styling("striped", full_width = F)
+
 
 #reshape2::dcast(df, linha ~ colun, value.var = "prod")
 ```
 
+
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
-<!-- .font80[ -->
-<!-- - **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Procedência. -->
-<!-- ] -->
+.font80[
+- **Gráfico Dot Plot**: Ajuda a visualizar como a produção variou nas parcelas experimentais para as diferentes cultivares.
+]
 
-<!-- ```{r echo=F, eval=T, collapse=T, out.width="35%", fig.align='center', fig.cap='', dpi=600} -->
+.pull-left-1[
+.font80[
+```{r dot, echo=T, eval=F, collapse=T}
+df <- labestData::DiasEg9.4
 
-<!-- df <- data %>% -->
-<!--   tidyr::pivot_longer( -->
-<!--         cols = starts_with("P"), -->
-<!--         names_to = "Procedencia", -->
-<!--         values_to = "Valor", -->
-<!--         names_transform = list(Procedencia = as.factor), -->
-<!--         values_drop_na = TRUE -->
-<!--     ) %>% -->
-<!--   rename(Bloco = `Bloco/Procedencia`) %>%  -->
-<!--   mutate(Procedencia = forcats::fct_reorder( -->
-<!--     Procedencia,  -->
-<!--     desc(Valor),  -->
-<!--     .fun='mean') -->
-<!--     ) -->
+df %>%
+  ggplot(aes(x=forcats::fct_reorder(cult, desc(prod), .fun='mean'),
+             y=prod, fill=cult)) +
+  geom_dotplot(binaxis='y', stackdir='center') +
+  stat_summary(fun.y=mean, geom="point", shape=18,
+                 size=3, color="red") +
+  theme_bw(base_size = 18) +
+  theme(panel.grid = element_blank(),
+        legend.position="none"
+        ) +
+  labs(x = "Cultivar", y = "Produção")
+```
+]
+]
 
-<!-- df %>% -->
-<!--   ggplot(aes(x=Procedencia, y=Valor, fill=Procedencia)) +  -->
-<!--   geom_dotplot(binaxis='y', stackdir='center') + -->
-<!--   stat_summary(fun.y=mean, geom="point", shape=18, -->
-<!--                  size=6, color="red") + -->
-<!--   theme_bw(base_size = 18) + -->
-<!--   theme(panel.grid = element_blank(), -->
-<!--         legend.position="none" -->
-<!--         ) -->
-<!-- ``` -->
+.pull-right-2[
+```{r ref.label="dot", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=2.7}
+```
+]
 
-<!-- --- -->
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+---
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- .font80[ -->
-<!-- - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição. -->
-<!-- ] -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
-<!-- ```{r echo=F, eval=T, collapse=T, fig.align='center', fig.cap='', dpi=600, fig.width=1, fig.height=.6} -->
+.font80[
+- **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
+]
 
-<!-- bp <- df %>% -->
-<!--   ggplot(aes(x=Procedencia, y=Valor, color=Procedencia)) + -->
-<!--   geom_boxplot() + -->
-<!--   stat_summary(fun.y=mean, geom="point", shape=4, -->
-<!--                  size=2, color="red") + -->
-<!--   theme_bw(base_size = 16) + -->
-<!--   theme(panel.grid = element_blank(), -->
-<!--         legend.position="none" -->
-<!--         ) -->
+.pull-left-1[
+.font80[
+```{r box, echo=T, eval=F, collapse=T}
+df <- labestData::DiasEg9.4
 
-<!-- plotly::ggplotly(bp) -->
-<!-- ``` -->
+bp <- df %>%
+  mutate(cult = forcats::fct_reorder(cult, desc(prod), .fun='mean')) %>% 
+  ggplot(aes(x=cult,
+             y=prod, color=cult)) +
+  geom_boxplot() +
+  stat_summary(fun.y=mean, geom="point", shape=4,
+                 size=2, color="red") +
+  theme_bw(base_size = 16) +
+  theme(panel.grid = element_blank(),
+        legend.position="none"
+        ) +
+  labs(x = "Cultivar", y = "Produção")
 
-<!-- --- -->
+plotly::ggplotly(bp)
+```
+]
+]
+
+.pull-right-2[
+```{r ref.label="box", echo=FALSE, eval=TRUE, collapse=T, fig.width=1, fig.height=.6}
+```
+]
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
