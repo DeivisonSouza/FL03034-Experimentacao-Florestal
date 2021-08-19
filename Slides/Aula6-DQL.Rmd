@@ -99,7 +99,7 @@ CustomDT <- function(data){
                          style = "default",
                          class = "display", width = '250px',
                          caption = '',
-     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+     options=list(pageLength = 8, dom = 't', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
           paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
@@ -1980,7 +1980,6 @@ knitr::include_graphics('fig/class6/SQR.png')
 
 .pull-left-9[
 ```{r echo=F, eval=T}
-
 df4 %>%
   Customkbl %>%
   row_spec(6, color = 'white', background = 'orange') %>%
@@ -2012,164 +2011,201 @@ C = \dfrac{\left( 1.669,69\right)^2}{5^2}\\~\\
 C = \dfrac{2.787.864,696}{25} = 111.514,5878
 \end{equation*}
 $$
-
 ]
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>] -->
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
 
-<!-- .pull-left-9[ -->
-<!-- ```{r tb3, echo=F, eval=T} -->
-<!-- df2 %>%  -->
-<!--   Customkbl %>%  -->
-<!--   row_spec(5, color = 'white', background = 'orange') %>%  -->
-<!--   row_spec(6, color = 'white', background = 'blue') %>%  -->
-<!--   column_spec(9, color = 'white', background =  -->
-<!--                 case_when(is.na(df2$Total) ~ "white", -->
-<!--                              df2$Total > 7000 ~ "red", -->
-<!--                              df2$Total < 7000 ~ "green")) -->
-<!-- ``` -->
+.pull-left-9[
+```{r tb3, echo=F, eval=T}
+df4 %>%
+  Customkbl %>%
+  row_spec(6, color = 'white', background = 'orange') %>%
+  column_spec(7, color = 'white', background =
+                case_when(df4$Total > 1600 ~ "red",
+                          df4$Total < 1600 ~ "green"))
+```
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 358^2 + 380^2 + 353^2 + ... + 319^2 = 2.182.735 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\sum_{i=1}^{p}\sum_{j=1}^{p}\sum_{k=1}^{p}y_{ij}^2 = 108,44^2 + 60,98^2 + 78,59^2 + ... + 29,29^2 = 120.528,745
+\end{equation*}
+$$
+]
 
-<!-- .pull-right-9[ -->
-<!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class4/SQTot-cor.png') -->
-<!-- ``` -->
-<!-- <br><br> -->
+.pull-right-9[
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQTot-cor.png')
+```
+<br><br>
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- SQ_{Tot.} = 2.182.735 - 2.122.452,892\\~\\ -->
-<!-- SQ_{Tot.} = 60.282,108 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+SQ_{Tot.} = 120.528,745 - 111.514,5878\\~\\
+SQ_{Tot.} = 9.014,1572
+\end{equation*}
+$$
+]
 
-<!-- --- -->
+---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>] -->
-<!-- <br> -->
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
+<br>
 
-<!-- .pull-left-9[ -->
-<!-- ```{r tb4, echo=F, eval=T} -->
-<!-- df2 %>%  -->
-<!--   Customkbl %>%  -->
-<!--   row_spec(5, color = 'white', background = 'orange') %>%  -->
-<!--   row_spec(6, color = 'white', background = 'blue') %>%  -->
-<!--   column_spec(9, color = 'white', background =  -->
-<!--                 case_when(is.na(df2$Total) ~ "white", -->
-<!--                              df2$Total > 7000 ~ "red", -->
-<!--                              df2$Total < 7000 ~ "green")) -->
-<!-- ``` -->
+.pull-left-13[
+<br>
+```{r trat2, echo=F, eval=T}
+df %>% 
+  group_by(cult) %>% 
+  summarise(Soma = sum(prod),
+            Media = mean(prod)) %>% 
+  CustomDT   # apenas para customizar tabela
+```
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \small -->
-<!-- \sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 1.451^2 + 1.034^2 + ... + 1.276^2 = 8.704.763 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\small
+\sum_{k=1}^{p}\left ( \sum_{i=1}^{p}\sum_{j=1}^{p}y_{ijk} \right )^2 = 337,56^2 + ... + 397,49^2 = 564.641,037
+\end{equation*}
+$$
+]
 
+.pull-right-13[
 
-<!-- .pull-right-9[ -->
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQTrat-cor.png')
+```
+<br><br>
 
-<!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class4/SQTrat-cor.png') -->
-<!-- ``` -->
-<!-- <br><br> -->
+$$
+\begin{equation*}
+SQ_{trat.} = \dfrac{564.641,037}{5} - 111.514,5878\\~\\
+SQ_{trat.} = 1.413,619
+\end{equation*}
+$$
+]
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- SQ_{trat.} = \dfrac{8.704.763}{4} - 2.122.452,892\\~\\ -->
-<!-- SQ_{trat.} = 53.737,858 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+---
 
-<!-- --- -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Linhas - SQL]
+<br>
 
-<!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Blocos - SQB] -->
-<!-- <br> -->
+.pull-left-9[
+```{r tbx, echo=F, eval=T}
+df4 %>%
+  Customkbl %>%
+  row_spec(6, color = 'white', background = 'orange') %>%
+  column_spec(7, color = 'white', background =
+                case_when(df4$Total > 1600 ~ "red",
+                          df4$Total < 1600 ~ "green"))
+```
 
-<!-- .pull-left-9[ -->
-<!-- ```{r tbx, echo=F, eval=T} -->
-<!-- df2 %>%  -->
-<!--   Customkbl %>%  -->
-<!--   row_spec(5, color = 'white', background = 'orange') %>%  -->
-<!--   row_spec(6, color = 'white', background = 'blue') %>%  -->
-<!--   column_spec(9, color = 'white', background =  -->
-<!--                 case_when(is.na(df2$Total) ~ "white", -->
-<!--                              df2$Total > 7000 ~ "red", -->
-<!--                              df2$Total < 7000 ~ "green")) -->
-<!-- ``` -->
-
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \small -->
-<!-- \sum_{j=1}^{J}\left ( \sum_{i=1}^{I}Y_{ij} \right )^2 = 2.024^2 + 1.885^2 + 1.950^2 + 1.850^2 = 14.874.801 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\small
+\sum_{i=1}^{p}\left ( \sum_{j=1}^{p}\sum_{k=1}^{p}y_{ijk} \right )^2 = 449,12^2 + 373,53^2 + 305,94^2 + 271,06^2 + 270,04^2 = 581.227,844
+\end{equation*}
+$$
+]
 
 
-<!-- .pull-right-9[ -->
+.pull-right-9[
 
-<!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/SQB-cor.png') -->
-<!-- ``` -->
-<!-- <br><br> -->
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQL-cor.png')
+```
+<br><br>
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- SQB = \dfrac{14.874.801}{7} - 2.122.452,892\\~\\ -->
-<!-- SQB = 2.518,679 -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+SQL = \dfrac{581.227,844}{5} - 111.514,5878\\~\\
+SQL = 4.730,981
+\end{equation*}
+$$
+]
 
-<!-- --- -->
+---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR] -->
-<!-- <br><br> -->
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Colunas - SQC]
+<br>
 
-<!-- $\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQB)$ -->
+.pull-left-9[
+```{r echo=F, eval=T}
+df4 %>%
+  Customkbl %>%
+  row_spec(6, color = 'white', background = 'orange') %>%
+  column_spec(7, color = 'white', background =
+                case_when(df4$Total > 1600 ~ "red",
+                          df4$Total < 1600 ~ "green"))
+```
 
-<!-- $\large SQR = 60.282,108 - (53.737,858 + 2.518,679)$ -->
+$$
+\begin{equation*}
+\small
+\sum_{j=1}^{p}\left ( \sum_{i=1}^{p}\sum_{k=1}^{p}y_{ijk} \right )^2 = 360,46^2 + 302,16^2 + ... + 307,83^2 = 563.428,797
+\end{equation*}
+$$
+]
 
-<!-- $\large SQR = 4.025,571$ -->
 
-<!-- --- -->
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQC-cor.png')
+```
+<br><br>
+
+$$
+\begin{equation*}
+SQC = \dfrac{563.428,797}{5} - 111.514,5878\\~\\
+SQC = 1.171,1715
+\end{equation*}
+$$
+]
+
+---
+
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+<br><br>
+
+$\large SQR = SQ_{Tot.} - (SQ_{Trat.} + SQL + SQC)$
+
+$\large SQR = 9.014,1572 - (1.413,619 + 4.730,981 + 1.171,1715)$
+
+$\large SQR = 1.698,386$
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
