@@ -1165,8 +1165,8 @@ df2 %>%
 <br>
 
 .font90[
-- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
-- A resposta para esta pergunta será dada pela estatística F da ANOVA-DIC.
+- Existe alguma progênie que apresentou DAP médio significativamente maior do que outra?
+- A resposta para esta pergunta será alcançada aplicando-se o teste de hipótese (Teste F) da ANOVA-DIC.
 <br>
 
 **Então, vamos construir o quadro da ANOVA.**
