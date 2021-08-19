@@ -2220,67 +2220,88 @@ $\large SQR = 1.698,386$
 knitr::include_graphics('fig/class6/ANOVA-DQL-SQ.png')
 ```
 
-<!-- --- -->
-<!-- name: qm -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+---
+name: qm
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo] -->
-<!-- <br><br> -->
+**3º Passo**: Determinar os Quadrados Médios
+<br><br>
 
-<!-- .pull-left-14[ -->
-<!-- .font80[ -->
-<!-- **Quadrado Médio de Tratamentos (Procedências) - Variância entre tratamentos** -->
-<!-- ] -->
-<!-- <br> -->
+.pull-left-5[
+.font70[
+**Quadrado Médio de Tratamentos**
+]
+<br>
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \small{ -->
-<!-- QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{53.737,858}{7-1}\\~\\ -->
-<!-- QM_{Trat.} = 8.956,309 -->
-<!-- } -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\scriptsize{
+QM_{Trat.} = \dfrac{SQ_{Trat.}}{p-1}\\~\\
+QM_{Trat.} = \dfrac{1.413,619}{5-1}\\~\\
+QM_{Trat.} = 353,405
+}
+\end{equation*}
+$$
+]
 
-<!-- .pull-left-14[ -->
-<!-- .font80[ -->
-<!-- **Quadrado Médio de Resíduos - Variância dentro de tratamentos** -->
-<!-- ] -->
-<!-- <br> -->
+.pull-left-5[
+.font70[
+**Quadrado Médio de Resíduos**
+]
+<br>
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \small{ -->
-<!-- QMR = \dfrac{SQR}{(I-1)(J-1)} = \dfrac{4.025,571}{(7-1)(4-1)}\\~\\ -->
-<!-- QMR = 223,643 -->
-<!-- } -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\scriptsize{
+QMR = \dfrac{SQR}{(p-1)(p-2)}\\~\\
+QMR = \dfrac{1.698,386}{(5-1)(5-2)}\\~\\
+QMR = 141.532
+}
+\end{equation*}
+$$
+]
 
 
-<!-- .pull-right-14[ -->
-<!-- .font80[ -->
-<!-- **Quadrado Médio de Blocos - Variância entre blocos** -->
-<!-- ] -->
-<!-- <br> -->
+.pull-left-5[
+.font70[
+**Quadrado Médio de Linhas**
+]
+<br>
 
-<!-- $$ -->
-<!-- \begin{equation*} -->
-<!-- \small{ -->
-<!-- QMB = \dfrac{SQB}{(J-1)} = \dfrac{2.518,679}{(4-1)}\\~\\ -->
-<!-- QMB = 839,559 -->
-<!-- } -->
-<!-- \end{equation*} -->
-<!-- $$ -->
-<!-- ] -->
+$$
+\begin{equation*}
+\scriptsize{
+QML = \dfrac{SQL}{p-1}\\~\\
+QML = \dfrac{4.730,981}{5-1}\\~\\
+QML = 1.182,75
+}
+\end{equation*}
+$$
+]
 
-<!-- --- -->
+
+.pull-left-5[
+.font70[
+**Quadrado Médio de Colunas**
+]
+<br>
+
+$$
+\begin{equation*}
+\scriptsize{
+QMC = \dfrac{SQC}{p-1}\\~\\
+QMC = \dfrac{1.171,1715}{5-1}\\~\\
+QMC = 292,793
+}
+\end{equation*}
+$$
+]
+
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
