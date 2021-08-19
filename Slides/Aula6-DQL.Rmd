@@ -1531,6 +1531,7 @@ name: anovadql
 <br>
 
 ### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
 .pull-left-1[
 .font80[
@@ -1571,6 +1572,7 @@ name: anovadql
 <br>
 
 ### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
 .pull-left-1[
 .font80[
@@ -1587,7 +1589,7 @@ Para os cálculos de somas de quadrados da ANOVA precisa-se:
 .pull-right-2[
 ```{r echo=F, eval=T}
 
-df2 %>%
+(df5 <- df2 %>%
   mutate(
     C1 = cell_spec(C1, "html", 
                    color = if_else(C1 == 108.44, "red",
@@ -1619,13 +1621,50 @@ df2 %>%
   row_spec(1:4, color = 'black', background = 'white') %>% 
   row_spec(0, color = 'white', background = 'black') %>% 
   column_spec(1, color = 'white', background = 'black')
+)
   
 ```
 ]
 
-
 ---
 
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+
+.pull-left-4[
+```{r echo=T, eval=F}
+df <- labestData::DiasEg9.4
+
+df %>% 
+  group_by(cult) %>% 
+  summarise(Soma = sum(prod),
+            Media = mean(prod))
+```
+
+```{r trat, echo=F, eval=F}
+df %>% 
+  group_by(cult) %>% 
+  summarise(Soma = sum(prod),
+            Media = mean(prod)) %>% 
+  CustomDT   # apenas para customizar tabela
+```
+
+```{r ref.label="trat", echo=FALSE, eval=TRUE, collapse=T, fig.width=1, fig.height=.6}
+```
+
+]
+
+.pull-right-4[
+<br><br>
+```{r echo=F, eval=T}
+df5
+```
+
+]
+
+---
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
 

@@ -7,7 +7,7 @@
     <script src="Aula6-DQL_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula6-DQL_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula6-DQL_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x28d0d84938f40d8b0657e6df148238a","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xbe4b2ff5c7e4f8fa3662997aa161fa3","expires":1}</script>
     <script src="Aula6-DQL_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula6-DQL_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula6-DQL_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -28,6 +28,11 @@
     <script src="Aula6-DQL_files/plotly-main-1.57.1/plotly-latest.min.js"></script>
     <script src="Aula6-DQL_files/kePrint-0.0.1/kePrint.js"></script>
     <link href="Aula6-DQL_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <link href="Aula6-DQL_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="Aula6-DQL_files/datatables-binding-0.17/datatables.js"></script>
+    <link href="Aula6-DQL_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula6-DQL_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula6-DQL_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -1143,8 +1148,8 @@ plotly::ggplotly(bp)
 ]
 
 .pull-right-2[
-<div id="htmlwidget-28d4e9bfa45b96eae7c2" style="width:600px;height:360px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-28d4e9bfa45b96eae7c2">{"x":{"data":[{"x":[1,1,1,1,1],"y":[83.86,64.93,78.59,70.61,99.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[103.51,59.63,52.64,77.7,43.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5,5],"y":[64.96,52.54,60.98,62.44,41.26],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"3","legendgroup":"3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[99.5,83.86,78.59,64.93,70.61],"text":["cult: 5<br />cult: 5<br />prod:  99.50<br />cult: 5","cult: 5<br />cult: 5<br />prod:  83.86<br />cult: 5","cult: 5<br />cult: 5<br />prod:  78.59<br />cult: 5","cult: 5<br />cult: 5<br />prod:  64.93<br />cult: 5","cult: 5<br />cult: 5<br />prod:  70.61<br />cult: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"5","legendgroup":"5","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"text":["cult: 1<br />cult: 1<br />prod: 108.44<br />cult: 1","cult: 1<br />cult: 1<br />prod:  88.78<br />cult: 1","cult: 1<br />cult: 1<br />prod:  59.36<br />cult: 1","cult: 1<br />cult: 1<br />prod:  51.69<br />cult: 1","cult: 1<br />cult: 1<br />prod:  29.29<br />cult: 1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(163,165,0,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(163,165,0,1)"}},"hoveron":"points","name":"1","legendgroup":"1","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,3,3,3,3],"y":[103.51,77.7,52.64,43.2,59.63],"text":["cult: 2<br />cult: 2<br />prod: 103.51<br />cult: 2","cult: 2<br />cult: 2<br />prod:  77.70<br />cult: 2","cult: 2<br />cult: 2<br />prod:  52.64<br />cult: 2","cult: 2<br />cult: 2<br />prod:  43.20<br />cult: 2","cult: 2<br />cult: 2<br />prod:  59.63<br />cult: 2"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,125,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,125,1)"}},"hoveron":"points","name":"2","legendgroup":"2","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"text":["cult: 4<br />cult: 4<br />prod:  72.71<br />cult: 4","cult: 4<br />cult: 4<br />prod:  62.21<br />cult: 4","cult: 4<br />cult: 4<br />prod:  62.81<br />cult: 4","cult: 4<br />cult: 4<br />prod:  48.80<br />cult: 4","cult: 4<br />cult: 4<br />prod:  69.25<br />cult: 4"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,176,246,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,176,246,1)"}},"hoveron":"points","name":"4","legendgroup":"4","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5,5,5,5,5],"y":[64.96,60.98,52.54,62.44,41.26],"text":["cult: 3<br />cult: 3<br />prod:  64.96<br />cult: 3","cult: 3<br />cult: 3<br />prod:  60.98<br />cult: 3","cult: 3<br />cult: 3<br />prod:  52.54<br />cult: 3","cult: 3<br />cult: 3<br />prod:  62.44<br />cult: 3","cult: 3<br />cult: 3<br />prod:  41.26<br />cult: 3"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(231,107,243,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(231,107,243,1)"}},"hoveron":"points","name":"3","legendgroup":"3","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5],"y":[79.498,67.512,67.336,63.156,56.436],"text":["cult: 5<br />prod: 79.498<br />cult: red","cult: 1<br />prod: 67.512<br />cult: red","cult: 2<br />prod: 67.336<br />cult: red","cult: 4<br />prod: 63.156<br />cult: red","cult: 3<br />prod: 56.436<br />cult: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,5.6],"tickmode":"array","ticktext":["5","1","2","4","3"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["5","1","2","4","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Cultivar","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[25.3325,112.3975],"tickmode":"array","ticktext":["30","50","70","90","110"],"tickvals":[30,50,70,90,110],"categoryorder":"array","categoryarray":["30","50","70","90","110"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Produção","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"23477c905d0":{"x":{},"y":{},"colour":{},"type":"box"},"2347353e6f66":{"colour":{},"x":{},"y":{},"colour.1":{}},"23477a60131f":{"x":{},"y":{},"colour":{}}},"cur_data":"23477c905d0","visdat":{"23477c905d0":["function (y) ","x"],"2347353e6f66":["function (y) ","x"],"23477a60131f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-8db0c4020a0d3fa801bf" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8db0c4020a0d3fa801bf">{"x":{"data":[{"x":[1,1,1,1,1],"y":[83.86,64.93,78.59,70.61,99.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"5","legendgroup":"5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"1","legendgroup":"1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[103.51,59.63,52.64,77.7,43.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"2","legendgroup":"2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"4","legendgroup":"4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5,5],"y":[64.96,52.54,60.98,62.44,41.26],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"3","legendgroup":"3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[99.5,83.86,78.59,64.93,70.61],"text":["cult: 5<br />cult: 5<br />prod:  99.50<br />cult: 5","cult: 5<br />cult: 5<br />prod:  83.86<br />cult: 5","cult: 5<br />cult: 5<br />prod:  78.59<br />cult: 5","cult: 5<br />cult: 5<br />prod:  64.93<br />cult: 5","cult: 5<br />cult: 5<br />prod:  70.61<br />cult: 5"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"5","legendgroup":"5","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[2,2,2,2,2],"y":[108.44,88.78,59.36,51.69,29.29],"text":["cult: 1<br />cult: 1<br />prod: 108.44<br />cult: 1","cult: 1<br />cult: 1<br />prod:  88.78<br />cult: 1","cult: 1<br />cult: 1<br />prod:  59.36<br />cult: 1","cult: 1<br />cult: 1<br />prod:  51.69<br />cult: 1","cult: 1<br />cult: 1<br />prod:  29.29<br />cult: 1"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(163,165,0,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(163,165,0,1)"}},"hoveron":"points","name":"1","legendgroup":"1","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[3,3,3,3,3],"y":[103.51,77.7,52.64,43.2,59.63],"text":["cult: 2<br />cult: 2<br />prod: 103.51<br />cult: 2","cult: 2<br />cult: 2<br />prod:  77.70<br />cult: 2","cult: 2<br />cult: 2<br />prod:  52.64<br />cult: 2","cult: 2<br />cult: 2<br />prod:  43.20<br />cult: 2","cult: 2<br />cult: 2<br />prod:  59.63<br />cult: 2"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,191,125,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,191,125,1)"}},"hoveron":"points","name":"2","legendgroup":"2","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[4,4,4,4,4],"y":[72.71,62.21,62.81,48.8,69.25],"text":["cult: 4<br />cult: 4<br />prod:  72.71<br />cult: 4","cult: 4<br />cult: 4<br />prod:  62.21<br />cult: 4","cult: 4<br />cult: 4<br />prod:  62.81<br />cult: 4","cult: 4<br />cult: 4<br />prod:  48.80<br />cult: 4","cult: 4<br />cult: 4<br />prod:  69.25<br />cult: 4"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,176,246,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(0,176,246,1)"}},"hoveron":"points","name":"4","legendgroup":"4","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[5,5,5,5,5],"y":[64.96,60.98,52.54,62.44,41.26],"text":["cult: 3<br />cult: 3<br />prod:  64.96<br />cult: 3","cult: 3<br />cult: 3<br />prod:  60.98<br />cult: 3","cult: 3<br />cult: 3<br />prod:  52.54<br />cult: 3","cult: 3<br />cult: 3<br />prod:  62.44<br />cult: 3","cult: 3<br />cult: 3<br />prod:  41.26<br />cult: 3"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(231,107,243,1)","opacity":0.9,"size":5.66929133858268,"symbol":"circle","line":{"width":1.88976377952756,"color":"rgba(231,107,243,1)"}},"hoveron":"points","name":"3","legendgroup":"3","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5],"y":[79.498,67.512,67.336,63.156,56.436],"text":["cult: 5<br />prod: 79.498<br />cult: red","cult: 1<br />prod: 67.512<br />cult: red","cult: 2<br />prod: 67.336<br />cult: red","cult: 4<br />prod: 63.156<br />cult: red","cult: 3<br />prod: 56.436<br />cult: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.7113601771136,"r":10.6268161062682,"b":61.2813062128131,"l":62.6982150269822},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,5.6],"tickmode":"array","ticktext":["5","1","2","4","3"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["5","1","2","4","3"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Cultivar","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[25.3325,112.3975],"tickmode":"array","ticktext":["30","50","70","90","110"],"tickvals":[30,50,70,90,110],"categoryorder":"array","categoryarray":["30","50","70","90","110"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Produção","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"2b1471a64b45":{"x":{},"y":{},"colour":{},"type":"box"},"2b1466a1ed47":{"colour":{},"x":{},"y":{},"colour.1":{}},"2b1423b68e0e":{"x":{},"y":{},"colour":{}}},"cur_data":"2b1471a64b45","visdat":{"2b1471a64b45":["function (y) ","x"],"2b1466a1ed47":["function (y) ","x"],"2b1423b68e0e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -1259,6 +1264,7 @@ name: anovadql
 &lt;br&gt;
 
 ### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+&lt;br&gt;
 
 .pull-left-1[
 .font80[
@@ -1351,6 +1357,7 @@ name: anovadql
 &lt;br&gt;
 
 ### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+&lt;br&gt;
 
 .pull-left-1[
 .font80[
@@ -1421,9 +1428,91 @@ Para os cálculos de somas de quadrados da ANOVA precisa-se:
 &lt;/table&gt;
 ]
 
-
 ---
 
+## Delineamento em Quadrado Latino
+&lt;br&gt;
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+
+.pull-left-4[
+
+```r
+df &lt;- labestData::DiasEg9.4
+
+df %&gt;% 
+  group_by(cult) %&gt;% 
+  summarise(Soma = sum(prod),
+            Media = mean(prod))
+```
+
+
+
+<div id="htmlwidget-d26c0dd6083ee24f194b" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d26c0dd6083ee24f194b">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["1","2","3","4","5"],[337.56,336.68,282.18,315.78,397.49],[67.512,67.336,56.436,63.156,79.498]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>cult<\/th>\n      <th>Soma<\/th>\n      <th>Media<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2]}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+.pull-right-4[
+&lt;br&gt;&lt;br&gt;
+&lt;table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;"&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; linha/coluna &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C1 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C2 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C3 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C4 &lt;/th&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; C5 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L1 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;108.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: orange !important;"&gt;72.71&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: blue !important;"&gt;64.96&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: green !important;"&gt;103.51&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;99.5&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L2 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: blue !important;"&gt;60.98&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;83.86&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: orange !important;"&gt;62.21&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;88.78&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: green !important;"&gt;77.7&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L3 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;78.59&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: green !important;"&gt;52.64&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;59.36&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: orange !important;"&gt;62.81&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: blue !important;"&gt;52.54&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; L4 &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: green !important;"&gt;43.2&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: red !important;"&gt;51.69&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: black !important;"&gt;64.93&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: blue !important;"&gt;62.44&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;"&gt; &lt;span style="     color: orange !important;"&gt;48.8&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;"&gt; L5 &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: orange !important;"&gt;69.25&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: blue !important;"&gt;41.26&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: green !important;"&gt;59.63&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: black !important;"&gt;70.61&lt;/span&gt; &lt;/td&gt;
+   &lt;td style="text-align:left;"&gt; &lt;span style="     color: red !important;"&gt;29.29&lt;/span&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+]
+
+---
 &lt;!-- ## Delineamento em Quadrado Latino --&gt;
 &lt;!-- &lt;br&gt; --&gt;
 
