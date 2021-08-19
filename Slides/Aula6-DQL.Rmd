@@ -2259,7 +2259,7 @@ $$
 \scriptsize{
 QMR = \dfrac{SQR}{(p-1)(p-2)}\\~\\
 QMR = \dfrac{1.698,386}{(5-1)(5-2)}\\~\\
-QMR = 141.532
+QMR = 141,532
 }
 \end{equation*}
 $$
@@ -2303,20 +2303,20 @@ $$
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA] -->
-<!-- <br><br> -->
+**3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA]
+<br><br>
 
-<!-- ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/ANOVA-DBC-QM.png') -->
-<!-- ``` -->
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/ANOVA-DQL-QM.png')
+```
 
-<!-- --- -->
+---
 <!-- name: estF -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
