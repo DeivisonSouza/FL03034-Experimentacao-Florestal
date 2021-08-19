@@ -1665,26 +1665,27 @@ df5
 ]
 
 ---
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- .font90[ -->
-<!-- - Existe alguma procedência que apresentou maior produção volumétrica? -->
-<!-- - A resposta para esta pergunta será dada pela estatística F da ANOVA-DBC. -->
-<!-- ] -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
-<!-- -- -->
+.font80[
+- Existe alguma cultivar que apresentou produção de cacau significativamente maior do que outra?
+- A resposta para esta pergunta será alcançada aplicando-se o teste de hipótese (Teste F) da ANOVA-DQL.
+]
 
-<!-- **Então, vamos construir o quadro da ANOVA.** -->
-<!-- <br><br> -->
+--
 
-<!-- ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/DBC-ANOVA.png') -->
-<!-- ``` -->
+**Então, vamos construir o quadro da ANOVA.**
+<br><br>
 
-<!-- --- -->
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/DQL-ANOVA.png')
+```
+
+---
 <!-- name: gl -->
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
