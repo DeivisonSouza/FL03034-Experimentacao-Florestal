@@ -2317,90 +2317,89 @@ knitr::include_graphics('fig/class6/ANOVA-DQL-QM.png')
 ```
 
 ---
-<!-- name: estF -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+name: estF
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **4º Passo**: Determinar a estatística F -->
-<!-- <br><br> -->
+**4º Passo**: Determinar a estatística F
+<br><br>
+
+$\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{353,405}{141,532} = 2,49$
+
+---
+name: fcrit
+## Delineamento em Quadrado Latino
+<br>
+
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
 
-<!-- $\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{8.956,309}{223,643} = 40,05$ -->
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
+<br><br>
 
-<!-- --- -->
-<!-- name: fcrit -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+.font80[
+- O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas.
+- Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância $\alpha$.
+- Os níveis de significância ( $\alpha$ ) mais usuais são: 0,01 (1%) e 0,05 (5%).
+- Neste exemplo, admitir-se-á $\alpha = 0,05$ (ou 5%), conforme Dias e Barros, 2009.
+]
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+---
 
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$ -->
-<!-- <br><br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- .font80[ -->
-<!-- - O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas. -->
-<!-- - Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância $\alpha$. -->
-<!-- - Os níveis de significância ( $\alpha$ ) mais usuais são: 0,01 (1%) e 0,05 (5%). -->
-<!-- - Neste exemplo, admitir-se-á $\alpha = 0,05$ (ou 5%), conforme Pimentel-Gomes e Garcia (2002). -->
-<!-- ] -->
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
+<br><br>
 
-<!-- --- -->
+.pull-left-9[
+.blue[**Vamos aprender a usar a tabela de distribuição F!**]
+- Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html)
+- O F-crítico para o experimento é: $F_{[0,05; ~4; ~12]} = 3,2592$
+<br>
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+.font80[**No R use a função qf() para encontrar o F-crítico**]
+```{r, echo=T, eval=T}
+qf(0.05, 4, 12, lower.tail=FALSE)
+```
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+]
 
-<!-- **5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$ -->
-<!-- <br><br> -->
+.pull-right-9[
+.font80[
+.blue[**Bônus: Explore mais aplicativos...**]
+- [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
+- [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
+- [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html)
+]
+]
 
-<!-- .pull-left-9[ -->
-<!-- .blue[**Vamos aprender a usar a tabela de distribuição F!**] -->
-<!-- - Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html) -->
-<!-- - O F-crítico para o experimento é: $F_{[6,~18;~0,05]} = 2,661$ -->
-<!-- <br> -->
+---
 
-<!-- .font80[**No R use a função qf() para encontrar o F-crítico**] -->
-<!-- ```{r, echo=T, eval=T} -->
-<!-- qf(0.05, 6, 18, lower.tail=FALSE) -->
-<!-- ``` -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ] -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- .pull-right-9[ -->
-<!-- .font80[ -->
-<!-- .blue[**Bônus: Explore mais aplicativos...**] -->
-<!-- - [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html) -->
-<!-- - [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html) -->
-<!-- - [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html) -->
-<!-- ] -->
-<!-- ] -->
+.font80[
+**Finalmente, têm-se o quadro final da ANOVA de experimentos em DQL (Fator único)!**
+<br><br>
 
-<!-- --- -->
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/ANOVA-DQL-Final.png')
+```
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+]
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
-
-<!-- .font80[ -->
-<!-- **Finalmente, têm-se o quadro final da ANOVA de experimentos em DBC (Fator único)!** -->
-<!-- <br><br> -->
-
-<!-- ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/ANOVA-DBC-Final.png') -->
-<!-- ``` -->
-
-<!-- ] -->
-
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
