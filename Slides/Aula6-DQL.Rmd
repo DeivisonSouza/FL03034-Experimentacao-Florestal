@@ -1425,81 +1425,9 @@ df <- labestData::DiasEg9.4
 <br>
 
 ### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
-<br>
-
-```{r tibble, echo=F, eval=T}
-df <- labestData::DiasEg9.4
-
-df2 <- df %>% 
-  select(-cult) %>% 
-    tidyr::pivot_wider(names_from = colun,
-                       values_from = prod) %>% 
-  rename_with(~stringr::str_c("C", .), !contains("l")) %>% 
-  mutate(linha = recode(linha, `1`='L1', `2`='L2', 
-                        `3`='L3',`4`='L4',`5`='L5',)) %>% 
-    rename(`linha/coluna` = linha) 
-
-df2 %>%
-  mutate(
-    C1 = cell_spec(C1, "html", color = ifelse(C1 == 108.44, "red", "black")),
-    C2 = cell_spec(C2, "html", color = ifelse(C2 == 51.69, "red", "black")),
-    C3 = cell_spec(C3, "html", color = ifelse(C3 == 59.36, "red", "black")),
-    C4 = cell_spec(C4, "html", color = ifelse(C4 == 88.78, "red", "black")),
-    C5 = cell_spec(C5, "html", color = ifelse(C5 == 29.29, "red", "black"))
-  ) %>%
-  kable("html", escape = F) %>%
-  kable_styling("striped", full_width = F)
-
-#reshape2::dcast(df, linha ~ colun, value.var = "prod")
-```
-
-
----
-
-## Delineamento em Quadrado Latino
-<br>
-
-### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
 
 .font80[
-- **Gráfico Dot Plot**: Ajuda a visualizar como a produção variou nas parcelas experimentais para as diferentes cultivares.
-]
-
-.pull-left-1[
-.font80[
-```{r dot, echo=T, eval=F, collapse=T}
-df <- labestData::DiasEg9.4
-
-df %>%
-  ggplot(aes(x=forcats::fct_reorder(cult, desc(prod), .fun='mean'),
-             y=prod, fill=cult)) +
-  geom_dotplot(binaxis='y', stackdir='center') +
-  stat_summary(fun.y=mean, geom="point", shape=18,
-                 size=3, color="red") +
-  theme_bw(base_size = 18) +
-  theme(panel.grid = element_blank(),
-        legend.position="none"
-        ) +
-  labs(x = "Cultivar", y = "Produção")
-```
-]
-]
-
-.pull-right-2[
-```{r ref.label="dot", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=2.7}
-```
-]
-
-
----
-
-## Delineamento em Quadrado Latino
-<br>
-
-### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
-
-.font80[
-- **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
+- **Gráfico BoxPlot**: Ajuda a visualizar como a produção variou nas parcelas experimentais para as diferentes cultivares e fornece medidas de posição.
 ]
 
 .pull-left-1[
@@ -1512,6 +1440,7 @@ bp <- df %>%
   ggplot(aes(x=cult,
              y=prod, color=cult)) +
   geom_boxplot() +
+  geom_point(aes(colour = cult), alpha=0.9) +
   stat_summary(fun.y=mean, geom="point", shape=4,
                  size=2, color="red") +
   theme_bw(base_size = 16) +
