@@ -2516,127 +2516,72 @@ labestData::DiasEg9.4 %>%
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- .pull-left-9[ -->
-<!-- .font80[ -->
-<!-- **ANOVA fator único usando a linguagem R** -->
-<!-- <br> -->
+.pull-left-9[
+.font80[
+**ANOVA-DQL fator único usando a linguagem R**
+<br>
 
-<!-- .blue[**2 - Realizar a ANOVA - Função aov()**] -->
-<!-- <br> -->
+.blue[**2 - Realizar a ANOVA - Função aov()**]
+<br>
 
-<!-- ```{r, echo=F,eval=TRUE} -->
-<!-- data_pivot <- data %>% -->
-<!--   tidyr::pivot_longer( -->
-<!--         cols = starts_with("P"), -->
-<!--         names_to = "Procedencia", -->
-<!--         values_to = "Valor", -->
-<!--         names_transform = list(Procedencia = as.factor), -->
-<!--         values_drop_na = TRUE -->
-<!--     ) %>%  -->
-<!--   rename(Bloco = `Bloco/Procedencia`) %>%  -->
-<!--   arrange(Procedencia, Bloco) -->
-<!-- ``` -->
+```{r aov2, echo=T, eval=T}
+# Realizar a análise de variância
+df <- labestData::DiasEg9.4
+res.aov <- aov(prod ~ cult + linha + colun, data = df)
+```
 
-<!-- ```{r aov2, echo=T, eval=T} -->
-<!-- # Realizar a análise de variância -->
-<!-- res.aov <- aov(Valor ~ Procedencia + Bloco, data = data_pivot) -->
-<!-- ``` -->
+```{r echo=T, eval=T}
+# Resumo da análise de variância
+summary(res.aov)
+```
+]
+]
 
-<!-- ```{r echo=T, eval=T} -->
-<!-- # Resumo da análise de variância -->
-<!-- summary(res.aov) -->
-<!-- ``` -->
-<!-- ] -->
-<!-- ] -->
+--
 
-<!-- -- -->
+.pull-right-9[
+.shadow3[
+.font80[
+.center[**Interpretação**]
+- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor do Teste F. Assim, **NÃO** existem
+evidências de diferenças significativas entre as médias de produção de cacau para as diferentes cultivares.
+- Portanto, não existem razões para realizar pós-testes de comparações de médias.
+]
+]
+]
 
-<!-- .pull-right-9[ -->
-<!-- .shadow3[ -->
-<!-- .font80[ -->
-<!-- .center[**Interpretação**] -->
-<!-- - A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, existem -->
-<!-- evidências de diferenças significativas entre as médias de produção volumétrica das procedências. -->
-<!-- - A hipótese H<sub>0</sub> é rejeitada para $\alpha$ < 0,001 (altamente significativo). -->
-<!-- - Deve-se realizar pós-testes de comparações de médias. -->
-<!-- ] -->
-<!-- ] -->
-<!-- ] -->
+---
 
-<!-- --- -->
+## Referências
+.font90[
+<br><br>
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+<br><br>
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+<br><br>
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+<br><br>
+ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... & BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p.
+]
 
-<!-- ## Referências -->
-<!-- .font90[ -->
-<!-- <br><br> -->
-<!-- DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p. -->
-<!-- <br><br> -->
-<!-- NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007. -->
-<!-- <br><br> -->
-<!-- PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p. -->
-<!-- <br><br> -->
-<!-- ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... & BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p. -->
-<!-- ] -->
+<!--Slide XX -->
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
 
-<!-- <!--Slide XX --> -->
-<!-- --- -->
-<!-- layout: false -->
-<!-- class: inverse, top, right -->
-<!-- background-image: url(fig/class1/imgC.jpg) -->
-<!-- background-size: cover -->
+.font300[
+Obrigado!
+]
+<br><br><br><br><br><br>
 
-<!-- .font300[ -->
-<!-- Obrigado! -->
-<!-- ] -->
-<!-- <br><br><br><br><br><br> -->
+**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
 
-<!-- **Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a> -->
-
-<!-- **Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a> -->
-
-
-<!-- --- -->
-<!-- name: tb -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
-
-<!-- ### Representação genérica de tabela de dados -->
-
-<!-- .pull-left-2[ -->
-<!-- .font80[ -->
-<!-- Seja y<sub>ijk</sub> a notação para representar o valor observado da variável resposta y do *k*-ésimo tratamento na *i*-ésima linha com a *j*-ésima coluna, sendo *i*=*j*=*k*=1, 2,3 ..., *p*.  -->
-
-<!-- Uma representação genérica da tabela de dados é dada por: -->
-<!-- ] -->
-<!-- <br> -->
-
-<!-- ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/DBC-Table.png') -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- -- -->
-
-<!-- .pull-right-1[ -->
-<!-- .font80[ -->
-<!-- y<sub>1.</sub>, y<sub>2.</sub>, y<sub>3.</sub>,..., y<sub>I.</sub> = Soma dos dados y<sub>ij</sub> da variável resposta y dentro do *i*-ésimo tratamento. -->
-<!-- <br> -->
-
-<!-- $\bar{y}_{1.}$, $\bar{y}_{2.}$, $\bar{y}_{3.}$,..., $\bar{y}_{I.}$ = Média aritmética dos dados y<sub>ij</sub> da variável resposta y dentro do *i*-ésimo tratamento. -->
-<!-- <br><br> -->
-
-<!-- $\bar{y}_{..}$ = Média geral -->
-
-<!-- y<sub>..</sub> = Total geral -->
-<!-- <br><br> -->
-
-<!-- *I* = Número de tratamentos -->
-
-<!-- *J* = Número de blocos -->
-<!-- ] -->
-<!-- ] -->
+**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
