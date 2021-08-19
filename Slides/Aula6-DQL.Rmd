@@ -2207,18 +2207,18 @@ $\large SQR = 1.698,386$
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA] -->
-<!-- <br><br> -->
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA]
+<br><br>
 
-<!-- ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600} -->
-<!-- knitr::include_graphics('fig/class5/ANOVA-DBC-SQ.png') -->
-<!-- ``` -->
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/ANOVA-DQL-SQ.png')
+```
 
 <!-- --- -->
 <!-- name: qm -->
