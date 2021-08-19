@@ -109,6 +109,24 @@ CustomDT <- function(data){
 }
 ```
 
+```{r customDT2, echo=F}
+CustomDT2 <- function(data){
+  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
+                         style = "default",
+                         class = "display", width = '250px',
+                         caption = '',
+     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          "}")
+       ) 
+     )
+}
+```
+
+
+
 ```{r customkbl, echo=F}
 Customkbl <- function(data){
   data %>%
@@ -2452,78 +2470,51 @@ $\normalsize F_{Calculado}~<~F_{Crítico}~=~2,49~<~3,26$
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **O que fazer quando rejeita-se a hipótese de nulidade?** -->
-<!-- <br> -->
+**O que fazer quando .blue[NÃO REJEITA-SE] a hipótese de nulidade?**
+<br><br>
 
-<!-- - Deve-se realizar pós-testes de comparações múltiplas de médias. -->
-<!-- - Os testes paramétricos mais famosos são: Tukey, Duncan, Dunnett, etc. -->
-<!-- - Esses testes realizam comparações par-a-par entre as médias dos tratamentos. -->
-<!-- ] -->
-<!-- <br><br> -->
+.font90[
+- O teste F da ANOVA indicou não haver evidências de diferenças entre as médias de produção de *Theobroma cacao*. Ou seja, não rejeição de H<sub>0</sub>.
+- Nos caso de **.blue[não rejeição de H<sub>0</sub>]** não existe razão para continuar a análise com pós-testes de comparações de médias.
+]
 
+---
+name: anovaR
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- .center[.blue[**Mas, isso é tema para as próximas aulas!**]] -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- --- -->
-<!-- name: anovaR -->
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+.pull-left-9[
+.font80[
+**ANOVA-DQL fator único usando a linguagem R**
+<br><br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+.blue[**1- Os dados estão disponíveis no pacote labestData**]
+<br>
 
-<!-- .pull-left-9[ -->
-<!-- .font80[ -->
-<!-- **ANOVA fator único usando a linguagem R** -->
-<!-- <br> -->
+```{r echo=T, eval=F}
+labestData::DiasEg9.4
+```
 
-<!-- .blue[**1- Ordenar dados no formato longo**] -->
-<!-- <br> -->
+]
+]
 
-<!-- ```{r echo=T, eval=F} -->
-<!-- data <- readr::read_csv("data/DBC-Pimentel-Gomes-2002.csv") -->
+.pull-right-9[
+```{r dt, echo=F, eval=T}
+labestData::DiasEg9.4 %>%
+  CustomDT2
+```
+]
 
-<!-- data_pivot <- data %>% -->
-<!--   tidyr::pivot_longer( -->
-<!--         cols = starts_with("P"), -->
-<!--         names_to = "Procedencia", -->
-<!--         values_to = "Valor", -->
-<!--         names_transform = list(Procedencia = as.factor), -->
-<!--         values_drop_na = TRUE -->
-<!--     ) %>%  -->
-<!--   rename(Bloco = `Bloco/Procedencia`) %>%  -->
-<!--   arrange(Procedencia, Bloco) -->
-<!-- ``` -->
-
-
-<!-- ```{r dt, echo=F, eval=F} -->
-<!-- data %>% -->
-<!--     tidyr::pivot_longer( -->
-<!--         cols = starts_with("P"), -->
-<!--         names_to = "Procedencia", -->
-<!--         values_to = "Valor", -->
-<!--         names_transform = list(Procedencia = as.factor), -->
-<!--         values_drop_na = TRUE -->
-<!--     ) %>%  -->
-<!--   rename(Bloco = `Bloco/Procedencia`) %>%  -->
-<!--   arrange(Procedencia, Bloco) %>%  -->
-<!--   CustomDT -->
-<!-- ``` -->
-<!-- ] -->
-<!-- ] -->
-
-<!-- .pull-right-9[ -->
-<!-- ```{r ref.label="dt", echo=FALSE, eval=TRUE, collapse=T} -->
-<!-- ``` -->
-<!-- ] -->
-
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
