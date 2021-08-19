@@ -1351,8 +1351,8 @@ df2 %>%
 ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)]
 
 .font90[
-- Existe alguma procedência que apresentou maior produção volumétrica?
-- A resposta para esta pergunta será dada pela estatística F da ANOVA-DBC.
+- Existe alguma procedência que apresentou produção volumétrica de madeira significativamente maior do que outra?
+- A resposta para esta pergunta será alcançada aplicando-se o teste de hipótese (Teste F) da ANOVA-DBC.
 ]
 
 --
