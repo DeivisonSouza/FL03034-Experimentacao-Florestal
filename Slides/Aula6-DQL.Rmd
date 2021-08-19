@@ -1941,7 +1941,7 @@ name: sqex
 **Fator em comum (C)**
 <br>
 .font80[
-- As equações $SQ_{Tot.}$, $SQ_{Trat.}$ e $SQB$ possuem uma expressão matemática em comum, denominada **Fator em Comum**.
+- As equações $SQ_{Tot.}$, $SQ_{Trat.}$, $SQL$ e $SQC$ possuem uma expressão matemática em comum, denominada **Fator em Comum**.
 - A existência desse fator facilita os cálculos matemáticos das SQs.
 - É comum essas equações serem simplificadas pela letra "C" na parte em comum.
 ]
@@ -1949,21 +1949,25 @@ name: sqex
 ]
 
 .pull-left-10[
-```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQTot-cor.png')
 ```
 
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQTrat-cor.png')
 ```
 
-```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQB-cor.png')
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQL-cor.png')
+```
+
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class6/SQC-cor.png')
 ```
 <br>
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQR.png')
+knitr::include_graphics('fig/class6/SQR.png')
 ```
 
 ]
@@ -1981,11 +1985,11 @@ knitr::include_graphics('fig/class5/SQR.png')
 
 <!-- .pull-left-9[ -->
 <!-- ```{r tb2, echo=F, eval=T} -->
-<!-- df2 %>%  -->
-<!--   Customkbl %>%  -->
-<!--   row_spec(5, color = 'white', background = 'orange') %>%  -->
-<!--   row_spec(6, color = 'white', background = 'blue') %>%  -->
-<!--   column_spec(9, color = 'white', background =  -->
+<!-- df2 %>% -->
+<!--   Customkbl %>% -->
+<!--   row_spec(5, color = 'white', background = 'orange') %>% -->
+<!--   row_spec(6, color = 'white', background = 'blue') %>% -->
+<!--   column_spec(9, color = 'white', background = -->
 <!--                 case_when(is.na(df2$Total) ~ "white", -->
 <!--                              df2$Total > 7000 ~ "red", -->
 <!--                              df2$Total < 7000 ~ "green")) -->
