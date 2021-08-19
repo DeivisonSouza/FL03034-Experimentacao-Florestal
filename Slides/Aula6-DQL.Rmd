@@ -1580,7 +1580,7 @@ layout: true
 <br>
 
 .font90[
-Um experimento de competição de frutos de cacau (*Theobroma cacao*) foi conduzido com 4 cultivares sob o Delineamento em Quadrado Latino (DBC). Os dados apresentados na tabela a seguir correspodem à produção de cacau nas parcelas experimentais.
+Um experimento de competição de frutos de cacau (*Theobroma cacao*) foi conduzido com 4 cultivares sob o Delineamento em Quadrado Latino (DQL). Os dados apresentados na tabela a seguir correspodem à produção de cacau nas parcelas experimentais.
 <br><br>
 
 **Obs.: No livro, não está claro a unidade de medida da variável resposta. Portanto, para fins didáticos vamos admitir simplesmente que seja kg/parcela.**
@@ -2401,56 +2401,56 @@ knitr::include_graphics('fig/class6/ANOVA-DQL-Final.png')
 
 ---
 
-<!-- ## Delineamento em Quadrado Latino -->
-<!-- <br> -->
+## Delineamento em Quadrado Latino
+<br>
 
-<!-- ### .font80[Estudo de Caso I - Competição de procedências florestais (Pimentel-Gomes; Garcia, 2002)] -->
-<!-- <br> -->
+### .font80[Estudo de Caso I - Competição de produção de frutos de cacau (Dias e Barros, 2009; pg. 247)]
+<br>
 
-<!-- **Hipóteses da estatística F da ANOVA - Conclusão** -->
-<!-- <br> -->
+**Hipóteses do Teste F da ANOVA - Conclusão**
+<br>
 
-<!-- .pull-left-11[ -->
-<!-- .font80[ -->
-<!-- - Hipótese de nulidade (H<sub>0</sub>) -->
-<!-- <br> -->
+.pull-left-11[
+.font80[
+- Hipótese de nulidade (H<sub>0</sub>)
+<br>
 
-<!-- **Não existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. -->
-<!-- ] -->
-<!-- ] -->
+**Não existe diferença** significativa entre as **médias** de produção, em kg/parcela, das 5 cutivares de *Theobroma cacao*.
+]
+]
 
-<!-- .pull-right-11[ -->
-<!-- .font80[ -->
-<!-- - Hipótese alternativa (H<sub>1</sub>) -->
-<!-- <br> -->
+.pull-right-11[
+.font80[
+- Hipótese alternativa (H<sub>1</sub>)
+<br>
 
-<!-- **Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*. -->
-<!-- ] -->
-<!-- ] -->
+**Existe diferença** significativa entre as **médias** de produção, em kg/parcela, para pelo menos duas cutivares de *Theobroma cacao*.
+]
+]
 
-<!-- -- -->
+--
 
-<!-- .pull-down[ -->
-<!-- .pull-left-10[ -->
-<!-- <br><br> -->
-<!-- $\normalsize F_{Calculado}~>~F_{Crítico}~=~40,05~>~2,661$ -->
+.pull-down[
+.pull-left-10[
+<br><br>
+$\normalsize F_{Calculado}~<~F_{Crítico}~=~2,49~<~3,26$
 
-<!-- **Conclusão**: .blue[**Rejeita-se H<sub>0</sub>**] -->
-<!-- ] -->
+**Conclusão**: .blue[**Não rejeita-se H<sub>0</sub>**]
+]
 
-<!-- .pull-right-10[ -->
+.pull-right-10[
 
-<!-- .shadow3[ -->
-<!-- .center[**Interpretação**] -->
+.shadow3[
+.center[**Interpretação**]
 
-<!-- .font80[ -->
-<!-- - Como $\normalsize F_{Calculado}~>~F_{Crítico}~(~40,05~>~2,661)$ rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Procedências) diferem estatísticamente, ao nível de 5% de probabilidade. -->
-<!-- ] -->
-<!-- ] -->
-<!-- ] -->
-<!-- ] -->
+.font80[
+- Como $\normalsize F_{Calculado}~<~F_{Crítico}~(~2,49~<~3,26)$ não rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, não existem evidências de que as médias de pelo menos duas cultivares de *Theobroma cacao* diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+]
+]
 
-<!-- --- -->
+---
 
 <!-- ## Delineamento em Quadrado Latino -->
 <!-- <br> -->
