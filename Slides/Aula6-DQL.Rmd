@@ -151,7 +151,7 @@ Customkbl <- function(data){
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### `r format(Sys.Date(),"%d/%B/%Y")`
+##### 1ª versão: 06/09/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
 ##### Altamira, Pará
 
 ---
