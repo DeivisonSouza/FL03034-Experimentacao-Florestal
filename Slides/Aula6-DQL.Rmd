@@ -622,7 +622,7 @@ g1
 
 **2º Passo**: Sorteiam-se os tratamentos (A, B, C, D e E) às parcelas experimentais na 1ª linha (ou na 1ª coluna); e
 
-**3º Passo**: Para as demasi linhas (ou colunas), incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci".
+**3º Passo**: Para as demais linhas (ou colunas), incrementar uma unidade (1) sobre o tratamento aplicado na parcela experimental da linha "Li" e coluna "Ci".
 ]
 
 ---
@@ -985,7 +985,7 @@ df <- data.frame(lin, col, trat)
 - Cada tratamento apareceu uma única vez em cada linha e em cada coluna.
 - N.º de tratamentos = N.º de repetições = N.º de linhas = N.º de colunas.
 - Número de parcelas experimentais é igual a número de tratamento ao quadrado (N=I²).
-- Todos os tratamentos foram dispostos à parcelas experimentais com diferentes níveis de fertilidade e umidade do solo.
+- Todos os tratamentos foram alocados em parcelas experimentais com diferentes níveis de fertilidade e umidade do solo.
 ]
 ]
 
@@ -1147,7 +1147,7 @@ name: dqlmodelo
 
 ### Modelo Estatístico - DQL
 
-Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​O modelo estatístico associado ao DQL é:
+Toda ANOVA pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009). O modelo estatístico associado ao DQL é:
 <br><br>
 
 .pull-left-9[
