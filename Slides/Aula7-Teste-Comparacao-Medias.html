@@ -7,7 +7,7 @@
     <script src="Aula7-Teste-Comparacao-Medias_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb75cc23847f4389b8c3711e943deb54","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x02c3c0cb8b448ae98740c4bd25e98f4","expires":1}</script>
     <script src="Aula7-Teste-Comparacao-Medias_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula7-Teste-Comparacao-Medias_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -172,6 +172,14 @@ Ao final desta aula espera-se que o discente seja capaz de...
 &amp;nbsp;&amp;nbsp;[1.3 - Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F](#rej)
 
 [2 - Teste de comparações múltiplas de Tukey](#tt)
+
+&amp;nbsp;&amp;nbsp;[2.1 - Diferença Mínima Significativa](#dms)
+
+&amp;nbsp;&amp;nbsp;[2.2 - Hipóteses estatísticas do Teste de Tukey](#hett)
+
+&amp;nbsp;&amp;nbsp;[2.3 - Etapas para realização do Teste de Tukey](#prtt)
+
+
 
 ]
 ]
@@ -342,7 +350,7 @@ name: tt
 - Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
 - **Publicação**: *Comparing Individual Means in the Analysis of Variance*
 [(Tukey, 1949)](https://www.jstor.org/stable/3001913).
-- **Ideia básica**: realizar .blue[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .blue[diferença mínima significativa] (DMS).
+- **Ideia básica**: realizar .blue[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .blue[Diferença Mínima Significativa] (DMS).
 - É um dos principais e mais usados testes de comparações de médias.
 
 ]
@@ -362,11 +370,95 @@ name: tt
 ]
 
 ---
+name: dms
+## Testes de Comparações de Médias
+&lt;br&gt;
+### Diferença Mínima Significativa - DMS
+&lt;br&gt;
+
+.pull-left-4[
+$$
+`\begin{equation*}
+\Large
+\Delta = q\sqrt{\frac{QMR}{J}}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(\Delta\)` = Diferença Mínima de Significância
+
+*q* = Amplitude Total Estudentizada
+
+*QMR* = Quadrado Médio do Resíduo
+
+*J* = Número de repetições por tratamento
+
+*I* = Número de tratamentos
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Total Estudentizada**]
+
+$$
+`\begin{equation*}
+q_{(GL_{Trat.};~GLR,~\alpha)}
+\end{equation*}`
+$$
+
+.font70[
+`\(GL_{Trat.}\)` = Graus de liberdade de tratamentos
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+]
+]
+
+---
+name: hett
+## Hipóteses estatísticas do Teste de Tukey
 
 
+---
+name: prtt
+## Etapas para realização do Teste de Tukey
+&lt;br&gt;
 
+.pull-left-3[
+.font80[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .blue[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+&lt;br&gt;
 
+**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
+&lt;br&gt;
 
+**Etapa 3**: Encontrar o `\(q_{Crítico}\)` (Amplitude Total Estudentizada). São necessárias 3 informações: 1) grau de liberdade de tratamento; 2) grau de liberdade de resíduos; e 3) nível de significância ( `\(\alpha\)` ).
+&lt;br&gt;
+
+**Etapa 4**: Calcular a Diferença Mínima Significativa ( `\(\Delta\)` ).
+&lt;br&gt;
+
+**Etapa 5**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
+&lt;br&gt;
+
+**Etapa 6**: Comparar as diferenças entre as médias aritméticas com o valor de `\(\Delta\)`.
+&lt;br&gt;
+
+`\(\left | m_i - m_i \right | \geq \Delta\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Tukey
+&lt;br&gt;
+
+`\(\left | m_i - m_i \right | &lt; \Delta\)`: Não rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Tukey
+&lt;br&gt;
+
+**Etapa 7**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+
+]
+]
+
+.pull-right-3[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+![STEPS](https://media4.giphy.com/media/Uu5z1AH8hEEG12YMGG/giphy.gif)  
+
+]
 
 ---
 &lt;!-- ## Terminologias --&gt;
