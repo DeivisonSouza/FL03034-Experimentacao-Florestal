@@ -482,12 +482,12 @@ $\Delta$ = Diferença Mínima de Significância
 
 $$
 \begin{equation*}
-q_{(GL_{Trat.};~GLR,~\alpha)}
+q_{(I;~GLR,~\alpha)}
 \end{equation*}
 $$
 
 .font70[
-$GL_{Trat.}$ = Graus de liberdade de tratamentos
+$I$ = Número de tratamentos
 
 $GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
 <br><br>
@@ -611,16 +611,13 @@ name: prtt
 **Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
 <br>
 
-**Etapa 3**: Encontrar o $q_{Crítico}$ (Amplitude Total Estudentizada). São necessárias 3 informações: 1) grau de liberdade de tratamento; 2) grau de liberdade de resíduos; e 3) nível de significância ( $\alpha$ ).
+**Etapa 3**: Calcular a Diferença Mínima Significativa ( $\Delta$ ).
 <br>
 
-**Etapa 4**: Calcular a Diferença Mínima Significativa ( $\Delta$ ).
+**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
 <br>
 
-**Etapa 5**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
-<br>
-
-**Etapa 6**: Comparar as diferenças entre as médias aritméticas com o valor de $\Delta$.
+**Etapa 5**: Comparar as diferenças entre as médias aritméticas com o valor de $\Delta$.
 <br>
 
 $\left | m_i - m_i \right | \geq \Delta$: Rejeita-se H<sub>0</sub> do teste de Tukey
@@ -629,7 +626,7 @@ $\left | m_i - m_i \right | \geq \Delta$: Rejeita-se H<sub>0</sub> do teste de T
 $\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de Tukey
 <br>
 
-**Etapa 7**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
 
 ]
 ]
@@ -775,6 +772,57 @@ df1 %>%
   Customkbl %>%
   row_spec(5, color = 'white', background = 'orange')
 ```
+
+
+---
+
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 3**: Calcular a Diferença Mínima de Significância (Admita $\alpha = 0,05$)
+]
+<br>
+
+.pull-left-4[
+
+.font80[
+- Primeiro, vamos encontrar o valor de *q*<sub>*crítico*</sub> no site: <br> [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
+]
+<br>
+
+$$
+\begin{equation*}
+q_{(I;~GLR,~\alpha)}\\
+q_{(10;~30,~0,05)} = \color{red}{4,82}
+\end{equation*}
+$$
+]
+
+
+--
+
+.pull-right-4[
+$$
+\begin{equation*}
+\normalsize
+\Delta = q\sqrt{\frac{QMR}{J}} = 4,721\sqrt{\frac{2,59}{4}} = \color{red}{3,878cm}
+\end{equation*}
+$$
+<br>
+.font70[
+$\Delta$ = Diferença Mínima de Significância
+
+*q* = Amplitude Total Estudentizada
+
+*QMR* = Quadrado Médio do Resíduo
+
+*J* = Número de repetições por tratamento
+
+*I* = Número de tratamentos
+]
+]
 
 
 ---
