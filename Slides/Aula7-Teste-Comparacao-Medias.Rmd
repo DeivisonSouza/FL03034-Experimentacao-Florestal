@@ -226,7 +226,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;[2.2 - Hipóteses estatísticas do Teste de Tukey](#hett)
 
-&nbsp;&nbsp;[2.3 - Etapas para realização do Teste de Tukey](#prtt)
+&nbsp;&nbsp;[2.3 - Regras de decisão do Teste de Tukey](#rdtt)
+
+&nbsp;&nbsp;[2.4 - Etapas para realização do Teste de Tukey](#prtt)
 
 
 
@@ -270,15 +272,15 @@ name: rec
 
 .pull-left-4[
 .font80[
-**Antes de aprofundar sobre ".blue[Testes de Comparações de Médias]" vamos resgatar algumas ideias discutidas até aqui...**
+**Antes de aprofundar sobre ".green[Testes de Comparações de Médias]" vamos resgatar algumas ideias discutidas até aqui...**
 ]
 <br>
 
 .font70[
-- Um .blue[experimento] é conduzido sob algum delineamento (DIC, DBC ou DQL) ou arranjo experimental para .blue[avaliar os efeitos de tratamentos] sobre uma variável resposta "y" de interesse.
-- Para isso, .blue[dados] da variável resposta "y" .blue[são coletados], e estes são usados para avaliar as evidências e realizar inferências.
-- Após uma boa análise exploratória, uma abordagem estatística comum é a realização de uma .blue[ANOVA], cujo modelo estatístico depende do delineamento experimental.
-- Na ANOVA, o .blue[teste F] é usado para avaliar, sob a ótica estatística, a existência de evidências de .blue[igualdade entre as médias de tratamentos] (Hipótese H<sub>0</sub>).
+- Um .green[experimento] é conduzido sob algum delineamento (DIC, DBC ou DQL) ou arranjo experimental para .green[avaliar os efeitos de tratamentos] sobre uma variável resposta "y" de interesse.
+- Para isso, .green[dados] da variável resposta "y" .green[são coletados], e estes são usados para avaliar as evidências e realizar inferências.
+- Após uma boa análise exploratória, uma abordagem estatística comum é a realização de uma .green[ANOVA], cujo modelo estatístico depende do delineamento experimental.
+- Na ANOVA, o .green[teste F] é usado para avaliar, sob a ótica estatística, a existência de evidências de .green[igualdade entre as médias de tratamentos] (Hipótese H<sub>0</sub>).
 ]
 ]
 
@@ -333,7 +335,7 @@ name: regras
 .font90[
 **Rejeição da hipótese de nulidade (H<sub>0</sub>)**
 
-- Se o valor da .blue[estatística F] (F<sub>Calculado</sub>) for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H<sub>0</sub>.
+- Se o valor da .green[estatística F] (F<sub>Calculado</sub>) for **maior** do que o .green[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H<sub>0</sub>.
 - Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado.
 
 $F_{Calculado} > F_{Crítico}$
@@ -347,7 +349,7 @@ $Rejeita-se~~H_0$
 .font90[
 **Não rejeição da hipótese de nulidade**
 
-- Se o valor da .blue[estatística F] (F<sub>Calculado</sub>) for **menor ou igual** do que o valor do (F<sub>Crítico</sub>), não existe evidências para rejeitar H<sub>0</sub>.
+- Se o valor da .green[estatística F] (F<sub>Calculado</sub>) for **menor ou igual** do que o valor do (F<sub>Crítico</sub>), não existe evidências para rejeitar H<sub>0</sub>.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado.
 <br><br>
 
@@ -370,7 +372,7 @@ name: rej
 - Em outras palavras, existem evidências de que as médias de pelo menos dois tratamentos diferem estatísticamente.
 <br><br>
 
-**Note**: .blue[O teste F não fornece evidências sobre qual é o melhor tratamento].
+**Note**: .green[O teste F não fornece evidências sobre qual é o melhor tratamento].
 ]
 ]
 
@@ -384,8 +386,8 @@ name: rej
 
 .green[2 - Quais tratamentos possuem médias diferentes, do ponto de vista estatístico?]
 
-- Para responder essas perguntas foram idealizados os .blue[testes de comparações de médias].
-- A ideia básica é realizar .blue[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
+- Para responder essas perguntas foram idealizados os .green[testes de comparações de médias].
+- A ideia básica é realizar .green[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
 - Portanto, os testes de comparações de médias complementam a ANOVA, quando a hipótese H<sub>0</sub> do teste F é rejeitada.
 ]
 ]
@@ -401,7 +403,7 @@ name: tt
 - Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
 - **Publicação**: *Comparing Individual Means in the Analysis of Variance*
 [(Tukey, 1949)](https://www.jstor.org/stable/3001913).
-- **Ideia básica**: realizar .blue[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .blue[Diferença Mínima Significativa] (DMS).
+- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .green[Diferença Mínima Significativa] (DMS).
 - É um dos principais e mais usados testes de comparações de médias.
 
 ]
@@ -464,14 +466,95 @@ $GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
 
 - Encontre o valor de $q$ crítico no site: [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
 
-
-
 ]
 ]
 
 ---
+
+name: dms
+## Testes de Comparações de Médias
+<br>
+### Diferença Mínima Significativa - O que é?
+<br>
+
+.pull-left-2[
+.font80[
+- $\color{green}\Delta$ é o menor valor que a estimativa de um contraste (diferença entre médias) deve apresentar para admitir que existe diferença significativa entre as médias, ou seja, que a diferença é diferente de zero, sob a ótica estatística.
+- Em outras palavras, $\color{green}\Delta$ é a diferença mínima que deve existir entre as médias de 2 tratamentos quaisquer, para que a hipótese H<sub>0</sub> seja rejeitada.
+]
+]
+
+--
+
+.pull-right-1[
+.font70[
+.center[**Vamos supor...**]
+
+Supondo um experimento de crescimento em altura (centímetros) de plântulas em condições de viveiro. Têm-se os resultados das médias de 3 tratamentos para diferentes substratos (S1 = 20cm, S2 = 18cm e S3 = 17cm). Admitindo $\color{green}\Delta$ = 3, pergunta-se:
+
+- Quais tratamentos diferem estatisticamente, em termos de suas médias?
+
+S1 - S2 = 20 - 18 = .red[2]
+
+S1 - S3 = 20 - 17 = .green[**3**]
+
+S2 - S3 = 18 - 17 = .red[1]
+
+]
+]
+
+
+---
 name: hett
 ## Hipóteses estatísticas do Teste de Tukey
+<br>
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H<sub>0</sub>):**
+<br>
+
+- As .green[médias] comparadas .green[não diferem] significativamente.
+
+H<sub>0</sub>: $m_i - m_{i'} = 0$, para algum $i ≠ i'$
+
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H<sub>1</sub>):**
+<br>
+
+- As .green[médias] comparadas .green[diferem] significativamente.
+
+H<sub>1</sub>: $m_i - m_{i'} ≠ 0$, para algum $i ≠ i'$
+]
+]
+
+---
+name: rdtt
+### Regras de decisão do teste de Tukey
+<br>
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H<sub>0</sub>)**
+
+- Se $\left | m_i - m_{i'} \right | \geq \Delta$, rejeita-se (H<sub>0</sub>). 
+- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, do ponto de vista estatístico.
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
+
+- Se $\left | m_i - m_{i'} \right | < \Delta$, não rejeita-se (H<sub>0</sub>). 
+- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, do ponto de vista estatístico.
+
+]
+]
 
 
 ---
@@ -479,9 +562,17 @@ name: prtt
 ## Etapas para realização do Teste de Tukey
 <br>
 
+.pull-right-3[
+<br><br><br>
+![question](https://media1.giphy.com/media/ZaJtnTY8tFZz0PvmW9/giphy-downsized.gif)  
+
+]
+
+--
+
 .pull-left-3[
 .font80[
-**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .blue[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
 <br>
 
 **Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
@@ -510,11 +601,9 @@ $\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de
 ]
 ]
 
-.pull-right-3[
-<br><br><br>
-![STEPS](https://media4.giphy.com/media/Uu5z1AH8hEEG12YMGG/giphy.gif)  
 
-]
+---
+
 
 ---
 <!-- ## Terminologias -->
