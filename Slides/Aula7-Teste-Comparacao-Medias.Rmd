@@ -151,7 +151,7 @@ Customkbl <- function(data){
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### `r format(Sys.Date(),"%d/%B/%Y")`
+##### 1ª versão: 13/setembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
 ##### Altamira, Pará
 
 ---
@@ -212,7 +212,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 1 - Testes de Comparações de Médias**
 
-[1 - Delineamento experimental - Conceito](#tcm)
+[1 - Recapitulando - ANOVA e Teste F](#rec)
+
+&nbsp;&nbsp;[1.1 - Hipóteses estatísticas do teste F](#hip)
+
+&nbsp;&nbsp;[1.2 - Regras de decisão do teste F](#regras)
+
+&nbsp;&nbsp;[1.3 - Rejeição da hipótese H<sub>0</sub> do teste F](#rej)
+
+[2 - Teste de comparações múltiplas de Tukey](#tt)
 
 ]
 ]
@@ -262,7 +270,7 @@ name: rec
 - Um .blue[experimento] é conduzido sob algum delineamento (DIC, DBC ou DQL) ou arranjo experimental para .blue[avaliar os efeitos de tratamentos] sobre uma variável resposta "y" de interesse.
 - Para isso, .blue[dados] da variável resposta "y" .blue[são coletados], e estes são usados para avaliar as evidências e realizar inferências.
 - Após uma boa análise exploratória, uma abordagem estatística comum é a realização de uma .blue[ANOVA], cujo modelo estatístico depende do delineamento experimental.
-- Na ANOVA, o .blue[teste F] é usado para avaliar, estatisticamente, a existência de evidências de .blue[igualdade entre as médias de tratamentos].
+- Na ANOVA, o .blue[teste F] é usado para avaliar, sob a ótica estatística, a existência de evidências de .blue[igualdade entre as médias de tratamentos] (Hipótese H<sub>0</sub>).
 ]
 ]
 
@@ -279,7 +287,7 @@ knitr::include_graphics("https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy
 ]
 
 ---
-name: anova
+name: hip
 ## Recapitulando...
 <br>
 ### ANOVA: Hipóteses estatísticas do teste F
@@ -307,7 +315,7 @@ name: anova
 ]
 
 ---
-name: regra
+name: regras
 ## Recapitulando...
 <br>
 ### ANOVA: Regras de decisão do teste F
@@ -317,10 +325,10 @@ name: regra
 .font90[
 **Rejeição da hipótese de nulidade (H<sub>0</sub>)**
 
-- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H<sub>0</sub>.
+- Se o valor da .blue[estatística F] (F<sub>Calculado</sub>) for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H<sub>0</sub>.
 - Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado.
 
-$F-calculado > F-Crítico$
+$F_{Calculado} > F_{Crítico}$
 
 $Rejeita-se~~H_0$
 
@@ -331,11 +339,11 @@ $Rejeita-se~~H_0$
 .font90[
 **Não rejeição da hipótese de nulidade**
 
-- Se o valor da .blue[estatística F] for **menor ou igual** do que o valor do F-Crítico, não existe evidências para rejeitar H<sub>0</sub>.
+- Se o valor da .blue[estatística F] (F<sub>Calculado</sub>) for **menor ou igual** do que o valor do (F<sub>Crítico</sub>), não existe evidências para rejeitar H<sub>0</sub>.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado.
 <br><br>
 
-$F-calculado \leq F-Crítico$
+$F_{Calculado} \leq F_{Crítico}$
 
 $Não~~rejeita-se~~H_0$
 
@@ -343,16 +351,18 @@ $Não~~rejeita-se~~H_0$
 ]
 
 ---
-name: rejeicao
+name: rej
 ## Recapitulando...
 <br>
 ### ANOVA: Rejeição da hipótese H<sub>0</sub> do teste F
-<br>
 
 .pull-left-4[
 .font80[
 - Se $F_{calculado} > F_{crítico}$: existem evidências para rejeição da hipótese de nulidade (H<sub>0</sub>).
 - Em outras palavras, existem evidências de que as médias de pelo menos dois tratamentos diferem estatísticamente.
+<br><br>
+
+**Note**: .blue[O teste F não fornece evidências sobre qual é o melhor tratamento].
 ]
 ]
 
@@ -360,19 +370,55 @@ name: rejeicao
 
 .pull-right-4[
 .font80[
-.center[**Surge um nova pergunta...**]
+.center[**Surgiram duas novas perguntas...**]
 
-.green[Quais tratamentos possuem médias iguais e quais possuem médias diferentes, do ponto de vista estatístico?]
+.green[1 - Quais tratamentos possuem médias iguais, do ponto de vista estatístico?]
 
-- Para responder essa pergunta foram idealizados os .blue[testes de comparações de médias].
-- A ideia básica é realizar .blue[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são diferentes do ponto de vista estatístico.
-- Existem vários testes de comparações de médias. Mas, estudaremos 2: .blue[Teste de Tukey e Teste de Duncan].
+.green[2 - Quais tratamentos possuem médias diferentes, do ponto de vista estatístico?]
+
+- Para responder essas perguntas foram idealizados os .blue[testes de comparações de médias].
+- A ideia básica é realizar .blue[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
+- Portanto, os testes de comparações de médias complementam a ANOVA, quando a hipótese H<sub>0</sub> do teste F é rejeitada.
+]
+]
+
+---
+name: tt
+## Testes de Comparações de Médias
+<br>
+### Teste de Tukey
+
+.pull-left-4[
+.font80[
+- Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
+- **Publicação**: *Comparing Individual Means in the Analysis of Variance*
+[(Tukey, 1949)](https://www.jstor.org/stable/3001913).
+- **Ideia básica**: realizar .blue[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .blue[diferença mínima significativa] (DMS).
+- É um dos principais e mais usados testes de comparações de médias.
+
+]
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='John Wilder Tukey', dpi=600}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/John_Tukey.jpg/220px-John_Tukey.jpg")
+```
+
+.font70[
+.center[
+**Fonte**: https://upload.wikimedia.org
+]
 ]
 ]
 
 ---
 
 
+
+
+
+
+---
 <!-- ## Terminologias -->
 
 <!-- <br> -->

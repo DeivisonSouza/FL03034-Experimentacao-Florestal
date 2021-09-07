@@ -7,7 +7,7 @@
     <script src="Aula7-Teste-Comparacao-Medias_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"aedd5777d54b472d892456c551e4c5f3","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb75cc23847f4389b8c3711e943deb54","expires":1}</script>
     <script src="Aula7-Teste-Comparacao-Medias_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula7-Teste-Comparacao-Medias_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -102,7 +102,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 06/setembro/2021
+##### 1ª versão: 13/setembro/2021 &lt;br&gt; (Atualizado em: 07/setembro/2021)
 ##### Altamira, Pará
 
 ---
@@ -163,7 +163,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 1 - Testes de Comparações de Médias**
 
-[1 - Delineamento experimental - Conceito](#tcm)
+[1 - Recapitulando - ANOVA e Teste F](#rec)
+
+&amp;nbsp;&amp;nbsp;[1.1 - Hipóteses estatísticas do teste F](#hip)
+
+&amp;nbsp;&amp;nbsp;[1.2 - Regras de decisão do teste F](#regras)
+
+&amp;nbsp;&amp;nbsp;[1.3 - Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F](#rej)
+
+[2 - Teste de comparações múltiplas de Tukey](#tt)
 
 ]
 ]
@@ -213,7 +221,7 @@ name: rec
 - Um .blue[experimento] é conduzido sob algum delineamento (DIC, DBC ou DQL) ou arranjo experimental para .blue[avaliar os efeitos de tratamentos] sobre uma variável resposta "y" de interesse.
 - Para isso, .blue[dados] da variável resposta "y" .blue[são coletados], e estes são usados para avaliar as evidências e realizar inferências.
 - Após uma boa análise exploratória, uma abordagem estatística comum é a realização de uma .blue[ANOVA], cujo modelo estatístico depende do delineamento experimental.
-- Na ANOVA, o .blue[teste F] é usado para avaliar, estatisticamente, a existência de evidências de .blue[igualdade entre as médias de tratamentos].
+- Na ANOVA, o .blue[teste F] é usado para avaliar, sob a ótica estatística, a existência de evidências de .blue[igualdade entre as médias de tratamentos] (Hipótese H&lt;sub&gt;0&lt;/sub&gt;).
 ]
 ]
 
@@ -228,7 +236,7 @@ name: rec
 ]
 
 ---
-name: anova
+name: hip
 ## Recapitulando...
 &lt;br&gt;
 ### ANOVA: Hipóteses estatísticas do teste F
@@ -256,7 +264,7 @@ name: anova
 ]
 
 ---
-name: regra
+name: regras
 ## Recapitulando...
 &lt;br&gt;
 ### ANOVA: Regras de decisão do teste F
@@ -266,10 +274,10 @@ name: regra
 .font90[
 **Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
 
-- Se o valor da .blue[estatística F] for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Se o valor da .blue[estatística F] (F&lt;sub&gt;Calculado&lt;/sub&gt;) for **maior** do que o .blue[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
 - Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado.
 
-`\(F-calculado &gt; F-Crítico\)`
+`\(F_{Calculado} &gt; F_{Crítico}\)`
 
 `\(Rejeita-se~~H_0\)`
 
@@ -280,11 +288,11 @@ name: regra
 .font90[
 **Não rejeição da hipótese de nulidade**
 
-- Se o valor da .blue[estatística F] for **menor ou igual** do que o valor do F-Crítico, não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Se o valor da .blue[estatística F] (F&lt;sub&gt;Calculado&lt;/sub&gt;) for **menor ou igual** do que o valor do (F&lt;sub&gt;Crítico&lt;/sub&gt;), não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
 - Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado.
 &lt;br&gt;&lt;br&gt;
 
-`\(F-calculado \leq F-Crítico\)`
+`\(F_{Calculado} \leq F_{Crítico}\)`
 
 `\(Não~~rejeita-se~~H_0\)`
 
@@ -292,16 +300,18 @@ name: regra
 ]
 
 ---
-name: rejeicao
+name: rej
 ## Recapitulando...
 &lt;br&gt;
 ### ANOVA: Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F
-&lt;br&gt;
 
 .pull-left-4[
 .font80[
 - Se `\(F_{calculado} &gt; F_{crítico}\)`: existem evidências para rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
 - Em outras palavras, existem evidências de que as médias de pelo menos dois tratamentos diferem estatísticamente.
+&lt;br&gt;&lt;br&gt;
+
+**Note**: .blue[O teste F não fornece evidências sobre qual é o melhor tratamento].
 ]
 ]
 
@@ -309,19 +319,56 @@ name: rejeicao
 
 .pull-right-4[
 .font80[
-.center[**Surge um nova pergunta...**]
+.center[**Surgiram duas novas perguntas...**]
 
-.green[Quais tratamentos possuem médias iguais e quais possuem médias diferentes, do ponto de vista estatístico?]
+.green[1 - Quais tratamentos possuem médias iguais, do ponto de vista estatístico?]
 
-- Para responder essa pergunta foram idealizados os .blue[testes de comparações de médias].
-- A ideia básica é realizar .blue[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são diferentes do ponto de vista estatístico.
-- Existem vários testes de comparações de médias. Mas, estudaremos 2: .blue[Teste de Tukey e Teste de Duncan].
+.green[2 - Quais tratamentos possuem médias diferentes, do ponto de vista estatístico?]
+
+- Para responder essas perguntas foram idealizados os .blue[testes de comparações de médias].
+- A ideia básica é realizar .blue[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
+- Portanto, os testes de comparações de médias complementam a ANOVA, quando a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F é rejeitada.
+]
+]
+
+---
+name: tt
+## Testes de Comparações de Médias
+&lt;br&gt;
+### Teste de Tukey
+
+.pull-left-4[
+.font80[
+- Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
+- **Publicação**: *Comparing Individual Means in the Analysis of Variance*
+[(Tukey, 1949)](https://www.jstor.org/stable/3001913).
+- **Ideia básica**: realizar .blue[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .blue[diferença mínima significativa] (DMS).
+- É um dos principais e mais usados testes de comparações de médias.
+
+]
+]
+
+.pull-right-4[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/John_Tukey.jpg/220px-John_Tukey.jpg" alt="John Wilder Tukey" width="50%" /&gt;
+&lt;p class="caption"&gt;John Wilder Tukey&lt;/p&gt;
+&lt;/div&gt;
+
+.font70[
+.center[
+**Fonte**: https://upload.wikimedia.org
+]
 ]
 ]
 
 ---
 
 
+
+
+
+
+---
 &lt;!-- ## Terminologias --&gt;
 
 &lt;!-- &lt;br&gt; --&gt;
