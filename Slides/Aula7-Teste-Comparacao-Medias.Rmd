@@ -708,6 +708,77 @@ plotly::ggplotly(bp)
 
 ---
 
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+<br>
+
+--
+
+.pull-left-4[
+.font80[
+`r anicon::faa("hand-point-right", animate="horizontal")` **Lembre**: Esta etapa foi discutida na Aula 4 (DIC). Portanto, a ANOVA e o teste F já foram realizados. Vamos apenas resgatar o quadro de ANOVA e a conclusão do teste F...
+]
+]
+
+--
+
+.pull-right-4[
+```{r, echo=FALSE, out.width='110%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-Final.png')
+```
+]
+
+--
+
+.pull-left-4[
+
+.center[**Interpretação**]
+
+.font70[
+- Como $\large F_{Calculado}~>~F_{Crítico}~(~6,91~>~3,07)$ rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Progênies) diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[**.green[Quais tratamentos possuem médias iguais e diferentes entre si?]**]
+]
+
+---
+
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 2**: Calcular as médias aritméticas dos diâmetros para cada progênie.
+]
+<br>
+
+```{r tb1, echo=F, eval=T}
+library(dplyr)
+data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+df1 <- data %>% 
+  bind_rows(data %>%
+            summarise_if(is.numeric, mean)) %>% 
+  mutate(`Rep./Prog.` = ifelse(is.na(`Rep./Prog.`), "Média", `Rep./Prog.`)) %>% 
+  mutate_if(is.numeric, round, 1)
+
+df1 %>%
+  Customkbl %>%
+  row_spec(5, color = 'white', background = 'orange')
+```
+
+
+---
+
 layout: false
 name: conc
 class: inverse, top, right
