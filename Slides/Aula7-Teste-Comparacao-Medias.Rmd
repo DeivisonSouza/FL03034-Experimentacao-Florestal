@@ -210,7 +210,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-left-4[
 .font80[
-**Parte 1 - Testes de Comparações de Médias**
+**Parte 1 - ANOVA e Teste F - Recapitulando**
 
 [1 - Recapitulando - ANOVA e Teste F](#rec)
 
@@ -220,27 +220,37 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;[1.3 - Rejeição da hipótese H<sub>0</sub> do teste F](#rej)
 
-[2 - Teste de comparações múltiplas de Tukey](#tt)
-
-&nbsp;&nbsp;[2.1 - Diferença Mínima Significativa](#dms)
-
-&nbsp;&nbsp;[2.2 - Hipóteses estatísticas do Teste de Tukey](#hett)
-
-&nbsp;&nbsp;[2.3 - Regras de decisão do Teste de Tukey](#rdtt)
-
-&nbsp;&nbsp;[2.4 - Etapas para realização do Teste de Tukey](#prtt)
-
-
-
 ]
 ]
 
 .pull-right-4[
+.font80[
+**Parte 2 - Teste de comparações múltiplas de Tukey**
+
+[1 - Teste de comparações múltiplas de Tukey](#tt)
+
+&nbsp;&nbsp;[1.1 - Diferença Mínima Significativa](#dms)
+
+&nbsp;&nbsp;[1.2 - Hipóteses estatísticas do Teste de Tukey](#hett)
+
+&nbsp;&nbsp;[1.3 - Regras de decisão do Teste de Tukey](#rdtt)
+
+&nbsp;&nbsp;[1.4 - Etapas para realização do Teste de Tukey](#prtt)
+
+&nbsp;&nbsp;[1.5 - Aplicação do Teste de Tukey](#att)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.5.1 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002)](#cpf)
+
+]
+]
+
+
+.pull-right-4[
 .pull-down[
 .font80[
-**Parte 2 - Teste de Tukey**
+**Parte 3 - Teste de comparações múltiplas de Duncan**
 
-[1 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002)](#proc)
+[1 - Teste de comparações múltiplas de Duncan](#tcmd)
 
 
 ]
