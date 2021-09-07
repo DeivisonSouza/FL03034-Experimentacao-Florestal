@@ -1519,7 +1519,7 @@ $Não~~rejeita-se~~H_0$
 ## Delineamento em Quadrado Latino
 <br>
 
-### Rejeição da hipótese H<sub>0</sub> da estatística F
+### Rejeição da hipótese H<sub>0</sub> do teste F
 <br>
 
 .font90[
