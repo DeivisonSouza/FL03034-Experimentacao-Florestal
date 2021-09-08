@@ -99,7 +99,7 @@ CustomDT <- function(data){
                          style = "default",
                          class = "display", width = '250px',
                          caption = '',
-     options=list(pageLength = 8, dom = 't', autoWidth = F,
+     options=list(pageLength = 10, dom = 't', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
           paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
@@ -754,10 +754,11 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 2**: Calcular as médias aritméticas dos diâmetros para cada progênie.
+**Etapa 2**: Calcular as médias aritméticas dos diâmetros para cada progênie, e dispor em ordem decrescente.
 ]
 <br>
 
+.pull-left-9[
 ```{r tb1, echo=F, eval=T}
 library(dplyr)
 data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
@@ -772,7 +773,23 @@ df1 %>%
   Customkbl %>%
   row_spec(5, color = 'white', background = 'orange')
 ```
+]
 
+--
+
+.pull-right-9[
+```{r, echo=F, eval=T}
+df1 %>%
+  as_tibble() %>%
+  slice(c(0, n())) %>%
+  select(-`Rep./Prog.`) %>% 
+  tidyr::pivot_longer(cols=everything(),
+                      names_to = "Progênies",
+                      values_to = "Médias") %>% 
+  arrange() %>% 
+  CustomDT
+```
+]
 
 ---
 
@@ -781,25 +798,24 @@ df1 %>%
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 3**: Calcular a Diferença Mínima de Significância (Admita $\alpha = 0,05$)
+**Etapa 3**: Calcular a Diferença Mínima de Significância
 ]
-<br>
+
+--
 
 .pull-left-4[
-
 .font80[
 - Primeiro, vamos encontrar o valor de *q*<sub>*crítico*</sub> no site: <br> [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
-]
-<br>
+- Vamos admitir $α = 0,05$, conforme Pimentel-Gomes e Garcia, 2002.
+]<br>
 
 $$
 \begin{equation*}
 q_{(I;~GLR,~\alpha)}\\
-q_{(10;~30,~0,05)} = \color{red}{4,82}
+q_{(10;~30,~0,05)} = \color{red}{4,825}
 \end{equation*}
 $$
 ]
-
 
 --
 
@@ -807,22 +823,29 @@ $$
 $$
 \begin{equation*}
 \normalsize
-\Delta = q\sqrt{\frac{QMR}{J}} = 4,721\sqrt{\frac{2,59}{4}} = \color{red}{3,878cm}
+\Delta = q\sqrt{\frac{QMR}{J}} = 4,825\sqrt{\frac{2,59}{4}} = \color{red}{3,88cm}
 \end{equation*}
 $$
-<br>
 .font70[
-$\Delta$ = Diferença Mínima de Significância
-
-*q* = Amplitude Total Estudentizada
-
 *QMR* = Quadrado Médio do Resíduo
 
 *J* = Número de repetições por tratamento
+]
+]
 
-*I* = Número de tratamentos
+--
+
+.pull-right-4[
+<br>
+.shadow[
+.font70[
+.center[**Interpretação**]
+- Quando a diferença entre as médias de dois tratamentos for no mínimo de 3,88cm, existem evidências para admitir uma diferença significativa entre estas médias.
 ]
 ]
+
+]
+
 
 
 ---
