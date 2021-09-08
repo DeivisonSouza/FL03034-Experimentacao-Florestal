@@ -773,7 +773,15 @@ df1 %>%
   Customkbl %>%
   row_spec(5, color = 'white', background = 'orange')
 ```
+
+.font70[
+<br>
+`r anicon::faa("thumbs-up", animate="bounce")` **Por coincidência, as médias já estão em ordem.**
+
 ]
+]
+
+
 
 --
 
@@ -845,6 +853,23 @@ $$
 ]
 
 ]
+
+---
+
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par)
+]
+
+--
+<br>
+
+
+
+
 
 
 
