@@ -97,15 +97,16 @@ BibOptions(check.entries = FALSE,
 CustomDT <- function(data){
   data %>% DT::datatable(editable = 'cell', rownames = FALSE,
                          style = "default",
-                         class = "display", width = '250px',
+                         class = "compact", width = '550px',
                          caption = '',
      options=list(pageLength = 10, dom = 't', autoWidth = F,
+                  columnDefs = list(list(className = 'dt-center', targets = "_all")),
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          paste0("$(this.api().table().container()).css({'font-size': '", "10pt", "'});"),
           "}")
        ) 
-     )
+     ) 
 }
 ```
 
@@ -113,12 +114,13 @@ CustomDT <- function(data){
 CustomDT2 <- function(data){
   data %>% DT::datatable(editable = 'cell', rownames = FALSE,
                          style = "default",
-                         class = "display", width = '250px',
+                         class = "compact", width = '450px',
                          caption = '',
-     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+     options=list(pageLength = 24, dom = 't', autoWidth = F,
+                  columnDefs = list(list(className = 'dt-center', targets = "_all")),
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          paste0("$(this.api().table().container()).css({'font-size': '", "8pt", "'});"),
           "}")
        ) 
      )
@@ -781,20 +783,20 @@ df1 %>%
 ]
 ]
 
-
-
 --
 
 .pull-right-9[
 ```{r, echo=F, eval=T}
-df1 %>%
+df2 <- df1 %>%
   as_tibble() %>%
   slice(c(0, n())) %>%
   select(-`Rep./Prog.`) %>% 
   tidyr::pivot_longer(cols=everything(),
                       names_to = "Progênies",
                       values_to = "Médias") %>% 
-  arrange() %>% 
+  arrange()
+
+ df2 %>% 
   CustomDT
 ```
 ]
@@ -861,14 +863,335 @@ $$
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par)
+**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
 ]
 
 --
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 1 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df3 <- data.frame(
+  Pi = rep("P1", 9), 
+  Pcomp = rep(paste0("P", 2:10), 1), 
+  mi = rep(14.5, 9), 
+  mcomp = df2$Médias[2:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 9),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+    
+df3 %>% CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df3$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 2 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df4 <- data.frame(
+  Pi = rep("P2", 8), 
+  Pcomp = rep(paste0("P", 3:10), 1), 
+  mi = rep(14.3, 8), 
+  mcomp = df2$Médias[3:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 8),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df4 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df4$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+
+]
+
+---
+
+## Teste de comparações múltiplas de Tukey
 <br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
+]
+
+--
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 3 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df5 <- data.frame(
+  Pi = rep("P3", 7), 
+  Pcomp = rep(paste0("P", 4:10), 1), 
+  mi = rep(14.2, 7), 
+  mcomp = df2$Médias[4:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 7),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+    
+df5 %>% CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df5$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 4 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df6 <- data.frame(
+  Pi = rep("P4", 6), 
+  Pcomp = rep(paste0("P", 5:10), 1), 
+  mi = rep(14.1, 6), 
+  mcomp = df2$Médias[5:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 6),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df6 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df6$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+
+]
+
+---
+
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
+]
+
+--
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 5 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df7 <- data.frame(
+  Pi = rep("P5", 5), 
+  Pcomp = rep(paste0("P", 6:10), 1), 
+  mi = rep(13, 5), 
+  mcomp = df2$Médias[6:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 5),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+    
+df7 %>% CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df7$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 6 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df8 <- data.frame(
+  Pi = rep("P6", 4), 
+  Pcomp = rep(paste0("P", 7:10), 1), 
+  mi = rep(12.4, 4), 
+  mcomp = df2$Médias[7:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 4),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df8 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = 'lightblue'
+  )
+```
+
+]
+
+--
+
+.pull-down[
+.pull-left-4[
+.font70[
+.blue[**Progênie 7 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df9 <- data.frame(
+  Pi = rep("P7", 3), 
+  Pcomp = rep(paste0("P", 8:10), 1), 
+  mi = rep(12.1, 3), 
+  mcomp = df2$Médias[8:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 3),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df9 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = 'lightblue'
+  )
+```
+
+]
+]
+
+--
+
+
+.pull-right-4[
+.pull-down[
+.font70[
+.blue[**Progênie 8 vs demais progênies**]
+]
+```{r echo=FALSE, eval=T}
+df10 <- data.frame(
+  Pi = rep("P8", 2), 
+  Pcomp = rep(paste0("P", 9:10), 1), 
+  mi = rep(11.7, 2), 
+  mcomp = df2$Médias[9:10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 2),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df10 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = 'lightblue'
+  )
+```
+
+
+.font70[
+.blue[**Progênie 9 vs Progênie 10**]
+]
+```{r echo=FALSE, eval=T}
+df11 <- data.frame(
+  Pi = rep("P9", 1), 
+  Pcomp = rep(paste0("P", 10), 1), 
+  mi = rep(9, 1), 
+  mcomp = df2$Médias[10]) %>% 
+  mutate(Diferenca = round(mi - mcomp, 2),
+         DMS = rep(3.88, 1),
+         Conclusao = c(if_else(Diferenca >= DMS, 
+                               "Rejeita-se H0", 
+                               "Não rejeita-se H0"))
+         )
+
+df11 %>% 
+  CustomDT %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = 'lightblue'
+  )
+```
+
+]
+]
+
+---
+
+## Teste de comparações múltiplas de Tukey
+
+.pull-left-4[
+```{r, echo=F}
+bind_rows(df3, df4, df5) %>% 
+  CustomDT2 %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df7$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+]
+
+--
+
+.pull-right-4[
+```{r, echo=F}
+bind_rows(df6, df7, df8, 
+          df9, df10, df11) %>% 
+  CustomDT2 %>% 
+    DT::formatStyle(
+    'Conclusao',
+    backgroundColor = DT::styleEqual(
+      unique(df7$Conclusao), c('lightblue', 'lightgreen')
+    )
+  )
+```
+]
 
 
 
+
+---
 
 
 
