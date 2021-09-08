@@ -863,7 +863,7 @@ $$
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
 ]
 
 --
@@ -934,7 +934,7 @@ df4 %>%
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
 ]
 
 --
@@ -1005,7 +1005,7 @@ df6 %>%
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
-**Etapa 4**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par)
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
 ]
 
 --
@@ -1186,9 +1186,49 @@ bind_rows(df6, df7, df8,
     )
   )
 ```
+
+.center[**Tabela Final**]
 ]
 
+---
 
+---
+
+## Teste de comparações múltiplas de Tukey
+<br>
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+<br>
+.font90[
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+]
+
+--
+<br>
+
+.pull-left-4[
+```{r echo=FALSE}
+tb <- tibble::tibble(
+  Progênie = rep(paste0("P", 1:10), 1),
+  Média = df2$Médias
+) %>% 
+  mutate(`Tukey (5%)` = case_when(
+   Média >= 13 ~ "a",
+   Média < 10 ~ "b",
+   Média > 9 & Média < 13 ~ "ab"
+    ))
+
+tb %>% 
+  CustomDT
+```
+]
+
+.pull-right-4[
+.font80[
+- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Tukey.
+- Existem evidência para admitir que a média da progênie P1 é estatísticamente diferente apenas de P9 e P10. (.magenta[Escreva afirmações como essa para as demais evidências indicadas pelo teste de Tukey])
+
+]
+]
 
 
 ---
