@@ -226,6 +226,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ]
 
 .pull-right-4[
+.pull-down[
 .font80[
 **Parte 2 - Teste de comparações de médias de Tukey**
 
@@ -247,17 +248,32 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 ]
 ]
+]
 
+---
 
-.pull-right-4[
-.pull-down[
+## Conteúdo
+
+.pull-left-4[
 .font80[
 **Parte 3 - Teste de comparações de médias de Duncan**
 
 [1 - Teste de comparações de médias de Duncan](#tcmd)
 
+&nbsp;&nbsp;[1.1 - Amplitude Mínima Significante](#ams)
 
-]
+&nbsp;&nbsp;[1.2 - Hipóteses estatísticas do Teste de Duncan](#hetd)
+
+&nbsp;&nbsp;[1.3 - Regras de decisão do Teste de Duncan](#rdtd)
+
+&nbsp;&nbsp;[1.4 - Etapas para realização do Teste de Duncan](#ertd)
+
+&nbsp;&nbsp;[1.5 - Aplicação do Teste de Duncan](#atd)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.5.1 - Composição de substratos na altura de Pinus oocarpa (Banzatto; Kronka, 2013)](#csapo)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[1.5.2 - Teste de Duncan no R - Pacote agricolae](#ttr)
+
 ]
 ]
 
@@ -396,9 +412,9 @@ name: rej
 .font80[
 .center[**Surgiram duas novas perguntas...**]
 
-.green[1 - Quais tratamentos possuem médias iguais, do ponto de vista estatístico?]
+.green[1 - Quais tratamentos .green[não possuem] médias significativamente diferentes?]
 
-.green[2 - Quais tratamentos possuem médias diferentes, do ponto de vista estatístico?]
+.green[2 - Quais tratamentos .green[possuem]  médias significativamente diferentes?]
 
 - Para responder essas perguntas foram idealizados os .green[testes de comparações de médias].
 - A ideia básica é realizar .green[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
@@ -578,7 +594,7 @@ name: rdtt
 **Rejeição da hipótese de nulidade (H<sub>0</sub>)**
 
 - Se $\left | m_i - m_{i'} \right | \geq \Delta$, rejeita-se (H<sub>0</sub>). 
-- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, do ponto de vista estatístico.
+- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
 ]
 ]
 
@@ -587,7 +603,7 @@ name: rdtt
 **Não rejeição da hipótese de nulidade**
 
 - Se $\left | m_i - m_{i'} \right | < \Delta$, não rejeita-se (H<sub>0</sub>). 
-- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, do ponto de vista estatístico.
+- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
 
 ]
 ]
@@ -1356,7 +1372,7 @@ name: td
 - **Publicação**: *Multiple range and multiple F tests*
 [(Duncan, 1955)](https://www.jstor.org/stable/3001478?origin=crossref&seq=1#metadata_info_tab_contents).
 - **Ideia básica**: comparar pares de médias de tratamentos, porém 
-- É conhecido como .green[Teste de Amplitudes Múltiplas de Duncan] (*Duncan's Multiple Range Test* - MRT).
+- É conhecido como .green[Teste de Amplitudes Múltiplas de Duncan] (*Duncan's New Multiple Range Test* - MRT).
 - É mais trabalhoso do que o Teste de Tukey, pois exige o cálculo de várias amplitudes (diferenças entre médias) mínimas significativas.
 - Tem a tendência de indicar diferenças significativas entre médias com mais facilidade.
 - Pode indicar diferenças significativas entre médias em casos em que o Teste de Tukey não mostra.
@@ -1367,49 +1383,186 @@ name: td
 name: dms
 ## Teste de comparações de médias de Duncan
 <br>
-### Diferença Mínima Significativa - DMS
+### Amplitude Mínima Significante - R<sub>m</sub>
 <br>
 
 .pull-left-4[
 $$
 \begin{equation*}
 \Large
-\Delta = q\sqrt{\frac{QMR}{J}}
+R_m = z_m\sqrt{\frac{QMR}{r}}
 \end{equation*}
 $$
 <br>
 .font70[
-$\Delta$ = Diferença Mínima de Significância
+$R_m$ = Amplitude Mínima Significante
 
-*q* = Amplitude Total Estudentizada
+$z_m$ = Amplitude Mínima Estudentizada, ao  nível de significância $\alpha$.
 
-*QMR* = Quadrado Médio do Resíduo
+$QMR$ = Quadrado Médio do Resíduo
 
-*J* = Número de repetições por tratamento
-
-*I* = Número de tratamentos
+$r$ = Número de repetições por tratamento
 ]
 ]
 
 .pull-right-4[
-.center[**Amplitude Total Estudentizada**]
+.center[**Amplitude Mínima Estudentizada**]
 
 $$
 \begin{equation*}
-q_{(I;~GLR,~\alpha)}
+z_{(I;~GLR,~\alpha)}
 \end{equation*}
 $$
 
 .font70[
-$I$ = Número de tratamentos
+$I$ = Número de médias abrangidas pelo intervalo do contraste
 
 $GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
 <br><br>
 
-- Encontre o valor de $q$ crítico no site: [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
+- Encontre o valor de $z$ crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
 
 ]
 ]
+
+---
+name: hetd
+## Teste de comparações de médias de Duncan
+<br>
+### Hipóteses estatísticas do Teste de Duncan
+<br>
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H<sub>0</sub>):**
+<br>
+
+- As .green[médias] comparadas .green[não diferem] significativamente.
+
+H<sub>0</sub>: $m_i - m_{i'} = 0$, para algum $i ≠ i'$
+
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H<sub>1</sub>):**
+<br>
+
+- As .green[médias] comparadas .green[diferem] significativamente.
+
+H<sub>1</sub>: $m_i - m_{i'} ≠ 0$, para algum $i ≠ i'$
+]
+]
+
+---
+name: rdtd
+## Teste de comparações de médias de Duncan
+<br>
+### Regras de decisão do teste de Duncan
+<br>
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H<sub>0</sub>)**
+
+- Se $\left | m_i - m_{i'} \right | \geq R_m$, rejeita-se (H<sub>0</sub>). 
+- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
+
+- Se $\left | m_i - m_{i'} \right | < R_m$, não rejeita-se (H<sub>0</sub>). 
+- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
+
+]
+]
+
+---
+name: ertd
+## Teste de comparações de médias de Duncan
+<br>
+### Etapas para realização do Teste de Duncan
+
+.pull-right-3[
+<br><br><br>
+![question](https://media1.giphy.com/media/ZaJtnTY8tFZz0PvmW9/giphy-downsized.gif)  
+
+]
+
+--
+
+.pull-left-3[
+.font80[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+<br>
+
+**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
+<br>
+
+**Etapa 3**: Calcular a Diferença Mínima Significativa ( $\Delta$ ).
+<br>
+
+**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
+<br>
+
+**Etapa 5**: Comparar as diferenças entre as médias aritméticas com o valor de $\Delta$.
+<br>
+
+$\left | m_i - m_i \right | \geq \Delta$: Rejeita-se H<sub>0</sub> do teste de Tukey
+<br>
+
+$\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de Tukey
+<br>
+
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.pull-left-9[
+.font80[
+- Vamos usar dados de um experimento em DIC disponível em Banzatto e Kronka (2013; pg. 64).
+- Os dados estão facilmente acessíveis no pacote **labestData**. Execute o código: labestData::BanzattoQd3.7.1
+- O experimento objetivou avaliar 5 composições de substratos (com 4 repetições) no desenvolvimento em altura de *Pinus oocarpa*.
+- A variável resposta é a altura média, em cm, das plântulas 60 dias após a semeadura.
+]
+]
+
+--
+
+.pull-right-9[
+.font70[
+.center[**Composição de Substratos (Tratamentos)**]
+<br><br>
+
+**SC** = Solo de Cerrado
+
+**SC+E** = Solo de Cerrado com Esterco
+
+**SC+E+NPK** = Solo de Cerrado com Esterco e com NPK
+
+**SC+V** = Solo de Cerrado com Vermiculita
+
+**SC+V+NPK** = Solo de Cerrado com Vermiculita e com NPK
+]
+]
+
+---
+
+```{r}
+labestData::BanzattoQd3.7.1
+```
+
 
 ---
 
