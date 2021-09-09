@@ -1325,28 +1325,15 @@ layout: true
 name: td
 ## Teste de comparações de médias de Duncan
 <br>
-### Teste de Duncan
+### David B. Duncan
 
 .pull-left-4[
 .font80[
-- Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
-- **Publicação**: *Comparing Individual Means in the Analysis of Variance*
-[(Tukey, 1949)](https://www.jstor.org/stable/3001913).
-- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .green[Diferença Mínima Significativa] (DMS).
-- É um dos principais e mais usados testes de comparações de médias.
-
-]
-]
-
-.pull-right-4[
-```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='John Wilder Tukey', dpi=600}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/John_Tukey.jpg/220px-John_Tukey.jpg")
-```
-
-.font70[
-.center[
-**Fonte**: https://upload.wikimedia.org
-]
+- Foi idealizado por [David B. Duncan](https://en.wikipedia.org/wiki/Duncan%27s_new_multiple_range_test) em 1955.
+- **Publicação**: *Multiple range and multiple F tests*
+[(Duncan, 1955)](https://www.jstor.org/stable/3001478?origin=crossref&seq=1#metadata_info_tab_contents).
+- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos.
+- É conhecido como .green[Teste de Intervalo Múltiplo de Duncan] (Duncan's new multiple range test - MRT).
 ]
 ]
 
