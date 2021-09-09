@@ -1290,14 +1290,15 @@ library(agricolae)
 out.tukey <- HSD.test(y = res.aov, trt = "Progenie", 
                       group = TRUE, alpha = 0.05)
 
-out.tukey[["groups"]]
+out.tukey$groups
+out.tukey$parameters
 ```
 ]
 ]
 
 .pull-right-4[
 .font90[
-```{r ref.label="tukey", echo=FALSE, eval=TRUE, collapse=T}
+```{r ref.label="tukey", echo=FALSE, eval=TRUE, collapse=F}
 ```
 ]
 ]
@@ -1313,7 +1314,8 @@ out.tukey[["groups"]]
 - **4 - Gráfico do Teste de Tukey...**
 ```{r plotukey, echo=T, eval=F}
 # Gráfico comparações de Tukey
-plot(out.tukey)
+plot(out.tukey, ylab = "Diâmetro (cm)",
+     main = "Competição de Progênies\n (Eucalyptus saligna)")
 ```
 ]
 ]
@@ -1322,7 +1324,6 @@ plot(out.tukey)
 ```{r ref.label="plotukey", echo=FALSE, eval=TRUE, out.width='85%', fig.align='center'}
 ```
 ]
-
 
 ---
 

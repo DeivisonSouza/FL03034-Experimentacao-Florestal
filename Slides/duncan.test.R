@@ -33,3 +33,5 @@ plot(out.duncan, variation="IQR")
 
 # Gráfico Tukey
 plot(out.tukey)
+
+
