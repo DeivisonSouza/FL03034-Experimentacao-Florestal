@@ -1350,19 +1350,66 @@ name: td
 <br>
 ### David B. Duncan
 
-.pull-left-4[
+.pull-left-2[
 .font80[
 - Foi idealizado por [David B. Duncan](https://en.wikipedia.org/wiki/Duncan%27s_new_multiple_range_test) em 1955.
 - **Publicação**: *Multiple range and multiple F tests*
 [(Duncan, 1955)](https://www.jstor.org/stable/3001478?origin=crossref&seq=1#metadata_info_tab_contents).
-- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos.
-- É conhecido como .green[Teste de Intervalo Múltiplo de Duncan] (Duncan's new multiple range test - MRT).
+- **Ideia básica**: comparar pares de médias de tratamentos, porém 
+- É conhecido como .green[Teste de Amplitudes Múltiplas de Duncan] (*Duncan's Multiple Range Test* - MRT).
+- É mais trabalhoso do que o Teste de Tukey, pois exige o cálculo de várias amplitudes (diferenças entre médias) mínimas significativas.
+- Tem a tendência de indicar diferenças significativas entre médias com mais facilidade.
+- Pode indicar diferenças significativas entre médias em casos em que o Teste de Tukey não mostra.
 ]
 ]
 
 ---
+name: dms
+## Teste de comparações de médias de Duncan
+<br>
+### Diferença Mínima Significativa - DMS
+<br>
 
+.pull-left-4[
+$$
+\begin{equation*}
+\Large
+\Delta = q\sqrt{\frac{QMR}{J}}
+\end{equation*}
+$$
+<br>
+.font70[
+$\Delta$ = Diferença Mínima de Significância
 
+*q* = Amplitude Total Estudentizada
+
+*QMR* = Quadrado Médio do Resíduo
+
+*J* = Número de repetições por tratamento
+
+*I* = Número de tratamentos
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Total Estudentizada**]
+
+$$
+\begin{equation*}
+q_{(I;~GLR,~\alpha)}
+\end{equation*}
+$$
+
+.font70[
+$I$ = Número de tratamentos
+
+$GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
+<br><br>
+
+- Encontre o valor de $q$ crítico no site: [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
+
+]
+]
 
 ---
 
