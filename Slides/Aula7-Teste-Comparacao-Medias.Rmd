@@ -227,9 +227,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .font80[
-**Parte 2 - Teste de comparações múltiplas de Tukey**
+**Parte 2 - Teste de comparações de médias de Tukey**
 
-[1 - Teste de comparações múltiplas de Tukey](#tt)
+[1 - Teste de comparações de médias de Tukey](#tt)
 
 &nbsp;&nbsp;[1.1 - Diferença Mínima Significativa](#dms)
 
@@ -250,9 +250,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-right-4[
 .pull-down[
 .font80[
-**Parte 3 - Teste de comparações múltiplas de Duncan**
+**Parte 3 - Teste de comparações de médias de Duncan**
 
-[1 - Teste de comparações múltiplas de Duncan](#tcmd)
+[1 - Teste de comparações de médias de Duncan](#tcmd)
 
 
 ]
@@ -412,7 +412,7 @@ class: inverse, top, right
 background-image: url(fig/class3/arara2.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 2] <br> .white[Teste de comparações <br> múltiplas de Tukey]**] 
+.font200[**.yellow[Parte 2] <br> .white[Teste de comparações <br> de médias de Tukey]**] 
 
 .left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
 
@@ -424,7 +424,7 @@ layout: true
 
 ---
 name: tt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Teste de Tukey
 
@@ -453,7 +453,7 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/Jo
 
 ---
 name: dms
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Diferença Mínima Significativa - DMS
 <br>
@@ -502,7 +502,7 @@ $GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
 ---
 
 name: dms
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Diferença Mínima Significativa - O que é?
 <br>
@@ -536,7 +536,7 @@ S2 - S3 = 18 - 17 = .red[1]
 
 ---
 name: hett
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Hipóteses estatísticas do Teste de Tukey
 <br>
@@ -566,7 +566,7 @@ H<sub>1</sub>: $m_i - m_{i'} ≠ 0$, para algum $i ≠ i'$
 
 ---
 name: rdtt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Regras de decisão do teste de Tukey
 <br>
@@ -593,7 +593,7 @@ name: rdtt
 
 ---
 name: prtt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### Etapas para realização do Teste de Tukey
 
@@ -636,7 +636,7 @@ $\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de
 
 ---
 name: ttdic
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 
@@ -650,7 +650,7 @@ name: ttdic
 
 ---
 name: data
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -707,7 +707,7 @@ plotly::ggplotly(bp)
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -751,7 +751,7 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -778,7 +778,7 @@ df1 %>%
 
 .font70[
 <br>
-`r anicon::faa("thumbs-up", animate="bounce")` **Por coincidência, as médias já estão em ordem.**
+`r anicon::faa("thumbs-up", animate="bounce")` **Por coincidência (ou não), as médias já estão em ordem.**
 
 ]
 ]
@@ -797,13 +797,13 @@ df2 <- df1 %>%
   arrange()
 
  df2 %>% 
-  CustomDT
+  CustomDT2
 ```
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -858,7 +858,7 @@ $$
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -929,7 +929,7 @@ df4 %>%
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -1000,7 +1000,7 @@ df6 %>%
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
@@ -1157,7 +1157,7 @@ df11 %>%
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 
 .pull-left-4[
 ```{r, echo=F}
@@ -1194,7 +1194,7 @@ bind_rows(df6, df7, df8,
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>

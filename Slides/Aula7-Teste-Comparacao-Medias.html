@@ -7,7 +7,7 @@
     <script src="Aula7-Teste-Comparacao-Medias_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"cdae1dd433e14d9dab1126260d024db4","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"edb26f4453ce421f8b75d67fb9bc91c4","expires":1}</script>
     <script src="Aula7-Teste-Comparacao-Medias_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula7-Teste-Comparacao-Medias_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula7-Teste-Comparacao-Medias_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -117,7 +117,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 13/setembro/2021 &lt;br&gt; (Atualizado em: 08/setembro/2021)
+##### 1ª versão: 13/setembro/2021 &lt;br&gt; (Atualizado em: 09/setembro/2021)
 ##### Altamira, Pará
 
 ---
@@ -191,9 +191,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .font80[
-**Parte 2 - Teste de comparações múltiplas de Tukey**
+**Parte 2 - Teste de comparações de médias de Tukey**
 
-[1 - Teste de comparações múltiplas de Tukey](#tt)
+[1 - Teste de comparações de médias de Tukey](#tt)
 
 &amp;nbsp;&amp;nbsp;[1.1 - Diferença Mínima Significativa](#dms)
 
@@ -214,9 +214,9 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-right-4[
 .pull-down[
 .font80[
-**Parte 3 - Teste de comparações múltiplas de Duncan**
+**Parte 3 - Teste de comparações de médias de Duncan**
 
-[1 - Teste de comparações múltiplas de Duncan](#tcmd)
+[1 - Teste de comparações de médias de Duncan](#tcmd)
 
 
 ]
@@ -374,7 +374,7 @@ class: inverse, top, right
 background-image: url(fig/class3/arara2.jpg)
 background-size: cover
 
-.font200[**.yellow[Parte 2] &lt;br&gt; .white[Teste de comparações &lt;br&gt; múltiplas de Tukey]**] 
+.font200[**.yellow[Parte 2] &lt;br&gt; .white[Teste de comparações &lt;br&gt; de médias de Tukey]**] 
 
 .left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
 
@@ -386,7 +386,7 @@ layout: true
 
 ---
 name: tt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Teste de Tukey
 
@@ -416,7 +416,7 @@ name: tt
 
 ---
 name: dms
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Diferença Mínima Significativa - DMS
 &lt;br&gt;
@@ -465,7 +465,7 @@ $$
 ---
 
 name: dms
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Diferença Mínima Significativa - O que é?
 &lt;br&gt;
@@ -499,7 +499,7 @@ S2 - S3 = 18 - 17 = .red[1]
 
 ---
 name: hett
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Hipóteses estatísticas do Teste de Tukey
 &lt;br&gt;
@@ -529,7 +529,7 @@ H&lt;sub&gt;1&lt;/sub&gt;: `\(m_i - m_{i'} ≠ 0\)`, para algum `\(i ≠ i'\)`
 
 ---
 name: rdtt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Regras de decisão do teste de Tukey
 &lt;br&gt;
@@ -556,7 +556,7 @@ name: rdtt
 
 ---
 name: prtt
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### Etapas para realização do Teste de Tukey
 
@@ -599,7 +599,7 @@ name: prtt
 
 ---
 name: ttdic
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 
@@ -613,7 +613,7 @@ name: ttdic
 
 ---
 name: data
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -702,14 +702,14 @@ name: data
 .pull-down[
 
 
-<div id="htmlwidget-0ccc3a198d3c0bb603b8" style="width:480px;height:480px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-0ccc3a198d3c0bb603b8">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.4,14.1,11.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.3,14.6,14.5,13.8],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(216,144,0,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.7,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.7,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(57,182,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,196,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.3,14.3,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.2,10.3,13.2,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(149,144,255,1)","width":1.88976377952756},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.6,9.5,8.5,9.4],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.2,8.4,9.3,9.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(255,98,188,1)","width":1.88976377952756},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.55,14.3,14.225,14.125,13,12.425,12.05,11.675,9,8.775],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.6268161062682,"r":10.6268161062682,"b":54.1967621419676,"l":71.1996679119967},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.79,16.81],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"35ac3d015912":{"x":{},"y":{},"colour":{},"type":"box"},"35ac6d8ff573":{"x":{},"y":{},"colour":{}}},"cur_data":"35ac3d015912","visdat":{"35ac3d015912":["function (y) ","x"],"35ac6d8ff573":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-b6aabac297310f81793c" style="width:480px;height:480px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b6aabac297310f81793c">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.4,14.1,11.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(248,118,109,1)","width":1.88976377952756},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.3,14.6,14.5,13.8],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(216,144,0,1)","width":1.88976377952756},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.7,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(163,165,0,1)","width":1.88976377952756},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.7,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(57,182,0,1)","width":1.88976377952756},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,125,1)","width":1.88976377952756},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.7],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,191,196,1)","width":1.88976377952756},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.3,14.3,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(0,176,246,1)","width":1.88976377952756},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.2,10.3,13.2,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(149,144,255,1)","width":1.88976377952756},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.6,9.5,8.5,9.4],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(231,107,243,1)","width":1.88976377952756},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.2,8.4,9.3,9.2],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.88976377952756,"color":"rgba(0,0,0,1)"},"size":5.66929133858268},"line":{"color":"rgba(255,98,188,1)","width":1.88976377952756},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.55,14.3,14.225,14.125,13,12.425,12.05,11.675,9,8.775],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.55905511811024,"symbol":"x-thin-open","line":{"width":1.88976377952756,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.6268161062682,"r":10.6268161062682,"b":54.1967621419676,"l":71.1996679119967},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.4,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.79,16.81],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.31340805313408,"tickwidth":0.966074191478924,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.0029057700291},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.2536322125363}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.966074191478924,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.74874731567645,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.0029057700291}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"11236a55625f":{"x":{},"y":{},"colour":{},"type":"box"},"11236ad3dce0":{"x":{},"y":{},"colour":{}}},"cur_data":"11236a55625f","visdat":{"11236a55625f":["function (y) ","x"],"11236ad3dce0":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.2,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -751,7 +751,7 @@ name: data
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -848,7 +848,7 @@ name: data
 
 .font70[
 &lt;br&gt;
-<span>&lt;i class="fas  fa-thumbs-up faa-bounce animated "&gt;&lt;/i&gt;</span> **Por coincidência, as médias já estão em ordem.**
+<span>&lt;i class="fas  fa-thumbs-up faa-bounce animated "&gt;&lt;/i&gt;</span> **Por coincidência (ou não), as médias já estão em ordem.**
 
 ]
 ]
@@ -856,13 +856,13 @@ name: data
 --
 
 .pull-right-9[
-<div id="htmlwidget-14b621e2896aa88b3612" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-14b621e2896aa88b3612">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênies<\/th>\n      <th>Médias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-a92a909f69a48850d84a" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a92a909f69a48850d84a">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênies<\/th>\n      <th>Médias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -917,7 +917,7 @@ $$
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -931,8 +931,8 @@ $$
 .font70[
 .blue[**Progênie 1 vs demais progênies**]
 ]
-<div id="htmlwidget-6dcc190f0bebe3185ce7" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6dcc190f0bebe3185ce7">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1"],["P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-279940c39741f2f96fd5" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-279940c39741f2f96fd5">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1"],["P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
@@ -942,14 +942,14 @@ $$
 .font70[
 .blue[**Progênie 2 vs demais progênies**]
 ]
-<div id="htmlwidget-1edfb3f8e58b11c88de4" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1edfb3f8e58b11c88de4">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P2","P2","P2","P2","P2","P2","P2","P2"],["P3","P4","P5","P6","P7","P8","P9","P10"],[14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3],[14.2,14.1,13,12.4,12.1,11.7,9,8.8],[0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-d12ef7d10a09eb54787e" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d12ef7d10a09eb54787e">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P2","P2","P2","P2","P2","P2","P2","P2"],["P3","P4","P5","P6","P7","P8","P9","P10"],[14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3],[14.2,14.1,13,12.4,12.1,11.7,9,8.8],[0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -963,8 +963,8 @@ $$
 .font70[
 .blue[**Progênie 3 vs demais progênies**]
 ]
-<div id="htmlwidget-e06582663f123fcc458f" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-e06582663f123fcc458f">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P3","P3","P3","P3","P3","P3","P3"],["P4","P5","P6","P7","P8","P9","P10"],[14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.1,13,12.4,12.1,11.7,9,8.8],[0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-aebfb885eedc2948870c" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-aebfb885eedc2948870c">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P3","P3","P3","P3","P3","P3","P3"],["P4","P5","P6","P7","P8","P9","P10"],[14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.1,13,12.4,12.1,11.7,9,8.8],[0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
@@ -974,14 +974,14 @@ $$
 .font70[
 .blue[**Progênie 4 vs demais progênies**]
 ]
-<div id="htmlwidget-982da3b5e387fa5f7b49" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-982da3b5e387fa5f7b49">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P4","P4","P4","P4","P4","P4"],["P5","P6","P7","P8","P9","P10"],[14.1,14.1,14.1,14.1,14.1,14.1],[13,12.4,12.1,11.7,9,8.8],[1.1,1.7,2,2.4,5.1,5.3],[3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-6fd503c45e94cb9b3f75" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6fd503c45e94cb9b3f75">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P4","P4","P4","P4","P4","P4"],["P5","P6","P7","P8","P9","P10"],[14.1,14.1,14.1,14.1,14.1,14.1],[13,12.4,12.1,11.7,9,8.8],[1.1,1.7,2,2.4,5.1,5.3],[3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -995,8 +995,8 @@ $$
 .font70[
 .blue[**Progênie 5 vs demais progênies**]
 ]
-<div id="htmlwidget-63c11063f0071c449fdd" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-63c11063f0071c449fdd">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P5","P5","P5","P5","P5"],["P6","P7","P8","P9","P10"],[13,13,13,13,13],[12.4,12.1,11.7,9,8.8],[0.6,0.9,1.3,4,4.2],[3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-b9c24ede43ce77dd5506" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b9c24ede43ce77dd5506">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P5","P5","P5","P5","P5"],["P6","P7","P8","P9","P10"],[13,13,13,13,13],[12.4,12.1,11.7,9,8.8],[0.6,0.9,1.3,4,4.2],[3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
@@ -1006,8 +1006,8 @@ $$
 .font70[
 .blue[**Progênie 6 vs demais progênies**]
 ]
-<div id="htmlwidget-9b15750c684a4b5eb39d" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-9b15750c684a4b5eb39d">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P6","P6","P6","P6"],["P7","P8","P9","P10"],[12.4,12.4,12.4,12.4],[12.1,11.7,9,8.8],[0.3,0.7,3.4,3.6],[3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-689694382b23bffb24a1" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-689694382b23bffb24a1">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P6","P6","P6","P6"],["P7","P8","P9","P10"],[12.4,12.4,12.4,12.4],[12.1,11.7,9,8.8],[0.3,0.7,3.4,3.6],[3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 
@@ -1018,8 +1018,8 @@ $$
 .font70[
 .blue[**Progênie 7 vs demais progênies**]
 ]
-<div id="htmlwidget-4af9bc11661e72bfc7bb" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-4af9bc11661e72bfc7bb">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P7","P7","P7"],["P8","P9","P10"],[12.1,12.1,12.1],[11.7,9,8.8],[0.4,3.1,3.3],[3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-2e3c5780ad4a36b82f1a" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2e3c5780ad4a36b82f1a">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P7","P7","P7"],["P8","P9","P10"],[12.1,12.1,12.1],[11.7,9,8.8],[0.4,3.1,3.3],[3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 ]
@@ -1032,33 +1032,33 @@ $$
 .font70[
 .blue[**Progênie 8 vs demais progênies**]
 ]
-<div id="htmlwidget-97fe917a4bb77a6860f1" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-97fe917a4bb77a6860f1">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P8","P8"],["P9","P10"],[11.7,11.7],[9,8.8],[2.7,2.9],[3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-a652b54ef2765c0f25ce" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a652b54ef2765c0f25ce">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P8","P8"],["P9","P10"],[11.7,11.7],[9,8.8],[2.7,2.9],[3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 
 .font70[
 .blue[**Progênie 9 vs Progênie 10**]
 ]
-<div id="htmlwidget-85e23f7beec04d53af72" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-85e23f7beec04d53af72">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P9"],["P10"],[9],[8.8],[0.2],[3.88],["Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-d49514d4b721b790055d" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-d49514d4b721b790055d">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P9"],["P10"],[9],[8.8],[0.2],[3.88],["Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 ]
 ]
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 
 .pull-left-4[
-<div id="htmlwidget-75369d8ec3af5643ba53" style="width:450px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-75369d8ec3af5643ba53">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1","P2","P2","P2","P2","P2","P2","P2","P2","P3","P3","P3","P3","P3","P3","P3"],["P2","P3","P4","P5","P6","P7","P8","P9","P10","P3","P4","P5","P6","P7","P8","P9","P10","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8,14.2,14.1,13,12.4,12.1,11.7,9,8.8,14.1,13,12.4,12.1,11.7,9,8.8],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7,0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5,0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-e42ec9bdfdab3d1a880b" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e42ec9bdfdab3d1a880b">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1","P2","P2","P2","P2","P2","P2","P2","P2","P3","P3","P3","P3","P3","P3","P3"],["P2","P3","P4","P5","P6","P7","P8","P9","P10","P3","P4","P5","P6","P7","P8","P9","P10","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8,14.2,14.1,13,12.4,12.1,11.7,9,8.8,14.1,13,12.4,12.1,11.7,9,8.8],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7,0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5,0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 ]
 
 --
 
 .pull-right-4[
-<div id="htmlwidget-49d3c5d73ab8a16e6e97" style="width:450px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-49d3c5d73ab8a16e6e97">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P4","P4","P4","P4","P4","P4","P5","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P8","P8","P9"],["P5","P6","P7","P8","P9","P10","P6","P7","P8","P9","P10","P7","P8","P9","P10","P8","P9","P10","P9","P10","P10"],[14.1,14.1,14.1,14.1,14.1,14.1,13,13,13,13,13,12.4,12.4,12.4,12.4,12.1,12.1,12.1,11.7,11.7,9],[13,12.4,12.1,11.7,9,8.8,12.4,12.1,11.7,9,8.8,12.1,11.7,9,8.8,11.7,9,8.8,9,8.8,8.8],[1.1,1.7,2,2.4,5.1,5.3,0.6,0.9,1.3,4,4.2,0.3,0.7,3.4,3.6,0.4,3.1,3.3,2.7,2.9,0.2],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+<div id="htmlwidget-ed56242acfc03459828d" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ed56242acfc03459828d">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P4","P4","P4","P4","P4","P4","P5","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P8","P8","P9"],["P5","P6","P7","P8","P9","P10","P6","P7","P8","P9","P10","P7","P8","P9","P10","P8","P9","P10","P9","P10","P10"],[14.1,14.1,14.1,14.1,14.1,14.1,13,13,13,13,13,12.4,12.4,12.4,12.4,12.1,12.1,12.1,11.7,11.7,9],[13,12.4,12.1,11.7,9,8.8,12.4,12.1,11.7,9,8.8,12.1,11.7,9,8.8,11.7,9,8.8,9,8.8,8.8],[1.1,1.7,2,2.4,5.1,5.3,0.6,0.9,1.3,4,4.2,0.3,0.7,3.4,3.6,0.4,3.1,3.3,2.7,2.9,0.2],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
 
 .center[**Tabela Final**]
 ]
@@ -1067,7 +1067,7 @@ $$
 
 ---
 
-## Teste de comparações múltiplas de Tukey
+## Teste de comparações de médias de Tukey
 &lt;br&gt;
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
@@ -1079,8 +1079,8 @@ $$
 &lt;br&gt;
 
 .pull-left-4[
-<div id="htmlwidget-11b5e1ba7b1fc06c06dd" style="width:550px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-11b5e1ba7b1fc06c06dd">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8],["a","a","a","a","a","ab","ab","ab","b","b"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênie<\/th>\n      <th>Média<\/th>\n      <th>Tukey (5%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-2cebc6a24ffb134fa80b" style="width:550px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2cebc6a24ffb134fa80b">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.8],["a","a","a","a","a","ab","ab","ab","b","b"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênie<\/th>\n      <th>Média<\/th>\n      <th>Tukey (5%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-right-4[
