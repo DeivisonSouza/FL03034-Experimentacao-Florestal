@@ -21,17 +21,18 @@ res.aov <- aov(Valor ~ Progenie, data = data_pivot)
 summary(res.aov)
 
 # Teste de Duncan
-out.duncan <- duncan.test(res.aov,"Progenie",main="",
+out.duncan <- duncan.test(res.aov,"Progenie", group=TRUE,
                           alpha=0.05, console=TRUE)
-
+out.duncan$parameters
 # Teste Tukey
 out.tukey <- HSD.test(res.aov, "Progenie", group=TRUE,
                       console=TRUE, main="")
-
+out.tukey$parameters
 # Gráfico Duncan
 plot(out.duncan, variation="IQR")
 
 # Gráfico Tukey
-plot(out.tukey)
+plot(out.tukey, main = "Competição de Progênies")
 
-
+?duncan.test
+?plot.agricolae
