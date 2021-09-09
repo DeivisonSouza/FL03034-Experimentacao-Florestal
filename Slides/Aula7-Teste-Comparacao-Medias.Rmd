@@ -1287,8 +1287,8 @@ summary(res.aov)
 ```{r tukey, echo=T, eval=F}
 # Teste Tukey
 library(agricolae)
-out.tukey <- HSD.test(res.aov, "Progenie", group = TRUE,
-                      console = F, main="")
+out.tukey <- HSD.test(y = res.aov, trt = "Progenie", 
+                      group = TRUE, alpha = 0.05)
 
 out.tukey[["groups"]]
 ```
