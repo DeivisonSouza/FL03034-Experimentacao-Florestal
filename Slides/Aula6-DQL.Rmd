@@ -247,7 +247,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .font80[
 **Parte 2 - Estudo de caso de experimentos em DQL**
 
-[1 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002)](#proc)
+[1 - Competição de produção de frutos <br> de cacau (Dias e Barros, 2009; pg. 247)](#proc)
 
 &nbsp;&nbsp;[1.1 - ANOVA para experimento em DQL - Fator único](#anovadql)
 
@@ -261,7 +261,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
 
-[2 - Anova DBC no R](#anovaR)
+[2 - Anova DQL no R-base](#anovaR)
 
 
 <!-- [3 - Pacote ExpDes.pt](#expdes) -->
@@ -1781,7 +1781,7 @@ name: anovadql
 Para os cálculos de somas de quadrados da ANOVA precisa-se:
 - .blue[Das somas de blocos-linhas]; 
 - .blue[Das somas de blocos-colunas]; e
-- Das somas de tratamentos (cultivar);
+- Das somas de tratamentos (cultivar).
 ]
 ]
 <br>
@@ -1823,6 +1823,18 @@ Para os cálculos de somas de quadrados da ANOVA precisa-se:
 - Das somas de blocos-linhas; 
 - Das somas de blocos-colunas; e
 - .blue[Das somas de tratamentos (cultivar)];
+<br><br>
+
+Vermelho = .red[P1]
+
+Laranja = .orange[P4]
+
+Azul = .blue[P3]
+
+Verde = .green[P2]
+
+Preto = P5
+
 ]
 ]
 <br>
