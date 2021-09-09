@@ -1563,10 +1563,21 @@ $\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de
 <br>
 ### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013) - Dados do experimento]
 
-
-```{r echo=T, eval=F}
+.pull-left-4[
+```{r banz, echo=T, eval=F}
 labestData::BanzattoQd3.7.1
 ```
+]
+
+--
+
+.pull-right-4[
+.font80[
+```{r ref.label="banz", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
 
 
 ---
