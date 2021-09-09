@@ -243,6 +243,8 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.5.1 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002)](#cpf)
 
+&nbsp;&nbsp;&nbsp;&nbsp;[1.5.2 - Teste de Tukey no R - Pacote agricolae](#ttr)
+
 ]
 ]
 
@@ -426,7 +428,7 @@ layout: true
 name: tt
 ## Teste de comparações de médias de Tukey
 <br>
-### Teste de Tukey
+### John Wilder Tukey
 
 .pull-left-4[
 .font80[
@@ -1232,6 +1234,76 @@ tb %>%
 
 ---
 
+## Teste de comparações de médias de Tukey
+<br>
+### .font80[Teste de Tukey no R - Pacote agricolae]
+<br>
+
+.pull-left-4[
+.font70[
+- **1 - Carrega dados e manipula para formato longo...**
+```{r echo=T, eval=T}
+data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+data_pivot <- data %>%
+  tidyr::pivot_longer(
+    cols = starts_with("P"),
+    names_to = "Progenie",
+    values_to = "Valor",
+    names_transform = list(Progenie = as.factor),
+    values_drop_na = TRUE
+  ) %>%
+  rename(Repeticao = `Rep./Prog.`) %>%
+  arrange(Progenie, Repeticao)
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+- **2 - Realiza ANOVA...**
+```{r echo=T, eval=T}
+# Realizar a análise de variância
+res.aov <- aov(Valor ~ Progenie, data = data_pivot)
+
+# Resumo da análise de variância
+summary(res.aov)
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+<br>
+### .font80[Teste de Tukey no R - Pacote agricolae]
+<br>
+
+.pull-left-4[
+.font80[
+- **3 - Realiza Teste de Tukey...**
+```{r tukey, echo=T, eval=F}
+# Teste Tukey
+library(agricolae)
+out.tukey <- HSD.test(res.aov, "Progenie", group = TRUE,
+                      console = F, main="")
+
+out.tukey[["groups"]]
+```
+]
+]
+
+.pull-right-4[
+.font90[
+```{r ref.label="tukey", echo=FALSE, eval=TRUE, collapse=T}
+```
+]
+]
+
+---
+
 layout: false
 name: conc
 class: inverse, top, right
@@ -1250,6 +1322,35 @@ layout: true
 
 ---
 
+name: td
+## Teste de comparações de médias de Duncan
+<br>
+### Teste de Duncan
+
+.pull-left-4[
+.font80[
+- Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
+- **Publicação**: *Comparing Individual Means in the Analysis of Variance*
+[(Tukey, 1949)](https://www.jstor.org/stable/3001913).
+- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .green[Diferença Mínima Significativa] (DMS).
+- É um dos principais e mais usados testes de comparações de médias.
+
+]
+]
+
+.pull-right-4[
+```{r echo=FALSE, out.width='50%', fig.align='center', fig.cap='John Wilder Tukey', dpi=600}
+knitr::include_graphics("https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/John_Tukey.jpg/220px-John_Tukey.jpg")
+```
+
+.font70[
+.center[
+**Fonte**: https://upload.wikimedia.org
+]
+]
+]
+
+---
 
 
 
