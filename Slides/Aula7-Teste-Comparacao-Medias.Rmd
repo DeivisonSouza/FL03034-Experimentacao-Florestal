@@ -1304,6 +1304,28 @@ out.tukey[["groups"]]
 
 ---
 
+## Teste de comparações de médias de Tukey
+<br>
+### .font80[Teste de Tukey no R - Pacote agricolae]
+
+.pull-left-4[
+.font80[
+- **4 - Gráfico do Teste de Tukey...**
+```{r plotukey, echo=T, eval=F}
+# Gráfico comparações de Tukey
+plot(out.tukey)
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="plotukey", echo=FALSE, eval=TRUE, out.width='85%', fig.align='center'}
+```
+]
+
+
+---
+
 layout: false
 name: conc
 class: inverse, top, right
