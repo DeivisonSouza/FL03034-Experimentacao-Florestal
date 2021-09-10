@@ -1595,6 +1595,10 @@ $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor} < R_m$: Não rejeita-se H<sub>0</
 <br>
 ### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013) - BoxPlot]
 
+.font70[
+**Uma boa prática antes de realizar a ANOVA é visualizar os dados da variável resposta em função dos tratamentos.**
+]
+
 .pull-left-4[
 .font80[
 ```{r box, echo=T, eval=F}
@@ -1630,6 +1634,53 @@ plotly::ggplotly(bp)
 ```
 ]
 
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+<br>
+
+--
+
+.pull-left-4[
+.font80[
+.blue[**ANOVA - fator único no R - Função aov()**]
+
+```{r echo=T, eval=F}
+# Realizar a análise de variância
+res.aov <- aov(alt ~ comp, data = data)
+```
+
+```{r sumaov, echo=T, eval=T, collapse=FALSE}
+# Resumo da análise de variância
+summary(res.aov)
+```
+
+
+]
+]
+
+--
+
+.pull-right-4[
+.center[**Interpretação**]
+
+.font70[
+- *P-valor < * $\alpha$ (2,46e-05 < 0,05): Rejeita-se a hipótese de nulidade (H<sub>0</sub>) do teste F.
+- O *P-valor* foi menor do que o nível de significância $\alpha = 0,05$ (2,46e-05 < 0,05). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Substratos) diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[**.green[Quais tratamentos possuem médias iguais e diferentes entre si?]**]
+]
 
 ---
 
