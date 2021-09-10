@@ -709,14 +709,17 @@ df <- data %>%
 ```{r echo=F, eval=T, collapse=T, fig.align='center', fig.cap='', dpi=600, fig.width=.8, fig.height=.8}
 
 bp <- df %>%
-  ggplot(aes(x=Progenie, y=Valor, color=Progenie)) +
-  geom_boxplot() +
+  ggplot(aes(x=Progenie, y=Valor)) +
+  geom_boxplot(aes(color=Progenie)) +
+  geom_jitter(width = 0.25) +
   stat_summary(fun.y=mean, geom="point", shape=4,
-                 size=2, color="red") +
+                 size=2, color = "red") +
   theme_bw(base_size = 16) +
   theme(panel.grid = element_blank(),
         legend.position="none"
-        )
+        ) +
+  labs(x = "Progênies",
+       y = "Diâmetro (cm)")
 
 plotly::ggplotly(bp)
 ```
