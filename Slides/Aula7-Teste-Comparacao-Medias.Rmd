@@ -1374,8 +1374,7 @@ name: td
 - **Ideia básica**: comparar pares de médias de tratamentos, porém 
 - É conhecido como .green[Teste de Amplitudes Múltiplas de Duncan] (*Duncan's New Multiple Range Test* - MRT).
 - É mais trabalhoso do que o Teste de Tukey, pois exige o cálculo de várias amplitudes (diferenças entre médias) mínimas significativas.
-- Tem a tendência de indicar diferenças significativas entre médias com mais facilidade.
-- Pode indicar diferenças significativas entre médias em casos em que o Teste de Tukey não mostra.
+- O Teste de Duncan indica resultados significativos em casos que o Teste de Tukey não permite obter significação estatística (Pimentel-Gomes, 2009).
 ]
 ]
 
@@ -1466,7 +1465,7 @@ name: rdtd
 .font90[
 **Rejeição da hipótese de nulidade (H<sub>0</sub>)**
 
-- Se $\left | m_i - m_{i'} \right | \geq R_m$, rejeita-se (H<sub>0</sub>). 
+- Se $\left ( m_i - m_{i'} \right ) \geq R_m$, rejeita-se (H<sub>0</sub>). 
 - Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
 ]
 ]
@@ -1475,7 +1474,7 @@ name: rdtd
 .font90[
 **Não rejeição da hipótese de nulidade**
 
-- Se $\left | m_i - m_{i'} \right | < R_m$, não rejeita-se (H<sub>0</sub>). 
+- Se $\left ( m_i - m_{i'} \right ) < R_m$, não rejeita-se (H<sub>0</sub>). 
 - Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, ao nível de significância $\alpha$.
 
 ]
@@ -1487,38 +1486,47 @@ name: ertd
 <br>
 ### Etapas para realização do Teste de Duncan
 
-.pull-right-3[
-<br><br><br>
-![question](https://media1.giphy.com/media/ZaJtnTY8tFZz0PvmW9/giphy-downsized.gif)  
-
-]
-
 --
 
 .pull-left-3[
 .font80[
 **Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+<br><br>
+
+**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar as comparações, dispor as médias em ordem decrescente de valor.
+<br><br>
+
+**Etapa 3**: Calcular a estimativa do contraste $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}$. Ou seja, a diferença entre a média mais alta e média mais baixa.
+<br><br>
+
+**Etapa 4**: Calcular o valor da Amplitude Mínima Significante - $R_m$;
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### Etapas para realização do Teste de Duncan
+
+--
+
+.pull-left-3[
+.font80[
+**Etapa 5**: Comparar o valor do contraste $\hat{C}_1$ (diferença entre a maior e menor média) com o valor de $R_m$.
 <br>
 
-**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
+$\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor} \geq R_m$: Rejeita-se H<sub>0</sub> do teste de Duncan
 <br>
 
-**Etapa 3**: Calcular a Diferença Mínima Significativa ( $\Delta$ ).
-<br>
+$\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor} < R_m$: Não rejeita-se H<sub>0</sub> do teste de Duncan
+<br><br>
 
-**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
-<br>
+**Etapa 6**: Se a hipótese H<sub>0</sub> for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1).
+<br><br>
 
-**Etapa 5**: Comparar as diferenças entre as médias aritméticas com o valor de $\Delta$.
-<br>
-
-$\left | m_i - m_i \right | \geq \Delta$: Rejeita-se H<sub>0</sub> do teste de Tukey
-<br>
-
-$\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de Tukey
-<br>
-
-**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+**Etapa 7**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
 
 ]
 ]
@@ -1565,7 +1573,7 @@ $\left | m_i - m_i \right | < \Delta$: Não rejeita-se H<sub>0</sub> do teste de
 
 .pull-left-4[
 ```{r banz, echo=T, eval=F}
-labestData::BanzattoQd3.7.1
+(data <- labestData::BanzattoQd3.7.1)
 ```
 ]
 
@@ -1578,6 +1586,46 @@ labestData::BanzattoQd3.7.1
 ]
 ]
 
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013) - BoxPlot]
+
+.pull-left-4[
+.font80[
+```{r box, echo=T, eval=F}
+# Reordena níveis dos tratamentos em função da média
+data_reorder <- data %>%
+  mutate(comp=forcats::fct_reorder(
+    .f=comp, .x = alt, .fun='mean', .desc = TRUE))
+
+# Cria Boxplot
+bp <- data_reorder %>%
+  ggplot(aes(x=comp, y=alt)) +
+  geom_boxplot(aes(color=comp)) +
+  geom_jitter(width = 0.25) +
+  stat_summary(fun.y=mean, geom="point", shape=4,
+                 size=2, color = "red") +
+  theme_bw(base_size = 16) +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 90),
+        legend.position="none"
+        ) +
+  labs(x = "Composições de substratos",
+       y = "Altura das plântulas (cm)")
+
+plotly::ggplotly(bp)
+```
+]
+]
+
+--
+
+.pull-right-4[
+```{r ref.label="box", echo=FALSE, eval=TRUE, collapse=F, fig.align='center', fig.cap='', dpi=600, fig.width=.7, fig.height=.7}
+```
+]
 
 
 ---
