@@ -1785,6 +1785,9 @@ $$
 \hat{C}_1 = \color{blue}{1,53cm}
 \end{equation*}
 $$
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC = Solo de Cerrado = 5,25cm
 
 ]
 ]
@@ -1870,8 +1873,69 @@ $$
 ]
 ]
 
+---
 
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
 
+.font80[
+**Etapa 6**: Se a hipótese H<sub>0</sub> for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1). Ou seja, .blue[execute as etapas 3, 4 e 5 novamente].]
+
+--
+
+.pull-left-4[
+<br>
+.font70[
+.center[.blue[**Contraste abrangendo 4 médias ordenadas**]]
+
+- São dois possíveis:
+
+$\hat{C}_2$ = .green[**SC+E**] - .magenta[**SC+V**]
+
+$\hat{C}_3$ = .green[**SC+E+NPK**] - .magenta[**SC**]
+<br><br>
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC = Solo de Cerrado = 5,25cm
+]
+]
+
+--
+
+.pull-left-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+---
+
+.pull-right-4[
+.font70[
+- Então, o cálculo de $\hat{C}_2$ e $\hat{C}_3$ fica:
+<br>
+
+$$
+\Large
+\begin{equation*}
+\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\\
+\hat{C}_1 = 6,78 - 5,25\\
+\hat{C}_1 = \color{blue}{1,53cm}
+\end{equation*}
+$$
+]
+]
 
 ---
 
