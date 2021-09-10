@@ -1840,6 +1840,36 @@ $GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
 ]
 ]
 
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 5**: Comparar o valor do contraste] $\hat{C}_1$ .font80[(diferença entre a maior e menor média) com o valor de] $R_m$
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 5 médias**]]]
+<br>
+
+$$
+\large
+\begin{equation*}
+\hat{C}_1 = \color{blue}{1,53cm}\\~\\
+R_m = \color{red}{0,846cm}
+\end{equation*}
+$$
+]
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- $\hat{C}_1 > R_m$: Rejeita-se H<sub>0</sub>
+- Portanto, existem evidências de que as médias comparadas (.green[SC+E] = 6,78 e .magenta[SC] = 5,25) diferem significativamente.
+- Como não se rejeitou H<sub>0</sub>, deve-se prosseguir com as comparações de médias. Porém, serão testados contrastes que abrangem um número imediatamente inferior de médias (I – 1). Isto é, 4 médias.
+]
+]
+
 
 
 
