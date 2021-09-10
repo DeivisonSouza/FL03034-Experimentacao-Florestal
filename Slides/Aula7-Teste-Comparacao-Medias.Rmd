@@ -1502,7 +1502,7 @@ name: ertd
 **Etapa 3**: Calcular a estimativa do contraste $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}$. Ou seja, a diferença entre a média mais alta e média mais baixa.
 <br><br>
 
-**Etapa 4**: Calcular o valor da Amplitude Mínima Significante - $R_m$;
+**Etapa 4**: Calcular o valor da Amplitude Mínima Significante - $R_m$.
 
 ]
 ]
@@ -1649,18 +1649,53 @@ plotly::ggplotly(bp)
 
 .pull-left-4[
 .font80[
+.blue[**Hipóteses estatísticas**]
+
+- H<sub>0</sub>: **Não existe diferença significativa** entre as **médias** de altura de plântulas de *Pinus oocarpa* para diferentes composições de substrato.
+- H<sub>1</sub>: **Existe diferença significativa** entre **pelo menos duas médias** de altura de plântulas de *Pinus oocarpa* para diferentes composições de substrato.
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
 .blue[**ANOVA - fator único no R - Função aov()**]
 
-```{r echo=T, eval=F}
+```{r echo=T, eval=T, collapse=F}
 # Realizar a análise de variância
-res.aov <- aov(alt ~ comp, data = data)
-```
+res.aov1 <- aov(alt ~ comp, data = data)
 
-```{r sumaov, echo=T, eval=T, collapse=FALSE}
 # Resumo da análise de variância
-summary(res.aov)
+summary(res.aov1)
 ```
+]
+]
 
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H<sub>0</sub> do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+<br>
+
+--
+
+.pull-left-4[
+.font80[
+.blue[**ANOVA - fator único no R - Função aov()**]
+
+```{r echo=T, eval=T, collapse=F}
+# Realizar a análise de variância
+res.aov1 <- aov(alt ~ comp, data = data)
+
+# Resumo da análise de variância
+summary(res.aov1)
+```
 
 ]
 ]
@@ -1671,8 +1706,8 @@ summary(res.aov)
 .center[**Interpretação**]
 
 .font70[
-- *P-valor < * $\alpha$ (2,46e-05 < 0,05): Rejeita-se a hipótese de nulidade (H<sub>0</sub>) do teste F.
-- O *P-valor* foi menor do que o nível de significância $\alpha = 0,05$ (2,46e-05 < 0,05). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Substratos) diferem estatísticamente, ao nível de 5% de probabilidade.
+- *P-valor < * $\alpha$ (0,00183 < 0,05): Rejeita-se a hipótese de nulidade (H<sub>0</sub>) do teste F.
+- O *P-valor* foi menor do que o nível de significância $\alpha = 0,05$ (0,00183 < 0,05). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Substratos) diferem significativamente.
 ]
 ]
 
@@ -1681,6 +1716,132 @@ summary(res.aov)
 .pull-right-4[
 .font70[**.green[Quais tratamentos possuem médias iguais e diferentes entre si?]**]
 ]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[
+**Etapa 2**: Calcular as médias aritméticas das alturas das plântulas para cada composição de substrato, e dispor em ordem decrescente.
+]
+<br>
+
+.pull-left-4[
+```{r sort, echo=T, eval=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+
+--
+
+.pull-right-4[
+.font90[
+```{r ref.label="sort", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 3**: Calcular a estimativa do contraste:] $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}$
+
+.pull-left-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 5 médias ordenadas**]]
+
+- Neste caso, como têm-se 5 tratamento o contraste $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}$ abrange 5 médias ordenadas.
+- Então, o cálculo de $\hat{C}_1$ fica:
+<br>
+
+$$
+\Large
+\begin{equation*}
+\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\\
+\hat{C}_1 = 6,78 - 5,25\\
+\hat{C}_1 = \color{blue}{1,53cm}
+\end{equation*}
+$$
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - $R_m$
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 5 médias**]]
+<br>
+
+$$
+\normalsize
+\begin{equation*}
+R_m = z_m\sqrt{\frac{QMR}{r}} = 3,312\sqrt{\frac{0,261}{4}} = \color{red}{0,846cm}
+\end{equation*}
+$$
+<br>
+.font70[
+$R_m$ = Amplitude Mínima Significante
+
+$z_m$ = Amplitude Mínima Estudentizada, ao  nível de significância $\alpha$.
+
+$QMR$ = Quadrado Médio do Resíduo
+
+$r$ = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(5;~15;~0,05)} = \color{red}{3,312}
+\end{equation*}
+$$
+
+.font70[
+$I$ = Número de médias abrangidas pelo intervalo do contraste
+
+$GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
+<br><br>
+
+- Encontre o valor de $z$ crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+
+
 
 ---
 
