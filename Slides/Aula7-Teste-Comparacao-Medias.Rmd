@@ -2579,7 +2579,20 @@ plot(out.duncan, ylab = "Altura (cm)",
 ]
 
 
+---
 
+## Análise de dados experimentais no R
+<br>
+### Para onde caminhar?
+<br>
+
+.font80[
+- Existem vários pacotes em R para análise de dados experimentais;
+- Explore também outros pacotes no R: ExpDes.pt e AgroR; (Pesquise sobre outros pacotes!)
+- Avalie as pressuposições da ANOVA no R;
+- Execute uma ANOVA seguida do teste de comparações de médias no R; e
+- Obtenha os gráficos da análise e interprete os resultados.
+]
 
 ---
 
