@@ -2406,6 +2406,50 @@ $R_2$ = .red[0,769cm]
 
 ---
 
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)] - Resumindo
+<br>
+
+.pull-left-4[
+.font70[
+
+$\hat{C}_1$ = .green[**SC+E**] - .magenta[**SC**] = .green[**6,78**] - .magenta[**5,25**] = .blue[1,53cm] / ( $R_5$ = .red[0,846cm] )
+
+$\hat{C}_2$ = .green[**SC+E**] - .magenta[**SC+V**] = .green[**6,78**] - .magenta[**5,52**] = .blue[1,26cm] / ( $R_4$ = .red[0,83cm] )
+
+$\hat{C}_3$ = .green[**SC+E+NPK**] - .magenta[**SC**] = .green[**6,65**] - .magenta[**5,25**] = .blue[1,40cm] / ( $R_4$ = .red[0,83cm] )
+
+$\hat{C}_4$ = .green[**SC+E**] - .magenta[**SC+V+NPK**] = .green[**6,78**] - .magenta[**6,4**] = .blue[0,38cm] / ( $R_3$ = .red[0,807cm] )
+
+$\hat{C}_5$ = .green[**SC+E+NPK**] - .magenta[**SC+V**] = .green[**6,65**] - .magenta[**5,52**] = .blue[1,13cm] / ( $R_3$ = .red[0,807cm] )
+
+$\hat{C}_6$ = .green[**SC+V+NPK**] - .magenta[**SC**] = .green[**6,4**] - .magenta[**5,25**] = .blue[1,15cm] / ( $R_3$ = .red[0,807cm] )
+
+$\hat{C}_7$ = .green[**SC+E+NPK**] - .magenta[**SC+V+NPK**] = .green[**6,65**] - .magenta[**6,4**] = .blue[0,25cm] / ( $R_2$ = .red[0,769cm] )
+
+$\hat{C}_8$ = .green[**SC+V+NPK**] - .magenta[**SC+V**] = .green[**6,4**] - .magenta[**5,52**] = .blue[0,88cm] / ( $R_2$ = .red[0,769cm] )
+
+$\hat{C}_9$ = .green[**SC+V**] - .magenta[**SC**] = .green[**5,52**] - .magenta[**5,25**] = .blue[0,27cm] / ( $R_2$ = .red[0,769cm] )
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+
+---
+
 ## Referências
 .font90[
 <br><br>
