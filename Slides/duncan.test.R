@@ -13,11 +13,10 @@ summary(res.aov)
 out.duncan <- duncan.test(res.aov,"comp", group=TRUE,
                           alpha=0.05, console=TRUE)
 
-# Gráfico Duncan
-plot(out.duncan, variation="IQR")
+out.duncan$duncan
 
-# Gráfico Tukey
-plot(out.tukey, main = "Competição de Progênies")
+# Gráfico Duncan
+plot(out.duncan, main = "Composição de substratos")
 
 ?duncan.test
 ?plot.agricolae

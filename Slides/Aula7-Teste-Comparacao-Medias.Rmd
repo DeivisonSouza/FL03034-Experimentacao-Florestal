@@ -1774,13 +1774,14 @@ data %>%
 .center[.blue[**Contraste abrangendo 5 médias ordenadas**]]
 
 - Neste caso, como têm-se 5 tratamento o contraste $\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}$ abrange 5 médias ordenadas.
+- Portanto, o contraste $\hat{C}_1$ será dado pela diferença entre as médias dos tratamentos **SC+E** e **SC**.
 - Então, o cálculo de $\hat{C}_1$ fica:
 <br>
 
 $$
-\Large
+\large
 \begin{equation*}
-\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\\
+\hat{C}_1 = \color{green}{\bf{(SC+E)}} - \color{magenta}{\bf{SC}}\\
 \hat{C}_1 = 6,78 - 5,25\\
 \hat{C}_1 = \color{blue}{1,53cm}
 \end{equation*}
@@ -1808,7 +1809,7 @@ SC = Solo de Cerrado = 5,25cm
 $$
 \normalsize
 \begin{equation*}
-R_m = z_m\sqrt{\frac{QMR}{r}} = 3,312\sqrt{\frac{0,261}{4}} = \color{red}{0,846cm}
+R_5 = z_5\sqrt{\frac{QMR}{r}} = 3,312\sqrt{\frac{0,261}{4}} = \color{red}{0,846cm}
 \end{equation*}
 $$
 <br>
@@ -1860,15 +1861,15 @@ $$
 \large
 \begin{equation*}
 \hat{C}_1 = \color{blue}{1,53cm}\\~\\
-R_m = \color{red}{0,846cm}
+R_5 = \color{red}{0,846cm}
 \end{equation*}
 $$
 ]
 
 .pull-right-4[
 .font80[.center[.blue[**Conclusão**]]
-- $\hat{C}_1 > R_m$: Rejeita-se H<sub>0</sub>
-- Portanto, existem evidências de que as médias comparadas (.green[SC+E] = 6,78 e .magenta[SC] = 5,25) diferem significativamente.
+- $\hat{C}_1 > R_5$: Rejeita-se H<sub>0</sub>
+- Portanto, existem evidências de que as médias comparadas (.green[**SC+E**] = 6,78 e .magenta[**SC**] = 5,25) diferem significativamente.
 - Como não se rejeitou H<sub>0</sub>, deve-se prosseguir com as comparações de médias. Porém, serão testados contrastes que abrangem um número imediatamente inferior de médias (I – 1). Isto é, 4 médias.
 ]
 ]
@@ -1921,21 +1922,188 @@ data %>%
 
 ---
 
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 3**: Calcular as estimativas dos contrastes:] $\hat{C}_2$ e $\hat{C}_3$
+
+.pull-left-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+--
+
 .pull-right-4[
 .font70[
-- Então, o cálculo de $\hat{C}_2$ e $\hat{C}_3$ fica:
+.center[.blue[**Contraste abrangendo 4 médias ordenadas**]]
+
+- Então, os cálculos de $\hat{C}_2$ e  $\hat{C}_3$ fica:
+<br>
+
+
+$\hat{C}_2$ = .green[**SC+E**] - .magenta[**SC+V**] = .green[**6,78**] - .magenta[**5,52**] = .blue[1,26cm]
+
+$\hat{C}_3$ = .green[**SC+E+NPK**] - .magenta[**SC**] = .green[**6,65**] - .magenta[**5,25**] = .blue[1,40cm]
+<br><br>
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC = Solo de Cerrado = 5,25cm
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - $R_m$
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 4 médias**]]
 <br>
 
 $$
-\Large
+\normalsize
 \begin{equation*}
-\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\\
-\hat{C}_1 = 6,78 - 5,25\\
-\hat{C}_1 = \color{blue}{1,53cm}
+R_4 = z_4\sqrt{\frac{QMR}{r}} = 3,250\sqrt{\frac{0,261}{4}} = \color{red}{0,83cm}
+\end{equation*}
+$$
+<br>
+.font70[
+$R_m$ = Amplitude Mínima Significante
+
+$z_m$ = Amplitude Mínima Estudentizada, ao  nível de significância $\alpha$.
+
+$QMR$ = Quadrado Médio do Resíduo
+
+$r$ = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(4;~15;~0,05)} = \color{red}{3,250}
+\end{equation*}
+$$
+
+.font70[
+$I$ = Número de médias abrangidas pelo intervalo do contraste
+
+$GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
+<br><br>
+
+- Encontre o valor de $z$ crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 5**: Comparar o valor dos contrastes] $\hat{C}_2$ e $\hat{C}_3$ .font80[com o valor de] $R_4$
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 4 médias**]]]
+<br>
+
+
+$$
+\large
+\begin{equation*}
+\hat{C}_2 = \color{blue}{1,26cm}\\~\\
+\hat{C}_3 = \color{blue}{1,40cm}\\~\\
+R_4 = \color{red}{0,83cm}
 \end{equation*}
 $$
 ]
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- $\hat{C}_2 > R_4$: Rejeita-se H<sub>0</sub>
+- $\hat{C}_3 > R_4$: Rejeita-se H<sub>0</sub>
+- Portanto, existem evidências de que as médias comparadas nos contrastes $\hat{C}_2$ e $\hat{C}_3$ diferem significativamente.
+- Como não se rejeitou H<sub>0</sub> nos contrastes $\hat{C}_2$ e $\hat{C}_3$, deve-se prosseguir com as comparações de médias. Porém, serão testados contrastes que abrangem um número imediatamente inferior de médias (I – 1). Isto é, 3 médias.
 ]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font80[
+**Etapa 6**: Se a hipótese H<sub>0</sub> for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1). Ou seja, .blue[execute as etapas 3, 4 e 5 novamente].]
+
+--
+
+.pull-left-4[
+
+.font70[
+.center[.blue[**Contraste abrangendo 3 médias ordenadas**]]
+
+- São dois possíveis:
+
+$\hat{C}_4$ = .green[**SC+E**] - .magenta[**SC+V+NPK**]
+
+$\hat{C}_5$ = .green[**SC+E+NPK**] - .magenta[**SC+V**]
+
+$\hat{C}_6$ = .green[**SC+V+NPK**] - .magenta[**SC**]
+<br><br>
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC+V+NPK = Solo de Cerrado com Vermiliculita e com NPK = 6,4cm
+
+SC = Solo de Cerrado = 5,25cm
+]
+]
+
+--
+
+.pull-left-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+---
+
+
+
 
 ---
 
