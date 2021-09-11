@@ -1239,17 +1239,25 @@ tb <- tibble::tibble(
     ))
 
 tb %>% 
-  CustomDT
+  CustomDT2
 ```
+
+.font70[
+- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Tukey.
 ]
+]
+
+--
 
 .pull-right-4[
 .font80[
-- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Tukey.
-- Existem evidência para admitir que a média da progênie P1 é estatísticamente diferente apenas de P9 e P10. (.magenta[Escreva afirmações como essa para as demais evidências indicadas pelo teste de Tukey])
+.center[**Interprete os resultados**]
+- Por exemplo, existem evidência para admitir que a média da progênie P1 é estatísticamente diferente apenas de P9 e P10.
+- `r anicon::faa("hand-point-right", animate="horizontal")` **Pratique**: Escreva afirmações como essa para as demais evidências indicadas pelo teste de Tukey.
 
 ]
 ]
+
 
 ---
 
@@ -2446,6 +2454,48 @@ data %>%
 ```
 ]
 ]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font90[
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+]
+
+--
+<br>
+
+.pull-left-4[
+```{r echo=F, eval=T}
+
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media)) %>% 
+  tibble::add_column(`Duncan (5%)` = c("a", "a", "a",
+                                       "b", "b"), .after = "Media") %>% 
+  CustomDT
+```
+<br>
+.font70[
+- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Duncan.]
+]
+
+--
+
+.pull-right-4[
+.font80[
+.center[**Interprete os resultados**]
+- Por exemplo, existem evidência para admitir que a média do composto .green[SC+E] é estatísticamente diferente das médias de .green[SC+V] e .green[SC]. 
+- `r anicon::faa("hand-point-right", animate="horizontal")` **Pratique**: Escreva afirmações como essa para as demais evidências indicadas pelo teste de Duncan.
+
+]
+]
+
 
 
 ---
