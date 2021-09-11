@@ -18,5 +18,3 @@ out.duncan$duncan
 # Gráfico Duncan
 plot(out.duncan, main = "Composição de substratos")
 
-?duncan.test
-?plot.agricolae
