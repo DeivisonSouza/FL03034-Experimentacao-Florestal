@@ -2102,7 +2102,135 @@ data %>%
 
 ---
 
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
 
+.font80[**Etapa 3**: Calcular as estimativas dos contrastes:] $\hat{C}_4$, $\hat{C}_5$ e $\hat{C}_6$
+
+.pull-left-4[
+.font80[
+```{r echo=T, eval=T, collapse=F}
+data %>% 
+  group_by(comp) %>% 
+  summarise(Media = mean(alt)) %>% 
+  arrange(desc(Media))
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 3 médias ordenadas**]]
+
+- Então, os cálculos de $\hat{C}_4$, $\hat{C}_5$ e $\hat{C}_6$ fica:
+<br>
+
+$\hat{C}_4$ = .green[**SC+E**] - .magenta[**SC+V+NPK**] = .green[**6,78**] - .magenta[**6,4**] = .blue[0,38cm]
+
+$\hat{C}_5$ = .green[**SC+E+NPK**] - .magenta[**SC+V**] = .green[**6,65**] - .magenta[**5,52**] = .blue[1,13cm]
+
+$\hat{C}_6$ = .green[**SC+V+NPK**] - .magenta[**SC**] = .green[**6,4**] - .magenta[**5,25**] = .blue[1,15cm]
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - $R_m$
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 3 médias**]]
+<br>
+
+$$
+\normalsize
+\begin{equation*}
+R_3 = z_3\sqrt{\frac{QMR}{r}} = 3,160\sqrt{\frac{0,261}{4}} = \color{red}{0,807cm}
+\end{equation*}
+$$
+<br>
+.font70[
+$R_m$ = Amplitude Mínima Significante
+
+$z_m$ = Amplitude Mínima Estudentizada, ao  nível de significância $\alpha$.
+
+$QMR$ = Quadrado Médio do Resíduo
+
+$r$ = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(3;~15;~0,05)} = \color{red}{3,160}
+\end{equation*}
+$$
+
+.font70[
+$I$ = Número de médias abrangidas pelo intervalo do contraste
+
+$GLR$ = Graus de liberdade de Resíduos (ou Erro Experimental)
+<br><br>
+
+- Encontre o valor de $z$ crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+<br>
+
+.font80[**Etapa 5**: Comparar o valor dos contrastes] $\hat{C}_4$, $\hat{C}_5$ e $\hat{C}_6$ .font80[com o valor de] $R_3$
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 3 médias**]]
+<br>
+
+$\hat{C}_4$ = .blue[0,38cm];
+$\hat{C}_5$ = .blue[1,13cm];
+$\hat{C}_6$ = .blue[1,15cm]
+
+$R_3$ = .red[0,807cm]
+<br>
+
+]
+]
+
+--
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- $\hat{C}_4 < R_3$: Não se rejeita H<sub>0</sub>
+- $\hat{C}_5 > R_3$: Rejeita-se H<sub>0</sub>
+- $\hat{C}_6 > R_3$: Rejeita-se H<sub>0</sub>
+- Portanto, existem evidências de que as médias comparadas nos contrastes $\hat{C}_5$ e $\hat{C}_6$ diferem significativamente. Porém, as médias comparadas no contraste $\hat{C}_4$ .blue[não diferiram] de modo significativo.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+- As médias nos contrastes $\hat{C}_5$ e $\hat{C}_6$ não diferiram. Portanto, deve-se comparar contrastes que abrangem 2 médias apenas na amplitude deste dois contrastes. 
+- Como não se rejeitou  H<sub>0</sub> no contraste $\hat{C}_4$, não existe razão para comparar contrastes que abragem 2 médias na amplitude de $\hat{C}_4$.
+]
+]
 
 
 ---
