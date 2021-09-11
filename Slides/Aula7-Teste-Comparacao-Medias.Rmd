@@ -2496,6 +2496,89 @@ data %>%
 ]
 ]
 
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste de Duncan no R - Pacote agricolae]
+<br>
+
+.pull-left-4[
+.font90[
+- **1 - Carrega dados do pacote labestData...**
+```{r echo=T, eval=T}
+data <- labestData::BanzattoQd3.7.1
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font90[
+- **2 - Realiza ANOVA...**
+```{r echo=T, eval=T, collapse=F}
+# Realizar a análise de variância
+res.aov <- aov(alt ~ comp, data = data)
+
+# Resumo da análise de variância
+summary(res.aov)
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste de Duncan no R - Pacote agricolae]
+<br>
+
+.pull-left-4[
+.font90[
+- **3 - Realiza Teste de Duncan...**
+```{r duncan, echo=T, eval=F, collapse=F}
+# Teste Duncan
+library(agricolae)
+out.duncan <- duncan.test(y = res.aov, trt = "comp", 
+                      group = TRUE, alpha = 0.05)
+
+out.duncan$groups
+out.duncan$duncan
+```
+]
+]
+
+.pull-right-4[
+.font90[
+```{r ref.label="duncan", echo=FALSE, eval=TRUE, collapse=F}
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+<br>
+### .font80[Teste de Duncan no R - Pacote agricolae]
+
+.pull-left-4[
+.font90[
+- **4 - Gráfico do Teste de Duncan...**
+```{r plotdun, echo=T, eval=F}
+# Gráfico comparações de Duncan
+plot(out.duncan, ylab = "Altura (cm)",
+     main = "Composição de substratos")
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="plotdun", echo=FALSE, eval=TRUE, out.width='85%', fig.align='center'}
+```
+]
+
+
 
 
 ---
