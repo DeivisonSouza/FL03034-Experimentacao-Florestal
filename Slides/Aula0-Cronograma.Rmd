@@ -430,7 +430,8 @@ $$
 
 O plano de ensino da disciplina pode ser acessado em:
 
-[Plano de Ensino (FL03034-EF)](https://github.com/DeivisonSouza/FL03034-EF/Slides/PE/EF-PE.pdf)
+[Plano de Ensino (FL03034-EF)](https://github.com/DeivisonSouza/FL03034-EF/blob/master/Slides/PE/EF-PE.pdf)
+
 
 <!-- Slide 11 -->
 ---

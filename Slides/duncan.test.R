@@ -19,7 +19,7 @@ summary(res.aov)
 # Usando o pacote agricolae
 
 # Teste de Duncan
-out.duncan <- duncan.test(res.aov,"comp", group=TRUE,
+out.duncan <- duncan.test(res.aov, "comp", group=TRUE,
                           alpha=0.05, console=TRUE)
 
 out.duncan$duncan
@@ -37,4 +37,3 @@ with(data, DIC(comp, alt, ylab = "Weight loss (%)",
 # 1 - Faça uma análise exploratória dos dados.
 # 2 - Procure: Como analisar as pressuposições da ANOVA?
 # 3 - Faça o Teste de Tukey usando os pacotes
-

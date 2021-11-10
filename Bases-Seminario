@@ -1,0 +1,77 @@
+
+Grupo 1
+
+Conjunto de dados: Diâmetro de Tubetes na Formação de Mudas de Eucalipto
+Pacote: labestData da linguagem R
+Acesso: labestData::BanzattoQd7.3.1
+Fonte: BANZATTO; KRONKA (2013), Quadro 7.3.1, pág. 177.
+Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "diâmetro do tubete (dt)" e variável resposta "altura das mudas (alt) 75 dias após a semeadura".
+
+#------------------------
+
+Grupo 2
+
+Conjunto de dados: Diâmetro Médio do Tronco de Espécies de Eucalipto
+Pacote: labestData da linguagem R
+Acesso: labestData::BarbinEx13
+Fonte: BARBIN (2013), Exercício 13, pág. 206.
+Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "espécie (euca)" e variável resposta "diâmetro médio das plantas úteis da parcela (diam)".
+
+#------------------------
+
+Grupo 3
+
+Conjunto de dados: Altura de Plantas de Espécies de Eucalipto em Vários Locais
+Pacote: labestData da linguagem R
+Acesso: labestData::BarbinEx18
+Fonte: BARBIN (2013), Exercício 18, pág. 210.
+Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "espécie (espec)" e variável resposta "altura de plantas (alt) de eucalipto com 3 anos de idade".
+
+#------------------------
+
+Grupo 4
+
+Conjunto de dados: Controle Químico do Damping-off em Eucalipto
+Pacote: labestData da linguagem R
+Acesso: labestData::BarbinEx8
+Fonte: BARBIN (2013), Exercício 8, pág. 202.
+Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "fumigante de solo usado (fumig)" e variável resposta "Altura da muda (cm)".
+
+#------------------------
+
+Grupo 5
+
+Conjunto de dados: Altura de 6 Progênies de E. grandis em Três Locais
+Pacote: labestData da linguagem R
+Acesso: labestData::BarbinPg177
+Fonte: BARBIN (2013), pág. 177.
+Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "progênies de Eucaliptus grandis (prog)" e variável resposta "Altura média de 25 plantas por parcela (m) aos 7 anos de idade".
+
+#------------------------
+
+Grupo 6
+
+Conjunto de dados: Peso das Plantas 30 após a Semeadura
+Pacote: labestData da linguagem R
+Acesso: labestData::StorckTb2
+Fonte: STORCK et al. (2011), Tabela 2, pág. 21.
+Obs.: Admita que o experimento foi conduzido em DIC. O fator de comparação os diferentes tratamentos (trat) e a variável resposta "peso das plantas (peso) 30 dias após a semeadura". Para fins didáticos, o grupo
+pode admitir tratamentos hipóteticos para o fator "trat".
+
+#------------------------
+
+Grupo 7
+
+Conjunto de dados: Qualidade de Mudas em Função do Recipiente da Espécie
+Pacote: labestData da linguagem R
+Acesso: labestData::FariaQd11.9
+Fonte: FARIA (2009), Quadro 11.9, pág 145.
+Obs.:  A base possui 2 fatores. Porém, análise o experimento apenas para o fator "tipo de recipientes (recip)" e a variável resposta "qualidade das mudas (quali)".
+
+
+
+
+
+
+
+
