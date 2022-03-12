@@ -6,15 +6,9 @@
 
 # Seja bem vindo(a)! :deciduous\_tree: :smiley: :grin:
 
-:calendar: **Julho: 19 e 26**
+:calendar: **Março: 14 a 19** e **21 a 26**
 
-:calendar: **Agosto: 2, 9, 16, 23 e 30**
-
-:calendar: **Setembro: 6, 13, 20 e 27**
-
-:calendar: **Outubro: 4**
-
-:alarm\_clock: **13h30min - 18h50min**
+:alarm\_clock: **07h30min - 12h50min**
 
 <div itemscope="" itemtype="https://schema.org/Person">
 
@@ -40,33 +34,30 @@ figuras, conjunto de dados (e outros) utilizados na disciplina de
 **Experimentação Florestal** (FL03034-EF) ministrada pelo
 **Prof. Deivison Venicio Souza** no curso de graduação em **Engenharia
 Florestal** da **Universidade Federal do Pará** (UFPA). O curso será
-ofertado na modalidade Ensino à Distância (EAD) no âmbito do **Ensino
-Remoto Emergencial (ERE)** na [Universidade Federal do Pará
-(UFPA)](https://portal.ufpa.br/index.php), conforme dispõe a [Resolução
-n. 5.294, de 21 de agosto de
-2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/Resolucao_5294_2020_CONSEPE.pdf)
-e em consonância à [Resolução n. 5.332, de 22 de dezembro de
-2020](http://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2020/5332%20Aprova%20o%20calendario%20academico%20para%20o%20ano%20letivo%20de%202021.pdf),
+ofertado na **modalidade presencial**, conforme dispõe a [Resolução
+n. 5.453, de 14 de dezembro de
+2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf)
+e em consonância à [Resolução n. 5.419, de 23 de setembro de
+2021](http://proeg.ufpa.br/images/Artigos/Academico/Calendarios/Resolucao-n-5419-2021-CONSEPE-Aprova-o-calendario-academico-para-o-ano-letivo-de-2022.pdf),
 que aprovou o Calendário Acadêmico da Universidade Federal do Pará para
-o ano de 2021. As aulas serão, predominantemente, síncronas e
-desenvolvidas por meio da plataforma Google Meet.
+o ano de 2022.
 
 # Programação da disciplina
 
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide                                       | Link                                                                                     |
-|:--------------------------------------------|:-----------------------------------------------------------------------------------------|
-| Slides/Aula0-Cronograma.html                | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula0-Cronograma.html>                |
-| Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula1-Introducao-Experimentacao.html> |
-| Slides/Aula2-AED-Revisao.html               | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula2-AED-Revisao.html>               |
-| Slides/Aula3-IntroducaoR.html               | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula3-IntroducaoR.html>               |
-| Slides/Aula3-Manipulacao-Dados-dplyr.html   | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula3-Manipulacao-Dados-dplyr.html>   |
-| Slides/Aula4-DIC.html                       | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula4-DIC.html>                       |
-| Slides/Aula5-DBC.html                       | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula5-DBC.html>                       |
-| Slides/Aula6-DQL.html                       | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula6-DQL.html>                       |
-| Slides/Aula7-Teste-Comparacao-Medias.html   | <https://deivisonsouza.github.io/FL03034-EF/Slides/Aula7-Teste-Comparacao-Medias.html>   |
+| Slide                                       | Link                                                                                                           |
+|:--------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
+| Slides/Aula0-Cronograma.html                | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html>                |
+| Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html> |
+| Slides/Aula2-AED-Revisao.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html>               |
+| Slides/Aula3-IntroducaoR.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-IntroducaoR.html>               |
+| Slides/Aula3-Manipulacao-Dados-dplyr.html   | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-Manipulacao-Dados-dplyr.html>   |
+| Slides/Aula4-DIC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DIC.html>                       |
+| Slides/Aula5-DBC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-DBC.html>                       |
+| Slides/Aula6-DQL.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html>                       |
+| Slides/Aula7-Teste-Comparacao-Medias.html   | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html>   |
 
 # Facilitador :deciduous\_tree:
 
