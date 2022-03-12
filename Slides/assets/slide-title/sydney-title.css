@@ -681,25 +681,24 @@ h2 {
   color: black; /* first of type is master brand red */
   font-size: 50px;
   font-weight: bold;
-  padding-top: 30px;
+  padding-top: 10px;
   padding-left: 0px;
   padding-right: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   margin-left: 0px;
   margin-top: 0px;
   text-align: center;
   vertical-align: middle;
 }
 
-
 /* H2 fonts */
 .title-slide h2 {
-  color: #cc2900 !important; /* first of type is master brand red */
+  color: #ffffff !important; /* first of type is master brand red */
   font-size: 50px;
   font-weight: bold;
-  padding-top: 70px;
+  padding-top: 100px;
   padding-left: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
   margin-top: 0px;
   margin-left: 0px;
   text-align: center;
