@@ -61,16 +61,16 @@ use_logo(
 
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
+<br><br>
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Cronograma da disciplina `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
-## Cronograma da disciplina `r anicon::faa("pagelines", animate="horizontal", colour="green")`
-<br>
 #### **Prof. Dr. Deivison Venicio Souza**
 #### Universidade Federal do Pará (UFPA) 
 #### Faculdade de Engenharia Florestal
 #### E-mail: deivisonvs@ufpa.br
 <br>
-##### `r format(Sys.Date(),"%d/%B/%Y")`
-##### Altamira, Pará
+##### 1ª versão: 10/novembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
+
 
 ---
 layout: true
@@ -80,10 +80,10 @@ layout: true
 ---
 
 ## 👋 Olá, sejam bem vindos!
-
+<br>
 ### **Sobre o facilitador**
 .pull-left[
-
+.font80[
 1. .green[Graduação (Titulação: ano 2008)]
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
@@ -93,17 +93,25 @@ layout: true
     - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
     - Área de Concentração: Manejo de ecossistemas florestais.
 ]
+]
 
 .pull-right[
-
+.font80[
 3. .green[Doutorado (Titulação: ano 2020)]
     - Universidade Federal do Paraná (UFPR);
     - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
     - Área de Concentração: Manejo Florestal.
     
 4. .green[Especialização (Defesa: ano 2019)]
-    - Universidade Federal do Paraná (UFPR);
+    - Universidade Federal do Paraná (UFPR)
     - Área: Big Data e Data Science
+    
+ .center1[
+```{r echo = FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/img.jpeg")
+```
+]   
+]
 ]
 
 ---
@@ -119,8 +127,8 @@ layout: true
 2. .green[Modelagem preditiva aplicada à ciência florestal]
     - Aprendizado de máquina
     
-3. .green[Visão computacional]
-    - reconhecimento de imagens
+3. .green[Visão computacional e Reconhecimento de imagens]
+    - Reconhecimento de espécies
     
 4. .green[Criação de Dashboard - Shiny]
 ]
@@ -135,28 +143,26 @@ layout: true
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
 
-```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap=''}
+```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap=''}
 knitr::include_graphics('fig/ORCID.png')
 ```
-
-Email: deivisonvs@ufpa.br
 ]
 
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
 
 ```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
 library(calendR)
-dates <- seq(as.Date("2021-07-01"), as.Date("2021-07-31"), by = "1 day")
+dates <- seq(as.Date("2022-03-01"), as.Date("2022-03-31"), by = "1 day")
 events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
-events[c(12)] <- "Dia do Engenheiro Florestal"
+events[c(8)] <- "Dia da Mulher"
 
-p <- calendR::calendR(year = 2021,
-        month = 7,
+p <- calendR::calendR(year = 2022,
+        month = 3,
         start = "M",
-        title = "Julho (Ano 2021)",
+        title = "Março (Ano 2022)",
         title.size = 50, 
         subtitle.size = 20, 
         title.col = 2,  
@@ -178,8 +184,18 @@ p <- calendR::calendR(year = 2021,
         bg.img = "",
         text = c(
           "Introdução à\n experimentação", 
-          "Introdução ao R"),
-        text.pos = c(19, 26), 
+          "Introdução ao R",
+          "ANOVA - DIC",
+          "ANOVA - DBC",
+          "Revisão\n (Avaliação 1)",
+          "Avaliação 1",
+          "ANOVA - DQL",
+          "Testes de\n comparação\n de médias",
+          "Ensaio Fatorial",
+          "Correlação e\n Regressão Linear",
+          "Revisão\n (Avaliação 2)",
+          "Avaliação 2"),
+        text.pos = c(14:19, 21:26), 
         text.size = 12,
         text.col = 1)
 
@@ -189,133 +205,6 @@ p + theme(legend.key.size = unit(2, 'cm'),
 ```
 
 <!-- Slide 3 -->
----
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
-
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-
-p <- calendR::calendR(year = 2021,
-        month = 8,
-        start = "M",
-        title = "Agosto (Ano 2021)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = "weekend",
-        legend.pos = "bottom",
-        special.col = rgb(1, 0, 0, 0.1),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "gray30",
-        months.col = "gray30",
-        days.col = 4, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "ANOVA - DIC",
-          "ANOVA - DBC", 
-          "Revisão\n (Avaliação 1)",
-          "Avaliação 1",
-          "ANOVA - DQL"),
-        text.pos = c(2, 9, 16, 23, 30), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
-
-```
-
-<!-- Slide 4 -->
----
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
-
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-
-p <- calendR::calendR(year = 2021,
-        month = 9,
-        start = "M",
-        title = "Setembro (Ano 2021)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = "weekend",
-        legend.pos = "bottom",
-        special.col = rgb(1, 0, 0, 0.1),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "gray30",
-        months.col = "gray30",
-        days.col = 4, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "Testes de\n comparação\n de médias",
-          "Ensaio Fatorial",
-          "Correlação e\n Regressão Linear",
-          "Revisão\n (Avaliação 2)"),
-        text.pos = c(6, 13, 20, 27), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
-
-```
-
-<!-- Slide 5 -->
----
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
-
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-
-p <- calendR::calendR(year = 2021,
-        month = 10,
-        start = "M",
-        title = "Outubro (Ano 2021)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = "weekend",
-        legend.pos = "bottom",
-        special.col = rgb(1, 0, 0, 0.1),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "gray30",
-        months.col = "gray30",
-        days.col = 4, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "Avaliação 2"),
-        text.pos = c(4), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
-
-```
-
-<!-- Slide 6 -->
 ---
 
 ## Ementa da disciplina (FL03034 - EF)
@@ -338,65 +227,73 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 8 - Ensaios Fatoriais;
 
-9 - Análise de correlação linear simples;
+9 - Análise de correlação e regressão linear; e
 
-10 - Análise de regressão linear simples e múltipla; e
-
-11 - Introdução à linguagem R para análise de experimentos.
+10 - Análise de experimentos com linguagem R.
 
 ]
 
 <!-- Slide 7 -->
 ---
+
 ## Estratégias e Ferramentas de Ensino
 <br>
+
+- **Aula Presencial** (*Sala 3 - FEF*)
+
+Aulas teóricas e práticas presenciais, realização de atividades complementares e avaliações de desempenho.
+
+--
+<br><br>
+
 - **Plataforma de videoconferência** (*Google Meeting*)
 
-**Sistema de Ensino Remoto**: Aulas teóricas síncronas, realização de atividades complementares e avaliações de desempenho. 
+**Palestras**: Videoconferências com profissionais convidados para palestrar sobre temas relacionados à Experimentação.
 
-Link de acesso: [Endereço da Sala Remota](https://meet.google.com/lookup/fq6ynr3fvf)
-
---
-<br><br>
-- **Sala de aula virtual** (*Google Classroom*)
-
-Comunicação, envio de atividades síncronas e assíncronas e de conteúdos digitas.
+.red[**Atenção**]`r anicon::faa("exclamation-triangle", colour="red")`: Formação de grupos (Duas perguntas no mínimo)
 
 ---
-## Estratégias e Ferramentas de Ensino
-<br><br>
-- **Repositório GitHub <a href="https://github.com/DeivisonSouza">(@DeivisonSouza)</a>**
 
-Repositório com os slides em .html, arquivos .R e .Rmd, figuras, conjunto de dados (e outros). O repositório pode ser acessado em: [FL03034-EF](https://github.com/DeivisonSouza/FL03034-EF)
+## Estratégias e Ferramentas de Ensino
+<br>
+
+- **Sala de aula virtual** (*Google Classroom*)
+
+Comunicação, envio de atividades complementares e de conteúdos digitas.
 
 --
 <br><br>
 
-Obs.: As atividades remotas síncronas serão realizadas sob supervisão contínua do Professor. A ideia é orientar e sanar dúvidas acerca da atividade proposta.
+- **Repositório GitHub**
+
+Repositório com os slides em .html, arquivos .R e .Rmd, figuras, conjunto de dados (e outros). O repositório pode ser acessado em: [FL03034-Experimentacao-Florestal](https://github.com/DeivisonSouza/FL03034-Experimentacao-Florestal)
 
 <!-- Slide 8 -->
 ---
 ## Estratégias de avaliação da aprendizagem
-<br><br>
-- **Formulários** (*Google Forms*)
-
-Formulários de avaliação do Google Forms, com perguntas discursivas e objetivas sobre o tema.
+<br>
 
 - **Atividades práticas**
 
-Atividades síncronas e assíncronas sobre os assuntos abordados. Basicamente, estas atividades consistirão em exercícios com dados reais (quando possível) para aprendizado da matemática subjacente aos delineamentos (quando couber).
+Exercícios com dados reais (quando possível) para aprendizado da matemática e estatísticas inerentes aos conteúdos abordados;
+<br><br>
 
+Introdução ao uso da Linguagem de Programação R e bibliotecas para análise de experimentos.
 
 ---
 ## Estratégias de avaliação da aprendizagem
-<br><br>
+<br>
+
 - **Avaliação teórica**
 
-Avaliações teóricas síncronas em sala remota.
+Avaliações teóricas presenciais.
+
+--
+<br><br>
 
 - **Participação** 
 
-O nível de participação e interação nas aulas síncronas determinará uma pontuação extra nas avaliações teóricas.
+O nível de participação e interação nas aulas presenciais poderá ser critério para definir uma pontuação extra nas avaliações teóricas.
 
 <!-- Slide 9 -->
 ---
@@ -411,7 +308,7 @@ $$
 
 **NA** = Nota das Atividade (Soma das atividades será 10 pts.)
 
-**NP** = Nota das Provas Teóricas (Soma das provas será 10 pts.)
+**NPT** = Nota das Provas Teóricas (Soma das provas será 10 pts.)
 
 <br>
 
@@ -441,45 +338,71 @@ Conforme o Regimento Geral da UFPA, será considerado reprovado o discente que:
 
 - Obtiver o conceito Insuficiente (INS), isto é, nota inferior a 5 (cinco); (.green[**Aplicável**])
 - Sem Avaliação (SA); ou (.green[**Aplicável**])
-- Não obtiver a frequência mínima de 75% na disciplina, isto é, Sem Frequência (SF). (.green[**Não Aplicável**])
+- Não obtiver a frequência mínima de 75% na disciplina, isto é, Sem Frequência (SF). (.green[**Aplicável**])
 
 <!-- Slide 12 -->
 ---
-## Ensino Remoto Emergencial - UFPA
-- [Resolução  n. 5.294, de 21 de Agosto de 2020](http://www.proeg.ufpa.br/images/Artigos/Normas/Resolucao_5294_2020_CONSEPEAprovaoEREnaUFPA.pdf)
+## Resoluções da UFPA
+<br>
 
-Aprova, de forma excepcional e temporária, o Ensino Remoto Emergencial em diferentes níveis de ensino para os cursos ofertados pela Universidade Federal do Pará, em decorrência da situação de pandemia do novo Coronavírus–COVID-19, e dá outras providências.
+- [Resolução  n. 5.453, de 14 de dezembro de 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf)
 
-- [Resolução n. 5.332, de 22 de Dezembro de 2020](http://www.proeg.ufpa.br/images/Artigos/Normas/RESOLUO5.332DEZEMBRO2020calendarioacademicoparaoanoletivode2021.pdf)
+Estabelece o retorno pleno das atividades acadêmicas presenciais e revoga a Resolução nº 5.294, de 21 de agosto de 2020.
+
+- [Resolução n. 5.419, de 23 de setembro de 2021](http://proeg.ufpa.br/images/Artigos/Academico/Calendarios/Resolucao-n-5419-2021-CONSEPE-Aprova-o-calendario-academico-para-o-ano-letivo-de-2022.pdf)
 
 Aprova o Calendário Acadêmico da Universidade Federal do Pará (UFPA), para o
-ano de 2021.
-
-- [Resolução n. 5.349, de 24 de Fevereiro de 2021](http://facdes.ufpa.br/pdfs/5349%20Aprova%20a%20altera%C3%A7%C3%A3o%20da%20Resolu%C3%A7%C3%A3o%205.332-2020%2C%20que%20aprovou%20o%20Calend%C3%A1rio%20Academico%202021.pdf)
-
-Altera a Resolução n. 5.332, de 22 de dezembro de 2020, que aprovou o Calendário Acadêmico – 2021 da Universidade Federal do Pará (UFPA). 
+ano de 2022.
 
 <!-- Slide 13 -->
 ---
-## Bibliografia básica
 
+## Bibliografia básica
+<br>
+.pull-left-4[
+PIMENTEL-GOMES, F.; GARCIA, C. H. **Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos**. Piracicaba: FEALQ, 2002. 309p.
 <br><br>
-PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+
+**Link**: [www.editoraufv.com.br](https://www.editoraufv.com.br/produto/estatistica-aplicada-a-experimentos-agronomicos-e-florestais/1109193/?gclid=EAIaIQobChMIqJOG5dLA9gIVTW1vBB1esA_EEAQYASABEgJ2xvD_BwE)
+]
+
+.pull-right-4[
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('https://editoraufv.cdn.plataformaneo.com.br/produto/1098901630_estatistica-aplicada-fealq.jpg')
+```
+
+]
+
+---
+
+## Bibliografia básica
+<br>
+.pull-left-4[
+PIMENTEL-GOMES, F. **Curso de estatística experimental**. Piracicaba: FEALQ, 2009. 451p.
 <br><br>
-PIMENTEL-GOMES, F. Curso de estatística experimental. Piracicaba: FEALQ, 2009. 451 p.
-<br><br>
-ZIMMERMANN, F. J. P. Estatística aplicada à pesquisa agrícola. Santo Antônio de Goiás: Embrapa Arroz e Feijão, 2004. 402 p.
+
+**Link**: [www.editoraufv.com.br](https://www.editoraufv.com.br/produto/curso-de-estatistica-experimental/1110850)
+]
+
+.pull-right-4[
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('https://editoraufv.cdn.plataformaneo.com.br/produto/multifotos/hd/curso-de-estatistica-experimental-fealq14889163.jpg')
+```
+
+]
 
 <!-- Slide 14 -->
 ---
 ## Bibliografia complementar
 
 <br><br>
-BANZATTO, D.A.; KRONKA, S. do N. Experimentação agrícola. 2 ed. Jaboticabal, SP, 1992. 247p.
+BANZATTO, D.A.; KRONKA, S. do N. **Experimentação agrícola**. 2 ed. Jaboticabal, SP, 1992. 247p.
 <br><br>
-CONAGIN, A.; NAGAI, V.; AMBRÓSIO, L.A. Princípios de técnica experimental e análise estatística de experimentos. Campinas: Instituto Agronômico, 2006.
+CONAGIN, A.; NAGAI, V.; AMBRÓSIO, L.A. **Princípios de técnica experimental e análise estatística de experimentos**. Campinas: Instituto Agronômico, 2006.
 <br><br>
-DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+DIAS, L. A. dos S.; BARROS, W. S. **Biometria experimental**. Viçosa, MG: Suprema, 2009. 408 p.
 <br><br>
-NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+NOGUEIRA, M. C. S. **Experimentação agronômica I: conceitos, planejamento e análise estatística**. Piracicaba, 479 p. 2007.
+<br><br>
+ZIMMERMANN, F. J. P. **Estatística aplicada à pesquisa agrícola**. Santo Antônio de Goiás: Embrapa Arroz e Feijão, 2004. 402p.
 
