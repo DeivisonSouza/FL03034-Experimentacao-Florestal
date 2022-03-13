@@ -118,7 +118,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 * Compreender as principais estruturas de dados na linguagem R e aprender a criá-las usando as funções do R-base;
 * Realizar indexação de diferentes estruturas de dados no R; e
 * Compreender e desenvolver suas próprias funções no R.
-<!-- * Compreender e aprender a usar estruturas de controle no R; -->
+<!-- * Compreender e aprender a usar estruturas de controle; -->
 <!-- * Criar gráficos usando funções de pacotes do R-base; e -->
 <!-- * Realizar uma análise exploratória de dados. -->
 ---
