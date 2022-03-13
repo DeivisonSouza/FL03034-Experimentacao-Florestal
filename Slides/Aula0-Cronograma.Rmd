@@ -183,14 +183,14 @@ p <- calendR::calendR(year = 2022,
         bg.img = "",
         text = c(
           "Introdução à\n experimentação", 
-          "Introdução ao R",
+          "Análise \nExploratória\n de Dados",
           "ANOVA - DIC",
           "ANOVA - DBC",
-          "Revisão\n (Avaliação 1)",
+          "Introdução ao R",
           "Avaliação 1",
           "ANOVA - DQL",
           "Testes de\n comparação\n de médias",
-          "Ensaio Fatorial",
+          "Experimentos em \nEsquema Fatorial",
           "Correlação e\n Regressão Linear",
           "Revisão\n (Avaliação 2)",
           "Avaliação 2"),
@@ -224,7 +224,7 @@ p + theme(legend.key.size = unit(2, 'cm'),
 
 7 - Testes de comparação de médias; 
 
-8 - Ensaios Fatoriais;
+8 - Experimentos em Esquema Fatorial;
 
 9 - Análise de correlação e regressão linear; e
 
