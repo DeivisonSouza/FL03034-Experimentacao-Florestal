@@ -2,7 +2,7 @@
 <!-- README.md is generated from README.Rmd. Please edit that file.. -->
 <!-- badges: start -->
 <!-- badges: end -->
-<!-- Emprestei a função list_github_files() da Curso-R.. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
+<!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
 
 # Seja bem vindo(a)! :deciduous\_tree: :smiley: :grin:
 
@@ -54,7 +54,7 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/Aula2-AED-Revisao.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html>               |
 | Slides/Aula3-DIC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html>                       |
 | Slides/Aula3-Manipulacao-Dados-dplyr.html   | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-Manipulacao-Dados-dplyr.html>   |
-| Slides/Aula5-DBC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-DBC.html>                       |
+| Slides/Aula4-DBC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html>                       |
 | Slides/Aula5-IntroducaoR.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-IntroducaoR.html>               |
 | Slides/Aula6-DQL.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html>                       |
 | Slides/Aula7-Teste-Comparacao-Medias.html   | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html>   |
