@@ -96,7 +96,7 @@ layout: true
 <br>
 1 - Introdução à experimentação; 
 
-2 - Análise Exploratória de Dados;
+2 - Análise exploratória de dados;
 
 3 - Delineamento inteiramente casualizado - DIC; 
 
@@ -106,7 +106,7 @@ layout: true
 
 6 - Testes de comparação de médias; 
 
-7 - Experimentos em Esquema Fatorial;
+7 - Experimentos em esquema fatorial;
 
 8 - Análise de correlação e regressão linear; e
 
