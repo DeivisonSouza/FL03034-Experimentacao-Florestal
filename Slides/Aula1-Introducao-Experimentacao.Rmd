@@ -94,7 +94,7 @@ layout: true
 
 .shadow3[
 <br>
-1 - Introdução à experimentação; 
+**1 - Introdução à experimentação;**
 
 2 - Análise exploratória de dados;
 
