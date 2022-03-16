@@ -300,7 +300,7 @@ data %>%
 ```{r}
 # Usando funções da linguagem R
 mean(data$D)
-sd(data$V)
+sd(data$D)
 var(data$H)
 table(data$QF)
 ```
@@ -596,7 +596,7 @@ df %>%
 ```{r echo=FALSE, eval=T}
 df <- data.frame(
   Variável = c(
-    "Danos da exploração florestal",
+    "Biomassa",
     "Mês de observação",
     "Diâmetro do coleto",
     "Nome botânico",
