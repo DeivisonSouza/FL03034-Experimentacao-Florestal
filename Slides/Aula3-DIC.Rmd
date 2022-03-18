@@ -488,7 +488,6 @@ $\bar{y}_1$, $\bar{y}_2$, $\bar{y}_3$,..., $\bar{y}_I$ = Média aritmética dos 
 - A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
 <br><br>
 
-**Variação Total** = É a variação da variável resposta entre as unidades experimentais (ou parcelas). É representada pela Soma de Quadrados Totais (SQ<sub>Tot.</sub>) (NOGUEIRA, 2007).
 ]
 
 ---
