@@ -1,0 +1,328 @@
+---
+title: "Experimentação Florestal (FL03034 - EF)"
+subtitle: "Análise de Experimentos com Linguagem R"
+author: "Prof. Dr. Deivison Venicio Souza"
+institute: "Universidade Federal do Pará (UFPA)"
+date: 
+encoding: "UTF-8"
+header-includes: 
+   - \usepackage{xcolor}
+   - \usepackage{amsmath}
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - assets/sydney-fonts.css
+      - assets/slide-title/sydney-title.css
+    self_contained: false
+    seal: false
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      highlightLanguage: ["r", "css", "yaml"]
+      ratio: '16:9'
+      navigation:
+        scroll: false
+---
+class: title-slide, center, middle
+background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
+background-position: 84% 90%, 95% 90%
+background-size: 220px, 90px, cover
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	error = FALSE,
+	fig.align = "center",
+	fig.showtext = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	collapse = TRUE,
+	dpi = 600
+)
+```
+
+```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
+library(ggplot2)
+library(dplyr)
+library(ggimage)
+library(kableExtra)
+library(readr)
+```
+
+```{r xaringan-logo, echo=FALSE}
+library(xaringanExtra)
+use_logo(
+  image_url = "fig/slide-title/ufpa.png",
+  position = css_position(top = ".8em", right = "-.5em"),
+  width = "140px",
+  height = "140px"
+)
+
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+xaringanExtra::use_editable(expires = 1)
+#.can-edit[Você pode editar este título de slide]
+#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
+use_clipboard()
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "html",
+           hyperlink = FALSE,
+           dashed = FALSE)
+(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
+```
+
+```{r icon, echo=FALSE}
+#remotes::install_github("mitchelloharawild/icons")
+#remotes::install_github('emitanaka/anicon')
+#library(icons)
+#download_fontawesome()
+#download_simple_icons()
+```
+
+```{r customDT, echo=F}
+CustomDT <- function(data){
+  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
+                         style = "default",
+                         class = "display", width = '250px',
+                         caption = '',
+     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          "}")
+       ) 
+     )
+}
+```
+
+```{r customkbl, echo=F}
+Customkbl <- function(data){
+  data %>%
+    kbl() %>%
+    kable_classic(full_width = F, html_font = "Cambria") %>% 
+  kable_paper(bootstrap_options = "striped", full_width = F) %>% 
+  kable_styling(bootstrap_options = "striped", font_size = 18, position = "center") %>% 
+  row_spec(1:4, color = 'black', background = 'white') %>% 
+  row_spec(0, color = 'white', background = 'black') %>% 
+  column_spec(1, color = 'white', background = 'black')
+}
+```
+
+
+<!-- title-slide -->
+# Experimentação Florestal <br> (FL03034 - EF)
+<br>
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise de Experimentos com <br> Linguagem R `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
+<br>
+##### 1ª versão: 25/março/2022 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R</div>
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+<br>
+1 - Introdução à experimentação; 
+
+2 - Análise exploratória de dados;
+
+3 - Delineamento inteiramente casualizado - DIC;
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+6 - Testes de comparação de médias; 
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+**9 - Análise de experimentos com linguagem R**.
+
+]
+
+---
+
+## Objetivos
+<br><br>
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Conhecer alguns dos principais pacotes disponíveis na linguagem R para análise de dados experimentais;
+* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; e
+* Construir visualizações informativas dos resultados da análise estatística dos experimentos.
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font90[
+**Parte 1 - Estudos de casos de experimentos**
+
+[1 - Competição de progênies <br> (Pimentel-Gomes; Garcia, 2002; pg. 28) - Experimento em DIC](#dic)
+
+[2 - Competição de procedências florestais <br> (Pimentel-Gomes; Garcia, 2002; pg. 37) - Experimento em DBC](#dbc)
+
+[3 - Competição de produção de frutos de cacau <br> (Dias e Barros, 2009; pg. 247) - Experimento em DQL](#dql)
+
+[4 - XXXXXX <br> - Experimento em esquema fatorial (2 x 2)](#fat)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font90[
+**Parte 2 - Pacotes disponíveis no R**
+
+[1 - Pacote ExpDes.pt](#expdes)
+
+[2 - Pacote agricolae](#agri)
+
+[3 - Pacote AgroR](#agror)
+
+]
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, left
+background-image: url(fig/class8/secao.png)
+background-size: cover
+
+<br><br><br>
+
+.right[.font130[**.green[Parte 1] <br> Estudos de casos <br> de experimentos**]]
+
+<br><br>
+
+.center[.font130[**1 - Competição de progênies (DIC)** <br> (Pimentel-Gomes; Garcia, 2002; pg. 28)]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R</div>
+
+---
+name: anvdic
+## Análise de Experimentos em DIC com R
+<br>
+
+### .font90[Estudo de Caso - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+.font90[
+
+.center[**Sobre o experimento...**]
+Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. (Consulte Pimentel-Gomes; Garcia, 2002; pg. 28)
+<br><br>
+
+(**Lembre-se**: A resolução manual da ANOVA DIC e do Teste de Tukey foi apresentada nas aulas antecedentes.)
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+### .font90[Estudo de Caso - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+- Originalmente, no livro os dados estão organizados no seguinte formato:
+
+```{r, echo=F, eval=T}
+data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+data %>% Customkbl
+```
+
+.font90[**Importante**: para aplicar as funções do R-base e outras funções de demais pacotes é necessário converter os dados para o formato longo (empilhar os dados!)]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+- **Passo 1**: Carregar o conjunto de dados para a sessão corrente do RStudio
+
+`r anicon::faa("hand-point-right", animate="horizontal")` Use: Função `read_csv()` do pacote **readr**
+
+.pull-top[
+```{r tibble, echo=T, eval=T}
+(data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br><br>
+
+.pull-top[
+- **Vamos analisar esses dados experimentais...**
+- **Siga a sequência de análise proposta a seguir:**
+
+a) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
+
+b) Realizar a ANOVA do experimento em DIC.
+
+c) Realizar os testes de comparações de médias (Tukey e Duncan).
+]
+
+---
+
+
+
+---
+
+## Referências
+<br><br>
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+<br><br>
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+<br><br>
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+
+<!--Slide XX -->
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+<br><br><br><br><br><br>
+
+**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+
+**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+
