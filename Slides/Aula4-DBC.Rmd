@@ -416,7 +416,7 @@ name: fv
 .shadow3[
 .font70[
 .center[**Imagine a situação...**]
-Um experimento de competição de progênies foi implantado em região com gradiente de fertilidade de solo com 6 tratamentos (progênies) e 4 blocos. Considere, por exemplo, que as parcelas experimentais que receberam a progênie P3 estejam todas situadas (ou sua maior parte) na região de maior fertilidade do solo. No final do experimento, obteve-se a média de DAP para as diferentes progênies e encontrou-se melhor resposta para progênie P3. Nessas condições, você estaria seguro para afirma que a progênie P3 é aquela com melhor desenvolvimento? Ou o melhor desenvolvimento da P3 poderia estar associado ao fato de que suas parcelas estavam na região de maior fertilidade do solo?
+Um experimento de competição de progênies foi implantado em região com gradiente de fertilidade de solo com 6 tratamentos (progênies) e 4 blocos. Considere, por exemplo, que as parcelas experimentais que receberam a progênie P3 estejam todas situadas (ou sua maior parte) na região de maior fertilidade do solo. No final do experimento, obteve-se a média de DAP para as diferentes progênies e encontrou-se **melhor resposta para progênie P3**. Nessas condições, .blue[você estaria seguro para afirma que a progênie P3 é aquela melhor adaptada às condições ambientais?] .orange[Ou o melhor desenvolvimento da P3 poderia estar associado ao fato de que suas parcelas estavam na região de maior fertilidade do solo?]
 ]
 ]
 ]
