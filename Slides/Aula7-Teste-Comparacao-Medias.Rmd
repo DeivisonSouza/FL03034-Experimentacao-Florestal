@@ -114,7 +114,7 @@ CustomDT <- function(data){
 CustomDT2 <- function(data){
   data %>% DT::datatable(editable = 'cell', rownames = FALSE,
                          style = "default",
-                         class = "compact", width = '450px',
+                         class = "compact", width = '500px',
                          caption = '',
      options=list(pageLength = 24, dom = 't', autoWidth = F,
                   columnDefs = list(list(className = 'dt-center', targets = "_all")),
@@ -169,25 +169,21 @@ layout: true
 <br>
 1 - Introdução à experimentação; 
 
-2 - Princípios básicos da experimentação; 
+2 - Análise exploratória de dados;
 
-3 - Fases da pesquisa experimental; 
+3 - Delineamento inteiramente casualizado - DIC;
 
-4 - Delineamento Inteiramente Casualizado - DIC; 
+4 - Delineamento em blocos ao acaso - DBC;
 
-5 - Delineamento em Blocos Casualizados - DBC;
+5 - Delineamento em quadrado latino - DQL;
 
-6 - Delineamento em Quadrado Latino - DQL;
+**6 - Testes de comparações de médias**;
 
-.orange[7 - Testes de comparação de médias]; 
+7 - Experimentos em esquema fatorial;
 
-8 - Ensaios Fatoriais;
+8 - Análise de correlação e regressão linear; e
 
-9 - Análise de correlação linear simples;
-
-10 - Análise de regressão linear simples e múltipla; e
-
-11 - Introdução à linguagem R para análise de experimentos.
+9 - Análise de experimentos com linguagem R.
 
 ]
 
@@ -881,7 +877,7 @@ $$
 ## Teste de comparações de médias de Tukey
 <br>
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
-<br>
+
 .font90[
 **Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
 ]
@@ -1021,7 +1017,7 @@ df6 %>%
 ---
 
 ## Teste de comparações de médias de Tukey
-<br>
+
 ### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
 <br>
 .font90[
