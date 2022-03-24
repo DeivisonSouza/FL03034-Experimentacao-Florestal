@@ -7,7 +7,7 @@
     <script src="Aula8-Analise-Experimentos-com-R_files/header-attrs-2.7/header-attrs.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c7b275136e9045939483d0495c9917dc","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x966b924198643ddab8eb250b66d12a4","expires":1}</script>
     <script src="Aula8-Analise-Experimentos-com-R_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -100,7 +100,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 20/março/2022) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 24/março/2022) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -149,7 +149,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-left-4[
 .font90[
-**Parte 1 - Estudos de casos de experimentos**
+**Parte 1 - Pacotes disponíveis no R**
+
+[1 - Pacote agricolae](#agri)
+
+[2 - Pacote ExpDes.pt](#expdes)
+
+[3 - Pacote AgroR](#agror)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font90[
+**Parte 2 - Estudos de casos de experimentos**
 
 [1 - Competição de progênies &lt;br&gt; (Pimentel-Gomes; Garcia, 2002; pg. 28) - Experimento em DIC](#dic)
 
@@ -158,20 +172,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [3 - Competição de produção de frutos de cacau &lt;br&gt; (Dias e Barros, 2009; pg. 247) - Experimento em DQL](#dql)
 
 [4 - XXXXXX &lt;br&gt; - Experimento em esquema fatorial (2 x 2)](#fat)
-
-]
-]
-
-.pull-right-4[
-.pull-down[
-.font90[
-**Parte 2 - Pacotes disponíveis no R**
-
-[1 - Pacote ExpDes.pt](#expdes)
-
-[2 - Pacote agricolae](#agri)
-
-[3 - Pacote AgroR](#agror)
 
 ]
 ]
@@ -212,7 +212,7 @@ name: anvdic
 Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. (Consulte Pimentel-Gomes; Garcia, 2002; pg. 28)
 &lt;br&gt;&lt;br&gt;
 
-(**Lembre-se**: A resolução manual da ANOVA DIC e do Teste de Tukey foi apresentada nas aulas antecedentes.)
+(**Lembre-se**: A resolução manual da ANOVA DIC e do Teste de Tukey deste experimento foi apresentada nas aulas precedentes.)
 
 ]
 
@@ -298,20 +298,52 @@ Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi cond
 &lt;/tbody&gt;
 &lt;/table&gt;
 
-.font90[**Importante**: para aplicar as funções do R-base e outras funções de demais pacotes é necessário converter os dados para o formato longo (empilhar os dados!)]
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+- **Vamos analisar esses dados experimentais...**
+
+.shadow1a[
+## .font70[**Siga a seguinte sequência de análise...**]
+&lt;br&gt;
+
+1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
+
+2) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente `\(\alpha\)` = 0,01 e 0,05).
+
+3) Realizar os testes de comparações de médias (Tukey e Duncan).
+&lt;br&gt;&lt;br&gt;
+
+Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
+]
 
 ---
 
 ## Análise de Experimentos em DIC com R
+&lt;br&gt;
 
-- **Passo 1**: Carregar o conjunto de dados para a sessão corrente do RStudio
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 
-<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Use: Função `read_csv()` do pacote **readr**
+.pull-left-10[
+- **Passo 1** - Carregar o conjunto de dados...
 
-.pull-top[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Use**: a função .orange[**read_csv()**] do pacote **readr** para carregar os dados...
+
+&lt;br&gt;&lt;br&gt;
+
+.font90[**Importante**: para aplicar as funções do R-base e outras funções é necessário converter os dados para o formato longo (empilhar os dados!)]
+
+]
+
+--
+
+.pull-right-10[
 
 ```r
-(data &lt;- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
+library(readr)
+(data &lt;- read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
 ## # A tibble: 40 x 3
 ##    Progenie Rep       d
 ##    &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;
@@ -332,20 +364,68 @@ Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi cond
 ---
 
 ## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 &lt;br&gt;&lt;br&gt;
 
 .pull-top[
-- **Vamos analisar esses dados experimentais...**
-- **Siga a sequência de análise proposta a seguir:**
-
-a) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
-
-b) Realizar a ANOVA do experimento em DIC.
-
-c) Realizar os testes de comparações de médias (Tukey e Duncan).
+- **Passo 2** - Obter um resumo estatístico por grupo...
+  - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
+  - Vamos usar a função .orange[**stby()**] do pacote **summarytools**.
+  - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
 ]
 
 ---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-1[
+- **Passo 2** - Obter um resumo estatístico por grupo...
+
+
+```r
+library(summarytools)
+stby(data = data, 
+     INDICES = data$Progenie, 
+     FUN = descr, 
+     stats = "common", # c("mean", "sd")
+     transpose = TRUE)
+```
+
+.font70[
+**Tutorial**: https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html
+]
+
+]
+
+--
+
+.pull-right-2[
+
+```
+## Descriptive Statistics  
+## d by Progenie  
+## Data Frame: data  
+## N: 4  
+## 
+##              Mean   Std.Dev     Min   Median     Max   N.Valid   Pct.Valid
+## --------- ------- --------- ------- -------- ------- --------- -----------
+##        P1   14.55      2.15   11.70    15.05   16.40      4.00      100.00
+##       P10    8.78      0.56    8.20     8.80    9.30      4.00      100.00
+##        P2   14.30      0.36   13.80    14.40   14.60      4.00      100.00
+##        P3   14.22      1.79   11.60    14.85   15.60      4.00      100.00
+##        P4   14.12      0.93   13.10    14.15   15.10      4.00      100.00
+##        P5   13.00      2.42   10.50    12.80   15.90      4.00      100.00
+##        P6   12.43      2.00   10.70    12.00   15.00      4.00      100.00
+##        P7   12.05      1.97   10.30    11.80   14.30      4.00      100.00
+##        P8   11.68      1.65   10.20    11.65   13.20      4.00      100.00
+##        P9    9.00      0.52    8.50     9.00    9.50      4.00      100.00
+```
+]
 
 
 

@@ -182,7 +182,21 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-left-4[
 .font90[
-**Parte 1 - Estudos de casos de experimentos**
+**Parte 1 - Pacotes disponíveis no R**
+
+[1 - Pacote agricolae](#agri)
+
+[2 - Pacote ExpDes.pt](#expdes)
+
+[3 - Pacote AgroR](#agror)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font90[
+**Parte 2 - Estudos de casos de experimentos**
 
 [1 - Competição de progênies <br> (Pimentel-Gomes; Garcia, 2002; pg. 28) - Experimento em DIC](#dic)
 
@@ -191,20 +205,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [3 - Competição de produção de frutos de cacau <br> (Dias e Barros, 2009; pg. 247) - Experimento em DQL](#dql)
 
 [4 - XXXXXX <br> - Experimento em esquema fatorial (2 x 2)](#fat)
-
-]
-]
-
-.pull-right-4[
-.pull-down[
-.font90[
-**Parte 2 - Pacotes disponíveis no R**
-
-[1 - Pacote ExpDes.pt](#expdes)
-
-[2 - Pacote agricolae](#agri)
-
-[3 - Pacote AgroR](#agror)
 
 ]
 ]
@@ -245,7 +245,7 @@ name: anvdic
 Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. (Consulte Pimentel-Gomes; Garcia, 2002; pg. 28)
 <br><br>
 
-(**Lembre-se**: A resolução manual da ANOVA DIC e do Teste de Tukey foi apresentada nas aulas antecedentes.)
+(**Lembre-se**: A resolução manual da ANOVA DIC e do Teste de Tukey deste experimento foi apresentada nas aulas precedentes.)
 
 ]
 
@@ -264,39 +264,100 @@ data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
 data %>% Customkbl
 ```
 
-.font90[**Importante**: para aplicar as funções do R-base e outras funções de demais pacotes é necessário converter os dados para o formato longo (empilhar os dados!)]
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+- **Vamos analisar esses dados experimentais...**
+
+.shadow1a[
+## .font70[**Siga a seguinte sequência de análise...**]
+<br>
+
+1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
+
+2) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente $\alpha$ = 0,01 e 0,05).
+
+3) Realizar os testes de comparações de médias (Tukey e Duncan).
+<br><br>
+
+Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
+]
 
 ---
 
 ## Análise de Experimentos em DIC com R
+<br>
 
-- **Passo 1**: Carregar o conjunto de dados para a sessão corrente do RStudio
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 
-`r anicon::faa("hand-point-right", animate="horizontal")` Use: Função `read_csv()` do pacote **readr**
+.pull-left-10[
+- **Passo 1** - Carregar o conjunto de dados...
 
-.pull-top[
-```{r tibble, echo=T, eval=T}
-(data <- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
+`r anicon::faa("hand-point-right", animate="horizontal")` **Use**: a função .orange[**read_csv()**] do pacote **readr** para carregar os dados...
+
+<br><br>
+
+.font90[**Importante**: para aplicar as funções do R-base e outras funções é necessário converter os dados para o formato longo (empilhar os dados!)]
+
+]
+
+--
+
+.pull-right-10[
+```{r, echo=T, eval=T}
+library(readr)
+(data <- read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
 ```
 ]
 
 ---
 
 ## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 <br><br>
 
 .pull-top[
-- **Vamos analisar esses dados experimentais...**
-- **Siga a sequência de análise proposta a seguir:**
-
-a) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
-
-b) Realizar a ANOVA do experimento em DIC.
-
-c) Realizar os testes de comparações de médias (Tukey e Duncan).
+- **Passo 2** - Obter um resumo estatístico por grupo...
+  - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
+  - Vamos usar a função .orange[**stby()**] do pacote **summarytools**.
+  - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
 ]
 
 ---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-1[
+- **Passo 2** - Obter um resumo estatístico por grupo...
+
+```{r tools, echo=T, eval=F}
+library(summarytools)
+stby(data = data, 
+     INDICES = data$Progenie, 
+     FUN = descr, 
+     stats = "common", # c("mean", "sd")
+     transpose = TRUE)
+```
+
+.font70[
+**Tutorial**: https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html
+]
+
+]
+
+--
+
+.pull-right-2[
+```{r ref.label="tools", echo=F, eval=T, collapse=T}
+```
+]
 
 
 
