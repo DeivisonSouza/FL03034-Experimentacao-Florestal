@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd.. Please edit that file.. -->
+<!-- README.md is generated from README.Rmd.. Please edit that file. -->
 <!-- badges: start -->
 <!-- badges: end -->
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!!-->
@@ -49,15 +49,18 @@ o ano de 2023.
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide                                       | Link                                                                                                           |
-|:--------------------------------------------|:---------------------------------------------------------------------------------------------------------------|
-| Slides/Aula0-Cronograma.html                | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html>                |
-| Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html> |
-| Slides/Aula2-AED-Revisao.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html>               |
-| Slides/Aula3-DIC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html>                       |
-| Slides/Aula4-DBC.html                       | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html>                       |
-| Slides/Aula5-Introducao-R.html              | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html>              |
-| Slides/Aula5-Manipulacao-Dados-dplyr.html   | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Manipulacao-Dados-dplyr.html>   |
+| Slide                                        | Link                                                                                                            |
+|:---------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
+| Slides/Aula0-Cronograma.html                 | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html>                 |
+| Slides/Aula1-Introducao-Experimentacao.html  | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html>  |
+| Slides/Aula2-AED-Revisao.html                | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html>                |
+| Slides/Aula3-DIC.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html>                        |
+| Slides/Aula4-DBC.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html>                        |
+| Slides/Aula5-Introducao-R.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html>               |
+| Slides/Aula5-Manipulacao-Dados-dplyr.html    | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Manipulacao-Dados-dplyr.html>    |
+| Slides/Aula6-DQL.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html>                        |
+| Slides/Aula7-Teste-Comparacao-Medias.html    | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html>    |
+| Slides/Aula8-Analise-Experimentos-com-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
 
 # Facilitador :deciduous_tree:
 
