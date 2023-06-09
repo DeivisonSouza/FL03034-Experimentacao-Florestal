@@ -53,10 +53,16 @@ use_logo(
 ```
 
 ```{r icon, echo=FALSE}
+# remotes::install_github('emitanaka/anicon')
 #remotes::install_github("mitchelloharawild/icons")
+#remotes::install_github("gadenbuie/ggweekly")
 #library(icons)
 #download_fontawesome()
 #download_simple_icons()
+library(ggweekly)
+library(showtext)
+library(anicon)
+library(icons)
 ```
 
 <!-- title-slide -->
@@ -150,58 +156,73 @@ knitr::include_graphics('fig/ORCID.png')
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+<br>
 
-```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17}
-library(calendR)
-dates <- seq(as.Date("2022-03-01"), as.Date("2022-03-31"), by = "1 day")
-events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA)
-events[c(8)] <- "Dia da Mulher"
-
-p <- calendR::calendR(year = 2022,
-        month = 3,
-        start = "M",
-        title = "Março (Ano 2022)",
-        title.size = 50, 
-        subtitle.size = 20, 
-        title.col = 2,  
-        subtitle = "",   
-        subtitle.col = 3,
-        weeknames.size = 15,
-        special.days = events,
-        legend.pos = "bottom",
-        special.col = c("lightgreen", rgb(1, 0, 0, 0.1)),
-        col = "black",                  
-        lwd = 1,
-        lty = 1,
-        font.family = "mono",       
-        font.style = "bold",
-        weeknames.col = "gray30",
-        months.col = "gray30",
-        days.col = 4, 
-        day.size = 18,
-        bg.img = "",
-        text = c(
-          "Introdução à\n experimentação", 
-          "Análise \nExploratória\n de Dados",
-          "ANOVA - DIC",
-          "ANOVA - DBC",
-          "Introdução ao R",
-          "Avaliação 1",
-          "ANOVA - DQL",
-          "Testes de\n comparação\n de médias",
-          "Experimentos em \nEsquema Fatorial",
-          "Correlação e\n Regressão Linear",
-          "Revisão\n (Avaliação 2)",
-          "Avaliação 2"),
-        text.pos = c(14:19, 21:26), 
-        text.size = 12,
-        text.col = 1)
-
-p + theme(legend.key.size = unit(2, 'cm'),
-          legend.text = element_text(size=30))
-
+```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class0/Junho.jpg")
 ```
+
+---
+
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+<br>
+
+```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class0/Julho.jpg")
+```
+
+
+<!-- ```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17} -->
+<!-- library(calendR) -->
+<!-- #dates <- seq(as.Date("2023-06-01"), as.Date("2023-06-31"), by = "day") -->
+<!-- #events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA) -->
+<!-- #events[c(8)] <- "Dia da Mulher" -->
+
+<!-- p <- calendR::calendR(year = 2023, -->
+<!--         month = 6, -->
+<!--         start = "M", -->
+<!--         title = "Junho (Ano 2023)", -->
+<!--         title.size = 50, -->
+<!--         subtitle.size = 20, -->
+<!--         title.col = 2, -->
+<!--         subtitle = "", -->
+<!--         subtitle.col = 3, -->
+<!--         weeknames.size = 15, -->
+<!--         #special.days = events, -->
+<!--         legend.pos = "bottom", -->
+<!--         special.col = c("lightgreen", rgb(1, 0, 0, 0.1)), -->
+<!--         col = "black", -->
+<!--         lwd = 1, -->
+<!--         lty = 1, -->
+<!--         font.family = "mono", -->
+<!--         font.style = "bold", -->
+<!--         weeknames.col = "gray30", -->
+<!--         months.col = "gray30", -->
+<!--         days.col = 4, -->
+<!--         day.size = 18, -->
+<!--         bg.img = "", -->
+<!--         text = c( -->
+<!--           "Introdução à\n experimentação", -->
+<!--           "Análise \nExploratória\n de Dados", -->
+<!--           # "ANOVA - DIC", -->
+<!--           # "ANOVA - DBC", -->
+<!--           # "Introdução ao R", -->
+<!--           # "Avaliação 1", -->
+<!--           # "ANOVA - DQL", -->
+<!--           # "Testes de\n comparação\n de médias", -->
+<!--           # "Experimentos em \nEsquema Fatorial", -->
+<!--           # "Correlação e\n Regressão Linear", -->
+<!--           # "Revisão\n (Avaliação 2)", -->
+<!--           "Avaliação 2"), -->
+<!--         text.pos = c(1,2,3), -->
+<!--         text.size = 12, -->
+<!--         text.col = 1) -->
+
+<!-- p + theme(legend.key.size = unit(2, 'cm'), -->
+<!--           legend.text = element_text(size=30)) -->
+
+<!-- ``` -->
 
 <!-- Slide 3 -->
 ---
@@ -241,18 +262,6 @@ p + theme(legend.key.size = unit(2, 'cm'),
 Aulas teóricas e práticas presenciais, realização de atividades complementares e avaliações de desempenho.
 
 --
-<br><br>
-
-- **Plataforma de videoconferência** (*Google Meeting*)
-
-**Palestras**: Videoconferências com profissionais convidados para palestrar sobre temas relacionados à Experimentação.
-
-.red[**Atenção**]`r anicon::faa("exclamation-triangle", colour="red")`: Formação de grupos (Duas perguntas no mínimo)
-
----
-
-## Estratégias e Ferramentas de Ensino
-<br>
 
 - **Sala de aula virtual** (*Google Classroom*)
 
@@ -290,7 +299,7 @@ Avaliações teóricas presenciais.
 
 - **Participação** 
 
-O nível de participação e interação nas aulas presenciais poderá ser critério para definir uma pontuação extra nas avaliações teóricas.
+.red[**Atenção**]`r anicon::faa("exclamation-triangle", colour="red")`: O nível de participação e interação nas aulas presenciais poderá ser critério para definir uma pontuação extra nas avaliações teóricas.
 
 <!-- Slide 9 -->
 ---
@@ -329,7 +338,7 @@ O plano de ensino da disciplina pode ser acessado em:
 
 <!-- Slide 11 -->
 ---
-## Reprovação
+## Reprovação `r anicon::faa("exclamation-triangle", colour="red")`
 <br>
 Conforme o Regimento Geral da UFPA, será considerado reprovado o discente que:
 
@@ -339,17 +348,20 @@ Conforme o Regimento Geral da UFPA, será considerado reprovado o discente que:
 
 <!-- Slide 12 -->
 ---
-## Resoluções da UFPA
-<br>
+## Normativas da UFPA
 
-- [Resolução  n. 5.453, de 14 de dezembro de 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf)
+- [Regimento geral da UFPA de 29/12/2006](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://www.ufpa.br/images/docs/regimento_geral.pdf)
 
-Estabelece o retorno pleno das atividades acadêmicas presenciais e revoga a Resolução nº 5.294, de 21 de agosto de 2020.
+Disciplina os aspectos gerais e comuns da estruturação e do funcionamento dos órgãos e serviços da Universidade Federal do Pará (UFPA), cujo Estatuto regulamenta. 
 
-- [Resolução n. 5.419, de 23 de setembro de 2021](http://proeg.ufpa.br/images/Artigos/Academico/Calendarios/Resolucao-n-5419-2021-CONSEPE-Aprova-o-calendario-academico-para-o-ano-letivo-de-2022.pdf)
+- [Resolução n. 4.399, de 14 de maio de 2013](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/http://www.proeg.ufpa.br/images/Artigos/Academico/Downloads/Regulamento_de_Graduacao.pdf)
 
-Aprova o Calendário Acadêmico da Universidade Federal do Pará (UFPA), para o
-ano de 2022.
+Aprova o Regulamento do Ensino de Graduação da Universidade Federal do Pará.
+
+
+- [Resolução n. 5.550, de 25 de agosto de 2022](chrome-extension://efaidnbmnnnibpcajpcglclefindmkaj/https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2022/5550%20Resolu%C3%A7%C3%A3o%20Calend%C3%A1rio%20Acad%C3%AAmico%202023.pdf)
+
+Aprova o Calendário Acadêmico da Universidade Federal do Pará (UFPA), para o ano de 2023.
 
 <!-- Slide 13 -->
 ---
@@ -383,7 +395,7 @@ PIMENTEL-GOMES, F. **Curso de estatística experimental**. Piracicaba: FEALQ, 20
 
 .pull-right-4[
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('https://editoraufv.cdn.plataformaneo.com.br/produto/multifotos/hd/curso-de-estatistica-experimental-fealq14889163.jpg')
+knitr::include_graphics('https://editoraufv.cdn.plataformaneo.com.br/produto/20221019094459_2660997340_D.jpg')
 ```
 
 ]
@@ -402,4 +414,3 @@ DIAS, L. A. dos S.; BARROS, W. S. **Biometria experimental**. Viçosa, MG: Supre
 NOGUEIRA, M. C. S. **Experimentação agronômica I: conceitos, planejamento e análise estatística**. Piracicaba, 479 p. 2007.
 <br><br>
 ZIMMERMANN, F. J. P. **Estatística aplicada à pesquisa agrícola**. Santo Antônio de Goiás: Embrapa Arroz e Feijão, 2004. 402p.
-
