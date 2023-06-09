@@ -48,11 +48,13 @@ knitr::opts_chunk$set(
 
 ```{r packages, include=FALSE}
 # remotes::install_github("dill/emoGG")
+# install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-1.462.tar.gz", repos = NULL)
 library(ggplot2)
 library(dplyr)
 library(ggimage)
 library(kableExtra)
 library(readr)
+library(labestData)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -143,16 +145,15 @@ Customkbl <- function(data){
 
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
+<br>
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Quadrado <br> Latino `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
-## Delineamento em <br> Quadrado Latino `r anicon::faa("pagelines", animate="horizontal", colour="green")`
-
-#### **Prof. Dr. Deivison Venicio Souza**
-##### Universidade Federal do Pará (UFPA) 
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### 1ª versão: 06/setembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
-##### Altamira, Pará
+##### 1ª versão: 09/setembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
 
 ---
 
@@ -168,25 +169,21 @@ layout: true
 <br>
 1 - Introdução à experimentação; 
 
-2 - Princípios básicos da experimentação; 
+2 - Análise exploratória de dados;
 
-3 - Fases da pesquisa experimental; 
+3 - Delineamento inteiramente casualizado - DIC;
 
-4 - Delineamento Inteiramente Casualizado - DIC; 
+**4 - Delineamento em blocos ao acaso - DBC;**
 
-5 - Delineamento em Blocos Casualizados - DBC;
+5 - Delineamento em quadrado latino - DQL;
 
-.orange[6 - Delineamento em Quadrado Latino - DQL];
+6 - Testes de comparação de médias; 
 
-7 - Testes de comparação de médias; 
+7 - Experimentos em esquema fatorial;
 
-8 - Ensaios Fatoriais;
+8 - Análise de correlação e regressão linear; e
 
-9 - Análise de correlação linear simples;
-
-10 - Análise de regressão linear simples e múltipla; e
-
-11 - Introdução à linguagem R para análise de experimentos.
+9 - Análise de experimentos com linguagem R.
 
 ]
 
