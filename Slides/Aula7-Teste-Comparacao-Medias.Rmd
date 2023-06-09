@@ -149,7 +149,7 @@ Customkbl <- function(data){
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 <br>
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Testes de Comparações <br> de Médias `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Testes de Comparações `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> de Médias 
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)

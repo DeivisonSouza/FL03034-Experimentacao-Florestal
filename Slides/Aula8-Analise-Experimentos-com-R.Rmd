@@ -48,13 +48,11 @@ knitr::opts_chunk$set(
 
 ```{r packages, include=FALSE}
 # remotes::install_github("dill/emoGG")
-# install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-1.462.tar.gz", repos = NULL)
 library(ggplot2)
 library(dplyr)
 library(ggimage)
 library(kableExtra)
 library(readr)
-library(labestData)
 ```
 
 ```{r xaringan-logo, echo=FALSE}
@@ -128,7 +126,7 @@ Customkbl <- function(data){
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 <br>
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise de Experimentos com <br> Linguagem R `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise de Experimentos `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> com Linguagem R
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
