@@ -1213,6 +1213,48 @@ df %>%
 ---
 
 ## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados.
+<br><br>
+
+.pull-left-10[
+- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
+<br><br>
+
+```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
+```
+<br>
+
+.font80[
+As equações de SQ<sub>Tot.</sub> e SQ<sub>Trat.</sub> possuem uma parte em comum denominada **Fator em Comum** (C). Inicialmente, é razoável calcular este fator.
+]
+
+]
+
+.pull-right-10[
+- **Soma de Quadrados de Tratamentos (SQ<sub>Trat.</sub>)**
+<br><br>
+
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```
+
+- **Soma de Quadrados de Resíduos (SQR)**
+
+.pull-right-5[
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+]
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
 
 .pull-top[
 .pull-left-4[
@@ -1397,8 +1439,6 @@ DT::formatStyle(
   target = 'row',
   backgroundColor = background  
 )
-
-
 ```
 ]
 
@@ -1410,169 +1450,14 @@ DT::formatStyle(
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar as Somas de Quadrados.
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais]
 <br><br>
 
-.pull-left-10[
-- **Soma de Quadrados Total (SQ<sub>Tot.</sub>)**
-<br><br>
+$\large SQ_{Tot.} = SQ_{Trat.} + SQR$
 
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
-```
-<br>
+$\large SQ_{Tot.} = 160,98 + 77,56$
 
-.font80[
-As equações de SQ<sub>Tot.</sub> e SQ<sub>Trat.</sub> possuem uma parte em comum denominada **Fator em Comum** (C). Inicialmente, é razoável calcular este fator.
-]
-
-]
-
-.pull-right-10[
-- **Soma de Quadrados de Tratamentos (SQ<sub>Trat.</sub>)**
-<br><br>
-
-```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
-```
-
-- **Soma de Quadrados de Resíduos (SQR)**
-
-.pull-right-5[
-$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
-]
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
-
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
-<br><br>
-
-.pull-left-9[
-```{r tb2, echo=F, eval=T}
-df1 %>% 
-  Customkbl %>% 
-  row_spec(5, color = 'white', background = 'orange')
-```
-
-$$
-\begin{equation*}
-\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
-\end{equation*}
-$$
-
-]
-
-.pull-right-9[
-
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/Fator.png')
-```
-<br>
-
-$$
-C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
-$$
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
-
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
-<br><br>
-
-.pull-left-9[
-```{r tb3, echo=F, eval=T}
-data %>% 
-  Customkbl
-```
-
-$$
-\begin{equation*}
-\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
-\end{equation*}
-$$
-]
-
-.pull-right-9[
-```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
-```
-
-$$
-SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
-$$
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
-
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
-<br><br>
-
-.pull-left-9[
-```{r tb4, echo=F, eval=T}
-df1 %>% 
-  Customkbl %>% 
-  row_spec(5, color = 'white', background = 'orange')
-```
-
-$$
-\begin{equation*}
-\small
-\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
-\end{equation*}
-$$
-]
-
-
-.pull-right-9[
-
-```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
-```
-
-$$
-SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
-$$
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
-
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
-<br><br>
-
-$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
-
-$\large SQR = 238,54 - 160,98$
-
-$\large SQR = 77,56$
+$\large SQ_{Tot.} = 238,54$
 
 ---
 
@@ -1791,15 +1676,13 @@ $\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
 ---
 
 ## Delineamento Inteiramente Casualizado
-<br>
 
-.font90[
+.font80[
 ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
-<br>
 
 .pull-left-9[
 **ANOVA fator único usando a linguagem R**
-<br><br>
+<br>
 
 .blue[**1- Ordenar dados no formato longo**]
 <br>
@@ -1846,9 +1729,8 @@ data %>%
 ---
 
 ## Delineamento Inteiramente Casualizado
-<br>
 
-.font90[
+.font80[
 ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
 <br>
 
@@ -1897,6 +1779,141 @@ evidências de diferenças significativas entre as médias de DAP das progênies
 ]
 ]
 ]
+
+---
+class: center, middle
+
+**Outra abordagem para calcular as Somas de Quadrados - DIC!**
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
+<br><br>
+
+.pull-left-9[
+```{r tb2, echo=F, eval=T}
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
+
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
+\end{equation*}
+$$
+
+]
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/Fator.png')
+```
+<br>
+
+$$
+C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb3, echo=F, eval=T}
+data %>% 
+  Customkbl
+```
+
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
+\end{equation*}
+$$
+]
+
+.pull-right-9[
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
+```
+
+$$
+SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb4, echo=F, eval=T}
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
+
+$$
+\begin{equation*}
+\small
+\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
+\end{equation*}
+$$
+]
+
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```
+
+$$
+SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+<br><br>
+
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+
+$\large SQR = 238,54 - 160,98$
+
+$\large SQR = 77,56$
 
 ---
 
