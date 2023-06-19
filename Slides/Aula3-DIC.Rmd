@@ -1738,7 +1738,7 @@ data %>%
 **ANOVA fator único usando a linguagem R**
 <br><br>
 
-.blue[**2 - Realizar a ANOVA - Função aov()**]
+.blue[**2 - Ajustar modelo DIC e obter a ANOVA**]
 <br>
 
 ```{r, echo=F,eval=TRUE}
@@ -1746,7 +1746,7 @@ data_pivot <- data %>%
   tidyr::pivot_longer(
         cols = starts_with("P"),
         names_to = "Progenie",
-        values_to = "Valor",
+        values_to = "d",
         names_transform = list(Progenie = as.factor),
         values_drop_na = TRUE
     ) %>% 
@@ -1754,15 +1754,16 @@ data_pivot <- data %>%
   arrange(Progenie, Repeticao)
 ```
 
-```{r aov2, echo=T, eval=T}
-# Realizar a análise de variância
-res.aov <- aov(Valor ~ Progenie, data = data_pivot)
+```{r lm, echo=T, eval=T}
+# Ajuste do modelo
+m0 <- lm(d ~ Progenie, data = data_pivot)
 ```
 
-```{r echo=T, eval=T}
-# Resumo da análise de variância
-summary(res.aov)
+```{r aov2, echo=T, eval=T, collapse=F}
+# Quadro de ANOVA
+anova(m0)
 ```
+
 ]
 ]
 
@@ -1772,13 +1773,33 @@ summary(res.aov)
 .shadow3[
 .font80[
 .center[**Interpretação**]
-- A saída da função aov() mostra o quadro da ANOVA-fator único. A coluna Pr(>F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,01, existem
+- A função lm() é usada para ajustar o modelo DIC. A função anova() mostra o quadro da ANOVA. A coluna Pr(>F) é o p-valor da estatística F. Portanto, como o p-valor é menor que o nível de significância 0,01, existem
 evidências de diferenças significativas entre as médias de DAP das progênies.
 - Rejeita-se a hipótese de nulidade para $\alpha$ < 0,001 (altamente significativo).
 - Deve-se realizar pós-testes de comparações de médias.
 ]
 ]
 ]
+
+<!-- --- -->
+
+<!-- .pull-left-9[ -->
+<!-- .font80[## Delineamento Inteiramente Casualizado -->
+
+<!-- ### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002) -->
+<!-- <br> -->
+
+<!-- **Análise de Pressupostos da ANOVA** -->
+<!-- ] -->
+<!-- ] -->
+
+<!-- .pull-right-9[ -->
+<!-- ```{r, echo=T, eval=T, collapse=F, out.width='100%', fig.align='center', fig.cap='', dpi=600} -->
+<!-- # Avaliação dos pressupostos -->
+<!-- par(mfrow = c(2, 2)) -->
+<!-- plot(m0); layout(1) -->
+<!-- ``` -->
+<!-- ] -->
 
 ---
 class: center, middle
