@@ -489,13 +489,13 @@ slides > slide {
   margin-bottom: 10px;
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 950px;
+  max-width: 1000px;
   border-radius: 7px;
   padding-top: 0px;
   padding-left: 15px;
   padding-right: 10px;
   padding-bottom: 10px;
-  text-align: justify;
+  text-align: center;
   text-justify: inter-word;
 }
 
@@ -546,6 +546,22 @@ slides > slide {
   padding-top: -5px;
   padding-left: 15px;
   padding-right: 10px;
+  text-align: center;
+  text-justify: inter-word;
+}
+
+
+.shadow3D {
+  box-shadow: 0 10px 10px rgba(8, 112, 184, 0.7);
+  margin-top: 0.1em;
+  margin-bottom: 0.1em;
+  margin-left: 2px;
+  margin-right: 2px;
+  max-width: 1000px;
+  border-radius: 2px;
+  padding-top: -20px;
+  padding-left: 3px;
+  padding-right: 3px;
   text-align: center;
   text-justify: inter-word;
 }

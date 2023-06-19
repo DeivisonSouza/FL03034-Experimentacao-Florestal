@@ -1,8 +1,8 @@
 # Seminário Final
 
 # Carrega os pacotes necessários
+library(labestData) # Biblioteca de Dados para Aprendizado de Estatística
 library(agricolae)
-library(labestData)
 library(ExpDes.pt)
 library(AgroR)
 library(dplyr)
@@ -10,7 +10,7 @@ library(dplyr)
 # Bases do pacote labestData
 # labestData::labestDataView()
 # labestData::BarbinPg114 (hipsometros)
-
+# labestData::DemetrioEx1.4.1.4
 data <- labestData::BanzattoQd7.3.1 # Grupo 3 (DBC)
 data <- labestData::BarbinEx13      # Grupo 6 (DBC)
 data <- labestData::BarbinEx18      # Grupo 4
@@ -18,12 +18,11 @@ data <- labestData::BarbinEx8       # Grupo 2
 data <- labestData::BarbinPg177     # Grupo 7 (DBC)
 data <- labestData::StorckTb2       # Grupo 5
 data <- labestData::FariaQd11.9     # Grupo 1
-
-?max
-
-
-#labestData::DemetrioEx1.4.1.4
-
+data <- labestData::PimentelEg5.2
+# Avaliação dos pressupostos
+library(labestData)
+ls("package:labestData")
+labestData::PimentelTb12.2.1
 # Realizar a análise de variância (R-base)
 
 res.aov <- aov(alt ~ dt + bloco, data = data)     # Grupo 3
@@ -36,6 +35,9 @@ res.aov <- aov(quali ~ recip, data = data)        # Grupo 1
 
 # Resumo da análise de variância
 summary(res.aov)
+
+
+
 
 #------------------------------------------
 # Usando o pacote agricolae

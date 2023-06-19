@@ -97,12 +97,12 @@ BibOptions(check.entries = FALSE,
 CustomDT <- function(data){
   data %>% DT::datatable(editable = 'cell', rownames = FALSE,
                          style = "default",
-                         class = "display", width = '250px',
+                         class = "display", width = '400px',
                          caption = '',
-     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+     options=list(pageLength = 12, dom = 'tip', autoWidth = F,
        initComplete = htmlwidgets::JS(
           "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          paste0("$(this.api().table().container()).css({'font-size': '", "10pt", "'});"),
           "}")
        ) 
      )
@@ -126,7 +126,7 @@ Customkbl <- function(data){
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 <br>
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento Inteiramente <br> Casualizado `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento Inteiramente `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Casualizado
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
@@ -191,13 +191,17 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [2 - Principais delineamentos experimentais](#pde)
 
-[3 - DIC - Conceito](#pde)
+[3 - DIC - Conceito](#con)
 
 [4 - DIC - Principais características](#dicpc)
 
-[5 - DIC - Vantagens e Desvantagens](#dicvl)
+[5 - DIC - Vantagens e Limitações](#dicvl)
 
-[6 - DIC - Análise de Variância](#dicanova)
+[6 - DIC - Representação Genérica](#rg)
+
+[7 - DIC - Modelo Estatístico](#me)
+
+[8 - DIC - Análise de Variância](#dicaov)
 
 ]
 ]
@@ -248,7 +252,7 @@ layout: true
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Delineamento Inteiramente Casualizado</div>
 
 ---
-
+name: de
 ## Delineamento Experimental
 
 --
@@ -264,7 +268,7 @@ layout: true
 ]
 
 ---
-
+name: pde
 ## Delineamento Experimental
 <br>
 
@@ -288,7 +292,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 ]
 
 ---
-
+name: con
 ## Delineamento Inteiramente Casualizado
 
 <br><br>
@@ -382,7 +386,7 @@ knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.
 ]
 
 ---
-
+name: dicpc
 ## Delineamento Inteiramente Casualizado
 <br>
 
@@ -414,11 +418,11 @@ Por exemplo, deve haver condições homogêneas para:
 ]
 
 ---
-
+name: dicvl
 ## Delineamento Inteiramente Casualizado
 <br>
 
-### Vantagens e Desvantagens
+### Vantagens e Limitações
 
 .pull-left-2[
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
@@ -440,7 +444,7 @@ knitr::include_graphics('fig/class4/DIC-V.png')
 ]
 
 ---
-
+name: rg
 ## Delineamento Inteiramente Casualizado
 <br>
 
@@ -472,7 +476,39 @@ $\bar{y}_1$, $\bar{y}_2$, $\bar{y}_3$,..., $\bar{y}_I$ = Média aritmética dos 
 ]
 
 ---
+name: me
+## Delineamento Inteiramente Casualizado
+<br>
 
+### Modelo Estatístico - DIC
+
+Toda análise de variância pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​
+<br><br>
+
+.pull-left-9[
+$\Large Y_{ij} = m + t{_i} + e_{ij}$
+<br><br>
+.font90[
+O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 partes: uma **constante**, o **efeito do tratamento** e a **variação não controlada** (STORCK et al., 2011).
+]
+]
+
+
+.pull-right-9[
+.font90[
+
+$Y_{ij}$ = Valor observado da variável $y$ na unidade experimental que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) na *j*-ésima repetição (*j* = 1, 2, ..., J).
+
+$m$ = média geral, comum a todas as observações.
+
+$t_{i}$ = É o efeito do tratamento *i*; e​
+
+$e_{ij}$ = É a contribuição da variação não controlada referente à observação $Y_{ij}$.
+]
+]
+
+---
+name: dicaov
 ## Delineamento Inteiramente Casualizado
 <br>
 
@@ -498,10 +534,9 @@ $\bar{y}_1$, $\bar{y}_2$, $\bar{y}_3$,..., $\bar{y}_I$ = Média aritmética dos 
 ### Análise de variância - Perguntas
 
 <br><br>
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido ao efeito dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
 <br><br>
-
-`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+`r anicon::faa("hand-point-right", animate="horizontal")` O quanto da variação na variável resposta (ou dependente) do experimento é devido ao efeito de **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
 
 ---
 
@@ -511,10 +546,7 @@ $\bar{y}_1$, $\bar{y}_2$, $\bar{y}_3$,..., $\bar{y}_I$ = Média aritmética dos 
 ### Análise de Variância - Quadro de experimentos em DIC
 <br>
 
-O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
-<br><br>
-
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/DIC-ANOVA1.png')
 ```
 
@@ -544,38 +576,6 @@ knitr::include_graphics('fig/class4/DIC-ANOVA1.png')
 <br>
 
 .orange[**Quadrado Médio = Variância**]
-]
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-<br>
-
-### Modelo Estatístico - DIC
-
-Toda análise de variância pressupõe um modelo estatístico e a aceitação de algumas hipóteses básicas (PIMENTEL-GOMES, 2009).​
-<br><br>
-
-.pull-left-9[
-$\Large Y_{ij} = m + t{_i} + e_{ij}$
-<br><br>
-.font90[
-O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 partes: uma **constante**, o **efeito do tratamento** e a **variação não controlada** (STORCK et al., 2011).
-]
-]
-
-
-.pull-right-9[
-.font90[
-
-$Y_{ij}$ = Valor observado da variável $y$ na unidade experimental que recebeu o *i*-ésimo tratamento (*i* = 1, 2, ..., I) na *j*-ésima repetição (*j* = 1, 2, ..., J).
-
-$m$ = média geral, comum a todas as observações.
-
-$t_{i}$ = É o efeito do tratamento *i*; e​
-
-$e_{ij}$ = É a contribuição da variação não controlada referente à observação $Y_{ij}$.
 ]
 ]
 
@@ -972,11 +972,12 @@ name: anvdic
 Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. Assim, pede-se:
 <br><br>
 
-a) Elaborar as hipóteses da estatística F da ANOVA.
+a) Faça um diagnóstico visual (elabore gráficos!) dos dados experimentais.
 
-b) Realizar a ANOVA do experimento em DIC.
+b) Elaborar as hipóteses da estatística F da ANOVA.
+
+c) Realizar a ANOVA do experimento em DIC e concluir sobre a estatística F.
 ]
-
 
 ---
 
@@ -1001,7 +1002,7 @@ data %>% Customkbl
 ]
 
 .font80[
-- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Progenie.
+- **Gráfico Dot Plot**: Ajuda a visualizar como a média dos diâmetros variou entre repetições de cada Progênie.
 ]
 
 ```{r echo=F, eval=T, collapse=T, out.width="35%", fig.align='center', fig.cap='', dpi=600}
@@ -1098,9 +1099,9 @@ plotly::ggplotly(bp)
 .font90[
 **Retornemos ao quadro de dados do experimento!**
 
-**Vamos inspecionar os valores observados de DAP para as diferentes progênies!**
+**Vamos inspecionar os valores médios observados de DAP para as diferentes progênies!**
 
-Pode-se constatar que os valores observados para DAP não são idênticos entre progênies e dentro de progênies.
+Pode-se constatar que os valores observados para DAP não são idênticos entre diferentes progênies e mesmo dentro de progênies (entre repetições da progênie).
 ]
 <br>
 
@@ -1111,9 +1112,9 @@ data %>% Customkbl
 ]
 
 .pull-right-1[
-.font90[
+.font80[
 - Quais são as possíveis causas que explicam as variações nos valores observados?
-- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+- Alguma progênie apresentou desenvolvimento em diâmetro significativamente superior?
 ]
 ]
 
@@ -1156,18 +1157,18 @@ df2 %>%
 <br>
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[
+- Alguma progênie apresentou desenvolvimento em diâmetro significativamente superior?
+- A resposta para esta pergunta será alcançada realizando-se a ANOVA-DIC e, por conseguinte, a interpretação do teste F-Snedecor.
 <br>
 
-.font90[
-- Existe alguma progênie que apresentou DAP médio significativamente maior do que outra?
-- A resposta para esta pergunta será alcançada aplicando-se o teste de hipótese (Teste F) da ANOVA-DIC.
-<br>
-
-**Então, vamos construir o quadro da ANOVA.**
+**Então, vamos construir o quadro da ANOVA.** 
 ]
+(.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = m + t{_i} + e_{ij}$)
 <br>
 
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
+```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 ```
 
@@ -1179,7 +1180,7 @@ name: gl
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
+.font90[**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.]
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
@@ -1188,6 +1189,221 @@ knitr::include_graphics('fig/class4/ANOVA-GL.png')
 
 ---
 name: sq
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+(.font80[**Modelo Estatístico**:] $\large Y_{ij} = m + t{_i} + e_{ij}$)
+]
+
+.right-column[
+```{r dic, echo=F, eval=T}
+df <- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv") 
+
+df %>% 
+  rename(`d = Yij` = d) %>% 
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+<br>
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + t{_i} + e_{ij}$
+.pull-left-4[
+.shadow1a[
+.font80[**Média geral (ou constante)**]
+$$\small m = \frac{1}{n}\sum_{i=1}^{n}Y_{ij} \\ m = \frac{1}{40}(16+16,4+14,1+...+9,2) \\ \color{orange}{m = 12,4125}$$
+]
+]
+]
+
+--
+
+.pull-right-4[
+```{r dic2, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  rename(`d = Yij` = d) %>%
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+<br>
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
+.pull-left-4[
+.shadow1a[
+.font80[**Efeitos de tratamentos** <br>
+(média do tratamento menos a média geral)]
+$$\small E_{p1} = \bar{P}_1 - m \\ E_{p1} = 14,55 - 12,4125 \\ \color{red}{E_{p1} = 2,1375}$$
+.font70[(Efeito da progênie 1 sobre as parcelas experimentais.)]
+
+]
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+.font70[
+
+.center[Tabela de suporte para cálculo dos efeitos.]
+
+| **Tratamento** | **Média** | **Média Geral** | **Efeito do Tratamento** |
+|:---:|:---:|:---:|:---:|
+| P1 | 14,550 | 12,4125 | 2,1375 |
+| P2 | 14,300 | 12,4125 | 1,8875 |
+| P3 | 14,2250 | 12,4125 | 1,8125 |
+| P4 | 14,1250 | 12,4125 | 1,7125 |
+| P5 | 13,0 | 12,4125 | 0,5875 |
+| P6 | 12,4250 | 12,4125 | 0,0125 |
+| P7 | 12,0500 | 12,4125 | -0,3625 |
+| P8 | 11,6750 | 12,4125 | -0,7375 |
+| P9 | 9,0 | 12,4125 | -3,4125 |
+| P10 | 8,7750 | 12,4125 | -3,6375 |
+
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
+<br><br>
+
+$\color{red}{t_{i}}$ = .font90[**Efeito dos tratamentos (progênies) sobre as parcelas experimentais.**]
+
+]
+
+--
+
+.right-column[
+```{r, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = round(mean(d) - m, 3)) %>% 
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
+<br><br>
+
+$\color{green}{e_{ij}}$ = .font90[**Efeito dos fatores não controlados (erro experimental) sobre as parcelas experimentais.**]
+
+]
+
+--
+
+.right-column[
+```{r, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = round(mean(d) - m, 3), 
+         eij = round((d-(m+ti)), 3)) %>% 
+  rename(`d = Yij` = d) %>%
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
+<br><br>
+
+.font90[**Agora, basta obter os quadrados dos valores de**] $t_{i}$ e $e_{ij}$ .font90[**e, em seguida, somá-los.**].
+
+]
+
+--
+
+.right-column[
+```{r, echo=F, eval=T}
+background <- "value == 'Total' ? 'orange' : value != 'else' ? '' : ''"  
+class(background) <- "JS_EVAL"
+
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = mean(d) - m, 
+         eij = (d-(m+ti)),
+         `ti²` = ti^2,
+         `eij²` = eij^2) %>% 
+  janitor::adorn_totals("row") %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  rename(`d = Yij` = d) %>%
+  CustomDT %>%
+DT::formatStyle(
+  'Progenie',
+  target = 'row',
+  backgroundColor = background  
+)
+
+
+```
+]
+
+---
+
 ## Delineamento Inteiramente Casualizado
 <br>
 
@@ -1342,7 +1558,6 @@ $$
 ]
 
 ---
-
 
 ## Delineamento Inteiramente Casualizado
 <br>

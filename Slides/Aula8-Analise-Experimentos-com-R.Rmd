@@ -173,7 +173,8 @@ layout: true
 Ao final desta aula espera-se que o discente seja capaz de...
 
 * Conhecer alguns dos principais pacotes disponíveis na linguagem R para análise de dados experimentais;
-* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; e
+* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; 
+* Aprender a realizar a avaliação de pressupostos da ANOVA; e
 * Construir visualizações informativas dos resultados da análise estatística dos experimentos.
 
 ---
@@ -182,7 +183,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-left-4[
 .font90[
-**Parte 1 - Pacotes disponíveis no R**
+**Parte 1 - Alguns pacotes especializados disponíveis no R**
 
 [1 - Pacote agricolae](#agri)
 
@@ -267,22 +268,26 @@ data %>% Customkbl
 ---
 
 ## Análise de Experimentos em DIC com R
-<br>
 
 - **Vamos analisar esses dados experimentais...**
 
 .shadow1a[
 ## .font70[**Siga a seguinte sequência de análise...**]
 <br>
+.font90[
+1) Carregue o conjunto de dados e análise da estrutura dos dados. (Obs.: Use a função `str()`. As variáveis categoricas são da classe *factor*?)
 
-1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
+2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
 
-2) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente $\alpha$ = 0,01 e 0,05).
+3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente $\alpha$ = 0,01 e 0,05).
 
-3) Realizar os testes de comparações de médias (Tukey e Duncan).
+4) Realizar a análise de pressupostos.
+
+5) Realizar os testes de comparações de médias (Tukey e Duncan).
 <br><br>
 
 Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
+]
 ]
 
 ---
@@ -290,7 +295,7 @@ Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
 ## Análise de Experimentos em DIC com R
 <br>
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados.]**
 
 .pull-left-10[
 - **Passo 1** - Carregar o conjunto de dados...
@@ -306,9 +311,43 @@ Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
 --
 
 .pull-right-10[
-```{r, echo=T, eval=T}
+.font90[
+```{r read, echo=T, eval=F}
 library(readr)
-(data <- read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
+(data <- 
+    read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv", 
+             col_types = "ffd"))
+```
+
+```{r ref.label="read", echo=F, eval=T, collapse=T}
+```
+]
+]
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados]**
+
+.pull-left-4[
+```{r est, echo=T, eval=F}
+# Estrutura dos dados
+str(data)
+```
+
+```{r ref.label="est", echo=F, eval=T, collapse=T}
+```
+
+]
+
+.pull-right-4[
+```{r xtab, echo=T, eval=F}
+# Tabela de frequência por tratamento
+xtabs(~Progenie + Rep, data = data)
+```
+
+```{r ref.label="xtab", echo=F, eval=T, collapse=T}
 ```
 ]
 
@@ -317,14 +356,17 @@ library(readr)
 ## Análise de Experimentos em DIC com R
 <br>
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 <br><br>
 
 .pull-top[
-- **Passo 2** - Obter um resumo estatístico por grupo...
+.font90[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
   - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
-  - Vamos usar a função .orange[**stby()**] do pacote **summarytools**.
+  - Usaremos a função .orange[**stby()**] do pacote **summarytools** para obter estatísticas descritivas;
+  - Usaremos o pacote **ggplot2** para fazer gráficos elegantes e o **plotly** para cria gráficos interativos; e
   - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
+]
 ]
 
 ---
@@ -332,10 +374,12 @@ library(readr)
 ## Análise de Experimentos em DIC com R
 <br>
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 
 .pull-left-1[
-- **Passo 2** - Obter um resumo estatístico por grupo...
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
+]
 
 ```{r tools, echo=T, eval=F}
 library(summarytools)
@@ -358,6 +402,130 @@ stby(data = data,
 ```{r ref.label="tools", echo=F, eval=T, collapse=T}
 ```
 ]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...(BoxPlot por Progênie)
+
+```{r box, echo=TRUE, eval=FALSE}
+# Criando um BoxPlot Por Progênie
+g1 <- data %>% 
+  ggplot(aes(x = reorder(Progenie, -d), y = d)) + 
+  geom_boxplot(mapping = aes(fill = Progenie)) + 
+  stat_summary(fun = mean, 
+               geom = "point", 
+               shape = 20, 
+               size = 1.5,
+               color = "red"
+               ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Diâmetro (cm)", 
+                     breaks = seq(5, 18, 2),
+                     limits = c(5, 18)) +
+  labs(x = "Progênie")
+
+plotly::ggplotly(g1)
+
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="box", echo=FALSE, eval=TRUE, collapse=T, fig.width=.9, fig.height=.7, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...(Gráfico de barra por Progênie)
+
+```{r bar, echo=T, eval=F}
+data |>
+  ggplot(
+    mapping = aes(x = Progenie, 
+                  y = d)) +
+  geom_bar(
+    mapping = aes(fill = Progenie),
+    stat = "summary",
+    fun = mean
+    ) +
+  geom_errorbar(stat = "summary", 
+                fun.ymin = function(x) {mean(x)-sd(x)},
+                fun.ymax = function(x) {mean(x)+sd(x)},
+                width = .2
+                ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Diâmetro (cm)", 
+                     breaks = seq(0, 18, 2),
+                     limits = c(0, 18)) +
+  labs(x = "Progênie")
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="bar", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=3.5, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
+
+```{r xplot, echo=T, eval=F}
+
+library(lattice)
+
+xyplot(d ~ reorder(Progenie, -d),
+       data = data,
+       type = c("p", "a"),
+       ylab = expression("Diâmetro (cm)"),
+       xlab = expression("Progênie"))
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="xplot", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=3.5, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor <br> (experimente α = 0,01 e 0,05).]**
+
+
+
 
 
 

@@ -7,7 +7,7 @@
     <script src="Aula3-DIC_files/header-attrs-2.22/header-attrs.js"></script>
     <link href="Aula3-DIC_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula3-DIC_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x0264252ae234161b89630ba177491d0","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x262fd616a234c4ab746069fe332c359","expires":1}</script>
     <script src="Aula3-DIC_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula3-DIC_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula3-DIC_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -106,14 +106,14 @@ top:.8em;right:-.5em;
 &lt;!-- title-slide --&gt;
 # Experimentação Florestal &lt;br&gt; (FL03034 - EF)
 &lt;br&gt;
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Delineamento Inteiramente &lt;br&gt; Casualizado <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Delineamento Inteiramente <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; Casualizado
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 02/setembro/2021 &lt;br&gt; (Atualizado em: 08/junho/2023) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 02/setembro/2021 &lt;br&gt; (Atualizado em: 19/junho/2023) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -171,13 +171,17 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [2 - Principais delineamentos experimentais](#pde)
 
-[3 - DIC - Conceito](#pde)
+[3 - DIC - Conceito](#con)
 
 [4 - DIC - Principais características](#dicpc)
 
-[5 - DIC - Vantagens e Desvantagens](#dicvl)
+[5 - DIC - Vantagens e Limitações](#dicvl)
 
-[6 - DIC - Análise de Variância](#dicanova)
+[6 - DIC - Representação Genérica](#rg)
+
+[7 - DIC - Modelo Estatístico](#me)
+
+[8 - DIC - Análise de Variância](#dicaov)
 
 ]
 ]
@@ -228,7 +232,7 @@ layout: true
 &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Delineamento Inteiramente Casualizado&lt;/div&gt;
 
 ---
-
+name: de
 ## Delineamento Experimental
 
 --
@@ -244,7 +248,7 @@ layout: true
 ]
 
 ---
-
+name: pde
 ## Delineamento Experimental
 &lt;br&gt;
 
@@ -266,7 +270,7 @@ A homogeneidade (ou não) das condições experimentais (ambientais ou biológic
 ]
 
 ---
-
+name: con
 ## Delineamento Inteiramente Casualizado
 
 &lt;br&gt;&lt;br&gt;
@@ -354,7 +358,7 @@ Somente o tratamento varia entre as UEs, as demais condições são mantidas con
 ]
 
 ---
-
+name: dicpc
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
@@ -384,11 +388,11 @@ Por exemplo, deve haver condições homogêneas para:
 ]
 
 ---
-
+name: dicvl
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
-### Vantagens e Desvantagens
+### Vantagens e Limitações
 
 .pull-left-2[
 &lt;img src="fig/class4/DIC-V.png" width="85%" style="display: block; margin: auto;" /&gt;
@@ -408,7 +412,7 @@ Por exemplo, deve haver condições homogêneas para:
 ]
 
 ---
-
+name: rg
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
@@ -438,81 +442,7 @@ Para um experimento em DIC com **I** tratamentos (i = 1, 2, 3..., I) e **J** rep
 ]
 
 ---
-
-## Delineamento Inteiramente Casualizado
-&lt;br&gt;
-
-### Análise de Variância (ANOVA) - Conceito
-&lt;br&gt;
-.font90[
-É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
-&lt;br&gt;&lt;br&gt;
-
-**Objetivo principal**: 
-- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
-- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
-- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
-&lt;br&gt;&lt;br&gt;
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-&lt;br&gt;
-
-### Análise de variância - Perguntas
-
-&lt;br&gt;&lt;br&gt;
-<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
-&lt;br&gt;&lt;br&gt;
-
-<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
-
----
-
-## Delineamento Inteiramente Casualizado
-&lt;br&gt;
-
-### Análise de Variância - Quadro de experimentos em DIC
-&lt;br&gt;
-
-O quadro a seguir resume as estimativas geradas na ANOVA de experimentos em DIC.
-&lt;br&gt;&lt;br&gt;
-
-&lt;img src="fig/class4/DIC-ANOVA1.png" width="65%" style="display: block; margin: auto;" /&gt;
-
-.pull-left-8[
-.font70[
-**SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
-
-**SQR** = Soma de Quadrados de Resíduos
-
-**SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
-]
-]
-
-.pull-left-8[
-.font70[
-**QMT** = Quadrado Médio de Tratamentos
-
-**QMR** = Quadrado Médio de Resíduos
-]
-]
-
-.pull-left-8[
-.font70[
-*I* = número de tratamentos
-
-*J* = número de repetições
-&lt;br&gt;
-
-.orange[**Quadrado Médio = Variância**]
-]
-]
-
----
-
+name: me
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
@@ -540,6 +470,76 @@ O modelo admite que o resultado obtido ao avaliar uma UE pode ser dividido em 3 
 `\(t_{i}\)` = É o efeito do tratamento *i*; e​
 
 `\(e_{ij}\)` = É a contribuição da variação não controlada referente à observação `\(Y_{ij}\)`.
+]
+]
+
+---
+name: dicaov
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de Variância (ANOVA) - Conceito
+&lt;br&gt;
+.font90[
+É uma técnica estatísticas que permite **decompor a variação total** de dados experimentais em **causas conhecidas e independentes** e **desconhecidas**.
+&lt;br&gt;&lt;br&gt;
+
+**Objetivo principal**: 
+- Determinar para uma variável se as médias de três ou mais grupos (tratamentos) são diferentes. 
+- Para tanto, as variâncias entre grupos e dentro de grupos é estimada.
+- A estatística F é usada para testar, estatisticamente, a igualdade entre as médias de grupos.
+&lt;br&gt;&lt;br&gt;
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de variância - Perguntas
+
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido ao efeito dos tratamentos aplicados às unidades experimentais (**fatores controlados**)?
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação na variável resposta (ou dependente) do experimento é devido ao efeito de **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+
+---
+
+## Delineamento Inteiramente Casualizado
+&lt;br&gt;
+
+### Análise de Variância - Quadro de experimentos em DIC
+&lt;br&gt;
+
+&lt;img src="fig/class4/DIC-ANOVA1.png" width="85%" style="display: block; margin: auto;" /&gt;
+
+.pull-left-8[
+.font70[
+**SQ&lt;sub&gt;Trat.&lt;/sub&gt;** = Soma de Quadrados de Tratamentos
+
+**SQR** = Soma de Quadrados de Resíduos
+
+**SQ&lt;sub&gt;Tot.&lt;/sub&gt;** = Soma de Quadrados de Totais
+]
+]
+
+.pull-left-8[
+.font70[
+**QMT** = Quadrado Médio de Tratamentos
+
+**QMR** = Quadrado Médio de Resíduos
+]
+]
+
+.pull-left-8[
+.font70[
+*I* = número de tratamentos
+
+*J* = número de repetições
+&lt;br&gt;
+
+.orange[**Quadrado Médio = Variância**]
 ]
 ]
 
@@ -922,11 +922,12 @@ name: anvdic
 Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi conduzido sob o delineamento inteiramente casualizado (DIC), com 4 repetições. Os dados apresentados na tabela a seguir correspodem aos valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais. Assim, pede-se:
 &lt;br&gt;&lt;br&gt;
 
-a) Elaborar as hipóteses da estatística F da ANOVA.
+a) Faça um diagnóstico visual (elabore gráficos!) dos dados experimentais.
 
-b) Realizar a ANOVA do experimento em DIC.
+b) Elaborar as hipóteses da estatística F da ANOVA.
+
+c) Realizar a ANOVA do experimento em DIC e concluir sobre a estatística F.
 ]
-
 
 ---
 
@@ -1020,7 +1021,7 @@ b) Realizar a ANOVA do experimento em DIC.
 ]
 
 .font80[
-- **Gráfico Dot Plot**: Ajuda a visualizar como os diâmetros variaram para cada Progenie.
+- **Gráfico Dot Plot**: Ajuda a visualizar como a média dos diâmetros variou entre repetições de cada Progênie.
 ]
 
 &lt;img src="Aula3-DIC_files/figure-html/unnamed-chunk-16-1.png" width="35%" style="display: block; margin: auto;" /&gt;
@@ -1036,8 +1037,8 @@ b) Realizar a ANOVA do experimento em DIC.
 - **Gráfico BoxPlot**: Fornece um indicativo da distribuição dos dados e medidas de posição.
 ]
 
-<div id="htmlwidget-7bf86de80a73ab5f416e" style="width:600px;height:360px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-7bf86de80a73ab5f416e">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.399999999999999,14.1,11.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(248,118,109,1)","width":null},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.300000000000001,14.6,14.5,13.800000000000001],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(216,144,0,1)","width":null},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.699999999999999,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(163,165,0,1)","width":null},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.699999999999999,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(57,182,0,1)","width":null},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,125,1)","width":null},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,196,1)","width":null},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.300000000000001,14.300000000000001,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,176,246,1)","width":null},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.199999999999999,10.300000000000001,13.199999999999999,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(149,144,255,1)","width":null},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.5999999999999996,9.5,8.5,9.4000000000000004],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(231,107,243,1)","width":null},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.1999999999999993,8.4000000000000004,9.3000000000000007,9.1999999999999993],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(255,98,188,1)","width":null},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.549999999999999,14.300000000000001,14.225,14.125,13,12.425000000000001,12.050000000000001,11.675000000000001,9,8.7750000000000004],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.559055118110237,"symbol":"x-thin-open","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.711360177113605,"r":10.62681610626816,"b":61.281306212813064,"l":71.199667911996684},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.7899999999999991,16.809999999999999],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"e7dc880b57":{"x":{},"y":{},"colour":{},"type":"box"},"e7d6f090c68":{"x":{},"y":{},"colour":{}}},"cur_data":"e7dc880b57","visdat":{"e7dc880b57":["function (y) ","x"],"e7d6f090c68":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-a96a7458873af23df0f1" style="width:600px;height:360px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a96a7458873af23df0f1">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.399999999999999,14.1,11.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(248,118,109,1)","width":null},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.300000000000001,14.6,14.5,13.800000000000001],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(216,144,0,1)","width":null},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.699999999999999,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(163,165,0,1)","width":null},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.699999999999999,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(57,182,0,1)","width":null},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,125,1)","width":null},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,196,1)","width":null},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.300000000000001,14.300000000000001,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,176,246,1)","width":null},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.199999999999999,10.300000000000001,13.199999999999999,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(149,144,255,1)","width":null},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.5999999999999996,9.5,8.5,9.4000000000000004],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(231,107,243,1)","width":null},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.1999999999999993,8.4000000000000004,9.3000000000000007,9.1999999999999993],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(255,98,188,1)","width":null},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.549999999999999,14.300000000000001,14.225,14.125,13,12.425000000000001,12.050000000000001,11.675000000000001,9,8.7750000000000004],"text":["Progenie: P1<br />Valor: 14.550<br />Progenie: red","Progenie: P2<br />Valor: 14.300<br />Progenie: red","Progenie: P3<br />Valor: 14.225<br />Progenie: red","Progenie: P4<br />Valor: 14.125<br />Progenie: red","Progenie: P5<br />Valor: 13.000<br />Progenie: red","Progenie: P6<br />Valor: 12.425<br />Progenie: red","Progenie: P7<br />Valor: 12.050<br />Progenie: red","Progenie: P8<br />Valor: 11.675<br />Progenie: red","Progenie: P9<br />Valor:  9.000<br />Progenie: red","Progenie: P10<br />Valor:  8.775<br />Progenie: red"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.559055118110237,"symbol":"x-thin-open","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":33.711360177113605,"r":10.62681610626816,"b":61.281306212813064,"l":71.199667911996684},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progenie","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.7899999999999991,16.809999999999999],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Valor","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"41843d09486e":{"x":{},"y":{},"colour":{},"type":"box"},"41841070c0da":{"x":{},"y":{},"colour":{}}},"cur_data":"41843d09486e","visdat":{"41843d09486e":["function (y) ","x"],"41841070c0da":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ---
 
@@ -1079,9 +1080,9 @@ b) Realizar a ANOVA do experimento em DIC.
 .font90[
 **Retornemos ao quadro de dados do experimento!**
 
-**Vamos inspecionar os valores observados de DAP para as diferentes progênies!**
+**Vamos inspecionar os valores médios observados de DAP para as diferentes progênies!**
 
-Pode-se constatar que os valores observados para DAP não são idênticos entre progênies e dentro de progênies.
+Pode-se constatar que os valores observados para DAP não são idênticos entre diferentes progênies e mesmo dentro de progênies (entre repetições da progênie).
 ]
 &lt;br&gt;
 
@@ -1162,9 +1163,9 @@ Pode-se constatar que os valores observados para DAP não são idênticos entre 
 ]
 
 .pull-right-1[
-.font90[
+.font80[
 - Quais são as possíveis causas que explicam as variações nos valores observados?
-- Existe alguma progênie que apresentou maior desenvolvimento para a variável resposta (DAP, em cm)?
+- Alguma progênie apresentou desenvolvimento em diâmetro significativamente superior?
 ]
 ]
 
@@ -1286,18 +1287,18 @@ Do quadro de dados pode-se obter medidas como .blue[somatórios] e .blue[médias
 &lt;br&gt;
 
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[
+- Alguma progênie apresentou desenvolvimento em diâmetro significativamente superior?
+- A resposta para esta pergunta será alcançada realizando-se a ANOVA-DIC e, por conseguinte, a interpretação do teste F-Snedecor.
 &lt;br&gt;
 
-.font90[
-- Existe alguma progênie que apresentou DAP médio significativamente maior do que outra?
-- A resposta para esta pergunta será alcançada aplicando-se o teste de hipótese (Teste F) da ANOVA-DIC.
-&lt;br&gt;
-
-**Então, vamos construir o quadro da ANOVA.**
+**Então, vamos construir o quadro da ANOVA.** 
 ]
+(.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = m + t{_i} + e_{ij}\)`)
 &lt;br&gt;
 
-&lt;img src="fig/class4/DIC-ANOVA.png" width="65%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/class4/DIC-ANOVA.png" width="75%" style="display: block; margin: auto;" /&gt;
 
 ---
 name: gl
@@ -1307,13 +1308,186 @@ name: gl
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 &lt;br&gt;
 
-**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.
+.font90[**1º Passo**: determinar os valores de graus de liberdade de todas as fontes de variação do experimento.]
 &lt;br&gt;&lt;br&gt;
 
 &lt;img src="fig/class4/ANOVA-GL.png" width="85%" style="display: block; margin: auto;" /&gt;
 
 ---
 name: sq
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+&lt;br&gt;&lt;br&gt;
+
+(.font80[**Modelo Estatístico**:] `\(\large Y_{ij} = m + t{_i} + e_{ij}\)`)
+]
+
+.right-column[
+<div id="htmlwidget-f700fe1fb24a20104e98" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f700fe1fb24a20104e98">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9","P10","P10","P10","P10"],["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],[16,16.4,14.1,11.7,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4,8.199999999999999,8.4,9.300000000000001,9.199999999999999]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Progenie<\/th>\n      <th>Rep<\/th>\n      <th>d = Yij<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+&lt;br&gt;
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = \color{orange}{m} + t{_i} + e_{ij}\)`
+.pull-left-4[
+.shadow1a[
+.font80[**Média geral (ou constante)**]
+`$$\small m = \frac{1}{n}\sum_{i=1}^{n}Y_{ij} \\ m = \frac{1}{40}(16+16,4+14,1+...+9,2) \\ \color{orange}{m = 12,4125}$$`
+]
+]
+]
+
+--
+
+.pull-right-4[
+<div id="htmlwidget-04a9fac7d51f222cf334" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-04a9fac7d51f222cf334">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9","P10","P10","P10","P10"],["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],[16,16.4,14.1,11.7,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4,8.199999999999999,8.4,9.300000000000001,9.199999999999999],[12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Progenie<\/th>\n      <th>Rep<\/th>\n      <th>d = Yij<\/th>\n      <th>m<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":[2,3]}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+&lt;br&gt;
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}\)`
+.pull-left-4[
+.shadow1a[
+.font80[**Efeitos de tratamentos** &lt;br&gt;
+(média do tratamento menos a média geral)]
+`$$\small E_{p1} = \bar{P}_1 - m \\ E_{p1} = 14,55 - 12,4125 \\ \color{red}{E_{p1} = 2,1375}$$`
+.font70[(Efeito da progênie 1 sobre as parcelas experimentais.)]
+
+]
+]
+]
+
+--
+
+.pull-right-4[
+&lt;br&gt;&lt;br&gt;
+.font70[
+
+.center[Tabela de suporte para cálculo dos efeitos.]
+
+| **Tratamento** | **Média** | **Média Geral** | **Efeito do Tratamento** |
+|:---:|:---:|:---:|:---:|
+| P1 | 14,550 | 12,4125 | 2,1375 |
+| P2 | 14,300 | 12,4125 | 1,8875 |
+| P3 | 14,2250 | 12,4125 | 1,8125 |
+| P4 | 14,1250 | 12,4125 | 1,7125 |
+| P5 | 13,0 | 12,4125 | 0,5875 |
+| P6 | 12,4250 | 12,4125 | 0,0125 |
+| P7 | 12,0500 | 12,4125 | -0,3625 |
+| P8 | 11,6750 | 12,4125 | -0,7375 |
+| P9 | 9,0 | 12,4125 | -3,4125 |
+| P10 | 8,7750 | 12,4125 | -3,6375 |
+
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+&lt;br&gt;&lt;br&gt;
+
+.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}\)`
+&lt;br&gt;&lt;br&gt;
+
+`\(\color{red}{t_{i}}\)` = .font90[**Efeito dos tratamentos (progênies) sobre as parcelas experimentais.**]
+
+]
+
+--
+
+.right-column[
+<div id="htmlwidget-1906833bba22e82a9151" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1906833bba22e82a9151">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9","P10","P10","P10","P10"],["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],[16,16.4,14.1,11.7,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4,8.199999999999999,8.4,9.300000000000001,9.199999999999999],[12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125],[2.137,2.137,2.137,2.137,1.888,1.888,1.888,1.888,1.812,1.812,1.812,1.812,1.713,1.713,1.713,1.713,0.588,0.588,0.588,0.588,0.013,0.013,0.013,0.013,-0.362,-0.362,-0.362,-0.362,-0.737,-0.737,-0.737,-0.737,-3.412,-3.412,-3.412,-3.412,-3.637,-3.637,-3.637,-3.637]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Progenie<\/th>\n      <th>Rep<\/th>\n      <th>d<\/th>\n      <th>m<\/th>\n      <th>ti<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":[2,3,4]}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+&lt;br&gt;&lt;br&gt;
+
+.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}\)`
+&lt;br&gt;&lt;br&gt;
+
+`\(\color{green}{e_{ij}}\)` = .font90[**Efeito dos fatores não controlados (erro experimental) sobre as parcelas experimentais.**]
+
+]
+
+--
+
+.right-column[
+<div id="htmlwidget-875aaff70f875a15a453" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-875aaff70f875a15a453">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9","P10","P10","P10","P10"],["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],[16,16.4,14.1,11.7,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4,8.199999999999999,8.4,9.300000000000001,9.199999999999999],[12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125,12.4125],[2.137,2.137,2.137,2.137,1.888,1.888,1.888,1.888,1.812,1.812,1.812,1.812,1.713,1.713,1.713,1.713,0.588,0.588,0.588,0.588,0.013,0.013,0.013,0.013,-0.362,-0.362,-0.362,-0.362,-0.737,-0.737,-0.737,-0.737,-3.412,-3.412,-3.412,-3.412,-3.637,-3.637,-3.637,-3.637],[1.45,1.85,-0.45,-2.85,-0,0.2,-0.5,0.3,0.476,1.376,-2.624,0.776,-0.525,-1.025,0.575,0.975,-1.4,-2.5,2.9,1,-1.425,2.575,-1.726,0.575,1.05,-1.75,2.25,-1.55,-1.375,1.524,-1.476,1.325,-0.5,-0.4,0.5,0.4,-0.575,-0.375,0.525,0.425]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Progenie<\/th>\n      <th>Rep<\/th>\n      <th>d = Yij<\/th>\n      <th>m<\/th>\n      <th>ti<\/th>\n      <th>eij<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":[2,3,4,5]}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] `\(Y_{ij}\)`.)
+&lt;br&gt;&lt;br&gt;
+
+.font80[**Modelo Estatístico**:] `\(\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}\)`
+&lt;br&gt;&lt;br&gt;
+
+.font90[**Agora, basta obter os quadrados dos valores de**] `\(t_{i}\)` e `\(e_{ij}\)` .font90[**e, em seguida, somá-los.**].
+
+]
+
+--
+
+.right-column[
+<div id="htmlwidget-ada8a8963664d35332c3" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ada8a8963664d35332c3">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["P1","P1","P1","P1","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9","P10","P10","P10","P10","Total"],["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","-"],[16,16.4,14.1,11.7,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4,8.199999999999999,8.4,9.300000000000001,9.199999999999999,496.5],[12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,12.412,496.5],[2.137,2.137,2.137,2.137,1.888,1.888,1.888,1.888,1.812,1.812,1.812,1.812,1.713,1.713,1.713,1.713,0.588,0.588,0.588,0.588,0.013,0.013,0.013,0.013,-0.362,-0.362,-0.362,-0.362,-0.737,-0.737,-0.737,-0.737,-3.412,-3.412,-3.412,-3.412,-3.637,-3.637,-3.637,-3.637,0],[1.45,1.85,-0.45,-2.85,0,0.2,-0.5,0.3,0.475,1.375,-2.625,0.775,-0.525,-1.025,0.575,0.975,-1.4,-2.5,2.9,1,-1.425,2.575,-1.725,0.575,1.05,-1.75,2.25,-1.55,-1.375,1.525,-1.475,1.325,-0.5,-0.4,0.5,0.4,-0.575,-0.375,0.525,0.425,-0],[4.569,4.569,4.569,4.569,3.563,3.563,3.563,3.563,3.285,3.285,3.285,3.285,2.933,2.933,2.933,2.933,0.345,0.345,0.345,0.345,0,0,0,0,0.131,0.131,0.131,0.131,0.544,0.544,0.544,0.544,11.645,11.645,11.645,11.645,13.231,13.231,13.231,13.231,160.986],[2.103,3.422,0.202,8.122,0,0.04,0.25,0.09,0.226,1.891,6.891,0.601,0.276,1.051,0.331,0.951,1.96,6.25,8.41,1,2.031,6.631,2.976,0.331,1.102,3.062,5.062,2.403,1.891,2.326,2.176,1.756,0.25,0.16,0.25,0.16,0.331,0.141,0.276,0.181,77.55800000000001]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Progenie<\/th>\n      <th>Rep<\/th>\n      <th>d = Yij<\/th>\n      <th>m<\/th>\n      <th>ti<\/th>\n      <th>eij<\/th>\n      <th>ti²<\/th>\n      <th>eij²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7]}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100],"rowCallback":"function(row, data) {\nvar value=data[0]; $(row).css({'background-color':value == 'Total' ? 'orange' : value != 'else' ? '' : ''});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+]
+
+---
+
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
@@ -1690,7 +1864,6 @@ $$
 
 ---
 
-
 ## Delineamento Inteiramente Casualizado
 &lt;br&gt;
 
@@ -1954,8 +2127,8 @@ data_pivot &lt;- data %&gt;%
 ]
 
 .pull-right-9[
-<div id="htmlwidget-459bba6e5f88ea591e5a" style="width:250px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-459bba6e5f88ea591e5a">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.199999999999999,8.4,9.300000000000001,9.199999999999999,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '9pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-2621afeb8076bdeb0fb9" style="width:400px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2621afeb8076bdeb0fb9">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4","R1","R2","R3","R4"],["P1","P1","P1","P1","P10","P10","P10","P10","P2","P2","P2","P2","P3","P3","P3","P3","P4","P4","P4","P4","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P7","P8","P8","P8","P8","P9","P9","P9","P9"],[16,16.4,14.1,11.7,8.199999999999999,8.4,9.300000000000001,9.199999999999999,14.3,14.5,13.8,14.6,14.7,15.6,11.6,15,13.6,13.1,14.7,15.1,11.6,10.5,15.9,14,11,15,10.7,13,13.1,10.3,14.3,10.5,10.3,13.2,10.2,13,8.5,8.6,9.5,9.4]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Repeticao<\/th>\n      <th>Progenie<\/th>\n      <th>Valor<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":12,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","columnDefs":[{"className":"dt-right","targets":2}],"order":[],"orderClasses":false,"lengthMenu":[10,12,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ]

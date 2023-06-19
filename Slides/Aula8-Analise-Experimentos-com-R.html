@@ -7,7 +7,7 @@
     <script src="Aula8-Analise-Experimentos-com-R_files/header-attrs-2.22/header-attrs.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ce66a0c8388046d0a1383561dca8e585","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d4a4072d43ad48e18c852273d636f949","expires":1}</script>
     <script src="Aula8-Analise-Experimentos-com-R_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -20,6 +20,14 @@
     <script src="Aula8-Analise-Experimentos-com-R_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/kePrint-0.0.1/kePrint.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/plotly-binding-4.9.3/plotly.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/typedarray-0.1/typedarray.min.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/jquery-3.5.1/jquery.min.js"></script>
+    <link href="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <link href="Aula8-Analise-Experimentos-com-R_files/plotly-htmlwidgets-css-1.57.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/plotly-main-1.57.1/plotly-latest.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -100,7 +108,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 09/junho/2023) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 19/junho/2023) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -140,7 +148,8 @@ layout: true
 Ao final desta aula espera-se que o discente seja capaz de...
 
 * Conhecer alguns dos principais pacotes disponíveis na linguagem R para análise de dados experimentais;
-* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; e
+* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; 
+* Aprender a realizar a avaliação de pressupostos da ANOVA; e
 * Construir visualizações informativas dos resultados da análise estatística dos experimentos.
 
 ---
@@ -149,7 +158,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-left-4[
 .font90[
-**Parte 1 - Pacotes disponíveis no R**
+**Parte 1 - Alguns pacotes especializados disponíveis no R**
 
 [1 - Pacote agricolae](#agri)
 
@@ -303,22 +312,26 @@ Um experimento de competição de 10 progênies de *Eucalyptus saligna* foi cond
 ---
 
 ## Análise de Experimentos em DIC com R
-&lt;br&gt;
 
 - **Vamos analisar esses dados experimentais...**
 
 .shadow1a[
 ## .font70[**Siga a seguinte sequência de análise...**]
 &lt;br&gt;
+.font90[
+1) Carregue o conjunto de dados e análise da estrutura dos dados. (Obs.: Use a função `str()`. As variáveis categoricas são da classe *factor*?)
 
-1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
+2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).
 
-2) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente `\(\alpha\)` = 0,01 e 0,05).
+3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor (experimente `\(\alpha\)` = 0,01 e 0,05).
 
-3) Realizar os testes de comparações de médias (Tukey e Duncan).
+4) Realizar a análise de pressupostos.
+
+5) Realizar os testes de comparações de médias (Tukey e Duncan).
 &lt;br&gt;&lt;br&gt;
 
 Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
+]
 ]
 
 ---
@@ -326,7 +339,7 @@ Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados.]**
 
 .pull-left-10[
 - **Passo 1** - Carregar o conjunto de dados...
@@ -342,13 +355,20 @@ Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
 --
 
 .pull-right-10[
+.font90[
 
 ```r
 library(readr)
-(data &lt;- read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv"))
+(data &lt;- 
+    read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv", 
+             col_types = "ffd"))
+```
+
+
+```
 ## # A tibble: 40 × 3
 ##    Progenie Rep       d
-##    &lt;chr&gt;    &lt;chr&gt; &lt;dbl&gt;
+##    &lt;fct&gt;    &lt;fct&gt; &lt;dbl&gt;
 ##  1 P1       R1     16  
 ##  2 P1       R2     16.4
 ##  3 P1       R3     14.1
@@ -362,20 +382,60 @@ library(readr)
 ## # ℹ 30 more rows
 ```
 ]
-
+]
 ---
 
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
-&lt;br&gt;&lt;br&gt;
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados]**
 
-.pull-top[
-- **Passo 2** - Obter um resumo estatístico por grupo...
-  - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
-  - Vamos usar a função .orange[**stby()**] do pacote **summarytools**.
-  - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
+.pull-left-4[
+
+```r
+# Estrutura dos dados
+str(data)
+```
+
+
+```
+## spc_tbl_ [40 × 3] (S3: spec_tbl_df/tbl_df/tbl/data.frame)
+##  $ Progenie: Factor w/ 10 levels "P1","P2","P3",..: 1 1 1 1 2 2 2 2 3 3 ...
+##  $ Rep     : Factor w/ 4 levels "R1","R2","R3",..: 1 2 3 4 1 2 3 4 1 2 ...
+##  $ d       : num [1:40] 16 16.4 14.1 11.7 14.3 14.5 13.8 14.6 14.7 15.6 ...
+##  - attr(*, "spec")=
+##   .. cols(
+##   ..   Progenie = col_factor(levels = NULL, ordered = FALSE, include_na = FALSE),
+##   ..   Rep = col_factor(levels = NULL, ordered = FALSE, include_na = FALSE),
+##   ..   d = col_double()
+##   .. )
+##  - attr(*, "problems")=&lt;externalptr&gt;
+```
+
+]
+
+.pull-right-4[
+
+```r
+# Tabela de frequência por tratamento
+xtabs(~Progenie + Rep, data = data)
+```
+
+
+```
+##         Rep
+## Progenie R1 R2 R3 R4
+##      P1   1  1  1  1
+##      P2   1  1  1  1
+##      P3   1  1  1  1
+##      P4   1  1  1  1
+##      P5   1  1  1  1
+##      P6   1  1  1  1
+##      P7   1  1  1  1
+##      P8   1  1  1  1
+##      P9   1  1  1  1
+##      P10  1  1  1  1
+```
 ]
 
 ---
@@ -383,10 +443,30 @@ library(readr)
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
-**.blue[1) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+&lt;br&gt;&lt;br&gt;
+
+.pull-top[
+.font90[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
+  - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
+  - Usaremos a função .orange[**stby()**] do pacote **summarytools** para obter estatísticas descritivas;
+  - Usaremos o pacote **ggplot2** para fazer gráficos elegantes e o **plotly** para cria gráficos interativos; e
+  - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
+]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
 
 .pull-left-1[
-- **Passo 2** - Obter um resumo estatístico por grupo...
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
+]
 
 
 ```r
@@ -417,7 +497,6 @@ stby(data = data,
 ##              Mean   Std.Dev     Min   Median     Max   N.Valid   Pct.Valid
 ## --------- ------- --------- ------- -------- ------- --------- -----------
 ##        P1   14.55      2.15   11.70    15.05   16.40      4.00      100.00
-##       P10    8.78      0.56    8.20     8.80    9.30      4.00      100.00
 ##        P2   14.30      0.36   13.80    14.40   14.60      4.00      100.00
 ##        P3   14.22      1.79   11.60    14.85   15.60      4.00      100.00
 ##        P4   14.12      0.93   13.10    14.15   15.10      4.00      100.00
@@ -426,8 +505,134 @@ stby(data = data,
 ##        P7   12.05      1.97   10.30    11.80   14.30      4.00      100.00
 ##        P8   11.68      1.65   10.20    11.65   13.20      4.00      100.00
 ##        P9    9.00      0.52    8.50     9.00    9.50      4.00      100.00
+##       P10    8.78      0.56    8.20     8.80    9.30      4.00      100.00
 ```
 ]
+
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...(BoxPlot por Progênie)
+
+
+```r
+# Criando um BoxPlot Por Progênie
+g1 &lt;- data %&gt;% 
+  ggplot(aes(x = reorder(Progenie, -d), y = d)) + 
+  geom_boxplot(mapping = aes(fill = Progenie)) + 
+  stat_summary(fun = mean, 
+               geom = "point", 
+               shape = 20, 
+               size = 1.5,
+               color = "red"
+               ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Diâmetro (cm)", 
+                     breaks = seq(5, 18, 2),
+                     limits = c(5, 18)) +
+  labs(x = "Progênie")
+
+plotly::ggplotly(g1)
+
+```
+]
+]
+
+.pull-right-4[
+<div id="htmlwidget-6212ade5b2c855f54402" style="width:540px;height:420px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6212ade5b2c855f54402">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.399999999999999,14.1,11.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.300000000000001,14.5,13.800000000000001,14.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(216,144,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.699999999999999,15.6,11.6,15],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.699999999999999,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(57,182,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[11.6,10.5,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,10.699999999999999,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,196,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.300000000000001,14.300000000000001,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.300000000000001,13.199999999999999,10.199999999999999,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(149,144,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.5,8.5999999999999996,9.5,9.4000000000000004],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.1999999999999993,8.4000000000000004,9.3000000000000007,9.1999999999999993],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,98,188,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.549999999999999,14.300000000000001,14.225,14.125,13,12.425000000000001,12.050000000000001,11.675000000000001,9,8.7750000000000004],"text":["reorder(Progenie, -d): P1<br />d: 14.550","reorder(Progenie, -d): P2<br />d: 14.300","reorder(Progenie, -d): P3<br />d: 14.225","reorder(Progenie, -d): P4<br />d: 14.125","reorder(Progenie, -d): P5<br />d: 13.000","reorder(Progenie, -d): P6<br />d: 12.425","reorder(Progenie, -d): P7<br />d: 12.050","reorder(Progenie, -d): P8<br />d: 11.675","reorder(Progenie, -d): P9<br />d:  9.000","reorder(Progenie, -d): P10<br />d:  8.775"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progênie","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.3499999999999996,18.649999999999999],"tickmode":"array","ticktext":["5","7","9","11","13","15","17"],"tickvals":[5,7,9,11,13,15,17],"categoryorder":"array","categoryarray":["5","7","9","11","13","15","17"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Diâmetro (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"1e5e71b191c4":{"fill":{},"x":{},"y":{},"type":"box"},"1e5e6bb64f54":{"x":{},"y":{}}},"cur_data":"1e5e71b191c4","visdat":{"1e5e71b191c4":["function (y) ","x"],"1e5e6bb64f54":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...(Gráfico de barra por Progênie)
+
+
+```r
+data |&gt;
+  ggplot(
+    mapping = aes(x = Progenie, 
+                  y = d)) +
+  geom_bar(
+    mapping = aes(fill = Progenie),
+    stat = "summary",
+    fun = mean
+    ) +
+  geom_errorbar(stat = "summary", 
+                fun.ymin = function(x) {mean(x)-sd(x)},
+                fun.ymax = function(x) {mean(x)+sd(x)},
+                width = .2
+                ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Diâmetro (cm)", 
+                     breaks = seq(0, 18, 2),
+                     limits = c(0, 18)) +
+  labs(x = "Progênie")
+```
+]
+]
+
+--
+
+.pull-right-4[
+&lt;br&gt;&lt;br&gt;
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-7-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Progênie)...
+
+
+```r
+
+library(lattice)
+
+xyplot(d ~ reorder(Progenie, -d),
+       data = data,
+       type = c("p", "a"),
+       ylab = expression("Diâmetro (cm)"),
+       xlab = expression("Progênie"))
+```
+]
+]
+
+--
+
+.pull-right-4[
+&lt;br&gt;&lt;br&gt;
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+&lt;br&gt;
+
+**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor &lt;br&gt; (experimente α = 0,01 e 0,05).]**
+
+
+
 
 
 
