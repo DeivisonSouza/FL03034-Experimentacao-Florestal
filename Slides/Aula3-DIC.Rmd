@@ -1188,29 +1188,6 @@ knitr::include_graphics('fig/class4/ANOVA-GL.png')
 ```
 
 ---
-name: sq
-## Delineamento Inteiramente Casualizado
-
-.left-column[
-### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-
-.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-<br><br>
-
-(.font80[**Modelo Estatístico**:] $\large Y_{ij} = m + t{_i} + e_{ij}$)
-]
-
-.right-column[
-```{r dic, echo=F, eval=T}
-df <- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv") 
-
-df %>% 
-  rename(`d = Yij` = d) %>% 
-  CustomDT
-```
-]
-
----
 
 ## Delineamento Inteiramente Casualizado
 <br>
@@ -1249,197 +1226,6 @@ knitr::include_graphics('fig/class4/SQTrat-cor.png')
 .pull-right-5[
 $\large SQR = SQ_{Tot.} - SQ_{Trat.}$
 ]
-
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-
-.pull-top[
-.pull-left-4[
-<br>
-.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-]
-]
-
---
-
-.pull-down[
-.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + t{_i} + e_{ij}$
-.pull-left-4[
-.shadow1a[
-.font80[**Média geral (ou constante)**]
-$$\small m = \frac{1}{n}\sum_{i=1}^{n}Y_{ij} \\ m = \frac{1}{40}(16+16,4+14,1+...+9,2) \\ \color{orange}{m = 12,4125}$$
-]
-]
-]
-
---
-
-.pull-right-4[
-```{r dic2, echo=F, eval=T}
-df %>% 
-  mutate(m = mean(d)) %>%
-  rename(`d = Yij` = d) %>%
-  CustomDT
-```
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-
-.pull-top[
-.pull-left-4[
-<br>
-.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-]
-]
-
---
-
-.pull-down[
-.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
-.pull-left-4[
-.shadow1a[
-.font80[**Efeitos de tratamentos** <br>
-(média do tratamento menos a média geral)]
-$$\small E_{p1} = \bar{P}_1 - m \\ E_{p1} = 14,55 - 12,4125 \\ \color{red}{E_{p1} = 2,1375}$$
-.font70[(Efeito da progênie 1 sobre as parcelas experimentais.)]
-
-]
-]
-]
-
---
-
-.pull-right-4[
-<br><br>
-.font70[
-
-.center[Tabela de suporte para cálculo dos efeitos.]
-
-| **Tratamento** | **Média** | **Média Geral** | **Efeito do Tratamento** |
-|:---:|:---:|:---:|:---:|
-| P1 | 14,550 | 12,4125 | 2,1375 |
-| P2 | 14,300 | 12,4125 | 1,8875 |
-| P3 | 14,2250 | 12,4125 | 1,8125 |
-| P4 | 14,1250 | 12,4125 | 1,7125 |
-| P5 | 13,0 | 12,4125 | 0,5875 |
-| P6 | 12,4250 | 12,4125 | 0,0125 |
-| P7 | 12,0500 | 12,4125 | -0,3625 |
-| P8 | 11,6750 | 12,4125 | -0,7375 |
-| P9 | 9,0 | 12,4125 | -3,4125 |
-| P10 | 8,7750 | 12,4125 | -3,6375 |
-
-]
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-
-.left-column[
-
-### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-
-.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-<br><br>
-
-.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
-<br><br>
-
-$\color{red}{t_{i}}$ = .font90[**Efeito dos tratamentos (progênies) sobre as parcelas experimentais.**]
-
-]
-
---
-
-.right-column[
-```{r, echo=F, eval=T}
-df %>% 
-  mutate(m = mean(d)) %>%
-  group_by(Progenie) %>% 
-  mutate(ti = round(mean(d) - m, 3)) %>% 
-  CustomDT
-```
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-
-.left-column[
-
-### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-
-.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-<br><br>
-
-.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
-<br><br>
-
-$\color{green}{e_{ij}}$ = .font90[**Efeito dos fatores não controlados (erro experimental) sobre as parcelas experimentais.**]
-
-]
-
---
-
-.right-column[
-```{r, echo=F, eval=T}
-df %>% 
-  mutate(m = mean(d)) %>%
-  group_by(Progenie) %>% 
-  mutate(ti = round(mean(d) - m, 3), 
-         eij = round((d-(m+ti)), 3)) %>% 
-  rename(`d = Yij` = d) %>%
-  CustomDT
-```
-]
-
----
-
-## Delineamento Inteiramente Casualizado
-
-.left-column[
-
-### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-
-.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
-<br><br>
-
-.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
-<br><br>
-
-.font90[**Agora, basta obter os quadrados dos valores de**] $t_{i}$ e $e_{ij}$ .font90[**e, em seguida, somá-los.**].
-
-]
-
---
-
-.right-column[
-```{r, echo=F, eval=T}
-background <- "value == 'Total' ? 'orange' : value != 'else' ? '' : ''"  
-class(background) <- "JS_EVAL"
-
-df %>% 
-  mutate(m = mean(d)) %>%
-  group_by(Progenie) %>% 
-  mutate(ti = mean(d) - m, 
-         eij = (d-(m+ti)),
-         `ti²` = ti^2,
-         `eij²` = eij^2) %>% 
-  janitor::adorn_totals("row") %>%
-  mutate(across(where(is.numeric), round, 3)) %>%
-  rename(`d = Yij` = d) %>%
-  CustomDT %>%
-DT::formatStyle(
-  'Progenie',
-  target = 'row',
-  backgroundColor = background  
-)
-```
 ]
 
 ---
@@ -1450,14 +1236,127 @@ DT::formatStyle(
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais]
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
 <br><br>
 
-$\large SQ_{Tot.} = SQ_{Trat.} + SQR$
+.pull-left-9[
+```{r tb2, echo=F, eval=T}
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
 
-$\large SQ_{Tot.} = 160,98 + 77,56$
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
+\end{equation*}
+$$
 
-$\large SQ_{Tot.} = 238,54$
+]
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/Fator.png')
+```
+<br>
+
+$$
+C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb3, echo=F, eval=T}
+data %>% 
+  Customkbl
+```
+
+$$
+\begin{equation*}
+\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
+\end{equation*}
+$$
+]
+
+.pull-right-9[
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTot-cor.png')
+```
+
+$$
+SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
+<br><br>
+
+.pull-left-9[
+```{r tb4, echo=F, eval=T}
+df1 %>% 
+  Customkbl %>% 
+  row_spec(5, color = 'white', background = 'orange')
+```
+
+$$
+\begin{equation*}
+\small
+\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
+\end{equation*}
+$$
+]
+
+
+.pull-right-9[
+
+```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/SQTrat-cor.png')
+```
+
+$$
+SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
+$$
+
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+<br><br>
+
+$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+
+$\large SQR = 238,54 - 160,98$
+
+$\large SQR = 77,56$
 
 ---
 
@@ -1807,42 +1706,216 @@ class: center, middle
 **Outra abordagem para calcular as Somas de Quadrados - DIC!**
 
 ---
-
+name: sq
 ## Delineamento Inteiramente Casualizado
-<br>
 
-### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
-<br>
+.left-column[
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Fator em Comum]
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
 <br><br>
 
-.pull-left-9[
-```{r tb2, echo=F, eval=T}
-df1 %>% 
-  Customkbl %>% 
-  row_spec(5, color = 'white', background = 'orange')
-```
+(.font80[**Modelo Estatístico**:] $\large Y_{ij} = m + t{_i} + e_{ij}$)
+]
 
-$$
-\begin{equation*}
-\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij} = 58,2 + 57,2 + 56,9 + ... + 35,1 = 496,5
-\end{equation*}
-$$
+.right-column[
+```{r dic, echo=F, eval=T}
+df <- readr::read_csv("data/DIC-Pimentel-Gomes-2002-Org.csv") 
+
+df %>% 
+  rename(`d = Yij` = d) %>% 
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+<br>
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + t{_i} + e_{ij}$
+.pull-left-4[
+.shadow1a[
+.font80[**Média geral (ou constante)**]
+$$\small m = \frac{1}{n}\sum_{i=1}^{n}Y_{ij} \\ m = \frac{1}{40}(16+16,4+14,1+...+9,2) \\ \color{orange}{m = 12,4125}$$
+]
+]
+]
+
+--
+
+.pull-right-4[
+```{r dic2, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  rename(`d = Yij` = d) %>%
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.pull-top[
+.pull-left-4[
+<br>
+.font90[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+]
+]
+
+--
+
+.pull-down[
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
+.pull-left-4[
+.shadow1a[
+.font80[**Efeitos de tratamentos** <br>
+(média do tratamento menos a média geral)]
+$$\small E_{p1} = \bar{P}_1 - m \\ E_{p1} = 14,55 - 12,4125 \\ \color{red}{E_{p1} = 2,1375}$$
+.font70[(Efeito da progênie 1 sobre as parcelas experimentais.)]
+
+]
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+.font70[
+
+.center[Tabela de suporte para cálculo dos efeitos.]
+
+| **Tratamento** | **Média** | **Média Geral** | **Efeito do Tratamento** |
+|:---:|:---:|:---:|:---:|
+| P1 | 14,550 | 12,4125 | 2,1375 |
+| P2 | 14,300 | 12,4125 | 1,8875 |
+| P3 | 14,2250 | 12,4125 | 1,8125 |
+| P4 | 14,1250 | 12,4125 | 1,7125 |
+| P5 | 13,0 | 12,4125 | 0,5875 |
+| P6 | 12,4250 | 12,4125 | 0,0125 |
+| P7 | 12,0500 | 12,4125 | -0,3625 |
+| P8 | 11,6750 | 12,4125 | -0,7375 |
+| P9 | 9,0 | 12,4125 | -3,4125 |
+| P10 | 8,7750 | 12,4125 | -3,6375 |
+
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + e_{ij}$
+<br><br>
+
+$\color{red}{t_{i}}$ = .font90[**Efeito dos tratamentos (progênies) sobre as parcelas experimentais.**]
 
 ]
 
-.pull-right-9[
+--
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/Fator.png')
+.right-column[
+```{r, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = round(mean(d) - m, 3)) %>% 
+  CustomDT
 ```
-<br>
+]
 
-$$
-C = \dfrac{\left( 496.5\right)^2}{10*4} = \dfrac{246.512,25}{40} = 6.162,81
-$$
+---
 
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
+<br><br>
+
+$\color{green}{e_{ij}}$ = .font90[**Efeito dos fatores não controlados (erro experimental) sobre as parcelas experimentais.**]
+
+]
+
+--
+
+.right-column[
+```{r, echo=F, eval=T}
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = round(mean(d) - m, 3), 
+         eij = round((d-(m+ti)), 3)) %>% 
+  rename(`d = Yij` = d) %>%
+  CustomDT
+```
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+
+.left-column[
+
+### .font80[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+
+.font80[**2º Passo**: Determinar as Somas de Quadrados. (.blue[Inicialmente, vamos isolar os efeitos sobre cada observação]] $Y_{ij}$.)
+<br><br>
+
+.font80[**Modelo Estatístico**:] $\normalsize Y_{ij} = \color{orange}{m} + \color{red}{t{_i}} + \color{green}{e_{ij}}$
+<br><br>
+
+.font90[**Agora, basta obter os quadrados dos valores de**] $t_{i}$ e $e_{ij}$ .font90[**e, em seguida, somá-los.**].
+
+]
+
+--
+
+.right-column[
+```{r, echo=F, eval=T}
+background <- "value == 'Total' ? 'orange' : value != 'else' ? '' : ''"  
+class(background) <- "JS_EVAL"
+
+df %>% 
+  mutate(m = mean(d)) %>%
+  group_by(Progenie) %>% 
+  mutate(ti = mean(d) - m, 
+         eij = (d-(m+ti)),
+         `ti²` = ti^2,
+         `eij²` = eij^2) %>% 
+  janitor::adorn_totals("row") %>%
+  mutate(across(where(is.numeric), round, 3)) %>%
+  rename(`d = Yij` = d) %>%
+  CustomDT %>%
+DT::formatStyle(
+  'Progenie',
+  target = 'row',
+  backgroundColor = background  
+)
+```
 ]
 
 ---
@@ -1853,32 +1926,14 @@ $$
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais - SQ<sub>Tot.</sub>]
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados Totais]
 <br><br>
 
-.pull-left-9[
-```{r tb3, echo=F, eval=T}
-data %>% 
-  Customkbl
-```
+$\large SQ_{Tot.} = SQ_{Trat.} + SQR$
 
-$$
-\begin{equation*}
-\sum_{i=1}^{I}\sum_{j=1}^{J}Y_{ij}^2 = 16^2 + 16,4^2 + 14,1^2 + ... + 9,2^2 = 6.401,35
-\end{equation*}
-$$
-]
+$\large SQ_{Tot.} = 160,98 + 77,56$
 
-.pull-right-9[
-```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
-```
-
-$$
-SQ_{Tot.} = 6.401,35 - 6.162,81 = 238,54
-$$
-
-]
+$\large SQ_{Tot.} = 238,54$
 
 ---
 
@@ -1888,36 +1943,12 @@ $$
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Tratamentos - SQ<sub>Trat.</sub>]
+**2º Passo**: Determinar as Somas de Quadrados - .blue[Adicionar no quadro da ANOVA]
 <br><br>
 
-.pull-left-9[
-```{r tb4, echo=F, eval=T}
-df1 %>% 
-  Customkbl %>% 
-  row_spec(5, color = 'white', background = 'orange')
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 ```
-
-$$
-\begin{equation*}
-\small
-\sum_{i=1}^{I}\left ( \sum_{j=1}^{J}Y_{ij} \right )^2 = 58,2^2 + 57,2^2 + 56,9^2 + ... + 35,1^2 = 25.295,17
-\end{equation*}
-$$
-]
-
-
-.pull-right-9[
-
-```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
-```
-
-$$
-SQ_{trat.} = \dfrac{25.295,17}{4} - 6.162,81 = 160,98
-$$
-
-]
 
 ---
 
@@ -1927,14 +1958,30 @@ $$
 ### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
 <br>
 
-**2º Passo**: Determinar as Somas de Quadrados - .blue[Soma de Quadrados de Resíduos - SQR]
+**3º Passo**: Determinar os Quadrados Médios - .blue[Adicionar no quadro da ANOVA]
 <br><br>
 
-$\large SQR = SQ_{Tot.} - SQ_{Trat.}$
+```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-QM.png')
+```
 
-$\large SQR = 238,54 - 160,98$
+---
 
-$\large SQR = 77,56$
+## Delineamento Inteiramente Casualizado
+<br>
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**Finalmente, têm-se o quadro final da ANOVA de experimentos em DIC!**
+<br><br>
+
+```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('fig/class4/ANOVA-Final.png')
+```
+
+]
 
 ---
 
