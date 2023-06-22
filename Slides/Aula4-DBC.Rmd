@@ -126,7 +126,7 @@ Customkbl <- function(data){
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 <br>
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Blocos <br> Casualizados `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Blocos `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Casualizados
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
