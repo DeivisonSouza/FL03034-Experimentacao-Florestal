@@ -1814,7 +1814,7 @@ knitr::include_graphics('fig/class5/ANOVA-DBC-Final.png')
 - Hipótese alternativa (H<sub>1</sub>)
 <br>
 
-**Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, das 7 procedências de *Eucalyptus grandis*.
+**Existe diferença** significativa entre as **médias** de produção de madeira, em m³/ha, para pelo menos duas procedências de *Eucalyptus grandis*.
 ]
 ]
 
