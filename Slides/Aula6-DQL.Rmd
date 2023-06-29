@@ -1822,15 +1822,15 @@ Para os cálculos de somas de quadrados da ANOVA precisa-se:
 - .blue[Das somas de tratamentos (cultivar)];
 <br><br>
 
-Vermelho = .red[P1]
+Vermelho = .red[Cultivar 1]
 
-Laranja = .orange[P4]
+Verde = .green[Cultivar 2]
 
-Azul = .blue[P3]
+Azul = .blue[Cultivar 3]
 
-Verde = .green[P2]
+Laranja = .orange[Cultivar 4]
 
-Preto = P5
+Preto = Cultivar 5
 
 ]
 ]

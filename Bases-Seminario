@@ -1,35 +1,35 @@
 
-Grupo 1
+Base 1
 
 Conjunto de dados: Diâmetro de Tubetes na Formação de Mudas de Eucalipto
 Pacote: labestData da linguagem R
 Acesso: labestData::BanzattoQd7.3.1
 Fonte: BANZATTO; KRONKA (2013), Quadro 7.3.1, pág. 177.
-Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "diâmetro do tubete (dt)" e variável resposta "altura das mudas (alt) 75 dias após a semeadura".
+Obs.: A base possui 2 fatores. Porém, analise o experimento apenas para o fator "diâmetro do tubete (dt)" e variável resposta "altura das mudas (alt) 75 dias após a semeadura".
 
 #------------------------
 
-Grupo 2
+Base 2
 
 Conjunto de dados: Diâmetro Médio do Tronco de Espécies de Eucalipto
 Pacote: labestData da linguagem R
 Acesso: labestData::BarbinEx13
 Fonte: BARBIN (2013), Exercício 13, pág. 206.
-Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "espécie (euca)" e variável resposta "diâmetro médio das plantas úteis da parcela (diam)".
+Obs.: A base possui 2 fatores. Porém, analise o experimento apenas para o fator "espécie (euca)" e variável resposta "diâmetro médio das plantas úteis da parcela (diam)".
 
 #------------------------
 
-Grupo 3
+Base 3
 
 Conjunto de dados: Altura de Plantas de Espécies de Eucalipto em Vários Locais
 Pacote: labestData da linguagem R
 Acesso: labestData::BarbinEx18
 Fonte: BARBIN (2013), Exercício 18, pág. 210.
-Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fator "espécie (espec)" e variável resposta "altura de plantas (alt) de eucalipto com 3 anos de idade".
+Obs.: A base possui 2 fatores. Porém, analise o experimento apenas para o fator "espécie (espec)" e variável resposta "altura de plantas (alt) de eucalipto com 3 anos de idade".
 
 #------------------------
 
-Grupo 4
+Base 4
 
 Conjunto de dados: Controle Químico do Damping-off em Eucalipto
 Pacote: labestData da linguagem R
@@ -39,7 +39,7 @@ Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fato
 
 #------------------------
 
-Grupo 5
+Base 5
 
 Conjunto de dados: Altura de 6 Progênies de E. grandis em Três Locais
 Pacote: labestData da linguagem R
@@ -49,7 +49,7 @@ Obs.: A base possui 2 fatores. Porém, análise o experimento apenas para o fato
 
 #------------------------
 
-Grupo 6
+Base 6
 
 Conjunto de dados: Peso das Plantas 30 após a Semeadura
 Pacote: labestData da linguagem R
@@ -60,7 +60,7 @@ pode admitir tratamentos hipóteticos para o fator "trat".
 
 #------------------------
 
-Grupo 7
+Base 7
 
 Conjunto de dados: Qualidade de Mudas em Função do Recipiente da Espécie
 Pacote: labestData da linguagem R
@@ -69,7 +69,13 @@ Fonte: FARIA (2009), Quadro 11.9, pág 145.
 Obs.:  A base possui 2 fatores. Porém, análise o experimento apenas para o fator "tipo de recipientes (recip)" e a variável resposta "qualidade das mudas (quali)".
 
 
+# Como instalar o labestData
 
+install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1.1.462.zip",
+                 repos = NULL) # labestData Para Windows.
+
+install.packages("http://leg.ufpr.br/~walmes/pacotes/labestData_0.1-1.462.tar.gz",
+                 repos = NULL) # labestData Para Linux.
 
 
 
