@@ -290,7 +290,7 @@ data %>% CustomDT2
 
 2) Realize uma análise exploratória dos dados experimentais (quantitativa e visual).
 
-3) Realize a ANOVA do experimento em DIC e interprete o Teste F-Snedecor (experimente $\alpha$ = 0,01 e 0,05).
+3) Realize a ANOVA do experimento em DIC e interprete o Teste F-Snedecor (Conclua sobre as hipóteses!).
 
 4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)
 
@@ -580,44 +580,113 @@ data |>
 ## Análise de Experimentos em DIC com R
 <br>
 
-**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor.]**
+
+
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor]**
 
 .pull-left-4[
 .font80[
-- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato)...
-
-```{r xplot, echo=T, eval=F}
-
-library(lattice)
-
-xyplot(CR ~ reorder(Sub, -CR),
-       data = data,
-       type = c("p", "a"),
-       ylab = expression("Diâmetro (cm)"),
-       xlab = expression("Substrato"))
+```{r, echo=T, eval=T, collapse=F}
+# Ajustar o modelo (resposta: CR)
+m0 <- lm(CR ~ Sub, data = data)
+anova(m0)
 ```
+
+- **Interpretação**: Como o p-valor calculado (1.756e-07) é menor que o nível de significância adotado (α = 0,05), rejeita H0. Portanto, existem evidências de diferenças significativas entre pelo menos duas médias de Comprimento de Raiz (CR) para os diferentes substratos.
 ]
 ]
 
 --
 
 .pull-right-4[
-<br><br>
-```{r ref.label="xplot", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=3.5, fig.align='center', fig.cap='', dpi=600}
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Ajustar o modelo (resposta: CPA)
+m1 <- lm(CPA ~ Sub, data = data)
+anova(m1)
 ```
+
+- **Interpretação**: Como o p-valor calculado (1.403e-07) é menor que o nível de significância adotado (α = 0,05), rejeita H0. Portanto, existem evidências de diferenças significativas entre pelo menos duas médias de Comprimento da Parte Aérea (CPA) para os diferentes substratos.
+]
 ]
 
 ---
 
 ## Análise de Experimentos em DIC com R
-<br>
 
-**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor <br> (experimente α = 0,01 e 0,05).]**
+**.blue[4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)]**
 
+.font80[
+* **1 - Teste de Normalidade dos Resíduos** (Shapiro-Wilk, Kolmogorov-Smirnov)
 
+**H0**: Os erros (resíduos) seguem a distribuição normal.
 
+**H1**: Os erros (resíduos) não seguem distribuição normal.
+]
 
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Shapiro-Wilk
+shapiro.test(m0$res)
+```
 
+- **Interpretação**: Como p-valor calculado (p = 0.06318) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros seguem a distribuição normal.
+]
+]
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Shapiro-Wilk
+shapiro.test(m1$res)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0.751) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros seguem a distribuição normal.
+]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)]**
+
+.font80[
+* **1 - Teste de Homogeneidade dos Resíduos** (Bartlett, Levene)
+
+**H0**: As variâncias são homogêneas.
+
+**H1**: As variâncias não são homogêneas.
+]
+
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Bartlett
+bartlett.test(m0$res~Sub, data = data)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,4772) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+]
+]
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Bartlett
+bartlett.test(m1$res~Sub, data = data)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,08702) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+]
+]
 
 ---
 

@@ -44,7 +44,7 @@ data7 <- labestData::FariaQd11.9     # Grupo 7
 # 5: Ajuste dos modelos ----------------------------------------
 
 m0 <- lm(dc ~ Substrato, data = data)
-mX <- lm(CR ~ Sub, data = dataX)
+mX <- lm(CPA ~ Sub, data = dataX)
 m1 <- lm(alt ~ dt + bloco, data = data1)
 m2 <- lm(diam ~ euca + bloc, data = data2)
 m3 <- lm(alt ~ espec, data = data3)
@@ -95,9 +95,6 @@ DIC(Substrato, h, mcomp = "tukey")
 DIC(Substrato, dc, mcomp = "tukey")
 DIC(Sub, CR, mcomp = "tukey")
 DIC(Sub, CPA, mcomp = "tukey")
-DIC(Sub, CRR, mcomp = "tukey")
-
-
 
 DBC(dt, bloco, alt, mcomp = "duncan")      # Grupo 3
 DBC(euca, bloc, diam)                      # Grupo 6
