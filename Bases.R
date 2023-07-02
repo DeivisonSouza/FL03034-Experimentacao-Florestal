@@ -29,10 +29,10 @@ help(PimentelEg5.2)           # Mostra as informações de ajuda do dataset.
 labestDataView()              # Abre aplicação shiny para navegar pelos dados.
 browseVignettes("labestData") # Abre a lista de vinhetas no navegador.
 help(obras)                   # Documentação das obras contidas no pacote.
-
+rea
 # 4: Alguns conjuntos de dados ---------------------------------
 data <- read_csv(file = "Slides/data/DIC-Ficticio.csv")
-dataX <- read_csv(file = "Slides/data/DIC_Ficticio2.csv")
+dataX <- read_csv(file = "Slides/data/DIC_Ficticio2.csv", col_types = 'ffdd')
 data1 <- labestData::BanzattoQd7.3.1 # Grupo 1 (DBC)
 data2 <- labestData::BarbinEx13      # Grupo 2 (DBC)
 data3 <- labestData::BarbinEx18      # Grupo 3
@@ -72,11 +72,11 @@ plot(mX); layout(1)
 # Usando o pacote agricolae
 #------------------------------------------
 # Teste de Tukey
-out.tukey <- LSD.test(m0, "Substrato", group=TRUE,
-                          alpha=0.05, console=TRUE)
-bar.group(out.tukey$group)
-bar.err(out.tukey$means)
-plot(out.tukey, variation="range",las=1)
+m0 <- lm(CR ~ Sub, data = dataX)
+outHSD <- HSD.test(m0, "Sub", console=TRUE)
+bar.group(outHSD$group)
+bar.err(outHSD$means)
+plot(outHSD, variation="range",las=1)
 
 # Teste de Duncan
 out.duncan <- duncan.test(m0, "Substrato", group=TRUE,
@@ -95,7 +95,11 @@ DIC(Substrato, h, mcomp = "tukey")
 DIC(Substrato, dc, mcomp = "tukey")
 DIC(Sub, CR, mcomp = "tukey")
 DIC(Sub, CPA, mcomp = "tukey")
+result <- DIC(trat = Sub,
+         response = CR,
+         mcomp = "tukey")
 
+result[[1]]
 DBC(dt, bloco, alt, mcomp = "duncan")      # Grupo 3
 DBC(euca, bloc, diam)                      # Grupo 6
 DIC(espec, alt)                            # Grupo 4
@@ -108,9 +112,9 @@ DIC(recip, quali)                          # Grupo 1
 # Usando o Pacote ExpDes.pt
 #------------------------------------------
 help(ExpDes.pt)
-dic(
+x <- dic(
   trat = Sub,
-  resp = cr,
+  resp = CR,
   quali = TRUE,
   mcomp = "tukey",
   nl = FALSE,

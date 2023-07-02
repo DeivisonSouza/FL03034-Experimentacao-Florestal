@@ -226,7 +226,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.1 - Pacote AgroR](#agror)
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.2 - Pacote agricolae](#agri)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.2 - Pacote agricolae](#agricolae)
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.3 - Pacote ExpDes.pt](#expdes)
 
@@ -1016,7 +1016,6 @@ result4 <- with(data,
 ```{r, echo=F, eval=T, collapse=F, out.width='80%'}
 result4[[1]][["data"]]
 ```
-
 ]
 ]
 
@@ -1024,7 +1023,75 @@ result4[[1]][["data"]]
 ```{r, echo=F, eval=T, collapse=F, out.width='80%'}
 result4[[1]]
 ```
+]
 
+---
+name: agricolae
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote agricolae]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
+```{r, echo=T, eval=T, collapse=F}
+# Pacote agricolae
+# install.packages('agricolae')
+library(agricolae)                  # Carrega o pacote
+?HSD.test                           # Ajuda da função `HSD.test ()`
+
+outHSD <- HSD.test(y = m0,          # Modelo ajustado (aov ou lm)
+                   trt = "Sub",     # Qual coluna de Tratamentos?       
+                   alpha = 0.05,    # Nível de significância
+                   console = FALSE) # Imprimir saída no console?
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+outHSD[["groups"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='85%'}
+plot(outHSD, variation="range",las=1)
+```
+]
+
+---
+name: agricolae
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote agricolae]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
+```{r, echo=T, eval=T, collapse=F}
+# Pacote agricolae
+# install.packages('agricolae')
+library(agricolae)                  # Carrega o pacote
+?HSD.test                           # Ajuda da função `HSD.test ()`
+
+
+outHSD2 <- HSD.test(y = m1,         # Modelo ajustado (aov ou lm)
+                   trt = "Sub",     # Qual coluna de Tratamentos?       
+                   alpha = 0.05,    # Nível de significância
+                   console = FALSE) # Imprimir saída no console?
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+outHSD2[["groups"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='85%'}
+plot(outHSD2, variation="range",las=1)
+```
 ]
 
 ---
