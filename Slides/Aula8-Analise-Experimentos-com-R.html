@@ -7,7 +7,7 @@
     <script src="Aula8-Analise-Experimentos-com-R_files/header-attrs-2.22/header-attrs.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <link href="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xa9ecb005ebd47c3be25757569468796","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8fcf373d01e48309910012d8e5e9a53","expires":1}</script>
     <script src="Aula8-Analise-Experimentos-com-R_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -113,7 +113,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 29/junho/2023) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 02/julho/2023) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -162,14 +162,36 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ## Conteúdo
 
 .pull-left-4[
-.font90[
-**Parte 1 - Alguns pacotes especializados disponíveis no R**
+.font80[
+**Parte 1 - Estudo de caso 1: Experimento em DIC (substratos)**
 
-[1 - Pacote agricolae](#agri)
+[1 - Dados experimentais](#de)
 
-[2 - Pacote ExpDes.pt](#expdes)
+[2 - Um roteiro de análise dos dados](#rad)
 
-[3 - Pacote AgroR](#agror)
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.1 - Carregar os dados e avaliar a estrutura](#ccd)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.2 - Realizar uma análise exploratória dos dados](#raed)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.3 - Realizar a ANOVA do experimento em DIC](#aovdic)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.4 - Realizar a análise de pressupostos da ANOVA](#press)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.4.1 - Teste de Normalidade dos Resíduos](#norm)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.4.2 - Teste de Homogeneidade dos Resíduos](#homo)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.4.3 - Teste de Independência dos Resíduos](#ind)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.5 - Testes de comparações múltiplas de médias](#tcm)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6 - Experimentando pacotes especializados](#epe)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6.1 - Pacote AgroR](#agror)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6.2 - Pacote agricolae](#agri)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[2.6.3 - Pacote ExpDes.pt](#expdes)
 
 ]
 ]
@@ -177,9 +199,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 .pull-right-4[
 .pull-down[
 .font90[
-**Parte 2 - Estudos de casos de experimentos**
-
-[1 - Diferentes tipos de substratos &lt;br&gt; (comprimento da raíz e parte aérea) - Experimento em DIC](#dic)
 
 ]
 ]
@@ -207,7 +226,7 @@ layout: true
 &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R&lt;/div&gt;
 
 ---
-name: anvdic
+name: de
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
@@ -226,8 +245,8 @@ Um experimento foi conduzido sob o delineamento inteiramente casualizado (DIC), 
 ## Análise de Experimentos em DIC com R
 
 .left-column[
-<div id="htmlwidget-8dd80f287bd57a7a29e8" style="width:500px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-8dd80f287bd57a7a29e8">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["FC","FC","FC","FC","FC","A + EB","A + EB","A + EB","A + EB","A + EB","CA + TS","CA + TS","CA + TS","CA + TS","CA + TS","SC","SC","SC","SC","SC","TP","TP","TP","TP","TP"],[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5],[5,5.5,6,4,4.5,6.5,8,8,7,7.5,8,9,8.5,7.5,7,6,8,8,6,7,9.800000000000001,9.5,9.9,9.699999999999999,9],[23.2,23.7,23.2,22.2,22.7,25.7,26.2,26.2,25.2,25.7,26.2,27.2,26.7,25.7,25.2,24.2,27.2,26.2,24.2,25.2,28,27.7,28.1,27.9,27.2]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Sub<\/th>\n      <th>Rep<\/th>\n      <th>CR<\/th>\n      <th>CPA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-33673739141d0e82d171" style="width:500px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-33673739141d0e82d171">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["FC","FC","FC","FC","FC","A + EB","A + EB","A + EB","A + EB","A + EB","CA + TS","CA + TS","CA + TS","CA + TS","CA + TS","SC","SC","SC","SC","SC","TP","TP","TP","TP","TP"],[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5],[5,5.5,6,4,4.5,6.5,8,8,7,7.5,8,9,8.5,7.5,7,6,8,8,6,7,9.800000000000001,9.5,9.9,9.699999999999999,9],[23.2,23.7,23.2,22.2,22.7,25.7,26.2,26.2,25.2,25.7,26.2,27.2,26.7,25.7,25.2,24.2,27.2,26.2,24.2,25.2,28,27.7,28.1,27.9,27.2]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Sub<\/th>\n      <th>Rep<\/th>\n      <th>CR<\/th>\n      <th>CPA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .right-column[
@@ -237,7 +256,7 @@ Um experimento foi conduzido sob o delineamento inteiramente casualizado (DIC), 
 ]
 
 ---
-
+name: rad
 ## Análise de Experimentos em DIC com R
 
 - **Vamos analisar esses dados experimentais...**
@@ -252,7 +271,7 @@ Um experimento foi conduzido sob o delineamento inteiramente casualizado (DIC), 
 
 3) Realize a ANOVA do experimento em DIC e interprete o Teste F-Snedecor (Conclua sobre as hipóteses!).
 
-4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)
+4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses e análise visual.)
 
 5) Se os pressupostos da ANOVA são atendidos, realize testes de comparações múltiplas de médias paramétricos (Tukey e Duncan).
 &lt;br&gt;&lt;br&gt;
@@ -262,7 +281,7 @@ Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
 ]
 
 ---
-
+name: ccd
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
@@ -363,7 +382,7 @@ xtabs(~Sub + Rep, data = data)
 ]
 
 ---
-
+name: raed
 ## Análise de Experimentos em DIC com R
 &lt;br&gt;
 
@@ -464,8 +483,8 @@ plotly::ggplotly(g1)
 ]
 
 .pull-right-4[
-<div id="htmlwidget-bf13523272bad4169114" style="width:540px;height:420px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-bf13523272bad4169114">{"x":{"data":[{"x":[5,5,5,5,5],"y":[5,5.5,6,4,4.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[6.5,8,8,7,7.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[8,9,8.5,7.5,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[6,8,8,6,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[9.8000000000000007,9.5,9.9000000000000004,9.6999999999999993,9],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[9.5800000000000001,8,7.4000000000000004,7,5],"text":["reorder(Sub, -CR): TP<br />CR: 9.58","reorder(Sub, -CR): CA + TS<br />CR: 8.00","reorder(Sub, -CR): A + EB<br />CR: 7.40","reorder(Sub, -CR): SC<br />CR: 7.00","reorder(Sub, -CR): FC<br />CR: 5.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.55,11.449999999999999],"tickmode":"array","ticktext":["2","4","6","8","10"],"tickvals":[2,4,6,8,10],"categoryorder":"array","categoryarray":["2","4","6","8","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Raiz (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"408b3a498d9b":{"fill":{},"x":{},"y":{},"type":"box"},"408b478fa36a":{"x":{},"y":{}}},"cur_data":"408b3a498d9b","visdat":{"408b3a498d9b":["function (y) ","x"],"408b478fa36a":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-f8b486758943c00a2286" style="width:540px;height:420px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-f8b486758943c00a2286">{"x":{"data":[{"x":[5,5,5,5,5],"y":[5,5.5,6,4,4.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[6.5,8,8,7,7.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[8,9,8.5,7.5,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[6,8,8,6,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[9.8000000000000007,9.5,9.9000000000000004,9.6999999999999993,9],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[9.5800000000000001,8,7.4000000000000004,7,5],"text":["reorder(Sub, -CR): TP<br />CR: 9.58","reorder(Sub, -CR): CA + TS<br />CR: 8.00","reorder(Sub, -CR): A + EB<br />CR: 7.40","reorder(Sub, -CR): SC<br />CR: 7.00","reorder(Sub, -CR): FC<br />CR: 5.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.55,11.449999999999999],"tickmode":"array","ticktext":["2","4","6","8","10"],"tickvals":[2,4,6,8,10],"categoryorder":"array","categoryarray":["2","4","6","8","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Raiz (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"4f527a295b7b":{"fill":{},"x":{},"y":{},"type":"box"},"4f5212f287a7":{"x":{},"y":{}}},"cur_data":"4f527a295b7b","visdat":{"4f527a295b7b":["function (y) ","x"],"4f5212f287a7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -504,8 +523,8 @@ plotly::ggplotly(g2)
 ]
 
 .pull-right-4[
-<div id="htmlwidget-6ed039f85b30b53fae43" style="width:540px;height:420px;" class="plotly html-widget"></div>
-<script type="application/json" data-for="htmlwidget-6ed039f85b30b53fae43">{"x":{"data":[{"x":[5,5,5,5,5],"y":[23.199999999999999,23.699999999999999,23.199999999999999,22.199999999999999,22.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[25.699999999999999,26.199999999999999,26.199999999999999,25.199999999999999,25.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[26.199999999999999,27.199999999999999,26.699999999999999,25.699999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[24.199999999999999,27.199999999999999,26.199999999999999,24.199999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[28,27.699999999999999,28.100000000000001,27.899999999999999,27.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[27.780000000000001,26.199999999999999,25.800000000000001,25.399999999999999,23],"text":["reorder(Sub, -CPA): TP<br />CPA: 27.78","reorder(Sub, -CPA): CA + TS<br />CPA: 26.20","reorder(Sub, -CPA): A + EB<br />CPA: 25.80","reorder(Sub, -CPA): SC<br />CPA: 25.40","reorder(Sub, -CPA): FC<br />CPA: 23.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[21.649999999999999,29.350000000000001],"tickmode":"array","ticktext":["22","24","26","28"],"tickvals":[22,24,26,28],"categoryorder":"array","categoryarray":["22","24","26","28"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Parte Aérea (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"408b7cc0451f":{"fill":{},"x":{},"y":{},"type":"box"},"408b1472cacd":{"x":{},"y":{}}},"cur_data":"408b7cc0451f","visdat":{"408b7cc0451f":["function (y) ","x"],"408b1472cacd":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-c6d912a81bbb7d4afdcb" style="width:540px;height:420px;" class="plotly html-widget"></div>
+<script type="application/json" data-for="htmlwidget-c6d912a81bbb7d4afdcb">{"x":{"data":[{"x":[5,5,5,5,5],"y":[23.199999999999999,23.699999999999999,23.199999999999999,22.199999999999999,22.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[25.699999999999999,26.199999999999999,26.199999999999999,25.199999999999999,25.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[26.199999999999999,27.199999999999999,26.699999999999999,25.699999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[24.199999999999999,27.199999999999999,26.199999999999999,24.199999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[28,27.699999999999999,28.100000000000001,27.899999999999999,27.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":null},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[27.780000000000001,26.199999999999999,25.800000000000001,25.399999999999999,23],"text":["reorder(Sub, -CPA): TP<br />CPA: 27.78","reorder(Sub, -CPA): CA + TS<br />CPA: 26.20","reorder(Sub, -CPA): A + EB<br />CPA: 25.80","reorder(Sub, -CPA): SC<br />CPA: 25.40","reorder(Sub, -CPA): FC<br />CPA: 23.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[21.649999999999999,29.350000000000001],"tickmode":"array","ticktext":["22","24","26","28"],"tickvals":[22,24,26,28],"categoryorder":"array","categoryarray":["22","24","26","28"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Parte Aérea (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","showSendToCloud":false},"source":"A","attrs":{"4f522ebe73b5":{"fill":{},"x":{},"y":{},"type":"box"},"4f5262991350":{"x":{},"y":{}}},"cur_data":"4f522ebe73b5","visdat":{"4f522ebe73b5":["function (y) ","x"],"4f5262991350":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -593,16 +612,7 @@ data |&gt;
 ]
 
 ---
-
-## Análise de Experimentos em DIC com R
-&lt;br&gt;
-
-**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor.]**
-
-
-
----
-
+name: aovdic
 ## Análise de Experimentos em DIC com R
 
 **.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor]**
@@ -658,13 +668,13 @@ anova(m1)
 ]
 
 ---
-
+name: norm
 ## Análise de Experimentos em DIC com R
 
-**.blue[4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)]**
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
 
 .font80[
-* **1 - Teste de Normalidade dos Resíduos** (Shapiro-Wilk, Kolmogorov-Smirnov)
+* **1 - Teste de Normalidade dos Resíduos (Teste de Hipótese)** (Shapiro-Wilk, Kolmogorov-Smirnov)
 
 **H0**: Os erros (resíduos) seguem a distribuição normal.
 
@@ -687,7 +697,7 @@ shapiro.test(m0$res)
 ## W = 0.92398, p-value = 0.06318
 ```
 
-- **Interpretação**: Como p-valor calculado (p = 0.06318) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros seguem a distribuição normal.
+- **Interpretação**: Como p-valor calculado (p = 0.06318) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros seguem a distribuição normal.
 ]
 ]
 
@@ -707,7 +717,7 @@ shapiro.test(m1$res)
 ## W = 0.97417, p-value = 0.751
 ```
 
-- **Interpretação**: Como p-valor calculado (p = 0.751) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros seguem a distribuição normal.
+- **Interpretação**: Como p-valor calculado (p = 0.751) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros seguem a distribuição normal.
 ]
 ]
 
@@ -715,10 +725,40 @@ shapiro.test(m1$res)
 
 ## Análise de Experimentos em DIC com R
 
-**.blue[4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses.)]**
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
 
 .font80[
-* **1 - Teste de Homogeneidade dos Resíduos** (Bartlett, Levene)
+* **1 - Teste de Normalidade dos Resíduos (Análise visual)**
+
+- **Conclusão**: Os gráficos (Normal Q-Q) evidenciam que os erros (resíduos) possuem distribuição normal. (**Não se Rejeita H0**)
+
+.pull-left-4[
+
+```r
+plot(m0, 2)
+```
+
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-14-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+
+```r
+plot(m1, 2)
+```
+
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-15-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+name: homo
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **2 - Teste de Homogeneidade dos Resíduos (Teste de Hipótese)** (Bartlett, Levene)
 
 **H0**: As variâncias são homogêneas.
 
@@ -741,7 +781,7 @@ bartlett.test(m0$res~Sub, data = data)
 ## Bartlett's K-squared = 3.5044, df = 4, p-value = 0.4772
 ```
 
-- **Interpretação**: Como p-valor calculado (p = 0,4772) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+- **Interpretação**: Como p-valor calculado (p = 0,4772) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
 ]
 ]
 
@@ -761,8 +801,365 @@ bartlett.test(m1$res~Sub, data = data)
 ## Bartlett's K-squared = 8.1275, df = 4, p-value = 0.08702
 ```
 
-- **Interpretação**: Como p-valor calculado (p = 0,08702) é maior que o nível de significância adotado (α = 0,05), não se rejeita H0. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+- **Interpretação**: Como p-valor calculado (p = 0,08702) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
 ]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **2 - Teste de Homogeneidade dos Resíduos (Análise visual)**
+
+- **Conclusão**: Nos gráficos (*Residuals vs Fitted*) existem evidências para admitir erros (resíduos) com homogeneidade de variâncias. (**Não se Rejeita H0**).
+
+.pull-left-4[
+
+```r
+plot(m0, 1)
+```
+
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-18-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+
+```r
+plot(m1, 1)
+```
+
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-19-1.png" width="60%" style="display: block; margin: auto;" /&gt;
+]
+]
+
+---
+name: ind
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **3 - Teste de Independência dos Resíduos (Teste de Hipótese)** (Durbin-Watson)
+
+**H0**: Os erros são independentes.
+
+**H1**: Os erros não são independentes.
+]
+
+.pull-left-4[
+.font80[
+
+```r
+# Teste de Durbin-Watson
+library(lmtest)
+dwtest(m0)
+```
+
+```
+## 
+## 	Durbin-Watson test
+## 
+## data:  m0
+## DW = 1.8512, p-value = 0.1024
+## alternative hypothesis: true autocorrelation is greater than 0
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,1024) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros são independentes.
+]
+]
+
+.pull-right-4[
+.font80[
+
+```r
+# Teste de Durbin-Watson
+dwtest(m1)
+```
+
+```
+## 
+## 	Durbin-Watson test
+## 
+## data:  m1
+## DW = 1.8459, p-value = 0.09991
+## alternative hypothesis: true autocorrelation is greater than 0
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,09991) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros são independentes.
+]
+]
+
+---
+name: tcm
+## Análise de Experimentos em DIC com R
+
+**.blue[5) Testes de comparações múltiplas de médias (Tukey e Duncan)]**
+
+.pull-left-4[
+.font70[
+
+```r
+# Teste de Tukey
+TukeyHSD(aov(m0))
+```
+
+```
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = m0)
+## 
+## $Sub
+##                 diff        lwr       upr     p adj
+## A + EB-FC       2.40  0.9832442 3.8167558 0.0005047
+## CA + TS-FC      3.00  1.5832442 4.4167558 0.0000313
+## SC-FC           2.00  0.5832442 3.4167558 0.0034013
+## TP-FC           4.58  3.1632442 5.9967558 0.0000001
+## CA + TS-A + EB  0.60 -0.8167558 2.0167558 0.7132638
+## SC-A + EB      -0.40 -1.8167558 1.0167558 0.9132082
+## TP-A + EB       2.18  0.7632442 3.5967558 0.0014398
+## SC-CA + TS     -1.00 -2.4167558 0.4167558 0.2536180
+## TP-CA + TS      1.58  0.1632442 2.9967558 0.0242549
+## TP-SC           2.58  1.1632442 3.9967558 0.0002159
+```
+
+- **Interpretação**: Existem diferenças estatisticamente significativas (p adj &lt; 0,05) entre as médias para a maioria das comparações. 
+]
+]
+
+.pull-right-4[
+.font70[
+
+```r
+# Teste de Tukey
+TukeyHSD(aov(m1))
+```
+
+```
+##   Tukey multiple comparisons of means
+##     95% family-wise confidence level
+## 
+## Fit: aov(formula = m1)
+## 
+## $Sub
+##                 diff        lwr       upr     p adj
+## A + EB-FC       2.80  1.3458168 4.2541832 0.0001083
+## CA + TS-FC      3.20  1.7458168 4.6541832 0.0000185
+## SC-FC           2.40  0.9458168 3.8541832 0.0006768
+## TP-FC           4.78  3.3258168 6.2341832 0.0000000
+## CA + TS-A + EB  0.40 -1.0541832 1.8541832 0.9203487
+## SC-A + EB      -0.40 -1.8541832 1.0541832 0.9203487
+## TP-A + EB       1.98  0.5258168 3.4341832 0.0047676
+## SC-CA + TS     -0.80 -2.2541832 0.6541832 0.4870840
+## TP-CA + TS      1.58  0.1258168 3.0341832 0.0291335
+## TP-SC           2.38  0.9258168 3.8341832 0.0007426
+```
+
+- **Interpretação**: Existem diferenças estatisticamente significativas (p adj &lt; 0,05) entre as médias para a maioria das comparações. 
+]
+]
+
+---
+name: agror
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
+
+```r
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)         # Carrega o pacote
+?DIC                   # Ajuda da função `DIC()`
+
+result &lt;- with(data, 
+DIC(trat = Sub,        # Qual coluna de tratamentos?
+    response = CR,     # Qual coluna de variável resposta?
+    norm = "sw",       # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",      # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,    # Nível de significância do Teste F
+    alpha.t = 0.05,    # Nível do teste de comparações múltiplas
+    mcomp = "tukey",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+
+
+
+```
+##         resp groups media    desvio   trats   limite  letra
+## FC      5.00      c  5.00 0.7905694      FC 5.790569 5.00 c
+## A + EB  7.40      b  7.40 0.6519202  A + EB 8.051920 7.40 b
+## CA + TS 8.00      b  8.00 0.7905694 CA + TS 8.790569 8.00 b
+## SC      7.00      b  7.00 1.0000000      SC 8.000000 7.00 b
+## TP      9.58      a  9.58 0.3563706      TP 9.936371 9.58 a
+```
+
+]
+]
+
+.right-column[
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-26-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CR)**
+
+```r
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)          # Carrega o pacote
+?DIC                    # Ajuda da função `DIC()`
+
+result2 &lt;- with(data, 
+DIC(trat = Sub,         # Qual coluna de tratamentos?
+    response = CR,      # Qual coluna de variável resposta?
+    norm = "sw",        # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",       # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,     # Nível de significância do Teste F
+    alpha.t = 0.05,     # Nível do teste de comparações múltiplas
+    mcomp = "duncan",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+
+
+
+```
+##         resp groups media    desvio   trats   limite  letra
+## FC      5.00      c  5.00 0.7905694      FC 5.790569 5.00 c
+## A + EB  7.40      b  7.40 0.6519202  A + EB 8.051920 7.40 b
+## CA + TS 8.00      b  8.00 0.7905694 CA + TS 8.790569 8.00 b
+## SC      7.00      b  7.00 1.0000000      SC 8.000000 7.00 b
+## TP      9.58      a  9.58 0.3563706      TP 9.936371 9.58 a
+```
+
+]
+]
+
+.right-column[
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-29-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
+
+```r
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)         # Carrega o pacote
+?DIC                   # Ajuda da função `DIC()`
+
+result3 &lt;- with(data, 
+DIC(trat = Sub,        # Qual coluna de tratamentos?
+    response = CPA,     # Qual coluna de variável resposta?
+    norm = "sw",       # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",      # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,    # Nível de significância do Teste F
+    alpha.t = 0.05,    # Nível do teste de comparações múltiplas
+    mcomp = "tukey",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+
+
+
+```
+##          resp groups media    desvio   trats   limite  letra
+## FC      23.00      c 23.00 0.5700877      FC 23.57009 23.0 c
+## A + EB  25.80      b 25.80 0.4183300  A + EB 26.21833 25.8 b
+## CA + TS 26.20      b 26.20 0.7905694 CA + TS 26.99057 26.2 b
+## SC      25.40      b 25.40 1.3038405      SC 26.70384 25.4 b
+## TP      27.78      a 27.78 0.3563706      TP 28.13637 27.8 a
+```
+
+]
+]
+
+.right-column[
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-33-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CPA)**
+
+```r
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)          # Carrega o pacote
+?DIC                    # Ajuda da função `DIC()`
+
+result4 &lt;- with(data, 
+DIC(trat = Sub,         # Qual coluna de tratamentos?
+    response = CPA,     # Qual coluna de variável resposta?
+    norm = "sw",        # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",       # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,     # Nível de significância do Teste F
+    alpha.t = 0.05,     # Nível do teste de comparações múltiplas
+    mcomp = "duncan",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+
+
+
+```
+##          resp groups media    desvio   trats   limite  letra
+## FC      23.00      c 23.00 0.5700877      FC 23.57009 23.0 c
+## A + EB  25.80      b 25.80 0.4183300  A + EB 26.21833 25.8 b
+## CA + TS 26.20      b 26.20 0.7905694 CA + TS 26.99057 26.2 b
+## SC      25.40      b 25.40 1.3038405      SC 26.70384 25.4 b
+## TP      27.78      a 27.78 0.3563706      TP 28.13637 27.8 a
+```
+
+]
+]
+
+.right-column[
+&lt;img src="Aula8-Analise-Experimentos-com-R_files/figure-html/unnamed-chunk-37-1.png" width="80%" style="display: block; margin: auto;" /&gt;
+
 ]
 
 ---
