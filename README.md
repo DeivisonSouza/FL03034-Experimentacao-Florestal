@@ -44,6 +44,14 @@ e em consonância à [Resolução n. 5.686, de 26 de outubro de
 que aprovou o Calendário Acadêmico da Universidade Federal do Pará para
 o ano de 2024.
 
+**Acesse as normas gerais da UFPA:** 👇
+
+- [Regimento Geral da
+  UFPA](https://portal.ufpa.br/images/docs/regimento_geral.pdf)
+
+- [Regulamento do Ensino de Graduação da Universidade Federal do
+  Pará](http://www.proeg.ufpa.br/images/Artigos/Academico/Downloads/Regulamento_de_Graduacao.pdf)
+
 # Programação da disciplina
 
 A programação, o conteúdo e os slides da disciplina **Experimentação
