@@ -4,8 +4,27 @@
     <title>Experimentação Florestal (FL03034 - EF)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
-    <script src="Aula0-Cronograma_files/header-attrs-2.22/header-attrs.js"></script>
+    <script src="Aula0-Cronograma_files/header-attrs-2.25/header-attrs.js"></script>
     <link href="Aula0-Cronograma_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="Aula0-Cronograma_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="Aula0-Cronograma_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Aula0-Cronograma_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="Aula0-Cronograma_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="Aula0-Cronograma_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="Aula0-Cronograma_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x579df1576e14cea84d24265e06d1bec","expires":1}</script>
+    <script src="Aula0-Cronograma_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="Aula0-Cronograma_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="Aula0-Cronograma_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/editable-0.2.6/editable.js"></script>
+    <link href="Aula0-Cronograma_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="Aula0-Cronograma_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula0-Cronograma_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula0-Cronograma_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
     <script type="text/x-mathjax-config">
@@ -27,22 +46,41 @@
     <textarea id="source">
 
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
-background-position: 84% 90%, 95% 90%
-background-size: 220px, 90px, cover
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
 
 
+
+
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
 
 <div>
 <style type="text/css">.xaringan-extra-logo {
-width: 140px;
-height: 140px;
+width: 130px;
+height: 130px;
 z-index: 0;
-background-image: url(fig/slide-title/ufpa.png);
+background-image: url(fig/slide-title/LMFTCA.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
-top:.8em;right:-.5em;
+top:1em;right:.5em;
 }
 </style>
 <script>(function () {
@@ -65,23 +103,42 @@ top:.8em;right:-.5em;
   }
   document.addEventListener('DOMContentLoaded', addLogo)
 })()</script>
-</div>
-
-
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
 
 &lt;!-- title-slide --&gt;
-# Experimentação Florestal &lt;br&gt; (FL03034 - EF)
-&lt;br&gt;&lt;br&gt;
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Cronograma da disciplina <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> .font90[Programação e Orientações] <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+&lt;br&gt;
 
 #### **Prof. Dr. Deivison Venicio Souza**
-#### Universidade Federal do Pará (UFPA) 
-#### Faculdade de Engenharia Florestal
-#### E-mail: deivisonvs@ufpa.br
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 10/agosto/2021 &lt;br&gt; (Atualizado em: 12/junho/2023) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 10/agosto/2021 &lt;br&gt; (Atualizado em: 03/março/2024)
 
 ---
+
 layout: true
 &lt;div class="my-header"&gt;&lt;/div&gt;
 &lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Cronograma da disciplina&lt;/div&gt;
@@ -90,9 +147,10 @@ layout: true
 
 ## 👋 Olá, sejam bem vindos!
 &lt;br&gt;
+
 ### **Sobre o facilitador**
 .pull-left[
-.font80[
+.font90[
 1. .green[Graduação (Titulação: ano 2008)]
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
@@ -105,20 +163,31 @@ layout: true
 ]
 
 .pull-right[
-.font80[
+&lt;img src="fig/slide-title/Foto.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+&lt;br&gt;
+
+### **Sobre o facilitador**
+
+.pull-left[
+.font90[
 3. .green[Doutorado (Titulação: ano 2020)]
     - Universidade Federal do Paraná (UFPR);
     - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
     - Área de Concentração: Manejo Florestal.
     
 4. .green[Especialização (Defesa: ano 2019)]
-    - Universidade Federal do Paraná (UFPR)
+    - Universidade Federal do Paraná (UFPR);
     - Área: Big Data e Data Science
-    
- .center1[
-&lt;img src="fig/slide-title/img.jpeg" width="40%" style="display: block; margin: auto;" /&gt;
-]   
 ]
+]
+
+.pull-right[
+&lt;img src="fig/slide-title/Foto.jpeg" width="90%" style="display: block; margin: auto;" /&gt;
 ]
 
 ---
@@ -126,6 +195,7 @@ layout: true
 ## 👋 Olá, sejam bem vindos!
 
 .pull-left[
+.font90[
 ### **Interesses atuais**
 1. .green[Linguagem de programação]
     - R
@@ -134,29 +204,30 @@ layout: true
 2. .green[Modelagem preditiva aplicada à ciência florestal]
     - Aprendizado de máquina
     
-3. .green[Visão computacional e Reconhecimento de imagens]
-    - Reconhecimento de espécies
+3. .green[Visão computacional]
+    - reconhecimento de espécies baseado em imagens
     
 4. .green[Criação de Dashboard - Shiny]
 ]
+]
 
 .pull-right[
+.font90[
 ### **Websites e contatos**
-
-&lt;svg role="img" viewBox="0 0 24 24" style="height:1em;position:relative;display:inline-block;top:.1em;" xmlns="http://www.w3.org/2000/svg"&gt;  &lt;title&gt;&lt;/title&gt;  &lt;path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"&gt;&lt;/path&gt;&lt;/svg&gt; GitHub: https://github.com/DeivisonSouza
 
 &lt;span class="iconify" data-icon="fa-brands:orcid" data-inline="false"&gt;&lt;/span&gt;
 
 
 &lt;div itemscope itemtype="https://schema.org/Person"&gt;&lt;a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"&gt;&lt;img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon"&gt;https://orcid.org/0000-0002-2975-0927&lt;/a&gt;&lt;/div&gt;
 
-&lt;img src="fig/ORCID.png" width="40%" style="display: block; margin: auto;" /&gt;
+&lt;img src="fig/slide-title/ORCID.png" width="50%" style="display: block; margin: auto;" /&gt;
+]
 ]
 
 &lt;!-- Slide 2 --&gt;
 ---
 
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
 &lt;br&gt;
 
 &lt;img src="fig/class0/Junho.jpg" width="80%" style="display: block; margin: auto;" /&gt;

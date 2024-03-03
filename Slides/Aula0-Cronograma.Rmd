@@ -26,58 +26,91 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
-background-position: 84% 90%, 95% 90%
-background-size: 220px, 90px, cover
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  fig.showtext = TRUE,
-  fig.align = "center", 
-  cache = TRUE,
-  error = FALSE,
-  message = FALSE, 
-  warning = FALSE, 
-  collapse = TRUE ,
-  dpi = 600)
+	error = FALSE,
+	fig.align = "center",
+	fig.showtext = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	collapse = TRUE,
+	dpi = 600
+)
+```
+
+```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
+# remotes::install_github("hadley/emo")
+library(ggplot2)
+library(dplyr)
+library(ggimage)
+library(kableExtra)
+library(readr)
+#library(emo)
+```
+
+```{css, echo=FALSE}
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
 ```
 
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
-use_logo(
-  image_url = "fig/slide-title/ufpa.png",
-  position = css_position(top = ".8em", right = "-.5em"),
-  width = "140px",
-  height = "140px"
-)
-```
 
-```{r icon, echo=FALSE}
-# remotes::install_github('emitanaka/anicon')
-#remotes::install_github("mitchelloharawild/icons")
-#remotes::install_github("gadenbuie/ggweekly")
-#library(icons)
-#download_fontawesome()
-#download_simple_icons()
-library(ggweekly)
-library(showtext)
-library(anicon)
-library(icons)
+use_logo(
+  image_url = "fig/slide-title/LMFTCA.png",
+  position = css_position(top = "1em", right = ".5em"),
+  width = "130px",
+  height = "130px")
+
+
+use_scribble() # para escrever nos slides
+use_share_again()
+use_progress_bar()
+#use_animate_all(style = c("slide_down"))
+
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+xaringanExtra::use_editable(expires = 1)
+#.can-edit[Você pode editar este título de slide]
+#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
+use_clipboard()
 ```
 
 <!-- title-slide -->
-# Experimentação Florestal <br> (FL03034 - EF)
-<br><br>
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Cronograma da disciplina `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` .font90[Programação e Orientações] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+<br>
 
 #### **Prof. Dr. Deivison Venicio Souza**
-#### Universidade Federal do Pará (UFPA) 
-#### Faculdade de Engenharia Florestal
-#### E-mail: deivisonvs@ufpa.br
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
 <br>
-##### 1ª versão: 10/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
+##### 1ª versão: 10/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
 
 ---
+
 layout: true
 <div class="my-header"></div>
 <div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Cronograma da disciplina</div>
@@ -86,9 +119,10 @@ layout: true
 
 ## 👋 Olá, sejam bem vindos!
 <br>
+
 ### **Sobre o facilitador**
 .pull-left[
-.font80[
+.font90[
 1. .green[Graduação (Titulação: ano 2008)]
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
@@ -101,22 +135,35 @@ layout: true
 ]
 
 .pull-right[
-.font80[
+```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/Foto.jpeg")
+```
+]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### **Sobre o facilitador**
+
+.pull-left[
+.font90[
 3. .green[Doutorado (Titulação: ano 2020)]
     - Universidade Federal do Paraná (UFPR);
     - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
     - Área de Concentração: Manejo Florestal.
     
 4. .green[Especialização (Defesa: ano 2019)]
-    - Universidade Federal do Paraná (UFPR)
+    - Universidade Federal do Paraná (UFPR);
     - Área: Big Data e Data Science
-    
- .center1[
-```{r echo = FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/img.jpeg")
-```
-]   
 ]
+]
+
+.pull-right[
+```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/Foto.jpeg")
+```
 ]
 
 ---
@@ -124,6 +171,7 @@ knitr::include_graphics("fig/slide-title/img.jpeg")
 ## 👋 Olá, sejam bem vindos!
 
 .pull-left[
+.font90[
 ### **Interesses atuais**
 1. .green[Linguagem de programação]
     - R
@@ -132,31 +180,32 @@ knitr::include_graphics("fig/slide-title/img.jpeg")
 2. .green[Modelagem preditiva aplicada à ciência florestal]
     - Aprendizado de máquina
     
-3. .green[Visão computacional e Reconhecimento de imagens]
-    - Reconhecimento de espécies
+3. .green[Visão computacional]
+    - reconhecimento de espécies baseado em imagens
     
 4. .green[Criação de Dashboard - Shiny]
 ]
+]
 
 .pull-right[
+.font90[
 ### **Websites e contatos**
-
-`r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
 
 <span class="iconify" data-icon="fa-brands:orcid" data-inline="false"></span>
 
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
 
-```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/ORCID.png')
+```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/slide-title/ORCID.png')
 ```
+]
 ]
 
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
 <br>
 
 ```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
