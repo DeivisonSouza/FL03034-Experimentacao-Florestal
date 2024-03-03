@@ -2,15 +2,20 @@
 <!-- README.md is generated from README.Rmd.. Please edit that file. -->
 <!-- badges: start -->
 <!-- badges: end -->
-<!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!!-->
+<!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
 
 # Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: **Junho: 12, 14, 15, 19, 21, 22, 26, 28 e 29**
+:calendar: 18/03 a 22/03/2024 (Semana 1); 25/03 a 28/03/2024 (Semana 2)
 
-:calendar: **Julho: 3, 5 e 6**
+:calendar: 01/04 a 03/04/2024 (Semana 3)
 
-:alarm_clock: **13h30min - 18h50min**
+:alarm_clock: **07h30min - 12h50min**
+
+<div>
+<img src="Slides/fig/slide-title/ufpa.png" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/LMFTCA.png" width="150" align="middle" class="center">
+<div>
 
 <div itemscope="" itemtype="https://schema.org/Person">
 
@@ -22,12 +27,7 @@
 
 **Researchgate**: <https://www.researchgate.net/profile/Deivison-Souza>
 
-**Este repositório está licenciado nos termos da licença MIT.**
-
-<div>
-<img src="Slides/fig/slide-title/ufpa2.png" width="270" align="middle" class="center">
-<img src="Slides/fig/slide-title/forest.png" width="100" align="middle" class="center">
-<div>
+------------------------------------------------------------------------
 
 # Experimentação Florestal (FL03034-EF)
 
@@ -39,10 +39,10 @@ Florestal** da **Universidade Federal do Pará** (UFPA). O curso será
 ofertado na **modalidade presencial**, conforme dispõe a [Resolução
 n. 5.453, de 14 de dezembro de
 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf)
-e em consonância à [Resolução n. 5.550, de 25 de agosto de
-2022](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2022/5550%20Resolu%C3%A7%C3%A3o%20Calend%C3%A1rio%20Acad%C3%AAmico%202023.pdf),
+e em consonância à [Resolução n. 5.686, de 26 de outubro de
+2023](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2023/5686%20Calend%C3%A1rio%20Acad%C3%AAmico%20da%20UFPA%20-%202024.pdf),
 que aprovou o Calendário Acadêmico da Universidade Federal do Pará para
-o ano de 2023.
+o ano de 2024.
 
 # Programação da disciplina
 
@@ -64,32 +64,30 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 
 # Facilitador :deciduous_tree:
 
-**Deivison Venicio Souza** possui graduação em :deciduous_tree:
-**Engenharia Florestal** :deciduous_tree: pela Universidade Federal
-Rural da Amazônia (2008), Mestrado em Ciências Florestais pela
-Universidade Federal Rural da Amazônia (2011) e Doutorado em Engenharia
+<div>
+<img src="Slides/fig/slide-title/Foto.jpeg" width="150" align="middle" class="center">
+<div>
+
+<br>
+
+Graduado em :deciduous_tree:**Engenharia Florestal** pela Universidade
+Federal Rural da Amazônia (2008), Mestre em Ciências Florestais pela
+Universidade Federal Rural da Amazônia (2011) e Doutor em Engenharia
 Florestal pela Universidade Federal do Paraná (2020). No período de 2009
-a 2011 exerceu o cargo de Analista Ambiental da Secretaria Estadual de
-Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris
-(GEPAF), com atuação direta na etapa de análise técnica, para fins de
-licenciamento ambiental, de Planos de Manejo Florestal Sustentável
-(PMFS), Projetos de Desbastes e Reflorestamento e Supressão Florestal.
-Desde 2011 é professor da Faculdade de Engenharia Florestal da
-Universidade Federal do Pará, Campus Universitário de Altamira, Pará. É
-responsável por ministrar as disciplinas Estatística Básica,
-Dendrometria, Experimentação Florestal e Inventário Florestal,
-integrantes do desenho curricular do Curso de Graduação em Engenharia
-Florestal. Tem experiência na área de Gestão e Manejo dos Recursos
-Florestais, com ênfase em Silvicultura de Florestas Naturais, Inventário
-Florestal e Mensuração Florestal. Atualmente, é docente permanente do
-Programa de Pós-Graduação em Biodiversidade e Conservação (PPGBC) da
-Universidade Federal do Pará (UFPA)/Campus Altamira, responsável pela
-disciplina Estatística Computacional. Seus interesses científicos
-incluem o uso da inteligência artificial e visão computacional na
-conservação da biodiversidade (com ênfase na flora Amazônica explorada
-comercialmente) e emprego de técnicas de aprendizado de máquina na
-modelagem preditiva de variáveis biométricas, com uso das Linguagens R e
-Python. Além disso, tem atuado em projetos sustentáveis com ênfase em
-inventário e manejo florestal de produtos não madeireiros, estruturação
-e fortalecimento de cadeias produtivas da sociobiodiversidade, com
-atuação em comunidades indígenas.
+a 2011, exerceu o cargo de Analista Ambiental da Secretaria Estadual de
+Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris.
+Atualmente, é docente adjunto IV na Universidade Federal do Pará,
+atuando no curso de graduação em Engenharia Florestal e Programa de
+Pós-Graduação em Biodiversidade e Conservação. Coordena projetos de
+pesquisas orientados ao manejo e conservação da biodiversidade, com
+ênfase no desenvolvimento de tecnologias baseadas em inteligência
+artificial e visão computacional para o reconhecimento automático de
+espécies da flora Amazônica. Também tem contribuído em projetos
+socioambientais junto aos povos originários, em parceria com a
+Associação Indígena Pyjahyry Xipaya - AIPHX, com ênfase na estruturação
+e fortalecimento de cadeias de produtos da sociobiodiversidade e gestão
+territorial e ambiental.
+
+------------------------------------------------------------------------
+
+**Este repositório está licenciado nos termos da licença MIT.**
