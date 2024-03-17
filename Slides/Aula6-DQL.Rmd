@@ -29,9 +29,9 @@ output:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
-background-position: 84% 90%, 95% 90%
-background-size: 220px, 90px, cover
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -57,14 +57,36 @@ library(readr)
 library(labestData)
 ```
 
+```{css, echo=FALSE}
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+```
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
+
 use_logo(
-  image_url = "fig/slide-title/ufpa.png",
-  position = css_position(top = ".8em", right = "-.5em"),
-  width = "140px",
-  height = "140px"
-)
+  image_url = "fig/slide-title/LMFTCA.png",
+  position = css_position(top = "1em", right = ".5em"),
+  width = "130px",
+  height = "130px")
+
+
+use_scribble() # para escrever nos slides
+use_share_again()
+use_progress_bar()
+#use_animate_all(style = c("slide_down"))
 
 use_extra_styles(
   hover_code_line = TRUE,         #<<
@@ -144,8 +166,8 @@ Customkbl <- function(data){
 
 
 <!-- title-slide -->
-# Experimentação Florestal <br> (FL03034 - EF)
-<br>
+# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Quadrado `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Latino 
 
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
