@@ -4,29 +4,38 @@
     <title>Experimentação Florestal (FL03034 - EF)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
-    <script src="Aula5-Introducao-R_files/header-attrs-2.22/header-attrs.js"></script>
+    <script src="Aula5-Introducao-R_files/header-attrs-2.24/header-attrs.js"></script>
     <link href="Aula5-Introducao-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="Aula5-Introducao-R_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="Aula5-Introducao-R_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Aula5-Introducao-R_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="Aula5-Introducao-R_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="Aula5-Introducao-R_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="Aula5-Introducao-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x723e1c4716a4fb7b171a15162da91e6","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x9ecb245387849e69ef9377693d7f7ab","expires":1}</script>
     <script src="Aula5-Introducao-R_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula5-Introducao-R_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula5-Introducao-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
     <script src="Aula5-Introducao-R_files/editable-0.2.6/editable.js"></script>
-    <script src="Aula5-Introducao-R_files/clipboard-2.0.6/clipboard.min.js"></script>
     <link href="Aula5-Introducao-R_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
     <script src="Aula5-Introducao-R_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula5-Introducao-R_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula5-Introducao-R_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
-    <script src="Aula5-Introducao-R_files/htmlwidgets-1.5.3/htmlwidgets.js"></script>
-    <script src="Aula5-Introducao-R_files/jquery-3.5.1/jquery.min.js"></script>
+    <script src="Aula5-Introducao-R_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
     <link href="Aula5-Introducao-R_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="Aula5-Introducao-R_files/datatables-binding-0.17/datatables.js"></script>
-    <link href="Aula5-Introducao-R_files/dt-core-1.10.20/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="Aula5-Introducao-R_files/dt-core-1.10.20/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="Aula5-Introducao-R_files/dt-core-1.10.20/js/jquery.dataTables.min.js"></script>
-    <link href="Aula5-Introducao-R_files/crosstalk-1.1.1/css/crosstalk.css" rel="stylesheet" />
-    <script src="Aula5-Introducao-R_files/crosstalk-1.1.1/js/crosstalk.min.js"></script>
+    <script src="Aula5-Introducao-R_files/datatables-binding-0.29/datatables.js"></script>
+    <script src="Aula5-Introducao-R_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="Aula5-Introducao-R_files/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula5-Introducao-R_files/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+    <link href="Aula5-Introducao-R_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="Aula5-Introducao-R_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
     <script type="text/x-mathjax-config">
       MathJax.Hub.Config({
         TeX: { equationNumbers: { autoNumber: "AMS" } },
@@ -46,24 +55,41 @@
     <textarea id="source">
 
 class: title-slide, center, middle
-background-image: url(fig/slide-title/ufpa2.png), url(fig/slide-title/forest.png), url(fig/slide-title/img3.png)
-background-position: 84% 90%, 95% 90%
-background-size: 220px, 90px, cover
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
 
 
 
 
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
 
 <div>
 <style type="text/css">.xaringan-extra-logo {
-width: 140px;
-height: 140px;
+width: 130px;
+height: 130px;
 z-index: 0;
-background-image: url(fig/slide-title/ufpa.png);
+background-image: url(fig/slide-title/LMFTCA.png);
 background-size: contain;
 background-repeat: no-repeat;
 position: absolute;
-top:.8em;right:-.5em;
+top:1em;right:.5em;
 }
 </style>
 <script>(function () {
@@ -86,15 +112,34 @@ top:.8em;right:-.5em;
   }
   document.addEventListener('DOMContentLoaded', addLogo)
 })()</script>
-</div>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
 
 
 
 
 
 &lt;!-- title-slide --&gt;
-# Experimentação Florestal &lt;br&gt; (FL03034 - EF)
-&lt;br&gt;&lt;br&gt;
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
 ## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Introdução à Linguagem R <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
 
 #### **Prof. Dr. Deivison Venicio Souza**
@@ -102,7 +147,7 @@ top:.8em;right:-.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 25/agosto/2021 &lt;br&gt; (Atualizado em: 08/junho/2023) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 25/agosto/2021 &lt;br&gt; (Atualizado em: 17/março/2024) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -284,8 +329,8 @@ Veja na tabela a seguir os principais espelhos disponíveis no Brasil.
 &lt;br&gt;&lt;br&gt;
 
 .center2[
-<div id="htmlwidget-24ae5e0d9b78a585d1bd" style="width:750px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-24ae5e0d9b78a585d1bd">{"x":{"filter":"none","caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-bc8f2ad2fe56f6007708" style="width:750px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-bc8f2ad2fe56f6007708">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["http://cran-r.c3sl.ufpr.br/","http://nbcgib.uesc.br/mirrors/cran/","https://cran.fiocruz.br/","https://vps.fmvz.usp.br/CRAN/","http://brieger.esalq.usp.br/CRAN/"],["Universidade Federal do Paraná - UFPR","Center for Comp Biol at Universidade Estadual de Santa Cruz","Oswaldo Cruz Foundation, Rio de Janeiro","University of São Paulo, São Paulo","University of São Paulo, Piracicaba"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Link<\/th>\n      <th>Instituição<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 ---
@@ -2596,8 +2641,8 @@ name: log
 ]
 
 .pull-right-5[
-<div id="htmlwidget-5d441c75cbbdb9837a29" style="width:800px;height:auto;" class="datatables html-widget"></div>
-<script type="application/json" data-for="htmlwidget-5d441c75cbbdb9837a29">{"x":{"filter":"none","caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null}},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.699999999999999],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-4564d55f4d34db27f36b" style="width:800px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-4564d55f4d34db27f36b">{"x":{"filter":"none","vertical":false,"caption":"<caption>Dados fictícios para 10 árvores de duas espécies florestais.<\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,4],"date":[]},"data":[["Swietenia macrophylla","Swietenia macrophylla","Swietenia macrophylla","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Hymenolobium petraeum","Swietenia macrophylla","Swietenia macrophylla"],[33.6,42.6,52.1,80.3,90.8,49.4,70.5,100.5,60.7,27.1],[9.1,13.2,15.4,18.6,19.5,16.8,17.9,22.4,15.3,8.699999999999999],["Sim","Não","Sim","Não","Sim","Não","Sim","Não","Sim","Sim"],[2,1,3,1,2,1,2,3,1,3],["Protegida","Protegida","Protegida","Explorar","Explorar","Remanescente","Explorar","Remanescente","Protegida","Protegida"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Especie<\/th>\n      <th>DAP<\/th>\n      <th>H<\/th>\n      <th>Cipo<\/th>\n      <th>QF<\/th>\n      <th>Selecao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":true,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
