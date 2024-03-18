@@ -222,56 +222,25 @@ knitr::include_graphics("fig/class0/Abril.jpg")
 ```
 
 
-<!-- ```{r echo=FALSE, eval=TRUE, warning=FALSE, dpi=600, fig.width = 35, fig.height = 17} -->
-<!-- library(calendR) -->
-<!-- #dates <- seq(as.Date("2023-06-01"), as.Date("2023-06-31"), by = "day") -->
-<!-- #events <- ifelse(format(dates, "%w") %in% c(6,7), "Final de semana", NA) -->
-<!-- #events[c(8)] <- "Dia da Mulher" -->
+---
 
-<!-- p <- calendR::calendR(year = 2023, -->
-<!--         month = 6, -->
-<!--         start = "M", -->
-<!--         title = "Junho (Ano 2023)", -->
-<!--         title.size = 50, -->
-<!--         subtitle.size = 20, -->
-<!--         title.col = 2, -->
-<!--         subtitle = "", -->
-<!--         subtitle.col = 3, -->
-<!--         weeknames.size = 15, -->
-<!--         #special.days = events, -->
-<!--         legend.pos = "bottom", -->
-<!--         special.col = c("lightgreen", rgb(1, 0, 0, 0.1)), -->
-<!--         col = "black", -->
-<!--         lwd = 1, -->
-<!--         lty = 1, -->
-<!--         font.family = "mono", -->
-<!--         font.style = "bold", -->
-<!--         weeknames.col = "gray30", -->
-<!--         months.col = "gray30", -->
-<!--         days.col = 4, -->
-<!--         day.size = 18, -->
-<!--         bg.img = "", -->
-<!--         text = c( -->
-<!--           "Introdução à\n experimentação", -->
-<!--           "Análise \nExploratória\n de Dados", -->
-<!--           # "ANOVA - DIC", -->
-<!--           # "ANOVA - DBC", -->
-<!--           # "Introdução ao R", -->
-<!--           # "Avaliação 1", -->
-<!--           # "ANOVA - DQL", -->
-<!--           # "Testes de\n comparação\n de médias", -->
-<!--           # "Experimentos em \nEsquema Fatorial", -->
-<!--           # "Correlação e\n Regressão Linear", -->
-<!--           # "Revisão\n (Avaliação 2)", -->
-<!--           "Avaliação 2"), -->
-<!--         text.pos = c(1,2,3), -->
-<!--         text.size = 12, -->
-<!--         text.col = 1) -->
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+<br>
 
-<!-- p + theme(legend.key.size = unit(2, 'cm'), -->
-<!--           legend.text = element_text(size=30)) -->
+```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class0/Maio.jpg")
+```
 
-<!-- ``` -->
+
+---
+
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+<br>
+
+```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class0/Junho.jpg")
+```
+
 
 <!-- Slide 3 -->
 ---
