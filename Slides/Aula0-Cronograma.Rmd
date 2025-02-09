@@ -205,42 +205,21 @@ knitr::include_graphics('fig/slide-title/ORCID.png')
 <!-- Slide 2 -->
 ---
 
-## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
 <br>
 
 ```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Marco.jpg")
+knitr::include_graphics("fig/class0/Fevereiro.png")
 ```
 
 ---
 
-## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
 <br>
 
 ```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Abril.jpg")
+knitr::include_graphics("fig/class0/Marco.png")
 ```
-
-
----
-
-## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
-<br>
-
-```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Maio.jpg")
-```
-
-
----
-
-## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
-<br>
-
-```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Junho.jpg")
-```
-
 
 <!-- Slide 3 -->
 ---
@@ -281,7 +260,7 @@ Aulas teóricas e práticas presenciais, realização de atividades complementar
 
 --
 
-- **Sala de aula virtual** (*Google Classroom*)
+- **Sala de aula virtual** (*Sigaa*)
 
 Comunicação, envio de atividades complementares e de conteúdos digitas.
 
