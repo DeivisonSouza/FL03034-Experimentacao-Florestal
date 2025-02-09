@@ -44,8 +44,9 @@ knitr::opts_chunk$set(
 ```
 
 ```{r packages, include=FALSE}
-# remotes::install_github("dill/emoGG")
-# remotes::install_github("hadley/emo")
+#remotes::install_github("dill/emoGG")
+#remotes::install_github("hadley/emo")
+#remotes::install_github('emitanaka/anicon')
 library(ggplot2)
 library(dplyr)
 library(ggimage)
