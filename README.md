@@ -33,6 +33,8 @@
 
 # Experimentação Florestal (FL03034-EF)
 
+<div align="justify">
+
 Este repositório guarda os slides em .html, códigos R, arquivos .Rmd,
 figuras, conjunto de dados (e outros) utilizados na disciplina de
 **Experimentação Florestal** (FL03034-EF) ministrada pelo
@@ -53,6 +55,8 @@ o ano de 2024.
 
 - [Regulamento do Ensino de Graduação da Universidade Federal do
   Pará](http://www.proeg.ufpa.br/images/Artigos/Academico/Downloads/Regulamento_de_Graduacao.pdf)
+
+</div>
 
 # Programação da disciplina
 
@@ -81,6 +85,8 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 
 <br>
 
+<div align="justify">
+
 Graduado em :deciduous_tree:**Engenharia Florestal** (ano 2008) e
 Mestrado em Ciências Florestais (ano 2011) pela Universidade Federal
 Rural da Amazônia (UFRA) e Doutorado em Engenharia Florestal pela
@@ -101,6 +107,8 @@ junto aos povos originários, em parceria com a Associação Indígena
 Pyjahyry Xipaya - AIPHX, com ênfase na estruturação e fortalecimento de
 cadeias de produtos da sociobiodiversidade e gestão territorial e
 ambiental.
+
+</div>
 
 ------------------------------------------------------------------------
 
