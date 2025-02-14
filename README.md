@@ -79,7 +79,10 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 
 <div>
 
-<img src="Slides/fig/slide-title/Foto.jpeg" width="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/Foto.jpeg" width="200" align="middle" class="center">
+<img src="Slides/fig/slide-title/Foto4.jpg" width="250" 
+  height="150" align="middle" class="center">
+<img src="Slides/fig/slide-title/Foto3.jpg" width="150" align="middle" class="center">
 
 <div>
 
