@@ -6,15 +6,17 @@
 
 # Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: 18/03 a 22/03/2024 (Semana 1); 25/03 a 28/03/2024 (Semana 2)
+:calendar: 24/02/2025 a 01/03/2025 (Semana 1)
 
-:calendar: 01/04 a 03/04/2024 (Semana 3)
+:calendar: 10/03/2025 a 15/03/2025 (Semana 2)
 
-:alarm_clock: **07h30min - 12h50min**
+:alarm_clock: **13h30min - 18h50min**
 
 <div>
+
 <img src="Slides/fig/slide-title/ufpa.png" width="150" align="middle" class="center">
 <img src="Slides/fig/slide-title/LMFTCA.png" width="150" align="middle" class="center">
+
 <div>
 
 <div itemscope="" itemtype="https://schema.org/Person">
@@ -57,44 +59,57 @@ o ano de 2024.
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide                                        | Link                                                                                                            |
-|:---------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
-| Slides/Aula0-Cronograma.html                 | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html>                 |
-| Slides/Aula1-Introducao-Experimentacao.html  | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html>  |
-| Slides/Aula2-AED-Revisao.html                | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html>                |
-| Slides/Aula3-DIC.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html>                        |
-| Slides/Aula4-DBC.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html>                        |
-| Slides/Aula5-Introducao-R.html               | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html>               |
-| Slides/Aula6-DQL.html                        | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html>                        |
-| Slides/Aula7-Teste-Comparacao-Medias.html    | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html>    |
+| Slide | Link |
+|:---|:---|
+| Slides/Aula0-Cronograma.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html> |
+| Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html> |
+| Slides/Aula2-AED-Revisao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html> |
+| Slides/Aula3-DIC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html> |
+| Slides/Aula4-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
+| Slides/Aula5-Introducao-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
+| Slides/Aula6-DQL.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
+| Slides/Aula7-Teste-Comparacao-Medias.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
 | Slides/Aula8-Analise-Experimentos-com-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
 
 # Facilitador :deciduous_tree:
 
 <div>
+
 <img src="Slides/fig/slide-title/Foto.jpeg" width="150" align="middle" class="center">
+
 <div>
 
 <br>
 
-Graduado em :deciduous_tree:**Engenharia Florestal** pela Universidade
-Federal Rural da Amazônia (2008), Mestre em Ciências Florestais pela
-Universidade Federal Rural da Amazônia (2011) e Doutor em Engenharia
-Florestal pela Universidade Federal do Paraná (2020). No período de 2009
-a 2011, exerceu o cargo de Analista Ambiental da Secretaria Estadual de
-Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris.
-Atualmente, é docente adjunto IV na Universidade Federal do Pará,
-atuando no curso de graduação em Engenharia Florestal e Programa de
-Pós-Graduação em Biodiversidade e Conservação. Coordena projetos de
-pesquisas orientados ao manejo e conservação da biodiversidade, com
-ênfase no desenvolvimento de tecnologias baseadas em inteligência
-artificial e visão computacional para o reconhecimento automático de
-espécies da flora Amazônica. Também tem contribuído em projetos
-socioambientais junto aos povos originários, em parceria com a
-Associação Indígena Pyjahyry Xipaya - AIPHX, com ênfase na estruturação
-e fortalecimento de cadeias de produtos da sociobiodiversidade e gestão
-territorial e ambiental.
+Graduado em :deciduous_tree:**Engenharia Florestal** (ano 2008) e
+Mestrado em Ciências Florestais (ano 2011) pela Universidade Federal
+Rural da Amazônia (UFRA) e Doutorado em Engenharia Florestal pela
+Universidade Federal do Paraná - UFPR (ano 2020). Também possui
+Especialização em Data Science e Big Data pela UFPR (ano 2019).
+Atualmente, é docente Associado I na Universidade Federal do Pará
+(UFPA), atuando no curso de Graduação em Engenharia Florestal e no
+Programa de Pós-Graduação em Biodiversidade e Conservação (PPGBC). É
+responsável por ministrar as disciplinas de Estatística Básica,
+Dendrometria, Experimentação Florestal e Inventário Florestal no Curso
+de Graduação em Engenharia Florestal da UFPA, e a disciplina de
+Estatística Computacional no PPGBC. Coordena projetos de pesquisas
+orientados ao manejo e conservação da biodiversidade, com ênfase no
+desenvolvimento de tecnologias baseadas em inteligência artificial e
+visão computacional para o reconhecimento automático de espécies da
+flora Amazônica. Também tem contribuído em projetos socioambientais
+junto aos povos originários, em parceria com a Associação Indígena
+Pyjahyry Xipaya - AIPHX, com ênfase na estruturação e fortalecimento de
+cadeias de produtos da sociobiodiversidade e gestão territorial e
+ambiental.
 
 ------------------------------------------------------------------------
 
 **Este repositório está licenciado nos termos da licença MIT.**
+
+</div>
+
+</div>
+
+</div>
+
+</div>
