@@ -137,7 +137,7 @@ layout: true
 
 .pull-right[
 ```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/Foto.jpeg")
+knitr::include_graphics("fig/slide-title/Foto4.jpg")
 ```
 ]
 
@@ -163,7 +163,7 @@ knitr::include_graphics("fig/slide-title/Foto.jpeg")
 
 .pull-right[
 ```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/Foto.jpeg")
+knitr::include_graphics("fig/slide-title/Foto4.jpg")
 ```
 ]
 
@@ -202,6 +202,23 @@ knitr::include_graphics('fig/slide-title/ORCID.png')
 ```
 ]
 ]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### **Projetos de Pesquisa/Extensão finalizados** (com fomento)
+
+- 1) Sistema de Visão Computacional para Reconhecer Espécies no Manejo Florestal Madeireiro na Amazônia Brasileira. (**Financiador**: Centro de Indústrias Produtoras e Exportadoras de Madeira do Estado de Mato Grosso - CIPEM) - ([https://cipem.org.br/](https://cipem.org.br/)) <br><br>
+- 2) Projeto Ipa’wã (Copaíba): Etnomapeamento e inventário de copaibais nativos na TI Xipaya (Aldeias Tukamã, Tukayá e Kaarimã). (**Financiador**: Fundo Brasileiro para a Biodiversidade - FUNBIO) - ([https://www.funbio.org.br/](https://www.funbio.org.br/)) (Parceria entre Associação Indígena Pyjahyry Xipaia – AIPHX e UFPA)
+<br>
+
+----------------------------------------
+
+**Siga o Instagram**: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/) (Associação Indígena Pyjahyry Xipaia)
+
+**Siga o Instagram**: [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/) (Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas)
 
 <!-- Slide 2 -->
 ---
