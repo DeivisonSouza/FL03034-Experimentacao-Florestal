@@ -4,7 +4,7 @@
     <title>Experimentação Florestal (FL03034 - EF)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
-    <script src="Aula2-AED-Revisao_files/header-attrs-2.24/header-attrs.js"></script>
+    <script src="Aula2-AED-Revisao_files/header-attrs-2.29/header-attrs.js"></script>
     <link href="Aula2-AED-Revisao_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="Aula2-AED-Revisao_files/fabric-4.3.1/fabric.min.js"></script>
     <link href="Aula2-AED-Revisao_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <script src="Aula2-AED-Revisao_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="Aula2-AED-Revisao_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="Aula2-AED-Revisao_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"c65d662c1a5841cea3042b5c5636e91c","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x8f68d33afbc4ef2b67114a5240710e2","expires":1}</script>
     <script src="Aula2-AED-Revisao_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula2-AED-Revisao_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula2-AED-Revisao_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -27,16 +27,17 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula2-AED-Revisao_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula2-AED-Revisao_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
-    <script src="Aula2-AED-Revisao_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="Aula2-AED-Revisao_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
     <link href="Aula2-AED-Revisao_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="Aula2-AED-Revisao_files/datatables-binding-0.29/datatables.js"></script>
+    <script src="Aula2-AED-Revisao_files/datatables-binding-0.33/datatables.js"></script>
     <script src="Aula2-AED-Revisao_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="Aula2-AED-Revisao_files/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="Aula2-AED-Revisao_files/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="Aula2-AED-Revisao_files/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
-    <link href="Aula2-AED-Revisao_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="Aula2-AED-Revisao_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-    <script src="Aula2-AED-Revisao_files/plotly-binding-4.10.3/plotly.js"></script>
+    <link href="Aula2-AED-Revisao_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula2-AED-Revisao_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula2-AED-Revisao_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="Aula2-AED-Revisao_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="Aula2-AED-Revisao_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+    <link href="Aula2-AED-Revisao_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+    <script src="Aula2-AED-Revisao_files/plotly-binding-4.10.4/plotly.js"></script>
     <script src="Aula2-AED-Revisao_files/typedarray-0.1/typedarray.min.js"></script>
     <link href="Aula2-AED-Revisao_files/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
     <script src="Aula2-AED-Revisao_files/plotly-main-2.11.1/plotly-latest.min.js"></script>
@@ -151,7 +152,7 @@ top:1em;right:.5em;
 ##### Faculdade de Engenharia Florestal
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 18/agosto/2021 &lt;br&gt; (Atualizado em: 25/março/2024) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 18/agosto/2021 &lt;br&gt; (Atualizado em: 15/fevereiro/2025) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -328,8 +329,8 @@ A estatística é, em geral, dividida em dois grandes grupos:
 
 .left-column[
 
-<div id="htmlwidget-0a9fea99bdaa3d63199b" style="width:350px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-0a9fea99bdaa3d63199b">{"x":{"filter":"none","vertical":false,"caption":"<caption>Dados de Cedrela odorata.<\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1,2],"date":[]},"data":[[83,90.40000000000001,95.17,86.58,96.45,57.93,76.39,76.08,76.39,66.84999999999999,124.14,101.22,73.53,75.12,77.34999999999999,82.12,75.76000000000001,76.39,98.36,86,63,59,140.06,95.48999999999999,74.48,57.93,82.76000000000001,128.92,70.03,102.81,85.94,70.66],[9,18,14,16,14,17,14,16,15,18,12,14,17,12,13,16,13,12,19,16,15,10,15,12,12,18,13,18,14,17,16,9],[4.56,7.68,6.71,5.16,5.81,2.91,5.12,4.8,4.1,3.44,11.06,7.22,5.43,3.13,4,6.18,3.15,4.13,9.380000000000001,6.56,1.89,2.22,11.83,6.2,4.1,2.29,3.78,17.58,4.79,7.49,7.58,2.88],["I","I","I","II","II","II","II","I","I","III","III","III","III","III","III","III","III","II","II","II","II","II","II","I","I","I","I","I","I","I","I","I"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>D<\/th>\n      <th>H<\/th>\n      <th>V<\/th>\n      <th>QF<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1,2]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-179d26b8804aa99ae9c5" style="width:350px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-179d26b8804aa99ae9c5">{"x":{"filter":"none","vertical":false,"caption":"<caption>Dados de Cedrela odorata.<\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1,2],"date":[]},"data":[[83,90.40000000000001,95.17,86.58,96.45,57.93,76.39,76.08,76.39,66.84999999999999,124.14,101.22,73.53,75.12,77.34999999999999,82.12,75.76000000000001,76.39,98.36,86,63,59,140.06,95.48999999999999,74.48,57.93,82.76000000000001,128.92,70.03,102.81,85.94,70.66],[9,18,14,16,14,17,14,16,15,18,12,14,17,12,13,16,13,12,19,16,15,10,15,12,12,18,13,18,14,17,16,9],[4.56,7.68,6.71,5.16,5.81,2.91,5.12,4.8,4.1,3.44,11.06,7.22,5.43,3.13,4,6.18,3.15,4.13,9.380000000000001,6.56,1.89,2.22,11.83,6.2,4.1,2.29,3.78,17.58,4.79,7.49,7.58,2.88],["I","I","I","II","II","II","II","I","I","III","III","III","III","III","III","III","III","II","II","II","II","II","II","I","I","I","I","I","I","I","I","I"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>D<\/th>\n      <th>H<\/th>\n      <th>V<\/th>\n      <th>QF<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1,2]},{"name":"D","targets":0},{"name":"H","targets":1},{"name":"V","targets":2},{"name":"QF","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .right-column[
@@ -339,7 +340,7 @@ A estatística é, em geral, dividida em dois grandes grupos:
 * Calcular medidas descritivas quantitativas.
 
 
-```r
+``` r
 # Usando funções da linguagem R
 mean(data$D)
 ## [1] 84.57219
@@ -367,7 +368,7 @@ table(data$QF)
 * Usar representações gráficas
 
 
-```r
+``` r
 # Criando um BoxPlot Univariado
 
 g1 &lt;- data %&gt;% 
@@ -386,8 +387,8 @@ plotly::ggplotly(g1)
 
 .right-column[
 
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f83a1c1d5bd2751689e6" style="width:480px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-f83a1c1d5bd2751689e6">{"x":{"data":[{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"y":[83,90.400000000000006,95.170000000000002,86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.079999999999998,76.390000000000001,66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005,76.390000000000001,98.359999999999999,86,63,59,140.06,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":10.958904109589042,"l":43.105022831050235},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.58750000000000002,1.4125000000000001],"tickmode":"array","ticktext":["0.6","0.8","1.0","1.2","1.4"],"tickvals":[0.60000000000000009,0.80000000000000004,1,1.2000000000000002,1.4000000000000001],"categoryorder":"array","categoryarray":["0.6","0.8","1.0","1.2","1.4"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"348424dd67d2":{"x":{},"y":{},"type":"box"}},"cur_data":"348424dd67d2","visdat":{"348424dd67d2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-ef06a0fcadc27c7e5f73" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-ef06a0fcadc27c7e5f73">{"x":{"data":[{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"y":[83,90.400000000000006,95.170000000000002,86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.079999999999998,76.390000000000001,66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005,76.390000000000001,98.359999999999999,86,63,59,140.06,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":10.958904109589042,"l":43.105022831050235},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.58750000000000002,1.4125000000000001],"tickmode":"array","ticktext":["0.6","0.8","1.0","1.2","1.4"],"tickvals":[0.60000000000000009,0.80000000000000004,1,1.2000000000000002,1.4000000000000001],"categoryorder":"array","categoryarray":["0.6","0.8","1.0","1.2","1.4"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"321c22a631c2":{"x":{},"y":{},"type":"box"}},"cur_data":"321c22a631c2","visdat":{"321c22a631c2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -403,7 +404,7 @@ plotly::ggplotly(g1)
 * Usar representações gráficas
 
 
-```r
+``` r
 # Criando um Hitograma Univariado
 
 g2 &lt;- data %&gt;%
@@ -420,8 +421,8 @@ plotly::ggplotly(g2)
 
 .right-column[
 
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-258edc48301d0f5d6710" style="width:480px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-258edc48301d0f5d6710">{"x":{"data":[{"orientation":"v","width":[2.5,2.5,2.5,2.5,2.5],"base":[0,0,0,0,0],"x":[10,12.5,15,17.5,20],"y":[3,8,13,7,1],"text":["count:  3<br />H: 10.0","count:  8<br />H: 12.5","count: 13<br />H: 15.0","count:  7<br />H: 17.5","count:  1<br />H: 20.0"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(105,179,162,0.9)","line":{"width":1.8897637795275593,"color":"rgba(233,236,239,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[8.125,21.875],"tickmode":"array","ticktext":["9","12","15","18","21"],"tickvals":[9,12,15,18,21],"categoryorder":"array","categoryarray":["9","12","15","18","21"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"H","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.65000000000000002,13.65],"tickmode":"array","ticktext":["0","5","10"],"tickvals":[0,5,10],"categoryorder":"array","categoryarray":["0","5","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"3484427870f":{"x":{},"type":"bar"}},"cur_data":"3484427870f","visdat":{"3484427870f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-a77adb5d22a7aa57f900" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-a77adb5d22a7aa57f900">{"x":{"data":[{"orientation":"v","width":[2.5,2.5,2.5,2.5,2.5],"base":[0,0,0,0,0],"x":[10,12.5,15,17.5,20],"y":[3,8,13,7,1],"text":["count:  3<br />H: 10.0","count:  8<br />H: 12.5","count: 13<br />H: 15.0","count:  7<br />H: 17.5","count:  1<br />H: 20.0"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(105,179,162,0.9)","line":{"width":1.8897637795275593,"color":"rgba(233,236,239,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":37.260273972602747},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[8.125,21.875],"tickmode":"array","ticktext":["9","12","15","18","21"],"tickvals":[9,12,15,18,21],"categoryorder":"array","categoryarray":["9","12","15","18","21"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"H","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.65000000000000002,13.65],"tickmode":"array","ticktext":["0","5","10"],"tickvals":[0,5,10],"categoryorder":"array","categoryarray":["0","5","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.66417600664176002,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"321c39e96811":{"x":{},"type":"bar"}},"cur_data":"321c39e96811","visdat":{"321c39e96811":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -437,7 +438,7 @@ plotly::ggplotly(g2)
 * Usar representações gráficas
 
 
-```r
+``` r
 # Criando um Scatterplot
 
 g3 &lt;- data %&gt;%
@@ -453,8 +454,8 @@ plotly::ggplotly(g3)
 
 .right-column[
 
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-fb45e13ce0ebb332c5a6" style="width:480px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-fb45e13ce0ebb332c5a6">{"x":{"data":[{"x":[83,90.400000000000006,95.170000000000002,76.079999999999998,76.390000000000001,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"y":[4.5599999999999996,7.6799999999999997,6.71,4.7999999999999998,4.0999999999999996,6.2000000000000002,4.0999999999999996,2.29,3.7799999999999998,17.579999999999998,4.79,7.4900000000000002,7.5800000000000001,2.8799999999999999],"text":["D:  83.00<br />V:  4.56<br />QF: I","D:  90.40<br />V:  7.68<br />QF: I","D:  95.17<br />V:  6.71<br />QF: I","D:  76.08<br />V:  4.80<br />QF: I","D:  76.39<br />V:  4.10<br />QF: I","D:  95.49<br />V:  6.20<br />QF: I","D:  74.48<br />V:  4.10<br />QF: I","D:  57.93<br />V:  2.29<br />QF: I","D:  82.76<br />V:  3.78<br />QF: I","D: 128.92<br />V: 17.58<br />QF: I","D:  70.03<br />V:  4.79<br />QF: I","D: 102.81<br />V:  7.49<br />QF: I","D:  85.94<br />V:  7.58<br />QF: I","D:  70.66<br />V:  2.88<br />QF: I"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"I","legendgroup":"I","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.390000000000001,98.359999999999999,86,63,59,140.06],"y":[5.1600000000000001,5.8099999999999996,2.9100000000000001,5.1200000000000001,4.1299999999999999,9.3800000000000008,6.5599999999999996,1.8899999999999999,2.2200000000000002,11.83],"text":["D:  86.58<br />V:  5.16<br />QF: II","D:  96.45<br />V:  5.81<br />QF: II","D:  57.93<br />V:  2.91<br />QF: II","D:  76.39<br />V:  5.12<br />QF: II","D:  76.39<br />V:  4.13<br />QF: II","D:  98.36<br />V:  9.38<br />QF: II","D:  86.00<br />V:  6.56<br />QF: II","D:  63.00<br />V:  1.89<br />QF: II","D:  59.00<br />V:  2.22<br />QF: II","D: 140.06<br />V: 11.83<br />QF: II"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"II","legendgroup":"II","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005],"y":[3.4399999999999999,11.06,7.2199999999999998,5.4299999999999997,3.1299999999999999,4,6.1799999999999997,3.1499999999999999],"text":["D:  66.85<br />V:  3.44<br />QF: III","D: 124.14<br />V: 11.06<br />QF: III","D: 101.22<br />V:  7.22<br />QF: III","D:  73.53<br />V:  5.43<br />QF: III","D:  75.12<br />V:  3.13<br />QF: III","D:  77.35<br />V:  4.00<br />QF: III","D:  82.12<br />V:  6.18<br />QF: III","D:  75.76<br />V:  3.15<br />QF: III"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"III","legendgroup":"III","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.1054999999999999,18.3645],"tickmode":"array","ticktext":["5","10","15"],"tickvals":[5,10,15],"categoryorder":"array","categoryarray":["5","10","15"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"V","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"3484190f2e7d":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"3484190f2e7d","visdat":{"3484190f2e7d":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-9450f8d2ab9eb23d0b28" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-9450f8d2ab9eb23d0b28">{"x":{"data":[{"x":[83,90.400000000000006,95.170000000000002,76.079999999999998,76.390000000000001,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"y":[4.5599999999999996,7.6799999999999997,6.71,4.7999999999999998,4.0999999999999996,6.2000000000000002,4.0999999999999996,2.29,3.7799999999999998,17.579999999999998,4.79,7.4900000000000002,7.5800000000000001,2.8799999999999999],"text":["D:  83.00<br />V:  4.56<br />QF: I","D:  90.40<br />V:  7.68<br />QF: I","D:  95.17<br />V:  6.71<br />QF: I","D:  76.08<br />V:  4.80<br />QF: I","D:  76.39<br />V:  4.10<br />QF: I","D:  95.49<br />V:  6.20<br />QF: I","D:  74.48<br />V:  4.10<br />QF: I","D:  57.93<br />V:  2.29<br />QF: I","D:  82.76<br />V:  3.78<br />QF: I","D: 128.92<br />V: 17.58<br />QF: I","D:  70.03<br />V:  4.79<br />QF: I","D: 102.81<br />V:  7.49<br />QF: I","D:  85.94<br />V:  7.58<br />QF: I","D:  70.66<br />V:  2.88<br />QF: I"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"I","legendgroup":"I","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.390000000000001,98.359999999999999,86,63,59,140.06],"y":[5.1600000000000001,5.8099999999999996,2.9100000000000001,5.1200000000000001,4.1299999999999999,9.3800000000000008,6.5599999999999996,1.8899999999999999,2.2200000000000002,11.83],"text":["D:  86.58<br />V:  5.16<br />QF: II","D:  96.45<br />V:  5.81<br />QF: II","D:  57.93<br />V:  2.91<br />QF: II","D:  76.39<br />V:  5.12<br />QF: II","D:  76.39<br />V:  4.13<br />QF: II","D:  98.36<br />V:  9.38<br />QF: II","D:  86.00<br />V:  6.56<br />QF: II","D:  63.00<br />V:  1.89<br />QF: II","D:  59.00<br />V:  2.22<br />QF: II","D: 140.06<br />V: 11.83<br />QF: II"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"II","legendgroup":"II","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005],"y":[3.4399999999999999,11.06,7.2199999999999998,5.4299999999999997,3.1299999999999999,4,6.1799999999999997,3.1499999999999999],"text":["D:  66.85<br />V:  3.44<br />QF: III","D: 124.14<br />V: 11.06<br />QF: III","D: 101.22<br />V:  7.22<br />QF: III","D:  73.53<br />V:  5.43<br />QF: III","D:  75.12<br />V:  3.13<br />QF: III","D:  77.35<br />V:  4.00<br />QF: III","D:  82.12<br />V:  6.18<br />QF: III","D:  75.76<br />V:  3.15<br />QF: III"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"III","legendgroup":"III","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.1054999999999999,18.3645],"tickmode":"array","ticktext":["5","10","15"],"tickvals":[5,10,15],"categoryorder":"array","categoryarray":["5","10","15"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"V","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"321c12c35684":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"321c12c35684","visdat":{"321c12c35684":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 
 ]
 
@@ -579,16 +580,16 @@ A variável é contínua quando pode assumir qualquer valor em um dado intervalo
 
 .left-column[
 
-<div id="htmlwidget-efd6b678744daa4da198" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-efd6b678744daa4da198">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Nº de Rebrotos","Peso de fruto","Altura da árvore","Volume de madeira","Grau de iluminação de copas","Forma de copas","Qualidade de fuste"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-b81592d4e23bfdede531" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b81592d4e23bfdede531">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Nº de Rebrotos","Peso de fruto","Altura da árvore","Volume de madeira","Grau de iluminação de copas","Forma de copas","Qualidade de fuste"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"name":"Variável","targets":0},{"name":"Tipo","targets":1},{"name":"Subtipo","targets":2}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 --
 
 .right-column[
 
-<div id="htmlwidget-fb7154208091fdc0936e" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-fb7154208091fdc0936e">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Biomassa","Mês de observação","Diâmetro do coleto","Nome botânico","Tipos de frutos (Qto à deiscência)","Diâmetro da árvore","Nº de sementes germinadas"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-5c2bc1338c37677bb3d0" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5c2bc1338c37677bb3d0">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Biomassa","Mês de observação","Diâmetro do coleto","Nome botânico","Tipos de frutos (Qto à deiscência)","Diâmetro da árvore","Nº de sementes germinadas"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"name":"Variável","targets":0},{"name":"Tipo","targets":1},{"name":"Subtipo","targets":2}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -663,8 +664,8 @@ Qual a moda para a série de dados abaixo?
 --
 
 .right-column[
-<div id="htmlwidget-e319f0e2b6248a6b9237" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-e319f0e2b6248a6b9237">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0],"date":[]},"data":[[0,1,2,3,4,5,6,8],[null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Valor<\/th>\n      <th>Frequência<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":0}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-e13dc7207c7b4e666606" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e13dc7207c7b4e666606">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0],"date":[]},"data":[[0,1,2,3,4,5,6,8],[null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Valor<\/th>\n      <th>Frequência<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":0},{"name":"Valor","targets":0},{"name":"Frequência","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -681,7 +682,7 @@ Qual a moda para a série de dados abaixo?
 <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Mas, pode-se usar a função** `table()` **para gerar uma tabela de frequências absolutas. Assim, a moda pode ser facilmente identificada.**
 
 
-```r
+``` r
 # Cria um vetor
 x &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
 
@@ -706,7 +707,7 @@ table(x)
 
 .right-column[
 
-```r
+``` r
 # Cria um vetor
 x &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
 
@@ -742,7 +743,7 @@ Qual a moda para a série de dados abaixo?
 .right-column[
 
 
-```r
+``` r
 # Cria um vetor
 y &lt;- c(1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1, 2)
 
@@ -775,7 +776,7 @@ Seja o vetor de nomes de espécies de árvores:
 
 .right-column[
 
-```r
+``` r
 # Cria um vetor
 esp &lt;- c(
   "Marupa", "Angelim", "Tauari", "Marupa", 
@@ -848,7 +849,7 @@ Série IV: {1, 6, 8, 8, 8, 6, 5, 5, 5, 4, 3, 0, 3, 3, 0, 4}
 
 .right-column[
 
-```r
+``` r
 # Criar os vetores
 S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 0)
 S2 &lt;- c(1,1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
@@ -1039,7 +1040,7 @@ Então, sejam as series:
 .right-column[
 
 
-```r
+``` r
 # Criar os vetores
 S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
 S2 &lt;- c(1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0)
@@ -1163,8 +1164,8 @@ Em que:
 ### Vamos praticar...
 
 .left-column[
-<div id="htmlwidget-207eaafc5124570f90fe" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-207eaafc5124570f90fe">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-2c56bf95ce49d944861c" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2c56bf95ce49d944861c">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -1189,8 +1190,8 @@ Obs.: Faça os cálculos manuais e usando a linguagem R.
 ### Vamos praticar...
 
 .left-column[
-<div id="htmlwidget-5f9a8252a14040a6aaaa" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-5f9a8252a14040a6aaaa">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-9bf8167d20062ccbdafe" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9bf8167d20062ccbdafe">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -1225,8 +1226,8 @@ V = {0.0659, 0.1256, 0.1634, 0.1734, .green[0.1967, 0.2298], 0.2345, 0.2346, 0.2
 ### Vamos praticar...
 
 .left-column[
-<div id="htmlwidget-7e7c462e8726c1803a73" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-7e7c462e8726c1803a73">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-fd49e94b94e5b0963468" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fd49e94b94e5b0963468">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
@@ -1258,8 +1259,8 @@ $$
 ### Vamos praticar...
 
 .left-column[
-<div id="htmlwidget-09a2680684bb860c7ffa" style="width:450px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-09a2680684bb860c7ffa">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-17c872ae58a02f8b2dd8" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-17c872ae58a02f8b2dd8">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ```
 ## 
@@ -1293,7 +1294,7 @@ III = 3
 .left-column[
 - **Mediana**
 
-```r
+``` r
 median(df$D)
 ## [1] 14.615
 median(df$H)
@@ -1304,7 +1305,7 @@ median(df$V)
 
 - **Moda**
 
-```r
+``` r
 table(df$QF)
 ## 
 ##   I  II III 
@@ -1316,7 +1317,7 @@ table(df$QF)
 .right-column[
 - **Média Aritmética**
 
-```r
+``` r
 mean(df$D)
 ## [1] 13.971
 mean(df$H)
@@ -1370,14 +1371,14 @@ name: ci
 Imagine que foram realizadas duas amostras de cinco árvores. De cada árvore mediu-se a altura comercial, em metros:
 
 .pull-left-5[
-<div id="htmlwidget-b096364cbb04edb63a70" style="width:200px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-b096364cbb04edb63a70">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1],"date":[]},"data":[[13,14,16,19,18],[16,16,16,16,16]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>A1<\/th>\n      <th>A2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-fc7f4664259618258f61" style="width:200px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fc7f4664259618258f61">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1],"date":[]},"data":[[13,14,16,19,18],[16,16,16,16,16]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>A1<\/th>\n      <th>A2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1]},{"name":"A1","targets":0},{"name":"A2","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 ]
 
 .pull-right-5[
 
-```r
+``` r
 colMeans(df)
 ## A1 A2 
 ## 16 16
@@ -1395,8 +1396,8 @@ colMeans(df)
 ### Por que medir a variância (ou dispersão) dos dados?
 
 .pull-left-5[
-<div id="htmlwidget-65b91b5f6d2bffc139c0" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-65b91b5f6d2bffc139c0">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-8c2c2479e5d6837915cf" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8c2c2479e5d6837915cf">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-right-5[
@@ -1420,7 +1421,7 @@ Um experimento foi conduzido para avaliar o efeito de dois tipos de substratos (
 
 .pull-left-4[
 
-```r
+``` r
 df %&gt;%
   group_by(Tratamento) %&gt;% 
   summarise(media=mean(Altura))
@@ -1494,7 +1495,7 @@ Seja a série:
 
 .pull-right-4[
 
-```r
+``` r
 S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
 max(S1) - min(S1)
 ## [1] 8
@@ -1604,14 +1605,14 @@ $$
 ### Variância - Uma abordagem sem fórmulas
 
 .pull-left-5[
-<div id="htmlwidget-2791abfdf602f12e3e1a" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-2791abfdf602f12e3e1a">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-29a7416c72f2e4b0f674" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-29a7416c72f2e4b0f674">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-right-5[
 
-<div id="htmlwidget-b70b7da67f708fcfecdb" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-b70b7da67f708fcfecdb">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","Total"],[19.21,19.83,20.14,20.81,19.25,null],[19.848,19.848,19.848,19.848,19.848,null],[-0.638,-0.018,0.292,0.962,-0.598,-0],[0.407044,0.000324,0.08526399999999999,0.9254439999999999,0.357604,1.7757]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-2bec36c07f8fe2c86961" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2bec36c07f8fe2c86961">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","Total"],[19.21,19.83,20.14,20.81,19.25,null],[19.848,19.848,19.848,19.848,19.848,null],[-0.638,-0.018,0.292,0.962,-0.598,-0],[0.407044,0.000324,0.08526399999999999,0.9254439999999999,0.357604,1.7757]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1},{"name":"Media","targets":2},{"name":"xi-media","targets":3},{"name":"(xi-media)²","targets":4}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 SQR = **1,7757** (Variação total)
 
@@ -1626,14 +1627,14 @@ S² = SQR/n-1 = 1,7757/(5-1) = **0,4439m²** (Variação média)
 ### Variância - Uma abordagem sem fórmulas
 
 .pull-left-5[
-<div id="htmlwidget-5df7086db3a2668dbbc6" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-5df7086db3a2668dbbc6">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-14310c28a9a3974abd35" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-14310c28a9a3974abd35">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-right-5[
 
-<div id="htmlwidget-642b3972cee49a9f7607" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-642b3972cee49a9f7607">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA","SA","SA","SA","SA","Total"],[28.23,29.67,15.34,16.23,12.89,null],[20.472,20.472,20.472,20.472,20.472,null],[7.758,9.198,-5.132,-4.242,-7.582,0],[60.186564,84.60320400000001,26.337424,17.994564,57.486724,246.6085]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-6af36b78b0714ad6b07b" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6af36b78b0714ad6b07b">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA","SA","SA","SA","SA","Total"],[28.23,29.67,15.34,16.23,12.89,null],[20.472,20.472,20.472,20.472,20.472,null],[7.758,9.198,-5.132,-4.242,-7.582,0],[60.186564,84.60320400000001,26.337424,17.994564,57.486724,246.6085]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1},{"name":"Media","targets":2},{"name":"xi-media","targets":3},{"name":"(xi-media)²","targets":4}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 
 SQR = **246,6085** (Variação total)
 
@@ -1648,13 +1649,13 @@ S² = SQR/n-1 = 246,6085/(5-1) = **61,6521m²** (Variação média)
 ### Variância - Usando a linguagem R
 
 .pull-left-5[
-<div id="htmlwidget-ea0e5cd094f38e55f162" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-ea0e5cd094f38e55f162">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-e2aa02fd5874788e58a6" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-e2aa02fd5874788e58a6">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-right-5[
 
-```r
+``` r
 df %&gt;%
   group_by(Tratamento) %&gt;% 
   summarise(Variancia=var(Altura)) %&gt;%
@@ -1723,14 +1724,14 @@ $$
 ### Desvio Padrão - Manual e usando a linguagem R
 
 .pull-left-1[
-<div id="htmlwidget-9a94651ba1948cdc48f5" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-9a94651ba1948cdc48f5">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-df399f89ee5a780935d0" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-df399f89ee5a780935d0">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-left-1[
 **Usando Linguagem R**
 
-```r
+``` r
 df %&gt;%
   group_by(Tratamento) %&gt;% 
   summarise(DP=sd(Altura)) %&gt;%
@@ -1814,14 +1815,14 @@ $$
 ### Coeficiente de Variação - Manual e usando a linguagem R
 
 .pull-left-1[
-<div id="htmlwidget-a417726f9f8be1a62df7" style="width:250px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-a417726f9f8be1a62df7">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-803eed0aebee3837181d" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-803eed0aebee3837181d">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .pull-left-1[
 **Usando Linguagem R**
 
-```r
+``` r
 df %&gt;%
   group_by(Tratamento) %&gt;% 
   summarise(
