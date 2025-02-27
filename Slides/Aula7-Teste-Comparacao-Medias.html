@@ -1,0 +1,2863 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/header-attrs-2.24/header-attrs.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x4fbfa85340545d9a4a03b29401c1d15","expires":1}</script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/editable-0.2.6/editable.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/kePrint-0.0.1/kePrint.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/lightable-0.0.1/lightable.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/plotly-binding-4.10.3/plotly.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/typedarray-0.1/typedarray.min.js"></script>
+    <script src="Aula7-Teste-Comparacao-Medias_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/plotly-main-2.11.1/plotly-latest.min.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/datatables-binding-0.29/datatables.js"></script>
+    <link href="Aula7-Teste-Comparacao-Medias_files/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula7-Teste-Comparacao-Medias_files/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula7-Teste-Comparacao-Medias_files/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 130px;
+height: 130px;
+z-index: 0;
+background-image: url(fig/slide-title/LMFTCA.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;!-- title-slide --&gt;
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Testes de Comparações <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; de Médias 
+
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 1ª versão: 13/setembro/2021 &lt;br&gt; (Atualizado em: 07/agosto/2024) &lt;br&gt; Altamira, Pará
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Testes de Comparação de Médias&lt;/div2&gt; &lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+2 - Análise exploratória de dados;
+
+3 - Delineamento inteiramente casualizado - DIC;
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+**6 - Testes de comparações de médias**;
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+9 - Análise de experimentos com linguagem R.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+.font90[
+* Conhecer e entender os princípios de alguns testes de comparações de médias paramétricos.
+* Entender quando é razoável (adequado) realizar testes de comparações de médias.
+* Compreender e aplicar a matemática subjacente de dois dos principais testes de comparações de médias: Tukey e Duncan.
+* Aprender a apresentar e interpretar os resultados de testes de comparações de médias.
+* Realizar testes de comparações de médias usando a linguagem de programação R.
+]
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font80[
+**Parte 1 - ANOVA e Teste F - Recapitulando**
+
+[1 - Recapitulando - ANOVA e Teste F](#rec)
+
+&amp;nbsp;&amp;nbsp;[1.1 - Hipóteses estatísticas do teste F](#hip)
+
+&amp;nbsp;&amp;nbsp;[1.2 - Regras de decisão do teste F](#regras)
+
+&amp;nbsp;&amp;nbsp;[1.3 - Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F](#rej)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font80[
+**Parte 2 - Teste de comparações de médias de Tukey**
+
+[1 - Teste de comparações de médias de Tukey](#tt)
+
+&amp;nbsp;&amp;nbsp;[1.1 - Diferença Mínima Significativa](#dms)
+
+&amp;nbsp;&amp;nbsp;[1.2 - Hipóteses estatísticas do Teste de Tukey](#hett)
+
+&amp;nbsp;&amp;nbsp;[1.3 - Regras de decisão do Teste de Tukey](#rdtt)
+
+&amp;nbsp;&amp;nbsp;[1.4 - Etapas para realização do Teste de Tukey](#prtt)
+
+&amp;nbsp;&amp;nbsp;[1.5 - Aplicação do Teste de Tukey](#att)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.5.1 - Competição de procedências florestais &lt;br&gt; (Pimentel-Gomes; Garcia, 2002)](#cpf)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.5.2 - Teste de Tukey no R - Pacote agricolae](#ttr)
+
+]
+]
+]
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font80[
+**Parte 3 - Teste de comparações de médias de Duncan**
+
+[1 - Teste de comparações de médias de Duncan](#tcmd)
+
+&amp;nbsp;&amp;nbsp;[1.1 - Amplitude Mínima Significante](#ams)
+
+&amp;nbsp;&amp;nbsp;[1.2 - Hipóteses estatísticas do Teste de Duncan](#hetd)
+
+&amp;nbsp;&amp;nbsp;[1.3 - Regras de decisão do Teste de Duncan](#rdtd)
+
+&amp;nbsp;&amp;nbsp;[1.4 - Etapas para realização do Teste de Duncan](#ertd)
+
+&amp;nbsp;&amp;nbsp;[1.5 - Aplicação do Teste de Duncan](#atd)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.5.1 - Composição de substratos na altura de Pinus oocarpa (Banzatto; Kronka, 2013)](#csapo)
+
+&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;[1.5.2 - Teste de Duncan no R - Pacote agricolae](#ttr)
+
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 1] &lt;br&gt; .white[ANOVA e Teste F: &lt;br&gt; Recapitulando...]**] 
+
+.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Testes de Comparações de Médias&lt;/div2&gt; &lt;/div&gt;
+
+---
+name: rec
+## Recapitulando...
+&lt;br&gt;
+
+.pull-left-4[
+.font80[
+**Antes de aprofundar sobre ".green[Testes de Comparações de Médias]" vamos resgatar algumas ideias discutidas até aqui...**
+]
+&lt;br&gt;
+
+.font70[
+- Um .green[experimento] é conduzido sob algum delineamento (DIC, DBC ou DQL) ou arranjo experimental para .green[avaliar os efeitos de tratamentos] sobre uma variável resposta "y" de interesse.
+- Para isso, .green[dados] da variável resposta "y" .green[são coletados], e estes são usados para avaliar as evidências e realizar inferências.
+- Após uma boa análise exploratória, uma abordagem estatística comum é a realização de uma .green[ANOVA], cujo modelo estatístico depende do delineamento experimental.
+- Na ANOVA, o .green[teste F] é usado para avaliar, sob a ótica estatística, a existência de evidências de .green[igualdade entre as médias de tratamentos] (Hipótese H&lt;sub&gt;0&lt;/sub&gt;).
+]
+]
+
+
+.pull-right-4[
+&lt;img src="https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+.font70[
+.center[
+(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)
+]
+]
+]
+
+---
+name: hip
+## Recapitulando...
+&lt;br&gt;
+### ANOVA: Hipóteses estatísticas do teste F
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Todos os possíveis contrastes, entre médias, são estatisticamente nulos.
+- As médias dos tratamentos são estatisticamente todas iguais entre si.
+
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):**
+&lt;br&gt;
+
+- Existe pelo menos um contraste, entre médias, estatisticamente diferente de zero.
+- Pelo menos dois tratamentos são estatisticamente diferentes entre si.
+]
+]
+
+---
+name: regras
+## Recapitulando...
+&lt;br&gt;
+### ANOVA: Regras de decisão do teste F
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
+
+- Se o valor da .green[estatística F] (F&lt;sub&gt;Calculado&lt;/sub&gt;) for **maior** do que o .green[valor crítico na tabela da distribuição F-Snedecor], existem evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Em outras palavras, existem indícios de que pelo menos uma das médias dos tratamentos é estatisticamente diferente das demais, ao nível de significância fixado.
+
+`\(F_{Calculado} &gt; F_{Crítico}\)`
+
+`\(Rejeita-se~~H_0\)`
+
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
+
+- Se o valor da .green[estatística F] (F&lt;sub&gt;Calculado&lt;/sub&gt;) for **menor ou igual** do que o valor do (F&lt;sub&gt;Crítico&lt;/sub&gt;), não existe evidências para rejeitar H&lt;sub&gt;0&lt;/sub&gt;.
+- Em outras palavras, existem indícios de que as médias dos tratamentos são estatisticamente todas iguais entre si, ao nível de significância fixado.
+&lt;br&gt;&lt;br&gt;
+
+`\(F_{Calculado} \leq F_{Crítico}\)`
+
+`\(Não~~rejeita-se~~H_0\)`
+
+]
+]
+
+---
+name: rej
+## Recapitulando...
+&lt;br&gt;
+### ANOVA: Rejeição da hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F
+
+.pull-left-4[
+.font80[
+- Se `\(F_{calculado} &gt; F_{crítico}\)`: existem evidências para rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;).
+- Em outras palavras, existem evidências de que as médias de pelo menos dois tratamentos diferem estatísticamente.
+&lt;br&gt;&lt;br&gt;
+
+**Note**: .green[O teste F não fornece evidências sobre qual é o melhor tratamento].
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+.center[**Surgiram duas novas perguntas...**]
+
+.green[1 - Quais tratamentos .green[não possuem] médias significativamente diferentes?]
+
+.green[2 - Quais tratamentos .green[possuem]  médias significativamente diferentes?]
+
+- Para responder essas perguntas foram idealizados os .green[testes de comparações de médias].
+- A ideia básica é realizar .green[comparações par-a-par] entre as médias dos tratamentos, e inferir se estas são significativamente diferentes (ou não).
+- Portanto, os testes de comparações de médias complementam a ANOVA, quando a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F é rejeitada.
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara2.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 2] &lt;br&gt; .white[Teste de comparações &lt;br&gt; de médias de Tukey]**] 
+
+.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Testes de Comparações de Médias&lt;/div2&gt; &lt;/div&gt;
+
+---
+name: tt
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### John Wilder Tukey
+
+.pull-left-4[
+.font80[
+- Foi idealizado por [John Wilder Tukey](https://en.wikipedia.org/wiki/John_Tukey) em 1949.
+- **Publicação**: *Comparing Individual Means in the Analysis of Variance*
+[(Tukey, 1949)](https://www.jstor.org/stable/3001913).
+- **Ideia básica**: realizar .green[comparações par-a-par] entre as médias dos tratamentos, baseando-se na .green[Diferença Mínima Significativa] (DMS).
+- É um dos principais e mais usados testes de comparações de médias.
+
+]
+]
+
+.pull-right-4[
+&lt;div class="figure" style="text-align: center"&gt;
+&lt;img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/e9/John_Tukey.jpg/220px-John_Tukey.jpg" alt="John Wilder Tukey" width="50%" /&gt;
+&lt;p class="caption"&gt;John Wilder Tukey&lt;/p&gt;
+&lt;/div&gt;
+
+.font70[
+.center[
+**Fonte**: https://upload.wikimedia.org
+]
+]
+]
+
+---
+name: dms
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### Diferença Mínima Significativa - DMS
+&lt;br&gt;
+
+.pull-left-4[
+$$
+`\begin{equation*}
+\Large
+\Delta = q\sqrt{\frac{QMR}{J}}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(\Delta\)` = Diferença Mínima de Significância
+
+*q* = Amplitude Total Estudentizada
+
+*QMR* = Quadrado Médio do Resíduo
+
+*J* = Número de repetições por tratamento
+
+*I* = Número de tratamentos
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Total Estudentizada**]
+
+$$
+`\begin{equation*}
+q_{(I;~GLR,~\alpha)}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de tratamentos
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(q\)` crítico no site: [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
+
+]
+]
+
+---
+
+name: dms
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### Diferença Mínima Significativa - O que é?
+&lt;br&gt;
+
+.pull-left-2[
+.font80[
+- `\(\color{green}\Delta\)` é o menor valor que a estimativa de um contraste (diferença entre médias) deve apresentar para admitir que existe diferença significativa entre as médias, ou seja, que a diferença é diferente de zero, sob a ótica estatística.
+- Em outras palavras, `\(\color{green}\Delta\)` é a diferença mínima que deve existir entre as médias de 2 tratamentos quaisquer, para que a hipótese H&lt;sub&gt;0&lt;/sub&gt; seja rejeitada.
+]
+]
+
+--
+
+.pull-right-1[
+.font70[
+.center[**Vamos supor...**]
+
+Supondo um experimento de crescimento em altura (centímetros) de plântulas em condições de viveiro. Têm-se os resultados das médias de 3 tratamentos para diferentes substratos (S1 = 20cm, S2 = 18cm e S3 = 17cm). Admitindo `\(\color{green}\Delta\)` = 3, pergunta-se:
+
+- Quais tratamentos diferem estatisticamente, em termos de suas médias?
+
+S1 - S2 = 20 - 18 = .red[2]
+
+S1 - S3 = 20 - 17 = .green[**3**]
+
+S2 - S3 = 18 - 17 = .red[1]
+
+]
+]
+
+
+---
+name: hett
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### Hipóteses estatísticas do Teste de Tukey
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):**
+&lt;br&gt;
+
+- As .green[médias] comparadas .green[não diferem] significativamente.
+
+H&lt;sub&gt;0&lt;/sub&gt;: `\(m_i - m_{i'} = 0\)`, para algum `\(i ≠ i'\)`
+
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):**
+&lt;br&gt;
+
+- As .green[médias] comparadas .green[diferem] significativamente.
+
+H&lt;sub&gt;1&lt;/sub&gt;: `\(m_i - m_{i'} ≠ 0\)`, para algum `\(i ≠ i'\)`
+]
+]
+
+---
+name: rdtt
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### Regras de decisão do teste de Tukey
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
+
+- Se `\(\left | m_i - m_{i'} \right | \geq \Delta\)`, rejeita-se (H&lt;sub&gt;0&lt;/sub&gt;). 
+- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, ao nível de significância `\(\alpha\)`.
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
+
+- Se `\(\left | m_i - m_{i'} \right | &lt; \Delta\)`, não rejeita-se (H&lt;sub&gt;0&lt;/sub&gt;). 
+- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, ao nível de significância `\(\alpha\)`.
+
+]
+]
+
+
+---
+name: prtt
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### Etapas para realização do Teste de Tukey
+
+.pull-right-3[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+![question](https://media1.giphy.com/media/ZaJtnTY8tFZz0PvmW9/giphy-downsized.gif)  
+
+]
+
+--
+
+.pull-left-3[
+.font80[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+&lt;br&gt;
+
+**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar a realização das comparações, dispor as médias em ordem decrescente de valor.
+&lt;br&gt;
+
+**Etapa 3**: Calcular a Diferença Mínima Significativa ( `\(\Delta\)` ).
+&lt;br&gt;
+
+**Etapa 4**: Calcular a diferença entre as médias aritméticas dos tratamentos (par-a-par).
+&lt;br&gt;
+
+**Etapa 5**: Comparar as diferenças entre as médias aritméticas com o valor de `\(\Delta\)`.
+&lt;br&gt;
+
+`\(\left | m_i - m_i \right | \geq \Delta\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Tukey
+&lt;br&gt;
+
+`\(\left | m_i - m_i \right | &lt; \Delta\)`: Não rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Tukey
+&lt;br&gt;
+
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+
+]
+]
+
+
+---
+name: ttdic
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+
+.pull-left-3[
+.font80[
+- Vamos retornar ao experimento de competição de progênies (Pimentel-Gomes; Garcia, 2002) apresentado na Aula 4 (Delineamento Inteiramente Casualizado - DIC).
+- Trata-se de um experimento de competição de 10 progênies de *Eucalyptus saligna* conduzido em DIC, com 4 repetições.
+- Os dados são os valores médios de diâmetro a 1,30m do solo, em centímetros, nas parcelas experimentais.
+]
+]
+
+---
+name: data
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+
+.pull-left-4[
+.pull-top[
+.font70[**Valores médios de diâmetro a 1,30m do solo, em centímetros...**]
+&lt;br&gt;
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+]
+]
+
+--
+
+.pull-right-4[
+.pull-down[
+
+
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-f43a15c2e7b27f080b41" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-f43a15c2e7b27f080b41">{"x":{"data":[{"x":[1,1,1,1],"y":[16,16.399999999999999,14.1,11.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(248,118,109,1)","width":1.8897637795275593},"name":"P1","legendgroup":"P1","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[14.300000000000001,14.6,14.5,13.800000000000001],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(216,144,0,1)","width":1.8897637795275593},"name":"P2","legendgroup":"P2","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[14.699999999999999,11.6,15,15.6],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(163,165,0,1)","width":1.8897637795275593},"name":"P3","legendgroup":"P3","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[13.6,13.1,14.699999999999999,15.1],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(57,182,0,1)","width":1.8897637795275593},"name":"P4","legendgroup":"P4","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[10.5,11.6,15.9,14],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,125,1)","width":1.8897637795275593},"name":"P5","legendgroup":"P5","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[6,6,6,6],"y":[11,15,13,10.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,196,1)","width":1.8897637795275593},"name":"P6","legendgroup":"P6","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[7,7,7,7],"y":[13.1,10.300000000000001,14.300000000000001,10.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,176,246,1)","width":1.8897637795275593},"name":"P7","legendgroup":"P7","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[8,8,8,8],"y":[10.199999999999999,10.300000000000001,13.199999999999999,13],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(149,144,255,1)","width":1.8897637795275593},"name":"P8","legendgroup":"P8","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[9,9,9,9],"y":[8.5999999999999996,9.5,8.5,9.4000000000000004],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(231,107,243,1)","width":1.8897637795275593},"name":"P9","legendgroup":"P9","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[10,10,10,10],"y":[8.1999999999999993,8.4000000000000004,9.3000000000000007,9.1999999999999993],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(255,98,188,1)","width":1.8897637795275593},"name":"P10","legendgroup":"P10","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1.0172280831029639,2.0121954999631271,2.9969191636191681,3.8419851005310193,4.8847956340759993,6.1874763757223263,7.1163256057770923,7.8082644451642409,9.2299550035968423,10.127627822104841,0.76022760488558561,1.7542317534098402,3.0424640921410173,3.7607911354862154,5.0401846567401662,6.1408552256179973,7.086868635378778,8.0417248496087268,9.1180922583444044,9.9973906545201316,1.1281803224701434,2.1175933321937919,3.228740104008466,3.9407527026487514,4.9792795911198482,5.941740102134645,7.1416046909289435,7.8891995915910229,8.7517133395886049,10.241576498607174,1.041409885045141,1.9656395837664604,2.9798385141184554,4.00467734108679,4.8992214148165658,5.8614332900615409,7.2056648777797818,8.0486370134167373,9.229174408945255,10.029252709704451],"y":[16.017043428774922,14.289312683865429,14.677124380525202,13.561059197299182,11.584493999257683,11.037120904624462,13.133589157257228,10.338176850099117,8.4926358444057399,8.2089400841109441,16.374039130602032,14.52237764203921,15.581576871369034,13.060290470756589,10.463989021386951,15.000995790604502,10.30982125144452,13.163990429658442,8.5795133258774872,8.4122374193742875,14.085872439350933,13.820954075269402,11.56631478158757,14.722809103541076,15.922221533153206,10.671556888893246,14.300627286732198,10.219222150761633,9.477357180248946,9.2946697956696163,11.677638990543782,14.62394579572603,15.031752705462276,15.093415947984903,14.001630111448467,12.993046433273703,10.477827832568437,12.98734322540462,9.3824280853942046,9.1874435133300718],"text":["Progenie: P1<br />Valor: 16.0","Progenie: P2<br />Valor: 14.3","Progenie: P3<br />Valor: 14.7","Progenie: P4<br />Valor: 13.6","Progenie: P5<br />Valor: 11.6","Progenie: P6<br />Valor: 11.0","Progenie: P7<br />Valor: 13.1","Progenie: P8<br />Valor: 10.3","Progenie: P9<br />Valor:  8.5","Progenie: P10<br />Valor:  8.2","Progenie: P1<br />Valor: 16.4","Progenie: P2<br />Valor: 14.5","Progenie: P3<br />Valor: 15.6","Progenie: P4<br />Valor: 13.1","Progenie: P5<br />Valor: 10.5","Progenie: P6<br />Valor: 15.0","Progenie: P7<br />Valor: 10.3","Progenie: P8<br />Valor: 13.2","Progenie: P9<br />Valor:  8.6","Progenie: P10<br />Valor:  8.4","Progenie: P1<br />Valor: 14.1","Progenie: P2<br />Valor: 13.8","Progenie: P3<br />Valor: 11.6","Progenie: P4<br />Valor: 14.7","Progenie: P5<br />Valor: 15.9","Progenie: P6<br />Valor: 10.7","Progenie: P7<br />Valor: 14.3","Progenie: P8<br />Valor: 10.2","Progenie: P9<br />Valor:  9.5","Progenie: P10<br />Valor:  9.3","Progenie: P1<br />Valor: 11.7","Progenie: P2<br />Valor: 14.6","Progenie: P3<br />Valor: 15.0","Progenie: P4<br />Valor: 15.1","Progenie: P5<br />Valor: 14.0","Progenie: P6<br />Valor: 13.0","Progenie: P7<br />Valor: 10.5","Progenie: P8<br />Valor: 13.0","Progenie: P9<br />Valor:  9.4","Progenie: P10<br />Valor:  9.2"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5,6,7,8,9,10],"y":[14.549999999999999,14.300000000000001,14.225,14.125,13,12.425000000000001,12.050000000000001,11.675000000000001,9,8.7750000000000004],"text":["Progenie: P1<br />Valor: 14.550","Progenie: P2<br />Valor: 14.300","Progenie: P3<br />Valor: 14.225","Progenie: P4<br />Valor: 14.125","Progenie: P5<br />Valor: 13.000","Progenie: P6<br />Valor: 12.425","Progenie: P7<br />Valor: 12.050","Progenie: P8<br />Valor: 11.675","Progenie: P9<br />Valor:  9.000","Progenie: P10<br />Valor:  8.775"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.559055118110237,"symbol":"x-thin-open","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":54.196762141967611,"l":71.19966791199667},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,10.6],"tickmode":"array","ticktext":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"tickvals":[1,2,3,4,5,6.0000000000000009,7,8,9,10],"categoryorder":"array","categoryarray":["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Progênies","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.7899999999999991,16.809999999999999],"tickmode":"array","ticktext":["10.0","12.5","15.0"],"tickvals":[10,12.5,15],"categoryorder":"array","categoryarray":["10.0","12.5","15.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029056},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Diâmetro (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.96607419147892382,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029056}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19547d065377":{"x":{},"y":{},"colour":{},"type":"box"},"195447ea61e9":{"x":{},"y":{}},"195451d41c8e":{"x":{},"y":{}}},"cur_data":"19547d065377","visdat":{"19547d065377":["function (y) ","x"],"195447ea61e9":["function (y) ","x"],"195451d41c8e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+&lt;br&gt;
+
+--
+
+.pull-left-4[
+.font80[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Lembre**: Esta etapa foi discutida na Aula 4 (DIC). Portanto, a ANOVA e o teste F já foram realizados. Vamos apenas resgatar o quadro de ANOVA e a conclusão do teste F...
+]
+]
+
+--
+
+.pull-right-4[
+&lt;img src="fig/class4/ANOVA-Final.png" width="110%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.pull-left-4[
+
+.center[**Interpretação**]
+
+.font70[
+- Como `\(\large F_{Calculado}~&gt;~F_{Crítico}~(~6,91~&gt;~3,07)\)` rejeita-se a hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Progênies) diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[**.green[Quais tratamentos possuem médias iguais e diferentes entre si?]**]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapa 2**: Calcular as médias aritméticas dos diâmetros para cada progênie, e dispor em ordem decrescente.
+]
+&lt;br&gt;
+
+.pull-left-9[
+&lt;table class=" lightable-classic lightable-paper table table-striped" style='font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; font-family: "Arial Narrow", arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto; font-size: 18px; margin-left: auto; margin-right: auto;'&gt;
+ &lt;thead&gt;
+  &lt;tr&gt;
+   &lt;th style="text-align:left;color: white !important;background-color: black !important;"&gt; Rep./Prog. &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P1 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P2 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P3 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P4 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P5 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P6 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P7 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P8 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P9 &lt;/th&gt;
+   &lt;th style="text-align:right;color: white !important;background-color: black !important;"&gt; P10 &lt;/th&gt;
+  &lt;/tr&gt;
+ &lt;/thead&gt;
+&lt;tbody&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 16.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 8.4 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.8 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.9 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.3 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: black !important;background-color: white !important;color: white !important;background-color: black !important;"&gt; R4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.6 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 15.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 14.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 10.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: black !important;background-color: white !important;"&gt; 9.2 &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+   &lt;td style="text-align:left;color: white !important;background-color: black !important;color: white !important;background-color: orange !important;"&gt; Média &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.5 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.3 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.2 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 14.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 13.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 12.4 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 12.1 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 11.7 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 9.0 &lt;/td&gt;
+   &lt;td style="text-align:right;color: white !important;background-color: orange !important;"&gt; 8.8 &lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+
+
+
+.font70[
+&lt;br&gt;
+<span>&lt;i class="fas  fa-thumbs-up faa-bounce animated "&gt;&lt;/i&gt;</span> **Por coincidência (ou não), as médias já estão em ordem.**
+
+]
+]
+
+--
+
+.pull-right-9[
+<div id="htmlwidget-a767591a26597d07cfd8" style="width:500px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-a767591a26597d07cfd8">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênies<\/th>\n      <th>Médias<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapa 3**: Calcular a Diferença Mínima de Significância
+]
+
+--
+
+.pull-left-4[
+.font80[
+- Primeiro, vamos encontrar o valor de *q*&lt;sub&gt;*crítico*&lt;/sub&gt; no site: &lt;br&gt; [q-Distribution-Tables-elvers](http://elvers.us/stats/tables/qprobability.html)
+- Vamos admitir `\(α = 0,05\)`, conforme Pimentel-Gomes e Garcia, 2002.
+]&lt;br&gt;
+
+$$
+`\begin{equation*}
+q_{(I;~GLR,~\alpha)}\\
+q_{(10;~30,~0,05)} = \color{red}{4,825}
+\end{equation*}`
+$$
+]
+
+--
+
+.pull-right-4[
+$$
+`\begin{equation*}
+\normalsize
+\Delta = q\sqrt{\frac{QMR}{J}} = 4,825\sqrt{\frac{2,59}{4}} = \color{red}{3,88cm}
+\end{equation*}`
+$$
+.font70[
+*QMR* = Quadrado Médio do Resíduo
+
+*J* = Número de repetições por tratamento
+]
+]
+
+--
+
+.pull-right-4[
+&lt;br&gt;
+.shadow[
+.font70[
+.center[**Interpretação**]
+- Quando a diferença entre as médias de dois tratamentos for no mínimo de 3,88cm, existem evidências para admitir uma diferença significativa entre estas médias.
+]
+]
+
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+
+.font90[
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
+]
+
+--
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 1 vs demais progênies**]
+]
+<div id="htmlwidget-4ae29a025f3b09b2094b" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-4ae29a025f3b09b2094b">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1"],["P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 2 vs demais progênies**]
+]
+<div id="htmlwidget-3c701148cf429f50d93e" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-3c701148cf429f50d93e">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P2","P2","P2","P2","P2","P2","P2","P2"],["P3","P4","P5","P6","P7","P8","P9","P10"],[14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3],[14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001],[0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
+]
+
+--
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 3 vs demais progênies**]
+]
+<div id="htmlwidget-6f48b6b209ec886bc925" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-6f48b6b209ec886bc925">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P3","P3","P3","P3","P3","P3","P3"],["P4","P5","P6","P7","P8","P9","P10"],[14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.1,13,12.4,12.1,11.7,9,8.800000000000001],[0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 4 vs demais progênies**]
+]
+<div id="htmlwidget-82a63b142d2f72163daa" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-82a63b142d2f72163daa">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P4","P4","P4","P4","P4","P4"],["P5","P6","P7","P8","P9","P10"],[14.1,14.1,14.1,14.1,14.1,14.1],[13,12.4,12.1,11.7,9,8.800000000000001],[1.1,1.7,2,2.4,5.1,5.3],[3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapas 4 e 5**: Calcular a diferença entre as médias aritméticas das progênies (par-a-par) e comparar com DMS
+]
+
+--
+
+.pull-left-4[
+.font70[
+.blue[**Progênie 5 vs demais progênies**]
+]
+<div id="htmlwidget-ec69941c8aac8acc91fe" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-ec69941c8aac8acc91fe">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P5","P5","P5","P5","P5"],["P6","P7","P8","P9","P10"],[13,13,13,13,13],[12.4,12.1,11.7,9,8.800000000000001],[0.6,0.9,1.3,4,4.2],[3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+--
+
+.pull-right-4[
+.font70[
+.blue[**Progênie 6 vs demais progênies**]
+]
+<div id="htmlwidget-ae4985336a34c40ee80a" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-ae4985336a34c40ee80a">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P6","P6","P6","P6"],["P7","P8","P9","P10"],[12.4,12.4,12.4,12.4],[12.1,11.7,9,8.800000000000001],[0.3,0.7,3.4,3.6],[3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+
+--
+
+.pull-down[
+.pull-left-4[
+.font70[
+.blue[**Progênie 7 vs demais progênies**]
+]
+<div id="htmlwidget-d9474f801119a84d144d" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-d9474f801119a84d144d">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P7","P7","P7"],["P8","P9","P10"],[12.1,12.1,12.1],[11.7,9,8.800000000000001],[0.4,3.1,3.3],[3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+]
+
+--
+
+
+.pull-right-4[
+.pull-down[
+.font70[
+.blue[**Progênie 8 vs demais progênies**]
+]
+<div id="htmlwidget-569776ca20d61e45a44d" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-569776ca20d61e45a44d">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P8","P8"],["P9","P10"],[11.7,11.7],[9,8.800000000000001],[2.7,2.9],[3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+
+.font70[
+.blue[**Progênie 9 vs Progênie 10**]
+]
+<div id="htmlwidget-a340fd05c3fc746bc033" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-a340fd05c3fc746bc033">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P9"],["P10"],[9],[8.800000000000001],[0.2],[3.88],["Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false,"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':'lightblue'});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+
+.pull-left-4[
+<div id="htmlwidget-5832424110848d62b9c1" style="width:500px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-5832424110848d62b9c1">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P1","P1","P1","P1","P1","P1","P1","P1","P1","P2","P2","P2","P2","P2","P2","P2","P2","P3","P3","P3","P3","P3","P3","P3"],["P2","P3","P4","P5","P6","P7","P8","P9","P10","P3","P4","P5","P6","P7","P8","P9","P10","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.5,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.3,14.2,14.2,14.2,14.2,14.2,14.2,14.2],[14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001,14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001,14.1,13,12.4,12.1,11.7,9,8.800000000000001],[0.2,0.3,0.4,1.5,2.1,2.4,2.8,5.5,5.7,0.1,0.2,1.3,1.9,2.2,2.6,5.3,5.5,0.1,1.2,1.8,2.1,2.5,5.2,5.4],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+]
+
+--
+
+.pull-right-4[
+<div id="htmlwidget-ad750188b5395456c546" style="width:500px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-ad750188b5395456c546">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[2,3,4,5],"date":[]},"data":[["P4","P4","P4","P4","P4","P4","P5","P5","P5","P5","P5","P6","P6","P6","P6","P7","P7","P7","P8","P8","P9"],["P5","P6","P7","P8","P9","P10","P6","P7","P8","P9","P10","P7","P8","P9","P10","P8","P9","P10","P9","P10","P10"],[14.1,14.1,14.1,14.1,14.1,14.1,13,13,13,13,13,12.4,12.4,12.4,12.4,12.1,12.1,12.1,11.7,11.7,9],[13,12.4,12.1,11.7,9,8.800000000000001,12.4,12.1,11.7,9,8.800000000000001,12.1,11.7,9,8.800000000000001,11.7,9,8.800000000000001,9,8.800000000000001,8.800000000000001],[1.1,1.7,2,2.4,5.1,5.3,0.6,0.9,1.3,4,4.2,0.3,0.7,3.4,3.6,0.4,3.1,3.3,2.7,2.9,0.2],[3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88,3.88],["Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Rejeita-se H0","Rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0","Não rejeita-se H0"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Pi<\/th>\n      <th>Pcomp<\/th>\n      <th>mi<\/th>\n      <th>mcomp<\/th>\n      <th>Diferenca<\/th>\n      <th>DMS<\/th>\n      <th>Conclusao<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100],"rowCallback":"function(row, data, displayNum, displayIndex, dataIndex) {\nvar value=data[6]; $(this.api().cell(row, 6).node()).css({'background-color':value == \"Não rejeita-se H0\" ? \"lightblue\" : value == \"Rejeita-se H0\" ? \"lightgreen\" : null});\n}"}},"evals":["options.initComplete","options.rowCallback"],"jsHooks":[]}</script>
+
+.center[**Tabela Final**]
+]
+
+---
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste Tukey - Experimento em DIC (Pimentel-Gomes; Garcia, 2002)]
+&lt;br&gt;
+.font90[
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+]
+
+--
+&lt;br&gt;
+
+.pull-left-4[
+<div id="htmlwidget-1ce338de43a141a8e7b8" style="width:500px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-1ce338de43a141a8e7b8">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["P1","P2","P3","P4","P5","P6","P7","P8","P9","P10"],[14.5,14.3,14.2,14.1,13,12.4,12.1,11.7,9,8.800000000000001],["a","a","a","a","a","ab","ab","ab","b","b"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Progênie<\/th>\n      <th>Média<\/th>\n      <th>Tukey (5%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":24,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false,"lengthMenu":[10,24,25,50,100]}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+.font70[
+- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Tukey.
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+.center[**Interprete os resultados**]
+- Por exemplo, existem evidência para admitir que a média da progênie P1 é estatísticamente diferente apenas de P9 e P10.
+- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Pratique**: Escreva afirmações como essa para as demais evidências indicadas pelo teste de Tukey.
+
+]
+]
+
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste de Tukey no R - Pacote agricolae]
+&lt;br&gt;
+
+.pull-left-4[
+.font70[
+- **1 - Carrega dados e manipula para formato longo...**
+
+```r
+data &lt;- readr::read_csv("data/DIC-Pimentel-Gomes-2002.csv")
+
+data_pivot &lt;- data %&gt;%
+  tidyr::pivot_longer(
+    cols = starts_with("P"),
+    names_to = "Progenie",
+    values_to = "Valor",
+    names_transform = list(Progenie = as.factor),
+    values_drop_na = TRUE
+  ) %&gt;%
+  rename(Repeticao = `Rep./Prog.`) %&gt;%
+  arrange(Progenie, Repeticao)
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+- **2 - Realiza ANOVA...**
+
+```r
+# Realizar a análise de variância
+res.aov &lt;- aov(Valor ~ Progenie, data = data_pivot)
+
+# Resumo da análise de variância
+summary(res.aov)
+##             Df Sum Sq Mean Sq F value   Pr(&gt;F)    
+## Progenie     9 160.99  17.887   6.919 2.46e-05 ***
+## Residuals   30  77.56   2.585                     
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste de Tukey no R - Pacote agricolae]
+&lt;br&gt;
+
+.pull-left-4[
+.font80[
+- **3 - Realiza Teste de Tukey...**
+
+```r
+# Teste Tukey
+library(agricolae)
+out.tukey &lt;- HSD.test(y = res.aov, trt = "Progenie", 
+                      group = TRUE, alpha = 0.05)
+
+out.tukey$groups
+out.tukey$parameters
+```
+]
+]
+
+.pull-right-4[
+.font90[
+
+```
+##      Valor groups
+## P1  14.550      a
+## P2  14.300      a
+## P3  14.225      a
+## P4  14.125      a
+## P5  13.000      a
+## P6  12.425     ab
+## P7  12.050     ab
+## P8  11.675     ab
+## P9   9.000      b
+## P10  8.775      b
+```
+
+```
+##    test   name.t ntr StudentizedRange alpha
+##   Tukey Progenie  10         4.824141  0.05
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Tukey
+&lt;br&gt;
+### .font80[Teste de Tukey no R - Pacote agricolae]
+
+.pull-left-4[
+.font80[
+- **4 - Gráfico do Teste de Tukey...**
+
+```r
+# Gráfico comparações de Tukey
+plot(out.tukey, ylab = "Diâmetro (cm)",
+     main = "Competição de Progênies\n (Eucalyptus saligna)")
+```
+]
+]
+
+.pull-right-4[
+&lt;img src="Aula7-Teste-Comparacao-Medias_files/figure-html/unnamed-chunk-23-1.png" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class3/arara2.jpg)
+background-size: cover
+
+.font200[**.yellow[Parte 3] &lt;br&gt; .white[Teste de comparações &lt;br&gt; múltiplas de Duncan]**] 
+
+.left[.footnote[.white[Créditos: Imagem de ljwong por Pixabay].]]
+
+---
+
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp; &lt;div3&gt;Experimentação Florestal (FL03034 - EF) &lt;/div3&gt;/ &lt;div2&gt;Testes de Comparações de Médias&lt;/div2&gt; &lt;/div&gt;
+
+---
+
+name: td
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### David B. Duncan
+
+.pull-left-2[
+.font80[
+- Foi idealizado por [David B. Duncan](https://en.wikipedia.org/wiki/Duncan%27s_new_multiple_range_test) em 1955.
+- **Publicação**: *Multiple range and multiple F tests*
+[(Duncan, 1955)](https://www.jstor.org/stable/3001478?origin=crossref&amp;seq=1#metadata_info_tab_contents).
+- **Ideia básica**: comparar pares de médias de tratamentos, porém 
+- É conhecido como .green[Teste de Amplitudes Múltiplas de Duncan] (*Duncan's New Multiple Range Test* - MRT).
+- É mais trabalhoso do que o Teste de Tukey, pois exige o cálculo de várias amplitudes (diferenças entre médias) mínimas significativas.
+- O Teste de Duncan indica resultados significativos em casos que o Teste de Tukey não permite obter significação estatística (Pimentel-Gomes, 2009).
+]
+]
+
+---
+name: dms
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### Amplitude Mínima Significante - R&lt;sub&gt;m&lt;/sub&gt;
+&lt;br&gt;
+
+.pull-left-4[
+$$
+`\begin{equation*}
+\Large
+R_m = z_m\sqrt{\frac{QMR}{r}}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(R_m\)` = Amplitude Mínima Significante
+
+`\(z_m\)` = Amplitude Mínima Estudentizada, ao  nível de significância `\(\alpha\)`.
+
+`\(QMR\)` = Quadrado Médio do Resíduo
+
+`\(r\)` = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+`\begin{equation*}
+z_{(I;~GLR,~\alpha)}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de médias abrangidas pelo intervalo do contraste
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(z\)` crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+name: hetd
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### Hipóteses estatísticas do Teste de Duncan
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;):**
+&lt;br&gt;
+
+- As .green[médias] comparadas .green[não diferem] significativamente.
+
+H&lt;sub&gt;0&lt;/sub&gt;: `\(m_i - m_{i'} = 0\)`, para algum `\(i ≠ i'\)`
+
+]
+]
+
+.pull-left-10[
+.font90[
+**Hipótese de alternativa (H&lt;sub&gt;1&lt;/sub&gt;):**
+&lt;br&gt;
+
+- As .green[médias] comparadas .green[diferem] significativamente.
+
+H&lt;sub&gt;1&lt;/sub&gt;: `\(m_i - m_{i'} ≠ 0\)`, para algum `\(i ≠ i'\)`
+]
+]
+
+---
+name: rdtd
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### Regras de decisão do teste de Duncan
+&lt;br&gt;
+
+.pull-left-10[
+.font90[
+**Rejeição da hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;)**
+
+- Se `\(\left ( m_i - m_{i'} \right ) \geq R_m\)`, rejeita-se (H&lt;sub&gt;0&lt;/sub&gt;). 
+- Em outras palavras, .green[existem evidências] de que as médias comparadas são diferentes, ao nível de significância `\(\alpha\)`.
+]
+]
+
+.pull-right-10[
+.font90[
+**Não rejeição da hipótese de nulidade**
+
+- Se `\(\left ( m_i - m_{i'} \right ) &lt; R_m\)`, não rejeita-se (H&lt;sub&gt;0&lt;/sub&gt;). 
+- Em outras palavras, .green[não existem evidências] de que as médias comparadas são diferentes, ao nível de significância `\(\alpha\)`.
+
+]
+]
+
+---
+name: ertd
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### Etapas para realização do Teste de Duncan
+
+--
+
+.pull-left-3[
+.font80[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+&lt;br&gt;&lt;br&gt;
+
+**Etapa 2**: Calcular as médias aritméticas de cada tratamento. Para facilitar as comparações, dispor as médias em ordem decrescente de valor.
+&lt;br&gt;&lt;br&gt;
+
+**Etapa 3**: Calcular a estimativa do contraste `\(\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\)`. Ou seja, a diferença entre a média mais alta e média mais baixa.
+&lt;br&gt;&lt;br&gt;
+
+**Etapa 4**: Calcular o valor da Amplitude Mínima Significante - `\(R_m\)`.
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### Etapas para realização do Teste de Duncan
+
+--
+
+.pull-left-3[
+.font80[
+**Etapa 5**: Comparar o valor do contraste `\(\hat{C}_1\)` (diferença entre a maior e menor média) com o valor de `\(R_m\)`.
+&lt;br&gt;
+
+`\(\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor} \geq R_m\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Duncan
+&lt;br&gt;
+
+`\(\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor} &lt; R_m\)`: Não rejeita-se H&lt;sub&gt;0&lt;/sub&gt; do teste de Duncan
+&lt;br&gt;&lt;br&gt;
+
+**Etapa 6**: Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1).
+&lt;br&gt;&lt;br&gt;
+
+**Etapa 7**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.pull-left-9[
+.font80[
+- Vamos usar dados de um experimento em DIC disponível em Banzatto e Kronka (2013; pg. 64).
+- Os dados estão facilmente acessíveis no pacote **labestData**. Execute o código: labestData::BanzattoQd3.7.1
+- O experimento objetivou avaliar 5 composições de substratos (com 4 repetições) no desenvolvimento em altura de *Pinus oocarpa*.
+- A variável resposta é a altura média, em cm, das plântulas 60 dias após a semeadura.
+]
+]
+
+--
+
+.pull-right-9[
+.font70[
+.center[**Composição de Substratos (Tratamentos)**]
+&lt;br&gt;&lt;br&gt;
+
+**SC** = Solo de Cerrado
+
+**SC+E** = Solo de Cerrado com Esterco
+
+**SC+E+NPK** = Solo de Cerrado com Esterco e com NPK
+
+**SC+V** = Solo de Cerrado com Vermiculita
+
+**SC+V+NPK** = Solo de Cerrado com Vermiculita e com NPK
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013) - Dados do experimento]
+
+.pull-left-4[
+
+```r
+(data &lt;- labestData::BanzattoQd3.7.1)
+```
+]
+
+--
+
+.pull-right-4[
+.font80[
+
+```
+##        comp rept alt
+## 1        SC    1 4.6
+## 2      SC+E    1 6.0
+## 3  SC+E+NPK    1 5.8
+## 4      SC+V    1 5.6
+## 5  SC+V+NPK    1 5.8
+## 6        SC    2 5.1
+## 7      SC+E    2 7.1
+## 8  SC+E+NPK    2 7.2
+## 9      SC+V    2 4.9
+## 10 SC+V+NPK    2 6.4
+## 11       SC    3 5.8
+## 12     SC+E    3 7.2
+## 13 SC+E+NPK    3 6.9
+## 14     SC+V    3 5.9
+## 15 SC+V+NPK    3 6.6
+## 16       SC    4 5.5
+## 17     SC+E    4 6.8
+## 18 SC+E+NPK    4 6.7
+## 19     SC+V    4 5.7
+## 20 SC+V+NPK    4 6.8
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013) - BoxPlot]
+
+.font70[
+**Uma boa prática antes de realizar a ANOVA é visualizar os dados da variável resposta em função dos tratamentos.**
+]
+
+.pull-left-4[
+.font80[
+
+```r
+# Reordena níveis dos tratamentos em função da média
+data_reorder &lt;- data %&gt;%
+  mutate(comp=forcats::fct_reorder(
+    .f=comp, .x = alt, .fun='mean', .desc = TRUE))
+
+# Cria Boxplot
+bp &lt;- data_reorder %&gt;%
+  ggplot(aes(x=comp, y=alt)) +
+  geom_boxplot(aes(color=comp)) +
+  geom_jitter(width = 0.25) +
+  stat_summary(fun.y=mean, geom="point", shape=4,
+                 size=2, color = "red") +
+  theme_bw(base_size = 16) +
+  theme(panel.grid = element_blank(),
+        axis.text.x = element_text(angle = 90),
+        legend.position="none"
+        ) +
+  labs(x = "Composições de substratos",
+       y = "Altura das plântulas (cm)")
+
+plotly::ggplotly(bp)
+```
+]
+]
+
+--
+
+.pull-right-4[
+<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-88e40401edf2ca41bfd6" style="width:420px;height:420px;"></div>
+<script type="application/json" data-for="htmlwidget-88e40401edf2ca41bfd6">{"x":{"data":[{"x":[1,1,1,1],"y":[6.7999999999999998,6,7.0999999999999996,7.2000000000000002],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(248,118,109,1)","width":1.8897637795275593},"name":"SC+E","legendgroup":"SC+E","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2],"y":[6.9000000000000004,6.7000000000000002,5.7999999999999998,7.2000000000000002],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(163,165,0,1)","width":1.8897637795275593},"name":"SC+E+NPK","legendgroup":"SC+E+NPK","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3],"y":[5.7999999999999998,6.4000000000000004,6.5999999999999996,6.7999999999999998],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,191,125,1)","width":1.8897637795275593},"name":"SC+V+NPK","legendgroup":"SC+V+NPK","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4],"y":[4.9000000000000004,5.9000000000000004,5.7000000000000002,5.5999999999999996],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(0,176,246,1)","width":1.8897637795275593},"name":"SC+V","legendgroup":"SC+V","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5,5,5,5],"y":[4.5999999999999996,5.0999999999999996,5.7999999999999998,5.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(231,107,243,1)","width":1.8897637795275593},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[5.1696562700672075,1.231752511463128,1.9038657783530653,3.9752651625312865,3.0666282083839178,5.2245775132905692,0.86676085228100419,1.8406199547462165,3.8157641087891534,3.040102367172949,4.8379419462289661,0.79905540228355676,1.8903656919719651,3.9243411287898198,3.2201713103568181,5.0123513323487714,0.9883147202199325,2.1807067529298365,4.1376922680065036,2.8121844616252929],"y":[4.5617777028121056,5.9654980502836406,5.7774939581379297,5.5971617961116129,5.8298772032558919,5.1384772149100897,7.086264759674668,7.2026943564973775,4.9095000453107058,6.3685007263906304,5.835806088410318,7.1903788354247808,6.8873844211362307,5.8634393359534451,6.6181649538688356,5.4673264870233833,6.7823658250831063,6.7362452224642038,5.7230585967935621,6.7780445593222973],"text":["comp: SC<br />alt: 4.6","comp: SC+E<br />alt: 6.0","comp: SC+E+NPK<br />alt: 5.8","comp: SC+V<br />alt: 5.6","comp: SC+V+NPK<br />alt: 5.8","comp: SC<br />alt: 5.1","comp: SC+E<br />alt: 7.1","comp: SC+E+NPK<br />alt: 7.2","comp: SC+V<br />alt: 4.9","comp: SC+V+NPK<br />alt: 6.4","comp: SC<br />alt: 5.8","comp: SC+E<br />alt: 7.2","comp: SC+E+NPK<br />alt: 6.9","comp: SC+V<br />alt: 5.9","comp: SC+V+NPK<br />alt: 6.6","comp: SC<br />alt: 5.5","comp: SC+E<br />alt: 6.8","comp: SC+E+NPK<br />alt: 6.7","comp: SC+V<br />alt: 5.7","comp: SC+V+NPK<br />alt: 6.8"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[1,2,3,4,5],"y":[6.7750000000000004,6.6500000000000004,6.4000000000000004,5.5250000000000004,5.25],"text":["comp: SC+E<br />alt: 6.775","comp: SC+E+NPK<br />alt: 6.650","comp: SC+V+NPK<br />alt: 6.400","comp: SC+V<br />alt: 5.525","comp: SC<br />alt: 5.250"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":7.559055118110237,"symbol":"x-thin-open","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":26.626816106268159,"r":10.62681610626816,"b":105.2054794520548,"l":62.698215026982155},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["SC+E","SC+E+NPK","SC+V+NPK","SC+V","SC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["SC+E","SC+E+NPK","SC+V+NPK","SC+V","SC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-90,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"Composições de substratos","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[4.4297318701278421,7.3347401891816411],"tickmode":"array","ticktext":["4.5","5.0","5.5","6.0","6.5","7.0"],"tickvals":[4.5,5,5.5,6,6.5,7],"categoryorder":"array","categoryarray":["4.5","5.0","5.5","6.0","6.5","7.0"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":5.3134080531340802,"tickwidth":0.96607419147892382,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":17.002905770029059},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":false,"gridcolor":null,"gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"Altura das plântulas (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":21.253632212536321}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"transparent","line":{"color":"rgba(51,51,51,1)","width":0.96607419147892382,"linetype":"solid"},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":2.7487473156764497,"font":{"color":"rgba(0,0,0,1)","family":"","size":17.002905770029059}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"19546316394a":{"x":{},"y":{},"colour":{},"type":"box"},"1954347c4fe8":{"x":{},"y":{}},"195434b121f":{"x":{},"y":{}}},"cur_data":"19546316394a","visdat":{"19546316394a":["function (y) ","x"],"1954347c4fe8":["function (y) ","x"],"195434b121f":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+&lt;br&gt;
+
+--
+
+.pull-left-4[
+.font80[
+.blue[**Hipóteses estatísticas**]
+
+- H&lt;sub&gt;0&lt;/sub&gt;: **Não existe diferença significativa** entre as **médias** de altura de plântulas de *Pinus oocarpa* para diferentes composições de substrato.
+- H&lt;sub&gt;1&lt;/sub&gt;: **Existe diferença significativa** entre **pelo menos duas médias** de altura de plântulas de *Pinus oocarpa* para diferentes composições de substrato.
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+.blue[**ANOVA - fator único no R - Função aov()**]
+
+
+```r
+# Realizar a análise de variância
+res.aov1 &lt;- aov(alt ~ comp, data = data)
+
+# Resumo da análise de variância
+summary(res.aov1)
+```
+
+```
+##             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## comp         4  7.597   1.899   7.277 0.00183 **
+## Residuals   15  3.915   0.261                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font90[
+**Etapa 1**: Execute a ANOVA e avalie o teste F nos dados experimentais. .green[Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; do teste F for rejeitada], proceda a realização de testes de comparações de médias.
+]
+&lt;br&gt;
+
+--
+
+.pull-left-4[
+.font80[
+.blue[**ANOVA - fator único no R - Função aov()**]
+
+
+```r
+# Realizar a análise de variância
+res.aov1 &lt;- aov(alt ~ comp, data = data)
+
+# Resumo da análise de variância
+summary(res.aov1)
+```
+
+```
+##             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## comp         4  7.597   1.899   7.277 0.00183 **
+## Residuals   15  3.915   0.261                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+
+]
+]
+
+--
+
+.pull-right-4[
+.center[**Interpretação**]
+
+.font70[
+- *P-valor &lt; * `\(\alpha\)` (0,00183 &lt; 0,05): Rejeita-se a hipótese de nulidade (H&lt;sub&gt;0&lt;/sub&gt;) do teste F.
+- O *P-valor* foi menor do que o nível de significância `\(\alpha = 0,05\)` (0,00183 &lt; 0,05). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Substratos) diferem significativamente.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[**.green[Quais tratamentos possuem médias iguais e diferentes entre si?]**]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[
+**Etapa 2**: Calcular as médias aritméticas das alturas das plântulas para cada composição de substrato, e dispor em ordem decrescente.
+]
+&lt;br&gt;
+
+.pull-left-4[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+]
+
+--
+
+.pull-right-4[
+.font90[
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 3**: Calcular a estimativa do contraste:] `\(\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\)`
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 5 médias ordenadas**]]
+
+- Neste caso, como têm-se 5 tratamento o contraste `\(\hat{C}_1 = \hat{m}_{maior} - \hat{m}_{menor}\)` abrange 5 médias ordenadas.
+- Portanto, o contraste `\(\hat{C}_1\)` será dado pela diferença entre as médias dos tratamentos **SC+E** e **SC**.
+- Então, o cálculo de `\(\hat{C}_1\)` fica:
+&lt;br&gt;
+
+$$
+\large
+`\begin{equation*}
+\hat{C}_1 = \color{green}{\bf{(SC+E)}} - \color{magenta}{\bf{SC}}\\
+\hat{C}_1 = 6,78 - 5,25\\
+\hat{C}_1 = \color{blue}{1,53cm}
+\end{equation*}`
+$$
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC = Solo de Cerrado = 5,25cm
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - `\(R_m\)`
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 5 médias**]]
+&lt;br&gt;
+
+$$
+\normalsize
+`\begin{equation*}
+R_5 = z_5\sqrt{\frac{QMR}{r}} = 3,312\sqrt{\frac{0,261}{4}} = \color{red}{0,846cm}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(R_m\)` = Amplitude Mínima Significante
+
+`\(z_m\)` = Amplitude Mínima Estudentizada, ao  nível de significância `\(\alpha\)`.
+
+`\(QMR\)` = Quadrado Médio do Resíduo
+
+`\(r\)` = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+`\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(5;~15;~0,05)} = \color{red}{3,312}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de médias abrangidas pelo intervalo do contraste
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(z\)` crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 5**: Comparar o valor do contraste] `\(\hat{C}_1\)` .font80[(diferença entre a maior e menor média) com o valor de] `\(R_m\)`
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 5 médias**]]]
+&lt;br&gt;
+
+$$
+\large
+`\begin{equation*}
+\hat{C}_1 = \color{blue}{1,53cm}\\~\\
+R_5 = \color{red}{0,846cm}
+\end{equation*}`
+$$
+]
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- `\(\hat{C}_1 &gt; R_5\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- Portanto, existem evidências de que as médias comparadas (.green[**SC+E**] = 6,78 e .magenta[**SC**] = 5,25) diferem significativamente.
+- Como não se rejeitou H&lt;sub&gt;0&lt;/sub&gt;, deve-se prosseguir com as comparações de médias. Porém, serão testados contrastes que abrangem um número imediatamente inferior de médias (I – 1). Isto é, 4 médias.
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font80[
+**Etapa 6**: Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1). Ou seja, .blue[execute as etapas 3, 4 e 5 novamente].]
+
+--
+
+.pull-left-4[
+&lt;br&gt;
+.font70[
+.center[.blue[**Contraste abrangendo 4 médias ordenadas**]]
+
+- São dois possíveis:
+
+`\(\hat{C}_2\)` = .green[**SC+E**] - .magenta[**SC+V**]
+
+`\(\hat{C}_3\)` = .green[**SC+E+NPK**] - .magenta[**SC**]
+&lt;br&gt;&lt;br&gt;
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC = Solo de Cerrado = 5,25cm
+]
+]
+
+--
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 3**: Calcular as estimativas dos contrastes:] `\(\hat{C}_2\)` e `\(\hat{C}_3\)`
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 4 médias ordenadas**]]
+
+- Então, os cálculos de `\(\hat{C}_2\)` e  `\(\hat{C}_3\)` fica:
+&lt;br&gt;
+
+
+`\(\hat{C}_2\)` = .green[**SC+E**] - .magenta[**SC+V**] = .green[**6,78**] - .magenta[**5,52**] = .blue[1,26cm]
+
+`\(\hat{C}_3\)` = .green[**SC+E+NPK**] - .magenta[**SC**] = .green[**6,65**] - .magenta[**5,25**] = .blue[1,40cm]
+&lt;br&gt;&lt;br&gt;
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC = Solo de Cerrado = 5,25cm
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - `\(R_m\)`
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 4 médias**]]
+&lt;br&gt;
+
+$$
+\normalsize
+`\begin{equation*}
+R_4 = z_4\sqrt{\frac{QMR}{r}} = 3,250\sqrt{\frac{0,261}{4}} = \color{red}{0,83cm}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(R_m\)` = Amplitude Mínima Significante
+
+`\(z_m\)` = Amplitude Mínima Estudentizada, ao  nível de significância `\(\alpha\)`.
+
+`\(QMR\)` = Quadrado Médio do Resíduo
+
+`\(r\)` = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+`\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(4;~15;~0,05)} = \color{red}{3,250}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de médias abrangidas pelo intervalo do contraste
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(z\)` crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 5**: Comparar o valor dos contrastes] `\(\hat{C}_2\)` e `\(\hat{C}_3\)` .font80[com o valor de] `\(R_4\)`
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 4 médias**]]]
+&lt;br&gt;
+
+
+$$
+\large
+`\begin{equation*}
+\hat{C}_2 = \color{blue}{1,26cm}\\~\\
+\hat{C}_3 = \color{blue}{1,40cm}\\~\\
+R_4 = \color{red}{0,83cm}
+\end{equation*}`
+$$
+]
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- `\(\hat{C}_2 &gt; R_4\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- `\(\hat{C}_3 &gt; R_4\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- Portanto, existem evidências de que as médias comparadas nos contrastes `\(\hat{C}_2\)` e `\(\hat{C}_3\)` diferem significativamente.
+- Como não se rejeitou H&lt;sub&gt;0&lt;/sub&gt; nos contrastes `\(\hat{C}_2\)` e `\(\hat{C}_3\)`, deve-se prosseguir com as comparações de médias. Porém, serão testados contrastes que abrangem um número imediatamente inferior de médias (I – 1). Isto é, 3 médias.
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font80[
+**Etapa 6**: Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1). Ou seja, .blue[execute as etapas 3, 4 e 5 novamente].]
+
+--
+
+.pull-left-4[
+
+.font70[
+.center[.blue[**Contraste abrangendo 3 médias ordenadas**]]
+
+- São dois possíveis:
+
+`\(\hat{C}_4\)` = .green[**SC+E**] - .magenta[**SC+V+NPK**]
+
+`\(\hat{C}_5\)` = .green[**SC+E+NPK**] - .magenta[**SC+V**]
+
+`\(\hat{C}_6\)` = .green[**SC+V+NPK**] - .magenta[**SC**]
+&lt;br&gt;&lt;br&gt;
+
+SC+E = Solo de Cerrado com Esterco = 6,78cm
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC+V+NPK = Solo de Cerrado com Vermiliculita e com NPK = 6,4cm
+
+SC = Solo de Cerrado = 5,25cm
+]
+]
+
+--
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 3**: Calcular as estimativas dos contrastes:] `\(\hat{C}_4\)`, `\(\hat{C}_5\)` e `\(\hat{C}_6\)`
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 3 médias ordenadas**]]
+
+- Então, os cálculos de `\(\hat{C}_4\)`, `\(\hat{C}_5\)` e `\(\hat{C}_6\)` fica:
+&lt;br&gt;
+
+`\(\hat{C}_4\)` = .green[**SC+E**] - .magenta[**SC+V+NPK**] = .green[**6,78**] - .magenta[**6,4**] = .blue[0,38cm]
+
+`\(\hat{C}_5\)` = .green[**SC+E+NPK**] - .magenta[**SC+V**] = .green[**6,65**] - .magenta[**5,52**] = .blue[1,13cm]
+
+`\(\hat{C}_6\)` = .green[**SC+V+NPK**] - .magenta[**SC**] = .green[**6,4**] - .magenta[**5,25**] = .blue[1,15cm]
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - `\(R_m\)`
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 3 médias**]]
+&lt;br&gt;
+
+$$
+\normalsize
+`\begin{equation*}
+R_3 = z_3\sqrt{\frac{QMR}{r}} = 3,160\sqrt{\frac{0,261}{4}} = \color{red}{0,807cm}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(R_m\)` = Amplitude Mínima Significante
+
+`\(z_m\)` = Amplitude Mínima Estudentizada, ao  nível de significância `\(\alpha\)`.
+
+`\(QMR\)` = Quadrado Médio do Resíduo
+
+`\(r\)` = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+`\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(3;~15;~0,05)} = \color{red}{3,160}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de médias abrangidas pelo intervalo do contraste
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(z\)` crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 5**: Comparar o valor dos contrastes] `\(\hat{C}_4\)`, `\(\hat{C}_5\)` e `\(\hat{C}_6\)` .font80[com o valor de] `\(R_3\)`
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 3 médias**]]
+&lt;br&gt;
+
+`\(\hat{C}_4\)` = .blue[0,38cm];
+`\(\hat{C}_5\)` = .blue[1,13cm];
+`\(\hat{C}_6\)` = .blue[1,15cm]
+
+`\(R_3\)` = .red[0,807cm]
+&lt;br&gt;
+
+]
+]
+
+--
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- `\(\hat{C}_4 &lt; R_3\)`: Não se rejeita H&lt;sub&gt;0&lt;/sub&gt;
+- `\(\hat{C}_5 &gt; R_3\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- `\(\hat{C}_6 &gt; R_3\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- Portanto, existem evidências de que as médias comparadas nos contrastes `\(\hat{C}_5\)` e `\(\hat{C}_6\)` diferem significativamente. Porém, as médias comparadas no contraste `\(\hat{C}_4\)` .blue[não diferiram] de modo significativo.
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+- As médias nos contrastes `\(\hat{C}_5\)` e `\(\hat{C}_6\)` não diferiram. Portanto, deve-se comparar contrastes que abrangem 2 médias apenas na amplitude deste dois contrastes. 
+- Como não se rejeitou  H&lt;sub&gt;0&lt;/sub&gt; no contraste `\(\hat{C}_4\)`, não existe razão para comparar contrastes que abragem 2 médias na amplitude de `\(\hat{C}_4\)`.
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+
+.font80[
+**Etapa 6**: Se a hipótese H&lt;sub&gt;0&lt;/sub&gt; for rejeitada, deve-se continuar a testar contrastes que abrangem um número imediatamente inferior de médias (I – 1). Ou seja, .blue[execute as etapas 3, 4 e 5 novamente].]
+
+--
+
+.pull-left-4[
+
+.font70[
+.center[.blue[**Contraste abrangendo 2 médias ordenadas**]]
+
+- São 3 possíveis:
+
+`\(\hat{C}_7\)` = .green[**SC+E+NPK**] - .magenta[**SC+V+NPK**]
+
+`\(\hat{C}_8\)` = .green[**SC+V+NPK**] - .magenta[**SC+V**]
+
+`\(\hat{C}_9\)` = .green[**SC+V**] - .magenta[**SC**]
+&lt;br&gt;&lt;br&gt;
+
+SC+V = Solo de Cerrado com Vermiculita = 5,52cm
+
+SC+E+NPK = Solo de Cerrado com Esterco e com NPK = 6,65cm
+
+SC+V+NPK = Solo de Cerrado com Vermiliculita e com NPK = 6,4cm
+
+SC = Solo de Cerrado = 5,25cm
+]
+]
+
+--
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 3**: Calcular as estimativas dos contrastes:] `\(\hat{C}_7\)`, `\(\hat{C}_8\)` e `\(\hat{C}_9\)`
+
+.pull-left-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font70[
+.center[.blue[**Contraste abrangendo 2 médias ordenadas**]]
+
+- Então, os cálculos de `\(\hat{C}_7\)`, `\(\hat{C}_8\)` e `\(\hat{C}_9\)` fica:
+&lt;br&gt;
+
+`\(\hat{C}_7\)` = .green[**SC+E+NPK**] - .magenta[**SC+V+NPK**] = .green[**6,65**] - .magenta[**6,4**] = .blue[0,25cm]
+
+`\(\hat{C}_8\)` = .green[**SC+V+NPK**] - .magenta[**SC+V**] = .green[**6,4**] - .magenta[**5,52**] = .blue[0,88cm]
+
+`\(\hat{C}_9\)` = .green[**SC+V**] - .magenta[**SC**] = .green[**5,52**] - .magenta[**5,25**] = .blue[0,27cm]
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 4**: Calcular o valor da Amplitude Mínima Significante] - `\(R_m\)`
+
+.pull-left-4[
+.font80[.blue[**Para contraste abrangendo 2 médias**]]
+&lt;br&gt;
+
+$$
+\normalsize
+`\begin{equation*}
+R_2 = z_2\sqrt{\frac{QMR}{r}} = 3,014\sqrt{\frac{0,261}{4}} = \color{red}{0,769cm}
+\end{equation*}`
+$$
+&lt;br&gt;
+.font70[
+`\(R_m\)` = Amplitude Mínima Significante
+
+`\(z_m\)` = Amplitude Mínima Estudentizada, ao  nível de significância `\(\alpha\)`.
+
+`\(QMR\)` = Quadrado Médio do Resíduo
+
+`\(r\)` = Número de repetições por tratamento
+]
+]
+
+.pull-right-4[
+.center[**Amplitude Mínima Estudentizada**]
+
+$$
+`\begin{equation*}
+z_{(I;~GLR;~\alpha)} = z_{(2;~15;~0,05)} = \color{red}{3,014}
+\end{equation*}`
+$$
+
+.font70[
+`\(I\)` = Número de médias abrangidas pelo intervalo do contraste
+
+`\(GLR\)` = Graus de liberdade de Resíduos (ou Erro Experimental)
+&lt;br&gt;&lt;br&gt;
+
+- Encontre o valor de `\(z\)` crítico no site: [Critical values for Duncan's multiple range tests](http://users.stat.ufl.edu/~winner/tables/duncan_mrt.txt)
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font80[**Etapa 5**: Comparar o valor dos contrastes] `\(\hat{C}_7\)`, `\(\hat{C}_8\)` e `\(\hat{C}_9\)` .font80[com o valor de] `\(R_2\)`
+
+.pull-left-4[
+.font80[.center[.blue[**Para contraste abrangendo 2 médias**]]
+&lt;br&gt;
+
+`\(\hat{C}_7\)` = .blue[0,25cm];
+`\(\hat{C}_8\)` = .blue[0,88cm];
+`\(\hat{C}_9\)` = .blue[0,27cm]
+
+`\(R_2\)` = .red[0,769cm]
+&lt;br&gt;
+
+]
+]
+
+--
+
+.pull-right-4[
+.font80[.center[.blue[**Conclusão**]]
+- `\(\hat{C}_7 &lt; R_2\)`: Não se rejeita H&lt;sub&gt;0&lt;/sub&gt;
+- `\(\hat{C}_8 &gt; R_2\)`: Rejeita-se H&lt;sub&gt;0&lt;/sub&gt;
+- `\(\hat{C}_9 &lt; R_2\)`: Não se rejeita H&lt;sub&gt;0&lt;/sub&gt;
+- Portanto, existem evidências de que as médias comparadas no contraste `\(\hat{C}_8\)` diferem significativamente. 
+- Porém, as médias comparadas nos contrastes `\(\hat{C}_7\)` e `\(\hat{C}_9\)` .blue[não diferiram] de modo significativo.
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)] - Resumindo
+&lt;br&gt;
+
+.pull-left-4[
+.font70[
+
+`\(\hat{C}_1\)` = .green[**SC+E**] - .magenta[**SC**] = .green[**6,78**] - .magenta[**5,25**] = .blue[1,53cm] / ( `\(R_5\)` = .red[0,846cm] )
+
+`\(\hat{C}_2\)` = .green[**SC+E**] - .magenta[**SC+V**] = .green[**6,78**] - .magenta[**5,52**] = .blue[1,26cm] / ( `\(R_4\)` = .red[0,83cm] )
+
+`\(\hat{C}_3\)` = .green[**SC+E+NPK**] - .magenta[**SC**] = .green[**6,65**] - .magenta[**5,25**] = .blue[1,40cm] / ( `\(R_4\)` = .red[0,83cm] )
+
+`\(\hat{C}_4\)` = .green[**SC+E**] - .magenta[**SC+V+NPK**] = .green[**6,78**] - .magenta[**6,4**] = .blue[0,38cm] / ( `\(R_3\)` = .red[0,807cm] )
+
+`\(\hat{C}_5\)` = .green[**SC+E+NPK**] - .magenta[**SC+V**] = .green[**6,65**] - .magenta[**5,52**] = .blue[1,13cm] / ( `\(R_3\)` = .red[0,807cm] )
+
+`\(\hat{C}_6\)` = .green[**SC+V+NPK**] - .magenta[**SC**] = .green[**6,4**] - .magenta[**5,25**] = .blue[1,15cm] / ( `\(R_3\)` = .red[0,807cm] )
+
+`\(\hat{C}_7\)` = .green[**SC+E+NPK**] - .magenta[**SC+V+NPK**] = .green[**6,65**] - .magenta[**6,4**] = .blue[0,25cm] / ( `\(R_2\)` = .red[0,769cm] )
+
+`\(\hat{C}_8\)` = .green[**SC+V+NPK**] - .magenta[**SC+V**] = .green[**6,4**] - .magenta[**5,52**] = .blue[0,88cm] / ( `\(R_2\)` = .red[0,769cm] )
+
+`\(\hat{C}_9\)` = .green[**SC+V**] - .magenta[**SC**] = .green[**5,52**] - .magenta[**5,25**] = .blue[0,27cm] / ( `\(R_2\)` = .red[0,769cm] )
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+
+```r
+data %&gt;% 
+  group_by(comp) %&gt;% 
+  summarise(Media = mean(alt)) %&gt;% 
+  arrange(desc(Media))
+```
+
+```
+## # A tibble: 5 × 2
+##   comp     Media
+##   &lt;fct&gt;    &lt;dbl&gt;
+## 1 SC+E      6.78
+## 2 SC+E+NPK  6.65
+## 3 SC+V+NPK  6.4 
+## 4 SC+V      5.52
+## 5 SC        5.25
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste Duncan - Experimento em DIC (Banzatto; Kronka, 2013)]
+&lt;br&gt;
+
+.font90[
+**Etapa 6**: Indicar a significância entre dois tratamentos atribuindo-se letras diferentes para ambos, e a igualdade entre eles atribuindo-se a mesma letra para ambos.
+]
+
+--
+&lt;br&gt;
+
+.pull-left-4[
+<div id="htmlwidget-0dddadbe7a0dcb02cbee" style="width:550px;height:auto;" class="datatables html-widget "></div>
+<script type="application/json" data-for="htmlwidget-0dddadbe7a0dcb02cbee">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SC+E","SC+E+NPK","SC+V+NPK","SC+V","SC"],[6.775,6.65,6.4,5.525,5.25],["a","a","a","b","b"]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>comp<\/th>\n      <th>Media<\/th>\n      <th>Duncan (5%)<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '10pt'});\n}","order":[],"orderClasses":false},"selection":{"mode":"multiple","selected":null,"target":"row","selectable":null}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+&lt;br&gt;
+.font70[
+- As médias seguidas por letras distintas diferem significativamente ao nível de 5% de significância, de acordo com o Teste de Duncan.]
+]
+
+--
+
+.pull-right-4[
+.font80[
+.center[**Interprete os resultados**]
+- Por exemplo, existem evidência para admitir que a média do composto .green[SC+E] é estatísticamente diferente das médias de .green[SC+V] e .green[SC]. 
+- <span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Pratique**: Escreva afirmações como essa para as demais evidências indicadas pelo teste de Duncan.
+
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste de Duncan no R - Pacote agricolae]
+&lt;br&gt;
+
+.pull-left-4[
+.font90[
+- **1 - Carrega dados do pacote labestData...**
+
+```r
+data &lt;- labestData::BanzattoQd3.7.1
+```
+]
+]
+
+--
+
+.pull-right-4[
+.font90[
+- **2 - Realiza ANOVA...**
+
+```r
+# Realizar a análise de variância
+res.aov &lt;- aov(alt ~ comp, data = data)
+
+# Resumo da análise de variância
+summary(res.aov)
+```
+
+```
+##             Df Sum Sq Mean Sq F value  Pr(&gt;F)   
+## comp         4  7.597   1.899   7.277 0.00183 **
+## Residuals   15  3.915   0.261                   
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste de Duncan no R - Pacote agricolae]
+&lt;br&gt;
+
+.pull-left-4[
+.font90[
+- **3 - Realiza Teste de Duncan...**
+
+```r
+# Teste Duncan
+library(agricolae)
+out.duncan &lt;- duncan.test(y = res.aov, trt = "comp", 
+                      group = TRUE, alpha = 0.05)
+
+out.duncan$groups
+out.duncan$duncan
+```
+]
+]
+
+.pull-right-4[
+.font90[
+
+```
+##            alt groups
+## SC+E     6.775      a
+## SC+E+NPK 6.650      a
+## SC+V+NPK 6.400      a
+## SC+V     5.525      b
+## SC       5.250      b
+```
+
+```
+##      Table CriticalRange
+## 2 3.014325     0.7699815
+## 3 3.159826     0.8071485
+## 4 3.250248     0.8302460
+## 5 3.311848     0.8459811
+```
+]
+]
+
+---
+
+## Teste de comparações de médias de Duncan
+&lt;br&gt;
+### .font80[Teste de Duncan no R - Pacote agricolae]
+
+.pull-left-4[
+.font90[
+- **4 - Gráfico do Teste de Duncan...**
+
+```r
+# Gráfico comparações de Duncan
+plot(out.duncan, ylab = "Altura (cm)",
+     main = "Composição de substratos")
+```
+]
+]
+
+.pull-right-4[
+&lt;img src="Aula7-Teste-Comparacao-Medias_files/figure-html/unnamed-chunk-41-1.png" width="85%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+## Análise de dados experimentais no R
+&lt;br&gt;
+### Para onde caminhar?
+&lt;br&gt;
+
+.font80[
+- Existem vários pacotes em R para análise de dados experimentais;
+- Explore também outros pacotes no R: ExpDes.pt e AgroR; (Pesquise sobre outros pacotes!)
+- Avalie as pressuposições da ANOVA no R;
+- Execute uma ANOVA seguida do teste de comparações de médias no R; e
+- Obtenha os gráficos da análise e interprete os resultados.
+]
+
+---
+
+## Referências
+.font90[
+&lt;br&gt;&lt;br&gt;
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+&lt;br&gt;&lt;br&gt;
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+&lt;br&gt;&lt;br&gt;
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+&lt;br&gt;&lt;br&gt;
+PIMENTEL-GOMES, F. Curso de estatística experimental. Piracicaba: FEALQ, 2009. 451 p.
+&lt;br&gt;&lt;br&gt;
+ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... &amp; BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p.
+]
+
+&lt;!--Slide XX --&gt;
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+**Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt;
+
+**Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

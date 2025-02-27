@@ -1,0 +1,1145 @@
+---
+title: "Experimentação Florestal (FL03034 - EF)"
+subtitle: "Análise de Experimentos com Linguagem R"
+author: "Prof. Dr. Deivison Venicio Souza"
+institute: "Universidade Federal do Pará (UFPA)"
+date: 
+encoding: "UTF-8"
+header-includes: 
+   - \usepackage{xcolor}
+   - \usepackage{amsmath}
+output:
+  xaringan::moon_reader:
+    css:
+      - default
+      - assets/sydney-fonts.css
+      - assets/slide-title/sydney-title.css
+    self_contained: false
+    seal: false
+    includes:
+      in_header: "assets/mathjax-equation-numbers.html"
+    nature:
+      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      highlightLanguage: ["r", "css", "yaml"]
+      ratio: '16:9'
+      navigation:
+        scroll: false
+---
+class: title-slide, center, middle
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+	error = FALSE,
+	fig.align = "center",
+	fig.showtext = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	collapse = TRUE,
+	dpi = 600
+)
+```
+
+```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
+library(ggplot2)
+library(dplyr)
+library(ggimage)
+library(kableExtra)
+library(readr)
+```
+
+```{css, echo=FALSE}
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+```
+
+```{r xaringan-logo, echo=FALSE}
+library(xaringanExtra)
+
+use_logo(
+  image_url = "fig/slide-title/LMFTCA.png",
+  position = css_position(top = "1em", right = ".5em"),
+  width = "130px",
+  height = "130px")
+
+
+use_scribble() # para escrever nos slides
+use_share_again()
+use_progress_bar()
+#use_animate_all(style = c("slide_down"))
+
+use_extra_styles(
+  hover_code_line = TRUE,         #<<
+  mute_unhighlighted_code = TRUE  #<<
+)
+xaringanExtra::use_editable(expires = 1)
+#.can-edit[Você pode editar este título de slide]
+#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
+use_clipboard()
+```
+
+```{r, load_refs, include=FALSE, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "html",
+           hyperlink = FALSE,
+           dashed = FALSE)
+(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
+```
+
+```{r icon, echo=FALSE}
+#remotes::install_github("mitchelloharawild/icons")
+#remotes::install_github('emitanaka/anicon')
+#library(icons)
+#download_fontawesome()
+#download_simple_icons()
+```
+
+```{r customDT, echo=F}
+CustomDT <- function(data){
+  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
+                         style = "default",
+                         class = "display", width = '250px',
+                         caption = '',
+     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
+          "}")
+       ) 
+     )
+}
+```
+
+```{r customDT2, echo=F}
+CustomDT2 <- function(data){
+  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
+                         style = "default",
+                         class = "compact", width = '500px',
+                         caption = '',
+     options=list(pageLength = 25, dom = 't', autoWidth = F,
+                  columnDefs = list(list(className = 'dt-center', targets = "_all")),
+       initComplete = htmlwidgets::JS(
+          "function(settings, json) {",
+          paste0("$(this.api().table().container()).css({'font-size': '", "8pt", "'});"),
+          "}")
+       ) 
+     )
+}
+```
+
+```{r customkbl, echo=F}
+Customkbl <- function(data){
+  data %>%
+    kbl() %>%
+    kable_classic(full_width = F, html_font = "Cambria") %>% 
+  kable_paper(bootstrap_options = "striped", full_width = F) %>% 
+  kable_styling(bootstrap_options = "striped", font_size = 18, position = "center") %>% 
+  row_spec(1:4, color = 'black', background = 'white') %>% 
+  row_spec(0, color = 'white', background = 'black') %>% 
+  column_spec(1, color = 'white', background = 'black')
+}
+```
+
+
+<!-- title-slide -->
+# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise de Experimentos `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> com Linguagem R
+
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
+<br>
+##### 1ª versão: 25/março/2022 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R</div>
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+<br>
+1 - Introdução à experimentação; 
+
+2 - Análise exploratória de dados;
+
+3 - Delineamento inteiramente casualizado - DIC;
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+6 - Testes de comparação de médias; 
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+**9 - Análise de experimentos com linguagem R**.
+
+]
+
+---
+
+## Objetivos
+<br><br>
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Conhecer alguns dos principais pacotes disponíveis na linguagem R para análise de dados experimentais;
+* Aprender a realizar a Análise de Variância (ANOVA) de dados experimentais e pós-testes de comparações de médias; 
+* Aprender a realizar a avaliação de pressupostos da ANOVA; e
+* Construir visualizações informativas dos resultados da análise estatística dos experimentos.
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+.font80[
+**Parte 1 - Estudo de caso 1: Experimento em DIC (substratos)**
+
+[1 - Dados experimentais](#de)
+
+[2 - Um roteiro de análise dos dados](#rad)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.1 - Carregar os dados e avaliar a estrutura](#ccd)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.2 - Realizar uma análise exploratória dos dados](#raed)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.3 - Realizar a ANOVA do experimento em DIC](#aovdic)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.4 - Realizar a análise de pressupostos da ANOVA](#press)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.4.1 - Teste de Normalidade dos Resíduos](#norm)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.4.2 - Teste de Homogeneidade dos Resíduos](#homo)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.4.3 - Teste de Independência dos Resíduos](#ind)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.5 - Testes de comparações múltiplas de médias](#tcm)
+
+&nbsp;&nbsp;&nbsp;&nbsp;[2.6 - Experimentando pacotes especializados](#epe)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.1 - Pacote AgroR](#agror)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.2 - Pacote agricolae](#agricolae)
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[2.6.3 - Pacote ExpDes.pt](#expdes)
+
+]
+]
+
+.pull-right-4[
+.pull-down[
+.font90[
+
+]
+]
+]
+
+---
+
+layout: false
+name: conc
+class: inverse, top, left
+background-image: url(fig/class8/secao.png)
+background-size: cover
+
+<br><br><br>
+
+.right[.font130[**.green[Parte 1] <br> Estudos de casos <br> de experimentos**]]
+
+<br><br>
+
+.center[.font130[**1 - Diferentes tipos de substratos (DIC)** <br> (comprimento da raíz e parte aérea)]]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R</div>
+
+---
+name: de
+## Análise de Experimentos em DIC com R
+<br>
+
+### .font90[Dados fictícios - Diferentes tipos de substratos (comprimento da raíz e parte aérea)]
+<br>
+
+.font90[
+.center[**Sobre o experimento...**]
+Um experimento foi conduzido sob o delineamento inteiramente casualizado (DIC), com 5 repetições, com o objetivo de avaliar o Crescimento em Raíz (CR) e Crescimento da Parte Aérea (CPA) de *Swietenia macrophylla* (Mogno brasileiro) submetido à diferentes tipos de substratos: `Fibra de Coco (FC)`; `Areia + Esterco Bovino (A+EB)`; `Casca de Arroz + Terra Subsolo (CA + TS)`; `Substrato Comercial (SC)` e `Terra Preta (TP)`. Os dados apresentados na tabela a seguir referem-se aos valores médios das variáveis, em centímetros, nas parcelas experimentais.
+<br>
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+.left-column[
+```{r , echo=FALSE, eval=TRUE}
+data <- readr::read_csv("data/DIC_Ficticio2.csv")
+
+data %>% CustomDT2
+```
+]
+
+.right-column[
+### Algum substrato possui média significativamente superior? 
+
+* Avalie as duas variáveis respostas: `Crescimento de Raíz (CR)` e `Crescimento da Parte Aérea (CPA)`...
+]
+
+---
+name: rad
+## Análise de Experimentos em DIC com R
+
+- **Vamos analisar esses dados experimentais...**
+
+.shadow1a[
+## .font70[**Siga a seguinte sequência de análise...**]
+<br>
+.font90[
+1) Carregue o conjunto de dados e analise a estrutura dos dados. (Obs.: Use a função `str()`. As variáveis categoricas são da classe *factor*?)
+
+2) Realize uma análise exploratória dos dados experimentais (quantitativa e visual).
+
+3) Realize a ANOVA do experimento em DIC e interprete o Teste F-Snedecor (Conclua sobre as hipóteses!).
+
+4) Realize a análise de pressupostos da ANOVA (faça os testes de hipóteses e análise visual.)
+
+5) Se os pressupostos da ANOVA são atendidos, realize testes de comparações múltiplas de médias paramétricos (Tukey e Duncan).
+<br><br>
+
+Obs.: Experimente os 3 pacotes (**agricolae**, **ExpDest.pt**, **AgroR**)
+]
+]
+
+---
+name: ccd
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados.]**
+
+.pull-left-10[
+- **Passo 1** - Carregar o conjunto de dados...
+
+`r anicon::faa("hand-point-right", animate="horizontal")` **Use**: a função .orange[**read_csv()**] do pacote **readr** para carregar os dados...
+
+<br><br>
+
+.font90[**Importante**: para aplicar as funções do R-base ou funções de outros pacotes, os dados precisam estar empilhados. (formato longo)]
+
+]
+
+--
+
+.pull-right-10[
+.font90[
+```{r read, echo=T, eval=F}
+library(readr)
+(data <- 
+    read_csv("data/DIC_Ficticio2.csv", 
+             col_types = "ffdd"))
+```
+
+```{r ref.label="read", echo=F, eval=T, collapse=T}
+```
+]
+]
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[1) Carregue o conjunto de dados e análise da estrutura dos dados]**
+
+.pull-left-4[
+```{r est, echo=T, eval=F}
+# Estrutura dos dados
+str(data)
+```
+
+```{r ref.label="est", echo=F, eval=T, collapse=T}
+```
+
+]
+
+.pull-right-4[
+```{r xtab, echo=T, eval=F}
+# Tabela de frequência por tratamento
+xtabs(~Sub + Rep, data = data)
+```
+
+```{r ref.label="xtab", echo=F, eval=T, collapse=T}
+```
+]
+
+---
+name: raed
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+<br><br>
+
+.pull-top[
+.font90[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato)...
+  - A linguagem R possui diversos pacotes para gerar resumos estatísticos;
+  - Usaremos a função .orange[**stby()**] do pacote **summarytools** para obter estatísticas descritivas;
+  - Usaremos o pacote **ggplot2** para fazer gráficos elegantes e o **plotly** para cria gráficos interativos; e
+  - Experimente também as funções dos pacotes: **Hmisc**, **pastecs**, **psych** e **skimr**.
+]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+<br>
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...
+]
+
+```{r tools, echo=T, eval=F}
+library(summarytools)
+stby(data    = data,
+     INDICES = data$Sub, 
+     FUN     = descr,
+     stats   = c("mean", "sd", "min", "max")) %>% 
+  tb(order = 2)
+```
+
+.font70[
+**Tutorial**: https://cran.r-project.org/web/packages/summarytools/vignettes/introduction.html
+]
+
+]
+
+--
+
+.pull-right-4[
+```{r ref.label="tools", echo=F, eval=T, collapse=T}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(BoxPlot por Substrato)
+
+```{r box, echo=TRUE, eval=FALSE}
+# Criando um BoxPlot Por Substrato
+g1 <- data %>% 
+  ggplot(aes(x = reorder(Sub, -CR), y = CR)) + 
+  geom_boxplot(mapping = aes(fill = Sub)) + 
+  stat_summary(fun = mean, 
+               geom = "point", 
+               shape = 20, 
+               size = 1.5,
+               color = "red"
+               ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Comprimento da Raiz (cm)", 
+                     breaks = seq(2, 11, 2),
+                     limits = c(2, 11)) +
+  labs(x = "Substrato")
+
+plotly::ggplotly(g1)
+
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="box", echo=FALSE, eval=TRUE, collapse=T, fig.width=.9, fig.height=.7, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(BoxPlot por Substrato)
+
+```{r box2, echo=TRUE, eval=FALSE}
+# Criando um BoxPlot Por Substrato
+g2 <- data %>% 
+  ggplot(aes(x = reorder(Sub, -CPA), y = CPA)) + 
+  geom_boxplot(mapping = aes(fill = Sub)) + 
+  stat_summary(fun = mean, 
+               geom = "point", 
+               shape = 20, 
+               size = 1.5,
+               color = "red"
+               ) +
+  theme(legend.position="none") +
+  scale_y_continuous(
+    name = "Comprimento da Parte Aérea (cm)",
+    breaks = seq(22, 29, 2),
+    limits = c(22, 29)) +
+  labs(x = "Substrato")
+
+plotly::ggplotly(g2)
+
+```
+]
+]
+
+.pull-right-4[
+```{r ref.label="box2", echo=FALSE, eval=TRUE, collapse=T, fig.width=.9, fig.height=.7, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(Gráfico de barra por Substrato)
+
+```{r bar, echo=T, eval=F}
+data |>
+  ggplot(
+    mapping = aes(x = Sub, 
+                  y = CR)) +
+  geom_bar(
+    mapping = aes(fill = Sub),
+    stat = "summary",
+    fun = mean
+    ) +
+  geom_errorbar(stat = "summary", 
+                fun.ymin = function(x) {mean(x)-sd(x)},
+                fun.ymax = function(x) {mean(x)+sd(x)},
+                width = .2
+                ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Comprimento da Raiz (cm)", 
+                     breaks = seq(0, 11, 2),
+                     limits = c(0, 11)) +
+  labs(x = "Substrato")
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="bar", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=3.5, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[2) Realizar uma análise exploratória dos dados experimentais (quantitativa e visual).]**
+
+.pull-left-4[
+.font80[
+- **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(Gráfico de barra por Substrato)
+
+```{r bar2, echo=T, eval=F}
+data |>
+  ggplot(
+    mapping = aes(x = Sub, 
+                  y = CPA)) +
+  geom_bar(
+    mapping = aes(fill = Sub),
+    stat = "summary",
+    fun = mean
+    ) +
+  geom_errorbar(stat = "summary", 
+                fun.ymin = function(x) {mean(x)-sd(x)},
+                fun.ymax = function(x) {mean(x)+sd(x)},
+                width = .2
+                ) +
+  theme(legend.position="none") +
+  scale_y_continuous(name = "Comprimento da Parte Aérea (cm)", 
+                     breaks = seq(0, 29, 2),
+                     limits = c(0, 29)) +
+  labs(x = "Substrato")
+```
+]
+]
+
+--
+
+.pull-right-4[
+<br><br>
+```{r ref.label="bar2", echo=FALSE, eval=TRUE, collapse=T, fig.width=5, fig.height=3.5, fig.align='center', fig.cap='', dpi=600}
+```
+]
+
+---
+name: aovdic
+## Análise de Experimentos em DIC com R
+
+**.blue[3) Realizar a ANOVA do experimento em DIC e interpretar o Teste F-Snedecor]**
+
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Ajustar o modelo (resposta: CR)
+m0 <- lm(CR ~ Sub, data = data)
+anova(m0)
+```
+
+- **Interpretação**: Como o p-valor calculado (1.756e-07) é menor que o nível de significância adotado (α = 0,05), rejeita H0. Portanto, existem evidências de diferenças significativas entre pelo menos duas médias de Comprimento de Raiz (CR) para os diferentes substratos.
+]
+]
+
+--
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Ajustar o modelo (resposta: CPA)
+m1 <- lm(CPA ~ Sub, data = data)
+anova(m1)
+```
+
+- **Interpretação**: Como o p-valor calculado (1.403e-07) é menor que o nível de significância adotado (α = 0,05), rejeita H0. Portanto, existem evidências de diferenças significativas entre pelo menos duas médias de Comprimento da Parte Aérea (CPA) para os diferentes substratos.
+]
+]
+
+---
+name: norm
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **1 - Teste de Normalidade dos Resíduos (Teste de Hipótese)** (Shapiro-Wilk, Kolmogorov-Smirnov)
+
+**H0**: Os erros (resíduos) seguem a distribuição normal.
+
+**H1**: Os erros (resíduos) não seguem distribuição normal.
+]
+
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Shapiro-Wilk
+shapiro.test(m0$res)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0.06318) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros seguem a distribuição normal.
+]
+]
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Shapiro-Wilk
+shapiro.test(m1$res)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0.751) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros seguem a distribuição normal.
+]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **1 - Teste de Normalidade dos Resíduos (Análise visual)**
+
+- **Conclusão**: Os gráficos (Normal Q-Q) evidenciam que os erros (resíduos) possuem distribuição normal. (**Não se Rejeita H0**)
+
+.pull-left-4[
+```{r, collapse=T, fig.align='center', fig.cap='', dpi=600, out.width='60%'}
+plot(m0, 2)
+```
+]
+
+.pull-right-4[
+```{r, collapse=T, fig.align='center', fig.cap='', dpi=600, out.width='60%'}
+plot(m1, 2)
+```
+]
+]
+
+---
+name: homo
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **2 - Teste de Homogeneidade dos Resíduos (Teste de Hipótese)** (Bartlett, Levene)
+
+**H0**: As variâncias são homogêneas.
+
+**H1**: As variâncias não são homogêneas.
+]
+
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Bartlett
+bartlett.test(m0$res~Sub, data = data)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,4772) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+]
+]
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Bartlett
+bartlett.test(m1$res~Sub, data = data)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,08702) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros possuem homogeneidade de variâncias dentro dos tratamentos.
+]
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **2 - Teste de Homogeneidade dos Resíduos (Análise visual)**
+
+- **Conclusão**: Nos gráficos (*Residuals vs Fitted*) existem evidências para admitir erros (resíduos) com homogeneidade de variâncias. (**Não se Rejeita H0**).
+
+.pull-left-4[
+```{r, collapse=T, fig.align='center', fig.cap='', dpi=600, out.width='60%'}
+plot(m0, 1)
+```
+]
+
+.pull-right-4[
+```{r, collapse=T, fig.align='center', fig.cap='', dpi=600, out.width='60%'}
+plot(m1, 1)
+```
+]
+]
+
+---
+name: ind
+## Análise de Experimentos em DIC com R
+
+**.blue[4) Realize a análise de pressupostos da ANOVA]**
+
+.font80[
+* **3 - Teste de Independência dos Resíduos (Teste de Hipótese)** (Durbin-Watson)
+
+**H0**: Os erros são independentes.
+
+**H1**: Os erros não são independentes.
+]
+
+.pull-left-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Durbin-Watson
+library(lmtest)
+dwtest(m0)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,1024) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros são independentes.
+]
+]
+
+.pull-right-4[
+.font80[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Durbin-Watson
+dwtest(m1)
+```
+
+- **Interpretação**: Como p-valor calculado (p = 0,09991) é maior que o nível de significância adotado (α = 0,05), **não se rejeita H0**. Portanto, existem evidências de que os erros são independentes.
+]
+]
+
+---
+name: tcm
+## Análise de Experimentos em DIC com R
+
+**.blue[5) Testes de comparações múltiplas de médias (Tukey e Duncan)]**
+
+.pull-left-4[
+.font70[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Tukey
+TukeyHSD(aov(m0))
+```
+
+- **Interpretação**: Existem diferenças estatisticamente significativas (p adj < 0,05) entre as médias para a maioria das comparações. 
+]
+]
+
+.pull-right-4[
+.font70[
+```{r, echo=T, eval=T, collapse=F}
+# Teste de Tukey
+TukeyHSD(aov(m1))
+```
+
+- **Interpretação**: Existem diferenças estatisticamente significativas (p adj < 0,05) entre as médias para a maioria das comparações. 
+]
+]
+
+---
+name: agror
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
+```{r agror, echo=T, eval=F, collapse=F}
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)         # Carrega o pacote
+?DIC                   # Ajuda da função `DIC()`
+
+result <- with(data, 
+DIC(trat = Sub,        # Qual coluna de tratamentos?
+    response = CR,     # Qual coluna de variável resposta?
+    norm = "sw",       # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",      # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,    # Nível de significância do Teste F
+    alpha.t = 0.05,    # Nível do teste de comparações múltiplas
+    mcomp = "tukey",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+```{r, echo=T, eval=T, include = F, collapse=F}
+# Pacote AgroR
+result <- with(data, 
+     AgroR::DIC(trat = Sub,
+         response = CR,
+         mcomp = "tukey",
+         xlab = "Substratos",
+         ylab= "Comprimento Raiz (cm)")
+)
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result[[1]][["data"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result[[1]]
+```
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CR)**
+```{r agror2, echo=T, eval=F, collapse=F}
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)          # Carrega o pacote
+?DIC                    # Ajuda da função `DIC()`
+
+result2 <- with(data, 
+DIC(trat = Sub,         # Qual coluna de tratamentos?
+    response = CR,      # Qual coluna de variável resposta?
+    norm = "sw",        # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",       # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,     # Nível de significância do Teste F
+    alpha.t = 0.05,     # Nível do teste de comparações múltiplas
+    mcomp = "duncan",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+```{r, echo=T, eval=T, include = F, collapse=F}
+# Pacote AgroR
+result2 <- with(data, 
+     AgroR::DIC(trat = Sub,
+         response = CR,
+         mcomp = "duncan",
+         xlab = "Substratos",
+         ylab= "Comprimento Raiz (cm)")
+)
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result2[[1]][["data"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result2[[1]]
+```
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
+```{r, echo=T, eval=F, collapse=F}
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)         # Carrega o pacote
+?DIC                   # Ajuda da função `DIC()`
+
+result3 <- with(data, 
+DIC(trat = Sub,        # Qual coluna de tratamentos?
+    response = CPA,     # Qual coluna de variável resposta?
+    norm = "sw",       # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",      # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,    # Nível de significância do Teste F
+    alpha.t = 0.05,    # Nível do teste de comparações múltiplas
+    mcomp = "tukey",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+```{r, echo=T, eval=T, include = F, collapse=F}
+# Pacote AgroR
+result3 <- with(data, 
+     AgroR::DIC(trat = Sub,
+         response = CPA,
+         mcomp = "tukey",
+         xlab = "Substratos",
+         ylab= "Comprimento Raiz (cm)")
+)
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result3[[1]][["data"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result3[[1]]
+```
+
+]
+
+---
+
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote AgroR]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CPA)**
+```{r, echo=T, eval=F, collapse=F}
+# Pacote AgroR
+# install.packages('AgroR')
+library(AgroR)          # Carrega o pacote
+?DIC                    # Ajuda da função `DIC()`
+
+result4 <- with(data, 
+DIC(trat = Sub,         # Qual coluna de tratamentos?
+    response = CPA,     # Qual coluna de variável resposta?
+    norm = "sw",        # Teste de normalidade (sw = Shapiro-Wilk)
+    homog = "bt",       # Teste de homogeneidade (bt = Bartlett)
+    alpha.f = 0.05,     # Nível de significância do Teste F
+    alpha.t = 0.05,     # Nível do teste de comparações múltiplas
+    mcomp = "duncan",   # Qual teste de comparação múltipla?
+    xlab = "Substratos",
+    ylab= "Comprimento Raiz (cm)")
+)
+)
+```
+
+```{r, echo=T, eval=T, include = F, collapse=F}
+# Pacote AgroR
+result4 <- with(data, 
+     AgroR::DIC(trat = Sub,
+         response = CPA,
+         mcomp = "duncan",
+         xlab = "Substratos",
+         ylab= "Comprimento Raiz (cm)")
+)
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result4[[1]][["data"]]
+```
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+result4[[1]]
+```
+]
+
+---
+name: agricolae
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote agricolae]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
+```{r, echo=T, eval=T, collapse=F}
+# Pacote agricolae
+# install.packages('agricolae')
+library(agricolae)                  # Carrega o pacote
+?HSD.test                           # Ajuda da função `HSD.test ()`
+
+outHSD <- HSD.test(y = m0,          # Modelo ajustado (aov ou lm)
+                   trt = "Sub",     # Qual coluna de Tratamentos?       
+                   alpha = 0.05,    # Nível de significância
+                   console = FALSE) # Imprimir saída no console?
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+outHSD[["groups"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='85%'}
+plot(outHSD, variation="range",las=1)
+```
+]
+
+---
+name: agricolae
+## Análise de Experimentos em DIC com R
+
+**.blue[Experimentando pacotes especializados -] .orange[Pacote agricolae]**
+
+.left-column[
+.font70[
+- **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
+```{r, echo=T, eval=T, collapse=F}
+# Pacote agricolae
+# install.packages('agricolae')
+library(agricolae)                  # Carrega o pacote
+?HSD.test                           # Ajuda da função `HSD.test ()`
+
+
+outHSD2 <- HSD.test(y = m1,         # Modelo ajustado (aov ou lm)
+                   trt = "Sub",     # Qual coluna de Tratamentos?       
+                   alpha = 0.05,    # Nível de significância
+                   console = FALSE) # Imprimir saída no console?
+```
+
+```{r, echo=F, eval=T, collapse=F, out.width='80%'}
+outHSD2[["groups"]]
+```
+
+]
+]
+
+.right-column[
+```{r, echo=F, eval=T, collapse=F, out.width='85%'}
+plot(outHSD2, variation="range",las=1)
+```
+]
+
+---
+
+## Referências
+<br><br>
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+<br><br>
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+<br><br>
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+
+<!--Slide XX -->
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+<br><br><br><br><br><br>
+
+**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+
+**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+
