@@ -67,10 +67,10 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 |:---|:---|
 | Slides/01-Programacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
 | Slides/02-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
-| Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html> |
-| Slides/Aula2-AED-Revisao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html> |
-| Slides/Aula3-ANOVA-DIC_Progenies-1ªSolucao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-ANOVA-DIC_Progenies-1ªSolucao.html> |
-| Slides/Aula3-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC-Teoria.html> |
+| Slides/03-AED.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
+| Slides/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
+| Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html> |
+| Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html> |
 | Slides/Aula4-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
 | Slides/Aula5-Introducao-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
 | Slides/Aula6-DQL.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
