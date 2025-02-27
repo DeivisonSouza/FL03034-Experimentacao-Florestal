@@ -68,7 +68,7 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/Aula0-Cronograma.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula0-Cronograma.html> |
 | Slides/Aula1-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula1-Introducao-Experimentacao.html> |
 | Slides/Aula2-AED-Revisao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula2-AED-Revisao.html> |
-| Slides/Aula3-DIC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC.html> |
+| Slides/Aula3-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula3-DIC-Teoria.html> |
 | Slides/Aula4-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
 | Slides/Aula5-Introducao-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
 | Slides/Aula6-DQL.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
