@@ -108,10 +108,12 @@ BibOptions(check.entries = FALSE,
 ```
 
 <!-- title-slide -->
+<br>
 # .font120[Experimentação Florestal <br> (FL03034 - EF)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução à Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="green")`
 
+<br>
 #### **Prof. Dr. Deivison Venicio Souza**
 ##### Universidade Federal do Pará (UFPA) 
 ##### Faculdade de Engenharia Florestal
