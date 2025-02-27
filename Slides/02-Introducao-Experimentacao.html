@@ -1,0 +1,1212 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="02-Introducao-Experimentacao_files/header-attrs-2.29/header-attrs.js"></script>
+    <link href="02-Introducao-Experimentacao_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="02-Introducao-Experimentacao_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="02-Introducao-Experimentacao_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="02-Introducao-Experimentacao_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="02-Introducao-Experimentacao_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="02-Introducao-Experimentacao_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="02-Introducao-Experimentacao_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f7b2c15db347477181759f5a45cea2a2","expires":1}</script>
+    <script src="02-Introducao-Experimentacao_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="02-Introducao-Experimentacao_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="02-Introducao-Experimentacao_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/editable-0.2.6/editable.js"></script>
+    <link href="02-Introducao-Experimentacao_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="02-Introducao-Experimentacao_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="02-Introducao-Experimentacao_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 130px;
+height: 130px;
+z-index: 0;
+background-image: url(fig/slide-title/LMFTCA.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+&lt;!-- title-slide --&gt;
+&lt;br&gt;
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Introdução à Experimentação <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span>
+
+&lt;br&gt;
+#### **Prof. Dr. Deivison Venicio Souza**
+##### Universidade Federal do Pará (UFPA) 
+##### Faculdade de Engenharia Florestal
+##### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 1ª versão: 11/agosto/2021 &lt;br&gt; (Atualizado em: 27/fevereiro/2025) &lt;br&gt; Altamira, Pará
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento&lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+**1 - Introdução à experimentação;**
+
+2 - Análise exploratória de dados;
+
+3 - Delineamento inteiramente casualizado - DIC; 
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+6 - Testes de comparação de médias; 
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+9 - Análise de experimentos com linguagem R.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Conhecer as terminologias e os principais conceitos associados à experimentação;
+* Avaliar algumas pesquisas experimentais no contexto florestal;
+* Compreender os princípios básicos da experimentação; e
+* Conhecer os principais aspectos relacionados ao planejamento e condução de experimentos.
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 1 - Terminologias e conceitos básicos**
+
+[1 - Experimentação e Experimento](#Exp)
+
+[2 - Tratamento e Unidade Experimental](#Trat)
+
+[3 - Delineamento Experimental](#DE)
+
+[4 - Análise de Variância (ANOVA)](#Anova)
+
+[5 - Erro Experimental ou Resíduo](#Res)
+]
+
+.pull-right-2[
+.pull-down[
+**Parte 2 - Princípios básicos da experimentação**
+
+[1 - Repetição: conceito, importância e limitações](#Rep)
+
+[2 - Casualização ou aleatorização: conceito e importância](#Cas)
+
+[3 - Controle local: conceito e importância](#Cas)
+]
+]
+
+---
+## Conteúdo
+
+**Parte 3 - Fases da pesquisa experimental**
+
+[1 - Definição do problema de pesquisa](#Probl)
+
+[2 - Conhecimento científico existente?](#Conh)
+
+[3 - Enunciação do problema e formulação da hipótese científica](#Enun)
+
+[4 - Definir a unidade experimental (UE)](#UE)
+
+[5 - Definir os tratamentos a serem aplicados](#Trat)
+
+[6 - Definir as variáveis a serem medidas nas UEs](#Var)
+
+[7 - Definir o delineamento experimental](#del)
+
+[8 - Instalar e conduzir o experimento](#Inst)
+
+[9 - Analisar e interpretar dados experimentais](#int)
+
+[10 - Realizar conclusões e fazer recomendações](#int)
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 1 &lt;br&gt; Terminologias e conceitos básicos**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento&lt;/div&gt;
+
+---
+
+## Terminologias e conceitos básicos
+
+
+.pull-left-4[
+&lt;img src="https://media.giphy.com/media/fUZHXuE94BN2wtSbUS/giphy-downsized-large.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;&lt;div style='font-size:50%'&gt;(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)&lt;/div&gt;
+
+]
+
+
+### Experimentação
+
+--
+
+É a parte da estatística que estuda o **planejamento** e a **execução** de experimentos, bem como a **coleta**, a **análise** e a **interpretação** de dados experimentais.
+
+--
+
+### Experimento (ou ensaio)
+
+--
+
+É uma experiência (ou ensaio) realizada em **condições previamente estabelecidas** e que opera com **causas controladas** (Dias and Barros, 2009).
+ 
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Unidade Experimental (ou Parcela)
+
+--
+.font90[
+É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
+]
+
+--
+&lt;br&gt;
+
+.font90[
+**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
+Tamanhos: 200 e 250m² são bastante comuns.
+
+**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
+
+**Laboratório**: parcela pode ser: placa de petri.
+]
+
+
+.pull-left-4[
+&lt;img src="https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+&lt;img src="https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+
+### Tratamento
+
+--
+.font80[
+É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
+&lt;br&gt;
+Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+]
+
+.pull-left-4[
+&lt;img src="https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif" width="70%" style="display: block; margin: auto;" /&gt;
+&lt;br&gt;&lt;br&gt;&lt;div style='font-size:50%'&gt;(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)&lt;/div&gt;
+]
+
+--
+
+.pull-right-4[
+.font80[
+**Experimentos de campo**
+
+- Formas de preparo do solo
+- Diferentes doses de adubação
+- Diferentes espaçamentos
+
+**Casa de vegetação**
+- Diferentes tipos de substratos
+- Diferentes níveis de sobreamento
+- Diferentes tipos de recipientes
+]
+]
+
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+
+### Delineamento experimental
+
+--
+
+É o modo como os tratamentos são designados às unidades experimentais (ou parcelas) (Dias and Barros, 2009).
+
+--
+&lt;br&gt;
+Os principais delineamentos experimentais utilizados são:
+
+&lt;img src="fig/class1/img-PD.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Delineamento Inteiramente Casualizado - DIC
+
+--
+
+É quando os tratamentos são designados às unidades experimentais completamente ao acaso (por sorteio).
+
+--
+&lt;br&gt;&lt;br&gt;
+
+**Príncipios básicos**: Repetição e Casualização
+
+**Situação**: Unidades experimentais homogêneas (casas de vegetação e laboratórios)
+
+&lt;br&gt;
+--
+
+.font90[
+**Exemplos**
+- Avaliar diferentes níveis de sobreamento (pleno sol, 20%, 50% e 70%) no desenvolvimento de mudas.
+- Avaliar diferentes técnicas de quebra de dormência de sementes (escarificação química e mecânica, imersão em água quente, imersão em `\(H_2SO_4\)`). (*Bertholletia excelsa*)
+- Avaliar diferentes tipos de substratos no desenvolvimento de mudas de espécies florestais.
+]
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Delineamento em Blocos Casualizados - DBC
+
+--
+.font90[
+- É usado quando existe **uma fonte de variação** (ex.: Fertilidade do Solo) que deseja-se controlar.
+- Assim, as unidades experimentais são subdivididas em grupos menores e homogêneos para o fator de controle. 
+]
+--
+
+.font90[
+- Estes grupos homogêneos são denominados de blocos.
+]
+
+--
+
+.font90[
+- Os tratamentos são então sorteados às unidades experimentais dentro de cada bloco.
+]
+
+--
+
+.font90[
+**Príncipios básicos**: Repetição, Casualização e Controle Local
+
+**Situação**: Existe um fator de variação para controlar (experimentos de campo)
+]
+&lt;br&gt;
+--
+
+.font65[
+**Exemplos**
+
+- Avaliar a dinâmica de uma comunidade florestal semidecídua secundária, sob influência de um gradiente ambiental de umidade, determinado pela proximidade a um córrego em um extremo e um cerrado em outro, nas partes mais altas do relevo ([Venturoli et al., 2008](https://repositorio.unb.br/handle/10482/2650)).
+]
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Delineamento em Quadrado Latino - DQL
+
+--
+
+.font90[
+- É usado quando existe **duas fonte de variação** (ex.: Fertilidade do Solo e Gradiente de Umidade), perpendiculares, que deseja-se controlar.
+]
+--
+
+.font90[
+- Os tratamentos são então sorteados às unidades experimentais nos blocos verticais e horizontais.
+- Cada tratamento deve aparecer uma única vez na linha e coluna.
+]
+
+--
+O controle local é aplicado pela imposição de **dois fatores de restrição** na casualização, devido à presença de dois gradientes de heterogeneidade, perpendiculares, no ambiente ou material experimental.
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Análise de variância - (**An**alysis **O**f **Va**riance - ANOVA)
+
+--
+
+É uma técnica estatísticas que permite **decompor a variação total** dos dados experimentais em **causas conhecidas** e **desconhecidas**.
+
+--
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação no experimento é devido aos **fatores não-controlados (ou variação do acaso**) - ou erro experimental?
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O quanto da variação no experimento é devido às influências dos tratamentos experimentais aplicados às unidades experimentais (**fatores controlados**)?
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+### Erro Experimental (ou Resíduo)
+
+--
+
+É a variação devida ao efeito dos fatores não-controlados no experimento (acaso/aleatório).
+
+--
+
+### Variável Resposta (ou Dependente)
+
+--
+
+Característica que é medida e/ou avaliada nas unidades experimentais. 
+
+Comumente essa característica é chamada de variável resposta (ou dependente).
+
+--
+
+### Dados experimentais
+
+--
+
+São os valores assumidos pela variável resposta.
+
+---
+class: center, middle
+.font300[
+**Alguns experimentos...**
+]
+
+---
+
+## Experimentos (Silva et al., 2017)
+&lt;br&gt;
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+&lt;br&gt;
+
+.pull-left-4[
+**1. Periódico**
+
+Advances in Forestry Science
+
+Link: [Silva et al., 2017](https://periodicoscientificos.ufmt.br/ojs/index.php/afor/article/view/4590)
+&lt;br&gt;&lt;br&gt;
+
+**2. Objetivo**
+
+Estudar o efeito de diferentes **tamanhos de sementes** e **substratos** no
+desenvolvimento de mudas de *Euterpe oleracea* Mart. 
+&lt;br&gt;&lt;br&gt;
+]
+
+--
+
+.pull-right-4[
+**3. Delineamento Experimental**
+
+DIC em esquema fatorial 3x2 (tamanho das sementes x substratos).
+
+Repetições: 4 repetições (20 sementes)
+
+Tamanhos das sementes: P, M e G
+
+Tipos de substratos: Composto Orgânico (CO) e Monte Cristo (MC)
+
+]
+
+---
+
+## Experimentos (Silva et al., 2017)
+&lt;br&gt;
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+&lt;br&gt;
+
+**4. Variáveis de interesse**
+
+.pull-left-4[
+- Altura e diâmetro do colo
+
+Medições: 30, 60, 90, 120, 150, 180 e 210 dias após plantio
+]
+
+--
+
+.pull-right-4[
+- Outras variáveis: (dia 210)
+
+Matéria Seca da Parte Aérea (MSPA)
+
+Matéria Seca do Sistema Radicular (MSSR)
+
+Matéria Seca Total da Planta (MST)
+
+**Método**: Secagem em estufa de circulação forçada por 72 horas a 60ºC até a obtenção da massa constante (em g).
+]
+
+
+---
+
+## Experimentos (Silva et al., 2017)
+&lt;br&gt;
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+&lt;br&gt;
+
+**5. Análises Estatísticas**
+- Análise de variância (ANOVA)
+- Regressão polinomial
+- Teste de Tukey
+
+---
+
+## Experimentos (Silva et al., 2017)
+&lt;br&gt;
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+&lt;br&gt;
+
+**6. Resultados**
+
+&lt;img src="fig/class1/E1-T2.png" width="55%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Experimentos (Silva et al., 2017)
+&lt;br&gt;
+
+### Tamanho da semente e substratos na produção de mudas de açaí
+&lt;br&gt;
+
+**7. Conclusão**
+
+- Os parâmetros biométricos e a qualidade de mudas de *Euterpe oleracea* são influenciados pelo substrato e tamanho da semente.
+- A utilização do **substrato orgânico** proporciona mudas de *Euterpe oleracea* com maior índice de qualidade.
+- Sementes grandes produzem mudas vigorosas de *Euterpe oleracea*.
+&lt;br&gt;
+
+.center[.red[**Faça uma reflexão sobre a conclusão do experimento!**]]
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+.pull-left-4[
+**1. Periódico**
+
+Ciência Florestal
+
+Link: [Silva et al., 2020](https://www.scielo.br/j/cflo/a/XSFdXrtQHS3gfZQg9V8K5zd/?lang=pt&amp;format=html)
+&lt;br&gt;&lt;br&gt;
+
+]
+
+--
+
+.pull-right-4[
+**2. Objetivo**
+
+Avaliar o crescimento inicial de mudas de *Eucalyptus urophylla*, *Peltophorum dubium* e *Eremanthus erythropappus*, produzidas em diferentes formulações de substratos.
+
+]
+
+--
+
+.pull-down[
+**3. Delineamento Experimental**
+
+DIC (8 tratamentos) - Diferentes proporções de substratos
+
+**Repetições**: 5 repetições (20 plantas)
+
+**Tipos de substratos**: Casca de arroz compostada, Casca de café compostada, Fibra de coco, Substrato comercial.
+]
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+&lt;img src="fig/class1/E2-T1.png" width="70%" style="display: block; margin: auto;" /&gt;
+
+---
+ 
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+&lt;br&gt;
+
+ **4. Variáveis de interesse**
+
+.pull-left-4[
+- Aos 120 dias mediu-se:
+
+Altura
+
+Diâmetro do coleto
+
+Matéria Seca da Parte Aérea
+
+Peso de Matéria Seca do Sistema Radicular
+
+Índice de Qualidade de Dickson
+]
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+**6. Resultados**
+
+&lt;img src="fig/class1/E2-T31.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+**6. Resultados**
+
+&lt;img src="fig/class1/E2-T32.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+**6. Resultados**
+
+&lt;img src="fig/class1/E2-T33.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Experimentos (Silva et al., 2020)
+&lt;br&gt;
+
+### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
+
+**7. Conclusão**
+
+- Tratamentos com casca de café compostada apresentaram valores superiores para a maioria das variáveis analisadas.
+- A casca de café compostada, combinada com proporções de fibra de coco e substrato comercial apresentou potencial para a produção de mudas das 3 espécies.
+- Recomendação: 20% de fibra de coco, 40% de substrato comercial e 40% de
+casca de café compostada.
+
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 2 &lt;br&gt; Princípios básicos da experimentação**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento&lt;/div&gt;
+
+---
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+Os delineamentos experimentais clássicos são baseados em três princípios básicos:
+
+&lt;img src="fig/class1/PBE.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Repetição
+
+Refere-se ao número de vezes que um determinado tratamento aparece em um experimento (Dias and Barros, 2009).
+
+--
+&lt;br&gt;&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Repetição** = Número de unidades experimentais ou conjunto de unidades experimentais para um determinado tratamento.
+
+--
+&lt;br&gt;&lt;br&gt;
+
+**Tratamento 1** (pleno sol) – 4 repetições de 25 sementes
+
+**Tratamento 2** (50% de sombreamento) – 4 repetições de 25 sementes
+
+**Tratamento 3** (80% de sombreamento) – 4 repetições de 25 sementes
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Qual a importância da repetição?
+* Estimar o erro experimental;
+
+
+* Controlar a variância residual (erro experimental);
+
+
+* Aumentar a precisão das estimativas das médias dos tratamentos;
+
+
+* Aumentar o poder dos testes estatísticos; e
+
+
+* Garantir maior confiabilidade nos resultados obtidos.
+
+--
+&lt;br&gt;&lt;br&gt;
+.shadow3[
+“à medida que o número de repetições cresce tem-se um aumento da precisão das estimativas do experimento.”
+]
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Limitações
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O uso de um número adequado de repetições, possibilita uma boa estimativa do erro experimental, melhorando as estimativas de interesse. 
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> No entanto, o número de repetições pode ser limitado, sobretudo, pelo(a) (COSTA, 2003): 
+
+- Número de tratamentos que serão comparados;
+- Disponibilidade de material experimental; e
+- Disponibilidade de área experimental.
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Casualização ou Aleatorização
+
+--
+
+Consiste em dispor os tratamentos ao acaso no experimento. A ideia básica é que todas as unidades experimentais tenham iguais chances de receber quaisquer dos tratamentos (Dias and Barros, 2009).
+
+--
+&lt;br&gt;&lt;br&gt;
+.shadow3[
+É a atribuição dos tratamentos às unidades experimentais de forma aleatória, sem nenhuma interferência por parte do pesquisador.
+]
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Importância
+
+A casualização é recomendada para se evitar fatores sistemáticos que venham a beneficiar algum tratamento em detrimento de outros (Dias and Barros, 2009).
+
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Controle Local
+
+--
+Destina-se a controlar a heterogeneidade ambiental e implica em restringir a casualização (Dias and Barros, 2009).
+
+--
+&lt;br&gt;&lt;br&gt;
+.shadow3[
+A formação de blocos no DBC e a disposição de linhas e colunas no DQL, são estratégias de controle local, que possibilitam agrupar parcelas homogêneas e casualizar os tratamentos dentro destas.
+]
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Importância
+
+
+- Diminuir o erro experimental; e
+
+
+- Dividir uma área experimental heterogênea em áreas menores e homogêneas, comumente chamadas de blocos.
+
+--
+&lt;br&gt;&lt;br&gt;
+.shadow3[
+É fundamental o reconhecimento da variação ambiental por parte do pesquisador.
+]
+
+---
+
+## Princípios básicos da experimentação
+&lt;br&gt;
+
+### Princípios básicos e delineamentos experimentais
+
+&lt;img src="fig/class1/img-PD2.png" width="53%" style="display: block; margin: auto;" /&gt;
+
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 3 &lt;br&gt; Fases da pesquisa experimental**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento&lt;/div&gt;
+
+---
+
+## Fases da pesquisa experimental
+&lt;br&gt;
+
+&lt;img src="fig/class1/F0.png" width="40%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Fases da pesquisa experimental
+&lt;br&gt;
+
+.pull-left-4[
+&lt;img src="fig/class1/F1.png" width="90%" style="display: block; margin: auto;" /&gt;
+]
+
+--
+
+.font80[
+**Problema**
+
+-&gt; Pergunta: Qual o melhor substrato para germinação de sementes de *Cordia glabrata* (Louro-preto)?
+
+-&gt; Importância: Ornamentação, prática apícola e medicina popular.
+]
+
+--
+
+.font80[
+**Objetivo**
+
+-&gt; Avaliar o melhor substrato para germinação de sementes de *Cordia glabrata* (Louro-preto)?
+]
+
+--
+
+.font80[
+**Unidade Experimental e Tratamentos**
+
+-&gt; UE: Sementes de *Cordia glabrata*.
+
+-&gt; Tratamentos: papel-filtro e solo arenoso + matéria orgânica.
+
+]
+
+--
+.font80[
+**Variáveis**
+
+-&gt; Taxa média de germinação e o Índice de Velocidade de Germinação (IVG).
+
+]
+
+---
+
+## Fases da pesquisa experimental
+&lt;br&gt;
+
+.pull-left-4[
+&lt;img src="fig/class1/F2.png" width="90%" style="display: block; margin: auto auto auto 0;" /&gt;
+]
+
+
+--
+
+.font80[
+**Desenho experimental**
+
+-&gt; DIC, DBC, DQL, Ensaio Fatorial, etc.
+
+]
+
+--
+
+.font80[
+**Fatores não controlados**
+
+-&gt; Ex.: Temperatura, Umidade relativa do ar
+
+
+]
+
+--
+
+.font80[
+**Repetições**
+
+-&gt; Ex.: 5 repetições de 200 sementes.
+
+]
+
+--
+
+.font80[
+**Custos do experimento**
+
+-&gt; Recurso financeiro é um fator limitante.
+
+]
+
+
+---
+
+## Fases da pesquisa experimental
+&lt;br&gt;
+
+&lt;img src="fig/class1/F3.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+
+---
+
+## Fases da pesquisa experimental
+&lt;br&gt;
+
+&lt;img src="fig/class1/F4.png" width="50%" style="display: block; margin: auto;" /&gt;
+
+---
+## Referências
+&lt;br&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;cite&gt;COSTA, J. R.
+(2003).
+&amp;ldquo;Técnicas experimentais aplicadas às ciências agrárias.&amp;rdquo;
+In: &lt;em&gt;Embrapa Agrobiologia-Documentos (INFOTECA-E)&lt;/em&gt;.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;Dias, L. d. S. and W. Barros
+(2009).
+&lt;em&gt;Biometria experimental&lt;/em&gt;
+, p. 408p.&lt;/cite&gt;&lt;/p&gt;
+
+
+&lt;!--Slide XX --&gt;
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+**Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt;
+
+**Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"highlightLanguage": ["r", "css", "yaml"],
+"ratio": "16:9",
+"navigation": {
+"scroll": false
+}
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
