@@ -94,7 +94,8 @@ knitr::kable(
   ) %>% 
     dplyr::filter(!stringr::str_detect(Slide,
                                        "_files/|_cache/|assets"))
-)
+) 
+  
 ```
 
 # Facilitador :deciduous_tree:
