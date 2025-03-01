@@ -150,7 +150,7 @@ Customkbl <- function(data){
 # .font120[Experimentação Florestal <br> (FL03034 - EF)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento Inteiramente `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Casualizado
-###### ANOVA
+###### Análise de Variância - Fator Único
 
 ##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
 ##### ᨒ
