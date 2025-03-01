@@ -722,9 +722,9 @@ h2 {
   color: white !important; /* first of type is master brand red */
   font-size: 50px;
   font-weight: bold;
-  padding-top: 70px;
+  padding-top: 30px;
   padding-left: 0px;
-  padding-bottom: 50px;
+  padding-bottom: 0px;
   margin-top: 0px;
   margin-left: 0px;
   text-align: center;
@@ -763,6 +763,21 @@ h2 {
 .title-slide h5 {
   color: white !important;
   font-size: 15px;
+  font-weight: normal;
+  padding-top: 0px;
+  padding-left: 0px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  margin-left: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* H6 fonts */
+.title-slide h6 {
+  color: orange !important;
+  font-size: 30px;
   font-weight: normal;
   padding-top: 0px;
   padding-left: 0px;
