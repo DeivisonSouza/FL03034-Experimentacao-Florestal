@@ -228,8 +228,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
 
-[2 - Anova no R](#anvR)
-
 ]
 ]
 
@@ -774,6 +772,29 @@ knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 ```
 
 ---
+name: qm
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**3º Passo**: Determinar os Quadrados Médios - .blue[Tratamento e Resíduo]
+<br><br>
+
+.pull-left-9[
+**Quadrado Médio de Tratamentos (Progênies) - Variância entre tratamentos**
+<br><br>
+$\normalsize QM_{Trat.} = \dfrac{SQ_{Trat.}}{I-1} = \dfrac{160,98}{10-1} = 17,89$
+]
+
+.pull-right-9[
+**Quadrado Médio de Resíduos - Variância dentro de tratamentos**
+<br><br>
+$\normalsize QMR = \dfrac{SQR}{I(J-1)} = \dfrac{77,56}{10(4-1)} = 2,59$
+]
+
+---
 
 ## Delineamento Inteiramente Casualizado
 <br>
@@ -787,6 +808,70 @@ knitr::include_graphics('fig/class4/ANOVA-SQ.png')
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics('fig/class4/ANOVA-QM.png')
 ```
+
+---
+name: estF
+## Delineamento Inteiramente Casualizado
+<br>
+
+### .font90[Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)]
+<br>
+
+**4º Passo**: Determinar a estatística F
+<br><br>
+
+
+$\normalsize F = \dfrac{QM_{Trat.}}{QMR} = \dfrac{17,89}{2,59} = 6,91$
+
+---
+name: fcrit
+## Delineamento Inteiramente Casualizado
+<br>
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
+<br><br>
+
+- O valor de F-crítico pode ser encontrado nas tabelas de distribuição F teóricas.
+- Para isso, são necessárias 3 informações: 1) GL de tratamentos; 2) GL de resíduos; e 3) nível de significância $\alpha$.
+- Os níveis de significância ( $\alpha$ ) mais usuais são: 0,01 (1%) e 0,05 (5%).
+- Neste exemplo, admitir-se-á $\alpha = 0,01$ (ou 1%), conforme Pimentel-Gomes e Garcia (2002).
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**5º Passo**: Encontrar o valor crítico da distribuição F para o nível de significância $\alpha$
+<br><br>
+
+.pull-left-9[
+.blue[**Vamos aprender a usar a tabela de distribuição F!**]
+- Acesse o site: [F-Distribution-Tables-UCLA](http://socr.ucla.edu/Applets.dir/F_Table.html)
+- O F-crítico para o experimento é: $F_{[9,~30;~0,01]} = 3,07$
+<br><br>
+
+**No R use a função qf() para encontrar o F-crítico**
+```{r, echo=T, eval=T}
+qf(0.01, 9, 30, lower.tail=FALSE)
+```
+
+]
+
+.pull-right-9[
+.blue[**Bônus: Explore mais aplicativos...**]
+- [Distribuição-F-Prof-Bertolo](http://www.bertolo.pro.br/FinEst/Estatistica/DistribuicaoProbabilidades2/f/index.html)
+- [Stat-Kingdom](https://www.statskingdom.com/180Anova1way.html)
+- [Illinois-Department-of-Statistics](http://courses.atlas.illinois.edu/spring2016/STAT/STAT200/pf.html)
+]
+]
 
 ---
 
