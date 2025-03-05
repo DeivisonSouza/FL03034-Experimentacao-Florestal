@@ -508,6 +508,11 @@ knitr::include_graphics('fig/class4/DIC-ANOVA.png')
 ```
 
 ---
+class: center, middle
+
+**1ª Solução - Cálculo de Somas de Quadrados - ANOVA DIC!**
+
+---
 name: gl
 ## Delineamento Inteiramente Casualizado
 <br>
