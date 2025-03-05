@@ -63,19 +63,19 @@ o ano de 2024.
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide | Link |
-|:---|:---|
-| Slides/01-Programacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
-| Slides/02-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
-| Slides/03-AED.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
-| Slides/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
-| Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html> |
-| Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html> |
-| Slides/Aula4-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
-| Slides/Aula5-Introducao-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
-| Slides/Aula6-DQL.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
-| Slides/Aula7-Teste-Comparacao-Medias.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
-| Slides/Aula8-Analise-Experimentos-com-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
+| Slide | Temática | Link |
+|:---|:---|:---|
+| 01-Programacao.html | Programação da disciplina | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
+| 02-Introducao-Experimentacao.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
+| 03-AED.html | Análise Exploratória de Dados | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
+| 04-DIC-Teoria.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
+| 05-ANOVA-DIC_Progenies-1ªSolucao.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html> |
+| 06-ANOVA-DIC_Progenies-2ªSolucao.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html> |
+| Aula4-DBC.html | Delineamento em Blocos Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
+| Aula5-Introducao-R.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
+| Aula6-DQL.html | Delineamento em Quadrado Latino | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
+| Aula7-Teste-Comparacao-Medias.html | Greater Bahr el Ghazal | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
+| Aula8-Analise-Experimentos-com-R.html | Greater Bahr el Ghazal | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
 
 # Facilitador :deciduous_tree:
 
