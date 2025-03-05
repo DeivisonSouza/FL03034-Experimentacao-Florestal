@@ -105,7 +105,7 @@ knitr::kable(
       str_detect(Slide, "DIC") ~ "Delineamento Inteiramente Casualizado",
       str_detect(Slide, "DBC") ~ "Delineamento em Blocos Casualizado",
       str_detect(Slide, "DQL") ~ "Delineamento em Quadrado Latino",
-      .default = "Greater Bahr el Ghazal"
+      .default = "A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire)"
     ), .after = Slide
   )
 )

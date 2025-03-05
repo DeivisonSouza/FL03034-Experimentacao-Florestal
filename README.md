@@ -74,8 +74,8 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Aula4-DBC.html | Delineamento em Blocos Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
 | Aula5-Introducao-R.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
 | Aula6-DQL.html | Delineamento em Quadrado Latino | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
-| Aula7-Teste-Comparacao-Medias.html | Greater Bahr el Ghazal | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
-| Aula8-Analise-Experimentos-com-R.html | Greater Bahr el Ghazal | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
+| Aula7-Teste-Comparacao-Medias.html | A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire) | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
+| Aula8-Analise-Experimentos-com-R.html | A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire) | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
 
 # Facilitador :deciduous_tree:
 
