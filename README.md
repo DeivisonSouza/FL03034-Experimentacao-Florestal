@@ -65,7 +65,7 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 
 | Slide | Temática | Link |
 |:---|:---|:---|
-| 01-Programacao.html | Programação da disciplina | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
+| 01-Programacao.html | Programação da Disciplina | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
 | 02-Introducao-Experimentacao.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
 | 03-AED.html | Análise Exploratória de Dados | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
 | 04-DIC-Teoria.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
