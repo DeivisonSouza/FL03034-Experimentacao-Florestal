@@ -808,6 +808,85 @@ knitr::include_graphics('fig/class4/ANOVA-Final.png')
 
 ---
 
+## Delineamento Inteiramente Casualizado
+<br>
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**Teste de Hipótese da ANOVA DIC - Conclusão**
+<br>
+]
+
+--
+
+.pull-top[
+.pull-left-11[
+.font80[
+- Hipótese de nulidade (H<sub>0</sub>)
+<br>
+
+**Não existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo das 10 progênies de *Eucalyptus saligna*.
+]
+]
+
+.pull-right-11[
+.font80[
+- Hipótese de alternativa (H<sub>1</sub>)
+<br>
+
+**Existe diferença** significativa entre as **médias** de diâmetro a 1,30m do solo (DAP) para pelo menos duas progênies de *Eucalyptus saligna*.
+
+]
+]
+]
+
+--
+
+.pull-down[
+.pull-left-10[
+<br><br>
+$\large F_{Calculado}~>~F_{Crítico}~=~6,91~>~3,07$
+
+**Conclusão**: .blue[**Rejeita-se H<sub>0</sub>**]
+]
+
+.pull-right-10[
+
+.shadow3[
+.center[**Interpretação**]
+
+.font80[
+- Como $\large F_{Calculado}~>~F_{Crítico}~(~6,91~>~3,07)$ rejeita-se a hipótese de nulidade (H<sub>0</sub>). Portanto, existem evidências de que as médias de pelo menos dois tratamentos (Progênies) diferem estatísticamente, ao nível de 5% de probabilidade.
+]
+]
+]
+]
+
+---
+
+## Delineamento Inteiramente Casualizado
+<br>
+
+.font90[
+### Estudo de Caso I - Competição de progênies (Pimentel-Gomes; Garcia, 2002)
+<br>
+
+**O que fazer quando rejeita-se a hipótese de nulidade?**
+<br>
+
+- Deve-se realizar pós-testes de comparações múltiplas de médias.
+- Os testes paramétricos mais famosos são: Tukey, Duncan, Dunnett, etc.
+- Esses testes realizam comparações par-a-par entre as médias dos tratamentos.
+]
+<br><br>
+
+
+.center[.blue[**Mas, isso é tema para as próximas aulas!**]]
+
+---
+
 ## Referências
 <br><br>
 DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.

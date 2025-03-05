@@ -228,8 +228,6 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 &nbsp;&nbsp;&nbsp;&nbsp;[1.1.5 - F crítico da distribuição F](#fcrit)
 
-[2 - Anova no R](#anvR)
-
 ]
 ]
 
