@@ -99,7 +99,7 @@ knitr::kable(
 ) %>%
   mutate(
     Temática = case_when(
-      str_detect(Slide, "Progr") ~ "Programação da disciplina",
+      str_detect(Slide, "Progr") ~ "Programação da Disciplina",
       str_detect(Slide, "Introd") ~ "Introdução à Experimentação",
       str_detect(Slide, "AED") ~ "Análise Exploratória de Dados",
       str_detect(Slide, "DIC") ~ "Delineamento Inteiramente Casualizado",
