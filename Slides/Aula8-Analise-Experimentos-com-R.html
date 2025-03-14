@@ -4,7 +4,7 @@
     <title>Experimentação Florestal (FL03034 - EF)</title>
     <meta charset="utf-8" />
     <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
-    <script src="Aula8-Analise-Experimentos-com-R_files/header-attrs-2.24/header-attrs.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/header-attrs-2.29/header-attrs.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/remark-css-0.0.1/default.css" rel="stylesheet" />
     <script src="Aula8-Analise-Experimentos-com-R_files/fabric-4.3.1/fabric.min.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
@@ -17,7 +17,7 @@
     <script src="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"f36c65b71d33415fad18b77c226eb4b0","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"a81168447db04c1b8e68965215522bc3","expires":1}</script>
     <script src="Aula8-Analise-Experimentos-com-R_files/himalaya-1.1.0/himalaya.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/js-cookie-3.0.0/js.cookie.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/editable-0.2.6/editable.css" rel="stylesheet" />
@@ -27,16 +27,17 @@
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
     <link href="Aula8-Analise-Experimentos-com-R_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="Aula8-Analise-Experimentos-com-R_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
-    <script src="Aula8-Analise-Experimentos-com-R_files/htmlwidgets-1.6.2/htmlwidgets.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
-    <script src="Aula8-Analise-Experimentos-com-R_files/datatables-binding-0.29/datatables.js"></script>
+    <script src="Aula8-Analise-Experimentos-com-R_files/datatables-binding-0.33/datatables.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
-    <link href="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.4/css/jquery.dataTables.min.css" rel="stylesheet" />
-    <link href="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.4/css/jquery.dataTables.extra.css" rel="stylesheet" />
-    <script src="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.4/js/jquery.dataTables.min.js"></script>
-    <link href="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.2.0/css/crosstalk.min.css" rel="stylesheet" />
-    <script src="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.2.0/js/crosstalk.min.js"></script>
-    <script src="Aula8-Analise-Experimentos-com-R_files/plotly-binding-4.10.3/plotly.js"></script>
+    <link href="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+    <link href="Aula8-Analise-Experimentos-com-R_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+    <script src="Aula8-Analise-Experimentos-com-R_files/plotly-binding-4.10.4/plotly.js"></script>
     <script src="Aula8-Analise-Experimentos-com-R_files/typedarray-0.1/typedarray.min.js"></script>
     <link href="Aula8-Analise-Experimentos-com-R_files/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
     <script src="Aula8-Analise-Experimentos-com-R_files/plotly-main-2.11.1/plotly-latest.min.js"></script>
@@ -151,14 +152,18 @@ top:1em;right:.5em;
 &lt;!-- title-slide --&gt;
 # .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
 
-## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Análise de Experimentos <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; com Linguagem R
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Análise de Experimentos <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; Com Linguagem R
+###### Pacotes: AgroR, agricolae e ExpDes.pt
 
+##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
+##### ᨒ
 ##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 15/agosto/2024) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 25/março/2022 &lt;br&gt; (Atualizado em: 14/março/2025) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
@@ -290,8 +295,8 @@ Um experimento foi conduzido sob o delineamento inteiramente casualizado (DIC), 
 ## Análise de Experimentos em DIC com R
 
 .left-column[
-<div id="htmlwidget-3120de6d6680cbd6fb31" style="width:500px;height:auto;" class="datatables html-widget "></div>
-<script type="application/json" data-for="htmlwidget-3120de6d6680cbd6fb31">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["FC","FC","FC","FC","FC","A + EB","A + EB","A + EB","A + EB","A + EB","CA + TS","CA + TS","CA + TS","CA + TS","CA + TS","SC","SC","SC","SC","SC","TP","TP","TP","TP","TP"],[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5],[5,5.5,6,4,4.5,6.5,8,8,7,7.5,8,9,8.5,7.5,7,6,8,8,6,7,9.800000000000001,9.5,9.9,9.699999999999999,9],[23.2,23.7,23.2,22.2,22.7,25.7,26.2,26.2,25.2,25.7,26.2,27.2,26.7,25.7,25.2,24.2,27.2,26.2,24.2,25.2,28,27.7,28.1,27.9,27.2]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Sub<\/th>\n      <th>Rep<\/th>\n      <th>CR<\/th>\n      <th>CPA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+<div id="htmlwidget-a6100a81a14561c68a52" style="width:500px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-a6100a81a14561c68a52">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["FC","FC","FC","FC","FC","A + EB","A + EB","A + EB","A + EB","A + EB","CA + TS","CA + TS","CA + TS","CA + TS","CA + TS","SC","SC","SC","SC","SC","TP","TP","TP","TP","TP"],[1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5,1,2,3,4,5],[5,5.5,6,4,4.5,6.5,8,8,7,7.5,8,9,8.5,7.5,7,6,8,8,6,7,9.800000000000001,9.5,9.9,9.699999999999999,9],[23.2,23.7,23.2,22.2,22.7,25.7,26.2,26.2,25.2,25.7,26.2,27.2,26.7,25.7,25.2,24.2,27.2,26.2,24.2,25.2,28,27.7,28.1,27.9,27.2]],"container":"<table class=\"compact\">\n  <thead>\n    <tr>\n      <th>Sub<\/th>\n      <th>Rep<\/th>\n      <th>CR<\/th>\n      <th>CPA<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":25,"dom":"t","autoWidth":false,"columnDefs":[{"className":"dt-center","targets":"_all"},{"name":"Sub","targets":0},{"name":"Rep","targets":1},{"name":"CR","targets":2},{"name":"CPA","targets":3}],"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '8pt'});\n}","order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
 ]
 
 .right-column[
@@ -348,7 +353,7 @@ name: ccd
 .pull-right-10[
 .font90[
 
-```r
+``` r
 library(readr)
 (data &lt;- 
     read_csv("data/DIC_Ficticio2.csv", 
@@ -383,7 +388,7 @@ library(readr)
 
 .pull-left-4[
 
-```r
+``` r
 # Estrutura dos dados
 str(data)
 ```
@@ -409,7 +414,7 @@ str(data)
 
 .pull-right-4[
 
-```r
+``` r
 # Tabela de frequência por tratamento
 xtabs(~Sub + Rep, data = data)
 ```
@@ -457,7 +462,7 @@ name: raed
 ]
 
 
-```r
+``` r
 library(summarytools)
 stby(data    = data,
      INDICES = data$Sub, 
@@ -504,7 +509,7 @@ stby(data    = data,
 - **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(BoxPlot por Substrato)
 
 
-```r
+``` r
 # Criando um BoxPlot Por Substrato
 g1 &lt;- data %&gt;% 
   ggplot(aes(x = reorder(Sub, -CR), y = CR)) + 
@@ -528,8 +533,8 @@ plotly::ggplotly(g1)
 ]
 
 .pull-right-4[
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-6e716ebaa6891c8baca6" style="width:540px;height:420px;"></div>
-<script type="application/json" data-for="htmlwidget-6e716ebaa6891c8baca6">{"x":{"data":[{"x":[5,5,5,5,5],"y":[5,5.5,6,4,4.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[6.5,8,8,7,7.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[8,9,8.5,7.5,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[6,8,8,6,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[9.8000000000000007,9.5,9.9000000000000004,9.6999999999999993,9],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[9.5800000000000001,8,7.4000000000000004,7,5],"text":["reorder(Sub, -CR): TP<br />CR: 9.58","reorder(Sub, -CR): CA + TS<br />CR: 8.00","reorder(Sub, -CR): A + EB<br />CR: 7.40","reorder(Sub, -CR): SC<br />CR: 7.00","reorder(Sub, -CR): FC<br />CR: 5.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.55,11.449999999999999],"tickmode":"array","ticktext":["2","4","6","8","10"],"tickvals":[2,4,6,8,10],"categoryorder":"array","categoryarray":["2","4","6","8","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Raiz (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"10d015ff5efe":{"x":{},"y":{},"fill":{},"type":"box"},"10d03dba640e":{"x":{},"y":{}}},"cur_data":"10d015ff5efe","visdat":{"10d015ff5efe":["function (y) ","x"],"10d03dba640e":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-e4363a9ed60b37af2d1a" style="width:540px;height:420px;"></div>
+<script type="application/json" data-for="htmlwidget-e4363a9ed60b37af2d1a">{"x":{"data":[{"x":[5,5,5,5,5],"y":[5,5.5,6,4,4.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[6.5,8,8,7,7.5],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[8,9,8.5,7.5,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[6,8,8,6,7],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[9.8000000000000007,9.5,9.9000000000000004,9.6999999999999993,9],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[9.5800000000000001,8,7.4000000000000004,7,5],"text":["reorder(Sub, -CR): TP<br />CR: 9.58","reorder(Sub, -CR): CA + TS<br />CR: 8.00","reorder(Sub, -CR): A + EB<br />CR: 7.40","reorder(Sub, -CR): SC<br />CR: 7.00","reorder(Sub, -CR): FC<br />CR: 5.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.55,11.449999999999999],"tickmode":"array","ticktext":["2","4","6","8","10"],"tickvals":[2,4,6,8,10],"categoryorder":"array","categoryarray":["2","4","6","8","10"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Raiz (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"33c41ca4129b":{"x":{},"y":{},"fill":{},"type":"box"},"33c476f27c27":{"x":{},"y":{}}},"cur_data":"33c41ca4129b","visdat":{"33c41ca4129b":["function (y) ","x"],"33c476f27c27":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -543,7 +548,7 @@ plotly::ggplotly(g1)
 - **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(BoxPlot por Substrato)
 
 
-```r
+``` r
 # Criando um BoxPlot Por Substrato
 g2 &lt;- data %&gt;% 
   ggplot(aes(x = reorder(Sub, -CPA), y = CPA)) + 
@@ -568,8 +573,8 @@ plotly::ggplotly(g2)
 ]
 
 .pull-right-4[
-<div class="plotly html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-4eba4beaca752cef9a27" style="width:540px;height:420px;"></div>
-<script type="application/json" data-for="htmlwidget-4eba4beaca752cef9a27">{"x":{"data":[{"x":[5,5,5,5,5],"y":[23.199999999999999,23.699999999999999,23.199999999999999,22.199999999999999,22.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[25.699999999999999,26.199999999999999,26.199999999999999,25.199999999999999,25.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[26.199999999999999,27.199999999999999,26.699999999999999,25.699999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[24.199999999999999,27.199999999999999,26.199999999999999,24.199999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[28,27.699999999999999,28.100000000000001,27.899999999999999,27.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[27.780000000000001,26.199999999999999,25.800000000000001,25.399999999999999,23],"text":["reorder(Sub, -CPA): TP<br />CPA: 27.78","reorder(Sub, -CPA): CA + TS<br />CPA: 26.20","reorder(Sub, -CPA): A + EB<br />CPA: 25.80","reorder(Sub, -CPA): SC<br />CPA: 25.40","reorder(Sub, -CPA): FC<br />CPA: 23.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[21.649999999999999,29.350000000000001],"tickmode":"array","ticktext":["22","24","26","28"],"tickvals":[22,24,26,28],"categoryorder":"array","categoryarray":["22","24","26","28"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Parte Aérea (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"10d012653400":{"x":{},"y":{},"fill":{},"type":"box"},"10d02580283d":{"x":{},"y":{}}},"cur_data":"10d012653400","visdat":{"10d012653400":["function (y) ","x"],"10d02580283d":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2a0680b86efda8b4963a" style="width:540px;height:420px;"></div>
+<script type="application/json" data-for="htmlwidget-2a0680b86efda8b4963a">{"x":{"data":[{"x":[5,5,5,5,5],"y":[23.199999999999999,23.699999999999999,23.199999999999999,22.199999999999999,22.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(248,118,109,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"FC","legendgroup":"FC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[3,3,3,3,3],"y":[25.699999999999999,26.199999999999999,26.199999999999999,25.199999999999999,25.699999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(163,165,0,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"A + EB","legendgroup":"A + EB","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[2,2,2,2,2],"y":[26.199999999999999,27.199999999999999,26.699999999999999,25.699999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,191,125,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"CA + TS","legendgroup":"CA + TS","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[4,4,4,4,4],"y":[24.199999999999999,27.199999999999999,26.199999999999999,24.199999999999999,25.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(0,176,246,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"SC","legendgroup":"SC","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,1,1,1,1],"y":[28,27.699999999999999,28.100000000000001,27.899999999999999,27.199999999999999],"hoverinfo":"y","type":"box","fillcolor":"rgba(231,107,243,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"name":"TP","legendgroup":"TP","showlegend":true,"xaxis":"x","yaxis":"y","frame":null},{"x":[1,2,3,4,5],"y":[27.780000000000001,26.199999999999999,25.800000000000001,25.399999999999999,23],"text":["reorder(Sub, -CPA): TP<br />CPA: 27.78","reorder(Sub, -CPA): CA + TS<br />CPA: 26.20","reorder(Sub, -CPA): A + EB<br />CPA: 25.80","reorder(Sub, -CPA): SC<br />CPA: 25.40","reorder(Sub, -CPA): FC<br />CPA: 23.00"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(255,0,0,1)","opacity":1,"size":5.6692913385826778,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(255,0,0,1)"}},"hoveron":"points","showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":25.393346379647753,"r":7.3059360730593621,"b":39.347684279191142,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.40000000000000002,5.5999999999999996],"tickmode":"array","ticktext":["TP","CA + TS","A + EB","SC","FC"],"tickvals":[1,2,3,4,5],"categoryorder":"array","categoryarray":["TP","CA + TS","A + EB","SC","FC"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.689497716894984},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"y","title":{"text":"Substrato","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[21.649999999999999,29.350000000000001],"tickmode":"array","ticktext":["22","24","26","28"],"tickvals":[22,24,26,28],"categoryorder":"array","categoryarray":["22","24","26","28"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0.66417600664176002,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0.66417600664176002,"zeroline":false,"anchor":"x","title":{"text":"Comprimento da Parte Aérea (cm)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":1.8897637795275593,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.689497716894984}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"33c476b1ff5":{"x":{},"y":{},"fill":{},"type":"box"},"33c432d735a2":{"x":{},"y":{}}},"cur_data":"33c476b1ff5","visdat":{"33c476b1ff5":["function (y) ","x"],"33c432d735a2":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
 ]
 
 ---
@@ -583,7 +588,7 @@ plotly::ggplotly(g2)
 - **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(Gráfico de barra por Substrato)
 
 
-```r
+``` r
 data |&gt;
   ggplot(
     mapping = aes(x = Sub, 
@@ -625,7 +630,7 @@ data |&gt;
 - **Passo 2** - Obter um resumo estatístico por tratamento (Substrato) para cada variável (CR e CPA)...(Gráfico de barra por Substrato)
 
 
-```r
+``` r
 data |&gt;
   ggplot(
     mapping = aes(x = Sub, 
@@ -665,7 +670,7 @@ name: aovdic
 .pull-left-4[
 .font80[
 
-```r
+``` r
 # Ajustar o modelo (resposta: CR)
 m0 &lt;- lm(CR ~ Sub, data = data)
 anova(m0)
@@ -691,7 +696,7 @@ anova(m0)
 .pull-right-4[
 .font80[
 
-```r
+``` r
 # Ajustar o modelo (resposta: CPA)
 m1 &lt;- lm(CPA ~ Sub, data = data)
 anova(m1)
@@ -729,7 +734,7 @@ name: norm
 .pull-left-4[
 .font80[
 
-```r
+``` r
 # Teste de Shapiro-Wilk
 shapiro.test(m0$res)
 ```
@@ -749,7 +754,7 @@ shapiro.test(m0$res)
 .pull-right-4[
 .font80[
 
-```r
+``` r
 # Teste de Shapiro-Wilk
 shapiro.test(m1$res)
 ```
@@ -779,7 +784,7 @@ shapiro.test(m1$res)
 
 .pull-left-4[
 
-```r
+``` r
 plot(m0, 2)
 ```
 
@@ -788,7 +793,7 @@ plot(m0, 2)
 
 .pull-right-4[
 
-```r
+``` r
 plot(m1, 2)
 ```
 
@@ -813,7 +818,7 @@ name: homo
 .pull-left-4[
 .font80[
 
-```r
+``` r
 # Teste de Bartlett
 bartlett.test(m0$res~Sub, data = data)
 ```
@@ -833,7 +838,7 @@ bartlett.test(m0$res~Sub, data = data)
 .pull-right-4[
 .font80[
 
-```r
+``` r
 # Teste de Bartlett
 bartlett.test(m1$res~Sub, data = data)
 ```
@@ -863,7 +868,7 @@ bartlett.test(m1$res~Sub, data = data)
 
 .pull-left-4[
 
-```r
+``` r
 plot(m0, 1)
 ```
 
@@ -872,7 +877,7 @@ plot(m0, 1)
 
 .pull-right-4[
 
-```r
+``` r
 plot(m1, 1)
 ```
 
@@ -897,7 +902,7 @@ name: ind
 .pull-left-4[
 .font80[
 
-```r
+``` r
 # Teste de Durbin-Watson
 library(lmtest)
 dwtest(m0)
@@ -919,7 +924,7 @@ dwtest(m0)
 .pull-right-4[
 .font80[
 
-```r
+``` r
 # Teste de Durbin-Watson
 dwtest(m1)
 ```
@@ -946,7 +951,7 @@ name: tcm
 .pull-left-4[
 .font70[
 
-```r
+``` r
 # Teste de Tukey
 TukeyHSD(aov(m0))
 ```
@@ -978,7 +983,7 @@ TukeyHSD(aov(m0))
 .pull-right-4[
 .font70[
 
-```r
+``` r
 # Teste de Tukey
 TukeyHSD(aov(m1))
 ```
@@ -1017,7 +1022,7 @@ name: agror
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
 
-```r
+``` r
 # Pacote AgroR
 # install.packages('AgroR')
 library(AgroR)         # Carrega o pacote
@@ -1067,7 +1072,7 @@ DIC(trat = Sub,        # Qual coluna de tratamentos?
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CR)**
 
-```r
+``` r
 # Pacote AgroR
 # install.packages('AgroR')
 library(AgroR)          # Carrega o pacote
@@ -1117,7 +1122,7 @@ DIC(trat = Sub,         # Qual coluna de tratamentos?
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
 
-```r
+``` r
 # Pacote AgroR
 # install.packages('AgroR')
 library(AgroR)         # Carrega o pacote
@@ -1167,7 +1172,7 @@ DIC(trat = Sub,        # Qual coluna de tratamentos?
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Duncan] (Resposta: CPA)**
 
-```r
+``` r
 # Pacote AgroR
 # install.packages('AgroR')
 library(AgroR)          # Carrega o pacote
@@ -1215,7 +1220,7 @@ name: agricolae
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CR)**
 
-```r
+``` r
 # Pacote agricolae
 # install.packages('agricolae')
 library(agricolae)                  # Carrega o pacote
@@ -1254,7 +1259,7 @@ name: agricolae
 .font70[
 - **.red[Pressuposições + ANOVA DIC + Teste de Tukey] (Resposta: CPA)**
 
-```r
+``` r
 # Pacote agricolae
 # install.packages('agricolae')
 library(agricolae)                  # Carrega o pacote
