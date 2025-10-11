@@ -118,7 +118,7 @@ use_clipboard()
 layout: true
 class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Experimentação Florestal (FL03034 - EF)</div3>/ <div2>Programação da Disciplina</div2> </div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Experimentação Florestal (FL03034 - EF)/</div3> <div2>Programação da Disciplina</div2> </div>
 
 ---
 
@@ -135,7 +135,7 @@ class: with-logo logo-ufpa
 2. .green[Mestrado (Titulação: ano 2011)]
     - Universidade Federal Rural da Amazônia (UFRA);
     - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
-    - Área de Concentração: Manejo de ecossistemas florestais.
+    - Área de Concentração: Manejo de Ecossistemas Florestais.
 
 3. .green[Especialização (Titulação: ano 2019)]
     - Universidade Federal do Paraná (UFPR);
@@ -149,8 +149,8 @@ class: with-logo logo-ufpa
 ]
 
 .pull-right[
-```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/Foto4.jpg")
+```{r echo = FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/slide-title/foto.jpg")
 ```
 ]
 
@@ -158,27 +158,33 @@ knitr::include_graphics("fig/slide-title/Foto4.jpg")
 
 ## 👋 Olá, sejam bem vindos!
 <br>
-### **Sobre o facilitador**
+### **Interesses atuais**
 
 .pull-left[
-#### 👉 **Interesses atuais**
-.font80[
+.font60[
 1. .green[Linguagem de programação]
     - R
     - Python
 
 2. .green[Modelagem preditiva aplicada à ciência florestal]
-    - Aprendizado de máquina
+    - Métodos Tradicionais e Aprendizado de máquina
     
-3. .green[Visão computacional]
-    - reconhecimento de espécies baseado em imagens
+3. .green[Visão computacional e Inteligência Artificial]
+    - Reconhecimento de espécies baseado em imagens (aéreas e terrestres)
+    - Deep Learning/Convolutional Neural Networks/Transfer Learning
+    - Estimativa de biomassa e carbono
+    - Monitoramento da saúde da arborização urbana
     
-4. .green[Criação de Dashboard - Shiny]
+4. .green[Sistemas Interativos de Visualização e Análise de Dados]
+    - Dashboard (Estático e Dinâmico)
+    - Aplicação Web (Reconhecimento de espécies)
+    - Aplicativo Mobile (Próximos passos...)
 ]
 ]
 
 .pull-right[
-#### 👉 **Websites e contatos**
+### **Websites e contatos**
+
 .font80[
 `r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
 
@@ -241,12 +247,12 @@ Email: deivisonvs@ufpa.br
 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)
 <br><br>
 
-👉 **Associação Indígena Pyjahyry Xipaia - AIPHX**
+👉 **Instituto Juma**
 
-✔️ *Instagram AIPHX*: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/)
+✔️ *Instagram IJ*: [@instituto.juma](https://www.instagram.com/instituto.juma/)
 
-✔️ *Site do AIPHX*:
-[https://www.aiphx.com.br/](https://www.aiphx.com.br/)
+✔️ *Site do IJ*:
+[https://institutojuma.org/](https://institutojuma.org/)
 
 <!-- Slide 7 -->
 
