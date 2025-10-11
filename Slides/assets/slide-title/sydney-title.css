@@ -58,8 +58,8 @@ To specify the margin of the first title h1
 /* footer and header */
 
 div.my-header {
-    background-color: #A93226;
-    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#CD6155), color-stop(0%,#922B21), color-stop(0%,#CD6155), color-stop(10%,#CD6155), color-stop(25%,#A93226), color-stop(100%,#A93226));
+    background-color: #3dbb53;
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#3bb250), color-stop(0%,#2f9040), color-stop(0%,#3bb250), color-stop(10%,#3bb250), color-stop(25%,#3dbb53), color-stop(100%,#3dbb53));
     position: fixed;
     top: 0px;
     left: 0px;
@@ -74,7 +74,7 @@ div2 {
 }
 
 div3 {
-  color: #ff0000;
+  color: #DAF7A6;
   font-weight: bold;
 }
 
@@ -87,14 +87,14 @@ div3 {
 }
 
 div.my-footer {
-    background-color: #922B21;
+    background-color: #3dbb53;
     position: absolute;
     bottom: 0px;
     left: 0px;
     height: 30px;
     width: 100%;
     text-align: left;
-    color: white;
+    color: black;
 }
 
 div.my-footer span {
@@ -235,6 +235,21 @@ div.my-footer span {
 .pull-right-15 {
   float: right;
   width: 100%;
+}
+
+.pull-left-15 {
+  float: left;
+  width: 80%;
+}
+
+.pull-left-16 {
+  float: left;
+  width: 90%;
+}
+
+.pull-right-16 {
+  float: right;
+  width: 10%;
 }
 
 
@@ -496,7 +511,7 @@ slides > slide {
   margin-bottom: 0.2em;
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 900px;
+  max-width: 1000px;
   border-radius: 2px;
   padding-top: 0px;
   padding-left: 15px;
@@ -532,7 +547,7 @@ slides > slide {
   margin-bottom: 0.2em;
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 1000px;
+  max-width: 1100px;
   border-radius: 2px;
   padding-top: -5px;
   padding-left: 15px;
@@ -562,7 +577,7 @@ slides > slide {
   margin-bottom: 0.2em;
   margin-left: 10px;
   margin-right: 10px;
-  max-width: 900px;
+  max-width: 1000px;
   border-radius: 2px;
   padding-top: -5px;
   padding-left: 15px;
@@ -681,20 +696,30 @@ h1 {
   padding-top: 0px;
 }
 
-h3, h4 {
-  padding-top: -15px;
+h2 {
+  padding-top: 20px;
   padding-bottom: 00px;
-  color: #00cc00;
+  color: #b83505;
   text-shadow: none;
   font-weight: 400;
   margin-left: 5px;
   margin-bottom: 0px;
 }
 
-h2 {
-  padding-top: -20px;
+h3 {
+  padding-top: -15px;
   padding-bottom: 00px;
-  color: #006633;
+  color: #dd7321;
+  text-shadow: none;
+  font-weight: 200;
+  margin-left: 5px;
+  margin-bottom: 0px;
+}
+
+h4 {
+  padding-top: -15px;
+  padding-bottom: 00px;
+  color: #ed4406;
   text-shadow: none;
   font-weight: 400;
   margin-left: 5px;
@@ -761,7 +786,7 @@ h2 {
 
 /* H5 fonts */
 .title-slide h5 {
-  color: white !important;
+  color: #DAF7A6 !important;
   font-size: 15px;
   font-weight: normal;
   padding-top: 0px;

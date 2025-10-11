@@ -97,41 +97,54 @@ xaringanExtra::use_editable(expires = 1)
 use_clipboard()
 ```
 
+
 <!-- title-slide -->
 # .font120[Experimentação Florestal <br> (FL03034 - EF)]
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` .font90[Programação e Orientações] `r anicon::faa("pagelines", animate="horizontal", colour="green")`
-<br>
+## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Programação da Disciplina `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> ᨒ
+###### Período Letivo 2025.4
 
-#### **Prof. Dr. Deivison Venicio Souza**
-##### Universidade Federal do Pará (UFPA) 
+##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
+##### ᨒ
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### 1ª versão: 10/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`)
+##### 1ª versão: 10/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
 
 ---
-
 layout: true
+class: with-logo logo-ufpa
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Cronograma da disciplina</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp; <div3>Experimentação Florestal (FL03034 - EF)</div3>/ <div2>Programação da Disciplina</div2> </div>
 
 ---
 
 ## 👋 Olá, sejam bem vindos!
 <br>
-
 ### **Sobre o facilitador**
+
 .pull-left[
-.font90[
+.font60[
 1. .green[Graduação (Titulação: ano 2008)]
     - Universidade Federal Rural da Amazônia (UFRA); e
     - Título: Bacharel em Engenharia Florestal.
-
+    
 2. .green[Mestrado (Titulação: ano 2011)]
     - Universidade Federal Rural da Amazônia (UFRA);
     - Programa de Pós-graduação em Ciências Florestais (PPGCF); e
     - Área de Concentração: Manejo de ecossistemas florestais.
+
+3. .green[Especialização (Titulação: ano 2019)]
+    - Universidade Federal do Paraná (UFPR);
+    - Área: Big Data e Data Science
+    
+4. .green[Doutorado (Titulação: ano 2020)]
+    - Universidade Federal do Paraná (UFPR);
+    - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
+    - Área de Concentração: Manejo Florestal.
 ]
 ]
 
@@ -145,35 +158,11 @@ knitr::include_graphics("fig/slide-title/Foto4.jpg")
 
 ## 👋 Olá, sejam bem vindos!
 <br>
-
 ### **Sobre o facilitador**
 
 .pull-left[
-.font90[
-3. .green[Doutorado (Titulação: ano 2020)]
-    - Universidade Federal do Paraná (UFPR);
-    - Programa de Pós-graduação em Engenharia Florestal (PPGEF); e
-    - Área de Concentração: Manejo Florestal.
-    
-4. .green[Especialização (Defesa: ano 2019)]
-    - Universidade Federal do Paraná (UFPR);
-    - Área: Big Data e Data Science
-]
-]
-
-.pull-right[
-```{r echo = FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/slide-title/Foto4.jpg")
-```
-]
-
----
-
-## 👋 Olá, sejam bem vindos!
-
-.pull-left[
-.font90[
-### **Interesses atuais**
+#### 👉 **Interesses atuais**
+.font80[
 1. .green[Linguagem de programação]
     - R
     - Python
@@ -189,17 +178,20 @@ knitr::include_graphics("fig/slide-title/Foto4.jpg")
 ]
 
 .pull-right[
-.font90[
-### **Websites e contatos**
+#### 👉 **Websites e contatos**
+.font80[
+`r icons::simple_icons("github")` GitHub: https://github.com/DeivisonSouza
 
 <span class="iconify" data-icon="fa-brands:orcid" data-inline="false"></span>
 
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_128x128.png" style="width:1.5em;margin-right:1em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
 
-```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/slide-title/ORCID.png')
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap=''}
+knitr::include_graphics('fig/ORCID.png')
 ```
+
+Email: deivisonvs@ufpa.br
 ]
 ]
 
@@ -208,35 +200,63 @@ knitr::include_graphics('fig/slide-title/ORCID.png')
 ## 👋 Olá, sejam bem vindos!
 <br>
 
-### **Projetos de Pesquisa/Extensão finalizados** (com fomento)
+### 🕵 **Projetos de Pesquisa/Extensão Finalizados** (com fomento)
 
-- 1) Sistema de Visão Computacional para Reconhecer Espécies no Manejo Florestal Madeireiro na Amazônia Brasileira. (**Financiador**: Centro de Indústrias Produtoras e Exportadoras de Madeira do Estado de Mato Grosso - CIPEM) - ([https://cipem.org.br/](https://cipem.org.br/)) <br><br>
-- 2) Projeto Ipa’wã (Copaíba): Etnomapeamento e inventário de copaibais nativos na TI Xipaya (Aldeias Tukamã, Tukayá e Kaarimã). (**Financiador**: Fundo Brasileiro para a Biodiversidade - FUNBIO) - ([https://www.funbio.org.br/](https://www.funbio.org.br/)) (Parceria entre Associação Indígena Pyjahyry Xipaia – AIPHX e UFPA)
+.font90[
 <br>
+✔️ 1) Sistema de Visão Computacional para Reconhecer Espécies no Manejo Florestal Madeireiro na Amazônia Brasileira. (**Financiador**: Centro de Indústrias Produtoras e Exportadoras de Madeira do Estado de Mato Grosso - CIPEM) - ([https://cipem.org.br/](https://cipem.org.br/))
+<br><br>
 
-----------------------------------------
-
-**Siga o Instagram**: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/) (Associação Indígena Pyjahyry Xipaia)
-
-**Siga o Instagram**: [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/) (Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas)
-
-<!-- Slide 2 -->
----
-
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
-<br>
-
-```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Fevereiro.png")
-```
+✔️ 2) Projeto Ipa’wã (Copaíba): Etnomapeamento e inventário de copaibais nativos na TI Xipaya (Aldeias Tukamã, Tukayá e Kaarimã). (**Financiador**: Fundo Brasileiro para a Biodiversidade - FUNBIO) - ([https://www.funbio.org.br/](https://www.funbio.org.br/)) (Parceria entre Associação Indígena Pyjahyry Xipaia – AIPHX e UFPA)
+]
 
 ---
 
-## Cronograma .black[.font80[(**Horário: 13h30min - 18h50min**)]]
+## 👋 Olá, sejam bem vindos!
 <br>
 
-```{r, echo = FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class0/Marco.png")
+### 🕵 **Projetos de Pesquisa/Extensão em Andamento** (com/sem fomento)
+
+.font90[
+<br>
+✔️ 1) DeepWood: Reconhecimento de Espécies Florestais Baseado em Imagens de Madeira e Aprendizado Profundo (Portaria/UFPA N. 130/2024). (**Sem Financiador**) - (**Parceria**: Laboratório de Anatomia e Qualidade da Madeira LANAQM/UFPR e LMFTCA/UFPA)
+<br><br>
+
+✔️ 2) Apoio ao Fortalecimento da Gestão Territorial e Ambiental da Terra Indígena Xipaya (TI Xipaya) - (Portaria/UFPA N. 95/2025). (**Financiador**: Indigenous Peoples Assistance Facility - IPAF) (**Parceria**: Associação Indígena Pyjahyry Xipaia e LMFTCA/UFPA) - **Proponente**: AIPHX
+]
+
+---
+
+## 👋 Olá, sejam bem vindos!
+<br>
+
+### 💻 **Siga nossas redes sociais e de parceiros...**
+<br>
+
+👉 **Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas - LMFTCA**
+
+✔️ *Instagram LMFTCA*: [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+✔️ *Site do LMFTCA*:
+[https://www.lmftca.com.br/](https://www.lmftca.com.br/)
+<br><br>
+
+👉 **Associação Indígena Pyjahyry Xipaia - AIPHX**
+
+✔️ *Instagram AIPHX*: [@pyjahyryxipaia](https://www.instagram.com/pyjahyryxipaia/)
+
+✔️ *Site do AIPHX*:
+[https://www.aiphx.com.br/](https://www.aiphx.com.br/)
+
+<!-- Slide 7 -->
+
+---
+
+## Cronograma .black[.font80[(**Horário: 07h30min - 12h50min**)]]
+<br>
+
+```{r, echo = FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics("fig/class0/Out.png")
 ```
 
 <!-- Slide 3 -->
