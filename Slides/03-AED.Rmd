@@ -117,10 +117,14 @@ BibOptions(check.entries = FALSE,
 # .font120[Experimentação Florestal <br> (FL03034 - EF)]
 
 ## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise Exploratória `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> de Dados
+###### Conceito, Importância e Tipos
 
-#### **Prof. Dr. Deivison Venicio Souza**
+##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
+##### ᨒ
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 <br>
 ##### 1ª versão: 18/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
