@@ -51,11 +51,9 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 
 # Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: 24/02/2025 a 01/03/2025 (Semana 1)
+:calendar: 13/10/2025 a 25/10/2025 (Segunda-feira a sábado)
 
-:calendar: 10/03/2025 a 15/03/2025 (Semana 2)
-
-:alarm_clock: **13h30min - 18h50min**
+:alarm_clock: **07h30min - 13h50min**
 
 
 <div>
@@ -74,7 +72,7 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 # Experimentação Florestal (FL03034-EF)
 
 <div align="justify">
-Este repositório guarda os slides em .html, códigos R, arquivos .Rmd, figuras, conjunto de dados (e outros) utilizados na disciplina de **Experimentação Florestal** (FL03034-EF) ministrada pelo **Prof. Deivison Venicio Souza** no curso de graduação em **Engenharia Florestal** da **Universidade Federal do Pará** (UFPA). O curso será ofertado na **modalidade presencial**, conforme dispõe a [Resolução  n. 5.453, de 14 de dezembro de 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf) e em consonância à [Resolução n. 5.686, de 26 de outubro de 2023](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2023/5686%20Calend%C3%A1rio%20Acad%C3%AAmico%20da%20UFPA%20-%202024.pdf), que aprovou o Calendário Acadêmico da Universidade Federal do Pará para o ano de 2024. 
+Este repositório guarda os slides em .html, códigos R, arquivos .Rmd, figuras, conjunto de dados (e outros) utilizados na disciplina de **Experimentação Florestal** (FL03034-EF) ministrada pelo **Prof. Deivison Venicio Souza** no curso de graduação em **Engenharia Florestal** da **Universidade Federal do Pará** (UFPA). O curso será ofertado na **modalidade presencial**, conforme dispõe a [Resolução  n. 5.453, de 14 de dezembro de 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf) e em consonância à [Resolução  n. 5.845, de 16 de dezembro de 2024](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2024/5845%20Aprova%20o%20Calend%C3%A1rio%20Acad%C3%AAmico%20da%20UFPA%20-%202025.pdf), que aprovou o Calendário Acadêmico da Universidade Federal do Pará para o ano de 2025.
 
 **Acesse as normas gerais da UFPA:** 👇
 

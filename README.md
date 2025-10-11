@@ -1,16 +1,17 @@
 
 <!-- README.md is generated from README.Rmd.. Please edit that file.. -->
+
 <!-- badges: start -->
+
 <!-- badges: end -->
+
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
 
 # Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: 24/02/2025 a 01/03/2025 (Semana 1)
+:calendar: 13/10/2025 a 25/10/2025 (Segunda-feira a sábado)
 
-:calendar: 10/03/2025 a 15/03/2025 (Semana 2)
-
-:alarm_clock: **13h30min - 18h50min**
+:alarm_clock: **07h30min - 13h50min**
 
 <div>
 
@@ -43,10 +44,10 @@ Florestal** da **Universidade Federal do Pará** (UFPA). O curso será
 ofertado na **modalidade presencial**, conforme dispõe a [Resolução
 n. 5.453, de 14 de dezembro de
 2021](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2021/5453%20Aprova%20a%20Resolu%C3%A7%C3%A3o%20sobre%20o%20retorno%20das%20Atividades%20Presenciais.pdf)
-e em consonância à [Resolução n. 5.686, de 26 de outubro de
-2023](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2023/5686%20Calend%C3%A1rio%20Acad%C3%AAmico%20da%20UFPA%20-%202024.pdf),
+e em consonância à [Resolução n. 5.845, de 16 de dezembro de
+2024](https://sege.ufpa.br/boletim_interno/downloads/resolucoes/consepe/2024/5845%20Aprova%20o%20Calend%C3%A1rio%20Acad%C3%AAmico%20da%20UFPA%20-%202025.pdf),
 que aprovou o Calendário Acadêmico da Universidade Federal do Pará para
-o ano de 2024.
+o ano de 2025.
 
 **Acesse as normas gerais da UFPA:** 👇
 
@@ -69,8 +70,9 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | 02-Introducao-Experimentacao.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
 | 03-AED.html | Análise Exploratória de Dados | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
 | 04-DIC-Teoria.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
-| 05-ANOVA-DIC_Progenies-1ªSolucao.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-1ªSolucao.html> |
-| 06-ANOVA-DIC_Progenies-2ªSolucao.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-2ªSolucao.html> |
+| 05-ANOVA-DIC_Progenies-Solucao1.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-Solucao1.html> |
+| 06-ANOVA-DIC_Progenies-Solucao2.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-Solucao2.html> |
+| 07-ANOVA-DIC_Linguagem-R.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/07-ANOVA-DIC_Linguagem-R.html> |
 | Aula4-DBC.html | Delineamento em Blocos Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
 | Aula5-Introducao-R.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
 | Aula6-DQL.html | Delineamento em Quadrado Latino | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
