@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="03-AED-Parte1_files/header-attrs-2.29/header-attrs.js"></script>
+    <link href="03-AED-Parte1_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="03-AED-Parte1_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="03-AED-Parte1_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="03-AED-Parte1_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="03-AED-Parte1_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="03-AED-Parte1_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="03-AED-Parte1_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"xb20b1ca23244f818ce0a20f8dad3820","expires":1}</script>
+    <script src="03-AED-Parte1_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="03-AED-Parte1_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="03-AED-Parte1_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/editable-0.2.6/editable.js"></script>
+    <link href="03-AED-Parte1_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="03-AED-Parte1_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="03-AED-Parte1_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+    <link href="03-AED-Parte1_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/datatables-binding-0.33/datatables.js"></script>
+    <script src="03-AED-Parte1_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="03-AED-Parte1_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="03-AED-Parte1_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="03-AED-Parte1_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+    <link href="03-AED-Parte1_files/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/plotly-binding-4.11.0/plotly.js"></script>
+    <script src="03-AED-Parte1_files/typedarray-0.1/typedarray.min.js"></script>
+    <link href="03-AED-Parte1_files/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+    <script src="03-AED-Parte1_files/plotly-main-2.11.1/plotly-latest.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 130px;
+height: 130px;
+z-index: 0;
+background-image: url(fig/slide-title/LMFTCA.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+&lt;!-- title-slide --&gt;
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Análise Exploratória <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; de Dados
+###### Conceito, Importância e Tipos
+
+##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
+##### ᨒ
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
+##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
+##### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 1ª versão: 18/agosto/2021 &lt;br&gt; (Atualizado em: 14/outubro/2025) &lt;br&gt; Altamira, Pará
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão&lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+**2 - Análise exploratória de dados;**
+
+3 - Delineamento inteiramente casualizado - DIC; 
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+6 - Testes de comparação de médias; 
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+9 - Análise de experimentos com linguagem R.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Recordar terminologias e conceitos básicos de estatística descritiva;
+* Recordar e calcular as principais medidas de tendência central (ou posição); e
+* Recordar e calcular as principais medidas de dispersão (ou variabilidade).
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 1 - Terminologias e conceitos básicos**
+
+[1 - O que é estatística?](#Est)
+
+[2 - Estatística descritiva e Estatística inferêncial](#DI)
+
+[3 - População e Amostra](#PA)
+
+[4 - Variável e Parâmetro](#VP)
+
+[5 - Tipos de Variáveis](#TV)
+]
+
+.pull-right-2[
+.pull-down[
+**Parte 2 - Medidas de tendência central (ou posição)**
+
+[1 - Conceito e importância](#CI)
+
+[2 - Moda](#Mo)
+
+[3 - Mediana](#Md)
+
+[4 - Média Aritmética](#Me)
+]
+]
+
+---
+## Conteúdo
+
+**Parte 3 - Medidas de dispersão (ou variabilidade)**
+
+[1 - Conceito e importância](#ci)
+
+[2 - Amplitude Total](#AT)
+
+[4 - Variância](#Var)
+
+[5 - Desvio Padrão](#Dp)
+
+[6 - Coeficiente de Variação](#CV)
+
+---
+
+## Leitura complementar
+&lt;br&gt;
+
+.pull-left-4[
+**Livro recomendado**
+&lt;br&gt;&lt;br&gt;
+
+Morettin, Pedro Alberto; Bussab, Wilton Oliveira. **Estatística básica**. 9 ed., São Paulo: Saraiva, 2017, 554p.
+&lt;br&gt;&lt;br&gt;
+
+**Parte 1** - Análise Exploratória de Dados (Capítulos 2 e 3).
+&lt;br&gt;&lt;br&gt;
+
+Dados, códigos R (e outros) podem ser acessados em:
+
+**Link**: &lt;a href="https://www.ime.usp.br/~pam/EstBas.html"&gt;Estatística básica&lt;/a&gt;
+
+]
+
+.pull-right-4[
+&lt;img src="fig/class2/Livro-Bussab.jpeg" width="60%" style="display: block; margin: auto;" /&gt;
+]
+
+
+
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 1 &lt;br&gt; Terminologias e conceitos básicos**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão&lt;/div&gt;
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+
+.shadow3[
+### Conceito
+
+A estatística serve para ajudar na **descrição de fenômenos** e na **tomada de decisões**.
+]
+
+&lt;br&gt;
+
+### Divisões da estatística
+
+A estatística é, em geral, dividida em dois grandes grupos:
+
+1. Estatística Descritiva
+2. Estatística Inferencial
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+
+### Estatística Descritiva
+
+É a parte da estatística que lida com a **organização**, **resumo** e **apresentação** de dados (Ferreira, 2009).
+
+&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> .blue[**Os dados podem ser resumidos de forma numérica ou gráfica.**]
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+.left-column[
+
+<div id="htmlwidget-fa6781e66db736cb1eca" style="width:350px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-fa6781e66db736cb1eca">{"x":{"filter":"none","vertical":false,"caption":"<caption>Dados de Cedrela odorata.<\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1,2],"date":[]},"data":[[83,90.40000000000001,95.17,86.58,96.45,57.93,76.39,76.08,76.39,66.84999999999999,124.14,101.22,73.53,75.12,77.34999999999999,82.12,75.76000000000001,76.39,98.36,86,63,59,140.06,95.48999999999999,74.48,57.93,82.76000000000001,128.92,70.03,102.81,85.94,70.66],[9,18,14,16,14,17,14,16,15,18,12,14,17,12,13,16,13,12,19,16,15,10,15,12,12,18,13,18,14,17,16,9],[4.56,7.68,6.71,5.16,5.81,2.91,5.12,4.8,4.1,3.44,11.06,7.22,5.43,3.13,4,6.18,3.15,4.13,9.380000000000001,6.56,1.89,2.22,11.83,6.2,4.1,2.29,3.78,17.58,4.79,7.49,7.58,2.88],["I","I","I","II","II","II","II","I","I","III","III","III","III","III","III","III","III","II","II","II","II","II","II","I","I","I","I","I","I","I","I","I"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>D<\/th>\n      <th>H<\/th>\n      <th>V<\/th>\n      <th>QF<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1,2]},{"name":"D","targets":0},{"name":"H","targets":1},{"name":"V","targets":2},{"name":"QF","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.right-column[
+
+### Como extrair informações descritivas?
+
+* Calcular medidas descritivas quantitativas.
+
+
+``` r
+# Usando funções da linguagem R
+mean(data$D)
+## [1] 84.57219
+sd(data$D)
+## [1] 19.51946
+var(data$H)
+## [1] 7.096774
+table(data$QF)
+## 
+##   I  II III 
+##  14  10   8
+```
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+.left-column[
+
+### Como extrair informações descritivas?
+
+* Usar representações gráficas
+
+
+``` r
+# Criando um BoxPlot Univariado
+
+g1 &lt;- data %&gt;% 
+  ggplot(aes(x = 1, y = D)) + 
+  geom_boxplot() + 
+  xlab(NULL) + 
+  theme_bw() +
+  theme(axis.text.x = element_blank(),
+        axis.ticks.x = element_blank())
+
+plotly::ggplotly(g1)
+
+```
+
+]
+
+.right-column[
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-4f01dba8c34617558a45" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-4f01dba8c34617558a45">{"x":{"data":[{"x":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"y":[83,90.400000000000006,95.170000000000002,86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.079999999999998,76.390000000000001,66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005,76.390000000000001,98.359999999999999,86,63,59,140.06,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"hoverinfo":"y","type":"box","fillcolor":"rgba(255,255,255,1)","marker":{"opacity":null,"outliercolor":"rgba(0,0,0,1)","line":{"width":1.8897637795275593,"color":"rgba(0,0,0,1)"},"size":5.6692913385826778},"line":{"color":"rgba(51,51,51,1)","width":1.8897637795275593},"showlegend":false,"xaxis":"x","yaxis":"y","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":10.958904109589042,"l":43.105022831050235},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[0.58750000000000002,1.4125000000000001],"tickmode":"array","ticktext":["0.6","0.8","1.0","1.2","1.4"],"tickvals":[0.60000000000000009,0.80000000000000004,1,1.2000000000000002,1.4000000000000001],"categoryorder":"array","categoryarray":["0.6","0.8","1.0","1.2","1.4"],"nticks":null,"ticks":"","tickcolor":null,"ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":false,"tickfont":{"color":null,"family":null,"size":0},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"rgba(255,255,255,1)","line":{"color":"rgba(51,51,51,1)","width":0,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"347c302336da":{"x":{},"y":{},"type":"box"}},"cur_data":"347c302336da","visdat":{"347c302336da":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+.left-column[
+
+### Como extrair informações descritivas?
+
+* Usar representações gráficas
+
+
+``` r
+# Criando um Hitograma Univariado
+
+g2 &lt;- data %&gt;%
+  ggplot(aes(x = H)) + 
+  geom_histogram(bins = 5, fill="#69b3a2", 
+                 color="#e9ecef", alpha=0.9) +
+  theme_bw()
+
+plotly::ggplotly(g2)
+
+```
+
+]
+
+.right-column[
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-2fa44862a3a889ee5961" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-2fa44862a3a889ee5961">{"x":{"data":[{"orientation":"v","width":[2.5,2.5,2.5,2.5,2.5],"base":[0,0,0,0,0],"x":[9,11.5,14,16.5,19],"y":[3,5,11,8,5],"text":["count:  3<br />H:  9.0","count:  5<br />H: 11.5","count: 11<br />H: 14.0","count:  8<br />H: 16.5","count:  5<br />H: 19.0"],"type":"bar","textposition":"none","marker":{"autocolorscale":false,"color":"rgba(105,179,162,0.9)","line":{"width":1.8897637795275593,"color":"rgba(233,236,239,1)"}},"showlegend":false,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":31.415525114155255},"plot_bgcolor":"rgba(255,255,255,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[7.125,20.875],"tickmode":"array","ticktext":["8","12","16","20"],"tickvals":[8,12,16,20],"categoryorder":"array","categoryarray":["8","12","16","20"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"H","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[-0.55000000000000004,11.550000000000001],"tickmode":"array","ticktext":["0","3","6","9"],"tickvals":[0,3,6.0000000000000009,9],"categoryorder":"array","categoryarray":["0","3","6","9"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(235,235,235,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"count","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":"rgba(255,255,255,1)","line":{"color":"rgba(51,51,51,1)","width":0,"linetype":"solid"},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"347c394263b7":{"x":{},"type":"bar"}},"cur_data":"347c394263b7","visdat":{"347c394263b7":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+.left-column[
+
+### Como extrair informações descritivas?
+
+* Usar representações gráficas
+
+
+``` r
+# Criando um Scatterplot
+
+g3 &lt;- data %&gt;%
+  ggplot(aes(x=D, y=V, color=QF)) +
+      geom_point(size = 3) +
+      theme(legend.position="none") 
+
+plotly::ggplotly(g3)
+  
+```
+
+]
+
+.right-column[
+
+<div class="plotly html-widget html-fill-item" id="htmlwidget-0d49d12997a760fcf0e4" style="width:480px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-0d49d12997a760fcf0e4">{"x":{"data":[{"x":[83,90.400000000000006,95.170000000000002,76.079999999999998,76.390000000000001,95.489999999999995,74.480000000000004,57.93,82.760000000000005,128.91999999999999,70.030000000000001,102.81,85.939999999999998,70.659999999999997],"y":[4.5599999999999996,7.6799999999999997,6.71,4.7999999999999998,4.0999999999999996,6.2000000000000002,4.0999999999999996,2.29,3.7799999999999998,17.579999999999998,4.79,7.4900000000000002,7.5800000000000001,2.8799999999999999],"text":["D:  83.00<br />V:  4.56<br />QF: I","D:  90.40<br />V:  7.68<br />QF: I","D:  95.17<br />V:  6.71<br />QF: I","D:  76.08<br />V:  4.80<br />QF: I","D:  76.39<br />V:  4.10<br />QF: I","D:  95.49<br />V:  6.20<br />QF: I","D:  74.48<br />V:  4.10<br />QF: I","D:  57.93<br />V:  2.29<br />QF: I","D:  82.76<br />V:  3.78<br />QF: I","D: 128.92<br />V: 17.58<br />QF: I","D:  70.03<br />V:  4.79<br />QF: I","D: 102.81<br />V:  7.49<br />QF: I","D:  85.94<br />V:  7.58<br />QF: I","D:  70.66<br />V:  2.88<br />QF: I"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(248,118,109,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(248,118,109,1)"}},"hoveron":"points","name":"I","legendgroup":"I","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[86.579999999999998,96.450000000000003,57.93,76.390000000000001,76.390000000000001,98.359999999999999,86,63,59,140.06],"y":[5.1600000000000001,5.8099999999999996,2.9100000000000001,5.1200000000000001,4.1299999999999999,9.3800000000000008,6.5599999999999996,1.8899999999999999,2.2200000000000002,11.83],"text":["D:  86.58<br />V:  5.16<br />QF: II","D:  96.45<br />V:  5.81<br />QF: II","D:  57.93<br />V:  2.91<br />QF: II","D:  76.39<br />V:  5.12<br />QF: II","D:  76.39<br />V:  4.13<br />QF: II","D:  98.36<br />V:  9.38<br />QF: II","D:  86.00<br />V:  6.56<br />QF: II","D:  63.00<br />V:  1.89<br />QF: II","D:  59.00<br />V:  2.22<br />QF: II","D: 140.06<br />V: 11.83<br />QF: II"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(0,186,56,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(0,186,56,1)"}},"hoveron":"points","name":"II","legendgroup":"II","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null},{"x":[66.849999999999994,124.14,101.22,73.530000000000001,75.120000000000005,77.349999999999994,82.120000000000005,75.760000000000005],"y":[3.4399999999999999,11.06,7.2199999999999998,5.4299999999999997,3.1299999999999999,4,6.1799999999999997,3.1499999999999999],"text":["D:  66.85<br />V:  3.44<br />QF: III","D: 124.14<br />V: 11.06<br />QF: III","D: 101.22<br />V:  7.22<br />QF: III","D:  73.53<br />V:  5.43<br />QF: III","D:  75.12<br />V:  3.13<br />QF: III","D:  77.35<br />V:  4.00<br />QF: III","D:  82.12<br />V:  6.18<br />QF: III","D:  75.76<br />V:  3.15<br />QF: III"],"type":"scatter","mode":"markers","marker":{"autocolorscale":false,"color":"rgba(97,156,255,1)","opacity":1,"size":11.338582677165356,"symbol":"circle","line":{"width":1.8897637795275593,"color":"rgba(97,156,255,1)"}},"hoveron":"points","name":"III","legendgroup":"III","showlegend":true,"xaxis":"x","yaxis":"y","hoverinfo":"text","frame":null}],"layout":{"margin":{"t":23.305936073059364,"r":7.3059360730593621,"b":37.260273972602747,"l":37.260273972602747},"plot_bgcolor":"rgba(235,235,235,1)","paper_bgcolor":"rgba(255,255,255,1)","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724},"xaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[53.823500000000003,144.16650000000001],"tickmode":"array","ticktext":["75","100","125"],"tickvals":[75,100,125],"categoryorder":"array","categoryarray":["75","100","125"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"y","title":{"text":"D","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"yaxis":{"domain":[0,1],"automargin":true,"type":"linear","autorange":false,"range":[1.1054999999999999,18.3645],"tickmode":"array","ticktext":["5","10","15"],"tickvals":[5,10,15],"categoryorder":"array","categoryarray":["5","10","15"],"nticks":null,"ticks":"outside","tickcolor":"rgba(51,51,51,1)","ticklen":3.6529680365296811,"tickwidth":0,"showticklabels":true,"tickfont":{"color":"rgba(77,77,77,1)","family":"","size":11.68949771689498},"tickangle":-0,"showline":false,"linecolor":null,"linewidth":0,"showgrid":true,"gridcolor":"rgba(255,255,255,1)","gridwidth":0,"zeroline":false,"anchor":"x","title":{"text":"V","font":{"color":"rgba(0,0,0,1)","family":"","size":14.611872146118724}},"hoverformat":".2f"},"shapes":[{"type":"rect","fillcolor":null,"line":{"color":null,"width":0,"linetype":[]},"yref":"paper","xref":"paper","layer":"below","x0":0,"x1":1,"y0":0,"y1":1}],"showlegend":false,"legend":{"bgcolor":"rgba(255,255,255,1)","bordercolor":"transparent","borderwidth":0,"font":{"color":"rgba(0,0,0,1)","family":"","size":11.68949771689498}},"hovermode":"closest","barmode":"relative"},"config":{"doubleClick":"reset","modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"source":"A","attrs":{"347cad921d6":{"x":{},"y":{},"colour":{},"type":"scatter"}},"cur_data":"347cad921d6","visdat":{"347cad921d6":["function (y) ","x"]},"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Terminologias e conceitos básicos
+
+&lt;br&gt;
+
+### Estatística Inferencial (ou Indutiva)
+
+É a parte da estatítica que objetiva inferir sobre uma **população** a partir da observação de uma parte dela (**amostra**).
+
+---
+
+## Terminologias e conceitos básicos
+
+.left-column[
+### População
+
+&lt;img src="03-AED-Parte1_files/figure-html/unnamed-chunk-8-1.png" style="display: block; margin: auto;" /&gt;
+]
+
+.right-column[
+### Amostra
+
+&lt;img src="03-AED-Parte1_files/figure-html/unnamed-chunk-9-1.png" style="display: block; margin: auto;" /&gt;
+
+]
+
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Tipos de Variáveis
+
+&lt;img src="fig/class2/TV.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Variáveis Qualitativas (ou Categóricas)
+
+A variável é qualitativa (ou categórica) quando seus valores são distribuídos em categorias mutuamente exclusivas (Vieira, 2010).
+
+--
+&lt;br&gt;&lt;br&gt;
+
+Estas podem ser classificadas em dois tipos: 
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> 1 - Variável nominal
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> 2 - Variável ordinal
+
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Variáveis Qualitativas (ou Categóricas)
+&lt;br&gt;
+
+#### Variável Nominal
+
+A variável é nominal quando seus valores se distribuem em categorias mutuamente exclusivas, indicadas em qualquer ordem (Vieira, 2010).
+
+--
+&lt;br&gt;&lt;br&gt;
+#### Variável Ordinal
+
+A variável é ordinal quando os dados são distribuídos em categorias mutuamente exclusivas que possuem ordem (Vieira, 2010).
+
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Variáveis Quantitativas (ou Numéricas)
+
+Uma variável quantitativa (ou numérica) é expressa por números que têm significado em uma escala numérica (Vieira, 2010).
+
+--
+&lt;br&gt;&lt;br&gt;
+Estas podem ser classificadas em dois tipos: 
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> 1 - Variável discreta
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> 2 - Variável contínua
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Variáveis Quantitativas (ou Contínuas)
+&lt;br&gt;
+
+#### Variável Discreta
+
+A variável é discreta quando só pode assumir alguns valores em um dado intervalo (Vieira, 2010).
+
+--
+&lt;br&gt;&lt;br&gt;
+#### Variável Contínua
+
+A variável é contínua quando pode assumir qualquer valor em um dado intervalo (Vieira, 2010).
+
+---
+
+## Terminologias e conceitos básicos
+&lt;br&gt;
+
+### Vamos praticar...
+
+1 - Dada a tabela abaixo preencha a coluna "Tipo":
+
+.left-column[
+
+<div id="htmlwidget-790553f40fe485822ac2" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-790553f40fe485822ac2">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Nº de Rebrotos","Peso de fruto","Altura da árvore","Volume de madeira","Grau de iluminação de copas","Forma de copas","Qualidade de fuste"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"name":"Variável","targets":0},{"name":"Tipo","targets":1},{"name":"Subtipo","targets":2}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+--
+
+.right-column[
+
+<div id="htmlwidget-053370136c9fe88205ec" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-053370136c9fe88205ec">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[],"date":[]},"data":[["Biomassa","Mês de observação","Diâmetro do coleto","Nome botânico","Tipos de frutos (Qto à deiscência)","Diâmetro da árvore","Nº de sementes germinadas"],[null,null,null,null,null,null,null],[null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Variável<\/th>\n      <th>Tipo<\/th>\n      <th>Subtipo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"name":"Variável","targets":0},{"name":"Tipo","targets":1},{"name":"Subtipo","targets":2}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 2 &lt;br&gt; Medidas de tendência central (ou posição)**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão&lt;/div&gt;
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Conceito
+
+São medidas que objetivam representar o ponto central (ou de equilíbrio) de uma distribuição de dados.
+
+--
+&lt;br&gt;
+### Principais medidas de posição
+&lt;img src="fig/class2/MTC.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Conceito
+
+É o valor que aparece mais frequentemente em um conjunto de dados.
+
+--
+&lt;br&gt;&lt;br&gt;
+
+Qual a moda para a série de dados abaixo?
+
+**{1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+
+--
+&lt;br&gt;&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Como determinar a moda de um conjunto de dados?**
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Como determinar?
+
+.left-column[
+- Calcular a frequência de cada valor.
+- A moda é o valor mais frequente.
+&lt;br&gt;&lt;br&gt;
+
+.center[**{1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**]
+
+]
+
+--
+
+.right-column[
+<div id="htmlwidget-ad377abf0fc7ce04a8a1" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-ad377abf0fc7ce04a8a1">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0],"date":[]},"data":[[0,1,2,3,4,5,6,8],[null,null,null,null,null,null,null,null]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Valor<\/th>\n      <th>Frequência<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":0},{"name":"Valor","targets":0},{"name":"Frequência","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Usando a linguagem R
+&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **A linguagem R não possui uma função nativa para calcular a moda.**
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Mas, pode-se usar a função** `table()` **para gerar uma tabela de frequências absolutas. Assim, a moda pode ser facilmente identificada.**
+
+
+``` r
+# Cria um vetor
+x &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+
+# Usar a função "table"
+table(x)
+## x
+## 0 1 2 3 4 5 6 8 
+## 3 3 4 1 1 1 1 1
+```
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Usando a linguagem R
+
+.left-column[
+- A função `table()`: gera uma tabela de frequências simples. 
+- Mas, pode-se criar uma função para retornar o valor modal.
+]
+
+.right-column[
+
+``` r
+# Cria um vetor
+x &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+
+# Uma função para obter a moda
+mod &lt;- function(v) {
+   uniq &lt;- unique(v)
+   uniq[which.max(tabulate(match(v, uniq)))]
+}
+
+# Aplicando a função "mod" ao vetor "x"
+mod(x)
+## [1] 2
+```
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Usando a linguagem R
+
+.left-column[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Podem existir séries de dados em que nenhum valor aparece mais vezes que outros. Nestes casos, diz-se que o conjunto de dados **não possui moda** ou é **amodal**.
+
+&lt;br&gt;
+
+Qual a moda para a série de dados abaixo?
+
+.center[**{1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1,2}**]
+]
+
+.right-column[
+
+
+``` r
+# Cria um vetor
+y &lt;- c(1, 8, 6, 5, 4, 3, 0, 3, 0, 4, 5, 6, 8, 2, 1, 2)
+
+# Usar a função "table"
+table(y)
+## y
+## 0 1 2 3 4 5 6 8 
+## 2 2 2 2 2 2 2 2
+```
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Variáveis qualitativas
+
+.left-column[
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A moda pode ser determinada para variáveis qualitativas, ao contrário da média e mediana, por exemplo.
+
+Seja o vetor de nomes de espécies de árvores:
+
+**{Marupa, Angelim, Tauari, Marupa, 
+  Angelim, Tauari, Marupa, Angelim,
+  Angelim, Angelim, Cedro, Cedro, 
+  Cedro, Tauari, Tauari, Marupa}**
+
+]
+
+.right-column[
+
+``` r
+# Cria um vetor
+esp &lt;- c(
+  "Marupa", "Angelim", "Tauari", "Marupa", 
+  "Angelim", "Tauari", "Marupa", "Angelim",
+  "Angelim", "Angelim", "Cedro", "Cedro", 
+  "Cedro", "Tauari", "Tauari", "Marupa")
+
+# Usar a função "table"
+table(esp)
+## esp
+## Angelim   Cedro  Marupa  Tauari 
+##       5       3       4       4
+```
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Classificação
+
+Um conjunto de dados pode ser classificado em função da ocorrência (ou não) de **Moda**:
+
+&lt;br&gt;
+
+&lt;img src="fig/class2/Mo.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Classificação
+
+- **Amodal**: Conjunto de dados que **não apresenta moda**. Isto é, nenhum dos valores contidos no conjunto predomina sobre os demais.
+
+--
+&lt;br&gt;&lt;br&gt;
+- **Unimodal**: Conjunto de dados que **apresenta uma única moda**. Isto é, apenas um dos elementos do conjunto de dados predomina sobre os demais.
+
+--
+&lt;br&gt;&lt;br&gt;
+- **Bimodal**: Conjunto de dados que **apresenta duas modas**. Isto é, dois dos valores contidos no conjunto de dados predominam sobre os demais;
+
+--
+&lt;br&gt;&lt;br&gt;
+- **Multimodal**: Conjunto de dados que **apresenta mais de duas modas**. Isto é, mais de dois dos elementos do conjunto de dados predominam sobre os demais.
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) - Vamos praticar...
+
+.left-column[
+Série I: {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 0}
+
+Série II: {1,1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}
+
+Série III: {1, 6, 8, 6, 5, 4, 3, 0, 3, 3, 0, 4, 4, 5, 6, 8, 2, 1, 1}
+
+Série IV: {1, 6, 8, 8, 8, 6, 5, 5, 5, 4, 3, 0, 3, 3, 0, 4}
+
+]
+
+--
+
+.right-column[
+
+``` r
+# Criar os vetores
+S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 0)
+S2 &lt;- c(1,1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+S3 &lt;- c(1,6, 8, 6, 5, 4, 3, 0, 3, 3, 0, 4, 4, 5, 6, 8, 2, 1,1)
+
+table(S1)
+## S1
+## 0 1 2 3 4 5 6 8 
+## 3 3 3 1 1 1 1 1
+table(S2)
+## S2
+## 0 1 2 3 4 5 6 8 
+## 3 4 4 1 1 1 1 1
+table(S3)
+## S3
+## 0 1 2 3 4 5 6 8 
+## 2 3 1 3 3 2 3 2
+```
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Moda (Mo) 
+&lt;br&gt;
+
+#### Vantagens
+
+- Fácil de ser calculada;
+- É a única medida de tendência central que pode ser usada para variáveis qualitativas;e
+- Não é influenciada por valores extremos (*outliers*).
+
+#### Limitações
+
+- Pode não ser representativa; e
+- Pode mudar se inserirmos novas observações.
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Conceito (Fávero et al., 2009)
+
+&lt;br&gt;
+
+É o valor que ocupa a posição central de uma série de dados ordenados de forma crescente. Ou seja, em que 50% dos elementos devem estar abaixo da mediana e 50% devem estar acima da mediana.
+
+--
+&lt;br&gt;&lt;br&gt;
+
+**É o valor que divide a série de dados ordenados em duas partes iguais.**
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Como determinar?
+&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A determinação da Mediana (Md) requer encontrar o(s) elemento(s) que divide(m) os dados ordenados em duas partes iguais.
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Em geral, existem duas fórmulas para encontrar esse(s) elemento(s). 
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O uso de cada uma é função do número de observações no conjunto de dados.
+
+--
+
+.left-column[
+
+- **Número ímpar de observações**
+
+$$
+\Large
+E = \frac{n + 1}{2}
+$$
+]
+
+.right-column[
+
+- **Número par de observações**
+
+$$
+\Large
+E = \frac{\left [ \frac{n}{2} + \left ( \frac{n}{2} + 1 \right ) \right ]}{2}
+$$
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Número ímpar de observações
+
+.left-column[
+Seja a série de dados S1:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+&lt;br&gt;&lt;br&gt;
+
+**Qual a mediana (Md)?**
+
+]
+
+.right-column[
+**Procedimentos:**
+
+**Passo 1**: Ordenar o conjunto de dados:
+
+.green[S1 = {0, 0, 0,1, 1, 1, 2, 2, 2, 2, 3, 4, 5, 6, 8}]
+
+**Passo 2**: Encontrar o elemento central (E):
+
+$$
+\normalsize
+E = \frac{n + 1}{2} = \frac{15 + 1}{2} = 8
+$$
+**Interpretação**: O 8º elemento da série ordenada de dados é a mediana. `\(Md = 2\)`
+
+.green[S1 = {0, 0, 0, 1, 1, 1, 2, .red[2], 2, 2, 3, 4, 5, 6, 8}]
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Número par de observações
+
+.left-column[
+Seja a série de dados S2:
+
+**S2 = {1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0}**
+&lt;br&gt;&lt;br&gt;
+
+**Qual a mediana (Md)?**
+
+]
+
+.right-column[
+**Procedimentos:**
+
+**Passo 1**: Ordenar o conjunto de dados:
+
+.green[S2 = {0, 0, 0, 1, 1, 1, 2, 3, 4, 5, 6, 8}]
+
+**Passo 2**: Encontrar o elemento central (E):
+
+$$
+\small
+E = \frac{\left [ \frac{n}{2} + \left ( \frac{n}{2} + 1 \right ) \right ]}{2} = \frac{\left [ \frac{12}{2} + \left ( \frac{12}{2} + 1 \right ) \right ]}{2} = \frac{\left (6 + 7 \right )}{2}=6,5
+$$
+**Interpretação**: A mediana é a média aritmética entre o 6º e 7º elementos da série ordenada. `\(Md = 1,5\)`
+
+.green[S2 = {0, 0, 0, 1, 1, .red[1, 2], 3, 4, 5, 6, 8}]
+
+]
+
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Usando a linguagem R
+
+.left-column[
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O R-base possui uma função para calcular a mediana: `median()`.
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Esta função pertence ao pacote "stats".
+&lt;br&gt;&lt;br&gt;
+
+Então, sejam as series:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**
+
+**S2 = {1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0}**
+
+]
+
+.right-column[
+
+
+``` r
+# Criar os vetores
+S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+S2 &lt;- c(1, 3, 0, 0, 2, 4, 1, 5, 6, 8, 1, 0)
+
+# Calcula a mediana
+median(S1)
+## [1] 2
+median(S2)
+## [1] 1.5
+```
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Mediana (Md) - Propriedades
+&lt;br&gt;
+- **Estável**: Não sofre influência de valores discrepantes (*outliers*). Devido a isso, quando a distribuição amostral é assimétrica, a utilização da mediana torna-se mais interessante.
+
+--
+&lt;br&gt;&lt;br&gt;
+- **Número par de observações**: Nestes casos, a mediana será sempre a média aritmética dos dois elementos centrais dos dados ordenados;
+
+--
+&lt;br&gt;&lt;br&gt;
+- **Número ímpar de observações**: Nestes casos, haverá coincidência da mediana com um dos elementos dos dados ordenados.
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Média Aritmética - Conceito
+&lt;br&gt;
+
+**Matemático**: É a razão entre a soma de todos os valores assumidos pela variável e o número de observações.
+
+É a medida de tendência central mais comum, intensa e extensivamente utilizada (Ferreira, 2009).
+
+--
+&lt;br&gt;&lt;br&gt;
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A média amostral é representada por `\(\Large\bar{x}\)` (lê-se "X-barra").
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A média populacional é representada por `\(\Large\mu\)` (lê-se "mi").
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Média Aritmética - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de média aritmética (amostral e populacional) são: 
+
+&lt;br&gt; &lt;br&gt;
+
+.left-column[
+
+- **Média aritmética amostral**
+$$
+\Large
+\bar{x} = \frac{x_1 + x_2 +...+x_n}{n}
+$$
+]
+
+.right-column[
+
+- **Média aritmética populacional**
+$$
+\Large
+\mu = \frac{x_1 + x_2 +...+x_N}{N}
+$$
+]
+
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Média Aritmética - Expressão matemática
+
+Uma forma simplificada da expressão matemática é:
+
+.left-column[
+- **Média aritmética amostral**
+$$
+\Large
+\bar{x} = \frac{1}{n}\sum_{i=1}^{n}x_i
+$$
+- **Média aritmética populacional**
+$$
+\Large
+\mu = \frac{1}{N}\sum_{i=1}^{N}X_i
+$$
+]
+
+
+.right-column[
+Em que:
+
+`\(\sum\)` (lê-se sigma) = Símbolo de somatório.
+
+`\(i\)` = índice de variação dos elementos que deverão ser somados.
+
+`\(N\)` = Número total de elementos da população.
+
+`\(n\)` = Número total de elementos da amostra.
+
+`\(x\)` = Variável quantitativa objeto de estudo.
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Vamos praticar...
+
+.left-column[
+<div id="htmlwidget-0426a21771e311c02df1" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0426a21771e311c02df1">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+.right-column[
+**Questão proposta**
+
+Suponha que foram medidas 10 árvores em um povoamento de *Tectona grandis*, cujos dados estão abaixo. Assim, pede-se:
+
+a) Determinar a mediana e a média aritmética para as variáveis contínuas.
+
+b) Determinar a moda para a variável qualidade de fuste.
+
+Obs.: Faça os cálculos manuais e usando a linguagem R.
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Vamos praticar...
+
+.left-column[
+<div id="htmlwidget-0c97d55ddd924c9bf7c0" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-0c97d55ddd924c9bf7c0">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+.right-column[
+**Cálculos manuais - Mediana**
+
+$$
+\small
+\small
+E = \frac{\left [ \frac{10}{2} + \left ( \frac{10}{2} + 1 \right ) \right ]}{2} = \frac{\left (5 + 6 \right )}{2}=5,5
+$$
+
+- Ordenar os vetores
+.font65[
+D = {8.50, 11.27, 13.11, 13.24, .green[14.36, 14.87], 14.93, 15.47, 16.07, 17.89}
+
+H = {13.0, 15.2, 16.2, 17.0, .green[17.0, 17.3], 17.5, 18.0, 18.0, 18.4} 
+
+V = {0.0659, 0.1256, 0.1634, 0.1734, .green[0.1967, 0.2298], 0.2345, 0.2346, 0.2445, 0.2956}
+
+]
+- Mediana?
+
+`\(Md_D\)` = **14.615**; `\(Md_H\)` = **17.15**; `\(Md_V\)` = **0.21325**
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Vamos praticar...
+
+.left-column[
+<div id="htmlwidget-5d021cb1bfbf1b3978db" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5d021cb1bfbf1b3978db">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+.right-column[
+**Cálculos manuais - Média Aritmética**
+
+$$
+\normalsize
+\bar{D} = \frac{139,71}{10} = 13,971~cm
+$$
+
+$$
+\normalsize
+\bar{H} = \frac{167,60}{10} = 16,760~m
+$$
+
+$$
+\normalsize
+\bar{V} = \frac{1,964}{10} = 0,1964~m³
+$$
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Vamos praticar...
+
+.left-column[
+<div id="htmlwidget-497877350c1c01f1433a" style="width:450px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-497877350c1c01f1433a">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3],"date":[]},"data":[["I","II","III","III","I","II","I","III","II","I"],[17.5,16.2,15.2,18,17,18.4,13,18,17,17.3],[16.07,13.24,17.89,13.11,14.36,11.27,8.5,14.87,14.93,15.47],[0.2445,0.1634,0.2956,0.1734,0.1967,0.1256,0.0659,0.2345,0.2346,0.2298]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>QF<\/th>\n      <th>H<\/th>\n      <th>D<\/th>\n      <th>V<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3]},{"name":"QF","targets":0},{"name":"H","targets":1},{"name":"D","targets":2},{"name":"V","targets":3}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+```
+## 
+##   I  II III 
+##   4   3   3
+```
+
+]
+
+.right-column[
+**Cálculos manuais - Moda**
+
+- Calcular a ocorrência de cada categoria:
+
+I = **4** (Mais frequente)
+
+II = 3
+
+III = 3
+
+
+]
+
+---
+
+## Medidas de tendência central (ou posição)
+&lt;br&gt;
+
+### Usando a linguagem R
+
+.left-column[
+- **Mediana**
+
+``` r
+median(df$D)
+## [1] 14.615
+median(df$H)
+## [1] 17.15
+median(df$V)
+## [1] 0.21325
+```
+
+- **Moda**
+
+``` r
+table(df$QF)
+## 
+##   I  II III 
+##   4   3   3
+```
+
+]
+
+.right-column[
+- **Média Aritmética**
+
+``` r
+mean(df$D)
+## [1] 13.971
+mean(df$H)
+## [1] 16.76
+mean(df$V)
+## [1] 0.1964
+```
+]
+
+---
+## Referências
+&lt;br&gt;&lt;br&gt;
+
+&lt;p&gt;&lt;cite&gt;Fávero, L., P. Belfiore, F. Silva, et al.
+(2009).
+&lt;em&gt;Análise de dados: modelagem multivariada para tomada de decisões&lt;/em&gt;.
+Rio de Janeiro: Elsevier.
+646 pp.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;cite&gt;Ferreira, D.
+(2009).
+&lt;em&gt;Estatística básica&lt;/em&gt;.
+2nd ed.
+Minas Gerais: Lavras: Ed. UFLA.
+664 pp.&lt;/cite&gt;&lt;/p&gt;
+
+&lt;!--Slide XX --&gt;
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+**Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt;
+
+**Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "highlightLanguage": ["r", "css", "yaml"],
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

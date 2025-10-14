@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Experimentação Florestal (FL03034 - EF)</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Prof. Dr. Deivison Venicio Souza" />
+    <script src="03-AED-Parte2_files/header-attrs-2.29/header-attrs.js"></script>
+    <link href="03-AED-Parte2_files/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/fabric-4.3.1/fabric.min.js"></script>
+    <link href="03-AED-Parte2_files/xaringanExtra-scribble-0.0.1/scribble.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/xaringanExtra-scribble-0.0.1/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="03-AED-Parte2_files/clipboard-2.0.6/clipboard.min.js"></script>
+    <link href="03-AED-Parte2_files/shareon-1.4.1/shareon.min.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/shareon-1.4.1/shareon.min.js"></script>
+    <link href="03-AED-Parte2_files/xaringanExtra-shareagain-0.2.6/shareagain.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/xaringanExtra-shareagain-0.2.6/shareagain.js"></script>
+    <script src="03-AED-Parte2_files/xaringanExtra-progressBar-0.0.1/progress-bar.js"></script>
+    <link href="03-AED-Parte2_files/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"x1d058c6d1eb430bbdf9f262ae00cbdd","expires":1}</script>
+    <script src="03-AED-Parte2_files/himalaya-1.1.0/himalaya.js"></script>
+    <script src="03-AED-Parte2_files/js-cookie-3.0.0/js.cookie.js"></script>
+    <link href="03-AED-Parte2_files/editable-0.2.6/editable.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/editable-0.2.6/editable.js"></script>
+    <link href="03-AED-Parte2_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/xaringanExtra-clipboard-0.2.6/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="03-AED-Parte2_files/font-awesome-animation-1.0/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/fontawesome-5.0.13/js/fontawesome-all.min.js"></script>
+    <script src="03-AED-Parte2_files/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+    <link href="03-AED-Parte2_files/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/datatables-binding-0.33/datatables.js"></script>
+    <script src="03-AED-Parte2_files/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+    <link href="03-AED-Parte2_files/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <link href="03-AED-Parte2_files/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+    <link href="03-AED-Parte2_files/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+    <script src="03-AED-Parte2_files/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        TeX: { equationNumbers: { autoNumber: "AMS" } },
+      });
+    </script>
+    <style>
+    .mjx-mrow a {
+      color: black;
+      pointer-events: none;
+      cursor: default;
+    }
+    </style>
+    <link rel="stylesheet" href="assets/sydney-fonts.css" type="text/css" />
+    <link rel="stylesheet" href="assets/slide-title/sydney-title.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+class: title-slide, center, middle
+background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
+background-position: 90% 90%, 10% 90%
+background-size: 150px, 150px, cover
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.with-logo::before {
+	content: '';
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	bottom: 1.3em;
+	right: -0.5em;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.logo-ufpa::before {
+	background-image: url(fig/slide-title/ufpa.png);
+}
+&lt;/style&gt;
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 130px;
+height: 130px;
+z-index: 0;
+background-image: url(fig/slide-title/LMFTCA.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:.5em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div><style>.xe__progress-bar__container {
+  top:0;
+  opacity: 1;
+  position:absolute;
+  right:0;
+  left: 0;
+}
+.xe__progress-bar {
+  height: 0.25em;
+  background-color: red;
+  width: calc(var(--slide-current) / var(--slide-total) * 100%);
+}
+.remark-visible .xe__progress-bar {
+  animation: xe__progress-bar__wipe 200ms forwards;
+  animation-timing-function: cubic-bezier(.86,0,.07,1);
+}
+@keyframes xe__progress-bar__wipe {
+  0% { width: calc(var(--slide-previous) / var(--slide-total) * 100%); }
+  100% { width: calc(var(--slide-current) / var(--slide-total) * 100%); }
+}</style>
+
+
+
+
+
+&lt;!-- title-slide --&gt;
+# .font120[Experimentação Florestal &lt;br&gt; (FL03034 - EF)]
+
+## <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> Análise Exploratória <span>&lt;i class="fab  fa-pagelines faa-horizontal animated " style=" color:green;"&gt;&lt;/i&gt;</span> &lt;br&gt; de Dados
+###### Conceito, Importância e Tipos
+
+##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
+##### ᨒ
+##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+##### Universidade Federal do Pará (UFPA)
+##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
+##### E-mail: deivisonvs@ufpa.br
+&lt;br&gt;
+##### 1ª versão: 18/agosto/2021 &lt;br&gt; (Atualizado em: 14/outubro/2025) &lt;br&gt; Altamira, Pará
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão&lt;/div&gt;
+
+---
+
+## Ementa da disciplina (FL03034 - EF)
+
+.shadow3[
+&lt;br&gt;
+1 - Introdução à experimentação; 
+
+**2 - Análise exploratória de dados;**
+
+3 - Delineamento inteiramente casualizado - DIC; 
+
+4 - Delineamento em blocos ao acaso - DBC;
+
+5 - Delineamento em quadrado latino - DQL;
+
+6 - Testes de comparação de médias; 
+
+7 - Experimentos em esquema fatorial;
+
+8 - Análise de correlação e regressão linear; e
+
+9 - Análise de experimentos com linguagem R.
+
+]
+
+---
+
+## Objetivos
+&lt;br&gt;&lt;br&gt;
+Ao final desta aula espera-se que o discente seja capaz de...
+
+* Recordar terminologias e conceitos básicos de estatística descritiva;
+* Recordar e calcular as principais medidas de tendência central (ou posição); e
+* Recordar e calcular as principais medidas de dispersão (ou variabilidade).
+
+---
+
+## Conteúdo
+
+.pull-left-4[
+**Parte 1 - Terminologias e conceitos básicos**
+
+[1 - O que é estatística?](#Est)
+
+[2 - Estatística descritiva e Estatística inferêncial](#DI)
+
+[3 - População e Amostra](#PA)
+
+[4 - Variável e Parâmetro](#VP)
+
+[5 - Tipos de Variáveis](#TV)
+]
+
+.pull-right-2[
+.pull-down[
+**Parte 2 - Medidas de tendência central (ou posição)**
+
+[1 - Conceito e importância](#CI)
+
+[2 - Moda](#Mo)
+
+[3 - Mediana](#Md)
+
+[4 - Média Aritmética](#Me)
+]
+]
+
+---
+## Conteúdo
+
+**Parte 3 - Medidas de dispersão (ou variabilidade)**
+
+[1 - Conceito e importância](#ci)
+
+[2 - Amplitude Total](#AT)
+
+[4 - Variância](#Var)
+
+[5 - Desvio Padrão](#Dp)
+
+[6 - Coeficiente de Variação](#CV)
+
+&lt;!-- Slide XX --&gt;
+---
+layout: false
+name: conc
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font200[**Parte 3 &lt;br&gt; Medidas de dispersão (ou variação)**]
+
+.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+
+---
+layout: true
+&lt;div class="my-header"&gt;&lt;/div&gt;
+&lt;div class="my-footer"&gt;&lt;span&gt;Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;&amp;emsp;Experimentação Florestal (FL03034 - EF) - Análise Exploratória de Dados: uma breve revisão&lt;/div&gt;
+
+---
+
+name: ci
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Conceito
+
+É o espalhamento (dispersão) dos dados em torno de uma medida de tendência central.
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A média aritmética é a medida de tendência central comumente usada.
+
+--
+&lt;br&gt;
+### Principais medidas de dispersão
+&lt;img src="fig/class2/MD.png" width="60%" style="display: block; margin: auto;" /&gt;
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### O que é dispersão?
+
+Imagine que foram realizadas duas amostras de cinco árvores. De cada árvore mediu-se a altura comercial, em metros:
+
+.pull-left-5[
+<div id="htmlwidget-4f0e9f53dc74a19e268e" style="width:200px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4f0e9f53dc74a19e268e">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[0,1],"date":[]},"data":[[13,14,16,19,18],[16,16,16,16,16]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>A1<\/th>\n      <th>A2<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[0,1]},{"name":"A1","targets":0},{"name":"A2","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+]
+
+.pull-right-5[
+
+``` r
+colMeans(df)
+## A1 A2 
+## 16 16
+```
+- A média aritmética das alturas de ambas as amostras é 16m.
+- Na A1 as alturas variaram entre 13 e 19m. (**Existe dispersão**)
+- Na A2 as árvores possuem mesma altura (16m). (**Não existe dispersão**)
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Por que medir a variância (ou dispersão) dos dados?
+
+.pull-left-5[
+<div id="htmlwidget-6e3e601844d1cf2fcc15" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6e3e601844d1cf2fcc15">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-right-5[
+Um experimento foi conduzido para avaliar o efeito de dois tipos de substratos (Solo Arenoso + Matéria Orgânica - SA+MO e Solo Arenoso-SA) no crescimento em altura de uma espécie florestal. As alturas das plântulas, em cm, foram medidas após 30 dias de germinação.
+
+- **Pergunta**: Em função do crescimento em altura pergunta-se: Qual o melhor substrato para a produção de mudas da espécie?
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> **Importante**: O tipo de substrato indicado será usado para produção de mudas em larga escala.
+
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Por que medir a variância (ou dispersão) dos dados?
+
+- Em geral, a média aritmética é a primeira estimativa da amostra calculada:
+
+.pull-left-4[
+
+``` r
+df %&gt;%
+  group_by(Tratamento) %&gt;% 
+  summarise(media=mean(Altura))
+## # A tibble: 2 × 2
+##   Tratamento media
+##   &lt;chr&gt;      &lt;dbl&gt;
+## 1 SA          20.5
+## 2 SA+MO       19.8
+```
+
+.font65[
+- Em termos médios, parece não haver efeito significativo dos tratamentos.
+- Avaliar a variância ajuda a "enxergar" o problema melhor.
+- Para qual substrato o crescimento em altura foi mais uniforme?
+]
+]
+
+.pull-right-4[
+&lt;img src="03-AED-Parte2_files/figure-html/unnamed-chunk-7-1.png" width="68%" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Por que medir a variância (ou dispersão) dos dados?
+
+- **Gráfico Dot Plot**: Ajuda a visualizar como a altura das plântulas variou para cada tratamento:
+
+.pull-left-4[
+&lt;img src="03-AED-Parte2_files/figure-html/unnamed-chunk-8-1.png" width="68%" style="display: block; margin: auto;" /&gt;
+]
+
+.pull-right-4[
+**Interpretação - Variância**
+- O efeito do tratamento com SA+MO no crescimento foi mais uniforme (&lt; variância).
+- O efeito do tratamento com SA no crescimento foi mais heterogêneo (&gt; variância).
+- Portanto, "olhar" apenas para média pode conduzir à indicação equivocada do melhor tratamento.
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Amplitude Total (AT)
+&lt;br&gt;
+
+É a medida mais simples de variabilidade.
+
+É determinada pela diferença entre o maior e menor valor do conjunto de dados (Fávero et al., 2009).
+&lt;br&gt;&lt;br&gt;
+
+.center[**AT = Valor Máximo - Valor Mínimo**]
+
+--
+
+.pull-left-4[
+Seja a série:
+
+**S1 = {1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0}**. 
+
+- Qual a amplitude total dos dados?
+
+**AT = 8 - 0 = 8**
+]
+
+--
+
+.pull-right-4[
+
+``` r
+S1 &lt;- c(1, 3, 0, 0, 2, 4, 1, 2, 5, 6, 8, 1, 2, 2, 0)
+max(S1) - min(S1)
+## [1] 8
+```
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Amplitude Total (AT) - Limitações e Vantagens
+&lt;br&gt;
+
+.pull-left-4[
+**Limitações**
+- Apenas indica a existência (ou não) de dispersão;
+- Usa apenas os valores extremos dos dados;
+- É influenciada por valores extremos (*outliers*);
+- É uma medida "pobre", pois não mede a dispersão interna. 
+
+]
+
+.pull-right-4[
+**Vantagens**
+- Matemática: Cálculo simples.
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Medidas de dipersão em relação à média aritmética
+&lt;br&gt;
+
+A amplitude total é, em geral, um estimador **enviesado** e **ineficiente** da amplitude populacional. Isto porque, é pouco provável que uma amostra contenha os valores mínimos e máximos da população (Ferreira, 2009).
+&lt;br&gt;&lt;br&gt;
+
+--
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> As **limitações**, o **viés** e a **ineficiência** do estimador de amplitude total, despertaram para a necessidade de **novos 
+estimadores de dispersão**.
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> Assim, surgiram estimadores que estimam a dispersão dos dados tomando por referência uma medida de centralidade da distribuição.
+
+Medidas de dipersão em relação à média aritmética: 
+.green[desvio padrão, variância e coeficiente de variação].
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Variância - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de variância (amostral e populacional) são:
+&lt;br&gt;
+
+--
+
+.left-column[
+
+- **Variância amostral**
+$$
+\normalsize
+S^2 = \frac{1}{n-1}\sum_{i=1}^{n}\left (x_i - \bar{x}  \right )^2
+$$
+$$
+\normalsize
+S^2 = \frac{SQR}{n-1}
+$$
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A variância amostral é representada por **s²**. 
+(lê-se: "S-Quadrado")
+
+]
+
+--
+
+.right-column[
+
+- **Variância populacional**
+$$
+\normalsize
+\sigma^2 = \frac{1}{N}\sum_{i=1}^{N}\left (X_i - \mu  \right )^2
+$$
+&lt;br&gt;
+
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> A variância populacional é representada por **σ²**. 
+(lê-se: "Sigma-Quadrado")
+
+.font65[
+**n - 1** = Grau de liberdade (penalizar a variância por tratar-se de amostra)
+
+(**É razoável admitir que a variância amostral é maior do que a populacional!**)
+]
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Variância - Uma abordagem sem fórmulas
+
+.pull-left-5[
+<div id="htmlwidget-b4cb218dc51af5f03b5e" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-b4cb218dc51af5f03b5e">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-right-5[
+
+<div id="htmlwidget-3ec40259b3e569ca7755" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3ec40259b3e569ca7755">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","Total"],[19.21,19.83,20.14,20.81,19.25,null],[19.848,19.848,19.848,19.848,19.848,null],[-0.638,-0.018,0.292,0.962,-0.598,-0],[0.407044,0.000324,0.08526399999999999,0.9254439999999999,0.357604,1.7757]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1},{"name":"Media","targets":2},{"name":"xi-media","targets":3},{"name":"(xi-media)²","targets":4}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+SQR = **1,7757** (Variação total)
+
+S² = SQR/n-1 = 1,7757/(5-1) = **0,4439m²** (Variação média)
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Variância - Uma abordagem sem fórmulas
+
+.pull-left-5[
+<div id="htmlwidget-02a7895ca3d0d37c142c" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-02a7895ca3d0d37c142c">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-right-5[
+
+<div id="htmlwidget-136e3469317fc171d96a" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-136e3469317fc171d96a">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1,2,3,4],"date":[]},"data":[["SA","SA","SA","SA","SA","Total"],[28.23,29.67,15.34,16.23,12.89,null],[20.472,20.472,20.472,20.472,20.472,null],[7.758,9.198,-5.132,-4.242,-7.582,0],[60.186564,84.60320400000001,26.337424,17.994564,57.486724,246.6085]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n      <th>Media<\/th>\n      <th>xi-media<\/th>\n      <th>(xi-media)²<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":[1,2,3,4]},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1},{"name":"Media","targets":2},{"name":"xi-media","targets":3},{"name":"(xi-media)²","targets":4}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+
+SQR = **246,6085** (Variação total)
+
+S² = SQR/n-1 = 246,6085/(5-1) = **61,6521m²** (Variação média)
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Variância - Usando a linguagem R
+
+.pull-left-5[
+<div id="htmlwidget-48b6cfed0c9ae402889d" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-48b6cfed0c9ae402889d">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-right-5[
+
+``` r
+df %&gt;%
+  group_by(Tratamento) %&gt;% 
+  summarise(Variancia=var(Altura)) %&gt;%
+  as.data.frame()
+##   Tratamento Variancia
+## 1         SA  61.65212
+## 2      SA+MO   0.44392
+```
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Desvio Padrão - Conceito
+
+Estima a dispersão dos dados em relação à média. Porém, o seu valor é dado na mesma unidade de medida da variável original.
+&lt;br&gt;&lt;br&gt;
+
+**Matemática**: É a raiz quadrada da variância (amostral ou populacional).
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Desvio Padrão - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de desvio padrão (amostral e populacional) são:
+&lt;br&gt;
+
+--
+
+.pull-left-4[
+
+- **Desvio padrão amostral**
+$$
+\normalsize
+S = \sqrt{\frac{1}{n-1}\sum_{i=1}^{n}\left (x_i - \bar{x}  \right )^2}
+$$
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O desvio padrão amostral é representado por **s**.
+
+]
+
+--
+
+.pull-right-4[
+
+- **Desvio padrão populacional**
+$$
+\normalsize
+\sigma = \sqrt{\frac{1}{N}\sum_{i=1}^{N}\left (X_i - \mu  \right )^2}
+$$
+<span>&lt;i class="fas  fa-hand-point-right faa-horizontal animated "&gt;&lt;/i&gt;</span> O desvio padrão populacional é representado por **σ**. 
+(lê-se: "Sigma")
+
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Desvio Padrão - Manual e usando a linguagem R
+
+.pull-left-1[
+<div id="htmlwidget-1e38b282fb31d8d6b105" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1e38b282fb31d8d6b105">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-left-1[
+**Usando Linguagem R**
+
+``` r
+df %&gt;%
+  group_by(Tratamento) %&gt;% 
+  summarise(DP=sd(Altura)) %&gt;%
+  as.data.frame()
+##   Tratamento        DP
+## 1         SA 7.8518864
+## 2      SA+MO 0.6662732
+```
+
+]
+
+.pull-right-3[
+**Interpretação**
+- O desvio das alturas em SA foi maior (7.85m).
+- A desvio das alturas em SA+MO foi menor (0.67m).
+]
+
+.pull-left-1[
+**Cálculo Manual**
+$$
+s_{SA} = \sqrt{s^2} = \sqrt{61.65212} = 7.85m
+$$
+
+$$
+s_{SA+MO} = \sqrt{s^2} = \sqrt{0.44392} = 0.67m
+$$
+]
+
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Coeficiente de Variação - Conceito
+&lt;br&gt;
+
+É uma medida calculada pela razão entre o desvio padrão e a média aritmética. Portanto, é uma medida de dispersão relativa, e expressa em porcentagem.
+&lt;br&gt;&lt;br&gt;
+
+É útil para comparar a dispersão entre grupos para diferentes unidades de medidas (por exemplo, Altura e Diâmetro).
+
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Coeficiente de Variação - Expressão matemática do estimador
+
+As expressões matemáticas para os estimadores de coeficiente de variação (amostral e populacional) são:
+&lt;br&gt;
+
+--
+
+.pull-left-4[
+
+- **Coeficiente de variação amostral**
+$$
+\normalsize
+CV(\%) = \left ( \frac{S}{\bar{x}} \right ).100
+$$
+]
+
+--
+
+.pull-right-4[
+
+- **Coeficiente de variação populacional**
+$$
+\normalsize
+CV(\%) = \left ( \frac{\sigma}{\mu} \right ).100
+$$
+]
+
+---
+
+## Medidas de dispersão (ou variação)
+&lt;br&gt;
+
+### Coeficiente de Variação - Manual e usando a linguagem R
+
+.pull-left-1[
+<div id="htmlwidget-040bca30c97017fecd7a" style="width:250px;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-040bca30c97017fecd7a">{"x":{"filter":"none","vertical":false,"caption":"<caption><\/caption>","editable":{"target":"cell","disable":{"columns":null},"numeric":[1],"date":[]},"data":[["SA+MO","SA+MO","SA+MO","SA+MO","SA+MO","SA","SA","SA","SA","SA"],[19.21,19.83,20.14,20.81,19.25,28.23,29.67,15.34,16.23,12.89]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Tratamento<\/th>\n      <th>Altura<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":10,"dom":"tip","autoWidth":false,"initComplete":"function(settings, json) {\n$(this.api().table().container()).css({'font-size': '12pt'});\n}","columnDefs":[{"className":"dt-right","targets":1},{"name":"Tratamento","targets":0},{"name":"Altura","targets":1}],"order":[],"orderClasses":false}},"evals":["options.initComplete"],"jsHooks":[]}</script>
+]
+
+.pull-left-1[
+**Usando Linguagem R**
+
+``` r
+df %&gt;%
+  group_by(Tratamento) %&gt;% 
+  summarise(
+    CV=(sd(Altura)/mean(Altura))*100) %&gt;%
+  as.data.frame()
+##   Tratamento        CV
+## 1         SA 38.354271
+## 2      SA+MO  3.356878
+```
+
+]
+
+.pull-right-3[
+**Interpretação**
+- O CV das alturas em SA foi maior (38,35%).
+- A CV das alturas em SA+MO foi menor (3,36%).
+]
+
+.pull-left-1[
+**Cálculo Manual**
+$$
+CV_{SA} = 7,85/20,5 = 38,35\%
+$$
+
+$$
+CV_{SA+MO} = 0,67/19,8 = 3,36\%
+$$
+]
+
+
+---
+
+## Resumos das estatísticas
+&lt;br&gt;
+
+### Vamos resumir as estatísticas (Experimento)
+&lt;br&gt;
+
+Resumo das estimativas encontradas para os tratamentos: SA e SA+MO...
+&lt;br&gt;
+
+.pull-left-1[
+**Solo Arenoso**
+
+Média = 20,5m
+
+Variância = 61,6521m²
+
+Desvio Padrão = 7,85m
+
+Coeficiente de Variação = 38,35%
+]
+
+
+.pull-left-1[
+**Solo Arenoso + Matéria Orgânica**
+
+Média = 19,8m
+
+Variância = 0,4439m²
+
+Desvio Padrão = 0,67m
+
+Coeficiente de Variação = 3,36%
+]
+
+---
+
+## Resumo da aula de hoje...
+
+- O que é estatística? 
+- Terminologias e conceitos básicos
+- Medidas de tendência central (ou posição)
+  - Expressões matemáticas
+  - Cálculos manuais e usado linguagem R
+- Medidas de dispersão (ou variação)
+  - Expressões matemáticas
+  - Cálculos manuais e usado linguagem R
+
+&lt;br&gt;
+
+**Recomendação**: Recapitular sobre medidas de assimetria.
+
+---
+
+## Atividade 1
+&lt;br&gt;
+
+Classroom: Realizar uma análise exploratória.
+&lt;br&gt;&lt;br&gt;
+1) Faça os cálculos manuais.
+
+2) Faça um código em R.
+&lt;br&gt;&lt;br&gt;
+
+Obs.: O conjunto de dados e os detalhes da atividade serão esclarecidos no Classroom.
+
+
+---
+## Referências
+&lt;br&gt;&lt;br&gt;
+
+NULL
+
+&lt;!--Slide XX --&gt;
+---
+layout: false
+class: inverse, top, right
+background-image: url(fig/class1/imgC.jpg)
+background-size: cover
+
+.font300[
+Obrigado!
+]
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+**Email**: &lt;a href="mailto:deivisonvs@ufpa.br"&gt;deivisonvs@ufpa.br&lt;/a&gt;
+
+**Github**: &lt;a href="https://github.com/DeivisonSouza"&gt;@DeivisonSouza&lt;/a&gt;
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script src="assets/remark-zoom.js"></script>
+<script src="https://platform.twitter.com/widgets.js"></script>
+<script>var slideshow = remark.create({
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "countIncrementalSlides": false,
+  "highlightLanguage": ["r", "css", "yaml"],
+  "ratio": "16:9",
+  "navigation": {
+    "scroll": false
+  }
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
