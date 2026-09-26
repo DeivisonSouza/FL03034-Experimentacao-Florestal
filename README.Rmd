@@ -49,16 +49,19 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 }
 ```
 
-# Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
+# Seja bem-vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: 13/10/2025 a 25/10/2025 (Segunda-feira a sábado)
+:calendar: 30 (Setembro)
 
-:alarm_clock: **07h30min - 13h50min**
+:calendar: 2, 6, 7, 9, 13, 14, 16, 20, 21, 23 e 27 (Outubro)
+
+
+:alarm_clock: **13h30min - 18h50min**
 
 
 <div>
-  <img src="Slides/fig/slide-title/ufpa.png" width="150" align="middle" class="center">
-  <img src="Slides/fig/slide-title/LMFTCA.png" width="150" align="middle" class="center">
+  <img src="Slides/assets/logos/ufpa.png" width="100" align="middle" class="center">
+  <img src="Slides/assets/logos/LMFTCA_hor.png" width="300" align="middle" class="center">
 <div>
 
 <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0002-2975-0927" href="https://orcid.org/0000-0002-2975-0927" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0002-2975-0927</a></div>
@@ -66,6 +69,12 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 **Lattes**: [http://lattes.cnpq.br/9063094443073532](http://lattes.cnpq.br/9063094443073532)
 
 **Researchgate**: [https://www.researchgate.net/profile/Deivison-Souza](https://www.researchgate.net/profile/Deivison-Souza)
+
+**Siga o Instagram**: [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/) (Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas)
+
+**Site do LMFTCA**:
+[https://www.lmftca.com.br/](https://www.lmftca.com.br/)
+(Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas)
 
 ---------------------------------------------------
 
@@ -91,41 +100,18 @@ knitr::kable(
     Slide = list_github_files(repo=repo, "Slides/", "html"),
     Link = paste0("https://deivisonsouza.github.io/", repo, "/", Slide)
   ) %>% 
-    filter(!stringr::str_detect(Slide,                                    "_files/|_cache/|assets")
-                  ) %>%
-    mutate(Slide = stringr::str_remove(Slide, "Slides/")
-) %>%
-  mutate(
-    Temática = case_when(
-      str_detect(Slide, "Progr") ~ "Programação da Disciplina",
-      str_detect(Slide, "Introd") ~ "Introdução à Experimentação",
-      str_detect(Slide, "AED") ~ "Análise Exploratória de Dados",
-      str_detect(Slide, "DIC") ~ "Delineamento Inteiramente Casualizado",
-      str_detect(Slide, "DBC") ~ "Delineamento em Blocos Casualizado",
-      str_detect(Slide, "DQL") ~ "Delineamento em Quadrado Latino",
-      .default = "A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire)"
-    ), .after = Slide
-  )
+    dplyr::filter(!stringr::str_detect(Slide,
+                                       "_files/|_cache/|assets"))
 )
-  
 ```
-
-
 
 # Facilitador :deciduous_tree:
 <div>
-  <img src="Slides/fig/slide-title/Foto.jpeg" width="250" align="middle" class="center">
-  
-  <img src="Slides/fig/slide-title/Foto2.jpg" width="250" height="190" align="middle" class="center">
-  
-  <img src="Slides/fig/slide-title/Foto3.jpg" width="250" align="middle" class="center">
+  <img src="Slides/00-Programacao/fig/foto.jpg" width="150" align="middle" class="center">
 <div>
 
 <br>
 
 <div align="justify">
-Graduado em :deciduous_tree:**Engenharia Florestal** (ano 2008) e Mestrado em Ciências Florestais (ano 2011) pela Universidade Federal Rural da Amazônia (UFRA) e Doutorado em Engenharia Florestal pela Universidade Federal do Paraná - UFPR (ano 2020). Também possui Especialização em Data Science e Big Data pela UFPR (ano 2019). Atualmente, é docente Associado I na Universidade Federal do Pará (UFPA), atuando no curso de Graduação em Engenharia Florestal e no Programa de Pós-Graduação em Biodiversidade e Conservação (PPGBC). É responsável por ministrar as disciplinas de Estatística Básica, Dendrometria, Experimentação Florestal e Inventário Florestal no Curso de Graduação em Engenharia Florestal da UFPA, e a disciplina de Estatística Computacional no PPGBC. Coordena projetos de pesquisas orientados ao manejo e conservação da biodiversidade, com ênfase no desenvolvimento de tecnologias baseadas em inteligência artificial e visão computacional para o reconhecimento automático de espécies da flora Amazônica. Também tem contribuído em projetos socioambientais junto aos povos originários, em parceria com a Associação Indígena Pyjahyry Xipaya - AIPHX, com ênfase na estruturação e fortalecimento de cadeias de produtos da sociobiodiversidade e gestão territorial e ambiental.
+Possui graduação em :deciduous_tree: **Engenharia Florestal** pela Universidade Federal Rural da Amazônia (2008), Mestrado em Ciências Florestais pela Universidade Federal Rural da Amazônia (2011) e Doutorado em Engenharia Florestal pela Universidade Federal do Paraná (2020). No período de 2009 a 2011 exerceu o cargo de Analista Ambiental da Secretaria Estadual de Meio Ambiente do Pará, na Gerência de Projetos Agrossilvipastoris (GEPAF), com atuação direta na etapa de análise técnica, para fins de licenciamento ambiental, de Planos de Manejo Florestal Sustentável (PMFS), Projetos de Desbastes e Reflorestamento e Supressão Florestal. Foi diretor na Curso de Graduação em Engenharia Florestal da UFPA/Altamira (2015 a 2016). É professor Associado 1 na Universidade Federal do Pará, Faculdade de Engenharia Florestal, Campus Universitário de Altamira, Pará. É coordenador do Laboratório de Manejo Florestal, Tecnológias e Comunidades Amazônicas (LMFTCA)/UFPA. É responsável por ministrar as disciplinas Estatística Básica, Dendrometria, Experimentação Florestal e Inventário Florestal, integrantes do desenho curricular do Curso de Graduação em Engenharia Florestal da UFPA. Também é docente permanente no Programa de Pós-Graduação em Biodiversidade e Conservação (PPGBC) da Universidade Federal do Pará (UFPA/Altamira) e Programa de Pós-Graduação em Ciência, Tecnologia e Inovação Florestal (PPGCTIF) da Universidade Federal do Oeste do Pará (UFOPA/Santarém), responsável pela disciplina Estatística Computacional com R. Atualmente, tem desenvolvido projetos de pesquisas, desenvolvimento e inovação florestal, com ênfase na aplicação de técnicas de inteligência artificial e visão computacional a serviço do Manejo Florestal Sustentável (MFS) e conservação da biodiversidade, em especial, direcionadas às espécies mais exploradas para fins madeireiros na Amazônica brasileira. Ademais, tem realizado pesquisas com uso de técnicas de aprendizado de máquina na modelagem preditiva de variáveis biométricas (volume, biomassa e carbono), com uso das linguagens de programação R e Python. Finalmente, tem contribuído em projetos sustentáveis em comunidades indígenas, com ênfase na execução de inventários e manejo florestal de produtos não madeireiros, estruturação e fortalecimento de cadeias produtivas da sociobiodiversidade. Finalmente, As aulas das diciplinas ministradas estão disponíveis para toda a comunidade científica/acadêmica no repositório GitHub (https://github.com/DeivisonSouza). No repositório, os interessados encontrarão os slides de aulas (.html), códigos R (.Rmd), tutoriais e bases de dados usados em cursos e disciplinas ministradas em nível de graduação e pós-graduação.
 </div>
-
----------------------------------------------------
-**Este repositório está licenciado nos termos da licença MIT.**

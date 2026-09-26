@@ -7,16 +7,18 @@
 
 <!-- Emprestei a função list_github_files() da Curso-R. (https://github.com/curso-r). A ideia desse readme emprestei da Curso-R. Achei excelente!-->
 
-# Seja bem vindo(a)! :deciduous_tree: :smiley: :grin:
+# Seja bem-vindo(a)! :deciduous_tree: :smiley: :grin:
 
-:calendar: 13/10/2025 a 25/10/2025 (Segunda-feira a sábado)
+:calendar: 30 (Setembro)
 
-:alarm_clock: **07h30min - 13h50min**
+:calendar: 2, 6, 7, 9, 13, 14, 16, 20, 21, 23 e 27 (Outubro)
+
+:alarm_clock: **13h30min - 18h50min**
 
 <div>
 
-<img src="Slides/fig/slide-title/ufpa.png" width="150" align="middle" class="center">
-<img src="Slides/fig/slide-title/LMFTCA.png" width="150" align="middle" class="center">
+<img src="Slides/assets/logos/ufpa.png" width="100" align="middle" class="center">
+<img src="Slides/assets/logos/LMFTCA_hor.png" width="300" align="middle" class="center">
 
 <div>
 
@@ -30,11 +32,18 @@
 
 **Researchgate**: <https://www.researchgate.net/profile/Deivison-Souza>
 
+**Siga o Instagram**:
+[@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/) (Laboratório de
+Manejo Florestal, Tecnologias e Comunidades Amazônicas)
+
+**Site do LMFTCA**: <https://www.lmftca.com.br/> (Laboratório de Manejo
+Florestal, Tecnologias e Comunidades Amazônicas)
+
 ------------------------------------------------------------------------
 
 # Experimentação Florestal (FL03034-EF)
 
-<div align="justify">
+<div data-align="justify">
 
 Este repositório guarda os slides em .html, códigos R, arquivos .Rmd,
 figuras, conjunto de dados (e outros) utilizados na disciplina de
@@ -64,63 +73,65 @@ o ano de 2025.
 A programação, o conteúdo e os slides da disciplina **Experimentação
 Florestal** (FL03034-EF) estão detalhados a seguir.
 
-| Slide | Temática | Link |
-|:---|:---|:---|
-| 01-Programacao.html | Programação da Disciplina | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Programacao.html> |
-| 02-Introducao-Experimentacao.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Introducao-Experimentacao.html> |
-| 03-AED.html | Análise Exploratória de Dados | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED.html> |
-| 04-DIC-Teoria.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria.html> |
-| 05-ANOVA-DIC_Progenies-Solucao1.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-ANOVA-DIC_Progenies-Solucao1.html> |
-| 06-ANOVA-DIC_Progenies-Solucao2.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-ANOVA-DIC_Progenies-Solucao2.html> |
-| 07-ANOVA-DIC_Linguagem-R.html | Delineamento Inteiramente Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/07-ANOVA-DIC_Linguagem-R.html> |
-| Aula4-DBC.html | Delineamento em Blocos Casualizado | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula4-DBC.html> |
-| Aula5-Introducao-R.html | Introdução à Experimentação | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula5-Introducao-R.html> |
-| Aula6-DQL.html | Delineamento em Quadrado Latino | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula6-DQL.html> |
-| Aula7-Teste-Comparacao-Medias.html | A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire) | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula7-Teste-Comparacao-Medias.html> |
-| Aula8-Analise-Experimentos-com-R.html | A educação é um ato de amor, por isso, um ato de coragem. (Paulo Freire) | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/Aula8-Analise-Experimentos-com-R.html> |
+| Slide | Link |
+|:---|:---|
+| Slides/00-Programacao/01-Programacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/00-Programacao/01-Programacao.html> |
+| Slides/01-Introducao-Experimentacao/02-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Introducao-Experimentacao/02-Introducao-Experimentacao.html> |
 
 # Facilitador :deciduous_tree:
 
 <div>
 
-<img src="Slides/fig/slide-title/Foto.jpeg" width="250" align="middle" class="center">
-
-<img src="Slides/fig/slide-title/Foto2.jpg" width="250" height="190" align="middle" class="center">
-
-<img src="Slides/fig/slide-title/Foto3.jpg" width="250" align="middle" class="center">
+<img src="Slides/00-Programacao/fig/foto.jpg" width="150" align="middle" class="center">
 
 <div>
 
 <br>
 
-<div align="justify">
+<div data-align="justify">
 
-Graduado em :deciduous_tree:**Engenharia Florestal** (ano 2008) e
-Mestrado em Ciências Florestais (ano 2011) pela Universidade Federal
-Rural da Amazônia (UFRA) e Doutorado em Engenharia Florestal pela
-Universidade Federal do Paraná - UFPR (ano 2020). Também possui
-Especialização em Data Science e Big Data pela UFPR (ano 2019).
-Atualmente, é docente Associado I na Universidade Federal do Pará
-(UFPA), atuando no curso de Graduação em Engenharia Florestal e no
-Programa de Pós-Graduação em Biodiversidade e Conservação (PPGBC). É
-responsável por ministrar as disciplinas de Estatística Básica,
-Dendrometria, Experimentação Florestal e Inventário Florestal no Curso
-de Graduação em Engenharia Florestal da UFPA, e a disciplina de
-Estatística Computacional no PPGBC. Coordena projetos de pesquisas
-orientados ao manejo e conservação da biodiversidade, com ênfase no
-desenvolvimento de tecnologias baseadas em inteligência artificial e
-visão computacional para o reconhecimento automático de espécies da
-flora Amazônica. Também tem contribuído em projetos socioambientais
-junto aos povos originários, em parceria com a Associação Indígena
-Pyjahyry Xipaya - AIPHX, com ênfase na estruturação e fortalecimento de
-cadeias de produtos da sociobiodiversidade e gestão territorial e
-ambiental.
+Possui graduação em :deciduous_tree: **Engenharia Florestal** pela
+Universidade Federal Rural da Amazônia (2008), Mestrado em Ciências
+Florestais pela Universidade Federal Rural da Amazônia (2011) e
+Doutorado em Engenharia Florestal pela Universidade Federal do Paraná
+(2020). No período de 2009 a 2011 exerceu o cargo de Analista Ambiental
+da Secretaria Estadual de Meio Ambiente do Pará, na Gerência de Projetos
+Agrossilvipastoris (GEPAF), com atuação direta na etapa de análise
+técnica, para fins de licenciamento ambiental, de Planos de Manejo
+Florestal Sustentável (PMFS), Projetos de Desbastes e Reflorestamento e
+Supressão Florestal. Foi diretor na Curso de Graduação em Engenharia
+Florestal da UFPA/Altamira (2015 a 2016). É professor Associado 1 na
+Universidade Federal do Pará, Faculdade de Engenharia Florestal, Campus
+Universitário de Altamira, Pará. É coordenador do Laboratório de Manejo
+Florestal, Tecnológias e Comunidades Amazônicas (LMFTCA)/UFPA. É
+responsável por ministrar as disciplinas Estatística Básica,
+Dendrometria, Experimentação Florestal e Inventário Florestal,
+integrantes do desenho curricular do Curso de Graduação em Engenharia
+Florestal da UFPA. Também é docente permanente no Programa de
+Pós-Graduação em Biodiversidade e Conservação (PPGBC) da Universidade
+Federal do Pará (UFPA/Altamira) e Programa de Pós-Graduação em Ciência,
+Tecnologia e Inovação Florestal (PPGCTIF) da Universidade Federal do
+Oeste do Pará (UFOPA/Santarém), responsável pela disciplina Estatística
+Computacional com R. Atualmente, tem desenvolvido projetos de pesquisas,
+desenvolvimento e inovação florestal, com ênfase na aplicação de
+técnicas de inteligência artificial e visão computacional a serviço do
+Manejo Florestal Sustentável (MFS) e conservação da biodiversidade, em
+especial, direcionadas às espécies mais exploradas para fins madeireiros
+na Amazônica brasileira. Ademais, tem realizado pesquisas com uso de
+técnicas de aprendizado de máquina na modelagem preditiva de variáveis
+biométricas (volume, biomassa e carbono), com uso das linguagens de
+programação R e Python. Finalmente, tem contribuído em projetos
+sustentáveis em comunidades indígenas, com ênfase na execução de
+inventários e manejo florestal de produtos não madeireiros, estruturação
+e fortalecimento de cadeias produtivas da sociobiodiversidade.
+Finalmente, As aulas das diciplinas ministradas estão disponíveis para
+toda a comunidade científica/acadêmica no repositório GitHub
+(<https://github.com/DeivisonSouza>). No repositório, os interessados
+encontrarão os slides de aulas (.html), códigos R (.Rmd), tutoriais e
+bases de dados usados em cursos e disciplinas ministradas em nível de
+graduação e pós-graduação.
 
 </div>
-
-------------------------------------------------------------------------
-
-**Este repositório está licenciado nos termos da licença MIT.**
 
 </div>
 
