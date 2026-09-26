@@ -3,32 +3,42 @@ title: "Experimentação Florestal (FL03034 - EF)"
 subtitle: "Introdução à Experimentação Florestal"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+    self_contained: true
     seal: false
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -46,61 +56,31 @@ knitr::opts_chunk$set(
 ```{r packages, include=FALSE}
 # remotes::install_github("dill/emoGG")
 # remotes::install_github("hadley/emo")
-library(ggplot2)
-library(dplyr)
-library(ggimage)
-library(kableExtra)
-library(readr)
-#library(emo)
-```
-
-```{css, echo=FALSE}
-.with-logo::before {
-	content: '';
-	width: 120px;
-	height: 120px;
-	position: absolute;
-	bottom: 1.3em;
-	right: -0.5em;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.logo-ufpa::before {
-	background-image: url(fig/slide-title/ufpa.png);
-}
+# remotes::install_github("emitanaka/anicon")
+# remotes::install_github("mitchelloharawild/icons")
 ```
 
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 
-use_logo(
-  image_url = "fig/slide-title/LMFTCA.png",
-  position = css_position(top = "1em", right = ".5em"),
-  width = "130px",
-  height = "130px")
-
-
-use_scribble() # para escrever nos slides
+use_scribble()
 use_share_again()
 use_progress_bar()
-#use_animate_all(style = c("slide_down"))
 
 use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = TRUE
 )
-xaringanExtra::use_editable(expires = 1)
-#.can-edit[Você pode editar este título de slide]
-#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
+
+use_editable(expires = 1)
 use_clipboard()
 ```
 
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução à Experimentação`r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> ᨒ
-###### Conceitos e princípios básicos 
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="green")` Experimentação Florestal`r anicon::faa("pagelines", animate="horizontal", colour="green")`
+###### (Conceitos e Terminologias)
 
 ##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
 ##### ᨒ
@@ -119,11 +99,12 @@ layout: true
 
 ---
 
-## Ementa da disciplina (FL03034 - EF)
+## 📚 Ementa da disciplina (FL03034 - EF)
 
-.shadow3[
+.shadow4[
+.font80[
 <br>
-**1 - Introdução à experimentação;**
+1 - Introdução à experimentação florestal; 
 
 2 - Análise exploratória de dados;
 
@@ -142,10 +123,11 @@ layout: true
 9 - Análise de experimentos com linguagem R.
 
 ]
+]
 
 ---
 
-## Objetivos
+## 🎯 Objetivos
 <br><br>
 Ao final desta aula espera-se que o discente seja capaz de...
 
@@ -156,7 +138,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 ---
 
-## Conteúdo
+## 📙 Conteúdo
 
 .pull-left-4[
 **Parte 1 - Terminologias e conceitos básicos**
@@ -185,7 +167,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ]
 
 ---
-## Conteúdo
+## 📙 Conteúdo
 
 **Parte 3 - Fases da pesquisa experimental**
 
@@ -212,19 +194,24 @@ Ao final desta aula espera-se que o discente seja capaz de...
 <!-- Slide XX -->
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: parte1
+class: middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 1 <br> Conceitos básicos da experimentação**]
+<span style="color: #244A6B; font-size: 40px;">Parte 1</span>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+<br>
+
+<span style="color: #0B1F3A; font-size: 48px; font-weight: bold;">
+Conceitos básicos<br>da experimentação
+</span>
 
 ---
+
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza — deivisonvs@ufpa.br &emsp; Experimentação Florestal (FL03034 - EF) — Introdução à experimentação</span></div>
 
 ---
 
@@ -349,7 +336,7 @@ knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.
 Os principais delineamentos experimentais utilizados são:
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/img-PD.png')
+knitr::include_graphics('fig/img-PD.png')
 ```
 
 ---
@@ -587,7 +574,7 @@ Matéria Seca Total da Planta (MST)
 **6. Resultados**
 
 ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/E1-T2.png')
+knitr::include_graphics('fig/E1-T2.png')
 ```
 
 ---
@@ -653,7 +640,7 @@ DIC (8 tratamentos) - Diferentes proporções de substratos
 ### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/E2-T1.png')
+knitr::include_graphics('fig/E2-T1.png')
 ```
 
 ---
@@ -690,7 +677,7 @@ Peso de Matéria Seca do Sistema Radicular
 **6. Resultados**
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/E2-T31.png')
+knitr::include_graphics('fig/E2-T31.png')
 ```
 
 ---
@@ -703,7 +690,7 @@ knitr::include_graphics('fig/class1/E2-T31.png')
 **6. Resultados**
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/E2-T32.png')
+knitr::include_graphics('fig/E2-T32.png')
 ```
 
 ---
@@ -716,7 +703,7 @@ knitr::include_graphics('fig/class1/E2-T32.png')
 **6. Resultados**
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/E2-T33.png')
+knitr::include_graphics('fig/E2-T33.png')
 ```
 
 ---
@@ -737,15 +724,18 @@ casca de café compostada.
 <!-- Slide XX -->
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: parte1
+class: middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 2 <br> Princípios básicos da experimentação**]
+<span style="color: #244A6B; font-size: 40px;">Parte 2</span>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+<br>
 
+<span style="color: #0B1F3A; font-size: 48px; font-weight: bold;">
+Princípios básicos<br>da experimentação
+</span>
 
 ---
 layout: true
@@ -759,7 +749,7 @@ layout: true
 Os delineamentos experimentais clássicos são baseados em três princípios básicos:
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/PBE.png')
+knitr::include_graphics('fig/PBE.png')
 ```
 
 ---
@@ -895,22 +885,25 @@ A formação de blocos no DBC e a disposição de linhas e colunas no DQL, são 
 ### Princípios básicos e delineamentos experimentais
 
 ```{r, echo=FALSE, out.width='53%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/img-PD2.png')
+knitr::include_graphics('fig/img-PD2.png')
 ```
 
 
 <!-- Slide XX -->
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: parte1
+class: middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 3 <br> Fases da pesquisa experimental**]
+<span style="color: #244A6B; font-size: 40px;">Parte 3</span>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+<br>
 
+<span style="color: #0B1F3A; font-size: 48px; font-weight: bold;">
+Fases da pesquisa <br>experimental
+</span>
 
 ---
 layout: true
@@ -923,7 +916,7 @@ layout: true
 <br>
 
 ```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F0.png')
+knitr::include_graphics('fig/F0.png')
 ```
 
 ---
@@ -933,7 +926,7 @@ knitr::include_graphics('fig/class1/F0.png')
 
 .pull-left-4[
 ```{r, echo=FALSE, out.width='90%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F1.png')
+knitr::include_graphics('fig/F1.png')
 ```
 ]
 
@@ -981,7 +974,7 @@ knitr::include_graphics('fig/class1/F1.png')
 
 .pull-left-4[
 ```{r, echo=FALSE, out.width='90%', fig.align='left', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F2.png')
+knitr::include_graphics('fig/F2.png')
 ```
 ]
 
@@ -1030,7 +1023,7 @@ knitr::include_graphics('fig/class1/F2.png')
 <br>
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F3.png')
+knitr::include_graphics('fig/F3.png')
 ```
 
 
@@ -1040,7 +1033,7 @@ knitr::include_graphics('fig/class1/F3.png')
 <br>
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/F4.png')
+knitr::include_graphics('fig/F4.png')
 ```
 
 ---
@@ -1054,15 +1047,17 @@ DIAS, L. D. S.; W., Barros (2009). **Biometria experimental** , p. 408p.
 <!--Slide XX -->
 ---
 layout: false
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Obrigado!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)
