@@ -1163,7 +1163,6 @@ corresponde a um tratamento: 3 × 2 = 6 tratamentos.
 ]
 
 ---
-
 name: conceitos-viveiro
 class: center
 
@@ -1172,6 +1171,25 @@ class: center
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
 knitr::include_graphics("fig/conceitos.png")
 ```
+.font70[
+**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
+]
+
+
+---
+name: conceitos-viveiro
+class: center
+
+## Consolidando os conceitos...
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
+knitr::include_graphics("fig/conceitos2.png")
+```
+
+.font70[
+**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
+]
+
 
 
 ---
@@ -1221,6 +1239,14 @@ Uma delas apresenta **4,2 m**.
 ]
 
 ---
+
+
+
+
+
+
+
+
 
 ## PAREI AQUI...
 
