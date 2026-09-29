@@ -1169,7 +1169,7 @@ class: center
 ## Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/conceitos.png")
+knitr::include_graphics("fig/experimento-viveiro.png")
 ```
 .font70[
 **Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
@@ -1183,14 +1183,12 @@ class: center
 ## Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/conceitos2.png")
+knitr::include_graphics("fig/experimento-campo-eucalipto.png")
 ```
 
 .font70[
 **Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
 ]
-
-
 
 ---
 name: consolidacao-conceitos
@@ -1239,16 +1237,68 @@ Uma delas apresenta **4,2 m**.
 ]
 
 ---
+name: variacao-conceito
 
+## 📊 O que é variação experimental?
 
+.pull-left[
+.font80[
+.alert[
+**Variação experimental:** diferenças entre os valores
+observados de uma determinada **variável resposta**.
 
+Podem ocorrer entre unidades experimentais que recebem
+o **mesmo tratamento** ou **tratamentos diferentes**.
+]
 
+### No exemplo do viveiro...
 
+- **Tratamentos:** três substratos;
+- **Unidade experimental:** parcela com **25 tubetes**;
+- **Repetições:** quatro parcelas por substrato; e
+- **Medição:** altura de cada planta, utilizada para
+calcular a **altura média de cada parcela**.
+]
+]
 
+--
 
+.pull-right[
+.font80[
+### Onde observamos variação?
 
+- **Dentro da parcela:** as plantas podem ter alturas diferentes;
+- **Entre parcelas do mesmo substrato:** suas médias podem diferir; e
+- **Entre substratos:** as médias também podem diferir.
 
-## PAREI AQUI...
+### Por que isso importa?
+
+Precisamos avaliar se as diferenças entre substratos
+refletem o **efeito dos tratamentos**, considerando
+também a variação entre parcelas do mesmo tratamento.
+]
+
+.font70[
+.alert[
+💡 **Variação:** diferenças entre os valores.
+
+💡 **Variância:** medida estatística da dispersão
+dos valores em torno da média.
+]
+]
+]
+
+---
+layout: false
+name: variacao-viveiro-ilustracao
+background-image: url(fig/viveiro-12-parcelas-300-tubetes.png)
+background-size: contain
+background-position: center
+background-repeat: no-repeat
+
+---
+## PAREI AQUI
+
 
 ---
 
@@ -1388,23 +1438,6 @@ O controle local é aplicado pela imposição de **dois fatores de restrição**
 
 É a variação devida ao efeito dos fatores não-controlados no experimento (acaso/aleatório).
 
---
-
-### Variável Resposta (ou Dependente)
-
---
-
-Característica que é medida e/ou avaliada nas unidades experimentais. 
-
-Comumente essa característica é chamada de variável resposta (ou dependente).
-
---
-
-### Dados experimentais
-
---
-
-São os valores assumidos pela variável resposta.
 
 ---
 class: center, middle
