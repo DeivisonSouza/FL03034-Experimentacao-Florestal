@@ -754,109 +754,235 @@ Introdução à Experimentação
 
 ---
 
-## Terminologias e conceitos básicos
+name: Exp
 
+## 🔬 Experimentação e experimento
 
-.pull-left-4[
+<div style="position:absolute; left:60px; top:140px; width:40%;">
+
 ```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://media.giphy.com/media/fUZHXuE94BN2wtSbUS/giphy-downsized-large.gif")
 ```
-<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
 
-]
+<div style="font-size:50%; text-align:center;">
+Fonte: <a href="https://media.giphy.com">Giphy</a>, 19 jul. 2021.
+</div>
 
+</div>
 
+<div style="margin-left:48%;">
+
+.font80[
 ### Experimentação
 
+É a parte da estatística que estuda o **planejamento**
+e a **execução** de experimentos, bem como a **coleta**,
+a **análise** e a **interpretação** de dados experimentais.
+]
+
+</div>
+
 --
 
-É a parte da estatística que estuda o **planejamento** e a **execução** de experimentos, bem como a **coleta**, a **análise** e a **interpretação** de dados experimentais.
+<div style="margin-left:48%;">
 
---
-
+.font80[
 ### Experimento (ou ensaio)
 
---
-
-É uma experiência (ou ensaio) realizada em **condições previamente estabelecidas** e que opera com **causas controladas** (DIAS; BARROS, 2009).
- 
----
-
-## Terminologias e conceitos básicos
-
-<br>
-### Unidade Experimental (ou Parcela)
-
---
-.font90[
-É a menor unidade que recebe o tratamento. Em experimentos de campo, normalmente são chamadas de parcelas experimentais. Uma UE pode ser formada por um indivíduo (ou grupo). (.green[Recomendação: 20 UEs])
+É uma experiência realizada em **condições previamente
+estabelecidas** e que opera com **causas controladas**
+(DIAS; BARROS, 2009).
 ]
 
---
-<br>
-
-.font90[
-**Experimento de campo**: parcela é uma área cujo tamanho depende, por exemplo, do porte e do espaçamento entre planta. 
-Tamanhos: 200 e 250m² são bastante comuns.
-
-**Casas de vegetação**: parcela pode ser: um vaso, tubetes, bandejas (5 a 10 sementes ou plantas)
-
-**Laboratório**: parcela pode ser: placa de petri.
-]
-
-
-.pull-left-4[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media2.giphy.com/media/mDBBU8K7Np2UQs9Dqy/giphy.gif")
-```
-]
-
-.pull-right-4[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media1.giphy.com/media/RCtKcMeeIlIFskmH7C/giphy-downsized.gif")
-```
-]
-
-
----
-
-## Terminologias e conceitos básicos
-
-<br>
-
-### Tratamento
+</div>
 
 --
+
+<div style="margin-left:48%;">
+
 .font80[
-É a condição (método, elemento, material) imposta à unidade experimental, cujo efeito deseja-se medir e comparar em um experimento. 
-<br>
-Somente o tratamento varia entre as UEs, as demais condições são mantidas constantes, exceto os fatores não-controláveis.
+.alert[
+💡 **No viveiro:** modificamos a **composição do substrato**
+e avaliamos a emergência, a sobrevivência e o crescimento das mudas.
+]
 ]
 
-.pull-left-4[
-```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
+</div>
+
+---
+
+name: Trat
+
+## 🪴 Tratamento: o que será comparado?
+
+.font80[
+.alert[
+**TRATAMENTO**
+
+É a condição aplicada à unidade experimental cujo efeito
+se deseja **avaliar e comparar**. Pode ser um material,
+um método ou uma combinação de condições.
+]
+]
+
+--
+
+.font80[
+💡 **No nosso viveiro:** cada mistura de substrato
+(**S1, S2 e S3**) corresponde a um **tratamento**.
+]
+
+--
+
+.pull-left[
+```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
 knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
 ```
-<br><br><div style='font-size:50%'>(Available at [https://media.giphy.com](https://media.giphy.com), jul 19, 2021)</div>
+
+<div style="font-size:50%; text-align:center;">
+Fonte: <a href="https://media.giphy.com">Giphy</a>, 19 jul. 2021.
+</div>
+]
+
+.pull-right[
+.font70[
+### Outros exemplos
+
+**No campo:**
+- Métodos de preparo do solo;
+- Doses de adubação;
+- Espaçamentos de plantio.
+
+**No viveiro:**
+- Tipos de substrato;
+- Níveis de sombreamento;
+- Tipos de recipiente.
+]
+]
+
+<div style="clear: both;"></div>
+
+---
+
+name: UE
+
+## 🌱 Unidade experimental (ou parcela)
+
+.font80[
+.alert[
+
+**UNIDADE EXPERIMENTAL**
+
+- É a **menor unidade à qual um tratamento é atribuído
+de forma independente**.
+- Pode ser uma planta, um recipiente ou um grupo de plantas.
+- Em experimentos de campo, é frequentemente chamada de
+**parcela experimental**.
+]
 ]
 
 --
 
-.pull-right-4[
 .font80[
-**Experimentos de campo**
+### Exemplos...
 
-- Formas de preparo do solo
-- Diferentes doses de adubação
-- Diferentes espaçamentos
+- **Campo:** uma parcela contendo várias mudas/árvores;
+- **Viveiro ou casa de vegetação:** um vaso, um tubete ou uma bandeja;
+- **Laboratório:** uma placa de Petri, caixa de germinação (tipo Gerbox).
+]
 
-**Casa de vegetação**
-- Diferentes tipos de substratos
-- Diferentes níveis de sobreamento
-- Diferentes tipos de recipientes
+--
+
+.font80[
+💡 **Atenção:** se uma bandeja inteira recebe um único tratamento
+como conjunto, ela é a UE. As plantas medidas dentro dela
+não são, automaticamente, unidades experimentais independentes.
+]
+
+---
+name: ue-tubete
+
+## 🪴 Exemplo do viveiro: uma UE pode ser um tubete
+
+.font80[
+### Como o experimento é organizado?
+
+- Cada **tubete** recebe um dos substratos: S1, S2 ou S3;
+- É semeada **uma semente de paricá por tubete**; e
+- Os tratamentos são sorteados entre os tubetes.
+]
+
+--
+
+.font80[
+.alert[
+💡 **Nesta montagem, 1 tubete = 1 unidade experimental.**
+
+💡 Cada tubete recebe seu tratamento de forma independente.
 ]
 ]
 
+--
+
+.font80[
+<br>
+
+| Elemento | No exemplo do viveiro |
+|:--|:--|
+| **Tratamento** | O substrato aplicado: S1, S2 ou S3. |
+| **Unidade experimental** | O tubete que recebe o substrato. |
+| **O que será observado?** | A emergência, a sobrevivência e o crescimento da muda. |
+]
+
+
+---
+name: ue-bandeja
+
+## 🌱 Exemplo do viveiro: uma UE pode ser uma bandeja
+
+.font80[
+### Como o experimento é organizado?
+
+- Cada **bandeja inteira** recebe um dos substratos: S1, S2 ou S3;
+- São semeadas **50 sementes de paricá por bandeja**; e
+- Os tratamentos são sorteados entre as bandejas.
+]
+
+--
+
+.font80[
+.alert[
+💡 **Nesta montagem, 1 bandeja = 1 unidade experimental.**
+
+💡 As 50 sementes compartilham o substrato da mesma bandeja
+e pertencem a **uma única UE**.
+]
+]
+
+--
+
+.font80[
+<br>
+
+| Elemento | No exemplo do viveiro |
+|:--|:--|
+| **Tratamento** | O substrato aplicado: S1, S2 ou S3. |
+| **Unidade experimental** | A bandeja que recebe o substrato. |
+| **O que será observado?** | A emergência, a sobrevivência e o crescimento das mudas na bandeja. |
+]
+
+
+
+
+
+
+
+
+
+
+---
+
+## PAREI AQUI...
 
 ---
 
