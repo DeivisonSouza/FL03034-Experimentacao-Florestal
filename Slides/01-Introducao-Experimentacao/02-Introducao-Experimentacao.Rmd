@@ -47,7 +47,7 @@ knitr::opts_chunk$set(
 	fig.showtext = TRUE,
 	message = FALSE,
 	warning = FALSE,
-	cache = FALSE,
+	cache = TRUE,
 	collapse = TRUE,
 	dpi = 600
 )
@@ -79,8 +79,8 @@ use_clipboard()
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="green")` Experimentação Florestal`r anicon::faa("pagelines", animate="horizontal", colour="green")`
-###### (Conceitos e Terminologias)
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Introdução à Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
+###### (Conceitos, Princípios e Planejamento)
 
 ##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
 ##### ᨒ
@@ -95,26 +95,35 @@ use_clipboard()
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Introdução à experimentação: conceitos, princípios e planejamento</div>
+<div class="my-footer">
+<span>
+Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
+&emsp;&emsp;
+Experimentação Florestal (FL03034 - EF)
+&bull;
+Introdução à Experimentação
+</span>
+</div>
 
 ---
 
 ## 📚 Ementa da disciplina (FL03034 - EF)
+<br>
 
 .shadow4[
-.font80[
-<br>
-1 - Introdução à experimentação florestal; 
+.font90[
+
+**1 - Introdução à experimentação;**
 
 2 - Análise exploratória de dados;
 
-3 - Delineamento inteiramente casualizado - DIC; 
+3 - Delineamento inteiramente casualizado (DIC);
 
-4 - Delineamento em blocos ao acaso - DBC;
+4 - Delineamento em blocos ao acaso (DBC);
 
-5 - Delineamento em quadrado latino - DQL;
+5 - Delineamento em quadrado latino (DQL);
 
-6 - Testes de comparação de médias; 
+6 - Testes de comparação de médias;
 
 7 - Experimentos em esquema fatorial;
 
@@ -128,19 +137,23 @@ layout: true
 ---
 
 ## 🎯 Objetivos
-<br><br>
-Ao final desta aula espera-se que o discente seja capaz de...
+<br>
 
-* Conhecer as terminologias e os principais conceitos associados à experimentação;
-* Avaliar algumas pesquisas experimentais no contexto florestal;
-* Compreender os princípios básicos da experimentação; e
-* Conhecer os principais aspectos relacionados ao planejamento e condução de experimentos.
+.font90[
+Ao final desta aula, você deverá ser capaz de:
+
+- **Identificar** tratamentos, unidades experimentais e variáveis resposta em experimentos florestais;
+- **Explicar** a importância da repetição, da casualização e do controle local;
+- **Avaliar criticamente** o planejamento de pesquisas experimentais no contexto florestal; e
+- **Propor** um experimento florestal simples, relacionando a pergunta de pesquisa às decisões de planejamento.
+]
 
 ---
 
 ## 📙 Conteúdo
 
 .pull-left-4[
+.font90[
 **Parte 1 - Terminologias e conceitos básicos**
 
 [1 - Experimentação e Experimento](#Exp)
@@ -153,9 +166,11 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 [5 - Erro Experimental ou Resíduo](#Res)
 ]
+]
 
 .pull-right-2[
 .pull-down[
+.font90[
 **Parte 2 - Princípios básicos da experimentação**
 
 [1 - Repetição: conceito, importância e limitações](#Rep)
@@ -165,10 +180,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [3 - Controle local: conceito e importância](#Cas)
 ]
 ]
+]
 
 ---
+
 ## 📙 Conteúdo
 
+<br>
+
+.font90[
 **Parte 3 - Fases da pesquisa experimental**
 
 [1 - Definição do problema de pesquisa](#Probl)
@@ -190,28 +210,547 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [9 - Analisar e interpretar dados experimentais](#int)
 
 [10 - Realizar conclusões e fazer recomendações](#int)
+]
 
-<!-- Slide XX -->
+<!-- Parte 1 -->
 ---
 layout: false
 name: parte1
-class: middle, center
+class: top, right
 background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-<span style="color: #244A6B; font-size: 40px;">Parte 1</span>
-
 <br>
 
-<span style="color: #0B1F3A; font-size: 48px; font-weight: bold;">
-Conceitos básicos<br>da experimentação
+.right[
+.font100[
+<span style="color: #244A6B;">**Experimentação Florestal**</span>
+]
+]
+
+<br><br>
+
+.right[
+.font150[
+<span style="color: #244A6B;">**Parte 1**</span>
+]
+]
+
+<br><br>
+
+.right[
+.font180[
+<span style="color: #0B1F3A;">**Como a experimentação ajuda a tomar decisões<br>na Engenharia Florestal?**</span>
+]
+]
+
+---
+layout: true
+<div class="my-header"></div>
+<div class="my-footer">
+<span>
+Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
+&emsp;&emsp;
+Experimentação Florestal (FL03034 - EF)
+&bull;
+Introdução à Experimentação
 </span>
+</div>
 
 ---
 
+name: germinacao-lote
+
+## 🌱 Situação 1: germinação de um lote de sementes
+
+<br>
+
+.font80[
+👉 **Imagine:** uma empresa produtora/comercializadora de sementes florestais prepara
+um lote de **paricá** (*Schizolobium parahyba* var. *amazonicum*)
+para comercialização.
+]
+
+--
+
+.font80[
+### Antes da comercialização…
+
+- Uma **amostra representativa do lote** é obtida;
+- A amostra é encaminhada a um **laboratório de análise de sementes
+credenciado no RENASEM**; e
+- O **potencial germinativo** é avaliado pelo teste de germinação,
+conforme as **Regras para Análise de Sementes (RAS)**.
+]
+
+--
+
+<br>
+
+.font80[
+.alert[
+❓ **Qual é a porcentagem estimada de germinação do lote
+em condições de laboratório?**
+]
+]
+
+.font70[
+**RENASEM:** Registro Nacional de Sementes e Mudas, mantido pelo
+**MAPA**. Abrange a inscrição e o credenciamento de pessoas físicas
+e jurídicas para atividades relacionadas a sementes e mudas,
+incluindo a análise laboratorial.
+]
+
+---
+
+name: ras
+
+## 📖 O que são as RAS?
+
+<br>
+
+.font80[
+.alert[
+As **Regras para Análise de Sementes (RAS)** reúnem
+**métodos e procedimentos padronizados** para avaliar
+a **qualidade das sementes**.
+
+**Órgão responsável:** Ministério da Agricultura e Pecuária (**MAPA**).
+]
+]
+
+--
+
+.font80[
+### Por que seguir essas regras?
+
+- Orientam **como realizar os testes e avaliar os resultados**;
+- Estabelecem condições de análise, como **temperatura,
+substrato e duração do teste**; e
+- Permitem **repetir os testes e comparar seus resultados**,
+dentro dos limites de tolerância previstos nas RAS.
+]
+
+--
+
+.font70[
+### Onde consultar?
+
+🌳 **Capítulo 14 — Análise de Sementes de Espécies Florestais**
+
+🔎 **Seção 14.4 — Teste de germinação**
+
+[📖 Acessar o Capítulo 14 das RAS](https://wikisda.agricultura.gov.br/pt-br/Laborat%C3%B3rios/Metodologia/Sementes/RAS_2025/cap_14_florestais_rev_1)
+]
+
+---
+
+name: conceitos-germinacao
+
+## 🌱 O que é germinação e como expressar seu resultado?
+
+<br>
+
+.font80[
+.alert[
+**GERMINAÇÃO EM LABORATÓRIO**
+
+É a emergência e o desenvolvimento das **estruturas essenciais
+do embrião**, demonstrando sua capacidade de originar uma planta
+normal em **condições favoráveis** (Brasil, 2025).
+]
+]
+
+--
+<br>
+
+.font80[
+.alert[
+**PORCENTAGEM DE GERMINAÇÃO**
+
+É a **porcentagem de sementes que produziram plântulas normais**,
+nas condições e no período definidos para o teste (Brasil, 2025).
+]
+
+<br>
+
+💡 **A saída da raiz, sozinha, não basta:** é necessário avaliar
+as estruturas essenciais da plântula.
+]
+
+---
+
+name: plantulas-normais
+
+## 🌱 Quais plântulas são consideradas normais?
+
+<br>
+
+.font80[
+.alert[
+**PLÂNTULAS NORMAIS**
+
+São aquelas que apresentam potencial
+para continuar seu desenvolvimento e dar origem a
+**plantas satisfatórias**.
+]
+]
+
+--
+
+.font80[
+### Categorias de plântulas normais
+
+- **Intactas:** estruturas essenciais completas,
+bem desenvolvidas, proporcionais e saudáveis;
+- **Com defeitos aceitáveis:** pequenos defeitos que
+**não comprometem o desenvolvimento**, mantendo crescimento
+equilibrado e comparável ao das plântulas intactas; e
+- **Com infecção secundária:** infecção por fungos ou bactérias
+**proveniente de outras fontes, e não da própria semente**,
+com todas as estruturas essenciais presentes e verificáveis.
+]
+
+--
+
+<br>
+
+.font80[
+💡 **Plântula Normal não significa necessariamente perfeita:** determinados
+defeitos e infecções são aceitos conforme os critérios das RAS.
+]
+
+---
+
+name: ras-montagem
+
+## 📋 Como montar o teste de germinação do paricá?
+
+<br>
+
+.font80[
+O laboratório segue as **Regras para Análise de Sementes (RAS)**,
+que estabelecem condições padronizadas para o teste.
+]
+
+--
+
+.font80[
+### Montagem do teste
+
+- **Quantidade:** 400 sementes obtidas da amostra representativa do lote;
+- **Organização:** 8 repetições de 50 sementes;
+- **Substrato:** Entre Papel (**EP**), incluindo rolo de papel;
+- **Temperatura:** 25 °C.
+]
+
+--
+
+.font80[
+.alert[
+💡 **Entre papel:** as sementes ficam entre camadas de
+**papel umedecido**.
+
+💡 No **rolo de papel**, as folhas com as sementes são enroladas,
+mantendo-as em contato com o papel úmido.
+]
+]
+
+---
+
+name: ras-avaliacao
+
+## 🔎 Como avaliar o teste de germinação do paricá?
+
+.font80[
+### Quando avaliar?
+
+- **Dia 7:** primeira contagem;
+- **Dia 10:** contagem final indicada.
+- **Prorrogação:** possível (seção 14.4.10 - Duração do teste)
+]
+
+.font70[
+- Os dias são contados a partir da **instalação do teste**;
+- Para cada espécie florestal, consultar os períodos indicados
+no **Quadro 14.1 das RAS**.
+]
+
+--
+
+.font80[
+### Como proceder em cada repetição?
+
+- **Identificar e contar as plântulas normais**;
+- **Registrar e retirar** as plântulas normais já contabilizadas; e
+- Nas contagens anteriores à final, manter em avaliação as sementes
+e plântulas que ainda precisam de tempo para permitir sua classificação.
+]
+
+---
+
+name: resultado-germinacao
+
+## 🧮 Como calcular a porcentagem de germinação?
+
+.pull-left[
+.font80[
+### Dados hipotéticos
+<br>
+
+| Repetição | Sementes | Plântulas normais |
+|:--:|--:|--:|
+| 1 | 50 | 40 |
+| 2 | 50 | 42 |
+| 3 | 50 | 39 |
+| 4 | 50 | 41 |
+| 5 | 50 | 38 |
+| 6 | 50 | 40 |
+| 7 | 50 | 41 |
+| 8 | 50 | 39 |
+| **Total** | **400** | **320** |
+
+$$
+G = \frac{320}{400}\times 100 = \mathbf{80\%}
+$$
+]
+]
+
+.pull-right[
+.font80[
+### Como calcular?
+<br>
+.alert[
+Divida o total de **plântulas normais** pelo total de
+**sementes testadas** e multiplique por 100.
+]
+
+$$
+\text{Germinação} =
+\frac{\text{Número de plântulas normais}}
+{\text{Número de sementes testadas}}
+\times 100
+$$
+
+### Interpretação
+
+.alert[
+Estima-se que **80 de cada 100 sementes do lote**
+possam produzir **plântulas normais** nas condições
+padronizadas do teste.
+]
+
+]
+]
+
+---
+name: substrato-viveiro
+
+## 🌱 Situação 2: qual substrato utilizar no viveiro?
+
+<br>
+
+.font80[
+👉 **Imagine:** um viveiro adquire sementes de **paricá**
+com informações sobre a germinação do lote e deseja produzir
+mudas para **plantios comerciais destinados à produção
+de madeira para lâminas e compensados**.
+]
+
+--
+
+.font80[
+### Uma nova decisão
+
+O viveiro dispõe de **três opções de substrato**.
+Antes de ampliar a produção, precisa decidir **qual delas utilizar**.
+
+Para isso, deseja comparar:
+
+- **Emergência:** porcentagem, rapidez e uniformidade;
+- **Qualidade das mudas:** sobrevivência e crescimento
+em altura e diâmetro do colo; e
+- **Custo:** custo por muda apta ao plantio.
+]
+
+--
+
+.font80[
+.alert[
+❓ **Como planejar uma comparação que permita avaliar
+o efeito dos substratos sobre a produção de mudas?**
+]
+]
+
+---
+name: planejamento-inicial
+
+## 🔎 Como comparar os três substratos?
+
+.font80[
+.alert[
+💡 **Realizando um experimento!**
+
+❓ Mas, como planejá-lo para comparar os três substratos e obter
+**evidências para orientar a escolha**?
+]
+]
+
+--
+
+.font80[
+### Condições do experimento
+
+- Há **1.200 sementes de paricá, provenientes de um mesmo lote**;
+- Será semeada **uma semente por recipiente**, diretamente
+no substrato;
+- A **emergência**, a **sobrevivência** e o **crescimento das mudas**
+serão acompanhados durante **90 dias após a semeadura**; e
+- Os **custos de produção** também serão registrados.
+]
+
+--
+
+.font80[
+### Como você faria?
+
+- Quantas sementes destinaria para cada substrato?
+- Como distribuiria os recipientes no viveiro?
+- Como manteria padronizados outros fatores,
+como irrigação e luminosidade?
+]
+
+---
+
+name: substratos
+
+## 🪴 Quais substratos serão comparados?
+
+<br>
+
+.pull-left[
+.font80[
+### Três misturas hipotéticas
+<br>
+
+| Substrato | Terra preta | Material de açaí¹ |
+|:--|:--:|:--:|
+| **S1** | 100% | 0% |
+| **S2** | 75% | 25% |
+| **S3** | 50% | 50% |
+]
+
+.font70[
+¹ Caroço de açaí triturado e compostado.
+
+Proporções medidas em **volume**.
+]
+]
+
+.pull-right[
+.font80[
+### O que muda entre os substratos?
+<br>
+
+A **proporção de material de açaí na mistura**.
+
+A terra preta e o material de açaí devem vir,
+cada um, de uma **mesma origem** e receber
+**preparo padronizado**.
+
+.alert[
+💡 **Exemplo — 10 litros de S2:**
+
+**7,5 L de terra preta + 2,5 L de material de açaí.**
+]
+]
+]
+
+---
+name: problema-planejamento
+
+## 🌱 Como organizar essa comparação?
+
+<br>
+
+.pull-left[
+
+### Substratos a comparar
+
+- **S1:** 100% de terra preta;
+- **S2:** 75% de terra preta + 25% de caroço de açaí triturado;
+- **S3:** 50% de terra preta + 50% de caroço de açaí triturado.
+
+]
+
+--
+
+.pull-right[
+
+### Como você faria?
+
+- Quantas sementes destinaria a cada substrato?
+- Como organizaria as repetições?
+- Como distribuiria os recipientes no viveiro?
+- Quais medidas registraria?
+
+]
+
+--
+
+.alert[
+.font90[
+💡 **Questão central:** como planejar o experimento para saber se
+as diferenças observadas entre as mudas são causadas pelos
+**substratos** ou por outros fatores, como **luz, água e diferenças
+entre as próprias sementes**?
+]
+]
+
+<!-- Parte 2 -->
+---
+layout: false
+name: parte2
+class: top, right
+background-image: url(../assets/capa/sec.png)
+background-size: cover
+
+<br>
+
+.right[
+.font100[
+<span style="color: #244A6B;">**Experimentação Florestal**</span>
+]
+]
+
+<br><br>
+
+.right[
+.font150[
+<span style="color: #244A6B;">**Parte 2**</span>
+]
+]
+
+<br><br>
+
+.right[
+.font180[
+<span style="color: #0B1F3A;">**Conceitos básicos<br>da experimentação**</span>
+]
+]
+
+---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza — deivisonvs@ufpa.br &emsp; Experimentação Florestal (FL03034 - EF) — Introdução à experimentação</span></div>
+<div class="my-footer">
+<span>
+Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
+&emsp;&emsp;
+Experimentação Florestal (FL03034 - EF)
+&bull;
+Introdução à Experimentação
+</span>
+</div>
 
 ---
 
@@ -1039,6 +1578,8 @@ knitr::include_graphics('fig/F4.png')
 ---
 ## Referências
 <br><br>
+
+BRASIL. Ministério da Agricultura e Pecuária. **Regras para Análise de Sementes (RAS)**. 2025. Capítulo 4 — Teste de Germinação. Disponível em: [Acessar capítulo](https://wikisda.agricultura.gov.br/pt-br/Laborat%C3%B3rios/Metodologia/Sementes/RAS_2025/cap_4_Germinacao_rev_1). Acesso em: 29 set. 2026.
 
 COSTA, J. R. (2003). **Técnicas experimentais aplicadas às ciências agrárias**. In: Embrapa Agrobiologia-Documentos (INFOTECA-E).
 

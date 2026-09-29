@@ -55,7 +55,6 @@ list_github_files <- function(repo, dir = NULL, ext = NULL) {
 
 :calendar: 2, 6, 7, 9, 13, 14, 16, 20, 21, 23 e 27 (Outubro)
 
-
 :alarm_clock: **13h30min - 18h50min**
 
 
