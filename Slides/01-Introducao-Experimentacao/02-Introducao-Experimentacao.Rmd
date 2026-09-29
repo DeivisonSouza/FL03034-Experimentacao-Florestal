@@ -971,14 +971,254 @@ e pertencem a **uma única UE**.
 | **O que será observado?** | A emergência, a sobrevivência e o crescimento das mudas na bandeja. |
 ]
 
+---
+
+name: variavel-dado
+
+## 📏 Variável resposta e dado experimental
+
+.pull-left[
+.font80[
+### Variável resposta
+
+É a **característica medida ou avaliada** para investigar
+o efeito dos tratamentos.
+
+**No viveiro:** emergência, sobrevivência, altura
+e diâmetro do colo.
+
+### Dado experimental
+
+É o **valor ou resultado registrado** para uma variável
+resposta durante o experimento.
+]
+]
+
+--
+
+.pull-right[
+.font80[
+### Imagine uma plântula/muda…
+
+<br>
+
+| Variável resposta | Dado registrado |
+|:--|:--|
+| Emergência | **Sim** |
+| Altura | **18,5 cm** |
+| Diâmetro do colo | **3,2 mm** |
+]
+
+<br>
+
+.font80[
+.alert[
+💡 **Altura** é a variável resposta; **18,5 cm** é o dado registrado.
+]
+]
+]
 
 
+---
+
+name: fator-niveis
+
+## 🔎 Fator, níveis e tratamentos
+
+.font80[
+### Fator?
+
+- É a **característica que o pesquisador modifica deliberadamente**
+para investigar seu efeito sobre uma variável resposta
+]
+
+--
+
+.font80[
+### Níveis?
+
+- São as **diferentes opções escolhidas para o fator no experimento**.
+- **Exemplo:** se o fator é a dose de adubo, os níveis podem ser
+**0, 5 e 10 g por planta**.
+]
+
+--
+
+.font80[
+### Tratamento?
+
+É a condição experimental aplicada à unidade experimental.
+Pode corresponder a **um nível de um fator** ou a uma
+**combinação de níveis de diferentes fatores**.
+]
+
+--
+
+.font80[
+.alert[
+💡 Quando estudamos **um único fator**, cada nível
+corresponde a um **tratamento**.
+]
+]
+
+---
+
+name: fator-viveiro
+
+## 🔎 Fator, níveis e tratamentos: exemplo do viveiro
+
+.font80[
+### O que muda de um substrato para outro?
+
+A proporção de **terra preta e de material de açaí**
+usada na mistura.
+]
+
+--
+
+.pull-left[
+.font80[
+### Composições comparadas
+
+| Composição do substrato | Tratamento |
+|:--|:--:|
+| **100% terra preta** | **S1** |
+| **75% terra preta + 25% material de açaí** | **S2** |
+| **50% terra preta + 50% material de açaí** | **S3** |
+]
+]
+
+.pull-right[
+.font80[
+
+.alert[
+💡 **Fator:** composição do substrato.
+
+💡 **Níveis do fator:** as três composições escolhidas para comparação.
+
+💡 **Tratamentos:** as misturas **S1, S2 e S3**, aplicadas às UEs.
+]
+]
+]
+
+<div style="clear: both;"></div>
+
+--
+
+.font80[
+**Neste exemplo, cada nível do fator corresponde a um tratamento.**
+]
+
+---
+
+name: dois-fatores
+
+## 🔎 E se estudarmos dois fatores ao mesmo tempo?
+
+<br>
+
+.font80[
+Agora, imagine que desejamos comparar em viveiro **três tipos de substratos**
+em **duas condições de sombreamento**.
+]
+
+--
+
+.pull-left[
+.font70[
+### Combinações
+
+| Tratamento | Substrato | Sombreamento |
+|:--:|:--|:--:|
+| **T1** | **S1:** 100% terra preta | 0% |
+| **T2** | **S1:** 100% terra preta | 50% |
+| **T3** | **S2:** 75% terra preta + 25% material de açaí | 0% |
+| **T4** | **S2:** 75% terra preta + 25% material de açaí | 50% |
+| **T5** | **S3:** 50% terra preta + 50% material de açaí | 0% |
+| **T6** | **S3:** 50% terra preta + 50% material de açaí | 50% |
+]
+
+.font70[
+- **0%:** Pleno sol.
+- **50%:** Sobreamento de 50%.
+]
+]
+
+.pull-right[
+
+<br>
+
+.font80[
+.alert[
+💡 **Fatores:** composição do substrato e sombreamento.
+
+💡 **Níveis dos fatores:** três substratos (S1, S2 e S3)
+e duas condições de sombreamento (0% e 50%).
+
+💡 **Tratamentos:** 6 combinações de substrato
+e sombreamento aplicadas às UEs. Cada combinação de níveis
+corresponde a um tratamento: 3 × 2 = 6 tratamentos.
+]
+]
+]
+
+---
+
+name: conceitos-viveiro
+class: center
+
+## Consolidando os conceitos...
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
+knitr::include_graphics("fig/conceitos.png")
+```
 
 
+---
+name: consolidacao-conceitos
 
+## ✏️ Vamos praticar...
 
+.pull-left[
+.font70[
+### Uma situação no campo...
 
+- Um pesquisador compara **três doses de fertilizante:
+0, 100 e 200 g por planta** em um plantio de eucalipto.
+- Cada **parcela de 120 m² (12 m × 10 m)** é implantada
+com **20 mudas**, em espaçamento de **3 m × 2 m**.
+- O tratamento é atribuído à parcela, e todas as suas
+plantas recebem a mesma dose.
+- Após **12 meses do plantio**, mede-se a **altura das árvores**.
+Uma delas apresenta **4,2 m**.
 
+### Pergunta-se:
+
+- Qual é o **fator** e quais são seus **níveis**?
+- Quais são os **tratamentos**?
+- Qual é a **unidade experimental**?
+- Qual é a **variável resposta** e o **dado registrado**?
+
+]
+]
+
+--
+
+.pull-right[
+
+<br><br>
+
+.font70[
+.alert[
+💡 **Respostas:**
+- **Fator:** dose de fertilizante.
+- **Níveis e tratamentos:** 0, 100 e 200 g por planta.
+- **UE:** parcela de 120 m² com 20 plantas.
+- **Variável resposta:** altura.
+- **Dado registrado:** 4,2 m.
+]
+]
+]
 
 ---
 
