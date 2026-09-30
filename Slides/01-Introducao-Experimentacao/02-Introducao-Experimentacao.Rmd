@@ -1239,7 +1239,7 @@ corresponde a um tratamento: 3 × 2 = 6 tratamentos.
 name: conceitos-viveiro
 class: center
 
-### Consolidando os conceitos...
+## Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
 knitr::include_graphics("fig/exp_parcela_tubetes.png")
@@ -1252,7 +1252,7 @@ knitr::include_graphics("fig/exp_parcela_tubetes.png")
 name: conceitos-viveiro
 class: center
 
-### Consolidando os conceitos...
+## Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
 knitr::include_graphics("fig/exp_parcela_bandeja.png")
@@ -1265,7 +1265,7 @@ knitr::include_graphics("fig/exp_parcela_bandeja.png")
 name: conceitos-viveiro
 class: center
 
-### Consolidando os conceitos...
+## Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
 knitr::include_graphics("fig/experimento-campo-eucalipto.png")
@@ -1329,47 +1329,84 @@ name: variacao-conceito
 .pull-left[
 .font80[
 .alert[
-**Variação experimental:** diferenças entre os valores
-observados de uma determinada **variável resposta**.
+### Variação Experimental
 
-Podem ocorrer entre unidades experimentais que recebem
-o **mesmo tratamento** ou **tratamentos diferentes**.
+São as **diferenças observadas nos resultados**
+obtidos entre as **unidades experimentais**.
+]
 ]
 
-### No exemplo do viveiro...
-
-- **Tratamentos:** três substratos;
+#### No exemplo do viveiro...
+.font80[
+- **Tratamentos:** S1, S2 e S3;
 - **Unidade experimental:** parcela com **25 tubetes**;
-- **Repetições:** quatro parcelas por substrato; e
-- **Medição:** altura de cada planta, utilizada para
-calcular a **altura média de cada parcela**.
+- **Parcelas:** quatro por substrato; e
+- **Variável resposta:** altura das mudas.
+]
+]
+
+.pull-right[
+.font80[
+#### Como representar o resultado da parcela?
+
+- A altura é medida nas mudas que compõem cada parcela.
+- A partir dessas medições, pode-se obter, por exemplo,
+a **altura média da parcela**, em centímetro.
+- Assim, cada parcela fornece um resultado (média) que poderá
+ser comparado com os resultados das demais parcelas.
+]
+]
+
+---
+name: variacao-onde
+
+## 🔎 Onde podemos observar variação?
+
+<br>
+
+.pull-left[
+.font80[
+#### 1️⃣ Dentro da parcela
+
+- As **25 mudas** de uma mesma parcela (que recebeu o mesmo substrato!)
+podem apresentar **alturas diferentes**. 😲
+
+<br>
+
+#### 2️⃣ Entre parcelas do mesmo substrato
+
+- As **quatro parcelas** que recebem o mesmo substrato
+podem apresentar **alturas médias diferentes** entre si. 😲
+]
+]
+
+.pull-right[
+.font80[
+#### 3️⃣ Entre substratos
+
+As médias das parcelas dos tratamentos
+**S1, S2 e S3** também podem ser diferentes. 😲
+
+<br>
+
+.alert[
+💡 Portanto, a variação pode aparecer em diferentes níveis:
+
+.center[**entre mudas → entre parcelas → entre tratamentos**]
+]
 ]
 ]
 
 --
 
-.pull-right[
-.font80[
-### Onde observamos variação?
+<br>
 
-- **Dentro da parcela:** as plantas podem ter alturas diferentes;
-- **Entre parcelas do mesmo substrato:** suas médias podem diferir; e
-- **Entre substratos:** as médias também podem diferir.
-
-### Por que isso importa?
-
-Precisamos avaliar se as diferenças entre substratos
-refletem o **efeito dos tratamentos**, considerando
-também a variação entre parcelas do mesmo tratamento.
-]
-
-.font70[
 .alert[
-💡 **Variação:** diferenças entre os valores.
-
-💡 **Variância:** medida estatística da dispersão
-dos valores em torno da média.
-]
+.font70[
+❓ **Questão central:** as diferenças observadas entre os substratos
+são realmente efeito dos **tratamentos** ou podem resultar de
+**outras fontes de variação** que também influenciam
+o crescimento das mudas?
 ]
 ]
 
