@@ -729,7 +729,7 @@ name: Trat
 
 .font80[
 .alert[
-**TRATAMENTO**
+### Tratamento
 
 É cada **condição que se deseja avaliar ou comparar**
 em um experimento.
@@ -803,7 +803,7 @@ name: UE
 
 .font80[
 .alert[
-**UNIDADE EXPERIMENTAL**
+### Unidade Experimental
 
 É a **menor unidade do experimento à qual um tratamento
 é atribuído de forma independente**.
@@ -921,8 +921,6 @@ name: ue-comparacao
 
 ## 🧩 Tubete ou parcela: qual é a unidade experimental?
 
-<br>
-
 .pull-left[
 .font80[
 #### 🪴 Situação A: tratamento por tubete
@@ -1019,25 +1017,32 @@ e pertencem a **uma única UE**.
 ]
 
 ---
-
 name: variavel-dado
 
 ## 📏 Variável resposta e dado experimental
 
 .pull-left[
 .font80[
+.alert[
 ### Variável resposta
 
 É a **característica medida ou avaliada** para investigar
 o efeito dos tratamentos.
 
-**No viveiro:** emergência, sobrevivência, altura
-e diâmetro do colo.
+**No viveiro, por exemplo:**
 
+- Emergência;
+- Sobrevivência;
+- Altura; e
+- Diâmetro do colo.
+]
+
+.alert[
 ### Dado experimental
 
 É o **valor ou resultado registrado** para uma variável
 resposta durante o experimento.
+]
 ]
 ]
 
@@ -1045,7 +1050,7 @@ resposta durante o experimento.
 
 .pull-right[
 .font80[
-### Imagine uma plântula/muda…
+### Imagine uma muda…
 
 <br>
 
@@ -1054,110 +1059,129 @@ resposta durante o experimento.
 | Emergência | **Sim** |
 | Altura | **18,5 cm** |
 | Diâmetro do colo | **3,2 mm** |
-]
 
 <br>
 
-.font80[
 .alert[
 💡 **Altura** é a variável resposta; **18,5 cm** é o dado registrado.
 ]
 ]
 ]
 
+---
+name: exemplos-variaveis-resposta
+
+## 📏 Exemplos de variáveis resposta em diferentes contextos
+
+<br>
+
+.font60[
+| Contexto | Experimento | Exemplos de variáveis resposta |
+|:--|:--|:--|
+| 🌱 **Viveiro** | Substratos | Emergência; sobrevivência; altura; diâmetro do colo |
+| 🌱 **Viveiro** | Sombreamento | Altura; diâmetro do colo; massa seca; qualidade da muda |
+| 🌱 **Viveiro** | Recipientes | Sobrevivência; altura; diâmetro do colo; biomassa |
+| 🌱 **Viveiro** | Irrigação | Sobrevivência; altura; massa seca; teor de água |
+| 🌳 **Campo** | Espaçamentos | Sobrevivência; altura; DAP; volume |
+| 🌳 **Campo** | Adubação | Altura; DAP; área basal; volume |
+| 🌳 **Campo** | Preparo do solo | Sobrevivência; altura; DAP; crescimento |
+| 🌳 **Campo** | Controle de plantas daninhas | Sobrevivência; altura; DAP; crescimento |
+| 🔬 **Laboratório** | Temperatura de germinação | Germinação; velocidade; tempo médio de germinação |
+| 🔬 **Laboratório** | Substrato de germinação | Germinação; velocidade; comprimento de plântulas |
+| 🔬 **Laboratório** | Tratamento pré-germinativo | Germinação; velocidade; tempo médio de germinação |
+| 🔬 **Laboratório** | Temperatura de secagem da madeira | Teor de umidade; tempo de secagem; defeitos de secagem |
+]
+
+--
+
+.alert[
+.font80[
+💡 A **variável resposta** é escolhida de acordo com a
+**pergunta que o experimento pretende responder**.
+]
+]
 
 ---
-
 name: fator-niveis
 
-## 🔎 Fator, níveis e tratamentos
-
-.font80[
-### Fator?
-
-- É a **característica que o pesquisador modifica deliberadamente**
-para investigar seu efeito sobre uma variável resposta
-]
-
---
-
-.font80[
-### Níveis?
-
-- São as **diferentes opções escolhidas para o fator no experimento**.
-- **Exemplo:** se o fator é a dose de adubo, os níveis podem ser
-**0, 5 e 10 g por planta**.
-]
-
---
-
-.font80[
-### Tratamento?
-
-É a condição experimental aplicada à unidade experimental.
-Pode corresponder a **um nível de um fator** ou a uma
-**combinação de níveis de diferentes fatores**.
-]
-
---
-
-.font80[
-.alert[
-💡 Quando estudamos **um único fator**, cada nível
-corresponde a um **tratamento**.
-]
-]
-
----
-
-name: fator-viveiro
-
-## 🔎 Fator, níveis e tratamentos: exemplo do viveiro
-
-.font80[
-### O que muda de um substrato para outro?
-
-A proporção de **terra preta e de material de açaí**
-usada na mistura.
-]
-
---
+## 🎛️ Fator e níveis
 
 .pull-left[
 .font80[
-### Composições comparadas
+.alert[
+### Fator
+É a característica ou condição que o pesquisador
+**modifica ou controla** para avaliar seus efeitos
+no experimento.
+]
 
-| Composição do substrato | Tratamento |
-|:--|:--:|
-| **100% terra preta** | **S1** |
-| **75% terra preta + 25% material de açaí** | **S2** |
-| **50% terra preta + 50% material de açaí** | **S3** |
+.alert[
+### Níveis
+São os diferentes **valores, categorias ou condições**
+assumidos pelo fator.
+]
+
+<br>
+
+💡 **Fator:** é **o que queremos estudar ou comparar**.
+
+💡 **Níveis:** são as **diferentes formas ou valores**
+que esse fator assume.
 ]
 ]
 
 .pull-right[
-.font80[
+.font75[
+### Exemplos
+
+| Contexto | Fator | Níveis |
+|:--|:--|:--|
+| 🌱 **Viveiro** | Composição do substrato | S1; S2; S3 |
+| 🌳 **Campo** | Espaçamento de plantio | 3,0 × 1,5; 3,0 × 2,0; 3,0 × 2,5 m |
+| 🔬 **Laboratório** | Temperatura | 20 °C; 25 °C; 30 °C |
+]
+
+<br>
 
 .alert[
-💡 **Fator:** composição do substrato.
-
-💡 **Níveis do fator:** as três composições escolhidas para comparação.
-
-💡 **Tratamentos:** as misturas **S1, S2 e S3**, aplicadas às UEs.
+.font80[
+**Exemplo:** se o fator é **temperatura**,
+os níveis podem ser **20 °C, 25 °C e 30 °C**.
 ]
 ]
 ]
 
 <div style="clear: both;"></div>
 
+---
+name: fator-niveis-tratamentos
+
+## 🔗 Como fator, níveis e tratamentos se relacionam?
+
+<br>
+
+.font75[
+| Contexto | Fator | Níveis do fator | Tratamentos |
+|:--|:--|:--|:--|
+| 🌱 **Viveiro** | Composição do substrato | S1; S2; S3 | S1; S2; S3 |
+| 🌳 **Campo** | Espaçamento de plantio | 3,0 × 1,5 m; 3,0 × 2,0 m; 3,0 × 2,5 m | E1; E2; E3 |
+| 🔬 **Laboratório** | Temperatura | 20 °C; 25 °C; 30 °C | 20 °C; 25 °C; 30 °C |
+]
+
 --
 
+<br>
+
+.alert[
 .font80[
-**Neste exemplo, cada nível do fator corresponde a um tratamento.**
+💡 Em experimentos com **apenas um fator**, cada **nível do fator**
+corresponde a um **tratamento**.
+
+💡 **Nos exemplos:** 1 fator → 3 níveis do fator → **3 tratamentos**.
+]
 ]
 
 ---
-
 name: dois-fatores
 
 ## 🔎 E se estudarmos dois fatores ao mesmo tempo?
@@ -1199,11 +1223,13 @@ em **duas condições de sombreamento**.
 .alert[
 💡 **Fatores:** composição do substrato e sombreamento.
 
-💡 **Níveis dos fatores:** três substratos (S1, S2 e S3)
-e duas condições de sombreamento (0% e 50%).
+💡 **Níveis dos fatores:** 3 substratos (S1, S2 e S3)
+e 2 condições de sombreamento (0% e 50%).
 
 💡 **Tratamentos:** 6 combinações de substrato
-e sombreamento aplicadas às UEs. Cada combinação de níveis
+e sombreamento. 
+
+💡 Cada combinação de níveis
 corresponde a um tratamento: 3 × 2 = 6 tratamentos.
 ]
 ]
@@ -1213,21 +1239,33 @@ corresponde a um tratamento: 3 × 2 = 6 tratamentos.
 name: conceitos-viveiro
 class: center
 
-## Consolidando os conceitos...
+### Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/experimento-viveiro.png")
+knitr::include_graphics("fig/exp_parcela_tubetes.png")
 ```
 .font70[
 **Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
 ]
 
+---
+name: conceitos-viveiro
+class: center
+
+### Consolidando os conceitos...
+
+```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
+knitr::include_graphics("fig/exp_parcela_bandeja.png")
+```
+.font70[
+**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
+]
 
 ---
 name: conceitos-viveiro
 class: center
 
-## Consolidando os conceitos...
+### Consolidando os conceitos...
 
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
 knitr::include_graphics("fig/experimento-campo-eucalipto.png")
