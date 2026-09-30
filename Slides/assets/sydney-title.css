@@ -807,6 +807,7 @@ slides > slide {
 h1 {
   font-weight: normal;
   text-shadow: none;
+  font-size: 35px;
   margin-top: 0px;
   margin-left: 0px;
   color: black;
@@ -817,8 +818,8 @@ h2 {
   padding-top: 20px;
   padding-bottom: 00px;
   color: #b83505;
+  font-size: 25px;
   text-shadow: none;
-  font-weight: 400;
   margin-left: 5px;
   margin-bottom: 0px;
 }
@@ -828,7 +829,8 @@ h3 {
   padding-bottom: 00px;
   color: #dd7321;
   text-shadow: none;
-  font-weight: 200;
+  font-size: 25px;
+  font-weight: normal;
   margin-left: 5px;
   margin-bottom: 0px;
 }
@@ -838,7 +840,8 @@ h4 {
   padding-bottom: 00px;
   color: #ed4406;
   text-shadow: none;
-  font-weight: 400;
+  font-size: 20px;
+  font-weight: bold;
   margin-left: 5px;
   margin-bottom: 0px;
 }

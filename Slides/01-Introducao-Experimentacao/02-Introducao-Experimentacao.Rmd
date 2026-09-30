@@ -663,7 +663,6 @@ Introdução à Experimentação
 </div>
 
 ---
-
 name: Exp
 
 ## 🔬 Experimentação e experimento
@@ -685,9 +684,9 @@ Fonte: <a href="https://media.giphy.com">Giphy</a>, 19 jul. 2021.
 .font80[
 ### Experimentação
 
-É a parte da estatística que estuda o **planejamento**
-e a **execução** de experimentos, bem como a **coleta**,
-a **análise** e a **interpretação** de dados experimentais.
+É a área da estatística dedicada ao **planejamento**,
+à **condução**, à **análise** e à **interpretação**
+de experimentos.
 ]
 
 </div>
@@ -699,9 +698,9 @@ a **análise** e a **interpretação** de dados experimentais.
 .font80[
 ### Experimento (ou ensaio)
 
-É uma experiência realizada em **condições previamente
-estabelecidas** e que opera com **causas controladas**
-(DIAS; BARROS, 2009).
+É uma experiência planejada no qual uma ou mais condições
+são deliberadamente modificadas, enquanto seus
+efeitos sobre alguma variável resposta são observados ou medidos.
 ]
 
 </div>
@@ -712,81 +711,104 @@ estabelecidas** e que opera com **causas controladas**
 
 .font80[
 .alert[
-💡 **No viveiro:** modificamos a **composição do substrato**
-e avaliamos a emergência, a sobrevivência e o crescimento das mudas.
+💡 Nos exemplos anteriores, modificamos deliberadamente:
+- 🌱 A composição do substrato;
+- 🌳 O espaçamento de plantio; e
+- 🔬 A temperatura de germinação.
 ]
 ]
 
 </div>
 
 ---
-
 name: Trat
 
 ## 🪴 Tratamento: o que será comparado?
+
+<br>
 
 .font80[
 .alert[
 **TRATAMENTO**
 
-É a condição aplicada à unidade experimental cujo efeito
-se deseja **avaliar e comparar**. Pode ser um material,
-um método ou uma combinação de condições.
+É cada **condição que se deseja avaliar ou comparar**
+em um experimento.
+
+Pode representar um material, um método, uma dose,
+uma condição ambiental ou uma combinação de condições.
 ]
 ]
 
 --
 
 .font80[
-💡 **No nosso viveiro:** cada mistura de substrato
-(**S1, S2 e S3**) corresponde a um **tratamento**.
+### Nos exemplos anteriores...
+
+- 🌱 **Viveiro:** os substratos **S1, S2 e S3** são os tratamentos;
+- 🌳 **Campo:** os espaçamentos **E1, E2 e E3** são os tratamentos; e
+- 🔬 **Laboratório:** as temperaturas de **20 °C, 25 °C e 30 °C**
+são os tratamentos.
 ]
 
 --
 
-.pull-left[
-```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media.giphy.com/media/fjrLK07VbIcn7ZfX3f/giphy.gif")
-```
+<br>
 
-<div style="font-size:50%; text-align:center;">
-Fonte: <a href="https://media.giphy.com">Giphy</a>, 19 jul. 2021.
-</div>
-]
-
-.pull-right[
-.font70[
-### Outros exemplos
-
-**No campo:**
-- Métodos de preparo do solo;
-- Doses de adubação;
-- Espaçamentos de plantio.
-
-**No viveiro:**
-- Tipos de substrato;
-- Níveis de sombreamento;
-- Tipos de recipiente.
+.alert[
+.font80[
+💡 Portanto, o tratamento representa **aquilo que é deliberadamente
+modificado ou comparado** no experimento.
 ]
 ]
-
-<div style="clear: both;"></div>
 
 ---
+name: exemplos-tratamentos
 
+## 🔍 Exemplos de tratamentos em diferentes contextos
+
+<br>
+
+.font60[
+| Contexto | O que pode ser comparado? | Exemplos de tratamentos |
+|:--|:--|:--|
+| 🌱 **Viveiro** | Substratos | S1; S2; S3 |
+| 🌱 **Viveiro** | Sombreamento | 0%; 30%; 50% |
+| 🌱 **Viveiro** | Recipientes | Tubetes de 55; 110; 180 cm³ |
+| 🌱 **Viveiro** | Irrigação | 1; 2; 3 irrigações dia⁻¹ |
+| 🌳 **Campo** | Espaçamentos | 3,0 × 1,5; 3,0 × 2,0; 3,0 × 2,5 m |
+| 🌳 **Campo** | Adubação | 0; 50; 100 kg ha⁻¹ |
+| 🌳 **Campo** | Preparo do solo | Coveamento; escarificação; subsolagem |
+| 🌳 **Campo** | Controle de plantas daninhas | Manual; mecânico; químico |
+| 🔬 **Laboratório** | Temperatura | 20; 25; 30 °C |
+| 🔬 **Laboratório** | Substrato de germinação | Papel; areia; vermiculita |
+| 🔬 **Laboratório** | Tratamento pré-germinativo | Controle; escarificação; imersão em água |
+| 🔬 **Laboratório** | Temperatura de secagem | 40 °C; 60 °C; 80 °C |
+]
+
+--
+
+.alert[
+.font70[
+💡 Os **tratamentos** são as diferentes condições
+estabelecidas para serem comparadas dentro de cada experimento.
+]
+]
+
+---
 name: UE
 
 ## 🌱 Unidade experimental (ou parcela)
 
+<br>
+
 .font80[
 .alert[
-
 **UNIDADE EXPERIMENTAL**
 
-- É a **menor unidade à qual um tratamento é atribuído
-de forma independente**.
-- Pode ser uma planta, um recipiente ou um grupo de plantas.
-- Em experimentos de campo, é frequentemente chamada de
+É a **menor unidade do experimento à qual um tratamento
+é atribuído de forma independente**.
+
+Em experimentos de campo, é frequentemente chamada de
 **parcela experimental**.
 ]
 ]
@@ -796,52 +818,165 @@ de forma independente**.
 .font80[
 ### Exemplos...
 
-- **Campo:** uma parcela contendo várias mudas/árvores;
-- **Viveiro ou casa de vegetação:** um vaso, um tubete ou uma bandeja;
-- **Laboratório:** uma placa de Petri, caixa de germinação (tipo Gerbox).
-]
-
---
-
-.font80[
-💡 **Atenção:** se uma bandeja inteira recebe um único tratamento
-como conjunto, ela é a UE. As plantas medidas dentro dela
-não são, automaticamente, unidades experimentais independentes.
-]
-
----
-name: ue-tubete
-
-## 🪴 Exemplo do viveiro: uma UE pode ser um tubete
-
-.font80[
-### Como o experimento é organizado?
-
-- Cada **tubete** recebe um dos substratos: S1, S2 ou S3;
-- É semeada **uma semente de paricá por tubete**; e
-- Os tratamentos são sorteados entre os tubetes.
+- 🌳 **Campo:** uma parcela contendo várias árvores;
+- 🌱 **Viveiro ou casa de vegetação:** um vaso, um tubete ou uma bandeja;
+- 🔬 **Laboratório:** uma placa de Petri, uma caixa de germinação
+(tipo Gerbox) ou outro recipiente experimental.
 ]
 
 --
 
 .font80[
 .alert[
-💡 **Nesta montagem, 1 tubete = 1 unidade experimental.**
+💡 **Atenção:** a unidade experimental depende de
+**como o tratamento é aplicado**.
 
-💡 Cada tubete recebe seu tratamento de forma independente.
+Se uma bandeja inteira recebe um único tratamento como conjunto,
+a **bandeja é a unidade experimental**. As plantas dentro dela
+não são, automaticamente, unidades experimentais independentes.
 ]
+]
+
+---
+name: ue-tubete
+
+## 🪴 Exemplo no viveiro: quando 1 tubete é uma UE
+
+.font80[
+### Como o experimento é organizado?
+
+- Cada **tubete** recebe um dos substratos: S1, S2 ou S3;
+- É semeada **uma semente de paricá por tubete**; e
+- Cada tubete recebe seu tratamento **de forma independente**.
 ]
 
 --
 
 .font80[
+.alert[
+💡 **Nesta montagem:**
+
+#### 1 tubete = 1 unidade experimental
+]
+]
+
+--
+
 <br>
 
+.font80[
 | Elemento | No exemplo do viveiro |
 |:--|:--|
-| **Tratamento** | O substrato aplicado: S1, S2 ou S3. |
-| **Unidade experimental** | O tubete que recebe o substrato. |
-| **O que será observado?** | A emergência, a sobrevivência e o crescimento da muda. |
+| **Tratamento** | Substrato aplicado: S1, S2 ou S3 |
+| **Unidade experimental** | Tubete que recebe o substrato |
+| **O que será observado?** | Emergência, sobrevivência e crescimento da muda |
+]
+
+---
+name: ue-parcela-tubetes
+
+## 🌱 Exemplo no viveiro: quando um grupo de tubetes é uma UE
+
+<br>
+
+.pull-left[
+.font80[
+### Como o experimento é organizado?
+
+- Primeiro, os tubetes podem ser organizados, por exemplo,
+em **parcelas com 25 tubetes**;
+- Cada parcela recebe **um único substrato**: S1, S2 ou S3;
+- Assim, todos os **25 tubetes da parcela recebem o mesmo tratamento**; e
+- O conjunto de 25 tubetes funciona como
+**uma única unidade experimental**.
+]
+]
+
+.pull-right[
+.font80[
+.alert[
+💡 **Nesta montagem:**
+
+#### 1 parcela com 25 tubetes = 1 UE
+
+Os 25 tubetes pertencem à **mesma unidade experimental**.
+]
+]
+
+<br>
+
+.font75[
+| Elemento | Neste exemplo |
+|:--|:--|
+| **Tratamento** | S1, S2 ou S3 |
+| **Unidade experimental** | Parcela com 25 tubetes |
+| **O que será observado?** | Emergência, sobrevivência e crescimento das mudas |
+]
+]
+
+<div style="clear: both;"></div>
+
+---
+name: ue-comparacao
+
+## 🧩 Tubete ou parcela: qual é a unidade experimental?
+
+<br>
+
+.pull-left[
+.font80[
+#### 🪴 Situação A: tratamento por tubete
+
+Cada **tubete** pode receber S1, S2 ou S3
+**independentemente dos demais**.
+
+<br>
+
+**Exemplo:**
+
+- Tubete 1 → S2
+- Tubete 2 → S1
+- Tubete 3 → S3
+- Tubete 4 → S1
+
+.alert[
+💡 **1 tubete = 1 UE**
+]
+]
+]
+
+.pull-right[
+.font80[
+#### 🌱 Situação B: tratamento por parcela
+
+Os tubetes são organizados em grupos de **25** e cada grupo
+recebe **um único substrato**.
+
+<br>
+
+**Exemplo:**
+
+- Parcela 1 → S2
+- Parcela 2 → S1
+- Parcela 3 → S3
+
+.alert[
+💡 **1 parcela com 25 tubetes = 1 UE**
+]
+]
+]
+
+<div style="clear: both;"></div>
+
+--
+
+<br>
+
+.alert[
+.font70[
+❓ **Pergunta-chave:** qual é a menor unidade que pode receber
+um tratamento **independentemente das demais**?
+]
 ]
 
 
@@ -862,7 +997,9 @@ name: ue-bandeja
 
 .font80[
 .alert[
-💡 **Nesta montagem, 1 bandeja = 1 unidade experimental.**
+💡 **Nesta montagem:**
+
+#### 1 bandeja = 1 unidade experimental.**
 
 💡 As 50 sementes compartilham o substrato da mesma bandeja
 e pertencem a **uma única UE**.
