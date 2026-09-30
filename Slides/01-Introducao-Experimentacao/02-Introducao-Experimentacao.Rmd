@@ -258,295 +258,9 @@ Introdução à Experimentação
 </div>
 
 ---
-
-name: germinacao-lote
-
-## 🌱 Situação 1: germinação de um lote de sementes
-
-<br>
-
-.font80[
-👉 **Imagine:** uma empresa produtora/comercializadora de sementes florestais prepara
-um lote de **paricá** (*Schizolobium parahyba* var. *amazonicum*)
-para comercialização.
-]
-
---
-
-.font80[
-### Antes da comercialização…
-
-- Uma **amostra representativa do lote** é obtida;
-- A amostra é encaminhada a um **laboratório de análise de sementes
-credenciado no RENASEM**; e
-- O **potencial germinativo** é avaliado pelo teste de germinação,
-conforme as **Regras para Análise de Sementes (RAS)**.
-]
-
---
-
-<br>
-
-.font80[
-.alert[
-❓ **Qual é a porcentagem estimada de germinação do lote
-em condições de laboratório?**
-]
-]
-
-.font70[
-**RENASEM:** Registro Nacional de Sementes e Mudas, mantido pelo
-**MAPA**. Abrange a inscrição e o credenciamento de pessoas físicas
-e jurídicas para atividades relacionadas a sementes e mudas,
-incluindo a análise laboratorial.
-]
-
----
-
-name: ras
-
-## 📖 O que são as RAS?
-
-<br>
-
-.font80[
-.alert[
-As **Regras para Análise de Sementes (RAS)** reúnem
-**métodos e procedimentos padronizados** para avaliar
-a **qualidade das sementes**.
-
-**Órgão responsável:** Ministério da Agricultura e Pecuária (**MAPA**).
-]
-]
-
---
-
-.font80[
-### Por que seguir essas regras?
-
-- Orientam **como realizar os testes e avaliar os resultados**;
-- Estabelecem condições de análise, como **temperatura,
-substrato e duração do teste**; e
-- Permitem **repetir os testes e comparar seus resultados**,
-dentro dos limites de tolerância previstos nas RAS.
-]
-
---
-
-.font70[
-### Onde consultar?
-
-🌳 **Capítulo 14 — Análise de Sementes de Espécies Florestais**
-
-🔎 **Seção 14.4 — Teste de germinação**
-
-[📖 Acessar o Capítulo 14 das RAS](https://wikisda.agricultura.gov.br/pt-br/Laborat%C3%B3rios/Metodologia/Sementes/RAS_2025/cap_14_florestais_rev_1)
-]
-
----
-
-name: conceitos-germinacao
-
-## 🌱 O que é germinação e como expressar seu resultado?
-
-<br>
-
-.font80[
-.alert[
-**GERMINAÇÃO EM LABORATÓRIO**
-
-É a emergência e o desenvolvimento das **estruturas essenciais
-do embrião**, demonstrando sua capacidade de originar uma planta
-normal em **condições favoráveis** (Brasil, 2025).
-]
-]
-
---
-<br>
-
-.font80[
-.alert[
-**PORCENTAGEM DE GERMINAÇÃO**
-
-É a **porcentagem de sementes que produziram plântulas normais**,
-nas condições e no período definidos para o teste (Brasil, 2025).
-]
-
-<br>
-
-💡 **A saída da raiz, sozinha, não basta:** é necessário avaliar
-as estruturas essenciais da plântula.
-]
-
----
-
-name: plantulas-normais
-
-## 🌱 Quais plântulas são consideradas normais?
-
-<br>
-
-.font80[
-.alert[
-**PLÂNTULAS NORMAIS**
-
-São aquelas que apresentam potencial
-para continuar seu desenvolvimento e dar origem a
-**plantas satisfatórias**.
-]
-]
-
---
-
-.font80[
-### Categorias de plântulas normais
-
-- **Intactas:** estruturas essenciais completas,
-bem desenvolvidas, proporcionais e saudáveis;
-- **Com defeitos aceitáveis:** pequenos defeitos que
-**não comprometem o desenvolvimento**, mantendo crescimento
-equilibrado e comparável ao das plântulas intactas; e
-- **Com infecção secundária:** infecção por fungos ou bactérias
-**proveniente de outras fontes, e não da própria semente**,
-com todas as estruturas essenciais presentes e verificáveis.
-]
-
---
-
-<br>
-
-.font80[
-💡 **Plântula Normal não significa necessariamente perfeita:** determinados
-defeitos e infecções são aceitos conforme os critérios das RAS.
-]
-
----
-
-name: ras-montagem
-
-## 📋 Como montar o teste de germinação do paricá?
-
-<br>
-
-.font80[
-O laboratório segue as **Regras para Análise de Sementes (RAS)**,
-que estabelecem condições padronizadas para o teste.
-]
-
---
-
-.font80[
-### Montagem do teste
-
-- **Quantidade:** 400 sementes obtidas da amostra representativa do lote;
-- **Organização:** 8 repetições de 50 sementes;
-- **Substrato:** Entre Papel (**EP**), incluindo rolo de papel;
-- **Temperatura:** 25 °C.
-]
-
---
-
-.font80[
-.alert[
-💡 **Entre papel:** as sementes ficam entre camadas de
-**papel umedecido**.
-
-💡 No **rolo de papel**, as folhas com as sementes são enroladas,
-mantendo-as em contato com o papel úmido.
-]
-]
-
----
-
-name: ras-avaliacao
-
-## 🔎 Como avaliar o teste de germinação do paricá?
-
-.font80[
-### Quando avaliar?
-
-- **Dia 7:** primeira contagem;
-- **Dia 10:** contagem final indicada.
-- **Prorrogação:** possível (seção 14.4.10 - Duração do teste)
-]
-
-.font70[
-- Os dias são contados a partir da **instalação do teste**;
-- Para cada espécie florestal, consultar os períodos indicados
-no **Quadro 14.1 das RAS**.
-]
-
---
-
-.font80[
-### Como proceder em cada repetição?
-
-- **Identificar e contar as plântulas normais**;
-- **Registrar e retirar** as plântulas normais já contabilizadas; e
-- Nas contagens anteriores à final, manter em avaliação as sementes
-e plântulas que ainda precisam de tempo para permitir sua classificação.
-]
-
----
-
-name: resultado-germinacao
-
-## 🧮 Como calcular a porcentagem de germinação?
-
-.pull-left[
-.font80[
-### Dados hipotéticos
-<br>
-
-| Repetição | Sementes | Plântulas normais |
-|:--:|--:|--:|
-| 1 | 50 | 40 |
-| 2 | 50 | 42 |
-| 3 | 50 | 39 |
-| 4 | 50 | 41 |
-| 5 | 50 | 38 |
-| 6 | 50 | 40 |
-| 7 | 50 | 41 |
-| 8 | 50 | 39 |
-| **Total** | **400** | **320** |
-
-$$
-G = \frac{320}{400}\times 100 = \mathbf{80\%}
-$$
-]
-]
-
-.pull-right[
-.font80[
-### Como calcular?
-<br>
-.alert[
-Divida o total de **plântulas normais** pelo total de
-**sementes testadas** e multiplique por 100.
-]
-
-$$
-\text{Germinação} =
-\frac{\text{Número de plântulas normais}}
-{\text{Número de sementes testadas}}
-\times 100
-$$
-
-### Interpretação
-
-.alert[
-Estima-se que **80 de cada 100 sementes do lote**
-possam produzir **plântulas normais** nas condições
-padronizadas do teste.
-]
-
-]
-]
-
----
 name: substrato-viveiro
 
-## 🌱 Situação 2: qual substrato utilizar no viveiro?
+## 🌱 Situação 1: qual substrato utilizar no viveiro?
 
 <br>
 
@@ -560,25 +274,23 @@ de madeira para lâminas e compensados**.
 --
 
 .font80[
-### Uma nova decisão
+### Uma decisão...
 
 O viveiro dispõe de **três opções de substrato**.
 Antes de ampliar a produção, precisa decidir **qual delas utilizar**.
 
 Para isso, deseja comparar:
 
-- **Emergência:** porcentagem, rapidez e uniformidade;
-- **Qualidade das mudas:** sobrevivência e crescimento
-em altura e diâmetro do colo; e
-- **Custo:** custo por muda apta ao plantio.
+- **Emergência das plântulas**;
+- **Sobrevivência e crescimento das mudas**; e
+- **Custo de produção por muda apta ao plantio**.
 ]
 
 --
 
 .font80[
 .alert[
-❓ **Como planejar uma comparação que permita avaliar
-o efeito dos substratos sobre a produção de mudas?**
+❓ **Como planejar um experimento que permita avaliar o efeito dos substratos sobre a produção de mudas?**
 ]
 ]
 
@@ -591,8 +303,8 @@ name: planejamento-inicial
 .alert[
 💡 **Realizando um experimento!**
 
-❓ Mas, como planejá-lo para comparar os três substratos e obter
-**evidências para orientar a escolha**?
+❓ Mas, como planejá-lo para comparar os três substratos
+e obter **evidências para orientar a escolha**?
 ]
 ]
 
@@ -604,8 +316,8 @@ name: planejamento-inicial
 - Há **1.200 sementes de paricá, provenientes de um mesmo lote**;
 - Será semeada **uma semente por recipiente**, diretamente
 no substrato;
-- A **emergência**, a **sobrevivência** e o **crescimento das mudas**
-serão acompanhados durante **90 dias após a semeadura**; e
+- A **emergência**, a **sobrevivência** e o **crescimento**
+serão acompanhados por **90 dias após a semeadura**; e
 - Os **custos de produção** também serão registrados.
 ]
 
@@ -614,14 +326,13 @@ serão acompanhados durante **90 dias após a semeadura**; e
 .font80[
 ### Como você faria?
 
-- Quantas sementes destinaria para cada substrato?
+- Como dividiria as **1.200 sementes** entre os três substratos?
 - Como distribuiria os recipientes no viveiro?
 - Como manteria padronizados outros fatores,
 como irrigação e luminosidade?
 ]
 
 ---
-
 name: substratos
 
 ## 🪴 Quais substratos serão comparados?
@@ -630,7 +341,7 @@ name: substratos
 
 .pull-left[
 .font80[
-### Três misturas hipotéticas
+### Três composições hipotéticas
 <br>
 
 | Substrato | Terra preta | Material de açaí¹ |
@@ -641,9 +352,7 @@ name: substratos
 ]
 
 .font70[
-¹ Caroço de açaí triturado e compostado.
-
-Proporções medidas em **volume**.
+¹Caroço de açaí triturado e compostado.
 ]
 ]
 
@@ -652,16 +361,15 @@ Proporções medidas em **volume**.
 ### O que muda entre os substratos?
 <br>
 
-A **proporção de material de açaí na mistura**.
+A **composição da mistura**, especialmente a
+**proporção de material de açaí**.
 
-A terra preta e o material de açaí devem vir,
-cada um, de uma **mesma origem** e receber
-**preparo padronizado**.
+Os materiais utilizados devem ter
+**origem e preparo padronizados**.
 
 .alert[
-💡 **Exemplo — 10 litros de S2:**
-
-**7,5 L de terra preta + 2,5 L de material de açaí.**
+💡 **S1, S2 e S3 representam três composições
+distintas de substrato.**
 ]
 ]
 ]
@@ -671,39 +379,241 @@ name: problema-planejamento
 
 ## 🌱 Como organizar essa comparação?
 
-<br>
+.font80[
+### Portanto, você precisa montar um experimento...
 
-.pull-left[
-
-### Substratos a comparar
-
-- **S1:** 100% de terra preta;
-- **S2:** 75% de terra preta + 25% de caroço de açaí triturado;
-- **S3:** 50% de terra preta + 50% de caroço de açaí triturado.
-
+O viveiro possui **1.200 sementes** e deseja comparar
+os substratos **S1, S2 e S3**.
 ]
 
 --
 
-.pull-right[
-
+.font80[
 ### Como você faria?
 
-- Quantas sementes destinaria a cada substrato?
-- Como organizaria as repetições?
+- Como dividiria as **1.200 sementes** entre os três substratos?
+- Plantaria todas as sementes de cada substrato
+**juntas ou em grupos separados**?
 - Como distribuiria os recipientes no viveiro?
-- Quais medidas registraria?
-
+- Quais características das mudas registraria?
+- Como evitaria que diferenças, por exemplo, de **luz, água ou posição**
+influenciem na comparação?
 ]
 
 --
 
 .alert[
-.font90[
-💡 **Questão central:** como planejar o experimento para saber se
-as diferenças observadas entre as mudas são causadas pelos
-**substratos** ou por outros fatores, como **luz, água e diferenças
-entre as próprias sementes**?
+.font80[
+💡 **Questão central:** como planejar um experimento para distinguir
+o **efeito dos substratos** das demais **fontes de variação**?
+]
+]
+
+---
+name: elementos-experimento
+
+## 🧩 O que precisamos definir no experimento?
+
+<br>
+
+.font85[
+Para organizar adequadamente a comparação entre os substratos,
+precisamos identificar alguns **elementos fundamentais** do experimento.
+]
+
+--
+
+.font80[
+- O que será comparado?
+- Onde os tratamentos serão aplicados?
+- O que será observado ou medido?
+- Quais fatores podem influenciar os resultados?
+]
+
+--
+
+<br>
+
+.alert[
+.font80[
+💡 Esses elementos ajudam a transformar uma **pergunta de pesquisa**
+em um **experimento planejado**.
+]
+]
+
+---
+name: experimento-campo
+
+## 🌳 Situação 2: qual espaçamento utilizar no plantio?
+
+<br>
+
+.font80[
+👉 **Imagine:** uma empresa florestal deseja implantar um novo
+plantio de **eucalipto**, mas precisa definir qual espaçamento
+entre as árvores proporciona melhor desempenho inicial.
+]
+
+--
+
+.pull-left[
+.font80[
+### Três opções de espaçamento
+
+- **E1:** 3,0 × 1,5 m;
+- **E2:** 3,0 × 2,0 m;
+- **E3:** 3,0 × 2,5 m.
+
+<br>
+
+A empresa deseja comparar o desempenho das árvores
+durante os primeiros anos após o plantio.
+]
+]
+
+.pull-right[
+.font80[
+### O que poderia ser avaliado?
+
+- **Sobrevivência** das árvores;
+- **Crescimento** (altura e diâmetro à 1,30 m do solo);
+- **Volume de madeira** por área.
+]
+]
+
+--
+
+.alert[
+.font80[
+❓ **Questão central**: Como planejar esse experimento de campo para avaliar
+o efeito dos diferentes espaçamentos sobre o crescimento
+do povoamento?
+]
+]
+
+---
+name: experimento-laboratorio
+
+## 🔬 Situação 3: qual temperatura favorece a germinação?
+
+<br>
+
+.font80[
+👉 **Imagine:** um pesquisador deseja avaliar como diferentes
+**temperaturas** influenciam a germinação de sementes de uma
+espécie florestal em condições controladas de laboratório.
+]
+
+--
+
+.pull-left[
+.font80[
+### Três temperaturas
+
+- **T1:** 20 °C;
+- **T2:** 25 °C;
+- **T3:** 30 °C.
+
+<br>
+
+As sementes são mantidas em condições padronizadas
+de umidade, substrato e luminosidade.
+]
+]
+
+.pull-right[
+.font80[
+### O que poderia ser avaliado?
+
+- Porcentagem de germinação;
+- Tempo médio de germinação;
+- Velocidade de germinação; e
+- Uniformidade da germinação.
+]
+]
+
+--
+
+.alert[
+.font80[
+❓ **Como planejar esse experimento de laboratório para avaliar
+o efeito da temperatura sobre a germinação das sementes?**
+]
+]
+
+---
+name: comparacao-experimentos
+
+## 🧩 O que esses experimentos têm em comum?
+
+<br>
+
+<div style="display: flex; gap: 25px;">
+
+<div style="flex: 1;">
+
+--
+
+.font75[
+### 🌱 Viveiro
+
+👉 **O que deseja-se comparar?**  
+Substratos
+
+👉 **Onde?**  
+Recipientes com mudas
+
+👉 **O que é observado?**  
+Emergência, sobrevivência e crescimento
+]
+
+</div>
+
+<div style="flex: 1;">
+
+.font75[
+### 🌳 Campo
+
+👉 **O que deseja-se comparar?**  
+Espaçamentos
+
+👉 **Onde?**  
+Parcelas com árvores
+
+👉 **O que é observado?**  
+Sobrevivência, crescimento e volume
+]
+
+</div>
+
+<div style="flex: 1;">
+
+.font75[
+### 🔬 Laboratório
+
+👉 **O que deseja-se comparar?**  
+Temperaturas
+
+👉 **Onde?**  
+câmaras de germinação com temperatura controlada
+
+👉 **O que é observado?**  
+Germinação das sementes
+]
+
+</div>
+
+</div>
+
+--
+
+<br>
+
+.alert[
+.font80[
+💡 Apesar de realizados em **ambientes diferentes**, os três experimentos
+seguem uma lógica semelhante: **algo é comparado**, determinadas
+condições são estabelecidas e seus **resultados são observados e medidos**.
 ]
 ]
 
