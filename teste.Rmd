@@ -1,0 +1,33 @@
+---
+title: "Teste Plotly"
+output:
+  xaringan::moon_reader:
+    self_contained: false
+    lib_dir: libs
+    nature:
+      ratio: "16:9"
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(plotly)
+```
+
+---
+
+## Teste Plotly
+
+```{r, echo=FALSE}
+plotly::plot_ly(
+  x = c(1, 2, 3, 4),
+  y = c(2, 5, 3, 7),
+  type = "scatter",
+  mode = "markers"
+)
+```
+
+---
+
+## Segundo slide
+
+Se este texto aparece, o xaringan está funcionando.

@@ -1,36 +1,48 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Análise Exploratória de Dados: uma breve revisão"
+subtitle: "AED: Breve revisão"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+
     self_contained: false
+    lib_dir: libs
     seal: false
+
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
+
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -39,95 +51,62 @@ knitr::opts_chunk$set(
 	fig.showtext = TRUE,
 	message = FALSE,
 	warning = FALSE,
-	cache = FALSE,
+	cache = TRUE,
 	collapse = TRUE,
 	dpi = 600
 )
 ```
 
-```{r packages, include=FALSE}
-# remotes::install_github("dill/emoGG")
-library(ggplot2)
+```{r setup2, include=FALSE}
+options(
+  htmltools.dir.version = FALSE,
+  htmltools.preserve.raw = FALSE
+)
+
 library(dplyr)
+library(ggplot2)
+library(plotly)
+library(DT)
 library(ggimage)
 ```
 
-```{css, echo=FALSE}
-.with-logo::before {
-	content: '';
-	width: 120px;
-	height: 120px;
-	position: absolute;
-	bottom: 1.3em;
-	right: -0.5em;
-	background-size: contain;
-	background-repeat: no-repeat;
-}
-
-.logo-ufpa::before {
-	background-image: url(fig/slide-title/ufpa.png);
-}
+```{r packages, include=FALSE}
+# remotes::install_github("dill/emoGG")
+# remotes::install_github("hadley/emo")
+# remotes::install_github("emitanaka/anicon")
+# remotes::install_github("mitchelloharawild/icons")
 ```
 
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 
-use_logo(
-  image_url = "fig/slide-title/LMFTCA.png",
-  position = css_position(top = "1em", right = ".5em"),
-  width = "130px",
-  height = "130px")
-
-
-use_scribble() # para escrever nos slides
+use_scribble()
 use_share_again()
 use_progress_bar()
-#use_animate_all(style = c("slide_down"))
 
 use_extra_styles(
-  hover_code_line = TRUE,         #<<
-  mute_unhighlighted_code = TRUE  #<<
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = TRUE
 )
-xaringanExtra::use_editable(expires = 1)
-#.can-edit[Você pode editar este título de slide]
-#.can-edit.key-firstSlideTitle[Change this title and then reload the page]
+
+use_editable(expires = 1)
 use_clipboard()
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "html",
-           hyperlink = FALSE,
-           dashed = FALSE)
-(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
-```
-
-```{r icon, echo=FALSE}
-#remotes::install_github("mitchelloharawild/icons")
-#remotes::install_github('emitanaka/anicon')
-#library(icons)
-#download_fontawesome()
-#download_simple_icons()
-```
-
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise Exploratória `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> de Dados
-###### Conceito, Importância e Tipos
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Análise Exploratória de Dados`r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
-##### ᨒ
-##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+###### (Uma breve revisão)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 <br>
-##### 1ª versão: 18/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
+##### 1ª versão: 11/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
 
 ---
 layout: true
@@ -240,7 +219,7 @@ Dados, códigos R (e outros) podem ser acessados em:
 
 .pull-right-4[
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class2/Livro-Bussab.jpeg')
+knitr::include_graphics('fig/Livro-Bussab.jpeg')
 ```
 ]
 
@@ -250,14 +229,30 @@ knitr::include_graphics('fig/class2/Livro-Bussab.jpeg')
 <!-- Slide XX -->
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
+background-position: center
+background-repeat: no-repeat
 
-.font200[**Parte 1 <br> Terminologias e conceitos básicos**]
+.right[
+<br>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+.font100[
+<span style="color:#244A6B;"><b>Experimentação Florestal</b></span>
+]
+<br><br>
+
+.font150[
+<span style="color:#244A6B;"><b>Parte 1</b></span>
+]
+
+<br><br>
+.font180[
+<span style="color:#0B1F3A;"><b>Terminologias e<br>conceitos básicos</b></span>
+]
+]
 
 ---
 layout: true
@@ -293,7 +288,7 @@ A estatística é, em geral, dividida em dois grandes grupos:
 
 ### Estatística Descritiva
 
-É a parte da estatística que lida com a **organização**, **resumo** e **apresentação** de dados `r Citep(myBib, "ferreira2009", .opts = list(max.names = 2, longnamesfirst = F))`.
+É a parte da estatística que lida com a **organização**, **resumo** e **apresentação** de dados.
 
 <br>
 
@@ -309,22 +304,31 @@ A estatística é, em geral, dividida em dois grandes grupos:
 ```{r , echo=FALSE, eval=TRUE}
 library(dplyr)
 
-data <- data.table::fread("data/Cedrela.csv")
+cedrela <- data.table::fread("data/Cedrela.csv")
 
-# data %>%
-#   knitr::kable(format= "html")
-
-data %>% 
-   DT::datatable(editable = 'cell', rownames = FALSE, style = "default",
-                 class = "display", width = '350px',
-                 caption = 'Dados de Cedrela odorata.',
-     options=list(pageLength = 10, dom = 'tip', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "12pt", "'});"),
-          "}")
-       ) 
-     )
+cedrela %>% 
+  DT::datatable(
+    editable = "cell",
+    rownames = FALSE,
+    style = "default",
+    class = "display",
+    width = "350px",
+    caption = "Dados de Cedrela odorata.",
+    options = list(
+      pageLength = 10,
+      dom = "tip",
+      autoWidth = FALSE,
+      initComplete = htmlwidgets::JS(
+        "function(settings, json) {",
+        paste0(
+          "$(this.api().table().container()).css({'font-size': '",
+          "12pt",
+          "'});"
+        ),
+        "}"
+      )
+    )
+  )
 ```
 ]
 
@@ -336,10 +340,10 @@ data %>%
 
 ```{r}
 # Usando funções da linguagem R
-mean(data$D)
-sd(data$D)
-var(data$H)
-table(data$QF)
+mean(cedrela$D)
+sd(cedrela$D)
+var(cedrela$H)
+table(cedrela$QF)
 ```
 
 ]
@@ -349,32 +353,53 @@ table(data$QF)
 ## Terminologias e conceitos básicos
 <br>
 
+```{r cria-g1, echo=FALSE, include=FALSE}
+g1 <- cedrela %>% 
+  ggplot(aes(x = 1, y = D)) + 
+  geom_boxplot() + 
+  xlab(NULL) + 
+  theme_bw() +
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  )
+```
+
 .left-column[
 
 ### Como extrair informações descritivas?
 
 * Usar representações gráficas
 
-```{r g1, echo=TRUE, eval=FALSE}
+```{r codigo-g1, echo=TRUE, eval=FALSE}
 # Criando um BoxPlot Univariado
 
-g1 <- data %>% 
+g1 <- cedrela %>% 
   ggplot(aes(x = 1, y = D)) + 
   geom_boxplot() + 
   xlab(NULL) + 
   theme_bw() +
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank())
+  theme(
+    axis.text.x = element_blank(),
+    axis.ticks.x = element_blank()
+  )
 
 plotly::ggplotly(g1)
-
 ```
 
 ]
 
 .right-column[
 
-```{r ref.label="g1", echo=FALSE, eval=TRUE, collapse=T, fig.width=.8, fig.height=.8, fig.align='center', fig.cap='', dpi=600}
+```{r mostra-g1, echo=FALSE}
+p1 <- plotly::ggplotly(
+  g1,
+  tooltip = "y",
+  width = 420,
+  height = 380
+)
+
+htmltools::tagList(p1)
 ```
 
 ]
@@ -393,7 +418,7 @@ plotly::ggplotly(g1)
 ```{r g2, echo=TRUE, eval=FALSE}
 # Criando um Hitograma Univariado
 
-g2 <- data %>%
+g2 <- cedrela %>%
   ggplot(aes(x = H)) + 
   geom_histogram(bins = 5, fill="#69b3a2", 
                  color="#e9ecef", alpha=0.9) +
@@ -426,7 +451,7 @@ plotly::ggplotly(g2)
 ```{r g3, echo=TRUE, eval=FALSE}
 # Criando um Scatterplot
 
-g3 <- data %>%
+g3 <- cedrela %>%
   ggplot(aes(x=D, y=V, color=QF)) +
       geom_point(size = 3) +
       theme(legend.position="none") 
@@ -468,7 +493,7 @@ grid <- expand.grid(
   y = seq(0, 3, length = 15)
   )
 
-img <- "fig/class2/pinus1.png"
+img <- "fig/pinus1.png"
 
 grid %>% 
   ggplot(aes(x, y)) + 
@@ -490,8 +515,8 @@ grid <- expand.grid(
   x = seq(0, 20, length = 15),
   y = seq(0, 3, length = 15)
   ) %>%
-  mutate(image = sample(c("fig/class2/pinus1.png",
-                          "fig/class2/pinus2.png"),
+  mutate(image = sample(c("fig/pinus1.png",
+                          "fig/pinus2.png"),
                         size = length(y), replace = TRUE))
 grid %>%
   ggplot(aes(x, y)) + 
@@ -514,7 +539,7 @@ grid %>%
 ### Tipos de Variáveis
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class2/TV.png')
+knitr::include_graphics('fig/TV.png')
 ```
 
 ---
@@ -660,14 +685,30 @@ df %>%
 <!-- Slide XX -->
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
+background-position: center
+background-repeat: no-repeat
 
-.font200[**Parte 2 <br> Medidas de tendência central (ou posição)**]
+.right[
+<br>
 
-.left[.footnote[.white[Créditos: Imagem de Willas Lima].]]
+.font100[
+<span style="color:#244A6B;"><b>Experimentação Florestal</b></span>
+]
+<br><br>
+
+.font150[
+<span style="color:#244A6B;"><b>Parte 2</b></span>
+]
+
+<br><br>
+.font180[
+<span style="color:#0B1F3A;"><b>Medidas de Tendência Central</b></span>
+]
+]
 
 ---
 layout: true
@@ -687,7 +728,7 @@ São medidas que objetivam representar o ponto central (ou de equilíbrio) de um
 <br>
 ### Principais medidas de posição
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class2/MTC.png')
+knitr::include_graphics('fig/MTC.png')
 ```
 
 ---
@@ -874,7 +915,7 @@ Um conjunto de dados pode ser classificado em função da ocorrência (ou não) 
 <br>
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class2/Mo.png')
+knitr::include_graphics('fig/Mo.png')
 ```
 
 ---
@@ -956,7 +997,7 @@ table(S3)
 ## Medidas de tendência central (ou posição)
 <br>
 
-### Mediana (Md) - Conceito `r Citep(myBib, "favero2009", .opts = list(max.names = 1, longnamesfirst = F))`
+### Mediana (Md) - Conceito
 
 <br>
 
@@ -1461,26 +1502,20 @@ mean(df$V)
 ```
 ]
 
----
-## Referências
-<br><br>
-
-```{r ref5, echo=FALSE, results="asis"}
-PrintBibliography(myBib, start = 1, end = 5)
-```
-
 <!--Slide XX -->
 ---
 layout: false
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Obrigado!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)

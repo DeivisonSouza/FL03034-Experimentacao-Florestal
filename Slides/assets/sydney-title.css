@@ -829,7 +829,7 @@ h3 {
   padding-bottom: 00px;
   color: #dd7321;
   text-shadow: none;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: normal;
   margin-left: 5px;
   margin-bottom: 0px;
@@ -864,7 +864,7 @@ h4 {
 /* H2 — azul profundo */
 .title-slide h2 {
   color: #244A6B !important;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   padding-top: 30px;
   padding-left: 0px;
@@ -917,10 +917,10 @@ h4 {
   vertical-align: middle;
 }
 
-/* H6 — azul profundo */
+/* H6 — verde petróleo */
 .title-slide h6 {
-  color: #244A6B !important;
-  font-size: 35px;
+  color: #3F6B5B !important;
+  font-size: 28px;
   font-weight: bold;
   padding-top: 0px;
   padding-left: 0px;

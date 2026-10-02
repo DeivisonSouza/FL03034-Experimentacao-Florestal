@@ -1,6 +1,6 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Introdução à Experimentação Florestal"
+subtitle: "Princípios Básicos da Experimentação"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
 date: ""
@@ -79,12 +79,11 @@ use_clipboard()
 <!-- title-slide -->
 # Experimentação Florestal <br> (FL03034 - EF)
 
-## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Introdução à Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
-###### (Conceitos básicos e variação experimental)
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Princípios Básicos da Experimentação `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
-##### ᨒ
-##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+###### (Repetição, casualização e controle local)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
@@ -101,7 +100,7 @@ Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
 &emsp;&emsp;
 Experimentação Florestal (FL03034 - EF)
 &bull;
-Introdução à Experimentação
+Princípios Básicos da Experimentação
 </span>
 </div>
 
@@ -113,7 +112,8 @@ Introdução à Experimentação
 .shadow4[
 .font90[
 
-**1 - Introdução à experimentação;**
+**1 - Introdução à experimentação;**  
+.font75[→ *Princípios básicos: repetição, casualização e controle local*]
 
 2 - Análise exploratória de dados;
 
@@ -142,16 +142,12 @@ Introdução à Experimentação
 .font80[
 Ao final desta aula, você deverá ser capaz de:
 
-- **Compreender** o papel da experimentação na Engenharia Florestal;
-- **Identificar e relacionar** fator, níveis, tratamentos, unidades experimentais,
-variáveis resposta e dados experimentais;
-- **Distinguir** a unidade experimental das plantas ou subunidades
-observadas dentro dela;
-- **Reconhecer** a variação entre plantas, parcelas e tratamentos; e
-- **Interpretar** experimentos simples conduzidos em viveiro,
-campo e laboratório.
+- **Compreender** os princípios básicos da experimentação;
+- **Distinguir** repetição, casualização e controle local;
+- **Identificar** a função de cada princípio no controle da variação experimental;
+- **Reconhecer** situações em que esses princípios devem ser aplicados; e
+- **Aplicar** esses conceitos ao planejamento de experimentos florestais.
 ]
-
 ---
 
 ## 📙 Conteúdo
@@ -160,33 +156,25 @@ campo e laboratório.
 
 .pull-left[
 .font90[
-### Parte 1 — Situações experimentais
+### Parte 1 — Da variação ao planejamento
 
-1. Experimento em **viveiro**;
+1. Retomada da **variação experimental**;
 
-2. Experimento em **campo**;
+2. Por que precisamos controlar fontes de variação; e
 
-3. Experimento em **laboratório**; e
-
-4. Elementos comuns aos experimentos.
+3. Introdução aos princípios básicos da experimentação.
 ]
 ]
 
 .pull-right[
 .font90[
-### Parte 2 — Conceitos básicos
+### Parte 2 — Princípios básicos
 
-1. Experimentação e experimento;
+1. **Repetição**;
 
-2. Tratamentos;
+2. **Casualização**; e
 
-3. Unidade experimental;
-
-4. Variável resposta e dado experimental;
-
-5. Fator e níveis; e
-
-6. Relação entre fator, níveis e tratamentos.
+3. **Controle local**.
 ]
 ]
 
@@ -197,18 +185,17 @@ campo e laboratório.
 <br>
 
 .font90[
-### Parte 3 — Variação experimental
+### Parte 3 — Aplicação dos princípios
 
-1. Conceito de variação experimental;
+1. Repetição experimental e subamostragem;
 
-2. Variação **dentro da parcela**;
+2. Distribuição casualizada dos tratamentos;
 
-3. Variação **entre parcelas do mesmo tratamento**;
+3. Controle de fontes conhecidas de heterogeneidade;
 
-4. Variação **entre tratamentos**; e
+4. Integração entre repetição, casualização e controle local; e
 
-5. Importância da variação experimental na interpretação
-dos resultados.
+5. Aplicação dos princípios no planejamento de experimentos florestais.
 ]
 
 <!-- Parte 1 -->
@@ -239,7 +226,7 @@ background-size: cover
 
 .right[
 .font180[
-<span style="color: #0B1F3A;">**Como a experimentação ajuda a tomar decisões<br>na Engenharia Florestal?**</span>
+<span style="color: #0B1F3A;">**Da variação experimental<br>ao planejamento do experimento**</span>
 ]
 ]
 
@@ -252,1467 +239,176 @@ Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
 &emsp;&emsp;
 Experimentação Florestal (FL03034 - EF)
 &bull;
-Introdução à Experimentação
+Princípios Básicos da Experimentação
 </span>
 </div>
 
 ---
 name: substrato-viveiro
 
-## 🌱 Situação 1: qual substrato utilizar no viveiro?
-
-<br>
-
-.font80[
-👉 **Imagine:** um viveiro adquire sementes de **paricá**
-com informações sobre a germinação do lote e deseja produzir
-mudas para **plantios comerciais destinados à produção
-de madeira para lâminas e compensados**.
-]
-
---
-
-.font80[
-### Uma decisão...
-
-O viveiro dispõe de **três opções de substrato**.
-Antes de ampliar a produção, precisa decidir **qual delas utilizar**.
-
-Para isso, deseja comparar:
-
-- **Emergência das plântulas**;
-- **Sobrevivência e crescimento das mudas**; e
-- **Custo de produção por muda apta ao plantio**.
-]
-
---
-
-.font80[
-.alert[
-❓ **Como planejar um experimento que permita avaliar o efeito dos substratos sobre a produção de mudas?**
-]
-]
-
----
-name: planejamento-inicial
-
-## 🔎 Como comparar os três substratos?
-
-.font80[
-.alert[
-💡 **Realizando um experimento!**
-
-❓ Mas, como planejá-lo para comparar os três substratos
-e obter **evidências para orientar a escolha**?
-]
-]
-
---
-
-.font80[
-### Condições do experimento
-
-- Há **1.200 sementes de paricá, provenientes de um mesmo lote**;
-- Será semeada **uma semente por recipiente**, diretamente
-no substrato;
-- A **emergência**, a **sobrevivência** e o **crescimento**
-serão acompanhados por **90 dias após a semeadura**; e
-- Os **custos de produção** também serão registrados.
-]
-
---
-
-.font80[
-### Como você faria?
-
-- Como dividiria as **1.200 sementes** entre os três substratos?
-- Como distribuiria os recipientes no viveiro?
-- Como manteria padronizados outros fatores,
-como irrigação e luminosidade?
-]
-
----
-name: substratos
-
-## 🪴 Quais substratos serão comparados?
-
-<br>
+## 🌱 Retomando o experimento no viveiro
 
 .pull-left[
 .font80[
-### Três composições hipotéticas
+Uma empresa florestal deseja produzir mudas de **paricá**
+e precisa definir qual composição de substrato proporciona
+melhor desempenho das mudas.
+
 <br>
 
-| Substrato | Terra preta | Material de açaí¹ |
-|:--|:--:|:--:|
-| **S1** | 100% | 0% |
-| **S2** | 75% | 25% |
-| **S3** | 50% | 50% |
-]
+Serão comparados três substratos:
 
-.font70[
-¹Caroço de açaí triturado e compostado.
+- **S1:** 100% terra preta;
+- **S2:** 75% terra preta + 25% material de açaí; e
+- **S3:** 50% terra preta + 50% material de açaí.
 ]
 ]
 
 .pull-right[
 .font80[
-### O que muda entre os substratos?
-<br>
-
-A **composição da mistura**, especialmente a
-**proporção de material de açaí**.
-
-Os materiais utilizados devem ter
-**origem e preparo padronizados**.
-
-.alert[
-💡 **S1, S2 e S3 representam três composições
-distintas de substrato.**
-]
-]
-]
-
----
-name: problema-planejamento
-
-## 🌱 Como organizar essa comparação?
-
-.font80[
-### Portanto, você precisa montar um experimento...
-
-O viveiro possui **1.200 sementes** e deseja comparar
-os substratos **S1, S2 e S3**.
-]
-
---
-
-.font80[
-### Como você faria?
-
-- Como dividiria as **1.200 sementes** entre os três substratos?
-- Plantaria todas as sementes de cada substrato
-**juntas ou em grupos separados**?
-- Como distribuiria os recipientes no viveiro?
-- Quais características das mudas registraria?
-- Como evitaria que diferenças, por exemplo, de **luz, água ou posição**
-influenciem na comparação?
-]
-
---
-
-.alert[
-.font80[
-💡 **Questão central:** como planejar um experimento para distinguir
-o **efeito dos substratos** das demais **fontes de variação**?
-]
-]
-
----
-name: elementos-experimento
-
-## 🧩 O que precisamos definir no experimento?
-
-<br>
-
-.font85[
-Para organizar adequadamente a comparação entre os substratos,
-precisamos identificar alguns **elementos fundamentais** do experimento.
-]
-
---
-
-.font80[
-- O que será comparado?
-- Onde os tratamentos serão aplicados?
-- O que será observado ou medido?
-- Quais fatores podem influenciar os resultados?
-]
-
---
-
-<br>
-
-.alert[
-.font80[
-💡 Esses elementos ajudam a transformar uma **pergunta de pesquisa**
-em um **experimento planejado**.
-]
-]
-
----
-name: experimento-campo
-
-## 🌳 Situação 2: qual espaçamento utilizar no plantio?
-
-<br>
-
-.font80[
-👉 **Imagine:** uma empresa florestal deseja implantar um novo
-plantio de **eucalipto**, mas precisa definir qual espaçamento
-entre as árvores proporciona melhor desempenho inicial.
-]
-
---
-
-.pull-left[
-.font80[
-### Três opções de espaçamento
-
-- **E1:** 3,0 × 1,5 m;
-- **E2:** 3,0 × 2,0 m;
-- **E3:** 3,0 × 2,5 m.
-
-<br>
-
-A empresa deseja comparar o desempenho das árvores
-durante os primeiros anos após o plantio.
-]
-]
-
-.pull-right[
-.font80[
-### O que poderia ser avaliado?
-
-- **Sobrevivência** das árvores;
-- **Crescimento** (altura e diâmetro à 1,30 m do solo);
-- **Volume de madeira** por área.
-]
-]
-
---
-
-.alert[
-.font80[
-❓ **Questão central**: Como planejar esse experimento de campo para avaliar
-o efeito dos diferentes espaçamentos sobre o crescimento
-do povoamento?
-]
-]
-
----
-name: experimento-laboratorio
-
-## 🔬 Situação 3: qual temperatura favorece a germinação?
-
-<br>
-
-.font80[
-👉 **Imagine:** um pesquisador deseja avaliar como diferentes
-**temperaturas** influenciam a germinação de sementes de uma
-espécie florestal em condições controladas de laboratório.
-]
-
---
-
-.pull-left[
-.font80[
-### Três temperaturas
-
-- **T1:** 20 °C;
-- **T2:** 25 °C;
-- **T3:** 30 °C.
-
-<br>
-
-As sementes são mantidas em condições padronizadas
-de umidade, substrato e luminosidade.
-]
-]
-
-.pull-right[
-.font80[
-### O que poderia ser avaliado?
-
-- Porcentagem de germinação;
-- Tempo médio de germinação;
-- Velocidade de germinação; e
-- Uniformidade da germinação.
-]
-]
-
---
-
-.alert[
-.font80[
-❓ **Como planejar esse experimento de laboratório para avaliar
-o efeito da temperatura sobre a germinação das sementes?**
-]
-]
-
----
-name: comparacao-experimentos
-
-## 🧩 O que esses experimentos têm em comum?
-
-<br>
-
-<div style="display: flex; gap: 25px;">
-
-<div style="flex: 1;">
-
---
-
-.font75[
-### 🌱 Viveiro
-
-👉 **O que se deseja comparar?**  
-Substratos
-
-👉 **Onde?**  
-Recipientes com mudas
-
-👉 **O que é observado?**  
-Emergência, sobrevivência e crescimento
-]
-
-</div>
-
-<div style="flex: 1;">
-
-.font75[
-### 🌳 Campo
-
-👉 **O que se deseja comparar?**  
-Espaçamentos
-
-👉 **Onde?**  
-Parcelas com árvores
-
-👉 **O que é observado?**  
-Sobrevivência, crescimento e volume
-]
-
-</div>
-
-<div style="flex: 1;">
-
-.font75[
-### 🔬 Laboratório
-
-👉 **O que se deseja comparar?**  
-Temperaturas
-
-👉 **Onde?**  
-câmaras de germinação com temperatura controlada
-
-👉 **O que é observado?**  
-Germinação das sementes
-]
-
-</div>
-
-</div>
-
---
-
-<br>
-
-.alert[
-.font80[
-💡 Apesar de realizados em **ambientes diferentes**, os três experimentos
-seguem uma lógica semelhante: **algo é comparado**, determinadas
-condições são estabelecidas e seus **resultados são observados e medidos**.
-]
-]
-
-<!-- Parte 2 -->
----
-layout: false
-name: parte2
-class: top, right
-background-image: url(../assets/capa/sec.png)
-background-size: cover
-
-<br>
-
-.right[
-.font100[
-<span style="color: #244A6B;">**Experimentação Florestal**</span>
-]
-]
-
-<br><br>
-
-.right[
-.font150[
-<span style="color: #244A6B;">**Parte 2**</span>
-]
-]
-
-<br><br>
-
-.right[
-.font180[
-<span style="color: #0B1F3A;">**Conceitos básicos<br>da experimentação**</span>
-]
-]
-
----
-layout: true
-<div class="my-header"></div>
-<div class="my-footer">
-<span>
-Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
-&emsp;&emsp;
-Experimentação Florestal (FL03034 - EF)
-&bull;
-Introdução à Experimentação
-</span>
-</div>
-
----
-name: Exp
-
-## 🔬 Experimentação e experimento
-
-<div style="position:absolute; left:60px; top:140px; width:40%;">
-
-```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://media.giphy.com/media/fUZHXuE94BN2wtSbUS/giphy-downsized-large.gif")
-```
-
-<div style="font-size:50%; text-align:center;">
-Fonte: <a href="https://media.giphy.com">Giphy</a>, 19 jul. 2021.
-</div>
-
-</div>
-
-<div style="margin-left:48%;">
-
-.font80[
-### Experimentação
-
-É a área da estatística dedicada ao **planejamento**,
-à **condução**, à **análise** e à **interpretação**
-de experimentos.
-]
-
-</div>
-
---
-
-<div style="margin-left:48%;">
-
-.font80[
-### Experimento (ou ensaio)
-
-É uma experiência planejada na qual uma ou mais condições
-são deliberadamente modificadas, enquanto seus
-efeitos sobre alguma variável resposta são observados ou medidos.
-]
-
-</div>
-
---
-
-<div style="margin-left:48%;">
-
-.font80[
-.alert[
-💡 Nos exemplos anteriores, modificamos deliberadamente:
-- 🌱 A composição do substrato;
-- 🌳 O espaçamento de plantio; e
-- 🔬 A temperatura de germinação.
-]
-]
-
-</div>
-
----
-name: Trat
-
-## 🪴 Tratamento: o que será comparado?
-
-<br>
-
-.font80[
-.alert[
-### Tratamento
-
-É cada **condição que se deseja avaliar ou comparar**
-em um experimento.
-
-Pode representar um material, um método, uma dose,
-uma condição ambiental ou uma combinação de condições.
-]
-]
-
---
-
-.font80[
-### Nos exemplos anteriores...
-
-- 🌱 **Viveiro:** os substratos **S1, S2 e S3** são os tratamentos;
-- 🌳 **Campo:** os espaçamentos **E1, E2 e E3** são os tratamentos; e
-- 🔬 **Laboratório:** as temperaturas de **20 °C, 25 °C e 30 °C**
-são os tratamentos.
-]
-
---
-
-<br>
-
-.alert[
-.font80[
-💡 Portanto, o tratamento representa **aquilo que é deliberadamente
-modificado ou comparado** no experimento.
-]
-]
-
----
-name: exemplos-tratamentos
-
-## 🔍 Exemplos de tratamentos em diferentes contextos
-
-<br>
-
-.font60[
-| Contexto | O que pode ser comparado? | Exemplos de tratamentos |
-|:--|:--|:--|
-| 🌱 **Viveiro** | Substratos | S1; S2; S3 |
-| 🌱 **Viveiro** | Sombreamento | 0%; 30%; 50% |
-| 🌱 **Viveiro** | Recipientes | Tubetes de 55; 110; 180 cm³ |
-| 🌱 **Viveiro** | Irrigação | 1; 2; 3 irrigações dia⁻¹ |
-| 🌳 **Campo** | Espaçamentos | 3,0 × 1,5; 3,0 × 2,0; 3,0 × 2,5 m |
-| 🌳 **Campo** | Adubação | 0; 50; 100 kg ha⁻¹ |
-| 🌳 **Campo** | Preparo do solo | Coveamento; escarificação; subsolagem |
-| 🌳 **Campo** | Controle de plantas daninhas | Manual; mecânico; químico |
-| 🔬 **Laboratório** | Temperatura | 20; 25; 30 °C |
-| 🔬 **Laboratório** | Substrato de germinação | Papel; areia; vermiculita |
-| 🔬 **Laboratório** | Tratamento pré-germinativo | Controle; escarificação; imersão em água |
-| 🔬 **Laboratório** | Temperatura de secagem | 40 °C; 60 °C; 80 °C |
-]
-
---
-
-.alert[
-.font70[
-💡 Os **tratamentos** são as diferentes condições
-estabelecidas para serem comparadas dentro de cada experimento.
-]
-]
-
----
-name: UE
-
-## 🌱 Unidade experimental (ou parcela)
-
-<br>
-
-.font80[
-.alert[
-### Unidade Experimental
-
-É a **menor unidade do experimento à qual um tratamento
-é atribuído de forma independente**.
-
-Em experimentos de campo, é frequentemente chamada de
-**parcela experimental**.
-]
-]
-
---
-
-.font80[
-### Exemplos...
-
-- 🌳 **Campo:** uma parcela contendo várias árvores;
-- 🌱 **Viveiro ou casa de vegetação:** um vaso, um tubete ou uma bandeja;
-- 🔬 **Laboratório:** uma placa de Petri, uma caixa de germinação
-(tipo Gerbox) ou outro recipiente experimental.
-]
-
---
-
-.font80[
-.alert[
-💡 **Atenção:** a unidade experimental depende de
-**como o tratamento é aplicado**.
-
-Se uma bandeja inteira recebe um único tratamento como conjunto,
-a **bandeja é a unidade experimental**. As plantas dentro dela
-não são, automaticamente, unidades experimentais independentes.
-]
-]
-
----
-name: ue-tubete
-
-## 🪴 Exemplo no viveiro: quando 1 tubete é uma UE
-
-.font80[
-### Como o experimento é organizado?
-
-- Cada **tubete** recebe um dos substratos: S1, S2 ou S3;
-- É semeada **uma semente de paricá por tubete**; e
-- Cada tubete recebe seu tratamento **de forma independente**.
-]
-
---
-
-.font80[
-.alert[
-💡 **Nesta montagem:**
-
-#### 1 tubete = 1 unidade experimental
-]
-]
-
---
-
-<br>
-
-.font80[
-| Elemento | No exemplo do viveiro |
-|:--|:--|
-| **Tratamento** | Substrato aplicado: S1, S2 ou S3 |
-| **Unidade experimental** | Tubete que recebe o substrato |
-| **O que será observado?** | Emergência, sobrevivência e crescimento da muda |
-]
-
----
-name: ue-parcela-tubetes
-
-## 🌱 Exemplo no viveiro: quando um grupo de tubetes é uma UE
-
-<br>
-
-.pull-left[
-.font80[
-### Como o experimento é organizado?
-
-- Primeiro, os tubetes podem ser organizados, por exemplo,
-em **parcelas com 25 tubetes**;
-- Cada parcela recebe **um único substrato**: S1, S2 ou S3;
-- Assim, todos os **25 tubetes da parcela recebem o mesmo tratamento**; e
-- O conjunto de 25 tubetes funciona como
-**uma única unidade experimental**.
-]
-]
-
-.pull-right[
-.font80[
-.alert[
-💡 **Nesta montagem:**
-
-#### 1 parcela com 25 tubetes = 1 UE
-
-Os 25 tubetes pertencem à **mesma unidade experimental**.
-]
-]
-
-<br>
-
-.font75[
-| Elemento | Neste exemplo |
-|:--|:--|
-| **Tratamento** | S1, S2 ou S3 |
-| **Unidade experimental** | Parcela com 25 tubetes |
-| **O que será observado?** | Emergência, sobrevivência e crescimento das mudas |
-]
-]
-
-<div style="clear: both;"></div>
-
----
-name: ue-comparacao
-
-## 🧩 Tubete ou parcela: qual é a unidade experimental?
-
-.pull-left[
-.font80[
-#### 🪴 Situação A: tratamento por tubete
-
-Cada **tubete** pode receber S1, S2 ou S3
-**independentemente dos demais**.
-
-<br>
-
-**Exemplo:**
-
-- Tubete 1 → S2
-- Tubete 2 → S1
-- Tubete 3 → S3
-- Tubete 4 → S1
-
-.alert[
-💡 **1 tubete = 1 UE**
-]
-]
-]
-
-.pull-right[
-.font80[
-#### 🌱 Situação B: tratamento por parcela
-
-Os tubetes são organizados em grupos de **25** e cada grupo
-recebe **um único substrato**.
-
-<br>
-
-**Exemplo:**
-
-- Parcela 1 → S2
-- Parcela 2 → S1
-- Parcela 3 → S3
-
-.alert[
-💡 **1 parcela com 25 tubetes = 1 UE**
-]
-]
-]
-
-<div style="clear: both;"></div>
-
---
-
-<br>
-
-.alert[
-.font70[
-❓ **Pergunta-chave:** qual é a menor unidade que pode receber
-um tratamento **independentemente das demais**?
-]
-]
-
-
----
-name: ue-bandeja
-
-## 🌱 Exemplo do viveiro: uma UE pode ser uma bandeja
-
-.font80[
-### Como o experimento é organizado?
-
-- Cada **bandeja inteira** recebe um dos substratos: S1, S2 ou S3;
-- São semeadas **50 sementes de paricá por bandeja**; e
-- Os tratamentos são sorteados entre as bandejas.
-]
-
---
-
-.font80[
-.alert[
-💡 **Nesta montagem:**
-
-#### **1 bandeja = 1 unidade experimental.**
-
-💡 As 50 sementes compartilham o substrato da mesma bandeja
-e pertencem a **uma única UE**.
-]
-]
-
---
-
-.font80[
-<br>
-
-| Elemento | No exemplo do viveiro |
-|:--|:--|
-| **Tratamento** | O substrato aplicado: S1, S2 ou S3. |
-| **Unidade experimental** | A bandeja que recebe o substrato. |
-| **O que será observado?** | A emergência, a sobrevivência e o crescimento das mudas na bandeja. |
-]
-
----
-name: variavel-dado
-
-## 📏 Variável resposta e dado experimental
-
-.pull-left[
-.font80[
-.alert[
-### Variável resposta
-
-É a **característica medida ou avaliada** para investigar
-o efeito dos tratamentos.
-
-**No viveiro, por exemplo:**
+### Variáveis respostas:
 
 - Emergência;
 - Sobrevivência;
 - Altura; e
-- Diâmetro do colo.
+- Diâmetro do colo;
+
 ]
-
-.alert[
-### Dado experimental
-
-É o **valor ou resultado registrado** para uma variável
-resposta durante o experimento.
-]
-]
-]
-
---
-
-.pull-right[
-.font80[
-### Imagine uma muda…
-
-<br>
-
-| Variável resposta | Dado registrado |
-|:--|:--|
-| Emergência | **Sim** |
-| Altura | **18,5 cm** |
-| Diâmetro do colo | **3,2 mm** |
-
-<br>
-
-.alert[
-💡 **Altura** é a variável resposta; **18,5 cm** é o dado registrado.
-]
-]
-]
-
----
-name: exemplos-variaveis-resposta
-
-## 📏 Exemplos de variáveis resposta em diferentes contextos
-
-<br>
-
-.font60[
-| Contexto | Experimento | Exemplos de variáveis resposta |
-|:--|:--|:--|
-| 🌱 **Viveiro** | Substratos | Emergência; sobrevivência; altura; diâmetro do colo |
-| 🌱 **Viveiro** | Sombreamento | Altura; diâmetro do colo; massa seca; qualidade da muda |
-| 🌱 **Viveiro** | Recipientes | Sobrevivência; altura; diâmetro do colo; biomassa |
-| 🌱 **Viveiro** | Irrigação | Sobrevivência; altura; massa seca; teor de água |
-| 🌳 **Campo** | Espaçamentos | Sobrevivência; altura; DAP; volume |
-| 🌳 **Campo** | Adubação | Altura; DAP; área basal; volume |
-| 🌳 **Campo** | Preparo do solo | Sobrevivência; altura; DAP; crescimento |
-| 🌳 **Campo** | Controle de plantas daninhas | Sobrevivência; altura; DAP; crescimento |
-| 🔬 **Laboratório** | Temperatura de germinação | Germinação; velocidade; tempo médio de germinação |
-| 🔬 **Laboratório** | Substrato de germinação | Germinação; velocidade; comprimento de plântulas |
-| 🔬 **Laboratório** | Tratamento pré-germinativo | Germinação; velocidade; tempo médio de germinação |
-| 🔬 **Laboratório** | Temperatura de secagem da madeira | Teor de umidade; tempo de secagem; defeitos de secagem |
-]
-
---
-
-.alert[
-.font80[
-💡 A **variável resposta** é escolhida de acordo com a
-**pergunta que o experimento pretende responder**.
-]
-]
-
----
-name: fator-niveis
-
-## 🎛️ Fator e níveis
-
-.pull-left[
-.font80[
-.alert[
-### Fator
-É a característica ou condição que o pesquisador
-**modifica ou controla** para avaliar seus efeitos
-no experimento.
-]
-
-.alert[
-### Níveis
-São os diferentes **valores, categorias ou condições**
-assumidos pelo fator.
-]
-
-<br>
-
-💡 **Fator:** é **o que queremos estudar ou comparar**.
-
-💡 **Níveis:** são as **diferentes formas ou valores**
-que esse fator assume.
-]
-]
-
-.pull-right[
-.font75[
-### Exemplos
-
-| Contexto | Fator | Níveis |
-|:--|:--|:--|
-| 🌱 **Viveiro** | Composição do substrato | S1; S2; S3 |
-| 🌳 **Campo** | Espaçamento de plantio | 3,0 × 1,5; 3,0 × 2,0; 3,0 × 2,5 m |
-| 🔬 **Laboratório** | Temperatura | 20 °C; 25 °C; 30 °C |
 ]
 
 <br>
 
 .alert[
-.font80[
-**Exemplo:** se o fator é **temperatura**,
-os níveis podem ser **20 °C, 25 °C e 30 °C**.
+❓ **Questão central**: Como organizar esse experimento para que as diferenças observadas
+possam ser atribuídas aos substratos, e não a outras fontes de variação?
 ]
-]
-]
-
-<div style="clear: both;"></div>
 
 ---
-name: fator-niveis-tratamentos
+name: retomada-variacao
 
-## 🔗 Como fator, níveis e tratamentos se relacionam?
+## 🌱 Retomando o experimento no viveiro
 
 <br>
 
-.font75[
-| Contexto | Fator | Níveis do fator | Tratamentos |
-|:--|:--|:--|:--|
-| 🌱 **Viveiro** | Composição do substrato | S1; S2; S3 | S1; S2; S3 |
-| 🌳 **Campo** | Espaçamento de plantio | 3,0 × 1,5 m; 3,0 × 2,0 m; 3,0 × 2,5 m | E1; E2; E3 |
-| 🔬 **Laboratório** | Temperatura | 20 °C; 25 °C; 30 °C | 20 °C; 25 °C; 30 °C |
-]
-
---
-
-<br>
-
-.alert[
-.font80[
-💡 Em experimentos com **apenas um fator**, cada **nível do fator**
-corresponde a um **tratamento**.
-
-💡 **Nos exemplos:** 1 fator → 3 níveis do fator → **3 tratamentos**.
-]
-]
-
----
-name: dois-fatores
-
-## 🔎 E se estudarmos dois fatores ao mesmo tempo?
-
-<br>
-
-.font80[
-Agora, imagine que desejamos comparar em viveiro **três tipos de substratos**
-em **duas condições de sombreamento**.
-]
-
---
-
-.pull-left[
-.font70[
-### Combinações
-
-| Tratamento | Substrato | Sombreamento |
-|:--:|:--|:--:|
-| **T1** | **S1:** 100% terra preta | 0% |
-| **T2** | **S1:** 100% terra preta | 50% |
-| **T3** | **S2:** 75% terra preta + 25% material de açaí | 0% |
-| **T4** | **S2:** 75% terra preta + 25% material de açaí | 50% |
-| **T5** | **S3:** 50% terra preta + 50% material de açaí | 0% |
-| **T6** | **S3:** 50% terra preta + 50% material de açaí | 50% |
-]
-
-.font70[
-- **0%:** Pleno sol.
-- **50%:** Sobreamento de 50%.
-]
-]
-
-.pull-right[
-
-<br>
-
-.font80[
-.alert[
-💡 **Fatores:** composição do substrato e sombreamento.
-
-💡 **Níveis dos fatores:** 3 substratos (S1, S2 e S3)
-e 2 condições de sombreamento (0% e 50%).
-
-💡 **Tratamentos:** 6 combinações de substrato
-e sombreamento. 
-
-💡 Cada combinação de níveis
-corresponde a um tratamento: 3 × 2 = 6 tratamentos.
-]
-]
-]
-
----
-name: conceitos-viveiro
-class: center
-
-## Consolidando os conceitos...
-
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/exp_parcela_tubetes.png")
-```
-.font70[
-**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
-]
-
----
-name: conceitos-viveiro
-class: center
-
-## Consolidando os conceitos...
-
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/exp_parcela_bandeja.png")
-```
-.font70[
-**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
-]
-
----
-name: conceitos-viveiro
-class: center
-
-## Consolidando os conceitos...
-
-```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics("fig/experimento-campo-eucalipto.png")
-```
-
-.font70[
-**Ilustração:** elaborada com auxílio do ChatGPT/OpenAI (2026).
-]
-
----
-name: consolidacao-conceitos
-
-## ✏️ Vamos praticar...
-
-.pull-left[
-.font70[
-### Uma situação no campo...
-
-- Um pesquisador compara **três doses de fertilizante:
-0, 100 e 200 g por planta** em um plantio de eucalipto.
-- Cada **parcela de 120 m² (12 m × 10 m)** é implantada
-com **20 mudas**, em espaçamento de **3 m × 2 m**.
-- O tratamento é atribuído à parcela, e todas as suas
-plantas recebem a mesma dose.
-- Após **12 meses do plantio**, mede-se a **altura das árvores**.
-Uma delas apresenta **4,2 m**.
-
-### Pergunta-se:
-
-- Qual é o **fator** e quais são seus **níveis**?
-- Quais são os **tratamentos**?
-- Qual é a **unidade experimental**?
-- Qual é a **variável resposta** e o **dado registrado**?
-
-]
-]
-
---
-
-.pull-right[
-
-<br><br>
-
-.font70[
-.alert[
-💡 **Respostas:**
-- **Fator:** dose de fertilizante.
-- **Níveis e tratamentos:** 0, 100 e 200 g por planta.
-- **UE:** parcela de 120 m² com 20 plantas.
-- **Variável resposta:** altura.
-- **Dado registrado:** 4,2 m.
-]
-]
-]
-
----
-name: variacao-conceito
-
-## 📊 O que é variação experimental?
-
-.pull-left[
-.font80[
-.alert[
-### Variação Experimental
-
-São as **diferenças observadas nos resultados**
-obtidos entre as **unidades experimentais**.
-]
-]
-
-#### No exemplo do viveiro...
-.font80[
-- **Tratamentos:** S1, S2 e S3;
-- **Unidade experimental:** parcela com **25 tubetes**;
-- **Parcelas:** quatro por substrato; e
-- **Variável resposta:** altura das mudas.
-]
-]
-
-.pull-right[
-.font80[
-#### Como representar o resultado da parcela?
-
-- A altura é medida nas mudas que compõem cada parcela.
-- A partir dessas medições, pode-se obter, por exemplo,
-a **altura média da parcela**, em centímetro.
-- Assim, cada parcela fornece um resultado (média) que poderá
-ser comparado com os resultados das demais parcelas.
-]
-]
-
----
-name: variacao-onde
-
-## 🔎 Onde podemos observar variação?
+### Mesmo com o mesmo substrato, os resultados podem ser diferentes
 
 <br>
 
 .pull-left[
 .font80[
-#### 1️⃣ Dentro da parcela
+#### O que pode variar?
 
-- As **25 mudas** de uma mesma parcela (que recebeu o mesmo substrato!)
-podem apresentar **alturas diferentes**. 😲
+Imagine duas parcelas que receberam exatamente o **mesmo substrato**.
 
-<br>
+Ainda assim, as mudas podem apresentar diferenças de:
 
-#### 2️⃣ Entre parcelas do mesmo substrato
-
-- As **quatro parcelas** que recebem o mesmo substrato
-podem apresentar **alturas médias diferentes** entre si. 😲
-]
-]
-
-.pull-right[
-.font80[
-#### 3️⃣ Entre substratos
-
-As médias das parcelas dos tratamentos
-**S1, S2 e S3** também podem ser diferentes. 😲
-
-<br>
-
-.alert[
-💡 Portanto, a variação pode aparecer em diferentes níveis:
-
-.center[**entre mudas → entre parcelas → entre tratamentos**]
-]
+- **Altura**;
+- **Diâmetro do colo**; e
+- **Sobrevivência**.
 ]
 ]
 
 --
 
-<br>
+.pull-right[
+.font80[
+#### Por que isso pode acontecer?
+
+- Diferenças no **vigor, tamanho e qualidade fisiológica das sementes**;
+- Pequenas diferenças de **luminosidade**;
+- Variações na **irrigação**;
+- Posição das parcelas no **viveiro**; e
+- Outras condições **ambientais**.
+]
+]
+
+--
 
 .alert[
-.font70[
-❓ **Questão central:** as diferenças observadas entre os substratos
-são realmente efeito dos **tratamentos** ou podem resultar de
-**outras fontes de variação** que também influenciam
-o crescimento das mudas?
+.font80[
+💡 Portanto, diferenças entre parcelas submetidas ao mesmo tratamento
+mostram que existe **variação experimental**.
+
+💡 Nem toda diferença observada é consequência direta do **tratamento**.
 ]
 ]
 
 ---
 layout: false
 name: variacao-viveiro-ilustracao
-background-image: url(fig/variacao.png)
+background-image: url(fig/eucalipto-dap.png)
 background-size: contain
 background-position: center
 background-repeat: no-repeat
 
 ---
-
-layout: true
-<div class="my-header"></div>
-<div class="my-footer">
-<span>
-Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
-&emsp;&emsp;
-Experimentação Florestal (FL03034 - EF)
-&bull;
-Introdução à Experimentação
-</span>
-</div>
+layout: false
+name: variacao-viveiro-ilustracao
+background-image: url(fig/eucalipto-hc.png)
+background-size: contain
+background-position: center
+background-repeat: no-repeat
 
 ---
 layout: false
-name: parte1
-class: top, right
-background-image: url(../assets/capa/sec.png)
-background-size: cover
-
-<br>
-
-.right[
-.font100[
-<span style="color: #244A6B;">**Experimentação Florestal**</span>
-]
-]
-
-<br><br>
-
-.right[
-.font150[
-<span style="color: #244A6B;">**Parte 2**</span>
-]
-]
-
-<br><br>
-
-.right[
-.font180[
-<span style="color: #0B1F3A;">**Alguns experimentos...**</span>
-]
-]
+name: variacao-viveiro-ilustracao
+background-image: url(fig/eucalipto-volume.png)
+background-size: contain
+background-position: center
+background-repeat: no-repeat
 
 ---
-layout: true
-<div class="my-header"></div>
-<div class="my-footer">
-<span>
-Prof. Dr. Deivison Venicio Souza (deivisonvs@ufpa.br)
-&emsp;&emsp;
-Experimentação Florestal (FL03034 - EF)
-&bull;
-Introdução à Experimentação
-</span>
-</div>
+name: arvore-parcela-volume
 
----
+## 🌳 Qual variável resposta?
 
-## Experimentos (Silva et al., 2017)
-<br>
+##### Medimos as árvores individualmente, mas comparamos os tratamentos entre parcelas...
 
-### Tamanho da semente e substratos na produção de mudas de açaí
-<br>
+.pull-left[
+.font80[
+### Dentro de cada parcela
 
-.pull-left-4[
-**1. Periódico**
+Para cada uma das **20 árvores**:
 
-Advances in Forestry Science
+- Mede-se o **DAP**;
+- Mede-se a **altura comercial**; e
+- Calcula-se o **volume individual**.
 
-Link: [Silva et al., 2017](https://periodicoscientificos.ufmt.br/ojs/index.php/afor/article/view/4590)
-<br><br>
+$$
+V_i =
+\frac{\pi \cdot DAP_i^2}{40.000}
+\cdot Hc_i \cdot 0,45
+$$
+Depois, soma-se os volumes das árvores:
 
-**2. Objetivo**
-
-Estudar o efeito de diferentes **tamanhos de sementes** e **substratos** no
-desenvolvimento de mudas de *Euterpe oleracea* Mart. 
-<br><br>
+$$V_{\text{parcela}} = \sum_{i=1}^{20}V_i$$
+]
 ]
 
 --
 
-.pull-right-4[
-**3. Delineamento Experimental**
+.pull-right[
+.font80[
+### Entre as parcelas
 
-DIC em esquema fatorial 3x2 (tamanho das sementes x substratos).
+Cada parcela recebe **um único tratamento**:
 
-Repetições: 4 repetições (20 sementes)
+- **T1:** 60 g de NPK por planta;
+- **T2:** 80 g de NPK por planta; e
+- **T3:** 100 g de NPK por planta.
 
-Tamanhos das sementes: P, M e G
+Cada tratamento foi aplicado a **3 parcelas diferentes**.
 
-Tipos de substratos: Composto Orgânico (CO) e Monte Cristo (MC)
+<br>
 
+.alert[
+.font80[
+- **A parcela é a unidade experimental.**
+- As 20 árvores são **unidades de observação** dentro da parcela.
 ]
-
----
-
-## Experimentos (Silva et al., 2017)
-<br>
-
-### Tamanho da semente e substratos na produção de mudas de açaí
-<br>
-
-**4. Variáveis de interesse**
-
-.pull-left-4[
-- Altura e diâmetro do colo
-
-Medições: 30, 60, 90, 120, 150, 180 e 210 dias após plantio
 ]
-
---
-
-.pull-right-4[
-- Outras variáveis: (dia 210)
-
-Matéria Seca da Parte Aérea (MSPA)
-
-Matéria Seca do Sistema Radicular (MSSR)
-
-Matéria Seca Total da Planta (MST)
-
-**Método**: Secagem em estufa de circulação forçada por 72 horas a 60ºC até a obtenção da massa constante (em g).
 ]
-
-
----
-
-## Experimentos (Silva et al., 2017)
-<br>
-
-### Tamanho da semente e substratos na produção de mudas de açaí
-<br>
-
-**5. Análises Estatísticas**
-- Análise de variância (ANOVA)
-- Regressão polinomial
-- Teste de Tukey
-
----
-
-## Experimentos (Silva et al., 2017)
-<br>
-
-### Tamanho da semente e substratos na produção de mudas de açaí
-<br>
-
-**6. Resultados**
-
-```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/E1-T2.png')
-```
-
----
-
-## Experimentos (Silva et al., 2017)
-<br>
-
-### Tamanho da semente e substratos na produção de mudas de açaí
-<br>
-
-**7. Conclusão**
-
-- Os parâmetros biométricos e a qualidade de mudas de *Euterpe oleracea* são influenciados pelo substrato e tamanho da semente.
-- A utilização do **substrato orgânico** proporciona mudas de *Euterpe oleracea* com maior índice de qualidade.
-- Sementes grandes produzem mudas vigorosas de *Euterpe oleracea*.
-<br>
-
-.center[.red[**Faça uma reflexão sobre a conclusão do experimento!**]]
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-.pull-left-4[
-**1. Periódico**
-
-Ciência Florestal
-
-Link: [Silva et al., 2020](https://www.scielo.br/j/cflo/a/XSFdXrtQHS3gfZQg9V8K5zd/?lang=pt&format=html)
-<br><br>
-
 ]
-
---
-
-.pull-right-4[
-**2. Objetivo**
-
-Avaliar o crescimento inicial de mudas de *Eucalyptus urophylla*, *Peltophorum dubium* e *Eremanthus erythropappus*, produzidas em diferentes formulações de substratos.
-
-]
-
---
-
-.pull-down[
-**3. Delineamento Experimental**
-
-DIC (8 tratamentos) - Diferentes proporções de substratos
-
-**Repetições**: 5 repetições (20 plantas)
-
-**Tipos de substratos**: Casca de arroz compostada, Casca de café compostada, Fibra de coco, Substrato comercial.
-]
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/E2-T1.png')
-```
-
----
- 
-## Experimentos (Silva et al., 2020)
-<br>
-
-#### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-<br>
-
- **4. Variáveis de interesse**
-
-.pull-left-4[
-- Aos 120 dias mediu-se:
-
-Altura
-
-Diâmetro do coleto
-
-Matéria Seca da Parte Aérea
-
-Peso de Matéria Seca do Sistema Radicular
-
-Índice de Qualidade de Dickson
-]
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-#### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-**6. Resultados**
-
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/E2-T31.png')
-```
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-#### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-**6. Resultados**
-
-```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/E2-T32.png')
-```
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-#### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-**6. Resultados**
-
-```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/E2-T33.png')
-```
-
----
-
-## Experimentos (Silva et al., 2020)
-<br>
-
-#### Potencial uso da casca de café como constituinte de substrato para produção de mudas de espécies florestais
-
-**7. Conclusão**
-
-- Tratamentos com casca de café compostada apresentaram valores superiores para a maioria das variáveis analisadas.
-- A casca de café compostada, combinada com proporções de fibra de coco e substrato comercial apresentou potencial para a produção de mudas das 3 espécies.
-- Recomendação: 20% de fibra de coco, 40% de substrato comercial e 40% de
-casca de café compostada.
 
 ---
 ## Referências
