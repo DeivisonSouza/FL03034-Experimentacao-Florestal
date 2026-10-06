@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd.. Please edit that file.. -->
+<!-- README.md is generated from README.Rmd.. Please edit that file. -->
 
 <!-- badges: start -->
 
@@ -77,10 +77,10 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 |:---|:---|
 | Slides/00-Programacao/01-Programacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/00-Programacao/01-Programacao.html> |
 | Slides/01-Introducao-Experimentacao/01-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Introducao-Experimentacao/01-Introducao-Experimentacao.html> |
-| Slides/02-Principios-Basicos/02-Principios_Basicos.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Principios-Basicos/02-Principios_Basicos.html> |
-| Slides/03-AED/03-AED-Parte1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED/03-AED-Parte1.html> |
-| Slides/03-AED/04-AED-Parte2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED/04-AED-Parte2.html> |
-| Slides/03-DIC-Teoria/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-DIC-Teoria/04-DIC-Teoria.html> |
+| Slides/02-AED/02-AED-Parte1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-AED/02-AED-Parte1.html> |
+| Slides/02-AED/02-AED-Parte2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-AED/02-AED-Parte2.html> |
+| Slides/03-Principios-Basicos/03-Principios_Basicos.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-Principios-Basicos/03-Principios_Basicos.html> |
+| Slides/04-DIC-Teoria/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria/04-DIC-Teoria.html> |
 
 # Facilitador :deciduous_tree:
 
