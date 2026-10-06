@@ -76,7 +76,11 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slide | Link |
 |:---|:---|
 | Slides/00-Programacao/01-Programacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/00-Programacao/01-Programacao.html> |
-| Slides/01-Introducao-Experimentacao/02-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Introducao-Experimentacao/02-Introducao-Experimentacao.html> |
+| Slides/01-Introducao-Experimentacao/01-Introducao-Experimentacao.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/01-Introducao-Experimentacao/01-Introducao-Experimentacao.html> |
+| Slides/02-Principios-Basicos/02-Principios_Basicos.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-Principios-Basicos/02-Principios_Basicos.html> |
+| Slides/03-AED/03-AED-Parte1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED/03-AED-Parte1.html> |
+| Slides/03-AED/04-AED-Parte2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-AED/04-AED-Parte2.html> |
+| Slides/03-DIC-Teoria/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-DIC-Teoria/04-DIC-Teoria.html> |
 
 # Facilitador :deciduous_tree:
 
