@@ -80,6 +80,8 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/02-AED/02-AED-Parte1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-AED/02-AED-Parte1.html> |
 | Slides/02-AED/02-AED-Parte2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/02-AED/02-AED-Parte2.html> |
 | Slides/03-Principios-Basicos/03-Principios_Basicos.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/03-Principios-Basicos/03-Principios_Basicos.html> |
+| Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao1.html> |
+| Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao2.html> |
 | Slides/04-DIC-Teoria/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria/04-DIC-Teoria.html> |
 
 # Facilitador :deciduous_tree:
