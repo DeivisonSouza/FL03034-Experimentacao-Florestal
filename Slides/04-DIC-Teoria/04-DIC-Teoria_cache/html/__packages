@@ -2,3 +2,5 @@ ggplot2
 dplyr
 ggimage
 xaringanExtra
+kableExtra
+readr

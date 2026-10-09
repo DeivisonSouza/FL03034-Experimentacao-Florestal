@@ -1487,7 +1487,7 @@ left: 6px;
 })()
 </script>
     <style type="text/css">.remark-code-line:hover {font-weight: bold;opacity: 1 !important;}.remark-code-line:hover:before {content: "\25B6";color: #6d7e8a;position: absolute;transform: translateX(-1.2em);animation: hover 0.66s alternate 8 cubic-bezier(0.445, 0.05, 0.55, 0.95);}@keyframes hover {0% {transform: translateX(-1.2em);}100% {transform: translateX(-0.8em);}}.remark-code-has-line-highlighted .remark-code-line:not(.remark-code-line-highlighted) {opacity: 0.4;}.remark-code-line-highlighted {background-color: inherit;}</style>
-    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"ea5d6d4c25604497bda2904e9f903c2b","expires":1}</script>
+    <script type="application/json" id="xaringanExtra-editable-docid">{"id":"d975a55d60d048c194917e6c5b52b05e","expires":1}</script>
     <script>(function(f){if(typeof exports==="object"&&typeof module!=="undefined"){module.exports=f()}else if(typeof define==="function"&&define.amd){define([],f)}else{var g;if(typeof window!=="undefined"){g=window}else if(typeof global!=="undefined"){g=global}else if(typeof self!=="undefined"){g=self}else{g=this}g.himalaya = f()}})(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 'use strict';
 
@@ -3933,16 +3933,19 @@ margin-bottom: -10px;
 }
 .remark-slide-content > h2:first-of-type {
 color: #006633;
-margin-top: 20px;
-margin-bottom: 10px;
+margin-top: 0.2em;
+margin-bottom: 0.4em;
 }
 .remark-slide-content > h3:first-of-type {
 margin-top: 5px;
 margin-bottom: 10px;
 }
 .remark-slide-content > h4:first-of-type {
-margin-top: 5px;
-margin-bottom: 10px;
+margin-top: 0.2em;
+margin-bottom: 0.4em;
+}
+.left-title {
+text-align: left !important;
 }
 
 div.my-header {
@@ -4385,6 +4388,11 @@ padding-right: 10px;
 text-align: justify;
 text-justify: inter-word;
 }
+.shadow4 h3 {
+margin-top: 0.1em !important;
+margin-bottom: 0.45em !important;
+padding-top: 0 !important;
+}
 .shadow3C {
 box-shadow: 0 20px 50px rgba(8, 112, 184, 0.7);
 margin-top: 0.1em;
@@ -4402,12 +4410,15 @@ text-justify: inter-word;
 .shadow4 {
 box-shadow: 0 10px 10px rgba(143, 175, 203, 0.3);
 margin-top: 0.1em;
-margin-bottom: 0.2em;
+margin-bottom: 10px;
 margin-left: 10px;
 margin-right: 10px;
 max-width: 1000px;
 border-radius: 2px;
-padding-top: 0px;
+border-top: 5px solid rgba(143, 175, 203, 0.45);
+border-bottom: 5px solid rgba(143, 175, 203, 0.45);
+padding-top: 8px;
+padding-bottom: 8px;
 padding-left: 15px;
 padding-right: 10px;
 text-align: justify;
@@ -4500,26 +4511,27 @@ color: black;
 padding-top: 0px;
 }
 h2 {
-padding-top: 20px;
+padding-top: 10px;
 padding-bottom: 00px;
 color: #b83505;
 font-size: 25px;
 text-shadow: none;
 margin-left: 5px;
 margin-bottom: 0px;
+vertical-align: middle;
 }
 h3 {
 padding-top: -30px;
 padding-bottom: 00px;
 color: #dd7321;
 text-shadow: none;
-font-size: 25px;
+font-size: 20px;
 font-weight: normal;
 margin-left: 5px;
 margin-bottom: 0px;
 }
 h4 {
-padding-top: -15px;
+padding-top: -5px;
 padding-bottom: 00px;
 color: #ed4406;
 text-shadow: none;
@@ -4545,7 +4557,7 @@ vertical-align: middle;
 
 .title-slide h2 {
 color: #244A6B !important;
-font-size: 50px;
+font-size: 40px;
 font-weight: bold;
 padding-top: 30px;
 padding-left: 0px;
@@ -4596,8 +4608,8 @@ vertical-align: middle;
 }
 
 .title-slide h6 {
-color: #244A6B !important;
-font-size: 35px;
+color: #3F6B5B !important;
+font-size: 28px;
 font-weight: bold;
 padding-top: 0px;
 padding-left: 0px;
@@ -4749,7 +4761,7 @@ background-repeat: no-repeat
 ##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 &lt;br&gt;
-##### 1ª versão: 10/agosto/2021 &lt;br&gt; (Atualizado em: 30/setembro/2026) &lt;br&gt; Altamira, Pará
+##### 1ª versão: 10/agosto/2021 &lt;br&gt; (Atualizado em: 06/outubro/2026) &lt;br&gt; Altamira, Pará
 
 ---
 layout: true
