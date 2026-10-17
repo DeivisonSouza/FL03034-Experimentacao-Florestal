@@ -83,6 +83,8 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao1.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao1.html> |
 | Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao2.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Pratica/04-ANOVA-DIC_Progenies-Solucao2.html> |
 | Slides/04-DIC-Teoria/04-DIC-Teoria.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/04-DIC-Teoria/04-DIC-Teoria.html> |
+| Slides/05-DBC/05-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-DBC/05-DBC.html> |
+| Slides/08-TCM/08-Teste-Comparacao-Medias.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/08-TCM/08-Teste-Comparacao-Medias.html> |
 
 # Facilitador :deciduous_tree:
 
