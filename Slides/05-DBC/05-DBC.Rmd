@@ -3,35 +3,42 @@ title: "Experimentação Florestal (FL03034 - EF)"
 subtitle: "Delineamento em Blocos Casualizados"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
-   - \usepackage{amsmath}
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+    self_contained: true
     seal: false
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -97,17 +104,6 @@ xaringanExtra::use_editable(expires = 1)
 use_clipboard()
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "html",
-           hyperlink = FALSE,
-           dashed = FALSE)
-(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
-```
-
 ```{r icon, echo=FALSE}
 #remotes::install_github("mitchelloharawild/icons")
 #remotes::install_github('emitanaka/anicon')
@@ -118,17 +114,31 @@ BibOptions(check.entries = FALSE,
 
 ```{r customDT, echo=F}
 CustomDT <- function(data){
-  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
-                         style = "default",
-                         class = "display", width = '250px',
-                         caption = '',
-     options=list(pageLength = 8, dom = 'tip', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
-          "}")
-       ) 
-     )
+
+  DT::datatable(
+    data,
+    editable = "cell",
+    rownames = FALSE,
+    style = "default",
+    class = "display compact",
+    width = "100%",
+    height = "360px",
+    caption = "",
+
+    options = list(
+      pageLength = 12,
+      dom = "tip",
+      autoWidth = TRUE,
+
+      initComplete = htmlwidgets::JS(
+        "function(settings, json) {
+           $(this.api().table().container()).css({
+             'font-size': '12pt'
+           });
+         }"
+      )
+    )
+  )
 }
 ```
 
@@ -147,13 +157,16 @@ Customkbl <- function(data){
 
 
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Blocos `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Casualizados
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Delineamento em Blocos Casualizados`r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+###### (Estudo de caso - Competição de procedências)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 <br>
 ##### 1ª versão: 09/setembro/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
@@ -272,14 +285,14 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ---
 
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/arara.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**.yellow[Parte 1] <br> .white[Delineamento em Blocos <br> Casualizados]**] 
+<br><br> 
 
-.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+.font200[**Parte 1 <br><br> .grenn[Delineamento em Blocos <br> Casualizados]**] 
 
 ---
 layout: true
@@ -384,7 +397,7 @@ Os principais delineamentos experimentais utilizados são:
 
 .pull-left-3[
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/img-PD.png')
+knitr::include_graphics('fig/img-PD.png')
 ```
 ]
 
@@ -477,7 +490,7 @@ O DBC utiliza-se dos 3 princípios básicos da experimentação.
 ]
 
 ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/PBE.png')
+knitr::include_graphics('fig/PBE.png')
 ```
 
 ---
@@ -498,7 +511,7 @@ bordadura entre parcelas e nem no contorno do experimento (pg. 40)
 
 .pull-right-5[
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class5/croqui1.png")
+knitr::include_graphics("fig/croqui1.png")
 ```
 ]
 
@@ -521,7 +534,7 @@ herbicida, em pousio e recém-desmatada (pg. 53).
 
 .pull-right-5[
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class5/croqui2.png")
+knitr::include_graphics("fig/croqui2.png")
 ```
 ]
 
@@ -546,7 +559,7 @@ knitr::include_graphics("fig/class5/croqui2.png")
 
 .pull-right-5[
 ```{r echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class5/block-ex.png")
+knitr::include_graphics("fig/block-ex.png")
 ```
 ]
 
@@ -559,7 +572,7 @@ name: carac
 <br>
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/DBC-C.png')
+knitr::include_graphics('fig/DBC-C.png')
 ```
 
 ---
@@ -576,7 +589,7 @@ Para um experimento em DBC com **I** tratamentos (i = 1, 2, 3..., I) e **J** Blo
 <br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/DBC-Table.png')
+knitr::include_graphics('fig/DBC-Table.png')
 ```
 ]
 
@@ -684,7 +697,7 @@ Por exemplo, o quanto da variação na variável resposta y é devido aos efeito
 <br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/DBC-ANOVA.png')
+knitr::include_graphics('fig/DBC-ANOVA.png')
 ```
 
 .pull-left-8[
@@ -770,12 +783,12 @@ name: sq
 <br><br>
 
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot.png')
+knitr::include_graphics('fig/SQTot.png')
 ```
 <br>
 
 ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot2.png')
+knitr::include_graphics('fig/SQTot2.png')
 ```
 <!--
 $$
@@ -822,7 +835,7 @@ y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental
 <br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat.png')
+knitr::include_graphics('fig/SQTrat.png')
 ```
 <br>
 
@@ -864,7 +877,7 @@ y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental
 <br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQB.png')
+knitr::include_graphics('fig/SQB.png')
 ```
 <br>
 
@@ -908,7 +921,7 @@ y<sub>ij</sub> = Valor observado da variável resposta y na unidade experimental
 
 .pull-left-10[
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 
 <!--
@@ -918,7 +931,7 @@ $$
 -->
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 
 <!--
@@ -928,7 +941,7 @@ $$
 -->
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQB-cor.png')
+knitr::include_graphics('fig/SQB-cor.png')
 ```
 
 <!--
@@ -938,7 +951,7 @@ $$
 -->
 
 ```{r, echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/FC.png')
+knitr::include_graphics('fig/FC.png')
 ```
 
 ]
@@ -1150,14 +1163,14 @@ A importância reside na validação do teste F e testes de comparações de mé
 ---
 
 layout: false
-name: proc
-class: inverse, top, right
-background-image: url(fig/class3/arara.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**.yellow[Parte 2] <br> .white[Estudo de caso de <br> experimentos em DBC]**] 
+<br><br>
 
-.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+.font200[**Parte 2 <br><br> .green[Estudo de caso de <br> experimento em DBC]**] 
 
 ---
 layout: true
@@ -1379,7 +1392,7 @@ df2 %>%
 <br><br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/DBC-ANOVA.png')
+knitr::include_graphics('fig/DBC-ANOVA.png')
 ```
 
 ---
@@ -1394,7 +1407,7 @@ name: gl
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/ANOVA-DBC-GL.png')
+knitr::include_graphics('fig/ANOVA-DBC-GL.png')
 ```
 
 ---
@@ -1422,20 +1435,20 @@ name: sqex
 
 .pull-left-10[
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQB-cor.png')
+knitr::include_graphics('fig/SQB-cor.png')
 ```
 <br>
 
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQR.png')
+knitr::include_graphics('fig/SQR.png')
 ```
 
 ]
@@ -1474,7 +1487,7 @@ $$
 .pull-right-9[
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/Fator.png')
+knitr::include_graphics('fig/Fator.png')
 ```
 <br>
 
@@ -1515,7 +1528,7 @@ $$
 
 .pull-right-9[
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 <br><br>
 
@@ -1562,7 +1575,7 @@ $$
 .pull-right-9[
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class4/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 <br><br>
 
@@ -1609,7 +1622,7 @@ $$
 .pull-right-9[
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/SQB-cor.png')
+knitr::include_graphics('fig/SQB-cor.png')
 ```
 <br><br>
 
@@ -1650,7 +1663,7 @@ $\large SQR = 4.025,571$
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/ANOVA-DBC-SQ.png')
+knitr::include_graphics('fig/ANOVA-DBC-SQ.png')
 ```
 
 ---
@@ -1725,7 +1738,7 @@ $$
 <br><br>
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/ANOVA-DBC-QM.png')
+knitr::include_graphics('fig/ANOVA-DBC-QM.png')
 ```
 
 ---
@@ -1807,7 +1820,7 @@ qf(0.05, 6, 18, lower.tail=FALSE)
 <br><br>
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class5/ANOVA-DBC-Final.png')
+knitr::include_graphics('fig/ANOVA-DBC-Final.png')
 ```
 
 ]
@@ -2007,17 +2020,29 @@ ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TAN
 
 <!--Slide XX -->
 ---
+## Referências
+<br><br>
+DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
+<br><br>
+NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
+<br><br>
+PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
+
+<!--Slide XX -->
+---
 layout: false
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Até a Próxima!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)
 
