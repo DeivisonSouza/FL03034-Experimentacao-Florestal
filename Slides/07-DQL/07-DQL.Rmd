@@ -304,14 +304,14 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ---
 
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/arara.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**.yellow[Parte 1] <br> .white[Delineamento em <br> Quadrado Latino]**] 
+<br><br> 
 
-.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+.font200[**Parte 1 <br><br> .grenn[Delineamento em Quadrado <br> Latino]**] 
 
 ---
 
@@ -1605,14 +1605,14 @@ A importância reside na validação do teste F e testes de comparações de mé
 ---
 
 layout: false
-name: proc
-class: inverse, top, right
-background-image: url(fig/class3/arara.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**.yellow[Parte 2] <br> .white[Estudo de caso de <br> experimentos em DQL]**]
+<br><br> 
 
-.left[.footnote[.white[Créditos: Imagem de IvaCastro por Pixabay].]]
+.font200[**Parte 2 <br><br> .grenn[Estudo de caso de <br> experimentos em DQL]**] 
 
 ---
 
@@ -2600,31 +2600,28 @@ evidências de diferenças significativas entre as médias de produção de caca
 ]
 
 ---
-
 ## Referências
-.font90[
 <br><br>
 DIAS, L. A. dos S.; BARROS, W. S. Biometria experimental. Viçosa, MG: Suprema, 2009. 408 p.
 <br><br>
 NOGUEIRA, M. C. S. Experimentação agronômica I: conceitos, planejamento e análise estatística. Piracicaba, 479 p. 2007.
 <br><br>
 PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômicos e florestais: exposição com exemplos e orientações para uso de aplicativos. Piracicaba: FEALQ, 2002. 309 p.
-<br><br>
-ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TANIGUCHI, C., ... & BEZERRA, M. Orientações para instalação, condução e avaliação de experimentos de campo. Fortaleza: Embrapa Agroindústria Tropical, 2017. 85p.
-]
 
 <!--Slide XX -->
 ---
 layout: false
-class: inverse, top, right
-background-image: url(fig/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Até a Próxima!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)
