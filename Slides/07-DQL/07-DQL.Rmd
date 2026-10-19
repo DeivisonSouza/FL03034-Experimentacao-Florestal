@@ -3,35 +3,42 @@ title: "Experimentação Florestal (FL03034 - EF)"
 subtitle: "Delineamento em Quadrado Latino"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
-   - \usepackage{amsmath}
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+    self_contained: true
     seal: false
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -45,6 +52,7 @@ knitr::opts_chunk$set(
 	dpi = 600
 )
 ```
+
 
 ```{r packages, include=FALSE}
 # remotes::install_github("dill/emoGG")
@@ -73,6 +81,7 @@ library(labestData)
 	background-image: url(fig/slide-title/ufpa.png);
 }
 ```
+
 ```{r xaringan-logo, echo=FALSE}
 library(xaringanExtra)
 
@@ -98,17 +107,6 @@ xaringanExtra::use_editable(expires = 1)
 use_clipboard()
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "html",
-           hyperlink = FALSE,
-           dashed = FALSE)
-(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
-```
-
 ```{r icon, echo=FALSE}
 #remotes::install_github("mitchelloharawild/icons")
 #remotes::install_github('emitanaka/anicon')
@@ -119,17 +117,31 @@ BibOptions(check.entries = FALSE,
 
 ```{r customDT, echo=F}
 CustomDT <- function(data){
-  data %>% DT::datatable(editable = 'cell', rownames = FALSE,
-                         style = "default",
-                         class = "display", width = '250px',
-                         caption = '',
-     options=list(pageLength = 8, dom = 't', autoWidth = F,
-       initComplete = htmlwidgets::JS(
-          "function(settings, json) {",
-          paste0("$(this.api().table().container()).css({'font-size': '", "9pt", "'});"),
-          "}")
-       ) 
-     )
+
+  DT::datatable(
+    data,
+    editable = "cell",
+    rownames = FALSE,
+    style = "default",
+    class = "display compact",
+    width = "100%",
+    height = "360px",
+    caption = "",
+
+    options = list(
+      pageLength = 12,
+      dom = "tip",
+      autoWidth = TRUE,
+
+      initComplete = htmlwidgets::JS(
+        "function(settings, json) {
+           $(this.api().table().container()).css({
+             'font-size': '12pt'
+           });
+         }"
+      )
+    )
+  )
 }
 ```
 
@@ -149,8 +161,6 @@ CustomDT2 <- function(data){
 }
 ```
 
-
-
 ```{r customkbl, echo=F}
 Customkbl <- function(data){
   data %>%
@@ -164,16 +174,14 @@ Customkbl <- function(data){
 }
 ```
 
-
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Delineamento em Quadrado `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Latino
-###### Conceitos e ANOVA - Fator Único
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Delineamento em Quadrado Latino`r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
-##### ᨒ
-##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+###### (Teoria e Prática)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
@@ -409,7 +417,7 @@ Os principais delineamentos experimentais utilizados são:
 
 .pull-left-3[
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/img-PD.png')
+knitr::include_graphics('fig/img-PD.png')
 ```
 ]
 
@@ -505,7 +513,7 @@ O DQL utiliza dos 3 princípios básicos da experimentação.
 ]
 
 ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class1/PBE.png')
+knitr::include_graphics('fig/PBE.png')
 ```
 
 ---
@@ -584,7 +592,7 @@ Croqui de um experimento em delineamento de quadrado latino 5x5 com bordadura de
 
 .pull-right-5[
 ```{r echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class6/croqui1.png")
+knitr::include_graphics("fig/croqui1.png")
 ```
 ]
 
@@ -1022,7 +1030,7 @@ name: carac
 
 .pull-right-5[
 ```{r, echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/DQL-C.png')
+knitr::include_graphics('fig/DQL-C.png')
 ```
 ]
 
@@ -1036,7 +1044,7 @@ knitr::include_graphics('fig/class6/DQL-C.png')
 <br>
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/DQL-D.png')
+knitr::include_graphics('fig/DQL-D.png')
 ```
 
 ]
@@ -1128,7 +1136,7 @@ $$
 <br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/DQL-ANOVA.png')
+knitr::include_graphics('fig/DQL-ANOVA.png')
 ```
 
 .pull-left-8[
@@ -1217,12 +1225,12 @@ name: sq
 <br><br>
 
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTot.png')
+knitr::include_graphics('fig/SQTot.png')
 ```
 <br>
 
 ```{r, echo=FALSE, out.width='55%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTot2.png')
+knitr::include_graphics('fig/SQTot2.png')
 ```
 <!--
 $$
@@ -1260,7 +1268,7 @@ y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimenta
 <br><br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTrat.png')
+knitr::include_graphics('fig/SQTrat.png')
 ```
 <br>
 
@@ -1294,7 +1302,7 @@ y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimenta
 <br><br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQL.png')
+knitr::include_graphics('fig/SQL.png')
 ```
 <br>
 
@@ -1328,7 +1336,7 @@ y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimenta
 <br><br><br>
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQC.png')
+knitr::include_graphics('fig/SQC.png')
 ```
 <br>
 
@@ -1371,19 +1379,19 @@ y<sub>ijk</sub> = Valor observado da variável resposta y na unidade experimenta
 
 .pull-left-10[
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQL-cor.png')
+knitr::include_graphics('fig/SQL-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQC-cor.png')
+knitr::include_graphics('fig/SQC-cor.png')
 ```
 
 ]
@@ -1960,7 +1968,7 @@ df5
 <br>
 
 ```{r, echo=FALSE, out.width='65%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/DQL-ANOVA.png')
+knitr::include_graphics('fig/DQL-ANOVA.png')
 ```
 
 ---
@@ -1975,7 +1983,7 @@ name: gl
 <br><br>
 
 ```{r, echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/ANOVA-DQL-GL.png')
+knitr::include_graphics('fig/ANOVA-DQL-GL.png')
 ```
 
 ---
@@ -1999,23 +2007,23 @@ name: sqex
 
 .pull-left-10[
 ```{r, echo=FALSE, out.width='75%'}
-knitr::include_graphics('fig/class6/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='75%'}
-knitr::include_graphics('fig/class6/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='75%'}
-knitr::include_graphics('fig/class6/SQL-cor.png')
+knitr::include_graphics('fig/SQL-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='75%'}
-knitr::include_graphics('fig/class6/SQC-cor.png')
+knitr::include_graphics('fig/SQC-cor.png')
 ```
 
 ```{r, echo=FALSE, out.width='60%'}
-knitr::include_graphics('fig/class6/SQR.png')
+knitr::include_graphics('fig/SQR.png')
 ```
 
 ]
@@ -2095,7 +2103,7 @@ $$
 
 .pull-right-9[
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTot-cor.png')
+knitr::include_graphics('fig/SQTot-cor.png')
 ```
 <br><br>
 
@@ -2139,7 +2147,7 @@ $$
 .pull-right-13[
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQTrat-cor.png')
+knitr::include_graphics('fig/SQTrat-cor.png')
 ```
 <br><br>
 
@@ -2184,7 +2192,7 @@ $$
 .pull-right-9[
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQL-cor.png')
+knitr::include_graphics('fig/SQL-cor.png')
 ```
 <br><br>
 
@@ -2229,7 +2237,7 @@ $$
 .pull-right-9[
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/SQC-cor.png')
+knitr::include_graphics('fig/SQC-cor.png')
 ```
 <br><br>
 
@@ -2270,7 +2278,7 @@ $\large SQR = 1.698,386$
 <br><br>
 
 ```{r, echo=FALSE, out.width='85%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/ANOVA-DQL-SQ.png')
+knitr::include_graphics('fig/ANOVA-DQL-SQ.png')
 ```
 
 ---
@@ -2366,7 +2374,7 @@ $$
 <br><br>
 
 ```{r, echo=FALSE, out.width='95%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/ANOVA-DQL-QM.png')
+knitr::include_graphics('fig/ANOVA-DQL-QM.png')
 ```
 
 ---
@@ -2447,7 +2455,7 @@ qf(0.05, 4, 12, lower.tail=FALSE)
 <br><br>
 
 ```{r, echo=FALSE, out.width='70%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class6/ANOVA-DQL-Final.png')
+knitr::include_graphics('fig/ANOVA-DQL-Final.png')
 ```
 
 ]
@@ -2609,7 +2617,7 @@ ROSSETTI, A. G.; VIDAL NETO, F. D. C.; MELO, D.; SERRANO, L.; HAWERROTH, F.; TAN
 ---
 layout: false
 class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+background-image: url(fig/imgC.jpg)
 background-size: cover
 
 .font300[
