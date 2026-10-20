@@ -20,7 +20,7 @@ slides_dir <- normalizePath(
 
 # Arquivo HTML
 # html_rel <- "08-TCM/08-Teste-Comparacao-Medias.html"
-html_rel <- "05-DBC/05-DBC.html"
+html_rel <- "07-DQL/07-DQL.html"
 
 html_abs <- normalizePath(
   file.path(slides_dir, html_rel),

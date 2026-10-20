@@ -1,37 +1,44 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Análise de Experimentos com Linguagem R"
+subtitle: "Análise de Experimentos com R"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
-   - \usepackage{amsmath}
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+    self_contained: true
     seal: false
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
@@ -97,17 +104,6 @@ xaringanExtra::use_editable(expires = 1)
 use_clipboard()
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "html",
-           hyperlink = FALSE,
-           dashed = FALSE)
-(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
-```
-
 ```{r icon, echo=FALSE}
 #remotes::install_github("mitchelloharawild/icons")
 #remotes::install_github('emitanaka/anicon')
@@ -162,16 +158,14 @@ Customkbl <- function(data){
 }
 ```
 
-
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Análise de Experimentos `r anicon::faa("pagelines", animate="horizontal", colour="green")` <br> Com Linguagem R
-###### Pacotes: AgroR, agricolae e ExpDes.pt
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Análise de Experimentos com R`r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-##### 〰〰〰〰〰〰🌱〰〰〰〰〰〰
-##### ᨒ
-##### .font120[**Prof. Dr. Deivison Venicio Souza**]
+###### (Pacotes: AgroR, agricolae e ExpDes.pt)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
 ##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
@@ -269,16 +263,15 @@ Ao final desta aula espera-se que o discente seja capaz de...
 ]
 
 ---
-
 layout: false
-name: conc
-class: inverse, top, left
-background-image: url(fig/class8/secao.png)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-<br><br><br>
+<br><br> 
 
-.right[.font130[**.green[Parte 1] <br> Estudos de casos <br> de experimentos**]]
+.font200[**Parte 1 <br><br> .green[Estudos de casos <br> de experimentos]**] 
 
 <br><br>
 
@@ -287,7 +280,7 @@ background-size: cover
 ---
 layout: true
 <div class="my-header"></div>
-<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com Linguagem R</div>
+<div class="my-footer"><span>Prof. Dr. Deivison Venicio Souza (E-mail: deivisonvs@ufpa.br)&emsp;&emsp;&emsp;&emsp;&emsp;Experimentação Florestal (FL03034 - EF) - Análise de Experimentos com R</div>
 
 ---
 name: de
@@ -1134,16 +1127,18 @@ PIMENTEL-GOMES, F.; GARCIA, C. H. Estatística aplicada a experimentos agronômi
 <!--Slide XX -->
 ---
 layout: false
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Até a Próxima!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)7
 
