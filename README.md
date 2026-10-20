@@ -1,5 +1,5 @@
 
-<!-- README.md is generated from README.Rmd.. Please edit that file. -->
+<!-- README.md is generated from README.Rmd.. Please edit that file.. -->
 
 <!-- badges: start -->
 
@@ -86,6 +86,8 @@ Florestal** (FL03034-EF) estão detalhados a seguir.
 | Slides/05-TCM/08-Teste-Comparacao-Medias.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/05-TCM/08-Teste-Comparacao-Medias.html> |
 | Slides/06-DBC/05-DBC.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/06-DBC/05-DBC.html> |
 | Slides/07-DQL/07-DQL.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/07-DQL/07-DQL.html> |
+| Slides/08-Introducao-R/06-Introducao-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/08-Introducao-R/06-Introducao-R.html> |
+| Slides/09-Analise-Experimento-R/09-Analise-Experimentos-com-R.html | <https://deivisonsouza.github.io/FL03034-Experimentacao-Florestal/Slides/09-Analise-Experimento-R/09-Analise-Experimentos-com-R.html> |
 
 # Facilitador :deciduous_tree:
 
