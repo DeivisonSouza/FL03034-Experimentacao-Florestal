@@ -1,47 +1,56 @@
 ---
 title: "Experimentação Florestal (FL03034 - EF)"
-subtitle: "Introdução à Linguagem de Programação R"
+subtitle: "Introdução à Linguagem R"
 author: "Prof. Dr. Deivison Venicio Souza"
 institute: "Universidade Federal do Pará (UFPA)"
-date: 
+date: ""
 encoding: "UTF-8"
-header-includes: 
-   - \usepackage{xcolor}
+
 output:
   xaringan::moon_reader:
     css:
       - default
-      - assets/sydney-fonts.css
-      - assets/slide-title/sydney-title.css
-    self_contained: false
+      - "../assets/sydney-fonts.css"
+      - "../assets/sydney-title.css"
+    self_contained: true
     seal: false
     includes:
-      in_header: "assets/mathjax-equation-numbers.html"
+      in_header: "../assets/mathjax-equation-numbers.html"
     nature:
-      beforeInit: ["assets/remark-zoom.js", "https://platform.twitter.com/widgets.js"]
+      beforeInit: "../assets/remark-zoom.js"
       highlightStyle: github
       highlightLines: true
+      highlightSpans: true
+      highlightLanguage:
+        - r
+        - css
+        - yaml
       countIncrementalSlides: false
-      highlightLanguage: ["r", "css", "yaml"]
-      ratio: '16:9'
+      ratio: "16:9"
       navigation:
         scroll: false
 ---
 class: title-slide, center, middle
-background-image: url(fig/slide-title/LMFTCA.png), url(fig/slide-title/ufpa.png), url(fig/slide-title/capa.png)
-background-position: 90% 90%, 10% 90%
-background-size: 150px, 150px, cover
+background-image: url(../assets/capa/capa.png)
+background-position: center
+background-size: cover
+background-repeat: no-repeat
+
+<div class="logo-lmftca"></div>
+<div class="logo-ppgctif"></div>
+<div class="logo-ppgbc"></div>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(
-  fig.showtext = TRUE,
-  fig.align = "center", 
-  cache = FALSE,
-  error = FALSE,
-  message = FALSE, 
-  warning = FALSE, 
-  collapse = TRUE ,
-  dpi = 600)
+	error = FALSE,
+	fig.align = "center",
+	fig.showtext = TRUE,
+	message = FALSE,
+	warning = FALSE,
+	cache = FALSE,
+	collapse = TRUE,
+	dpi = 600
+)
 ```
 
 ```{r packages, include=FALSE}
@@ -94,17 +103,6 @@ xaringanExtra::use_editable(expires = 1)
 use_clipboard()
 ```
 
-```{r, load_refs, include=FALSE, cache=FALSE}
-library(RefManageR)
-BibOptions(check.entries = FALSE,
-           bib.style = "authoryear",
-           cite.style = "authoryear",
-           style = "html",
-           hyperlink = FALSE,
-           dashed = FALSE)
-(myBib <- ReadBib("./bib/ref.bib", check = FALSE))
-```
-
 ```{r icon, echo=FALSE}
 #remotes::install_github("mitchelloharawild/icons")
 #remotes::install_github('emitanaka/anicon')
@@ -113,14 +111,18 @@ BibOptions(check.entries = FALSE,
 #download_simple_icons()
 ```
 
+
 <!-- title-slide -->
-# .font120[Experimentação Florestal <br> (FL03034 - EF)]
+# Experimentação Florestal <br> (FL03034 - EF)
 
-## `r anicon::faa("pagelines", animate="horizontal", colour="green")` Introdução à Linguagem R `r anicon::faa("pagelines", animate="horizontal", colour="green")`
+## ᨒ <br> `r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")` Introdução à Linguagem R`r anicon::faa("pagelines", animate="horizontal", colour="#244A6B")`
 
-#### **Prof. Dr. Deivison Venicio Souza**
+###### (Teoria e Prática)
+<br>
+##### .font140[**Prof. Dr. Deivison Venicio Souza**]
 ##### Universidade Federal do Pará (UFPA)
 ##### Faculdade de Engenharia Florestal
+##### Laboratório de Manejo Florestal, Tecnologias e Comunidades Amazônicas
 ##### E-mail: deivisonvs@ufpa.br
 <br>
 ##### 1ª versão: 25/agosto/2021 <br> (Atualizado em: `r format(Sys.Date(),"%d/%B/%Y")`) <br> Altamira, Pará
@@ -197,17 +199,7 @@ Ao final desta aula espera-se que o discente seja capaz de...
 
 .pull-right-4[
 .pull-down[
-**Parte 4 - Funções no R**
-
-]
-]
-
----
-
-## Conteúdo
-
-.pull-left-4[
-**Parte 5 - Um pouco mais sobre o R**
+**Parte 4 - Um pouco mais sobre o R**
 
 [1 - Sintaxe da linguagem R](#Sint)
 
@@ -222,16 +214,19 @@ Ao final desta aula espera-se que o discente seja capaz de...
 [3 - Funções matemáticas usuais](#FunsMat)
 
 ]
+]
 
 ---
 
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/inv1.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 1 <br> .red[Conhecendo o R e <br> o IDE Rstudio]**]
+<br><br> 
+
+.font200[**Parte 1 <br><br> .green[Conhecendo o R e <br> o IDE Rstudio]**] 
 
 ---
 layout: true
@@ -263,45 +258,12 @@ name: R
 ]
 ]
 
-.pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://petsistemas.ufms.br/wp-content/uploads/2017/02/main-qimg-7012cde5b60209165cdc281d888b33ac.png")
-
-```
-]
-
-.pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://blog.efpsa.org/wp-content/uploads/2019/04/pic1.png")
-
-```
-
-]
-
-.pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://ggplot2.tidyverse.org/logo.png")
-```
-]
-
-.pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://pkgs.rstudio.com/rmarkdown/reference/figures/logo.png")
-```
-]
-
-.pull-left-7[
-```{r echo=FALSE, out.width='30%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("https://tidyverse.tidyverse.org/articles/tidyverse-logo.png")
-```
-]
-
 ---
 name: pqR
 ## Por que usar a linguagem R?
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics('fig/class3/WhyR.png')
+knitr::include_graphics('fig/WhyR.png')
 ```
 
 ---
@@ -376,7 +338,7 @@ df %>%
 Ao inicializar o **R Development Core Team** pela primeira vez aparecerá a seguinte imagem:
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
-knitr::include_graphics('fig/class3/Rgui.png')
+knitr::include_graphics('fig/Rgui.png')
 ```
 
 ---
@@ -388,7 +350,7 @@ knitr::include_graphics('fig/class3/Rgui.png')
 - Execute as funções .green[demo(), help(), help.start(), q()].
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R Console'}
-knitr::include_graphics('fig/class3/Rgui.png')
+knitr::include_graphics('fig/Rgui.png')
 ```
 
 ---
@@ -398,7 +360,7 @@ knitr::include_graphics('fig/class3/Rgui.png')
 O RGui possui um .green[R editor] $\rightarrow$ Abrir script.
 
 ```{r, echo=FALSE, out.width='50%', fig.align='center', fig.cap='R editor'}
-knitr::include_graphics('fig/class3/Reditor.png')
+knitr::include_graphics('fig/Reditor.png')
 ```
 
 ---
@@ -420,7 +382,7 @@ O .green[RStudio] é um ambiente de desenvolvimento integrado (*Integrated Devel
 <br><br>
 
 ```{r, echo=FALSE, out.width='30%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/class3/RStudio.png')
+knitr::include_graphics('fig/RStudio.png')
 ```
 
 ---
@@ -428,7 +390,7 @@ knitr::include_graphics('fig/class3/RStudio.png')
 ## IDE RStudio - Interface
 
 ```{r, echo=FALSE, out.width='80%', fig.align='center', fig.cap=''}
-knitr::include_graphics('fig/class3/RstudioIG.svg')
+knitr::include_graphics('fig/RstudioIG.svg')
 ```
 <!-- http://material.curso-r.com/rbase/ -->
 
@@ -455,12 +417,14 @@ knitr::include_graphics('fig/class3/RstudioIG.svg')
 
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/inv1.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 2 <br> .red[Estrutura de dados <br> na linguagem R]**]
+<br><br> 
+
+.font200[**Parte 2 <br><br> .green[Estrutura de dados <br> na linguagem R]**] 
 
 ---
 layout: true
@@ -474,7 +438,7 @@ layout: true
 - O R pode armazenar dados em diferentes estruturas.
 
 ```{r echo=FALSE, out.width='40%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class3/EstrDados.png")
+knitr::include_graphics("fig/EstrDados.png")
 ```
 
 
@@ -519,7 +483,7 @@ name: vet
 <br>
 
 ```{r echo=FALSE, out.width='75%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class3/Clv.png")
+knitr::include_graphics("fig/Clv.png")
 ```
 ]
 
@@ -1146,12 +1110,14 @@ as.data.frame(list4)
 
 ---
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/inv1.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 3 <br> .red[Indexação no R]**]
+<br><br> 
+
+.font200[**Parte 3 <br><br> .green[Indexação no R]**] 
 
 ---
 layout: true
@@ -1810,15 +1776,15 @@ list$Inventario[diametro > 50 & cortar == "Sim", ]
 ]
 
 ---
-
----
 layout: false
-name: conc
-class: inverse, top, right
-background-image: url(fig/class3/inv1.jpg)
+name: parte1
+class: top, right
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font200[**Parte 5 <br> .red[Um pouco mais <br> sobre o R]**]
+<br><br> 
+
+.font200[**Parte 4 <br><br> .green[Um pouco mais <br> sobre o R]**] 
 
 ---
 layout: true
@@ -1915,7 +1881,7 @@ name: Oper
 - Os operadores lógicos e relacionais operam com duas respostas possíveis: `TRUE` (verdadeiro) ou `FALSE` (falso).
 
 ```{r echo=FALSE, out.width='60%', fig.align='center', fig.cap='', dpi=600}
-knitr::include_graphics("fig/class3/OpR.png")
+knitr::include_graphics("fig/OpR.png")
 ```
 
 ---
@@ -2368,15 +2334,17 @@ A linguagem R dispõe de funções matemáticas usualmente encontradas em calcul
 <!--Slide XX -->
 ---
 layout: false
-class: inverse, top, right
-background-image: url(fig/class1/imgC.jpg)
+name: etim
+class: inverse, middle, center
+background-image: url(../assets/capa/sec.png)
 background-size: cover
 
-.font300[
-Obrigado!
-]
-<br><br><br><br><br><br>
+## .font200[Até a Próxima!]
 
-**Email**: <a href="mailto:deivisonvs@ufpa.br">deivisonvs@ufpa.br</a>
+```{r, echo=FALSE, out.width='20%', fig.align='center', fig.cap='', dpi=600}
+knitr::include_graphics('../assets/logos/LMFTCA.png')
+```
 
-**Github**: <a href="https://github.com/DeivisonSouza">@DeivisonSouza</a>
+👨🏻‍👩🏻‍👦🏻‍👦🏻 [@lmftca_ufpa](https://www.instagram.com/lmftca_ufpa/)
+
+🌎 [https://www.lmftca.com.br/](https://www.lmftca.com.br/)
